@@ -4,26 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PiFl Labs - Code like a pirate. Fly like Flutter.</title>
-    <meta name="description" content="PiFl Labs Co., Ltd. - Revolutionary cross-platform development philosophy. Flutter app development including Calmdoro Pomodoro Timer, MyShop Diary personal shop management.">
-    <meta name="keywords" content="PiFl Labs, Flutter, App Development, Calmdoro, Pomodoro, Timer, MyShop Diary, Cross-platform, iOS, Android">
+    <meta name="description" content="PiFl Labs Co., Ltd. - Revolutionary cross-platform development philosophy. A free-spirited Flutter app development studio.">
+    <meta name="keywords" content="PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development">
     <meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://pifl-labs.com/en/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PiFl Labs - Code like a pirate. Fly like Flutter.">
+    <meta property="og:description" content="PiFl Labs Co., Ltd. - Revolutionary cross-platform development philosophy. A free-spirited Flutter app development studio.">
+    <meta property="og:url" content="https://pifl-labs.com/en/">
+    <meta property="og:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PiFl Labs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PiFl Labs - Code like a pirate. Fly like Flutter.">
+    <meta name="twitter:description" content="PiFl Labs Co., Ltd. - Revolutionary cross-platform development philosophy. A free-spirited Flutter app development studio.">
+    <meta name="twitter:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
     <!-- Language Links -->
-    <link rel="alternate" hreflang="ko" href="https://pifl-labs.web.app/ko/">
-    <link rel="alternate" hreflang="ja" href="https://pifl-labs.web.app/ja/">
-    <link rel="alternate" hreflang="en" href="https://pifl-labs.web.app/en/">
-    <link rel="alternate" hreflang="x-default" href="https://pifl-labs.web.app/">
-    
+    <link rel="alternate" hreflang="ko" href="https://pifl-labs.com/">
+    <link rel="alternate" hreflang="en" href="https://pifl-labs.com/en/">
+    <link rel="alternate" hreflang="ja" href="https://pifl-labs.com/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://pifl-labs.com/">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    
+
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <!-- Styles -->
     <link rel="stylesheet" href="../styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PiFl Labs Co., Ltd.",
+        "url": "https://pifl-labs.com",
+        "logo": "https://pifl-labs.com/emblem.png",
+        "description": "Revolutionary cross-platform development philosophy. A free-spirited Flutter app development studio.",
+        "email": "hello@pifl-labs.com",
+        "foundingDate": "2026",
+        "knowsLanguage": ["ko", "en", "ja"]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -31,7 +71,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <div class="logo" id="logoHome">
-                    <span class="logo-icon">⚓</span>
+                    <picture><source srcset="../emblem.webp" type="image/webp"><img src="../emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
                     <span class="logo-text">PiFl Labs</span>
                 </div>
             </div>
@@ -40,12 +80,11 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#philosophy" class="nav-link">Philosophy</a>
-                <a href="#portfolio" class="nav-link">Apps</a>
                 <a href="#crew" class="nav-link">Join Crew</a>
             </div>
             <div class="lang-switcher">
                 <a href="/en/" class="lang-btn active">EN</a>
-                <a href="/ko/" class="lang-btn">KO</a>
+                <a href="/" class="lang-btn">KO</a>
                 <a href="/ja/" class="lang-btn">JA</a>
             </div>
             <div class="nav-toggle" id="navToggle">
@@ -53,8 +92,6 @@
                 <span></span>
                 <span></span>
             </div>
-        </div>
-    </nav>
         </div>
     </nav>
 
@@ -76,19 +113,21 @@
                     <span class="hero-subtitle-mobile">A space for free developers developing with pirate spirit</span>
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('#crew')">
+                    <button class="btn btn-primary" data-scroll-to="#crew">
                         <i class="fas fa-anchor"></i> Set Sail
                     </button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('#about')">
+                    <button class="btn btn-secondary" data-scroll-to="#about">
                         <i class="fas fa-compass"></i> Explore
                     </button>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="pifl-visual">
-                    <!-- PiFl Brand Hero Image -->
-                    <img src="../pifl-ship.png" alt="PiFl - Pirate Ship with Flutter Wings" class="hero-image" loading="eager" decoding="async" fetchpriority="high">
-                    
+                    <picture>
+                        <source srcset="../pifl-ship.webp" type="image/webp">
+                        <img src="../pifl-ship.png" alt="PiFl - Pirate Ship with Flutter Wings" class="hero-image" loading="eager" decoding="async" fetchpriority="high" width="1536" height="1024">
+                    </picture>
+
                     <!-- Floating Keywords around Ship -->
                     <div class="floating-keywords">
                         <div class="keyword-badge keyword-1">⚓ Freedom</div>
@@ -214,11 +253,11 @@
                         "Development is art, and we are pirates."
                     </blockquote>
                     <p>
-                        PiFl Labs is not just a development company. We are a collective of free developers 
+                        PiFl Labs is not just a development company. We are a collective of free developers
                         who don't follow existing rules but draw our own navigation charts.
                     </p>
                     <p>
-                        With Flutter wings and armed with pirate spirit, 
+                        With Flutter wings and armed with pirate spirit,
                         we explore uncharted territories of the digital world.
                     </p>
                     <div class="philosophy-values">
@@ -242,7 +281,7 @@
 class PiFlLabs {
   final spirit = 'pirate';
   final power = 'flutter';
-  
+
   Future&lt;App&gt; sail() async {
     return App.build()
       .withFreedom()
@@ -261,17 +300,19 @@ class PiFlLabs {
         <div class="container">
             <div class="mascot-content">
                 <div class="mascot-visual">
-                    <!-- PiPi Mascot Image -->
-                    <img src="../pipi-mascot.png" alt="PiPi - PiFl Labs Pirate Parrot Mascot" class="mascot-image" loading="lazy" decoding="async">
+                    <picture>
+                        <source srcset="../pipi.webp" type="image/webp">
+                        <img src="../pipi.png" alt="PiPi - PiFl Labs Pirate Parrot Mascot" class="mascot-image" loading="lazy" decoding="async" width="1476" height="1536">
+                    </picture>
                 </div>
                 <div class="mascot-text">
                     <h2>Meet <span class="text-gradient">PiPi</span></h2>
                     <p class="mascot-subtitle">Our Cyberpunk Pirate Parrot Mascot</p>
                     <p>
-                        <span class="mascot-text-full">PiPi is a cyber pirate parrot with cool neon glow effects. Wearing a pirate hat with the Flutter logo 
-                        and a stylish monocle, with glowing &lt;/&gt; tags on his chest symbolizing coding. 
+                        <span class="mascot-text-full">PiPi is a cyber pirate parrot with cool neon glow effects. Wearing a pirate hat with the PiFl Labs anchor emblem
+                        and round glasses, with glowing &lt;/&gt; tags on his chest symbolizing coding.
                         With holographic glowing feathers and cyberpunk-style colors, he guides future developers.</span>
-                        <span class="mascot-text-mobile">Cyberpunk parrot with Flutter pirate hat. 
+                        <span class="mascot-text-mobile">Cyberpunk parrot with anchor-emblem pirate hat.
                         Guiding future developers with neon glow effects.</span>
                     </p>
                     <div class="pipi-tips">
@@ -311,150 +352,12 @@ class PiFlLabs {
                 </div>
             </div>
             <div class="crew-cta">
-                <button class="btn btn-large">
+                <a href="#" class="btn btn-primary btn-large" data-email-user="jobs" data-email-domain="pifl-labs.com">
                     <i class="fas fa-ship"></i> Board the Ship
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Our <span class="text-gradient">Apps</span></h2>
-            <p class="portfolio-subtitle">Discover apps developed by PiFl Labs</p>
-            
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-header">
-                        <div class="app-icon-wrapper">
-                            <img src="../myshop-diary/app-icon.png" alt="MyShop Diary App Icon" class="app-icon-img" loading="lazy" decoding="async">
-                        </div>
-                        <div class="app-info">
-                            <h3 class="app-name">MyShop Diary</h3>
-                            <p class="app-category">Shop Management • Flutter</p>
-                            <div class="app-platforms">
-                                <span class="platform-badge ios">iOS</span>
-                                <span class="platform-badge android">Android</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="app-description">
-                        Smart solution for personal shop reservation and sales management. 
-                        Provides all features needed for shop operations including reservation management, customer management, and sales analysis.
-                    </p>
-                    
-                    <div class="app-screenshots">
-                        <img src="../myshop-diary/001.png" alt="MyShop Diary - Main Dashboard" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/002.png" alt="MyShop Diary - Reservation Management" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/003.png" alt="MyShop Diary - Customer Management" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/004.png" alt="MyShop Diary - Sales Analysis" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/005.png" alt="MyShop Diary - Calendar View" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/006.png" alt="MyShop Diary - Service Management" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/007.png" alt="MyShop Diary - Settings" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/008.png" alt="MyShop Diary - Statistics" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/009.png" alt="MyShop Diary - Membership Management" loading="lazy" decoding="async">
-                        <img src="../myshop-diary/010.png" alt="MyShop Diary - Reports" loading="lazy" decoding="async">
-                    </div>
-                    
-                    <div class="app-actions">
-                        <a href="https://apps.apple.com/app/id6748342438" target="_blank" class="app-store-btn ios-btn">
-                            <i class="fab fa-apple"></i> App Store
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=kr.shopowner.diary" target="_blank" class="app-store-btn android-btn">
-                            <i class="fab fa-google-play"></i> Google Play
-                        </a>
-                        <a href="/en/apps/myshop-diary/" target="_blank" class="app-website-btn">
-                            <i class="fas fa-external-link-alt"></i> Learn More
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Calmdoro App -->
-                <div class="app-card">
-                    <div class="app-header">
-                        <div class="app-icon-wrapper">
-                            <img src="../calmdoro/app-icon.png" alt="Calmdoro App Icon" class="app-icon-img" loading="lazy" decoding="async">
-                        </div>
-                        <div class="app-info">
-                            <h3 class="app-name">Calmdoro</h3>
-                            <p class="app-category">Productivity • Flutter</p>
-                            <div class="app-platforms">
-                                <span class="platform-badge ios">iOS</span>
-                                <span class="platform-badge android">Android</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="app-description">
-                        Enhance your focused productivity with a peaceful and minimal Pomodoro timer. 
-                        Experience perfect productivity management with 25-minute focus, 5-minute break scientific Pomodoro technique, clean design, and statistics features.
-                    </p>
-                    
-                    <div class="app-screenshots">
-                        <img src="../calmdoro/001.png" alt="Calmdoro - Main Timer" loading="lazy" decoding="async">
-                        <img src="../calmdoro/002.png" alt="Calmdoro - Focus Mode" loading="lazy" decoding="async">
-                        <img src="../calmdoro/003.png" alt="Calmdoro - Break Mode" loading="lazy" decoding="async">
-                        <img src="../calmdoro/004.png" alt="Calmdoro - Statistics" loading="lazy" decoding="async">
-                        <img src="../calmdoro/005.png" alt="Calmdoro - Settings" loading="lazy" decoding="async">
-                        <img src="../calmdoro/006.png" alt="Calmdoro - Theme Settings" loading="lazy" decoding="async">
-                        <img src="../calmdoro/007.png" alt="Calmdoro - Notification Settings" loading="lazy" decoding="async">
-                        <img src="../calmdoro/008.png" alt="Calmdoro - Completion Screen" loading="lazy" decoding="async">
-                    </div>
-                    
-                    <div class="app-actions">
-                        <a href="https://apps.apple.com/app/id6751621742" target="_blank" class="app-store-btn ios-btn">
-                            <i class="fab fa-apple"></i> App Store
-                        </a>
-                        <a href="#" target="_blank" class="app-store-btn android-btn">
-                            <i class="fab fa-google-play"></i> Google Play
-                        </a>
-                        <a href="/en/apps/calmdoro/" target="_blank" class="app-website-btn">
-                            <i class="fas fa-external-link-alt"></i> Learn More
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Tide Buddy App -->
-                <div class="app-card">
-                    <div class="app-header">
-                        <div class="app-icon-wrapper">
-                            <img src="../tide-buddy/app-icon.png" alt="Tide Buddy App Icon" class="app-icon-img" loading="lazy" decoding="async">
-                        </div>
-                        <div class="app-info">
-                            <h3 class="app-name">Tide Buddy</h3>
-                            <p class="app-category">Lifestyle • Flutter</p>
-                            <div class="app-platforms">
-                                <span class="platform-badge ios">iOS</span>
-                                <span class="platform-badge android">Android</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="app-description">
-                        Smart marine assistant providing accurate tidal information and astronomical data for Korean coasts. 
-                        Check high/low tide times, sunrise/sunset information needed for fishing, mudflat experiences, and marine sports directly from home screen widgets.
-                    </p>
-                    
-                    <div class="app-screenshots">
-                        <img src="../tide-buddy/screenshot-1.jpeg" alt="Tide Buddy - Main Dashboard" loading="lazy" decoding="async">
-                        <img src="../tide-buddy/screenshot-2.jpeg" alt="Tide Buddy - Tide Graph" loading="lazy" decoding="async">
-                        <img src="../tide-buddy/screenshot-3.jpeg" alt="Tide Buddy - Widget Screen" loading="lazy" decoding="async">
-                    </div>
-                    
-                    <div class="app-actions">
-                        <a href="https://apps.apple.com/app/id6751374636" target="_blank" class="app-store-btn ios-btn">
-                            <i class="fab fa-apple"></i> App Store
-                        </a>
-                        <a href="#" target="_blank" class="app-store-btn android-btn">
-                            <i class="fab fa-google-play"></i> Google Play
-                        </a>
-                        <a href="/en/apps/tide-buddy/" target="_blank" class="app-website-btn">
-                            <i class="fas fa-external-link-alt"></i> Learn More
-                        </a>
-                    </div>
-                </div>
+                </a>
+                <p class="crew-email" data-email-user="jobs" data-email-domain="pifl-labs.com">
+                    <i class="fas fa-envelope"></i> <span class="email-text"></span>
+                </p>
             </div>
         </div>
     </section>
@@ -465,14 +368,49 @@ class PiFlLabs {
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span class="logo-icon">⚓</span>
+                        <picture><source srcset="../emblem.webp" type="image/webp"><img src="../emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
                         <span class="logo-text">PiFl Labs Co., Ltd.</span>
                     </div>
                     <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
+                    <p class="footer-description">A Flutter-based cross-platform development studio.<br>Sailing the digital seas with pirate spirit.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigate</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#philosophy">Philosophy</a></li>
+                        <li><a href="#crew">Join Crew</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">
+                            <i class="fas fa-envelope"></i> <span class="email-text"></span>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <a href="#" data-email-user="support" data-email-domain="pifl-labs.com">
+                            <i class="fas fa-headset"></i> <span class="email-text"></span>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <a href="#" data-email-user="jobs" data-email-domain="pifl-labs.com">
+                            <i class="fas fa-briefcase"></i> <span class="email-text"></span>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com">
+                            <i class="fas fa-shield-alt"></i> <span class="email-text"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 PiFl Labs Co., Ltd. All rights reserved. Sailing the digital seas since 2025.</p>
+                <p>&copy; 2026 PiFl Labs Co., Ltd. All rights reserved.</p>
+                <p class="footer-legal-links"><a href="/terms">Terms</a> <span>·</span> <a href="/privacy">Privacy</a></p>
             </div>
         </div>
     </footer>
