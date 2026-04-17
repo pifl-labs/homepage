@@ -29,6 +29,10 @@
         "destination": "/localized-files/ko/apps/pipi-focus/privacy.html"
       },
       {
+        "source": "/ko/apps/pipi-words/privacy",
+        "destination": "/localized-files/ko/apps/pipi-words/privacy.html"
+      },
+      {
         "source": "/ja",
         "destination": "/localized-files/ja/index.html"
       },
@@ -43,6 +47,10 @@
       {
         "source": "/ja/apps/pipi-focus/privacy",
         "destination": "/localized-files/ja/apps/pipi-focus/privacy.html"
+      },
+      {
+        "source": "/ja/apps/pipi-words/privacy",
+        "destination": "/localized-files/ja/apps/pipi-words/privacy.html"
       },
       {
         "source": "**",
