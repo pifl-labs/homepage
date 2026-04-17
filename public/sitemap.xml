@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pifl-labs.com/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pifl-labs.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pifl-labs.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pifl-labs.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pifl-labs.com/"/>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pifl-labs.com/en/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://pifl-labs.com/ko/</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pifl-labs.com/ja/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

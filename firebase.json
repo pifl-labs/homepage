@@ -6,34 +6,43 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [
-      {
-        "source": "/ko",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/ko/",
-        "destination": "/",
-        "type": 301
-      }
-    ],
+    "cleanUrls": true,
+    "i18n": {
+      "root": "/localized-files"
+    },
+    "redirects": [],
     "rewrites": [
       {
-        "source": "/en",
-        "destination": "/en/index.html"
+        "source": "/ko",
+        "destination": "/localized-files/ko/index.html"
+      },
+      {
+        "source": "/ko/privacy",
+        "destination": "/localized-files/ko/privacy.html"
+      },
+      {
+        "source": "/ko/terms",
+        "destination": "/localized-files/ko/terms.html"
+      },
+      {
+        "source": "/ko/apps/pipi-focus/privacy",
+        "destination": "/localized-files/ko/apps/pipi-focus/privacy.html"
       },
       {
         "source": "/ja",
-        "destination": "/ja/index.html"
+        "destination": "/localized-files/ja/index.html"
       },
       {
-        "source": "/privacy",
-        "destination": "/privacy.html"
+        "source": "/ja/privacy",
+        "destination": "/localized-files/ja/privacy.html"
       },
       {
-        "source": "/terms",
-        "destination": "/terms.html"
+        "source": "/ja/terms",
+        "destination": "/localized-files/ja/terms.html"
+      },
+      {
+        "source": "/ja/apps/pipi-focus/privacy",
+        "destination": "/localized-files/ja/apps/pipi-focus/privacy.html"
       },
       {
         "source": "**",
