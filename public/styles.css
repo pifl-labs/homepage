@@ -476,7 +476,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-card:hover {
-    border-color: var(--primary-teal);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-glow-sm);
 }
 
 .card-icon {
@@ -528,7 +529,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-card:hover {
-    border-color: var(--primary-purple);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-glow-sm);
 }
 
 .feature-icon {
@@ -768,7 +770,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .crew-card:hover {
-    border-color: var(--primary-purple);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-glow-sm);
 }
 
 .crew-icon {
