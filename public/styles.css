@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
 /* About Section */
 .about {
     padding: var(--s-xl) 0;
-    background: linear-gradient(180deg, var(--bg-base) 0%, var(--primary-navy) 100%);
+    background: linear-gradient(180deg, var(--bg-base) 0%, var(--navy) 100%);
 }
 
 .about-content {
@@ -492,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Features Section */
 .features {
     padding: var(--s-xl) 0;
-    background: var(--primary-navy);
+    background: var(--navy);
 }
 
 .features-grid {
@@ -557,7 +557,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Philosophy Section */
 .philosophy {
     padding: var(--s-xl) 0;
-    background: linear-gradient(180deg, var(--primary-navy) 0%, var(--bg-base) 100%);
+    background: linear-gradient(180deg, var(--navy) 0%, var(--bg-base) 100%);
 }
 
 .philosophy-content {
@@ -633,7 +633,7 @@ h1, h2, h3, h4, h5, h6 {
 .mascot {
     padding: var(--s-xl) 0;
     padding-bottom: calc(var(--s-xl) + 40px); /* Reduced padding for tighter layout */
-    background: linear-gradient(135deg, var(--primary-navy) 0%, #1a1a2e 50%, var(--bg-base) 100%);
+    background: linear-gradient(135deg, var(--navy) 0%, #1a1a2e 50%, var(--bg-base) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -742,7 +742,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Crew Section */
 .crew {
     padding: var(--s-xl) 0;
-    background: linear-gradient(180deg, var(--primary-navy) 0%, var(--bg-base) 100%);
+    background: linear-gradient(180deg, var(--navy) 0%, var(--bg-base) 100%);
 }
 
 .crew-subtitle {
@@ -1688,7 +1688,7 @@ h1, h2, h3, h4, h5, h6 {
 .legal-hero {
     padding-top: 80px;
     padding-bottom: var(--s-md);
-    background: linear-gradient(180deg, var(--bg-base) 0%, var(--primary-navy) 100%);
+    background: linear-gradient(180deg, var(--bg-base) 0%, var(--navy) 100%);
 }
 
 .legal-hero .container {
@@ -1729,7 +1729,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .legal-page {
     padding: var(--s-md) 0 var(--s-xl);
-    background: linear-gradient(180deg, var(--primary-navy) 0%, var(--bg-base) 100%);
+    background: linear-gradient(180deg, var(--navy) 0%, var(--bg-base) 100%);
     min-height: 50vh;
 }
 
