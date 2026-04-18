@@ -583,7 +583,7 @@ h1, h2, h3, h4, h5, h6 {
     top: -20px;
     font-size: 4rem;
     opacity: 0.3;
-    color: var(--primary-purple);
+    color: var(--accent-cta);
 }
 
 .philosophy-text p {
@@ -736,7 +736,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '�';
     position: absolute;
     left: -20px;
-    color: var(--primary-purple);
+    color: var(--accent-warm);
 }
 
 /* Crew Section */
@@ -898,7 +898,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-contact-item i {
     width: 18px;
     text-align: center;
-    color: var(--primary-teal);
+    color: var(--accent-cta);
     font-size: 0.85rem;
 }
 
@@ -1701,7 +1701,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .legal-hero h1 i {
-    color: var(--primary-teal);
+    color: var(--accent-cta);
     margin-right: 0.4rem;
     font-size: 0.85em;
 }
@@ -1715,7 +1715,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
-    color: var(--primary-teal);
+    color: var(--accent-cta);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.85rem;
@@ -1724,7 +1724,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .legal-back:hover {
-    color: var(--primary-purple);
+    color: var(--accent-cta-hover);
 }
 
 .legal-page {
@@ -1754,7 +1754,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .legal-card h2 {
     font-size: 1.05rem;
-    color: var(--primary-teal);
+    color: var(--accent-cta);
     margin-top: var(--s-md);
     margin-bottom: 0.5rem;
     padding-bottom: 0.4rem;
@@ -1813,13 +1813,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .legal-card a {
-    color: var(--primary-teal);
+    color: var(--accent-cta);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .legal-card a:hover {
-    color: var(--primary-purple);
+    color: var(--accent-cta-hover);
 }
 
 .footer-legal-links {
