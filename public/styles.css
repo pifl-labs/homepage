@@ -50,14 +50,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Desktop text visibility */
-.hero-subtitle-mobile,
 .card-text-mobile,
 .feature-text-mobile,
 .mascot-text-mobile {
     display: none;
 }
 
-.hero-subtitle-full,
 .card-text-full,
 .feature-text-full,
 .mascot-text-full {
@@ -258,16 +256,7 @@ h1, h2, h3, h4, h5, h6 {
     animation: slideInLeft 1s ease-out;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--s-lg);
-    animation: slideInLeft 1s ease-out 0.2s both;
-    line-height: 1.7;
-    max-width: 700px; /* Increased for better English text layout */
-}
-
-/* New hero copy stack — sub-lead (tagline) + body (concrete promise). */
+/* Hero copy stack — sub-lead (tagline) + body (concrete promise). */
 .hero-sublead {
     font-size: 1.15rem;
     color: var(--text-secondary);
@@ -1210,14 +1199,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     /* Mobile text optimization */
-    .hero-subtitle-full,
     .card-text-full,
     .feature-text-full,
     .mascot-text-full {
         display: none;
     }
-    
-    .hero-subtitle-mobile,
+
     .card-text-mobile,
     .feature-text-mobile,
     .mascot-text-mobile {
@@ -1254,13 +1241,6 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-title {
         margin-bottom: var(--s-sm);
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: var(--s-md);
-        max-width: none;
     }
     
     .pifl-main-text {
