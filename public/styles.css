@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-    background: var(--gradient-2);
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 .pifl-main-text {
     font-size: clamp(3.5rem, 7vw, 5rem);
     font-weight: 900;
-    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-purple) 50%, #8b5cf6 100%);
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
