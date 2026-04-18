@@ -1,3 +1,30 @@
+/* Self-hosted fonts — unified with pipi_* app family (Space Grotesk + Pretendard).
+   JetBrains Mono retained for code-block legibility (app uses Space Mono for displays). */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/PretendardJPVariable.woff2') format('woff2-variations'),
+         url('/fonts/PretendardJPVariable.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2-variations'),
+         url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/JetBrainsMono-Variable.woff2') format('woff2-variations'),
+         url('/fonts/JetBrainsMono-Variable.woff2') format('woff2');
+}
+
 /* Root Variables */
 :root {
     /* Colors */
@@ -19,9 +46,15 @@
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
     
-    /* Typography */
-    --font-main: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography — unified with pipi_* apps */
+    --font-display: 'Space Grotesk', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-code: 'JetBrains Mono', 'D2Coding', 'Courier New', monospace;
+}
+
+/* Display type — headlines use Space Grotesk for brand consistency with apps */
+h1, h2, .hero-title, .section-title, .logo-text {
+    font-family: var(--font-display);
 }
 
 /* Reset & Base */
