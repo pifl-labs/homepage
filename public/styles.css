@@ -379,66 +379,62 @@ h1, h2, h3, h4, h5, h6 {
 .keyword-badge {
     position: absolute;
     padding: 0.4rem 0.8rem;
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    border-radius: 20px;
+    background: rgba(11, 20, 38, 0.6);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-pill);
     font-family: var(--font-code);
     font-size: 0.7rem;
     font-weight: 500;
-    color: var(--primary-teal);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+    color: var(--text-secondary);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-sm);
     white-space: nowrap;
-    opacity: 0.9;
+    opacity: 0.92;
     pointer-events: auto;
-    transition: all 0.3s ease;
+    transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), opacity var(--dur-base) var(--ease);
 }
 
 .keyword-badge:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
     opacity: 1;
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+    box-shadow: var(--shadow-glow-sm);
 }
 
-/* Floating Keywords - Scattered around ship */
+/* Floating Keywords — unified treatment; only inner glow tone varies per badge.
+   Position + animation-delay stay per-badge; color/border/background are shared. */
 .keyword-1 {
     top: 15%;
     left: 20%;
     animation: float-simple 4s ease-in-out infinite;
-    border-color: rgba(251, 191, 36, 0.4);
-    color: var(--accent-yellow);
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.22), var(--shadow-sm);
 }
 
 .keyword-2 {
     top: 60%;
     left: 75%;
     animation: float-simple 4.5s ease-in-out infinite 0.5s;
-    border-color: rgba(239, 68, 68, 0.4);
-    color: #ef4444;
+    box-shadow: inset 0 0 18px var(--accent-warm-soft), var(--shadow-sm);
 }
 
 .keyword-3 {
     top: 25%;
     right: 15%;
     animation: float-simple 5s ease-in-out infinite 1s;
-    border-color: rgba(99, 102, 241, 0.4);
-    color: var(--primary-purple);
+    box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
 }
 
 .keyword-4 {
     bottom: 20%;
     left: 10%;
     animation: float-simple 4.2s ease-in-out infinite 1.5s;
-    border-color: rgba(6, 182, 212, 0.4);
-    color: var(--primary-teal);
+    box-shadow: inset 0 0 18px var(--glow-teal), var(--shadow-sm);
 }
 
 .keyword-5 {
     top: 75%;
     right: 20%;
     animation: float-simple 5.5s ease-in-out infinite 2s;
-    border-color: rgba(139, 92, 246, 0.4);
-    color: #8b5cf6;
+    box-shadow: inset 0 0 18px var(--glow-violet), var(--shadow-sm);
 }
 
 /* Simplified Floating Animation */
