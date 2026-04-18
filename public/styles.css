@@ -1,56 +1,7 @@
-/* Self-hosted fonts — unified with pipi_* app family (Space Grotesk + Pretendard).
-   JetBrains Mono retained for code-block legibility (app uses Space Mono for displays). */
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-    src: url('/fonts/PretendardJPVariable.woff2') format('woff2-variations'),
-         url('/fonts/PretendardJPVariable.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Space Grotesk';
-    font-weight: 300 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2-variations'),
-         url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'JetBrains Mono';
-    font-weight: 100 800;
-    font-style: normal;
-    font-display: swap;
-    src: url('/fonts/JetBrainsMono-Variable.woff2') format('woff2-variations'),
-         url('/fonts/JetBrainsMono-Variable.woff2') format('woff2');
-}
-
-/* Root Variables */
-:root {
-    /* Colors */
-    --primary-navy: #0f172a;
-    --primary-purple: #6366f1;
-    --primary-teal: #06b6d4;
-    --accent-yellow: #fbbf24;
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --bg-dark: #020617;
-    --bg-card: #1e293b;
-    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-2: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
-    --spacing-xl: 4rem;
-    
-    /* Typography — unified with pipi_* apps */
-    --font-display: 'Space Grotesk', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-code: 'JetBrains Mono', 'D2Coding', 'Courier New', monospace;
-}
+/* Design tokens (:root variables + @font-face) live in colors_and_type.css,
+   which must be loaded BEFORE this file in every HTML entry point.
+   Legacy aliases in that file keep this stylesheet working during the
+   step-by-step component migration (handoff/HANDOFF.md §3 Step 4-6). */
 
 /* Display type — headlines use Space Grotesk for brand consistency with apps */
 h1, h2, .hero-title, .section-title, .logo-text {
