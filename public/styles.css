@@ -50,14 +50,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Desktop text visibility */
-.hero-subtitle-mobile,
 .card-text-mobile,
 .feature-text-mobile,
 .mascot-text-mobile {
     display: none;
 }
 
-.hero-subtitle-full,
 .card-text-full,
 .feature-text-full,
 .mascot-text-full {
@@ -258,13 +256,24 @@ h1, h2, h3, h4, h5, h6 {
     animation: slideInLeft 1s ease-out;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
+/* Hero copy stack — sub-lead (tagline) + body (concrete promise). */
+.hero-sublead {
+    font-size: 1.15rem;
     color: var(--text-secondary);
-    margin-bottom: var(--s-lg);
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: var(--s-xs);
     animation: slideInLeft 1s ease-out 0.2s both;
-    line-height: 1.7;
-    max-width: 700px; /* Increased for better English text layout */
+}
+
+.hero-body {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 620px;
+    margin-bottom: var(--s-lg);
+    animation: slideInLeft 1s ease-out 0.3s both;
 }
 
 .hero-buttons {
@@ -436,6 +445,13 @@ h1, h2, h3, h4, h5, h6 {
     right: 20%;
     animation: float-simple 5.5s ease-in-out infinite 2s;
     box-shadow: inset 0 0 18px var(--glow-violet), var(--shadow-sm);
+}
+
+.keyword-6 {
+    bottom: 10%;
+    right: 40%;
+    animation: float-simple 4.8s ease-in-out infinite 2.5s;
+    box-shadow: inset 0 0 18px rgba(192, 201, 221, 0.18), var(--shadow-sm);
 }
 
 /* Simplified Floating Animation */
@@ -1183,14 +1199,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     /* Mobile text optimization */
-    .hero-subtitle-full,
     .card-text-full,
     .feature-text-full,
     .mascot-text-full {
         display: none;
     }
-    
-    .hero-subtitle-mobile,
+
     .card-text-mobile,
     .feature-text-mobile,
     .mascot-text-mobile {
@@ -1227,13 +1241,6 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-title {
         margin-bottom: var(--s-sm);
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: var(--s-md);
-        max-width: none;
     }
     
     .pifl-main-text {
