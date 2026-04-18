@@ -1,7 +1,5 @@
 /* Design tokens (:root variables + @font-face) live in colors_and_type.css,
-   which must be loaded BEFORE this file in every HTML entry point.
-   Legacy aliases in that file keep this stylesheet working during the
-   step-by-step component migration (handoff/HANDOFF.md §3 Step 4-6). */
+   which must be loaded BEFORE this file in every HTML entry point. */
 
 /* Display type — headlines use Space Grotesk for brand consistency with apps */
 h1, h2, .hero-title, .section-title, .logo-text {

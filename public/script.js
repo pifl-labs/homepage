@@ -177,7 +177,7 @@ style.textContent = `
         right: 0;
         flex-direction: column;
         background: rgba(15, 23, 42, 0.98);
-        padding: var(--spacing-md);
+        padding: var(--s-md);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -200,7 +200,7 @@ style.textContent = `
     }
 
     .nav-link.active {
-        color: var(--accent-yellow);
+        color: var(--accent-cta);
     }
 `;
 document.head.appendChild(style);
