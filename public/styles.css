@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-text {
-    background: var(--gradient-2);
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-2);
+    background: var(--gradient-cta);
     transition: width 0.3s;
 }
 
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lang-btn:hover,
 .lang-btn.active {
-    background: var(--gradient-2);
+    background: var(--gradient-cta);
     border-color: transparent;
     color: white;
 }
@@ -291,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: var(--gradient-2);
+    background: var(--gradient-cta);
     color: white;
 }
 
@@ -303,11 +303,11 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
-    border: 2px solid var(--primary-purple);
+    border: 2px solid var(--accent-cta);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-purple);
+    background: var(--accent-cta);
     transform: translateY(-2px);
 }
 
@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 3px;
-    background: var(--gradient-2);
+    background: var(--gradient-cta);
     transform: translateX(-100%);
     transition: transform 0.3s;
 }
@@ -534,7 +534,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature-icon {
     width: 60px;
     height: 60px;
-    background: var(--gradient-2);
+    background: var(--gradient-cta);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -812,7 +812,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     width: 200px;
     height: 1px;
-    background: var(--gradient-2);
+    background: var(--gradient-brand);
 }
 
 .footer-content {
@@ -850,7 +850,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 30px;
     height: 2px;
-    background: var(--gradient-2);
+    background: var(--gradient-cta);
 }
 
 .footer-nav {
@@ -1333,7 +1333,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--gradient-2);
+        background: var(--gradient-cta);
         border-radius: 12px;
     }
     
@@ -1634,7 +1634,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--gradient-2);
+        background: var(--gradient-cta);
         border-radius: 10px;
         margin-bottom: 0;
     }
