@@ -2,6 +2,169 @@
 
 ---
 
+## Session 4 — 2026-04-19: 홈페이지 카피·구조 재설계 + 누적 배포
+
+### 작업 요약
+
+Claude Design 핸드오프 v2(Layer 1~3: 방향성·구조·카피)를 적용. **새 H1 "Pirates who Flutter"** — 기존 시적인 2줄 헤드라인이 PiFl 어원을 설명하지 못하던 문제를 해결, `[Pi]rates who [Fl]utter`로 한 줄에 어원 내포. 플로팅 배지 6종 재작성(이모지 제거), 섹션 타이틀 재구성("Board the ship"/"Why Flutter, why pirates"), Features 6카드 → 3카드 트림까지 완료. Firebase 배포로 Session 2~4의 누적 변경(폰트·토큰·카피 전반)이 실사이트 반영됨.
+
+### 수행한 작업
+
+#### 1. Hero 슬로건 재설계 (4 로케일 동기화)
+
+**기존**: "Code like a pirate. Fly like Flutter." (2줄 H1) + 긴 서브타이틀
+**신규**: 3단 카피 스택
+- **H1** (언어 무관 영어 브랜드 구호): `Pi`rates who `Fl`utter. — `Pi`·`Fl`에 `.text-gradient` 적용
+- **Sub-lead** (태그라인으로 강등): 언어별 번역된 구 H1
+- **Body** (구체 가치): 언어별 "Single codebase. Two stores. One crew."
+
+**언어별 번역:**
+
+| 요소 | EN | KO | JA |
+|---|---|---|---|
+| H1 | Pirates who Flutter. | *동일* | *동일* |
+| Sub-lead | Code like a pirate. Fly like Flutter. | 해적처럼 코딩하고, Flutter처럼 날다. | 海賊のように書き、Flutterのように飛ぶ。 |
+| Body | Single codebase. Two stores. One crew. | 하나의 코드베이스. 두 개의 스토어. 한 팀의 크루. | ひとつのコードベース、ふたつのストア、ひとつのクルー。 |
+
+**CSS 신규:**
+- `.hero-sublead` (font-display, weight 500, letter-spacing 0.01em)
+- `.hero-body` (text-muted, 620px max-width)
+
+#### 2. 플로팅 키워드 재작성 (5 → 6종, 이모지 제거)
+
+| 구 (5개, 이모지) | 신 (6개, 글로벌 어휘) |
+|---|---|
+| ⚓ Freedom, 🏴‍☠️ Rebel, ⚡ Speed, 🌊 Limitless, 🦋 Flutter | pirate / Flutter / crew / single codebase / iOS · Android / calm |
+
+**원칙**: 3개 언어 동일 영어 — 글로벌 테크 브랜드 어휘 관례. `.keyword-6` CSS 신규 추가 (bottom 10% right 40%, muted glow).
+
+#### 3. 섹션 타이틀 + CTA 재작성
+
+| 구 | 신 | 이유 |
+|---|---|---|
+| Why PiFl? | Why Flutter, why pirates (ja: なぜFlutter、なぜ海賊) | 질문형 → 주장형. 핵심 키워드 2개 그라디언트 |
+| Join the Crew | Board the ship (ja: 船に乗ろう / ko: 승선하기) | 제네릭 SaaS 채용 → 해적 메타포 강한 전환 동사 |
+| nav/footer "Join Crew" | nav/footer 동일 브랜드 용어로 통일 | 내부 일관성 |
+
+#### 4. Mascot 서브타이틀 — 브랜드 형용사 → 역할 부여
+
+| 로케일 | 구 | 신 |
+|---|---|---|
+| EN | Our Cyberpunk Pirate Parrot Mascot | First mate. Cyber mentor. Definitely a pirate. |
+| KO | 우리의 사이버펑크 해적 앵무새 마스코트 | 일등 항해사. 사이버 멘토. 영락없는 해적. |
+| JA | 私たちのサイバーパンク海賊オウムマスコット | 一等航海士。サイバーメンター。まさに海賊。 |
+
+#### 5. Features 6카드 → 3카드 트림
+
+**제거** (중복·과장·제네릭):
+- Fast Deployment (Single codebase에 함의)
+- Battle-Tested (신생 회사 주장 어려움)
+- Creative Freedom (구체성 없음)
+
+**유지 + 재작성** (Title Case → sentence case로 톤다운):
+- **Single codebase** (← Cross-Platform 개명): "One codebase. iOS, Android, web, desktop — every digital sea, one crew to sail it."
+- **Modular architecture**: "Ship parts swapped, not rewritten. Features are modules — shipped, reused, replaced."
+- **Community driven**: "The Crew — a developer collective that ships, reviews, and sails together."
+
+#### 6. 리뷰 피드백 반영 (pr-merge-reviewer)
+
+첫 검토에서 변경 요청 5건 발견 → 추가 커밋으로 해소:
+
+| 사유 | 해결 |
+|---|---|
+| **필수 1**: ja Features 섹션 타이틀 "なぜPiFl？" 미업데이트 | "なぜFlutter、なぜ海賊" 로 교체 |
+| **필수 2**: ja Crew 섹션 타이틀 "クルーに参加" 미업데이트 (nav/footer와 내부 불일치) | "船に乗ろう" 로 교체 |
+| **권장 1**: features-grid 들여쓰기 회귀 (24칸 → 16칸) | 4개 HTML 전부 정정 |
+| **권장 2**: `.crew-subtitle` 구 카피 잔존 | 3개 로케일 간결화 |
+| **권장 3**: 데드 CSS `.hero-subtitle*` 6곳 | `.hero-subtitle` 블록 2곳 + 셀렉터 리스트에서 `-full`/`-mobile` 제거 (card/feature/mascot의 -full/-mobile은 HTML 실사용 중이라 유지) |
+
+#### 7. 미사용 @keyframes 제거 (후속 cleanup)
+
+MEMORY.md 기록 "깨진 @keyframes 6개"를 재검증: **모든 참조 키프레임은 이미 정의되어 있음**. 오히려 반대 방향으로 정의만 있고 사용 안 되는 키프레임 2종 발견·제거:
+
+- `@keyframes bounce` (10줄)
+- `@keyframes fadeInOut` (8줄)
+
+MEMORY.md 기록은 다음 업데이트에서 정정 필요.
+
+#### 8. Firebase 배포 — 누적 3회차
+
+Session 2(자가호스팅 폰트), Session 3(디자인 토큰), Session 4(카피 재설계)의 변경이 **최초로 운영 사이트에 반영**. `firebase login --reauth` 완료 후 `firebase deploy --only hosting` 실행, 40 files / 22 new upload / release complete.
+
+- Hosting URL: https://pifl-labs-main.web.app
+- Custom domain: https://pifl-labs.com
+
+### 커밋 기록
+
+```
+e1c1913 chore(css): 미사용 @keyframes 2종 제거 (bounce, fadeInOut)
+f3f3444 홈페이지 카피·구조 재설계: Pirates who Flutter (squash merge of PR #3, 5 커밋)
+  ← 839a9c2 feat(hero): 새 슬로건 "Pirates who Flutter" - 브랜드 어원 시각화
+  ← 6b2b4a0 feat(hero): 플로팅 키워드 재작성 - 이모지 제거, 구체 어휘 6종
+  ← 4a5a0b2 feat(copy): 섹션 타이틀·CTA·Mascot 서브타이틀 재작성 (4 로케일)
+  ← 0f7d6bb feat(features): 6 → 3 카드 트림 + 카피 재작성 (4 로케일)
+  ← 283a5ab fix(redesign): 리뷰 피드백 반영 - ja 섹션 타이틀 + crew-subtitle + dead CSS
+```
+
+### 배포 상태
+
+✅ **Firebase Hosting (pifl-labs-main) 배포 완료** — 3개 로케일 + 법적 페이지 + 앱 privacy 페이지 전부 최신 반영.
+
+### 의사결정 기록
+
+1. **H1 영어 유지 (3개 언어 공통)**: "Pirates who Flutter"는 Apple "Think Different", Nike "Just Do It" 같은 글로벌 브랜드 구호 패턴. 번역하면 어원 시각화(Pi+Fl=PiFl) 효과 소실. 로컬라이즈는 sub-lead·body에 집중.
+
+2. **SEO 메타 유지**: `og:title`/`<title>`/`meta description`/`JSON-LD`는 기존 "Code like a pirate. Fly like Flutter."로 유지. "Pirates who Flutter"는 추상어라 검색 노출에 불리. 시각 H1 ≠ SEO 타이틀은 SaaS 표준 패턴.
+
+3. **플로팅 키워드 영어 공통**: 6개 모두 글로벌 브랜드 어휘이며 iOS · Android 같은 기술 용어 포함. 번역으로 잃는 게 더 큼.
+
+4. **Philosophy 섹션 보존 결정**: 핸드오프는 "Move to end" 또는 "Merge" 제안. 하지만 Dart 코드블록이 "실제 Flutter로 작업한다"는 강력한 브랜드 증거물. 없애면 복구 어려움. **의식적 스킵** 후 별도 세션에서 판단.
+
+5. **"Pirate Spirit" About 카피 스킵**: 핸드오프도 "제품팀 결정 필요"로 플래그. 제품팀의 구체 실천(코드리뷰 문화·배포 주기·크루 스타일) 정의 없이 문구만 바꾸는 건 안 되며 범위 밖.
+
+6. **Features 톤 케이싱 변경 (Title Case → sentence case)**: 핸드오프 지시 아님, 자체 판단. 카드 h3가 "Single Codebase"보다 "Single codebase"가 덜 과장되고 톤다운 원칙에 부합. 한국어/일본어엔 영향 없음.
+
+7. **`.hero-subtitle*` 제거 범위**: `.hero-subtitle-full/-mobile`만 셀렉터 리스트에서 제거. `.card-text-*`, `.feature-text-*`, `.mascot-text-*`의 `-full/-mobile`은 HTML에서 여전히 사용 중이라 유지. 반응형 듀얼 span 패턴은 hero 밖에서도 유효.
+
+### 빌드 상태
+
+- 정적 사이트 — 빌드 불필요
+- `pr-merge-reviewer` 2회 검토 (1차 변경 요청 → 수정 → 2차 승인)
+- `mergeable=MERGEABLE`, `mergeStateStatus=CLEAN`
+- Firebase 배포 성공 — `Deploy complete!`
+
+### 주의사항 / 학습
+
+- **일본어 문장부호 때문에 Python 치환 실패**: `なぜPiFl？` 는 EN 패턴 `Why PiFl?` 과 완전히 다른 문자열이라 공통 치환 블록으로 잡히지 않음. 일본어는 개별 치환 필요. `pr-merge-reviewer`가 이 케이스를 정확히 잡아냄.
+- **듀얼 span 반응형 패턴의 셀렉터 공유**: `.hero-subtitle-full`과 `.card-text-full`은 CSS에서 같은 selector group에 묶여있어 독립 제거 시 정확한 분리 필요.
+- **MEMORY.md 기록 신뢰도**: "깨진 @keyframes 6개"는 과거엔 맞았을 수 있으나 현재 무효. 장기 기억은 주기적 재검증이 필요.
+
+### 남은 작업
+
+1. **PretendardJP 5.1MB 로케일 분기** (성능 최적화)
+   - `/` + `/en/*` + `/ko/*` → `PretendardVariable.woff2` (~1.2MB, 한·영)
+   - `/ja/*` → `PretendardJPVariable.woff2` (5.1MB, 일본어 포함)
+
+2. **실제 제품 쇼케이스 섹션** — PiPi Focus / PiPi Words / 기타 pipi_* 앱 카드. Hero와 About 사이 또는 Features와 Mascot 사이 배치. 가장 강한 신뢰 신호.
+
+3. **Philosophy 섹션 재검토** — 핸드오프 v2 제안(이동·병합) 재고. Dart 코드블록 보존 전제로 프로즈 축소 정도.
+
+4. **"Pirate Spirit" About 카피 구체화** — 제품팀과 협의 후 코드리뷰/배포주기/크루 스타일 등 구체 실천으로 교체.
+
+5. **MEMORY.md 업데이트**
+   - `@keyframes` 섹션 "깨진 6개" → 사실무근, 현재는 모두 정의됨
+   - 디자인 토큰 3층(neon raw / role accents / gradient brand-vs-cta) 요약 반영
+   - H1 "Pirates who Flutter" 브랜드 구호 원칙 기록
+
+6. **Crew 섹션 copy 전반 재검토** — 섹션 타이틀이 "Board the ship"으로 바뀐 만큼 하위 카드(Developers/Designers/Innovators)와 CTA 버튼 "Board the Ship"의 일관성 개선 여지.
+
+### 참고 파일
+
+- 핸드오프 v2: `/Users/pirate/Downloads/handoff/HANDOFF.md`
+- v1 (토큰 전용, 참고용): `/Users/pirate/Downloads/handoff/HANDOFF v1 (tokens only).md`
+
+---
+
 ## Session 3 — 2026-04-19: 디자인 토큰 시스템 도입 (Claude Design 핸드오프 Step 1~6)
 
 ### 작업 요약
