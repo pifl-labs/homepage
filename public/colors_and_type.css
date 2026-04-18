@@ -1,0 +1,180 @@
+/* ============================================================
+   PiFl Labs — Design Tokens
+   colors_and_type.css
+   ------------------------------------------------------------
+   This file defines ALL design tokens. It must be loaded
+   BEFORE styles.css. The remainder of the codebase consumes
+   only the tokens defined here — no raw hex values, no
+   one-off rgba()s.
+
+   Token philosophy:
+   • One token = one role. Don't reuse --accent-cta for borders.
+   • Neon DNA (teal/indigo/violet) is the brand. UI accents
+     are role-separated so the page doesn't look "neon all
+     the time" — neon glow is reserved for ship/pipi/emblem
+     and brand moments (titles, stats, gradient text).
+   • Amber is highlight-only (eyebrows, h3, key terms).
+   • Coral-warm is hover/active warmth (from pipi's beak).
+   ============================================================ */
+
+
+/* ============================================================
+   FONT LOADING  (self-hosted, unified with pipi_* apps)
+   ------------------------------------------------------------
+   Pretendard JP Variable covers KO + EN + JP in one woff2
+   (~5.1MB, weights 100–900). Space Grotesk is the display
+   face for marketing headings. JetBrains Mono is reserved
+   for code blocks / eyebrows (app uses Space Mono for
+   display digits — different role, stays separate).
+   ============================================================ */
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/PretendardJPVariable.woff2') format('woff2-variations'),
+         url('/fonts/PretendardJPVariable.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2-variations'),
+         url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/JetBrainsMono-Variable.woff2') format('woff2-variations'),
+         url('/fonts/JetBrainsMono-Variable.woff2') format('woff2');
+}
+
+
+:root {
+
+  /* ─────────────────────────────────────────────────────────
+     SURFACES
+     ───────────────────────────────────────────────────────── */
+  --bg-base:    #020617;   /* page background */
+  --bg-deep:    #040a1f;   /* darkest pockets, footer */
+  --bg-raised:  #0b1426;   /* raised surfaces */
+  --bg-card:    #111b32;   /* cards, panels */
+  --navy:       #0f172a;   /* secondary surface, pill backs */
+
+  /* ─────────────────────────────────────────────────────────
+     TEXT
+     ───────────────────────────────────────────────────────── */
+  --text-primary:   #f1f5ff;
+  --text-secondary: #c0c9dd;
+  --text-muted:     #7a869f;
+  --text-dim:       #4b5878;
+
+  /* ─────────────────────────────────────────────────────────
+     BORDERS  (3-step scale — do not invent more)
+     ───────────────────────────────────────────────────────── */
+  --border-subtle:  rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.10);
+  --border-strong:  rgba(255, 255, 255, 0.18);
+
+  /* ─────────────────────────────────────────────────────────
+     NEON PALETTE  (raw colors — prefer role tokens below)
+     ───────────────────────────────────────────────────────── */
+  --neon-teal:   #22d3ee;
+  --neon-cyan:   #06b6d4;
+  --neon-indigo: #6366f1;
+  --neon-violet: #8b5cf6;
+
+  /* ─────────────────────────────────────────────────────────
+     ROLE-SEPARATED ACCENTS  (use these in components)
+     ─────────────────────────────────────────────────────────
+     --accent-cta        Buttons, primary CTAs, active nav underline
+     --accent-cta-hover  CTA hover state
+     --accent-highlight  Eyebrows, h3, <strong> key terms (amber)
+     --accent-warm       Hover/active warmth, pipi tip headers (coral)
+     --accent-warm-soft  Background tint for warm callouts
+     ───────────────────────────────────────────────────────── */
+  --accent-cta:        #6366f1;
+  --accent-cta-hover:  #5558e3;
+  --accent-highlight:  #fbbf24;
+  --accent-warm:       #ff8a5b;
+  --accent-warm-soft:  rgba(255, 138, 91, 0.14);
+
+  /* ─────────────────────────────────────────────────────────
+     GLOW  (drop-shadow / box-shadow only — never a fill)
+     ─────────────────────────────────────────────────────────
+     Reserve neon glow for: .pifl-ship, .pipi, .emblem,
+     and the focused-state ring on interactive elements.
+     ───────────────────────────────────────────────────────── */
+  --glow-teal:   rgba(34, 211, 238, 0.55);
+  --glow-indigo: rgba(99, 102, 241, 0.45);
+  --glow-violet: rgba(139, 92, 246, 0.35);
+
+  /* ─────────────────────────────────────────────────────────
+     GRADIENTS
+     ─────────────────────────────────────────────────────────
+     --gradient-brand  3-stop: brand moments (titles, stats,
+                       <em>, emblem). Most expressive.
+     --gradient-cta    2-stop: buttons only. Tighter, faster
+                       read for interactive surfaces.
+     ───────────────────────────────────────────────────────── */
+  --gradient-brand: linear-gradient(135deg, #22d3ee 0%, #6366f1 55%, #8b5cf6 100%);
+  --gradient-cta:   linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+
+  /* ─────────────────────────────────────────────────────────
+     RADIUS  (5-step scale)
+     ───────────────────────────────────────────────────────── */
+  --radius-xs:   6px;     /* chips, tags */
+  --radius-sm:   10px;    /* buttons, small cards */
+  --radius-md:   14px;    /* inputs, medium cards */
+  --radius-lg:   20px;    /* hero panels, feature cards */
+  --radius-pill: 999px;   /* pills, lang switcher */
+
+  /* ─────────────────────────────────────────────────────────
+     SHADOWS  (4-step scale)
+     ───────────────────────────────────────────────────────── */
+  --shadow-sm:      0 2px 8px  rgba(6, 10, 30, 0.40);
+  --shadow-md:      0 8px 24px rgba(6, 10, 30, 0.50);
+  --shadow-glow-sm: 0 4px 16px rgba(99, 102, 241, 0.25);
+  --shadow-glow-md: 0 10px 32px rgba(99, 102, 241, 0.35);
+
+  /* ─────────────────────────────────────────────────────────
+     SPACING  (unchanged from legacy)
+     ───────────────────────────────────────────────────────── */
+  --s-xs: 0.5rem;
+  --s-sm: 1rem;
+  --s-md: 2rem;
+  --s-lg: 3rem;
+  --s-xl: 4rem;
+
+  /* ─────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ─────────────────────────────────────────────────────────
+     --font-display  Marketing headings, brand wordmark.
+                     Space Grotesk is geometric/architectural,
+                     pairs with Pretendard's openness.
+     --font-main     Body, UI, paragraphs. Pretendard (JP Variable)
+                     covers KO + Latin + JP in one file (~5.1MB,
+                     self-hosted at /fonts/PretendardJPVariable.woff2).
+     --font-code     Code blocks, eyebrows, monospace meta.
+                     JetBrains Mono is reading-optimized (vs
+                     Space Mono which is display-optimized).
+     ───────────────────────────────────────────────────────── */
+  --font-display: 'Space Grotesk', 'Pretendard', system-ui, sans-serif;
+  --font-main:    'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-code:    'JetBrains Mono', 'D2Coding', 'Courier New', monospace;
+
+  /* ─────────────────────────────────────────────────────────
+     MOTION
+     ───────────────────────────────────────────────────────── */
+  --dur-fast: 0.18s;
+  --dur-base: 0.30s;
+  --dur-slow: 0.60s;
+  --ease:     cubic-bezier(.22, .61, .36, 1);
+
+}
+
+
