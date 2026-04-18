@@ -178,25 +178,3 @@
 }
 
 
-/* ============================================================
-   LEGACY ALIASES  (delete after styles.css migration — Step 6)
-   ------------------------------------------------------------
-   These keep the existing styles.css working during the
-   migration window. Once styles.css references only the
-   new tokens, delete this entire block.
-   ============================================================ */
-
-:root {
-  --primary-navy:    var(--navy);
-  --primary-purple:  var(--accent-cta);
-  --primary-teal:    var(--neon-cyan);
-  --accent-yellow:   var(--accent-highlight);
-  --bg-dark:         var(--bg-base);
-  --gradient-1:      var(--gradient-brand);
-  --gradient-2:      var(--gradient-cta);
-  --spacing-xs:      var(--s-xs);
-  --spacing-sm:      var(--s-sm);
-  --spacing-md:      var(--s-md);
-  --spacing-lg:      var(--s-lg);
-  --spacing-xl:      var(--s-xl);
-}
