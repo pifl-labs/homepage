@@ -2,6 +2,169 @@
 
 ---
 
+## Session 3 — 2026-04-19: 디자인 토큰 시스템 도입 (Claude Design 핸드오프 Step 1~6)
+
+### 작업 요약
+
+Claude Design이 공식 제공한 `colors_and_type.css` 핸드오프를 **Step 1~6 전 과정 완주**. 기존 `styles.css` 1곳에 흩어져 있던 색·간격·폰트 토큰을 **단일 소스(`public/colors_and_type.css`)로 분리**하고, 13커밋으로 쪼개 컴포넌트별 마이그레이션 + 잔여 legacy 토큰(200개+) 정리 + alias 블록 삭제까지 완료. 네온 DNA는 유지하되 "네온은 이미지에만, 엠버는 강조에만" 원칙을 코드에 심음.
+
+### 수행한 작업
+
+#### 1. 저장소 공개 전환 (Step 1-3 이전 선행)
+
+Claude Design이 참조할 수 있도록 GitHub 저장소를 public으로 전환.
+
+**선행 정리:**
+
+| 항목 | 조치 |
+|---|---|
+| `.claude/settings.local.json` | 트래킹 해제 + `.gitignore` 추가 (타 프로젝트 절대경로·도메인 노출 방지) |
+| `footer-redesign.png` | 트래킹 해제 (참조 안 되는 디자인 스크래치) |
+| `.gitignore` | `.claude/settings.local.json`, `.claude/.cache/`, `footer-redesign.png`, `*.scratch.*` 추가 |
+| git 히스토리 시크릿 감사 | 0건 확인 (API key/token/password 패턴 매칭 없음) |
+
+`gh repo edit pifl-labs/homepage --visibility public --accept-visibility-change-consequences` 실행. 과거 커밋에 남은 `.claude/settings.local.json` 내용(개인 경로·타 프로젝트 도메인)은 "시크릿 아님" 판정으로 history rewrite 미실행.
+
+#### 2. 디자인 토큰 마이그레이션 (Step 1~3, 커밋 1개)
+
+**신규 파일**: `public/colors_and_type.css` (11KB) — 단일 토큰 정의 소스.
+
+| 섹션 | 토큰 수 | 핵심 |
+|---|---|---|
+| SURFACES | 5 | `--bg-base` / `--bg-deep` / `--bg-raised` / `--bg-card`(값 변경 #111b32) / `--navy` |
+| TEXT | 4 | primary/secondary/muted/dim |
+| BORDERS | 3 | subtle/default/strong (opacity 0.06/0.10/0.18) |
+| NEON | 4 | teal/cyan/indigo/violet (raw — 직접 사용 금지, 역할 토큰 쓸 것) |
+| ROLE ACCENTS | 5 | **`--accent-cta`** (버튼/액티브), `--accent-cta-hover`, `--accent-highlight`(엠버, 강조 전용), `--accent-warm`(코랄, pipi 톤), `--accent-warm-soft` |
+| GLOW | 3 | teal/indigo/violet (이미지 filter·box-shadow 전용) |
+| GRADIENTS | 2 | `--gradient-brand`(3-stop, 브랜드 모먼트), `--gradient-cta`(2-stop, 버튼 전용) |
+| RADIUS | 5 | xs(6) / sm(10) / md(14) / lg(20) / pill(999) |
+| SHADOWS | 4 | sm / md / glow-sm / glow-md |
+| SPACING | 5 | `--s-xs` ~ `--s-xl` (구 `--spacing-*` rename) |
+| TYPOGRAPHY | 3 | display(Space Grotesk) / main(Pretendard) / code(JetBrains Mono) |
+| MOTION | 4 | dur-fast/base/slow + ease 토큰 |
+
+**변경:**
+
+| 파일 | 변경 |
+|---|---|
+| `public/colors_and_type.css` | 신규 생성 (토큰 + `@font-face` 3종 자가호스팅 유지) |
+| `public/styles.css` | `:root` 블록 + `@font-face` 3종 이전 → 상단 주석 2줄로 교체 |
+| 20개 HTML | `<link rel="stylesheet" href="/colors_and_type.css">`를 `/styles.css` **앞에** 삽입 |
+| `public/404.html` | standalone(styles.css 미사용) — 이전 세션에서 `@font-face` 인라인 복제됨 |
+
+#### 3. 컴포넌트별 마이그레이션 (Step 4, 커밋 6개)
+
+핸드오프 §3 Step 4 매핑 테이블에 따라 컴포넌트 단위로 분리 커밋:
+
+| # | 커밋 | 대상 | 변경 요지 |
+|---|---|---|---|
+| 4-1 | `61b20a4` | `.pifl-main-text`, `.text-gradient` | 3-stop linear-gradient → `--gradient-brand` (브랜드 모먼트) |
+| 4-2 | `f1a86ae` | 버튼 11곳 + `.btn-secondary` border | `--gradient-2` 10곳 일괄 → `--gradient-cta`(8곳) / `--gradient-brand`(2곳: 로고·footer 브랜드 선) |
+| 4-3 | `b31cd8d` | 카드 호버 3종 | 컬러 테두리 삭제 → `--border-strong` + `--shadow-glow-sm` 통일 |
+| 4-4 | `4d00b25` | 엠버 9곳 | 3곳 탈컬러(`--text-primary`), 2곳 rename(`--accent-highlight`), 2곳 코랄 전환(`--accent-warm`, pipi-tips) |
+| 4-5 | `d6e1135` | `.keyword-badge` 5종 | 공통 외형(border-default + text-secondary) + inset glow만 차등(앰버/코랄/인디고/틸/바이올렛) |
+| 4-6 | `8a02260` | `.hero-image`, `.mascot-image` | `filter: drop-shadow` 스택을 `--glow-*` 토큰 참조로 교체 (teal+indigo / teal+violet) |
+
+**설계 원칙 (코드에 심어진 규칙):**
+- **네온 글로우는 이미지에만** — 텍스트/버튼/테두리는 `--shadow-glow-sm`(약한 인디고 그림자)만 허용
+- **엠버는 강조 전용** — h3/h4 같은 구조적 요소에선 제거, 인라인 `<strong>`·인용문 한정
+- **호버는 컬러 대신 glow** — 브랜드 컬러 테두리로 "활성 상태" 표시하지 않음
+
+#### 4. 잔여 legacy 토큰 정리 (Step 6 준비, 커밋 4개)
+
+alias 블록을 삭제하려면 styles.css에서 legacy 이름 참조 0건이 선결 조건. 마지막까지 남아있던 ~200건을 기계적 rename + 문맥별 수동 치환:
+
+| # | 커밋 | 대상 | 건수 |
+|---|---|---|---|
+| 6-준비-1 | `2e4f3c4` | `--spacing-*` → `--s-*` 전체 | 133건 (xs 12, sm 33, md 45, lg 28, xl 15) |
+| 6-준비-2 | `5afbe8b` | `--bg-dark` → `--bg-base` | 8건 |
+| 6-준비-3 | `86a227e` | `--primary-navy` → `--navy` | 7건 |
+| 6-준비-4 | `d1bc38d` | `--primary-teal`(5건) / `--primary-purple`(4건) | teal 전부 → `--accent-cta`, purple 문맥별: 장식 1 → `--accent-cta`, pipi-tips 글머리 1 → `--accent-warm`, 법적 페이지 호버 2 → `--accent-cta-hover` |
+
+#### 5. Alias 블록 삭제 (Step 6, 커밋 1개)
+
+`743936a` — `colors_and_type.css` 하단의 `LEGACY ALIASES` 블록 완전 제거. `grep -rE "var\(--(primary-(navy|purple|teal)|accent-yellow|bg-dark|gradient-[12]|spacing-(xs|sm|md|lg|xl))\)" public/` 결과 **0건** 검증 후 삭제.
+
+#### 6. PR 리뷰가 잡은 script.js 잔재 (커밋 1개)
+
+`pr-merge-reviewer` 서브에이전트가 차단 직전 상태에서 발견: **`public/script.js`가 런타임에 `<style>` 태그를 동적 주입**하는 코드 안에 legacy 토큰 2건이 남아있었음. CSS 파일만 grep해서는 잡히지 않는 케이스.
+
+| 라인 | 변경 전 | 변경 후 | 영향 |
+|---|---|---|---|
+| L180 | `padding: var(--spacing-md)` | `var(--s-md)` | 모바일 네비 padding 폴백 버그 해결 |
+| L203 | `.nav-link.active { color: var(--accent-yellow) }` | `var(--accent-cta)` | Step 4-4 "엠버는 강조 전용" 원칙 + `--accent-cta` 역할 주석 "active nav underline"과 정합 |
+
+덤으로 `styles.css:1-4`의 낡은 "legacy aliases 동안 작동" 주석도 2줄로 간결화.
+
+### 커밋 기록
+
+```
+a8653f2 디자인 토큰 시스템 도입: Claude Design 핸드오프 Step 1~6 완료 (squash merge of PR #2, 13 커밋)
+  ← 5051e6a refactor(tokens): 디자인 토큰 파일 분리 + 역할별 액센트 도입 (Step 1-3)
+  ← 61b20a4 refactor(tokens): Hero 타이틀과 .text-gradient를 브랜드 그라디언트로 (Step 4-1)
+  ← f1a86ae refactor(tokens): 버튼·CTA 계열을 --gradient-cta / --accent-cta로 통일 (Step 4-2)
+  ← b31cd8d refactor(tokens): 카드 호버 통일 - 색상 대신 glow로 (Step 4-3)
+  ← 4d00b25 refactor(tokens): 엠버 남용 정리 - h3 탈컬러·pipi 팁은 코랄로 (Step 4-4)
+  ← d6e1135 refactor(tokens): 플로팅 키워드 배지 통일 - 색/border 한 가지, glow만 다르게 (Step 4-5)
+  ← 8a02260 refactor(tokens): 이미지 네온 glow를 토큰 스택으로 (Step 4-6)
+  ← 2e4f3c4 refactor(tokens): --spacing-* → --s-* 일괄 rename (133건, Step 6 준비 1/5)
+  ← 5afbe8b refactor(tokens): --bg-dark → --bg-base rename (8건, Step 6 준비 2/5)
+  ← 86a227e refactor(tokens): --primary-navy → --navy rename (7건, Step 6 준비 3/5)
+  ← d1bc38d refactor(tokens): --primary-teal/purple 잔여 9건 문맥별 치환 (Step 6 준비 4/5)
+  ← 743936a refactor(tokens): LEGACY ALIASES 블록 삭제 - 토큰 마이그레이션 완료 (Step 6)
+  ← 5e5e5ca fix(tokens): script.js 동적 주입 스타일과 styles.css 주석 정리
+
+8337588 chore: 공개 전환 대비 개인 설정 및 스크래치 자산 언트래킹
+```
+
+### 배포 상태
+
+⚠️ **Firebase 배포 보류** (Session 2 이후 계속) — `firebase login --reauth` 필요. main은 머지 완료돼 있으므로 재인증 후 `firebase deploy --only hosting` 한 번이면 반영.
+
+### 의사결정 기록
+
+1. **핸드오프의 jsDelivr `@import` 불채택**: Session 2에서 Pretendard JP / Space Grotesk / JetBrains Mono를 자가호스팅(variable woff2)으로 이미 전환했으므로 CDN `@import`는 퇴행. 자가호스팅 `@font-face` 블록을 `styles.css`에서 `colors_and_type.css`로 이전만 수행.
+
+2. **`--bg-card` 값 변경 허용 (#1e293b → #111b32)**: 핸드오프 §3 Step 4 매핑 테이블에 "Same name, different value — 카드가 약간 어두워짐, 가독성 확인 필요"로 의도된 변화 명시. 로컬에서 시각 확인 완료.
+
+3. **엠버 제거는 Option B 채택**: h3/h4의 `--accent-yellow`를 `--accent-highlight` rename으로 유지하지 않고, `--text-primary`로 탈컬러. "정보 위계는 타이포로, 컬러는 강조로" 원칙 우선.
+
+4. **pipi-tips 코랄 전환**: 엠버 아래에 있던 pipi tip 박스를 `--accent-warm`(#ff8a5b, pipi 부리 컬러)로 이전. "네온 영역과 분리된 따뜻한 팁 박스"로 재포지셔닝.
+
+5. **잔여 legacy 토큰까지 마저 정리 후 머지 결정**: 사용자가 "최고의 안"으로 진행 위임 → 반쯤 마이그레이션된 상태로 머지하지 않고 Step 6까지 완주. 이후 PR에선 legacy 참조 0건에서 시작.
+
+6. **13커밋 squash 머지**: 작업 단위별 히스토리는 보존 가치 있지만 main 히스토리는 "토큰 시스템 도입" 한 사건으로 기록하는 게 깔끔.
+
+### 빌드 상태
+
+- 정적 사이트 — 빌드 불필요
+- `grep -rE "var\(--(primary-(navy|purple|teal)|accent-yellow|bg-dark|gradient-[12]|spacing-(xs|sm|md|lg|xl))\)" public/` → **0건** ✅
+- `pr-merge-reviewer` 2회 검토 (1차 변경 요청 → 수정 → 2차 승인)
+- `gh pr view --json mergeable` → `MERGEABLE`, `mergeStateStatus: CLEAN`
+- 로컬 시각 확인 완료 (사용자 보고)
+
+### 주의사항 / 학습
+
+- **동적 `<style>` 주입 코드는 grep의 사각지대**: `script.js`가 `document.head.appendChild(style)` 패턴으로 CSS를 주입하면 `.css` 파일만 검사해선 안 됨. 이번처럼 토큰 rename 이후엔 `.js`·`.html`까지 포함해 검증해야 안전. `pr-merge-reviewer`가 이 사각지대를 잡아준 실사례.
+- **공개 저장소 전환 후 주의**: `.claude/settings.local.json`이 `.gitignore`에 있지만, 과거 커밋 히스토리에는 남음. 새 개인 경로/비밀 정보가 들어가지 않도록 주의.
+- **핸드오프의 사전 조건**: 토큰 파일이 `styles.css`보다 **반드시 먼저** 로드되어야 함. HTML 수정 시 순서 깨지지 않도록 주의.
+
+### 남은 작업
+
+1. **Firebase 재인증 후 배포** — Session 2부터 누적된 세 머지(폰트·공개 전환·디자인 토큰) 일괄 배포
+2. **PretendardJP 5.1MB 로케일 분기** — 한/영 페이지는 경량 PretendardVariable(~1.2MB), 일본어 페이지만 JP 버전
+3. **깨진 `@keyframes` 6개 제거** — `float`, `gentle-float`, `brand-glow`, `cyber-glow`, `neon-pulse`, `cyber-float` (MEMORY.md 명시). 이번 토큰 작업과 독립된 버그
+4. **실제 제품 쇼케이스 섹션** — PiPi Focus / PiPi Words / 기타 pipi_* 앱 카드 추가 (Hero 과포화 해적 비유 톤다운 + 실제 증빙 강화)
+5. **MEMORY.md 갱신** — "--font-main / --font-code만 있다"는 과거 기술은 이제 거짓. 역할 분리된 토큰 체계 요약 반영 필요
+
+### 참고 파일
+
+- 원본 핸드오프: `/Users/pirate/Downloads/handoff/HANDOFF.md` + `/Users/pirate/Downloads/handoff/colors_and_type.css`
+- 적용된 토큰 정의: `public/colors_and_type.css`
+
+---
+
 ## Session 2 — 2026-04-18: 자가호스팅 폰트 전환 + 앱 브랜드 폰트 통일
 
 ### 작업 요약
