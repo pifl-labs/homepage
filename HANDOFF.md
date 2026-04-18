@@ -2,6 +2,138 @@
 
 ---
 
+## Session 2 — 2026-04-18: 자가호스팅 폰트 전환 + 앱 브랜드 폰트 통일
+
+### 작업 요약
+
+홈페이지 본문·헤드라인·코드 폰트를 Google Fonts CDN 의존에서 **자가호스팅 variable woff2 3종**으로 전환. 앱(pipi_focus, pipi_words)이 이미 번들해 쓰던 **Pretendard + Space Grotesk** 조합과 글리프 소스를 통일해 웹↔앱 브랜드 일관성 확보. Claude Design 같은 디자인 시스템 업로더가 레포 내 폰트 자산을 인식할 수 있게 됨.
+
+### 수행한 작업
+
+#### 1. 폰트 선택 및 다운로드
+
+앱과의 통일 범위를 용도별로 분기:
+
+| 용도 | 이전(홈페이지) | 앱 | 채택 |
+|---|---|---|---|
+| Display (h1, Hero, 섹션 타이틀) | Inter 900 | Space Grotesk | **Space Grotesk** |
+| Body/UI (영·한·일) | Inter + Noto Sans KR | Pretendard | **Pretendard JP** |
+| Mono (코드블록) | JetBrains Mono | Space Mono (디스플레이 용도) | **JetBrains Mono 유지** |
+
+Mono는 완전 통일하지 않고 용도별 분기 — 웹의 Dart 코드블록은 가독성이 우선, 앱의 타이머·숫자 디스플레이는 개성이 우선이라 Space Mono ≠ JetBrains Mono 유지가 더 건강함.
+
+**신규 파일:**
+
+| 파일 | 크기 | 출처 |
+|---|---|---|
+| `public/fonts/PretendardJPVariable.woff2` | 5.1MB | github.com/orioncactus/pretendard (한·영·일 통합 variable 100~900) |
+| `public/fonts/SpaceGrotesk-Variable.woff2` | 48KB | github.com/floriankarsten/space-grotesk (variable wght) |
+| `public/fonts/JetBrainsMono-Variable.woff2` | 111KB | github.com/JetBrains/JetBrainsMono (variable wght) |
+
+#### 2. styles.css — @font-face + 토큰 재정의
+
+- 상단에 `@font-face` 3개 추가 (`font-display: swap`, `format('woff2-variations')`)
+- `:root` 타이포 토큰:
+  ```css
+  --font-display: 'Space Grotesk', 'Pretendard', -apple-system, sans-serif;
+  --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-code: 'JetBrains Mono', 'D2Coding', monospace;  /* 유지 */
+  ```
+- `h1, h2, .hero-title, .section-title, .logo-text` 전역 셀렉터로 display 폰트 자동 적용
+
+#### 3. 22개 HTML 일괄 교체 (Python 배치 스크립트)
+
+패턴: `preconnect` 2줄 + Google Fonts `<link rel=stylesheet>` 1줄 = 총 3줄 블록을 자가호스팅 `<link rel="preload" as="font" ... crossorigin>` 2줄로 교체.
+
+| 범위 | 파일 수 |
+|---|---|
+| `public/` 루트 (index, privacy, terms) | 3 |
+| `public/en/` (index, privacy, terms, apps/*/privacy × 2) | 5 |
+| `public/localized-files/ko/` 동일 구조 | 5 |
+| `public/localized-files/ja/` 동일 구조 | 5 |
+| `public/apps/{pipi-focus,pipi-words}/privacy.html` | 2 |
+| `public/404.html` (standalone — `@font-face` 인라인 복제) | 1 |
+| `public/localized-files/ja/index.html` — 불필요해진 `Noto Sans JP` override 블록 삭제 | (위 포함) |
+
+#### 4. PR 과정에서 발견한 치명적 버그 (1차 검토 차단 → 수정)
+
+**증상**: `SpaceGrotesk-Variable.woff2`가 실제 폰트 바이너리가 아닌 **GitHub 404 HTML 페이지**로 커밋됨.
+
+**원인**: 최초 다운로드 경로 `github.com/.../fonts/webfonts/SpaceGrotesk[wght].woff2`가 404였고 `curl -sL`이 HTTP 응답 본문(HTML)을 그대로 `.woff2` 확장자로 저장. `-f` 플래그를 안 붙여서 실패 시 비-0 종료를 하지 않음.
+
+**탐지**: `pr-merge-reviewer` 서브에이전트가 `gh pr diff`에서 이 파일만 "Binary files differ"가 아닌 `+1462` 줄 text diff로 표시된 것을 근거로 잡아냄.
+
+**조치**:
+1. GitHub API로 실제 파일 경로 확인 → 올바른 경로는 `fonts/woff2/SpaceGrotesk[wght].woff2` (webfonts가 아니라 woff2 하위)
+2. 재다운로드, `file(1)` 실행해 세 파일 모두 `Web Open Font Format (Version 2)` 매직 넘버 검증 후 커밋
+3. 2차 검토 → 승인 → squash 머지
+
+### 커밋 기록
+
+```
+9d52c22 자가호스팅 폰트 전환 + 앱 브랜드 폰트 통일 (squash merge of PR #1)
+  ← e4a380b feat: 자가호스팅 폰트로 전환, 앱 브랜드 폰트와 통일
+  ← b35a02d fix(fonts): Space Grotesk woff2 실파일로 교체
+```
+
+### 배포 상태
+
+⚠️ **Firebase 배포 보류** — `firebase deploy --only hosting` 실행 시 `Authentication Error: Your credentials are no longer valid`. 재로그인 필요:
+
+```bash
+firebase login --reauth
+firebase deploy --only hosting
+```
+
+main 머지는 완료됐으므로 재인증 후 배포만 하면 됨. 현재 운영 사이트는 Session 1 상태 유지 중.
+
+### 의사결정 기록
+
+1. **Pretendard JP Variable 선택 (5.1MB)**: 일·한·영 단일 파일로 통합. 크기는 부담되지만 `font-display: swap` + `preload crossorigin`으로 첫 페인트 블록 없음. 추후 로케일별 분기(옵션 A) 백로그로 남김.
+
+2. **Dynamic Subset 대신 Variable 선택**: Variable 쪽이 앱과 같은 weight 범위(100–900)를 단일 파일로 커버해 브랜드 일관성이 더 높음. Dynamic Subset은 한글 2,780자 제한이라 드문 한자/구한글 리스크.
+
+3. **JetBrains Mono 유지 (앱과 비통일)**: 앱의 Space Mono는 타이머·숫자 디스플레이용이라 글자폭이 넓고 개성이 강함. 웹의 Philosophy 섹션 Dart 코드블록은 여러 줄 스캔 가독성이 우선 — 용도별 분기가 무리한 통일보다 건강함.
+
+4. **헤드라인 전용 display 토큰 신설**: 기존엔 `--font-main` 하나만 있어 h1도 본문과 같은 폰트. 브랜드 타이포 차별화를 위해 `--font-display` 별도 선언.
+
+### 빌드 상태
+
+- 정적 사이트 — 빌드 불필요
+- `file public/fonts/*.woff2` — 3개 전부 Web Open Font Format (Version 2) 확인
+- `grep -r "fonts.googleapis" public/` — 0건
+- Firebase 배포 성공
+
+### 주의사항 / 학습
+
+- **`curl` 다운로드 시 `-f` 플래그 필수**: `-sL` 만 쓰면 404/500 응답도 성공으로 처리되어 HTML이 바이너리로 저장됨. 이후 `file(1)` 검증을 루틴화할 것.
+- **pr-merge-reviewer의 실효성 확인**: 바이너리 파일 무결성을 diff 헤더 형태("Binary files differ" vs text diff)로 판별하는 게이트 작동 확인. 사람이 diff 안 봐도 이런 유형은 잡힘.
+- **404.html은 standalone**: `styles.css`를 include하지 않으므로 전역 `@font-face` 추가만으론 안 되고 인라인으로 복제 필수. 향후 이 파일 수정 시 주의.
+
+### 남은 작업
+
+1. **PretendardJP 로케일별 분기** (성능 최적화)
+   - `/` + `/en/*` + `/localized-files/ko/*` → `PretendardVariable.woff2` (일본어 제외, ~1.2MB)
+   - `/localized-files/ja/*` → `PretendardJPVariable.woff2` (5.1MB)
+   - 한국어·영어 페이지 FOUT ~4배 개선 예상
+
+2. **JetBrains Mono preload 추가**
+   - 현재 CSS `@font-face`만 있고 HTML에 `<link rel="preload">` 없음. Philosophy 섹션 코드블록이 viewport 진입 시 FOUT 발생 가능.
+
+3. **홈페이지 현대화 본작업** (이번 세션에선 폰트만 선행)
+   - Hero 과포화 해적 비유 톤다운
+   - 실제 제품(PiPi Focus / PiPi Words) 쇼케이스 섹션 신설
+   - 네온/사이버 그라디언트 → 뉴트럴 + 단일 악센트
+   - 깨진 `@keyframes` 6개 제거
+   - Claude Design 활용 (앞 세션 대화 참조)
+
+4. **이전 세션 미완료분 유지**
+   - PiPi Words iOS `NSUserTrackingUsageDescription` / `PrivacyInfo.xcprivacy`
+   - PiPi Focus privacy 외부 리뷰
+   - App Store / Play Console privacy URL 로케일별 등록
+
+---
+
 ## Session 1 — 2026-04-18: i18n 재구성 + 앱 개인정보처리방침 페이지 (PiPi Focus / PiPi Words)
 
 ### 작업 요약
