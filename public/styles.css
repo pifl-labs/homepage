@@ -80,9 +80,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 0 var(--s-md);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: var(--s-md);
 }
+
+/* Group: brand + menu stick to the left, lang + CTA float right. */
+.nav-brand { margin-right: var(--s-md); }
+.nav-menu  { margin-right: auto; gap: var(--s-md); }
 
 .logo {
     display: flex;
@@ -199,11 +203,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 88vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 60px;
+    padding-bottom: var(--s-md);
     overflow: hidden;
 }
 
@@ -245,15 +250,41 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1.2fr 0.8fr;
     gap: var(--s-xl);
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: calc(88vh - 60px);
     max-width: 1400px;
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2.25rem, 5.5vw, 4.25rem);
     font-weight: 900;
-    margin-bottom: var(--s-md);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--s-sm);
     animation: slideInLeft 1s ease-out;
+}
+
+/* Hero eyebrow — small-caps category label with cyan dot indicator. */
+.hero-eyebrow {
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--neon-teal);
+    margin-bottom: var(--s-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    animation: slideInLeft 1s ease-out both;
+}
+
+.hero-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--neon-teal);
+    box-shadow: 0 0 10px var(--glow-teal);
 }
 
 /* Hero copy stack — sub-lead (tagline) + body (concrete promise). */
@@ -263,17 +294,64 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 500;
     letter-spacing: 0.01em;
-    margin-bottom: var(--s-xs);
+    margin-bottom: var(--s-sm);
     animation: slideInLeft 1s ease-out 0.2s both;
 }
+
+/* Inline accent utilities — two-color rhythm on the sub-lead. */
+.hero-sublead .accent-teal,
+.accent-teal   { color: var(--neon-teal);   font-weight: 600; }
+.hero-sublead .accent-violet,
+.accent-violet { color: var(--neon-violet); font-weight: 600; }
 
 .hero-body {
     font-size: 1rem;
     color: var(--text-muted);
-    line-height: 1.6;
-    max-width: 620px;
+    line-height: 1.65;
+    max-width: 560px;
     margin-bottom: var(--s-lg);
     animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+/* Hero stats — trust row, mono caps. */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-lg);
+    margin-top: var(--s-lg);
+    padding-top: var(--s-md);
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-code);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    animation: slideInLeft 1s ease-out 0.5s both;
+}
+
+.hero-stats > span { display: inline-flex; align-items: baseline; gap: 0.4rem; }
+
+.hero-stats strong {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Nav CTA pill — "Join the crew" anchored right. */
+.nav-cta {
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-cta);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);
+    margin-left: var(--s-sm);
+    white-space: nowrap;
+}
+
+.nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow-sm);
 }
 
 .hero-buttons {
@@ -376,15 +454,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Floating Keywords around Ship */
-.floating-keywords {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
+/* Floating Keywords around Ship — overlay extends beyond .pifl-visual
+   boundary so badges can orbit outside the ship box. */
+.floating-keywords { position: absolute; inset: -40px; pointer-events: none; }
+.floating-keywords .keyword-badge { pointer-events: auto; }
 
 .keyword-badge {
     position: absolute;
@@ -411,45 +484,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Floating Keywords — unified treatment; only inner glow tone varies per badge.
-   Position + animation-delay stay per-badge; color/border/background are shared. */
-.keyword-1 {
-    top: 15%;
-    left: 20%;
+   Positions spread beyond the ship image boundary (negative offsets allowed). */
+.keyword-1 {  /* pirate — upper left */
+    top: 6%; left: -8%;
     animation: float-simple 4s ease-in-out infinite;
-    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.22), var(--shadow-sm);
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
 }
-
-.keyword-2 {
-    top: 60%;
-    left: 75%;
+.keyword-2 {  /* Flutter — upper right, slightly outside */
+    top: 2%; right: -6%;
     animation: float-simple 4.5s ease-in-out infinite 0.5s;
-    box-shadow: inset 0 0 18px var(--accent-warm-soft), var(--shadow-sm);
-}
-
-.keyword-3 {
-    top: 25%;
-    right: 15%;
-    animation: float-simple 5s ease-in-out infinite 1s;
-    box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
-}
-
-.keyword-4 {
-    bottom: 20%;
-    left: 10%;
-    animation: float-simple 4.2s ease-in-out infinite 1.5s;
     box-shadow: inset 0 0 18px var(--glow-teal), var(--shadow-sm);
 }
-
-.keyword-5 {
-    top: 75%;
-    right: 20%;
+.keyword-3 {  /* crew — middle left, outside */
+    top: 42%; left: -12%;
+    animation: float-simple 5s ease-in-out infinite 1s;
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
+}
+.keyword-4 {  /* single codebase — lower right, outside */
+    bottom: 4%; right: -10%;
+    animation: float-simple 4.2s ease-in-out infinite 1.5s;
+    box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
+}
+.keyword-5 {  /* iOS · Android — bottom center, outside */
+    bottom: -6%; left: 32%;
     animation: float-simple 5.5s ease-in-out infinite 2s;
     box-shadow: inset 0 0 18px var(--glow-violet), var(--shadow-sm);
 }
-
-.keyword-6 {
-    bottom: 10%;
-    right: 40%;
+.keyword-6 {  /* calm — middle right, outside */
+    top: 48%; right: -4%;
     animation: float-simple 4.8s ease-in-out infinite 2.5s;
     box-shadow: inset 0 0 18px rgba(192, 201, 221, 0.18), var(--shadow-sm);
 }
