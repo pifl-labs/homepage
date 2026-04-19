@@ -454,9 +454,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Floating Keywords around Ship — overlay extends beyond .pifl-visual
-   boundary so badges can orbit outside the ship box. */
-.floating-keywords { position: absolute; inset: -40px; pointer-events: none; }
+/* Floating Keywords around Ship — badges orbit within the .pifl-visual
+   boundary, hugging the ship's silhouette (corners + mid-sides) so they
+   feel like they're sailing alongside, not drifting apart. */
+.floating-keywords { position: absolute; inset: 0; pointer-events: none; }
 .floating-keywords .keyword-badge { pointer-events: auto; }
 
 .keyword-badge {
@@ -483,37 +484,38 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-glow-sm);
 }
 
-/* Floating Keywords — unified treatment; only inner glow tone varies per badge.
-   Positions spread beyond the ship image boundary (negative offsets allowed). */
-.keyword-1 {  /* pirate — upper left */
-    top: 6%; left: -8%;
+/* Floating Keywords — orbit positions hug the ship silhouette.
+   6 badges = 6 points around the image (4 corners + 2 mid-sides).
+   Only inner glow tone varies per badge. */
+.keyword-1 {  /* pirate — upper-left corner of the ship */
+    top: 8%; left: 8%;
     animation: float-simple 4s ease-in-out infinite;
     box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
 }
-.keyword-2 {  /* Flutter — upper right, slightly outside */
-    top: 2%; right: -6%;
+.keyword-2 {  /* Flutter — upper-right, near the sails */
+    top: 12%; right: 6%;
     animation: float-simple 4.5s ease-in-out infinite 0.5s;
     box-shadow: inset 0 0 18px var(--glow-teal), var(--shadow-sm);
 }
-.keyword-3 {  /* crew — middle left, outside */
-    top: 42%; left: -12%;
+.keyword-3 {  /* crew — mid-left, along the hull */
+    top: 52%; left: 4%;
     animation: float-simple 5s ease-in-out infinite 1s;
     box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
 }
-.keyword-4 {  /* single codebase — lower right, outside */
-    bottom: 4%; right: -10%;
+.keyword-4 {  /* calm — mid-right, along the hull */
+    top: 48%; right: 4%;
+    animation: float-simple 4.8s ease-in-out infinite 2.5s;
+    box-shadow: inset 0 0 18px rgba(192, 201, 221, 0.22), var(--shadow-sm);
+}
+.keyword-5 {  /* single codebase — lower-right corner, near waves */
+    bottom: 12%; right: 8%;
     animation: float-simple 4.2s ease-in-out infinite 1.5s;
     box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
 }
-.keyword-5 {  /* iOS · Android — bottom center, outside */
-    bottom: -6%; left: 32%;
+.keyword-6 {  /* iOS · Android — bottom-center, on the waves */
+    bottom: 4%; left: 34%;
     animation: float-simple 5.5s ease-in-out infinite 2s;
     box-shadow: inset 0 0 18px var(--glow-violet), var(--shadow-sm);
-}
-.keyword-6 {  /* calm — middle right, outside */
-    top: 48%; right: -4%;
-    animation: float-simple 4.8s ease-in-out infinite 2.5s;
-    box-shadow: inset 0 0 18px rgba(192, 201, 221, 0.18), var(--shadow-sm);
 }
 
 /* Simplified Floating Animation */
