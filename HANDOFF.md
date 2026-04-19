@@ -2,6 +2,166 @@
 
 ---
 
+## Session 5 — 2026-04-19: Hero 세련도 복원 + 배지 궤도 복귀 + Firebase 무기한 토큰 인프라
+
+### 작업 요약
+
+사용자 피드백 두 번 — **"세련됨이 하나도 없다"** / **"배지가 배와 동떨어져 표류 느낌"** — 을 두 단계로 해소. (1) Hero를 3단 → 5단 계층(eyebrow·인라인 악센트·stats·nav CTA)으로 확장해 전문가 레퍼런스 수준 도달, (2) 플로팅 배지 궤도를 배 실루엣에 밀착시켜 "함께 항해" 무드 복원. 더불어 Firebase 인증 만료 이슈를 `login:ci` + `$FIREBASE_TOKEN` alias로 영구 해결. `pr-merge-reviewer` 2회 검토 + Playwright 4회 iteration으로 시각 검증 완료.
+
+### 수행한 작업
+
+#### 1. Hero 5단 시각 계층 복원 (PR #4, 4커밋)
+
+**기존 3단** (eyebrow 없음, sublead 단색, stats 없음, Nav 2그룹 아님) → **5단 계층**:
+
+| 라인 | 요소 | 내용 |
+|---|---|---|
+| 1 | Eyebrow | `● A FLUTTER-FIRST APP STUDIO` (mono small-caps + teal dot + glow) |
+| 2 | H1 | `Pirates who Flutter.` (Pi/Fl 그라디언트, Session 4 유지) |
+| 3 | Sub-lead 인라인 악센트 | `Code like a <teal>pirate</teal>. Fly like <violet>Flutter</violet>.` |
+| 4 | Body (위트 복원) | EN: "A small crew shipping calm, cross-platform apps from a single codebase. **One ship, two stores, no kraken.**" / KO: "작은 크루가 조용히 항해합니다. 하나의 코드베이스로 iOS와 Android에, 숨은 괴물 없이." / JA: "小さなクルーが、静かに航海する。ひとつのコードで、iOSとAndroidへ。海の怪物はいない。" |
+| 5 | CTA pair + Stats | `Explore our apps →` / `Meet the crew` + 상단 border + `2 apps shipped · 3 platforms · 100% Flutter` |
+
+**CSS 신규 클래스** (`public/styles.css`):
+- `.hero-eyebrow` — mono 0.72rem + letter-spacing 0.18em + ::before cyan dot + glow-teal
+- `.accent-teal` / `.accent-violet` — 인라인 악센트 유틸 (font-weight 600)
+- `.hero-stats` — top border-subtle + mono 0.82rem + `strong` 내부 강조
+- `.nav-cta` — pill 형태 우측 CTA (`gradient-cta` 배경)
+- `.hero-title` 타이포 타이트닝: clamp 2.25→4.25rem, line-height 1.05, letter-spacing -0.02em
+
+**Nav 재구성**:
+- `Home` 링크 제거 (로고 클릭이 홈)
+- 우측에 `.nav-cta` pill 신규 (`Join the crew` / `승선하기` / `船に乗る`)
+- `.nav-container { justify-content: space-between }` → `{ display: flex; gap; align-items: center }` + `.nav-brand { margin-right: s-md }` + `.nav-menu { margin-right: auto }` → **좌(로고+메뉴) / 우(CTA+lang) 2그룹 레이아웃**
+
+**Hero 레이아웃**:
+- `min-height: 100vh` → `88vh`, `padding-top: 80px` → `60px`, `padding-bottom: s-md` 추가 → Stats row가 초기 뷰포트 내 진입
+
+#### 2. 플로팅 배지 궤도 복원 (PR #5, 1커밋)
+
+Session 5의 "Hero 세련도 복원" 과정에서 `inset: -40px` + negative offset(`left: -12%` 등)으로 배지를 배 이미지 외곽 **한참 바깥**에 배치 → 사용자 피드백 "동떨어져 표류 느낌". 초기 버전의 "배 주변 궤도" 무드 복귀:
+
+| 배지 | 구(표류) | 신(궤도) | 의미 |
+|---|---|---|---|
+| pirate | top 6% left -8% | top 8% left 8% | 좌상단 돛 근처 |
+| Flutter | top 2% right -6% | top 12% right 6% | 우상단 돛 근처 |
+| crew | top 42% left -12% | top 52% left 4% | 좌중 선체 옆 |
+| calm | top 48% right -4% | top 48% right 4% | 우중 선체 옆 |
+| single codebase | bottom 4% right -10% | bottom 12% right 8% | 우하 파도 근처 |
+| iOS · Android | bottom -6% left 32% | bottom 4% left 34% | 하단 중앙 파도 위 |
+
+6개 = 4코너 + 2 mid-side = 배를 중심으로 한 **대칭 궤도**. `.floating-keywords { inset: -40px }` → `{ inset: 0 }` 복귀.
+
+#### 3. pr-merge-reviewer 피드백 대응 (PR #4 내부)
+
+1차 검토 **변경 요청**:
+- 필수 0건 ✅
+- 권장 1: `.floating-keywords` CSS 중복 선언 → 통합 커밋 (`2f7bccd`)
+- 권장 2: 모바일(`≤950px`) `.nav-cta` 미오버라이드 → 별도 PR로 위임 (PR 본문 명시)
+
+2차 검토 **승인** → squash 머지.
+
+#### 4. Firebase 무기한 토큰 인프라 구축
+
+Session 2·4에서 반복된 `Authentication Error: Your credentials are no longer valid` 이슈의 근본 원인(OAuth refresh token의 주기적 만료)을 `login:ci`로 해결:
+
+```bash
+# 1회 실행 (사용자가 터미널에서)
+firebase login:ci
+# 출력된 토큰을 ~/.zshrc에 export
+
+# ~/.zshrc 추가
+export FIREBASE_TOKEN="1//0g..."
+alias pifl-deploy='cd /Users/pirate/pifl-labs/code/pifl-labs && firebase deploy --only hosting --token "$FIREBASE_TOKEN"'
+```
+
+Claude Code bash 세션에서 `.zshrc` 자동 로드 안 되므로 실행 시 `source ~/.zshrc && firebase deploy --only hosting --token "$FIREBASE_TOKEN"` 패턴 사용. 토큰은 revoke 전까지 무기한.
+
+#### 5. Playwright 시각 검증 (총 4회 iteration)
+
+로컬 `python3 -m http.server 8765` 띄우고 Playwright로:
+- 첫 스크린샷: Hero 3단 → 5단 차이 확인
+- 2차: Nav 간격 + 배지 외곽 확장 확인
+- 3차: 88vh로 Stats 뷰포트 진입 확인
+- 4차: 배지 궤도 복원 확인
+
+EN·KO 양쪽에서 전문가 레퍼런스(`preview/direction-a-refined.html`)와 동등성 도달.
+
+#### 6. Firebase 배포 — 누적 4회차
+
+Session 2(자가호스팅 폰트), Session 3(디자인 토큰), Session 4(카피 재설계), Session 5(Hero 5단 + 배지 궤도)의 모든 변경이 한 번에 운영 반영:
+
+```
+✔  Deploy complete!
+Hosting URL: https://pifl-labs-main.web.app
+Custom domain: https://pifl-labs.com
+```
+
+### 커밋 기록
+
+```
+(머지 후 main 타임라인)
+7ff2ab0 홈페이지 카피·구조 재설계: Pirates who Flutter (PR #3 squash)
+e1c1913 chore(css): 미사용 @keyframes 2종 제거 (bounce, fadeInOut)
+f3f3444 docs: HANDOFF Session 4 추가
+<PR #4 squash — Hero 세련도 복원: 5단 계층·인라인 악센트·Stats·Nav 그룹핑>
+  ← 8a74d82 style(hero): Eyebrow·인라인 악센트·Stats·Nav CTA CSS 신설
+  ← 469c6df feat(hero): 5단 시각 계층 완성 - eyebrow·inline accent·body wit·stats·nav CTA
+  ← f7e0304 style(hero): 레이아웃 타이트닝·배지 외곽 분산·Nav 그룹핑 최종 정돈
+  ← 2f7bccd fix(css): .floating-keywords 중복 선언 통합 (리뷰 권장 1)
+ebf3b79 chore: .gitignore에 Playwright 아티팩트 추가
+<PR #5 fast-forward — 플로팅 배지 궤도 복원 — 배 주변에 밀착>
+  ← 13a3824 fix(hero): 플로팅 배지 궤도 복원 — 배 주변에 밀착
+```
+
+### 배포 상태
+
+✅ **Firebase Hosting 배포 완료** — `pifl-labs-main` 프로젝트, CI 토큰 방식.
+
+### 의사결정 기록
+
+1. **5단 계층 채택**: 전문가 레퍼런스 분석 결과 "세련됨"의 정체는 eyebrow → h1 → accented sub-lead → body → CTA → stats **시각 리듬**. 카피만 바꾸고 3단 유지했던 Session 4의 한계를 5단으로 확장하며 해소.
+
+2. **배지 궤도 복원**: Polish 커밋(`f7e0304`)에서 `inset: -40px`로 "배 이미지 경계 넘어" 디자인을 시도했으나 사용자 피드백으로 **"배 주변 궤도 = 함께 항해"** 메타포가 초기 버전 의도였음을 재확인. 외곽 분산 가설 폐기.
+
+3. **SEO 메타 유지 결정 (Session 4와 동일)**: og:title/title/JSON-LD는 `"Code like a pirate. Fly like Flutter."` 유지. 시각 H1(`Pirates who Flutter.`)은 브랜드 구호, SEO 타이틀은 검색 키워드 — 분리 OK.
+
+4. **Firebase `login:ci` 채택**: 서비스 계정 키 방식보다 간단 + 무기한. `$FIREBASE_TOKEN` 노출 위험은 `.zshrc` 로컬 저장 + `chmod 600`으로 최소화. 유출 시 `firebase logout --token "..."` 즉시 revoke 가능.
+
+5. **pr-merge-reviewer 권장 2(모바일 nav-cta) 별도 PR 위임**: 반응형 전수 점검과 함께 처리가 합리적이라 PR #4 범위 밖으로 분리. 주 피드백 대응이 우선이었고, 955~950px 브레이크포인트에서 겹침 가능성만 있는 수준.
+
+6. **PR #5 리뷰 스킵**: 단일 CSS 파일의 위치 숫자 조정이라 `pr-merge-reviewer` 오버헤드 대비 실익 낮음. 사용자 피드백 구체적이었고 Playwright로 시각 검증 완료된 상태라 fast-forward 머지.
+
+### 빌드 상태
+
+- 정적 사이트 — 빌드 불필요
+- `pr-merge-reviewer` 2회 검토 (PR #4: 1차 변경 요청 → 수정 → 2차 승인)
+- Playwright 4회 iteration 시각 검증
+- Firebase 배포 성공 (CI 토큰 검증)
+
+### 주의사항 / 학습
+
+- **Claude Code Bash와 `.zshrc`의 관계**: Claude의 Bash 도구는 서브쉘 실행이라 부모 shell의 환경변수를 매번 상속하지는 않음. `source ~/.zshrc && <cmd>` 패턴 명시 필요. 고정 환경변수(`FIREBASE_TOKEN` 등)는 매 호출마다 source 포함.
+- **CSS 중복 선언 함정**: 기존 `.floating-keywords { position:absolute; inset:0 }` 블록을 삭제 안 하고 아래에 신규 선언을 추가하면 캐스케이드상 렌더는 정상이지만 grep 가독성 해침. 리팩토링 시 반드시 이전 블록 제거.
+- **디자인 피드백 해석 함정**: "배 주변"의 의미 — 사용자 레퍼런스에선 "실루엣 밀착 + 같은 방향 이동 = 동행" 이었는데, 나는 "경계 확장 = 자유로운 공간감"으로 해석해 overshoot. 레퍼런스 스크린샷의 **위치 패턴**을 실제 숫자로 계측해서 복제하는 것이 안전.
+- **5단 계층의 재사용성**: eyebrow + sub-lead inline accent + body-with-wit + stats 패턴은 앞으로 Products 섹션이나 타 LP에도 동일 적용 가능한 템플릿. CSS 클래스로 잘 분리해두어 재사용 용이.
+
+### 남은 작업
+
+1. **모바일(≤950px) `.nav-cta` 반응형** — PR #4 리뷰 권장 2번. 햄버거+lang-switcher+pill CTA 공간 충돌 우려. 햄버거 메뉴 내부로 이동 또는 `display: none` + 햄버거 내 "Join the crew" 링크 삽입.
+2. **PretendardJP 5.1MB 로케일 분기** — 한/영 페이지는 경량 `PretendardVariable.woff2`(~1.2MB), 일본어에만 JP 버전. 첫 페인트 4배 개선.
+3. **제품 쇼케이스 섹션** — PiPi Focus / PiPi Words 앱 카드. 핸드오프 v2에서 "Products" nav 항목이 있던 이유. Features 섹션 다음 or About과 Features 사이.
+4. **MEMORY.md 갱신** — `@keyframes 6개 깨짐` 오기 정정 + 신규 디자인 토큰 3층 체계 + Firebase CI 토큰 워크플로 + 새 CSS 클래스 카탈로그.
+5. **About "Pirate Spirit" 카피 구체화** — 제품팀과 협의 후 코드리뷰/배포주기/크루 스타일 등 구체 실천으로 교체.
+
+### 참고 파일
+
+- 디자인 레퍼런스 스크린샷 (사용자 첨부, 2장)
+- 로컬 미리보기 아티팩트 `hero-*.png`, `.playwright-mcp/` (`.gitignore` 등록됨)
+- Playwright MCP 도구: `mcp__playwright__browser_navigate/take_screenshot/wait_for/resize`
+
+---
+
 ## Session 4 — 2026-04-19: 홈페이지 카피·구조 재설계 + 누적 배포
 
 ### 작업 요약
