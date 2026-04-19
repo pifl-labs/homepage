@@ -454,15 +454,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Floating Keywords around Ship */
-.floating-keywords {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
+/* Floating Keywords around Ship — overlay extends beyond .pifl-visual
+   boundary so badges can orbit outside the ship box. */
+.floating-keywords { position: absolute; inset: -40px; pointer-events: none; }
+.floating-keywords .keyword-badge { pointer-events: auto; }
 
 .keyword-badge {
     position: absolute;
@@ -489,11 +484,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Floating Keywords — unified treatment; only inner glow tone varies per badge.
-   Positions spread beyond the ship image boundary (negative offsets allowed).
-   .floating-keywords is a non-clipping overlay over .pifl-visual. */
-.floating-keywords { position: absolute; inset: -40px; pointer-events: none; }
-.floating-keywords .keyword-badge { pointer-events: auto; }
-
+   Positions spread beyond the ship image boundary (negative offsets allowed). */
 .keyword-1 {  /* pirate — upper left */
     top: 6%; left: -8%;
     animation: float-simple 4s ease-in-out infinite;
