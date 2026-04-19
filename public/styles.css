@@ -80,9 +80,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 0 var(--s-md);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: var(--s-md);
 }
+
+/* Group: brand + menu stick to the left, lang + CTA float right. */
+.nav-brand { margin-right: var(--s-md); }
+.nav-menu  { margin-right: auto; gap: var(--s-md); }
 
 .logo {
     display: flex;
@@ -199,11 +203,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 88vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 60px;
+    padding-bottom: var(--s-md);
     overflow: hidden;
 }
 
@@ -245,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1.2fr 0.8fr;
     gap: var(--s-xl);
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: calc(88vh - 60px);
     max-width: 1400px;
 }
 
@@ -484,45 +489,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Floating Keywords — unified treatment; only inner glow tone varies per badge.
-   Position + animation-delay stay per-badge; color/border/background are shared. */
-.keyword-1 {
-    top: 15%;
-    left: 20%;
+   Positions spread beyond the ship image boundary (negative offsets allowed).
+   .floating-keywords is a non-clipping overlay over .pifl-visual. */
+.floating-keywords { position: absolute; inset: -40px; pointer-events: none; }
+.floating-keywords .keyword-badge { pointer-events: auto; }
+
+.keyword-1 {  /* pirate — upper left */
+    top: 6%; left: -8%;
     animation: float-simple 4s ease-in-out infinite;
-    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.22), var(--shadow-sm);
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
 }
-
-.keyword-2 {
-    top: 60%;
-    left: 75%;
+.keyword-2 {  /* Flutter — upper right, slightly outside */
+    top: 2%; right: -6%;
     animation: float-simple 4.5s ease-in-out infinite 0.5s;
-    box-shadow: inset 0 0 18px var(--accent-warm-soft), var(--shadow-sm);
-}
-
-.keyword-3 {
-    top: 25%;
-    right: 15%;
-    animation: float-simple 5s ease-in-out infinite 1s;
-    box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
-}
-
-.keyword-4 {
-    bottom: 20%;
-    left: 10%;
-    animation: float-simple 4.2s ease-in-out infinite 1.5s;
     box-shadow: inset 0 0 18px var(--glow-teal), var(--shadow-sm);
 }
-
-.keyword-5 {
-    top: 75%;
-    right: 20%;
+.keyword-3 {  /* crew — middle left, outside */
+    top: 42%; left: -12%;
+    animation: float-simple 5s ease-in-out infinite 1s;
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
+}
+.keyword-4 {  /* single codebase — lower right, outside */
+    bottom: 4%; right: -10%;
+    animation: float-simple 4.2s ease-in-out infinite 1.5s;
+    box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
+}
+.keyword-5 {  /* iOS · Android — bottom center, outside */
+    bottom: -6%; left: 32%;
     animation: float-simple 5.5s ease-in-out infinite 2s;
     box-shadow: inset 0 0 18px var(--glow-violet), var(--shadow-sm);
 }
-
-.keyword-6 {
-    bottom: 10%;
-    right: 40%;
+.keyword-6 {  /* calm — middle right, outside */
+    top: 48%; right: -4%;
     animation: float-simple 4.8s ease-in-out infinite 2.5s;
     box-shadow: inset 0 0 18px rgba(192, 201, 221, 0.18), var(--shadow-sm);
 }
