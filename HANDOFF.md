@@ -2,6 +2,181 @@
 
 ---
 
+## Session 6 — 2026-04-19: Stats 정직화 + 모바일 Nav CTA + PretendardJP 로케일 분기 + MEMORY 갱신
+
+### 작업 요약
+
+사용자가 "제품 쇼케이스는 상표권·출시 전이라 섣부르다" 지적 → 그 연장선에서 **Session 5의 Hero Stats "2 apps shipped · 3 platforms"가 허위 주장**임을 발견, 긴급 정직화. 동시에 미완료 후속 과제 3건(모바일 Nav CTA 반응형, PretendardJP 로케일 분기, MEMORY.md 갱신)을 꼼꼼 완주. 2 PR + 1 main 커밋으로 분리, `pr-merge-reviewer` 2회 승인, Firebase 배포 1회로 운영 반영.
+
+### 수행한 작업
+
+#### 1. Hero Stats 허위 주장 제거 (PR #6 커밋 1)
+
+**문제**: Session 5 Stats `2 apps shipped · 3 platforms · 100% Flutter` — 상표권 미등록·앱 미출시 상태라 `shipped`는 거짓, `3 platforms`는 과장.
+
+**해결**: 4 로케일 일괄 교체, 숫자 강조 구조(`strong` + muted)는 유지하되 의미를 **마일스톤 선언**으로 전환.
+
+| 로케일 | 교체 전 | 교체 후 |
+|---|---|---|
+| EN | `**2** apps shipped · **3** platforms · **100%** Flutter` | `**2026** launch · **iOS · Android** · **100%** Flutter` |
+| KO | `**2** 출시 앱 · **3** 플랫폼 · **100%** Flutter` | `**2026** 출시 예정 · **iOS · Android** · **100%** Flutter` |
+| JA | `**2** リリース済み · **3** プラットフォーム · **100%** Flutter` | `**2026**年 リリース予定 · **iOS · Android** · **100%** Flutter` |
+
+출시 후 실제 숫자로 돌리려면 4개 `index.html`의 세 줄만 바꾸면 됨.
+
+#### 2. 모바일 Join the crew 햄버거 통합 (PR #6 커밋 2)
+
+PR #4 리뷰어 권장 2 대응. 950px 이하 `.nav-cta` pill이 햄버거·lang-switcher와 공간 충돌 가능 + 열린 햄버거 메뉴에 CTA가 없던 UX 공백 동시 해결.
+
+**구현**:
+- `styles.css`: `.mobile-join-cta { display: none }` 기본 + `@media (max-width: 950px)` 내 `{ display: block; gradient-cta 배경; radius-pill }`, 동시에 `.nav-cta { display: none }` (데스크톱 pill 숨김)
+- 4 HTML: `.nav-menu` 안 "Crew" 링크 직후에 `<a class="nav-link mobile-join-cta" data-scroll-to="#crew">Join the crew|승선하기|船に乗る</a>` 삽입
+
+**검증**: Playwright 모바일 414×820으로 햄버거 닫힘·열림 모두 확인. 열림 시 About/Features/Philosophy/Crew 아래 그라디언트 pill CTA가 pill 형태로 노출 ✅.
+
+#### 3. PretendardJP 로케일 분기 (PR #7, 3커밋)
+
+Session 2에서 일본어 고려로 JP Variable(5.1MB) 자가호스팅. 한/영 페이지도 이를 강제 로드하던 비효율 해소.
+
+**파일 구조 재설계**:
+
+| 파일 | 크기 | 용도 |
+|---|---|---|
+| `public/fonts/PretendardVariable.woff2` (신규) | 2.0MB | KR+Latin 전용 |
+| `public/fonts/PretendardJPVariable.woff2` (기존) | 5.1MB | KR+Latin+JP |
+| `public/fonts-pretendard-kren.css` (신규) | - | @font-face → lean woff2 |
+| `public/fonts-pretendard-jp.css` (신규) | - | @font-face → JP woff2 |
+| `public/colors_and_type.css` (수정) | - | Pretendard @font-face 제거. Space Grotesk + JetBrains Mono만 유지 |
+
+**HTML 로케일별 분기** (Python 배치 스크립트):
+
+| 경로 | 파일 수 | 폰트 세트 |
+|---|---|---|
+| `localized-files/ja/` 하위 | 5 | jp.css + JPVariable.woff2 |
+| 그 외 (루트 + en/ + ko/ + apps/) | 15 | kren.css + Variable.woff2 |
+| `404.html` (standalone) | 1 | 인라인 @font-face src URL 교체 |
+
+**HTML 로드 순서** (20개 동일 패턴):
+```html
+<link rel="preload" as="font" type="font/woff2" href="/fonts/Pretendard{JP,}Variable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
+<link rel="stylesheet" href="/fonts-pretendard-{kren,jp}.css">
+<link rel="stylesheet" href="/colors_and_type.css">
+<link rel="stylesheet" href="/styles.css">
+```
+
+**절약 효과**:
+- EN/KO/404 페이지: 5.1MB → 2.0MB (**3.1MB 감소** per page)
+- JA 페이지: 5.1MB 유지 (일본어 글리프 필요)
+- 저장소 +2.0MB (두 woff2 동시 보존) vs 사용자당 전송량 대폭 감소 = 합당한 트레이드오프
+
+**함정 극복**: 첫 Python 스크립트에서 `/localized-files/ja/` (앞 `/`) 체크로 `pathlib` 상대경로와 매칭 안 돼 JA 파일도 KR+EN으로 잘못 분류 → 재수정 커밋으로 복구.
+
+#### 4. pr-merge-reviewer 승인
+
+- **PR #6**: 필수 0, 권장 3건 모두 후속 처리 가능 수준으로 즉시 승인
+- **PR #7**: woff2 바이너리 `file` 명령 검증(2,057,688바이트 정상), 20/20 로케일 분기 정확성 + preload↔stylesheet URL 일치 + colors_and_type.css 잔재 0 — 즉시 승인
+
+#### 5. Firebase CI 토큰 무기한 배포 인프라 (Session 5 연장)
+
+매 세션 반복되던 `Authentication Error` 종결. 터미널에서 `firebase login:ci` 1회 → `~/.zshrc`에 `FIREBASE_TOKEN` export + `pifl-deploy` alias → 무기한 재배포 가능. Claude Code Bash에선 서브쉘이라 `source ~/.zshrc && firebase deploy ...` 명시 패턴.
+
+**이번 세션 배포 1회**: PR #6 + PR #7을 한번에 운영 반영.
+
+```
+✔  Deploy complete!
+Hosting URL: https://pifl-labs-main.web.app
+```
+
+#### 6. MEMORY.md 전면 갱신
+
+`~/.claude/projects/-Users-pirate-pifl-labs-code-pifl-labs/memory/MEMORY.md`가 40일 전 상태(root=Korean 등 이미 무효한 기술). Session 1~6 전체 반영 재작성:
+
+- Locale Routing 현재 구조(`/` = English) 정정
+- Design Token System 12 섹션 + 역할 분리 원칙
+- Self-Hosted Fonts 로케일 분기 구조
+- Hero 5단 계층 + Nav 2그룹 레이아웃
+- Floating Keywords 궤도 정책 ("sailing alongside, not drifting apart")
+- Brand Voice Rules (H1 영어 유지, SEO 메타 분리, Stats 정직 등)
+- Deprecated class names 목록 (`.hero-subtitle*` 재도입 금지 등)
+- @keyframes 상태 ("6 broken" 기록은 stale, 실제 모두 정의됨)
+- Firebase CI 토큰 워크플로
+- Git/Security gitignore 목록
+
+이 MEMORY는 다음 세션부터 자동 로드되어 Claude가 최신 규칙을 바탕으로 작업 시작 가능.
+
+### 커밋 기록
+
+```
+(머지 후 main 타임라인)
+<PR #6 squash — Hero Stats 정직화 + 모바일 Join the crew 햄버거 통합>
+  ← 5bbba95 fix(hero): Stats 정직화 - 허위 주장(shipped·platforms) 제거
+  ← 7aba665 feat(nav): 모바일(≤950px) Join the crew CTA 햄버거 메뉴 통합
+<PR #7 squash — PretendardJP 로케일 분기 — 한·영 페이지 3.1MB 경량화>
+  ← af34309 perf(fonts): Pretendard @font-face 로케일별 분리 — KR+EN 2.0MB / JP 5.1MB
+  ← 33d46f0 perf(fonts): HTML 20개 로케일별 Pretendard 링크 분기
+  ← bd0088a perf(fonts): 404.html도 PretendardVariable.woff2(2.0MB)로 교체
+```
+
+### 배포 상태
+
+✅ **Firebase Hosting 배포 완료** — 한국·영어 방문자는 이제 Hero 정확한 Stats + 3.1MB 경량 Pretendard 로드.
+
+### 의사결정 기록
+
+1. **Stats "2026 launch" 포맷 채택**: 출시 상태 대신 마일스톤 선언으로 전환. 숫자 강조 구조(strong) 유지해 시각 템플릿 재사용 가능. 출시 후 `2026 launch` → `3 apps shipped` 같이 세 줄만 교체.
+
+2. **Product showcase 섹션 지연**: 사용자 명시 요청. 상표권 등록 + 앱 출시 이후 재논의. Nav에 "Products" 항목 추가하지 않음.
+
+3. **모바일 CTA는 nav-menu 안에 embed**: `.nav-cta` pill을 별도 요소로 두고 반응형으로 위치 변경하는 대신, 같은 텍스트의 `.mobile-join-cta` 링크를 nav-menu에 삽입해 햄버거 토글 시 자연스럽게 노출. JS 수정 없이 CSS만으로 처리.
+
+4. **두 woff2 파일 동시 보존**: JP 5.1MB 삭제하면 일본어 페이지 폰트 깨짐. 한/영 2.0MB 추가 + JP 유지 = 총 디스크 +2MB이지만 사용자당 전송량 대폭 감소가 실익. 언어 전환 시 캐시 미스 발생하나 드문 이벤트.
+
+5. **로케일 판정은 경로 기반**: HTML `lang` 속성 대신 `localized-files/ja/` 경로로 JA 판정. 단순하고 robust.
+
+6. **PR #6 + PR #7 분리**: 카피 교정(정직성, UX) vs 폰트 인프라(성능) 성격이 달라 커밋/PR을 섞지 않음. 리뷰 단위 명확.
+
+7. **MEMORY.md 전면 재작성**: 40일 전 상태라 부분 패치보다 전면 재작성이 정확. "Root = Korean" 같은 완전히 잘못된 규칙 한 줄이 다음 세션에 엉뚱한 코드 유도할 위험.
+
+### 빌드 상태
+
+- 정적 사이트 — 빌드 불필요
+- `pr-merge-reviewer` 2회 검토 (PR #6 즉시 승인 / PR #7 즉시 승인)
+- `mergeable=MERGEABLE`, `mergeStateStatus=CLEAN`
+- Firebase 배포 성공 (`Deploy complete!`)
+- Playwright 모바일 반응형 Playwright 검증 (햄버거 닫힘/열림)
+
+### 주의사항 / 학습
+
+- **Python 경로 매칭 함정**: `pathlib.Path.rglob('*.html')`은 상대경로 반환. `'/localized-files/ja/' in str(path)` (앞 `/`)는 매치 안 됨. `'localized-files/ja/' in str(path)` 써야. 대소문자·경로 분리자도 주의.
+- **Stats 카피의 거짓말 리스크**: 디자인 레퍼런스 그대로 복제하다 제품 현실과 괴리되는 "N apps shipped" 같은 문구가 침투. 프로덕트 상태와 일치하는지 반드시 사실 확인 + 출시 전엔 마일스톤 선언 포맷이 안전.
+- **MEMORY는 주기적 점검 필수**: 40일 방치된 기록이 현실과 정반대(root=Korean 가정)로 돌아가면 다음 세션이 잘못된 전제로 시작. HANDOFF 갱신 + MEMORY 전면 재작성을 6개월 안 주기로 해야 건강.
+
+### 남은 작업
+
+1. **접근성 전수 점검**
+   - `.mobile-join-cta` 데스크톱 `display: none` 상태에서 스크린 리더 노출 여부
+   - Stats `<strong>2026</strong>` 스크린 리더 발음 검증
+   - 키보드 탭 순서: Nav → Hero CTA → Stats → 다음 섹션
+
+2. **About "Pirate Spirit" 카피 구체화** — 제품팀 협의 후 코드리뷰/배포주기/크루 스타일 등 실천 단위로
+
+3. **DEVELOPMENT-GUIDE.md 재검토** — Session 3~5에서 근본적으로 바뀐 부분(토큰 파일 분리, 폰트 로케일 분기, Nav 2그룹)이 가이드에 반영되었는지. 새 페이지 추가 체크리스트 업데이트.
+
+4. **제품 쇼케이스 섹션 (Deferred)** — 상표권 등록 완료 + 앱 출시 후 재개
+
+5. **Philosophy 섹션 재배치 (Deferred)** — Claude Design handoff v2 제안. Dart 코드블록 브랜드 증거물 보존 전제로 프로즈 축소
+
+6. **Code syntax highlighting** (Philosophy 섹션의 Dart 블록) — 지금은 plain `<code>`. Prism.js 같은 경량 하이라이터 도입 고려 (CSP 맞춰야)
+
+### 참고 파일
+
+- 이번 세션 PR #6: https://github.com/pifl-labs/homepage/pull/6
+- 이번 세션 PR #7: https://github.com/pifl-labs/homepage/pull/7
+- MEMORY.md: `~/.claude/projects/-Users-pirate-pifl-labs-code-pifl-labs/memory/MEMORY.md`
+
+---
+
 ## Session 5 — 2026-04-19: Hero 세련도 복원 + 배지 궤도 복귀 + Firebase 무기한 토큰 인프라
 
 ### 작업 요약
