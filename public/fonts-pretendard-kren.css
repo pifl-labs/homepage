@@ -1,0 +1,19 @@
+/* ============================================================
+   Pretendard Variable — Korean + Latin only (~2.0MB)
+   ------------------------------------------------------------
+   Loaded on EN and KO pages where Japanese glyphs are not
+   needed. 3.1MB savings vs. the JP variant.
+
+   Must be loaded BEFORE colors_and_type.css (or at least
+   before styles.css) so that the --font-main token resolves
+   to a valid @font-face declaration.
+   ============================================================ */
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/PretendardVariable.woff2') format('woff2-variations'),
+         url('/fonts/PretendardVariable.woff2') format('woff2');
+}

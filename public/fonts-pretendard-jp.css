@@ -1,0 +1,19 @@
+/* ============================================================
+   Pretendard JP Variable — Korean + Latin + Japanese (~5.1MB)
+   ------------------------------------------------------------
+   Loaded only on JA pages. Heavier but required for correct
+   Japanese glyph coverage.
+
+   Must be loaded BEFORE colors_and_type.css (or at least
+   before styles.css) so that the --font-main token resolves
+   to a valid @font-face declaration.
+   ============================================================ */
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/PretendardJPVariable.woff2') format('woff2-variations'),
+         url('/fonts/PretendardJPVariable.woff2') format('woff2');
+}

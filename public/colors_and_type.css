@@ -21,21 +21,15 @@
 /* ============================================================
    FONT LOADING  (self-hosted, unified with pipi_* apps)
    ------------------------------------------------------------
-   Pretendard JP Variable covers KO + EN + JP in one woff2
-   (~5.1MB, weights 100–900). Space Grotesk is the display
-   face for marketing headings. JetBrains Mono is reserved
-   for code blocks / eyebrows (app uses Space Mono for
-   display digits — different role, stays separate).
+   Pretendard @font-face is split per-locale and loaded via
+   /fonts-pretendard-kren.css (KO + EN, ~2MB) or
+   /fonts-pretendard-jp.css (KO + EN + JP, ~5.1MB).
+   HTML entries pick the matching CSS for their locale.
+
+   Space Grotesk (display headings) and JetBrains Mono (code)
+   stay here because they're identical across all locales.
    ============================================================ */
 
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-    src: url('/fonts/PretendardJPVariable.woff2') format('woff2-variations'),
-         url('/fonts/PretendardJPVariable.woff2') format('woff2');
-}
 @font-face {
     font-family: 'Space Grotesk';
     font-weight: 300 700;
