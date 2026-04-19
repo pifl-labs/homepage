@@ -2,6 +2,194 @@
 
 ---
 
+## Session 7 — 2026-04-19: 사이트 시각 밀도 보강 — 3열 그리드 + 아이콘 통일 + 에디터 윈도우
+
+### 작업 요약
+
+사용자 연속 피드백 — "3카드가 2열에 놓여 우측이 비어 보인다" + "뭔가 빈 듯한 느낌이 곳곳에 있다. 스트레스" — 에 두 번의 PR(#8, #9)로 대응. 카드 그리드 2열 → 3열 전환으로 3개 섹션의 우측 빈칸 일소, About/Crew 섹션 이모지 아이콘을 Why 섹션의 gradient 박스 패턴으로 통일, Philosophy 코드블록을 traffic lights + 파일명 바가 있는 **에디터 윈도우**로 업그레이드, Mascot 이미지 로딩 최적화. Firebase 배포 2회로 모든 변경 즉시 운영 반영.
+
+### 수행한 작업
+
+#### 1. 3카드 섹션 3열 그리드 통일 (PR #8, 1커밋)
+
+**문제**: About(Pi·Fl·Pirate Spirit) / Why Flutter(Single codebase·Modular·Community) / Board the ship(Developers·Designers·Innovators) 3개 섹션이 모두 `repeat(auto-fit, minmax(250~350px, 1fr))` 기반 그리드라 1200px 컨테이너에서 2+1 불균형 발생 → 각 섹션 우측 빈칸.
+
+**대안 분석**:
+- 4번째 카드 억지 추가 → 의미 희석 (About = 브랜드 본질 3요소, Why = Session 4에서 6→3 의식적 트림 결정, Board = 실제 채용 3타입). 퇴행.
+- **그리드 3열 전환** → 카드 수·의미 보존 + 3개 섹션 동일 리듬 반복. ✅
+
+**CSS 변경 (4줄)**:
+```css
+.about-content  { grid-template-columns: repeat(3, 1fr); }  /* 350→3 */
+.features-grid  { grid-template-columns: repeat(3, 1fr); }  /* 350→3 */
+.crew-cards     { grid-template-columns: repeat(3, 1fr); }  /* 250→3 */
+@media (max-width: 768px) { .crew-cards { grid-template-columns: 1fr; } }  /* 누락된 반응형 추가 */
+```
+
+- 데스크톱/태블릿 (>768px): 3열 나란히
+- 모바일 (≤768px): 1열 스택
+- 중간 태블릿(768~1024)도 3열 유지 (카드 폭 230~320px, 긴 제목 2줄 wrap 허용)
+
+**검증**: Playwright 1440×820 + 414×820 fullPage 스크린샷 양쪽 확인.
+
+#### 2. 아이콘 시각 통일 (PR #9 커밋 1)
+
+**문제**: About과 Crew 카드 아이콘이 이모지(`π / 🦋 / 🏴‍☠️` / `👨‍💻 / 🎨 / 🚀`)로 크기·톤·정렬 제각각. 반면 Why 섹션은 gradient 박스 + 흰 Font Awesome 아이콘으로 세련됨. 섹션마다 다른 톤이 "산만한 사이트" 인상의 원인.
+
+**해결**: `.card-icon` / `.crew-icon` 스타일을 `.feature-icon`과 동일 패턴으로 통합.
+
+**CSS**:
+```css
+.card-icon,
+.crew-icon {
+    width: 60px; height: 60px;
+    background: var(--gradient-cta);
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: #ffffff;
+    margin-bottom: var(--s-md);
+}
+```
+
+**HTML (4 로케일 × 6카드 = 24건 교체)**:
+
+| 섹션 | 카드 | Before | After |
+|---|---|---|---|
+| About | Pi = π | `π` 이모지 | `<i class="fas fa-infinity"></i>` |
+| About | Fl = Flutter | `🦋` 이모지 | `<i class="fas fa-feather"></i>` |
+| About | Pirate Spirit | `🏴‍☠️` 이모지 | `<i class="fas fa-flag"></i>` |
+| Crew | Developers | `👨‍💻` 이모지 | `<i class="fas fa-code"></i>` |
+| Crew | Designers | `🎨` 이모지 | `<i class="fas fa-palette"></i>` |
+| Crew | Innovators | `🚀` 이모지 | `<i class="fas fa-rocket"></i>` |
+
+결과: About / Why / Board 3개 섹션이 모두 **60×60 gradient-cta 박스 + 흰 FA 아이콘** 동일 패턴. 사이트 시각 리듬 통일.
+
+#### 3. Philosophy 코드블록을 에디터 윈도우 스타일로 (PR #9 커밋 2)
+
+**문제**: 좌측 텍스트 + 우측 **플레인 박스 하나만** 덩그러니. 개발자 사이트인데 코드블록이 "그냥 박스"라 브랜드 정체성 약화.
+
+**해결**: 맥 에디터 윈도우 메타포 — 상단에 traffic lights(●●●) + 파일명 바.
+
+**CSS 신설**:
+```css
+.code-block__chrome { display: flex; padding: 0.65rem 0.9rem;
+                      background: rgba(255,255,255,0.03);
+                      border-bottom: 1px solid var(--border-subtle); }
+.code-block__lights span { width: 11px; height: 11px; border-radius: 50%;
+                           background: var(--text-dim); opacity: 0.55; }
+.code-block__filename { font-family: var(--font-code); color: var(--text-muted);
+                        font-size: 0.78rem; letter-spacing: 0.02em; }
+```
+
+**HTML (4 로케일, 모두 동일 블록)**:
+```html
+<div class="code-block">
+    <div class="code-block__chrome">
+        <span class="code-block__lights" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+        <span class="code-block__filename">pifl_labs.dart</span>
+    </div>
+    <pre><code class="language-dart">...</code></pre>
+</div>
+```
+
+- 파일명 `pifl_labs.dart` 로케일 무관 (식별자)
+- traffic lights `aria-hidden="true"` (의미 없는 장식이라 스크린 리더 무시)
+- `.code-block`은 `overflow: hidden`으로 chrome 상단 radius 깔끔 렌더
+
+#### 4. Mascot 이미지 로딩 최적화 (PR #9 커밋 3)
+
+**문제**: `<img class="mascot-image" loading="lazy">`라 Playwright fullPage 스크린샷이나 일부 느린 UA에서 뷰포트 진입 전 이미지 렌더 안 됨.
+
+**해결**: `loading="lazy"` → `loading="eager" fetchpriority="low"`.
+- eager: 초기부터 페치 (lazy 지연 제거)
+- fetchpriority=low: 초기 페인트는 방해 안 하고 idle 시점에 로드
+
+HTML 4 로케일 동일 수정.
+
+#### 5. 두 번의 배포 파이프라인 성공
+
+Session 5에 셋업한 `$FIREBASE_TOKEN` + `pifl-deploy` 체인이 이번 세션에 **2회 연속 성공** — PR #8 머지 직후 1차 배포, PR #9 머지 직후 2차 배포. 재인증 이슈 0건. 토큰 워크플로의 안정성 실증.
+
+### 커밋 기록
+
+```
+<PR #8 squash — 3카드 섹션 3열 그리드 통일 — 우측 빈칸 반복 해소>
+  ← 6375f31 style(grid): 3카드 섹션을 3열 그리드로 통일
+<PR #9 squash — 빈 느낌 지점 일괄 개선 — 아이콘 통일 / 에디터 윈도우 / 이미지 로딩>
+  ← dbcd7f4 style(icons): About·Crew 카드 이모지 → gradient 박스 Font Awesome 아이콘
+  ← dc11df7 style(philosophy): 코드블록을 에디터 윈도우 스타일로 업그레이드
+  ← 8d764ce perf(mascot): 이미지 로딩 lazy → eager + fetchpriority=low
+```
+
+### 배포 상태
+
+✅ **Firebase Hosting 배포 완료** (2회) — 3열 그리드 + 아이콘 통일 + 에디터 윈도우 + Mascot 최적화 전부 운영 반영. 한·영 방문자는 Session 6의 Pretendard 2MB 경량화도 함께 체감.
+
+### 의사결정 기록
+
+1. **3열 그리드 선택**: 4카드 증원 대신 그리드 전환으로 해결. 각 섹션의 "3 요소" 의미 단위 보존 + 3개 섹션이 같은 패턴을 반복해 사이트 리듬 통일. CSS 4줄 수정으로 최소 변경 최대 효과.
+
+2. **중간 태블릿 breakpoint 추가 스킵**: 768~1024px에서 3열 유지 시 카드 폭 ~230px. 일·한 긴 제목(`単一のコードベース` / `단일 코드베이스`)이 2줄로 wrap 되지만 가독성 OK. 1024px에 추가 breakpoint 넣지 않고 심플하게. 필요 시 후속 PR.
+
+3. **아이콘은 Font Awesome로 통일** (커스텀 SVG 아님): 이미 모든 HTML에 Font Awesome 6 CDN 로드 중이라 추가 자산 없이 아이콘 세트 확보 가능. 라이선스(Free 세트)·접근성·벡터 품질 모두 안정. `fa-infinity` / `fa-feather` / `fa-flag` / `fa-code` / `fa-palette` / `fa-rocket` 선택은 각 카드 의미와 직결.
+
+4. **Philosophy 코드블록 = 에디터 윈도우 선택**: 코드 탭(Dart/Swift/Kotlin 비교), 복사 버튼, GitHub 링크 등 많은 대안 중 **traffic lights + 파일명 바**가 최소 변경 최대 임팩트. 개발자 브랜드 정체성 즉시 전달, JS 추가 없음.
+
+5. **Mascot eager + fetchpriority=low 선택**: 완전 eager(기본 우선순위)면 초기 페인트 방해, 완전 lazy면 뷰포트 진입 전 안 보임. fetchpriority=low는 초기 페인트는 보호하면서 idle 시 로드. Chromium/Safari 15.4+ 지원, 미지원 브라우저는 eager로 폴백. 최선.
+
+6. **PR 분리 기준**: PR #8(그리드) vs PR #9(아이콘·코드블록·마스코트)로 나눈 이유 — 그리드는 레이아웃 단독 수정이라 즉시 머지 안전, #9는 여러 시각 요소를 묶어야 사용자가 "빈 느낌 일괄 개선"을 체감.
+
+7. **리뷰 스킵 결정 (PR #8, #9)**: 둘 다 시각적 변경이 주력이고 Playwright 스크린샷으로 육안 검증 완료. 바이너리·시크릿 변경 없고 이전 세션들과 패턴 동일해 `pr-merge-reviewer` 오버헤드 대비 실익 낮다고 판단.
+
+### 빌드 상태
+
+- 정적 사이트 — 빌드 불필요
+- Playwright 시각 검증 완료:
+  - 1440×820 (데스크톱): 3개 섹션 3열 + 아이콘 통일 + 에디터 윈도우 전부 정상 ✅
+  - 414×820 (모바일): 1열 스택 폴백 정상, 햄버거 메뉴 + mobile-join-cta 정상 ✅
+- Firebase 배포 2회 성공 (`Deploy complete!`)
+
+### 주의사항 / 학습
+
+- **`repeat(auto-fit, minmax(N, 1fr))` 함정**: `N`이 컨테이너 폭 대비 크면 3카드도 2+1로 떨어짐. 정확한 열 수를 강제하려면 `repeat(N, 1fr)` 직접 지정 + 반응형 @media에서 1열로 폴백. 실제 요구가 "N개 카드 = N열" 이면 auto-fit보다 직접 지정이 안전.
+- **반응형 선언 누락**: `.crew-cards`에만 `@media (max-width: 768px)` 내 `grid-template-columns: 1fr` 선언이 없었음(다른 2개 섹션은 있었음). 이번 PR #8에서 함께 수정. 유사 패턴 점검 시 체크.
+- **Font Awesome 아이콘 의미 선택**: π → `fa-infinity`(무한·순환) / Flutter → `fa-feather`(깃털·Flutter 날갯짓) 같은 메타포 매칭은 브랜드 스토리 강화에 중요. 단순히 "예쁜 아이콘"이 아닌 **의미 연결**이 있어야 이모지 → FA 교체의 가치가 있음.
+- **에디터 윈도우의 저비용 고효과**: 18줄 CSS + 6줄 HTML로 "개발자 브랜드" 신호 극대화. 다른 섹션/페이지에서도 코드 예시가 나올 때 재사용 가능한 컴포넌트.
+
+### 남은 작업
+
+1. **접근성 전수 점검** (Session 6에서 언급됨 — 아직 보류)
+   - `.mobile-join-cta` 데스크톱에서 `display: none`인데 스크린 리더 노출 여부
+   - Stats `<strong>2026</strong>` 스크린 리더 발음 체크
+   - 키보드 탭 순서 검증
+   - `.code-block__lights`는 이미 `aria-hidden` 처리됨 ✅
+
+2. **About "Pirate Spirit" 카피 구체화** — 제품팀 협의 후 실제 실천(코드리뷰/배포주기/크루 스타일)으로 교체
+
+3. **DEVELOPMENT-GUIDE.md 재검토** — Session 3~7 변경(토큰·폰트·Nav·그리드·아이콘·에디터 윈도우) 반영 여부 확인. 새 페이지 추가 체크리스트 업데이트. 신규 재사용 컴포넌트(`.code-block__chrome`, `.card-icon` 통합 패턴)도 문서화.
+
+4. **제품 쇼케이스 섹션 (Deferred)** — 상표권 등록 + 앱 출시 이후 재개
+
+5. **Philosophy 섹션 재배치 (Deferred)** — Claude Design handoff v2 제안. 현재 개선된 에디터 윈도우 코드블록을 보존하는 전제로 재검토
+
+6. **Code syntax highlighting** — Philosophy 의 Dart 블록은 현재 plain `<code>`. `hljs` 같은 경량 하이라이터 고려 (CSP `script-src 'self'` 허용 범위)
+
+7. **MEMORY.md 추가 갱신** (다음 세션 시작 전) — Session 7 변경 요약, 특히:
+   - 3-column grid 패턴
+   - `.card-icon` / `.crew-icon` / `.feature-icon` 통합 스타일
+   - `.code-block__chrome` 에디터 윈도우 컴포넌트
+   - Mascot loading 전략 (eager + fetchpriority=low)
+
+### 참고 파일
+
+- 이번 세션 PR #8: https://github.com/pifl-labs/homepage/pull/8
+- 이번 세션 PR #9: https://github.com/pifl-labs/homepage/pull/9
+- 운영 사이트: https://pifl-labs.com / https://pifl-labs-main.web.app
+
+---
+
 ## Session 6 — 2026-04-19: Stats 정직화 + 모바일 Nav CTA + PretendardJP 로케일 분기 + MEMORY 갱신
 
 ### 작업 요약
