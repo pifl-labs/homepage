@@ -1116,12 +1116,39 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Mobile-only "Join the crew" surfaced inside hamburger menu.
+   Hidden on desktop (the right-side .nav-cta pill handles it). */
+.mobile-join-cta { display: none; }
+
 /* Critical breakpoint - switch to mobile navigation */
 @media (max-width: 950px) {
     .nav-menu {
         display: none;
     }
-    
+
+    /* Desktop Nav CTA pill is folded into the hamburger menu below.
+       Hiding here prevents overlap with .lang-switcher and .nav-toggle. */
+    .nav-cta {
+        display: none;
+    }
+
+    /* Mobile CTA — revealed alongside nav-links inside the open hamburger. */
+    .mobile-join-cta {
+        display: block;
+        margin-top: var(--s-sm);
+        padding: 0.65rem 1rem;
+        background: var(--gradient-cta);
+        color: #ffffff !important;
+        border-radius: var(--radius-pill);
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+    }
+
+    .mobile-join-cta:hover {
+        box-shadow: var(--shadow-glow-sm);
+    }
+
     .nav-toggle {
         display: flex;
         position: absolute;
