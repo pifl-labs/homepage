@@ -557,8 +557,19 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-glow-sm);
 }
 
-.card-icon {
-    font-size: 3rem;
+/* Unified icon treatment across About / Features / Crew sections —
+   gradient-cta box with Font Awesome icon centered. Same visual rhythm. */
+.card-icon,
+.crew-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-cta);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
     margin-bottom: var(--s-md);
 }
 
@@ -851,10 +862,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-glow-sm);
 }
 
-.crew-icon {
-    font-size: 3rem;
-    margin-bottom: var(--s-md);
-}
+/* (.crew-icon shares styling with .card-icon above — see unified block) */
 
 .crew-card h3 {
     color: var(--text-primary);
