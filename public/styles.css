@@ -539,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--s-lg);
 }
 
@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--s-lg);
 }
 
@@ -832,7 +832,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .crew-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--s-lg);
     margin-bottom: var(--s-xl);
 }
@@ -1513,6 +1513,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Crew section */
     .crew-cards {
         gap: var(--s-md);
+        grid-template-columns: 1fr;
         margin-bottom: var(--s-lg);
     }
     
