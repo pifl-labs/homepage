@@ -557,8 +557,19 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-glow-sm);
 }
 
-.card-icon {
-    font-size: 3rem;
+/* Unified icon treatment across About / Features / Crew sections —
+   gradient-cta box with Font Awesome icon centered. Same visual rhythm. */
+.card-icon,
+.crew-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-cta);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
     margin-bottom: var(--s-md);
 }
 
@@ -687,19 +698,55 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
 }
 
+/* Editor-window styled code block — traffic lights + filename bar.
+   Gives the code block visual completeness and developer brand fit. */
 .code-block {
     background: var(--bg-card);
-    border-radius: 12px;
-    padding: var(--s-md);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow-x: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-default);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.code-block__chrome {
+    display: flex;
+    align-items: center;
+    gap: var(--s-sm);
+    padding: 0.65rem 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.code-block__lights {
+    display: inline-flex;
+    gap: 6px;
+}
+
+.code-block__lights span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    opacity: 0.55;
+}
+
+.code-block__filename {
+    font-family: var(--font-code);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 58px; /* offset to visually re-center despite left lights */
 }
 
 .code-block pre {
     margin: 0;
+    padding: var(--s-md);
     font-family: var(--font-code);
     color: var(--text-primary);
     font-size: 0.9rem;
+    overflow-x: auto;
 }
 
 .code-block code {
@@ -851,10 +898,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-glow-sm);
 }
 
-.crew-icon {
-    font-size: 3rem;
-    margin-bottom: var(--s-md);
-}
+/* (.crew-icon shares styling with .card-icon above — see unified block) */
 
 .crew-card h3 {
     color: var(--text-primary);
