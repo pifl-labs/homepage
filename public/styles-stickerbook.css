@@ -425,9 +425,9 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 }
 .pull .quote {
   font-family: var(--font-serif); font-style: italic;
-  font-size: clamp(1.8rem, 3.8vw, 3rem); font-weight: 400;
-  letter-spacing: -0.02em; line-height: 1.15;
-  max-width: 22ch; margin: 0 auto;
+  font-size: clamp(1.7rem, 3.4vw, 2.8rem); font-weight: 400;
+  letter-spacing: -0.02em; line-height: 1.25;
+  max-width: 32ch; margin: 0 auto;
   font-variation-settings: 'opsz' 144;
 }
 .pull .quote .highlight { background: var(--gradient-brand); -webkit-background-clip:text; background-clip:text; color:transparent; }
@@ -609,9 +609,9 @@ html[lang^="ja"] h2.section-title {
 }
 html[lang^="ko"] .pull .quote,
 html[lang^="ja"] .pull .quote {
-  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
-  max-width: 28ch;
-  line-height: 1.4;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  max-width: 36ch;
+  line-height: 1.5;
   word-break: keep-all;
 }
 html[lang^="ko"] .hero-lede,
