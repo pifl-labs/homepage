@@ -86,6 +86,7 @@ body::before {
   text-decoration:none; transition: transform .2s, box-shadow .2s;
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(99,102,241,0.4); }
+.nav-cta-arrow { font-size: .7rem; margin-left: 4px; }
 
 /* ========== HERO ========== */
 .hero { position:relative; padding: 4rem 0 6rem; min-height: 88vh; display:flex; align-items:center; }
@@ -329,16 +330,8 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   font-family: var(--font-code); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
   color: var(--text-muted); z-index: 2;
 }
-.sticker .role {
-  position:absolute; top: 14px; right: 14px; z-index: 2;
-  font-family: var(--font-hand); font-size: 1.3rem;
-  color: var(--accent-warm); transform: rotate(4deg);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  opacity: 0; transition: opacity .3s, transform .3s;
-}
 .sticker:hover { transform: translateY(-6px) rotate(-2deg); }
 .sticker:hover img { transform: scale(1.08) rotate(4deg); }
-.sticker:hover .role { opacity: 1; transform: rotate(-4deg) translateY(-2px); }
 .sticker:nth-child(3n+1) { transform: rotate(-1.5deg); }
 .sticker:nth-child(3n+1):hover { transform: rotate(-3deg) translateY(-6px); }
 .sticker:nth-child(3n+2) { transform: rotate(1.2deg); }
