@@ -1,373 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiFl Labs - Code like a pirate. Fly like Flutter.</title>
-    <meta name="description" content="PiFl Labs Co., Ltd. - A calm cross-platform Flutter app studio. One codebase, iOS A calm cross-platform Flutter studio. A free-spirited Flutter app development studio. Android, no kraken.">
-    <meta name="keywords" content="PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development">
-    <meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PiFl Labs — A crew of one parrot. Allegedly.</title>
+<meta name="description" content="A two-person Flutter studio prepping its first voyage for 2026. One codebase, two stores, zero krakens.">
+<meta name="keywords" content="PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development">
+<meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://pifl-labs.com/">
-    <link rel="alternate" hreflang="en" href="https://pifl-labs.com/" />
-    <link rel="alternate" hreflang="ko" href="https://pifl-labs.com/ko/" />
-    <link rel="alternate" hreflang="ja" href="https://pifl-labs.com/ja/" />
-    <link rel="alternate" hreflang="x-default" href="https://pifl-labs.com/" />
+<!-- Canonical -->
+<link rel="canonical" href="https://pifl-labs.com/en/">
+<link rel="alternate" hreflang="en" href="https://pifl-labs.com/" />
+<link rel="alternate" hreflang="ko" href="https://pifl-labs.com/ko/" />
+<link rel="alternate" hreflang="ja" href="https://pifl-labs.com/ja/" />
+<link rel="alternate" hreflang="x-default" href="https://pifl-labs.com/" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="PiFl Labs - Code like a pirate. Fly like Flutter.">
-    <meta property="og:description" content="PiFl Labs Co., Ltd. - A calm cross-platform Flutter app studio. One codebase, iOS A calm cross-platform Flutter studio. A free-spirited Flutter app development studio. Android, no kraken.">
-    <meta property="og:url" content="https://pifl-labs.com/en/">
-    <meta property="og:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="PiFl Labs">
-    <meta property="og:locale" content="en_US">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PiFl Labs — A crew of one parrot. Allegedly.">
+<meta property="og:description" content="A two-person Flutter studio prepping its first voyage for 2026. One codebase, two stores, zero krakens.">
+<meta property="og:url" content="https://pifl-labs.com/en/">
+<meta property="og:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="PiFl Labs">
+<meta property="og:locale" content="en_US">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PiFl Labs - Code like a pirate. Fly like Flutter.">
-    <meta name="twitter:description" content="PiFl Labs Co., Ltd. - A calm cross-platform Flutter app studio. One codebase, iOS A calm cross-platform Flutter studio. A free-spirited Flutter app development studio. Android, no kraken.">
-    <meta name="twitter:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PiFl Labs — A crew of one parrot. Allegedly.">
+<meta name="twitter:description" content="A two-person Flutter studio prepping its first voyage for 2026. One codebase, two stores, zero krakens.">
+<meta name="twitter:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Language Links -->
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Fonts -->
-    <!-- Fonts (self-hosted, unified with pipi_* apps) -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/PretendardVariable.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
+<!-- Self-hosted Pretendard (KO+EN) -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/PretendardVariable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
+<link rel="stylesheet" href="/fonts-pretendard-kren.css">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Editorial + handwriting faces (Stickerbook direction) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/fonts-pretendard-kren.css">
-    <link rel="stylesheet" href="/colors_and_type.css">
-    <link rel="stylesheet" href="/styles.css">
+<!-- Design tokens + Stickerbook styles -->
+<link rel="stylesheet" href="/colors_and_type.css">
+<link rel="stylesheet" href="/styles-stickerbook.css">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "PiFl Labs Co., Ltd.",
-        "url": "https://pifl-labs.com",
-        "logo": "https://pifl-labs.com/emblem.png",
-        "description": "A calm cross-platform Flutter app studio. One codebase, iOS A calm cross-platform Flutter studio. A free-spirited Flutter app development studio. Android, no kraken.",
-        "email": "hello@pifl-labs.com",
-        "foundingDate": "2026",
-        "knowsLanguage": ["ko", "en", "ja"]
-    }
-    </script>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PiFl Labs Co., Ltd.",
+    "url": "https://pifl-labs.com",
+    "logo": "https://pifl-labs.com/emblem.png",
+    "description": "A two-person Flutter studio prepping its first voyage for 2026.",
+    "email": "hello@pifl-labs.com",
+    "foundingDate": "2026",
+    "knowsLanguage": ["ko", "en", "ja"]
+}
+</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <div class="logo" id="logoHome">
-                    <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                    <span class="logo-text">PiFl Labs</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#crew" class="nav-link">Crew</a>
-                <a href="#crew" class="nav-link mobile-join-cta" data-scroll-to="#crew">Join the crew</a>
-            </div>
-            <a href="#crew" class="nav-cta" data-scroll-to="#crew">Join the crew</a>
-            <div class="lang-switcher">
-                <a href="/en/" class="lang-btn active">EN</a>
-                <a href="/ko/" class="lang-btn">KO</a>
-                <a href="/ja/" class="lang-btn">JA</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+      <b>PiFl Labs</b><sup>CO., LTD.</sup>
+    </a>
+    <div class="nav-links">
+      <a href="#crew">Crew</a>
+      <a href="#about">Ship</a>
+      <a href="#log">Log</a>
+    </div>
+    <div class="lang-pill">
+      <a class="on" href="/" hreflang="en">EN</a><a href="/ko/" hreflang="ko">KO</a><a href="/ja/" hreflang="ja">JA</a>
+    </div>
+    <a href="#log" class="nav-cta">Read the log <i class="fas fa-arrow-right" style="font-size:.7rem;margin-left:4px" aria-hidden="true"></i></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow reveal">A two-person Flutter studio · Est. 2026</div>
+
+        <h1 class="hero-title reveal d1">
+          We are a crew of <span class="italic">one</span>
+          <span class="gradient">parrot</span>.<br>
+          <span class="strike">Allegedly.</span>
+        </h1>
+
+        <p class="hero-lede reveal d2">
+          PiFl Labs is a small studio building <em>calm, cross&#8209;platform</em> apps — one codebase, two stores, zero krakens. Prepping our first voyage with a <em>first mate</em> who wears too many hats. Literally.
+        </p>
+
+        <div class="hero-cta-row reveal d3">
+          <a class="btn btn-primary" href="#crew">Meet the crew <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#about">The story <i class="fas fa-book-open" aria-hidden="true"></i></a>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
+        <div class="hero-meta reveal d4">
+          <span><b>2026</b> first voyage</span>
+          <span><b>iOS&nbsp;·&nbsp;Android</b></span>
+          <span><b>100%</b> Flutter</span>
+          <span><b>14+</b> pipi forms</span>
         </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <p class="hero-eyebrow">A Flutter-first app studio</p>
-                <h1 class="hero-title">
-                    <span class="text-gradient">Pi</span>rates who <span class="text-gradient">Fl</span>utter.
-                </h1>
-                <p class="hero-sublead">Code like a <span class="accent-teal">pirate</span>. Fly like <span class="accent-violet">Flutter</span>.</p>
-                <p class="hero-body">A small crew shipping calm, cross-platform apps from a single codebase. One ship, two stores, no kraken.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" data-scroll-to="#features">
-                        Explore our apps <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn btn-secondary" data-scroll-to="#crew">
-                        Meet the crew
-                    </button>
-                </div>
-                <div class="hero-stats">
-                    <span><strong>2026</strong> launch</span>
-                    <span><strong>iOS · Android</strong></span>
-                    <span><strong>100%</strong> Flutter</span>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="pifl-visual">
-                    <picture>
-                        <source srcset="/pifl-ship.webp" type="image/webp">
-                        <img src="/pifl-ship.png" alt="PiFl - Pirate Ship with Flutter Wings" class="hero-image" loading="eager" decoding="async" fetchpriority="high" width="1536" height="1024">
-                    </picture>
+      </div>
 
-                    <!-- Floating Keywords — brand vocabulary (English across all locales) -->
-                    <div class="floating-keywords">
-                        <div class="keyword-badge keyword-1">pirate</div>
-                        <div class="keyword-badge keyword-2">Flutter</div>
-                        <div class="keyword-badge keyword-3">crew</div>
-                        <div class="keyword-badge keyword-4">single codebase</div>
-                        <div class="keyword-badge keyword-5">iOS · Android</div>
-                        <div class="keyword-badge keyword-6">calm</div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-stage reveal d3">
+        <div class="halo" aria-hidden="true"></div>
+
+        <div class="star-main"><img src="/assets/pipi/pipi-admiral.png" alt="PiPi, PiFl Labs mascot" width="560" height="560"></div>
+
+        <!-- 4 orbiting minis — all clean-line PNGs -->
+        <div class="orbit orbit--a"><img src="/assets/pipi/pipi-eyepatch.png" alt="" width="72" height="72"></div>
+        <div class="orbit orbit--b"><img src="/assets/pipi/pipi-compass.png" alt="" width="72" height="72"></div>
+        <div class="orbit orbit--c"><img src="/assets/pipi/pipi-sailor.png" alt="" width="72" height="72"></div>
+        <div class="orbit orbit--d"><img src="/assets/pipi/pipi-monocle.png" alt="" width="72" height="72"></div>
+
+        <div class="scribble scribble--main" aria-hidden="true">
+          same parrot!
+          <svg width="90" height="70" viewBox="0 0 90 70"><path d="M8,10 Q30,18 50,50 M50,50 L42,46 M50,50 L48,40"/></svg>
         </div>
-    </section>
-
-    <!-- Status Band -->
-    <aside class="status-band" aria-label="Company status">
-        <div class="container status-band__inner">
-            <span class="status-band__dot" aria-hidden="true"></span>
-            <span class="status-band__label">Currently</span>
-            <span class="status-band__value">Building apps for a 2026 launch · Trademark pending · Recruiting crew</span>
+        <div class="scribble scribble--alt" aria-hidden="true">
+          <svg width="90" height="70" viewBox="0 0 90 70"><path d="M80,60 Q55,50 30,18 M30,18 L38,20 M30,18 L32,28"/></svg>
+          also this one.
         </div>
-    </aside>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title section-title--numbered" data-index="01 / THE NAME">
-                About PiFl Labs
-            </h2>
-            <div class="about-layout">
-                <div class="about-cards">
-                    <div class="about-card">
-                        <div class="card-glyph">π</div>
-                        <div class="card-content">
-                            <h3>Pi = π</h3>
-                            <p>Symbol of mathematics, logic, and programming. Endless loops, endless possibilities.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-glyph">Fl</div>
-                        <div class="card-content">
-                            <h3>Fl = Flutter</h3>
-                            <p>Google's Flutter framework. One codebase, wings included.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-glyph">⚓</div>
-                        <div class="card-content">
-                            <h3>Pirate spirit</h3>
-                            <p>Ship scrappy. Ship often. Chart our own course.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-code">
-                    <div class="code-block">
-                        <div class="code-block__chrome">
-                            <span class="code-block__lights" aria-hidden="true">
-                                <span></span><span></span><span></span>
-                            </span>
-                            <span class="code-block__filename">pifl_labs.dart</span>
-                        </div>
-                        <pre><code class="language-dart">// Welcome aboard, matey!
-class PiFlLabs {
-  final spirit = 'pirate';
-  final power = 'flutter';
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><b>// 01</b> Code like a pirate. <i>Fly like Flutter.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 02</b> One ship. Two stores. <i>No kraken.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 03</b> <i>Anchored in drydock</i> · charts being drawn</span>
+    <span class="sep">✦</span>
+    <span><b>// 04</b> <i>First voyage:</i> 2026</span>
+    <span class="sep">✦</span>
+    <span><b>// 05</b> Two humans. <i>One parrot.</i> Many hats.</span>
+    <span class="sep">✦</span>
+    <span><b>// 01</b> Code like a pirate. <i>Fly like Flutter.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 02</b> One ship. Two stores. <i>No kraken.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 03</b> <i>Anchored in drydock</i> · charts being drawn</span>
+    <span class="sep">✦</span>
+    <span><b>// 04</b> <i>First voyage:</i> 2026</span>
+    <span class="sep">✦</span>
+    <span><b>// 05</b> Two humans. <i>One parrot.</i> Many hats.</span>
+    <span class="sep">✦</span>
+  </div>
+</div>
 
-  Future&lt;App&gt; sail() async {
-    return App.build()
-      .withFreedom()
-      .withCreativity()
-      .deploy(everywhere);
-  }
-}</code></pre>
-                    </div>
-                </div>
-            </div>
+<!-- CREW SECTION -->
+<section class="crew-section" id="crew">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">01 / The Manifest</div>
+      <h2 class="section-title">Meet the entire crew. <span class="italic">It's one bird.</span></h2>
+      <p class="section-sub">
+        PiPi, our first mate, does fourteen jobs. Captain, cartographer, cheerleader, and yes — the one in the hammock. Every hat is a context she gets pulled into. Tap one.
+      </p>
+    </div>
+
+    <div class="sticker-wall">
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-admiral.png" alt=""><span class="label">Admiral</span><span class="role">CEO</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-helm-trim.png" alt=""><span class="label">Helmsman</span><span class="role">CTO</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-explorer-trim.png" alt=""><span class="label">Scout</span><span class="role">Research</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-compass.png" alt=""><span class="label">Navigator</span><span class="role">Strategy</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-monocle.png" alt=""><span class="label">Inspector</span><span class="role">QA</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-celebrate-trim.png" alt=""><span class="label">Morale</span><span class="role">HR</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-eyepatch.png" alt=""><span class="label">Rogue</span><span class="role">Security</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-king.png" alt=""><span class="label">Royalty</span><span class="role">Board</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-sailor.png" alt=""><span class="label">Deckhand</span><span class="role">Intern</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-skull.png" alt=""><span class="label">Jolly</span><span class="role">Legal</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-wink-trim.png" alt=""><span class="label">Relay</span><span class="role">Support</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-hammock-trim.png" alt=""><span class="label">Off-duty</span><span class="role">PTO</span></div>
+    </div>
+
+    <div class="annotation-strip">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      <span>That's <em>not</em> twelve parrots. That's one parrot, twelve deadlines.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENTLY -->
+<section class="currently" aria-label="Company status">
+  <div class="container">
+    <div class="currently-inner">
+      <div class="currently-pipi">
+        <img src="/assets/pipi/pipi-king.png" alt="">
+        <div class="currently-bubble">Still below deck 🔭</div>
+      </div>
+      <div>
+        <div class="currently-meta">● Currently</div>
+        <div class="currently-text">
+          Heads down, sails up. Prepping our <b>first voyage for 2026</b>. Trademark pending. No launch dates — just a crew, a codebase, and a lot of coffee.
         </div>
-    </section>
+      </div>
+      <div class="currently-badge">Live log</div>
+    </div>
+  </div>
+</section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title section-title--numbered" data-index="02 / THE APPROACH">
-                Why Flutter, why pirates
-            </h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
-                    <div class="feature-content">
-                        <h3>Single codebase</h3>
-                        <p>One codebase. iOS, Android, web, desktop — every digital sea, one crew to sail it.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="feature-content">
-                        <h3>Modular architecture</h3>
-                        <p>Ship parts swapped, not rewritten. Features are modules — shipped, reused, replaced.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
-                    <div class="feature-content">
-                        <h3>Community driven</h3>
-                        <p>The Crew — a developer collective that ships, reviews, and sails together.</p>
-                    </div>
-                </div>
-            </div>
+<!-- ABOUT / LOGBOOK -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">02 / The Name</div>
+      <h2 class="section-title">Two syllables. <span class="italic">One dumb joke.</span></h2>
+    </div>
+
+    <div class="about-wrap">
+      <div class="logbook-card">
+        <div class="logbook-date">
+          <span>Captain's Log · Entry 001</span><span>Seoul, 26° ENE</span>
         </div>
-    </section>
-
-    <!-- Mascot Section -->
-    <section id="mascot" class="mascot">
-        <div class="container">
-            <div class="mascot-content">
-                <div class="mascot-visual">
-                    <picture>
-                        <source srcset="/pipi.webp" type="image/webp">
-                        <img src="/pipi.png" alt="PiPi - PiFl Labs Pirate Parrot Mascot" class="mascot-image" loading="eager" fetchpriority="low" decoding="async" width="1476" height="1536">
-                    </picture>
-                </div>
-                <div class="mascot-text">
-                    <h2 class="section-title section-title--display">Meet PiPi</h2>
-                    <p class="mascot-subtitle">First mate. Cyber mentor. Definitely a pirate.</p>
-                    <p>PiPi leads our dev-log, answers in the issue tracker, and appears on stickers. A mascot with an actual job description.</p>
-                    <p class="mascot-caption">
-                        <span class="mascot-caption__label">Since</span> 2026 ·
-                        <span class="mascot-caption__label">Role</span> Dev advocate ·
-                        <span class="mascot-caption__label">Status</span> Not for sale (yet)
-                    </p>
-                </div>
-            </div>
+        <div class="logbook-entry">
+          <p>We wanted a name that was half math, half nonsense. <strong>Pi</strong> for the endless loop of software. <strong>Fl</strong> for the framework that lets one codebase fly across every platform.</p>
+          <p>Put them together and you get <strong>PiFl</strong> — which, read fast, sounds like a pirate with a lisp. Good. That's on-brand.</p>
+          <p>Our first mate is a parrot who codes. She has fourteen hats. She wears them all at once, somehow.</p>
         </div>
-    </section>
+        <div class="logbook-signature">— the crew</div>
+      </div>
 
-    <!-- Join Crew Section -->
-    <section id="crew" class="crew">
-        <div class="container">
-            <p class="section-title section-title--quiet">03 / Recruiting now</p>
-            <h2 class="crew-headline">Three seats open on the ship.</h2>
-            <p class="crew-lede">
-                We're a two-person studio building our first Flutter apps. Before launch,
-                we have room for one more of each.
-            </p>
-            <div class="crew-cards">
-                <div class="crew-card">
-                    <div class="crew-icon"><i class="fas fa-code"></i></div>
-                    <div class="crew-content">
-                        <h3>Flutter dev</h3>
-                        <p>Pair on pipi_focus and pipi_words from module-zero to store listing. You like modular Dart and plain English changelogs.</p>
-                    </div>
-                </div>
-                <div class="crew-card">
-                    <div class="crew-icon"><i class="fas fa-palette"></i></div>
-                    <div class="crew-content">
-                        <h3>Product designer</h3>
-                        <p>Own the product UI from Figma to App Store screenshots. You've shipped at least one app end-to-end and can still get excited about icon grids.</p>
-                    </div>
-                </div>
-                <div class="crew-card">
-                    <div class="crew-icon"><i class="fas fa-rocket"></i></div>
-                    <div class="crew-content">
-                        <h3>Operator</h3>
-                        <p>Set up the stuff we keep putting off: analytics that aren't creepy, a dev blog, community, the first real launch plan.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="crew-cta">
-                <a href="#" class="btn btn-primary btn-large" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                    <i class="fas fa-ship"></i> Send us your work
-                </a>
-                <p class="crew-email" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                    <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                </p>
-                <p class="crew-aside">
-                    Not looking for a job but want to follow along?
-                    <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">Say hi &rarr;</a>
-                </p>
-            </div>
+      <div class="decoder-stack">
+        <div class="decoder">
+          <div class="glyph">π</div>
+          <div>
+            <h3>Pi</h3>
+            <p>The endless loop. Mathematics, logic, and the comfort of infinity in a single symbol.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                        <span class="logo-text">PiFl Labs Co., Ltd.</span>
-                    </div>
-                    <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
-                    <p class="footer-description">A Flutter-based cross-platform development studio.<br>Sailing the digital seas with pirate spirit.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Navigate</h4>
-                    <ul class="footer-nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#crew">Crew</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="support" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-headset"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-briefcase"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-shield-alt"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PiFl Labs Co., Ltd. All rights reserved.</p>
-                <p class="footer-legal-links"><a href="/terms">Terms</a> <span>·</span> <a href="/privacy">Privacy</a></p>
-            </div>
+        <div class="decoder">
+          <div class="glyph">Fl</div>
+          <div>
+            <h3>Fl — for Flutter</h3>
+            <p>One codebase. iOS, Android, web, desktop. Wings included, batteries included.</p>
+          </div>
         </div>
-    </footer>
+        <div class="decoder">
+          <div class="glyph">⚓</div>
+          <div>
+            <h3>Labs</h3>
+            <p>Because "studio" sounds too precious and "corp" sounds too big. Labs ship scrappy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="/script.js"></script>
+<!-- PULL QUOTE -->
+<section class="pull">
+  <div class="container">
+    <p class="quote">
+      We build <span class="highlight">calm apps</span> with a <span class="highlight">pirate spirit</span>. One codebase, two stores, zero krakens.
+    </p>
+    <div class="quote-by">
+      <img src="/assets/pipi/pipi-sailor.png" alt=""> — PiPi, first mate
+    </div>
+  </div>
+</section>
+
+<!-- LOG / DISPATCHES -->
+<section class="join" id="log">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">03 / Dispatches</div>
+      <h2 class="section-title">From the log. <span class="italic">Quiet but moving.</span></h2>
+      <p class="section-sub">
+        We're not live yet. We're <em>getting there.</em> Here's what's on deck this season.
+      </p>
+    </div>
+
+    <div class="dispatch-grid">
+      <article class="dispatch">
+        <div class="dispatch-head">
+          <span class="slot-tag">Entry · this season</span>
+          <span class="slot-q">✱</span>
+        </div>
+        <div class="dispatch-art"><img src="/assets/pipi/pipi-admiral.png" alt=""></div>
+        <div class="dispatch-body">
+          <div class="slot-role">Chart <span class="italic">the route</span></div>
+          <div class="slot-desc">Sketching the shape of our first apps. Calm on purpose. Short on features, long on care.</div>
+        </div>
+      </article>
+
+      <article class="dispatch">
+        <div class="dispatch-head">
+          <span class="slot-tag">Entry · next</span>
+          <span class="slot-q">✱</span>
+        </div>
+        <div class="dispatch-art"><img src="/assets/pipi/pipi-monocle.png" alt=""></div>
+        <div class="dispatch-body">
+          <div class="slot-role">Rig <span class="italic">the ship</span></div>
+          <div class="slot-desc">Design system, modular Dart, icon grids. The plumbing no one applauds but everyone relies on.</div>
+        </div>
+      </article>
+
+      <article class="dispatch">
+        <div class="dispatch-head">
+          <span class="slot-tag">Entry · soon</span>
+          <span class="slot-q">✱</span>
+        </div>
+        <div class="dispatch-art"><img src="/assets/pipi/pipi-compass.png" alt=""></div>
+        <div class="dispatch-body">
+          <div class="slot-role">Set <span class="italic">sail</span></div>
+          <div class="slot-desc">When the wind is right and the charts are readable. 2026. No earlier, no later.</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="join-cta">
+      <a class="btn btn-primary btn-large" href="mailto:hello@pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> Say hi</a>
+      <p class="hint">We like a good postcard — <a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+          <b>PiFl Labs</b><sup>CO., LTD.</sup>
+        </a>
+        <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
+        <p class="footer-desc">A Flutter-based cross-platform studio. Sailing the digital seas with a very small, very opinionated parrot.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#crew">Crew</a></li>
+          <li><a href="#about">Ship</a></li>
+          <li><a href="#log">Log</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></li>
+          <li><a href="mailto:privacy@pifl-labs.com">privacy@pifl-labs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PiFl Labs Co., Ltd.</span>
+      <span><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · Made with ⚓</span>
+    </div>
+  </div>
+  <img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true">
+</footer>
+
 </body>
 </html>
