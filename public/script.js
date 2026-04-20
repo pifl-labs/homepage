@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = btn.dataset.scrollTo;
             const target = document.querySelector(targetId);
             if (target) {
-                const navHeight = document.querySelector('.navbar').offsetHeight;
+                const navEl = document.querySelector('.navbar, .nav');
+                const navHeight = navEl ? navEl.offsetHeight : 0;
                 const targetPosition = target.offsetTop - navHeight;
                 history.pushState(null, null, targetId);
                 window.scrollTo({
