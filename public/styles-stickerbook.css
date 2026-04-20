@@ -92,9 +92,15 @@ body::before {
   padding: 8px 16px; border-radius: 999px;
   background: var(--gradient-cta); color:#020617; font-weight:700; font-size:.85rem;
   text-decoration:none; transition: transform .2s, box-shadow .2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(99,102,241,0.4); }
 .nav-cta-arrow { font-size: .7rem; margin-left: 4px; }
+/* 좁은 뷰포트에선 CTA 숨김 — 로고·lang-pill만 남기고 스크롤 유도는 섹션 내부 CTA로 위임 */
+@media (max-width: 720px) {
+  .nav-cta { display: none; }
+}
 
 /* ========== HERO ========== */
 .hero { position:relative; padding: 4rem 0 6rem; min-height: 88vh; display:flex; align-items:center; }
