@@ -1,372 +1,378 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiFl Labs - Code like a pirate. Fly like Flutter.</title>
-    <meta name="description" content="PiFl Labs Co., Ltd. - 크로스 플랫폼 개발 스튜디오. Flutter 기반의 자유로운 앱 개발 스튜디오.">
-    <meta name="keywords" content="PiFl Labs, Flutter, 앱개발, 크로스플랫폼, iOS, Android, 소프트웨어 개발">
-    <meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PiFl Labs — 앵무새 한 마리의 크루. 라고 전해집니다.</title>
+<meta name="description" content="2026년 첫 항해를 준비 중인 두 명의 Flutter 스튜디오. 하나의 코드베이스, 두 개의 스토어, 크라켄은 없음.">
+<meta name="keywords" content="PiFl Labs, Flutter, 앱개발, 크로스플랫폼, iOS, Android, 소프트웨어 개발">
+<meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://pifl-labs.com/ko/">
-    <link rel="alternate" hreflang="en" href="https://pifl-labs.com/" />
-    <link rel="alternate" hreflang="ko" href="https://pifl-labs.com/ko/" />
-    <link rel="alternate" hreflang="ja" href="https://pifl-labs.com/ja/" />
-    <link rel="alternate" hreflang="x-default" href="https://pifl-labs.com/" />
+<!-- Canonical -->
+<link rel="canonical" href="https://pifl-labs.com/ko/">
+<link rel="alternate" hreflang="en" href="https://pifl-labs.com/" />
+<link rel="alternate" hreflang="ko" href="https://pifl-labs.com/ko/" />
+<link rel="alternate" hreflang="ja" href="https://pifl-labs.com/ja/" />
+<link rel="alternate" hreflang="x-default" href="https://pifl-labs.com/" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="PiFl Labs - Code like a pirate. Fly like Flutter.">
-    <meta property="og:description" content="PiFl Labs Co., Ltd. - 크로스 플랫폼 개발 스튜디오. Flutter 기반의 자유로운 앱 개발 스튜디오.">
-    <meta property="og:url" content="https://pifl-labs.com/">
-    <meta property="og:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="PiFl Labs">
-    <meta property="og:locale" content="ko_KR">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PiFl Labs — 앵무새 한 마리의 크루. 라고 전해집니다.">
+<meta property="og:description" content="2026년 첫 항해를 준비 중인 두 명의 Flutter 스튜디오. 하나의 코드베이스, 두 개의 스토어, 크라켄은 없음.">
+<meta property="og:url" content="https://pifl-labs.com/ko/">
+<meta property="og:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="PiFl Labs">
+<meta property="og:locale" content="ko_KR">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PiFl Labs - Code like a pirate. Fly like Flutter.">
-    <meta name="twitter:description" content="PiFl Labs Co., Ltd. - 크로스 플랫폼 개발 스튜디오. Flutter 기반의 자유로운 앱 개발 스튜디오.">
-    <meta name="twitter:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PiFl Labs — 앵무새 한 마리의 크루. 라고 전해집니다.">
+<meta name="twitter:description" content="2026년 첫 항해를 준비 중인 두 명의 Flutter 스튜디오. 하나의 코드베이스, 두 개의 스토어, 크라켄은 없음.">
+<meta name="twitter:image" content="https://pifl-labs.com/pifl-ship-og.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Fonts -->
-    <!-- Fonts (self-hosted, unified with pipi_* apps) -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/PretendardVariable.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Self-hosted Pretendard (KO+EN) -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/PretendardVariable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
+<link rel="stylesheet" href="/fonts-pretendard-kren.css">
 
-    <!-- Language Links -->
+<!-- Editorial + handwriting faces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/fonts-pretendard-kren.css">
-    <link rel="stylesheet" href="/colors_and_type.css">
-    <link rel="stylesheet" href="/styles.css">
+<!-- Design tokens + Stickerbook styles -->
+<link rel="stylesheet" href="/colors_and_type.css">
+<link rel="stylesheet" href="/styles-stickerbook.css">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "PiFl Labs Co., Ltd.",
-        "url": "https://pifl-labs.com",
-        "logo": "https://pifl-labs.com/emblem.png",
-        "description": "크로스 플랫폼 개발 스튜디오. Flutter 기반의 자유로운 앱 개발 스튜디오.",
-        "email": "hello@pifl-labs.com",
-        "foundingDate": "2026",
-        "knowsLanguage": ["ko", "en", "ja"]
-    }
-    </script>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "주식회사 PiFl Labs",
+    "url": "https://pifl-labs.com",
+    "logo": "https://pifl-labs.com/emblem.png",
+    "description": "2026년 첫 항해를 준비 중인 두 명의 Flutter 스튜디오.",
+    "email": "hello@pifl-labs.com",
+    "foundingDate": "2026",
+    "knowsLanguage": ["ko", "en", "ja"]
+}
+</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <div class="logo" id="logoHome">
-                    <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                    <span class="logo-text">PiFl Labs</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="#about" class="nav-link">소개</a>
-                <a href="#features" class="nav-link">특징</a>
-                <a href="#crew" class="nav-link">크루</a>
-                <a href="#crew" class="nav-link mobile-join-cta" data-scroll-to="#crew">승선하기</a>
-            </div>
-            <a href="#crew" class="nav-cta" data-scroll-to="#crew">승선하기</a>
-            <div class="lang-switcher">
-                <a href="/en/" class="lang-btn">EN</a>
-                <a href="/" class="lang-btn active">KO</a>
-                <a href="/ja/" class="lang-btn">JA</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+      <b>PiFl Labs</b><sup>주식회사</sup>
+    </a>
+    <div class="nav-links">
+      <a href="#crew">크루</a>
+      <a href="#about">배</a>
+      <a href="#log">항해일지</a>
+    </div>
+    <div class="lang-pill">
+      <a href="/" hreflang="en">EN</a><a class="on" href="/ko/" hreflang="ko">KO</a><a href="/ja/" hreflang="ja">JA</a>
+    </div>
+    <a href="#log" class="nav-cta">일지 읽기 <i class="fas fa-arrow-right" style="font-size:.7rem;margin-left:4px" aria-hidden="true"></i></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow reveal">두 명의 Flutter 스튜디오 · 2026 설립</div>
+
+        <h1 class="hero-title reveal d1">
+          우리는 <span class="italic">앵무새 한 마리</span>로 이루어진
+          <span class="gradient">크루</span>입니다.<br>
+          <span class="strike">라고 전해집니다.</span>
+        </h1>
+
+        <p class="hero-lede reveal d2">
+          PiFl Labs는 <em>조용하고 크로스플랫폼인</em> 앱을 만드는 작은 스튜디오입니다. 하나의 코드베이스, 두 개의 스토어, 크라켄은 없음. 너무 많은 모자를 쓴 — 말 그대로 — <em>일등항해사</em>와 함께 첫 항해를 준비 중입니다.
+        </p>
+
+        <div class="hero-cta-row reveal d3">
+          <a class="btn btn-primary" href="#crew">크루를 만나다 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#about">이야기 <i class="fas fa-book-open" aria-hidden="true"></i></a>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
+        <div class="hero-meta reveal d4">
+          <span><b>2026</b> 첫 항해</span>
+          <span><b>iOS&nbsp;·&nbsp;Android</b></span>
+          <span><b>100%</b> Flutter</span>
+          <span><b>14+</b> 피피 형상</span>
         </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <p class="hero-eyebrow">Flutter 중심 앱 스튜디오</p>
-                <h1 class="hero-title">
-                    <span class="text-gradient">Pi</span>rates who <span class="text-gradient">Fl</span>utter.
-                </h1>
-                <p class="hero-sublead"><span class="accent-teal">해적</span>처럼 코딩하고, <span class="accent-violet">Flutter</span>처럼 날다.</p>
-                <p class="hero-body">작은 크루가 조용히 항해합니다. 하나의 코드베이스로 iOS와 Android에, 숨은 괴물 없이.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" data-scroll-to="#features">
-                        앱 둘러보기 <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn btn-secondary" data-scroll-to="#crew">
-                        크루 만나기
-                    </button>
-                </div>
-                <div class="hero-stats">
-                    <span><strong>2026</strong> 출시 예정</span>
-                    <span><strong>iOS · Android</strong></span>
-                    <span><strong>100%</strong> Flutter</span>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="pifl-visual">
-                    <picture>
-                        <source srcset="/pifl-ship.webp" type="image/webp">
-                        <img src="/pifl-ship.png" alt="PiFl - Pirate Ship with Flutter Wings" class="hero-image" loading="eager" decoding="async" fetchpriority="high" width="1536" height="1024">
-                    </picture>
+      </div>
 
-                    <!-- Floating Keywords — brand vocabulary (English across all locales) -->
-                    <div class="floating-keywords">
-                        <div class="keyword-badge keyword-1">pirate</div>
-                        <div class="keyword-badge keyword-2">Flutter</div>
-                        <div class="keyword-badge keyword-3">crew</div>
-                        <div class="keyword-badge keyword-4">single codebase</div>
-                        <div class="keyword-badge keyword-5">iOS · Android</div>
-                        <div class="keyword-badge keyword-6">calm</div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-stage reveal d3">
+        <div class="halo" aria-hidden="true"></div>
+
+        <div class="star-main"><img src="/assets/pipi/pipi-admiral.png" alt="PiPi, PiFl Labs 마스코트" width="560" height="560"></div>
+
+        <div class="orbit orbit--a"><img src="/assets/pipi/pipi-eyepatch.png" alt="" width="72" height="72"></div>
+        <div class="orbit orbit--b"><img src="/assets/pipi/pipi-compass.png" alt="" width="72" height="72"></div>
+        <div class="orbit orbit--c"><img src="/assets/pipi/pipi-sailor.png" alt="" width="72" height="72"></div>
+        <div class="orbit orbit--d"><img src="/assets/pipi/pipi-monocle.png" alt="" width="72" height="72"></div>
+
+        <div class="scribble scribble--main" aria-hidden="true">
+          같은 앵무새!
+          <svg width="90" height="70" viewBox="0 0 90 70"><path d="M8,10 Q30,18 50,50 M50,50 L42,46 M50,50 L48,40"/></svg>
         </div>
-    </section>
-
-    <!-- Status Band -->
-    <aside class="status-band" aria-label="Company status">
-        <div class="container status-band__inner">
-            <span class="status-band__dot" aria-hidden="true"></span>
-            <span class="status-band__label">지금</span>
-            <span class="status-band__value">2026 출시를 위한 앱 개발 중 · 상표권 출원 중 · 크루 모집 중</span>
+        <div class="scribble scribble--alt" aria-hidden="true">
+          <svg width="90" height="70" viewBox="0 0 90 70"><path d="M80,60 Q55,50 30,18 M30,18 L38,20 M30,18 L32,28"/></svg>
+          얘도 같은 애.
         </div>
-    </aside>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title section-title--numbered" data-index="01 / 이름의 뜻">
-                About PiFl Labs
-            </h2>
-            <div class="about-layout">
-                <div class="about-cards">
-                    <div class="about-card">
-                        <div class="card-glyph">π</div>
-                        <div class="card-content">
-                            <h3>Pi = π (파이)</h3>
-                            <p>수학과 논리, 프로그래밍의 상징. 끝없는 순환, 끝없는 가능성.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-glyph">Fl</div>
-                        <div class="card-content">
-                            <h3>Fl = Flutter</h3>
-                            <p>Google의 Flutter 프레임워크. 하나의 코드베이스, 날개까지 포함.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-glyph">⚓</div>
-                        <div class="card-content">
-                            <h3>해적 정신</h3>
-                            <p>가볍게 출시하고, 자주 출시합니다. 스스로 항해도를 그립니다.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-code">
-                    <div class="code-block">
-                        <div class="code-block__chrome">
-                            <span class="code-block__lights" aria-hidden="true">
-                                <span></span><span></span><span></span>
-                            </span>
-                            <span class="code-block__filename">pifl_labs.dart</span>
-                        </div>
-                        <pre><code class="language-dart">// Welcome aboard, matey!
-class PiFlLabs {
-  final spirit = 'pirate';
-  final power = 'flutter';
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><b>// 01</b> 해적처럼 코딩하고. <i>Flutter처럼 날다.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 02</b> 한 척의 배. 두 개의 스토어. <i>크라켄은 없음.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 03</b> <i>드라이독에 정박 중</i> · 해도 작성 중</span>
+    <span class="sep">✦</span>
+    <span><b>// 04</b> <i>첫 항해:</i> 2026</span>
+    <span class="sep">✦</span>
+    <span><b>// 05</b> 인간 둘. <i>앵무새 하나.</i> 모자 여러 개.</span>
+    <span class="sep">✦</span>
+    <span><b>// 01</b> 해적처럼 코딩하고. <i>Flutter처럼 날다.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 02</b> 한 척의 배. 두 개의 스토어. <i>크라켄은 없음.</i></span>
+    <span class="sep">✦</span>
+    <span><b>// 03</b> <i>드라이독에 정박 중</i> · 해도 작성 중</span>
+    <span class="sep">✦</span>
+    <span><b>// 04</b> <i>첫 항해:</i> 2026</span>
+    <span class="sep">✦</span>
+    <span><b>// 05</b> 인간 둘. <i>앵무새 하나.</i> 모자 여러 개.</span>
+    <span class="sep">✦</span>
+  </div>
+</div>
 
-  Future&lt;App&gt; sail() async {
-    return App.build()
-      .withFreedom()
-      .withCreativity()
-      .deploy(everywhere);
-  }
-}</code></pre>
-                    </div>
-                </div>
-            </div>
+<!-- CREW SECTION -->
+<section class="crew-section" id="crew">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">01 / 승선 명부</div>
+      <h2 class="section-title">전체 크루를 만나보세요. <span class="italic">한 마리의 새입니다.</span></h2>
+      <p class="section-sub">
+        우리의 일등항해사 PiPi는 열네 가지 일을 합니다. 선장, 지도제작자, 응원단장, 그리고 네 — 해먹에 있는 그 아이도. 모자 하나하나가 그녀가 불려가는 상황입니다. 눌러보세요.
+      </p>
+    </div>
+
+    <div class="sticker-wall">
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-admiral.png" alt=""><span class="label">제독</span><span class="role">대표</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-helm-trim.png" alt=""><span class="label">조타수</span><span class="role">CTO</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-explorer-trim.png" alt=""><span class="label">정찰병</span><span class="role">리서치</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-compass.png" alt=""><span class="label">항해사</span><span class="role">전략</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-monocle.png" alt=""><span class="label">검열관</span><span class="role">QA</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-celebrate-trim.png" alt=""><span class="label">사기진작</span><span class="role">인사</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-eyepatch.png" alt=""><span class="label">악당</span><span class="role">보안</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-king.png" alt=""><span class="label">왕족</span><span class="role">이사회</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-sailor.png" alt=""><span class="label">갑판원</span><span class="role">인턴</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-skull.png" alt=""><span class="label">해골기</span><span class="role">법무</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-wink-trim.png" alt=""><span class="label">전령</span><span class="role">지원</span></div>
+      <div class="sticker sticker--clean"><img src="/assets/pipi/pipi-hammock-trim.png" alt=""><span class="label">휴식 중</span><span class="role">휴가</span></div>
+    </div>
+
+    <div class="annotation-strip">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      <span>열두 마리의 앵무새가 <em>아닙니다.</em> 앵무새 하나, 마감 열두 개입니다.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENTLY -->
+<section class="currently" aria-label="Company status">
+  <div class="container">
+    <div class="currently-inner">
+      <div class="currently-pipi">
+        <img src="/assets/pipi/pipi-king.png" alt="">
+        <div class="currently-bubble">아직 갑판 아래에서 🔭</div>
+      </div>
+      <div>
+        <div class="currently-meta">● 현재</div>
+        <div class="currently-text">
+          고개는 숙이고, 돛은 올리고. <b>2026년 첫 항해를 준비 중입니다.</b> 상표 출원 중. 출시일은 없고 — 그저 크루와 코드베이스, 그리고 수많은 커피뿐.
         </div>
-    </section>
+      </div>
+      <div class="currently-badge">실시간 일지</div>
+    </div>
+  </div>
+</section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title section-title--numbered" data-index="02 / 작업 방식">
-                Why Flutter, why pirates
-            </h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
-                    <div class="feature-content">
-                        <h3>단일 코드베이스</h3>
-                        <p>하나의 코드베이스. iOS, Android, 웹, 데스크톱 — 모든 디지털 바다를 한 팀이 항해합니다.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="feature-content">
-                        <h3>모듈러 아키텍처</h3>
-                        <p>배의 부품을 갈아끼듯, 기능은 모듈 단위로 추가·재사용·교체됩니다.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
-                    <div class="feature-content">
-                        <h3>크루 중심</h3>
-                        <p>The Crew — 함께 출시하고, 리뷰하고, 항해하는 개발자 집단.</p>
-                    </div>
-                </div>
-            </div>
+<!-- ABOUT / LOGBOOK -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">02 / 이름에 대하여</div>
+      <h2 class="section-title">두 음절. <span class="italic">멍청한 농담 하나.</span></h2>
+    </div>
+
+    <div class="about-wrap">
+      <div class="logbook-card">
+        <div class="logbook-date">
+          <span>선장의 일지 · 항목 001</span><span>26° ENE · fair winds</span>
         </div>
-    </section>
-
-    <!-- Mascot Section -->
-    <section id="mascot" class="mascot">
-        <div class="container">
-            <div class="mascot-content">
-                <div class="mascot-visual">
-                    <picture>
-                        <source srcset="/pipi.webp" type="image/webp">
-                        <img src="/pipi.png" alt="PiPi - PiFl Labs 해적 앵무새 마스코트" class="mascot-image" loading="eager" fetchpriority="low" decoding="async" width="1476" height="1536">
-                    </picture>
-                </div>
-                <div class="mascot-text">
-                    <h2 class="section-title section-title--display">Meet PiPi</h2>
-                    <p class="mascot-subtitle">일등 항해사. 사이버 멘토. 영락없는 해적.</p>
-                    <p>PiPi는 개발 로그를 이끌고, 이슈 트래커에 답하고, 스티커에 등장합니다. 실제로 역할이 있는 마스코트입니다.</p>
-                    <p class="mascot-caption">
-                        <span class="mascot-caption__label">Since</span> 2026 ·
-                        <span class="mascot-caption__label">Role</span> Dev advocate ·
-                        <span class="mascot-caption__label">Status</span> Not for sale (yet)
-                    </p>
-                </div>
-            </div>
+        <div class="logbook-entry">
+          <p>반은 수학, 반은 말장난인 이름을 원했습니다. <strong>Pi</strong>는 소프트웨어의 끝없는 루프. <strong>Fl</strong>은 하나의 코드베이스가 모든 플랫폼 위를 날게 해주는 프레임워크.</p>
+          <p>붙여 읽으면 <strong>PiFl</strong> — 빠르게 읽으면 혀 짧은 해적처럼 들립니다. 좋아요. 컨셉에 맞습니다.</p>
+          <p>일등항해사는 코딩하는 앵무새입니다. 모자는 열네 개. 어찌어찌 전부 동시에 쓰고 있습니다.</p>
         </div>
-    </section>
+        <div class="logbook-signature">— 크루 일동</div>
+      </div>
 
-    <!-- Join Crew Section -->
-    <section id="crew" class="crew">
-        <div class="container">
-            <p class="section-title section-title--quiet">03 / 크루 모집</p>
-            <h2 class="crew-headline">배에 세 자리가 비어 있습니다.</h2>
-            <p class="crew-lede">
-                두 명이서 첫 Flutter 앱들을 만들고 있습니다. 출시 전에 각 역할로 한 자리씩이 남아 있습니다.
-            </p>
-            <div class="crew-cards">
-                <div class="crew-card">
-                    <div class="crew-icon"><i class="fas fa-code"></i></div>
-                    <div class="crew-content">
-                        <h3>Flutter 개발자</h3>
-                        <p>pipi_focus, pipi_words를 모듈 제로부터 스토어 출시까지 함께 만듭니다. 모듈러 Dart와 담백한 체인지로그를 좋아하는 분.</p>
-                    </div>
-                </div>
-                <div class="crew-card">
-                    <div class="crew-icon"><i class="fas fa-palette"></i></div>
-                    <div class="crew-content">
-                        <h3>프로덕트 디자이너</h3>
-                        <p>Figma부터 App Store 스크린샷까지 프로덕트 UI를 전적으로 책임집니다. 앱을 엔드투엔드로 출시해 본 경험이 있고, 아이콘 그리드에 여전히 설레는 분.</p>
-                    </div>
-                </div>
-                <div class="crew-card">
-                    <div class="crew-icon"><i class="fas fa-rocket"></i></div>
-                    <div class="crew-content">
-                        <h3>오퍼레이터</h3>
-                        <p>계속 미뤄온 것들을 세팅합니다: 거슬리지 않는 분석, 개발 블로그, 커뮤니티, 그리고 진짜 출시 플랜.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="crew-cta">
-                <a href="#" class="btn btn-primary btn-large" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                    <i class="fas fa-ship"></i> 작업물 보내기
-                </a>
-                <p class="crew-email" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                    <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                </p>
-                <p class="crew-aside">
-                    구직은 아니지만 소식을 받고 싶다면?
-                    <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">인사 남기기 &rarr;</a>
-                </p>
-            </div>
+      <div class="decoder-stack">
+        <div class="decoder">
+          <div class="glyph">π</div>
+          <div>
+            <h3>Pi</h3>
+            <p>끝없는 루프. 수학, 논리, 그리고 하나의 기호 안에 담긴 무한의 편안함.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                        <span class="logo-text">PiFl Labs Co., Ltd.</span>
-                    </div>
-                    <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
-                    <p class="footer-description">Flutter 기반 크로스 플랫폼 개발 스튜디오.<br>해적의 정신으로 디지털 세계를 항해합니다.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>바로가기</h4>
-                    <ul class="footer-nav">
-                        <li><a href="#home">홈</a></li>
-                        <li><a href="#about">소개</a></li>
-                        <li><a href="#features">특징</a></li>
-                        <li><a href="#crew">크루</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="support" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-headset"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-briefcase"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-shield-alt"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PiFl Labs Co., Ltd. All rights reserved.</p>
-                <p class="footer-legal-links"><a href="/ko/terms">이용약관</a> <span>·</span> <a href="/ko/privacy">개인정보처리방침</a></p>
-            </div>
+        <div class="decoder">
+          <div class="glyph">Fl</div>
+          <div>
+            <h3>Fl — Flutter의 Fl</h3>
+            <p>하나의 코드베이스. iOS, Android, 웹, 데스크톱. 날개 포함, 배터리 포함.</p>
+          </div>
         </div>
-    </footer>
+        <div class="decoder">
+          <div class="glyph">⚓</div>
+          <div>
+            <h3>Labs</h3>
+            <p>"스튜디오"는 너무 귀엽고 "법인"은 너무 무겁습니다. Labs가 딱 부족한 만큼 출시합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="/script.js"></script>
+<!-- PULL QUOTE -->
+<section class="pull">
+  <div class="container">
+    <p class="quote">
+      우리는 <span class="highlight">해적의 마음가짐</span>으로 <span class="highlight">조용한 앱</span>을 만듭니다. 하나의 코드베이스, 두 개의 스토어, 크라켄은 없음.
+    </p>
+    <div class="quote-by">
+      <img src="/assets/pipi/pipi-sailor.png" alt=""> — 일등항해사 PiPi
+    </div>
+  </div>
+</section>
+
+<!-- LOG / DISPATCHES -->
+<section class="join" id="log">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">03 / 통신문</div>
+      <h2 class="section-title">항해일지에서. <span class="italic">조용히, 그러나 전진 중.</span></h2>
+      <p class="section-sub">
+        아직 출시 전입니다. <em>거의 다 왔습니다.</em> 이번 시즌 갑판 위에 오른 것들입니다.
+      </p>
+    </div>
+
+    <div class="dispatch-grid">
+      <article class="dispatch">
+        <div class="dispatch-head">
+          <span class="slot-tag">항목 · 이번 시즌</span>
+          <span class="slot-q">✱</span>
+        </div>
+        <div class="dispatch-art"><img src="/assets/pipi/pipi-admiral.png" alt=""></div>
+        <div class="dispatch-body">
+          <div class="slot-role"><span class="italic">항로를</span> 그리다</div>
+          <div class="slot-desc">첫 앱들의 형태를 스케치하고 있습니다. 의도된 고요함. 기능은 적게, 정성은 많이.</div>
+        </div>
+      </article>
+
+      <article class="dispatch">
+        <div class="dispatch-head">
+          <span class="slot-tag">항목 · 다음</span>
+          <span class="slot-q">✱</span>
+        </div>
+        <div class="dispatch-art"><img src="/assets/pipi/pipi-monocle.png" alt=""></div>
+        <div class="dispatch-body">
+          <div class="slot-role"><span class="italic">배를</span> 정비하다</div>
+          <div class="slot-desc">디자인 시스템, 모듈러 Dart, 아이콘 그리드. 아무도 박수치지 않지만 모두가 의지하는 기반 작업.</div>
+        </div>
+      </article>
+
+      <article class="dispatch">
+        <div class="dispatch-head">
+          <span class="slot-tag">항목 · 곧</span>
+          <span class="slot-q">✱</span>
+        </div>
+        <div class="dispatch-art"><img src="/assets/pipi/pipi-compass.png" alt=""></div>
+        <div class="dispatch-body">
+          <div class="slot-role"><span class="italic">출항하다</span></div>
+          <div class="slot-desc">바람이 맞고 해도가 읽힐 때. 2026년. 그 이전도, 그 이후도 아닙니다.</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="join-cta">
+      <a class="btn btn-primary btn-large" href="mailto:hello@pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> 인사 남기기</a>
+      <p class="hint">좋은 엽서 한 장이면 충분합니다 — <a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+          <b>PiFl Labs</b><sup>주식회사</sup>
+        </a>
+        <p class="footer-tagline">해적처럼 코딩하고, Flutter처럼 난다.</p>
+        <p class="footer-desc">Flutter 기반의 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 항해합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>둘러보기</h4>
+        <ul>
+          <li><a href="#top">홈</a></li>
+          <li><a href="#crew">크루</a></li>
+          <li><a href="#about">배</a></li>
+          <li><a href="#log">항해일지</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>연락처</h4>
+        <ul>
+          <li><a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></li>
+          <li><a href="mailto:privacy@pifl-labs.com">privacy@pifl-labs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 주식회사 PiFl Labs</span>
+      <span><a href="/terms">이용약관</a> · <a href="/privacy">개인정보</a> · Made with ⚓</span>
+    </div>
+  </div>
+  <img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true">
+</footer>
+
 </body>
 </html>
