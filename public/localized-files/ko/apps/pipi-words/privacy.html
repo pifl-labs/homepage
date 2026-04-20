@@ -26,34 +26,30 @@
     <link rel="stylesheet" href="/fonts-pretendard-kren.css">
     <link rel="stylesheet" href="/colors_and_type.css">
     <link rel="stylesheet" href="/styles.css">
+    <!-- Editorial + handwriting faces (Stickerbook — consistency with homepage) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles-stickerbook.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="/ko/" class="logo" id="logoHome">
-                    <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                    <span class="logo-text">PiFl Labs</span>
-                </a>
-            </div>
-            <div class="nav-menu">
-                <a href="/ko/#top" class="nav-link">홈</a>
-                <a href="/ko/#about" class="nav-link">배</a>
-                <a href="/ko/#log" class="nav-link">항해일지</a>
-                <a href="/ko/#crew" class="nav-link">크루</a>
-            </div>
-            <div class="lang-switcher">
-                <a href="/en/apps/pipi-words/privacy" class="lang-btn">EN</a>
-                <a href="/ko/apps/pipi-words/privacy" class="lang-btn active">KO</a>
-                <a href="/ja/apps/pipi-words/privacy" class="lang-btn">JA</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/ko/">
+        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+        <b>PiFl Labs</b><sup>주식회사</sup>
+      </a>
+      <div class="nav-links">
+        <a href="/ko/#crew">크루</a>
+        <a href="/ko/#about">배</a>
+        <a href="/ko/#log">항해일지</a>
+      </div>
+      <div class="lang-pill">
+        <a href="/en/apps/pipi-words/privacy" hreflang="en">EN</a><a class="on" href="/ko/apps/pipi-words/privacy" hreflang="ko">KO</a><a href="/ja/apps/pipi-words/privacy" hreflang="ja">JA</a>
+      </div>
+      <a href="/ko/#log" class="nav-cta">일지 읽기 <i class="fas fa-arrow-right nav-cta-arrow" aria-hidden="true"></i></a>
+    </div>
+  </nav>
 
     <section class="legal-hero">
         <div class="container">
@@ -247,54 +243,40 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                        <span class="logo-text">PiFl Labs Co., Ltd.</span>
-                    </div>
-                    <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
-                    <p class="footer-description">Flutter 기반 크로스 플랫폼 개발 스튜디오.<br>해적의 정신으로 디지털 세계를 항해합니다.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>바로가기</h4>
-                    <ul class="footer-nav">
-                        <li><a href="/ko/#top">홈</a></li>
-                        <li><a href="/ko/#about">배</a></li>
-                        <li>                        <li><a href="/ko/#crew">크루</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="support" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-headset"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-briefcase"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-shield-alt"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PiFl Labs Co., Ltd. All rights reserved.</p>
-                <p class="footer-legal-links"><a href="/ko/terms">이용약관</a> <span>·</span> <a href="/ko/privacy">개인정보처리방침</a></p>
-            </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/ko/">
+            <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+            <b>PiFl Labs</b><sup>주식회사</sup>
+          </a>
+          <p class="footer-tagline">해적처럼 코딩, Flutter처럼 비상.</p>
+          <p class="footer-desc">Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.</p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h4>둘러보기</h4>
+          <ul>
+            <li><a href="/ko/#top">홈</a></li>
+            <li><a href="/ko/#crew">크루</a></li>
+            <li><a href="/ko/#about">배</a></li>
+            <li><a href="/ko/#log">항해일지</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>연락처</h4>
+          <ul>
+            <li><a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></li>
+            <li><a href="mailto:privacy@pifl-labs.com">privacy@pifl-labs.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 주식회사 PiFl Labs</span>
+        <span><a href="/ko/terms">이용약관</a> · <a href="/ko/privacy">개인정보</a> · Made with ⚓</span>
+      </div>
+    </div>
+    <img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true">
+  </footer>
 
     <script src="/script.js"></script>
 </body>

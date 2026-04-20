@@ -580,20 +580,30 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 .footer-bottom {
   display:flex; justify-content: space-between; align-items:center;
   padding-top: 1.5rem; color: var(--text-muted); font-size:.82rem; font-family: var(--font-code);
+  position: relative; z-index: 2;
+  gap: 1rem; flex-wrap: wrap;
 }
+.footer-bottom > * { position: relative; z-index: 2; }
 
-/* sleepy pipi hidden in footer corner — merges the global 4-stack sticker filter
-   so it reads as the same physical sticker material as every other PiPi. */
+/* sleepy pipi hidden in footer corner — placed above footer-bottom (near brand column)
+   so it never overlaps legal links. Reduced size + opacity so it reads as ambient decor. */
 .footer-sleep {
-  position: absolute; right: 4%; bottom: 6%;
-  width: 140px; pointer-events: none;
+  position: absolute;
+  right: 2.5%;
+  top: 2rem;
+  width: 96px;
+  pointer-events: none;
   filter:
     drop-shadow(0 0 1px #f5f1e4)
     drop-shadow(0 0 1px #f5f1e4)
     drop-shadow(0 12px 24px rgba(0,0,0,0.45))
     drop-shadow(0 0 14px rgba(139,92,246,0.25));
-  opacity: .9;
+  opacity: .75;
   transform: rotate(-8deg);
+  z-index: 0;
+}
+@media (max-width: 720px) {
+  .footer-sleep { display: none; }
 }
 
 /* ========== CJK locale overrides (KO / JA) ==========

@@ -26,34 +26,30 @@
     <link rel="stylesheet" href="/fonts-pretendard-jp.css">
     <link rel="stylesheet" href="/colors_and_type.css">
     <link rel="stylesheet" href="/styles.css">
+    <!-- Editorial + handwriting faces (Stickerbook — consistency with homepage) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles-stickerbook.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="/ja/" class="logo" id="logoHome">
-                    <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                    <span class="logo-text">PiFl Labs</span>
-                </a>
-            </div>
-            <div class="nav-menu">
-                <a href="/ja/#top" class="nav-link">ホーム</a>
-                <a href="/ja/#about" class="nav-link">船</a>
-                <a href="/ja/#log" class="nav-link">航海日誌</a>
-                <a href="/ja/#crew" class="nav-link">クルー</a>
-            </div>
-            <div class="lang-switcher">
-                <a href="/en/apps/pipi-words/privacy" class="lang-btn">EN</a>
-                <a href="/ko/apps/pipi-words/privacy" class="lang-btn">KO</a>
-                <a href="/ja/apps/pipi-words/privacy" class="lang-btn active">JA</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/ja/">
+        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+        <b>PiFl Labs</b><sup>株式会社</sup>
+      </a>
+      <div class="nav-links">
+        <a href="/ja/#crew">クルー</a>
+        <a href="/ja/#about">船</a>
+        <a href="/ja/#log">航海日誌</a>
+      </div>
+      <div class="lang-pill">
+        <a href="/en/apps/pipi-words/privacy" hreflang="en">EN</a><a href="/ko/apps/pipi-words/privacy" hreflang="ko">KO</a><a class="on" href="/ja/apps/pipi-words/privacy" hreflang="ja">JA</a>
+      </div>
+      <a href="/ja/#log" class="nav-cta">日誌を読む <i class="fas fa-arrow-right nav-cta-arrow" aria-hidden="true"></i></a>
+    </div>
+  </nav>
 
     <section class="legal-hero">
         <div class="container">
@@ -241,54 +237,40 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                        <span class="logo-text">PiFl Labs Co., Ltd.</span>
-                    </div>
-                    <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
-                    <p class="footer-description">Flutterベースのクロスプラットフォーム開発スタジオ。<br>海賊の精神でデジタル世界を航海します。</p>
-                </div>
-                <div class="footer-column">
-                    <h4>クイックリンク</h4>
-                    <ul class="footer-nav">
-                        <li><a href="/ja/#top">ホーム</a></li>
-                        <li><a href="/ja/#about">船</a></li>
-                        <li>                        <li><a href="/ja/#crew">クルー</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="support" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-headset"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-briefcase"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-shield-alt"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PiFl Labs Co., Ltd. All rights reserved.</p>
-                <p class="footer-legal-links"><a href="/ja/terms">利用規約</a> <span>·</span> <a href="/ja/privacy">プライバシーポリシー</a></p>
-            </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/ja/">
+            <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+            <b>PiFl Labs</b><sup>株式会社</sup>
+          </a>
+          <p class="footer-tagline">海賊のようにコード、Flutterのように飛ぶ。</p>
+          <p class="footer-desc">Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。</p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h4>案内</h4>
+          <ul>
+            <li><a href="/ja/#top">ホーム</a></li>
+            <li><a href="/ja/#crew">クルー</a></li>
+            <li><a href="/ja/#about">船</a></li>
+            <li><a href="/ja/#log">航海日誌</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>連絡先</h4>
+          <ul>
+            <li><a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></li>
+            <li><a href="mailto:privacy@pifl-labs.com">privacy@pifl-labs.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 株式会社 PiFl Labs</span>
+        <span><a href="/ja/terms">利用規約</a> · <a href="/ja/privacy">プライバシー</a> · Made with ⚓</span>
+      </div>
+    </div>
+    <img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true">
+  </footer>
 
     <script src="/script.js"></script>
 </body>

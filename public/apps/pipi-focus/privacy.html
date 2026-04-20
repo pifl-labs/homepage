@@ -26,34 +26,30 @@
     <link rel="stylesheet" href="/fonts-pretendard-kren.css">
     <link rel="stylesheet" href="/colors_and_type.css">
     <link rel="stylesheet" href="/styles.css">
+    <!-- Editorial + handwriting faces (Stickerbook — consistency with homepage) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles-stickerbook.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="/" class="logo" id="logoHome">
-                    <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                    <span class="logo-text">PiFl Labs</span>
-                </a>
-            </div>
-            <div class="nav-menu">
-                <a href="/#top" class="nav-link">Home</a>
-                <a href="/#about" class="nav-link">Ship</a>
-                <a href="/#log" class="nav-link">Log</a>
-                <a href="/#crew" class="nav-link">Crew</a>
-            </div>
-            <div class="lang-switcher">
-                <a href="/en/apps/pipi-focus/privacy" class="lang-btn active">EN</a>
-                <a href="/ko/apps/pipi-focus/privacy" class="lang-btn">KO</a>
-                <a href="/ja/apps/pipi-focus/privacy" class="lang-btn">JA</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+        <b>PiFl Labs</b><sup>CO., LTD.</sup>
+      </a>
+      <div class="nav-links">
+        <a href="/#crew">Crew</a>
+        <a href="/#about">Ship</a>
+        <a href="/#log">Log</a>
+      </div>
+      <div class="lang-pill">
+        <a class="on" href="/en/apps/pipi-focus/privacy" hreflang="en">EN</a><a href="/ko/apps/pipi-focus/privacy" hreflang="ko">KO</a><a href="/ja/apps/pipi-focus/privacy" hreflang="ja">JA</a>
+      </div>
+      <a href="/#log" class="nav-cta">Read the log <i class="fas fa-arrow-right nav-cta-arrow" aria-hidden="true"></i></a>
+    </div>
+  </nav>
 
     <section class="legal-hero">
         <div class="container">
@@ -240,54 +236,40 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="PiFl Labs" class="logo-icon-img" width="32" height="32"></picture>
-                        <span class="logo-text">PiFl Labs Co., Ltd.</span>
-                    </div>
-                    <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
-                    <p class="footer-description">Flutter-based cross-platform development studio.<br>Sailing the digital seas with a pirate spirit.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-nav">
-                        <li><a href="/#top">Home</a></li>
-                        <li><a href="/#about">Ship</a></li>
-                        <li>                        <li><a href="/#crew">Crew</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-envelope"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="support" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-headset"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="jobs" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-briefcase"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com">
-                            <i class="fas fa-shield-alt"></i> <span class="email-text"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PiFl Labs Co., Ltd. All rights reserved.</p>
-                <p class="footer-legal-links"><a href="/terms">Terms of Service</a> <span>·</span> <a href="/privacy">Privacy Policy</a></p>
-            </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+            <b>PiFl Labs</b><sup>CO., LTD.</sup>
+          </a>
+          <p class="footer-tagline">Code like a pirate. Fly like Flutter.</p>
+          <p class="footer-desc">A Flutter-based cross-platform studio. Sailing the digital seas with a very small, very opinionated parrot.</p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#top">Home</a></li>
+            <li><a href="/#crew">Crew</a></li>
+            <li><a href="/#about">Ship</a></li>
+            <li><a href="/#log">Log</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@pifl-labs.com">hello@pifl-labs.com</a></li>
+            <li><a href="mailto:privacy@pifl-labs.com">privacy@pifl-labs.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PiFl Labs Co., Ltd.</span>
+        <span><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · Made with ⚓</span>
+      </div>
+    </div>
+    <img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true">
+  </footer>
 
     <script src="/script.js"></script>
 </body>
