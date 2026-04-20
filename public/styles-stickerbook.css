@@ -573,13 +573,91 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   padding-top: 1.5rem; color: var(--text-muted); font-size:.82rem; font-family: var(--font-code);
 }
 
-/* sleepy pipi hidden in footer corner */
+/* sleepy pipi hidden in footer corner — merges the global 4-stack sticker filter
+   so it reads as the same physical sticker material as every other PiPi. */
 .footer-sleep {
   position: absolute; right: 4%; bottom: 6%;
   width: 140px; pointer-events: none;
-  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.4));
-  opacity: .85;
+  filter:
+    drop-shadow(0 0 1px #f5f1e4)
+    drop-shadow(0 0 1px #f5f1e4)
+    drop-shadow(0 12px 24px rgba(0,0,0,0.45))
+    drop-shadow(0 0 14px rgba(139,92,246,0.25));
+  opacity: .9;
   transform: rotate(-8deg);
+}
+
+/* ========== CJK locale overrides (KO / JA) ==========
+   Hangul and Kanji render at ~1.3x the visual width of Latin at the same pt.
+   Fraunces's italic axis also doesn't exist in Gowun Batang / Shippori Mincho,
+   so browsers fake-oblique the glyphs and the trailing edge clips on dark
+   backgrounds. We down-shift the clamp ceilings and drop italics in favor of
+   color + weight for emphasis. */
+html[lang^="ko"] h1.hero-title,
+html[lang^="ja"] h1.hero-title {
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  line-height: 1.15;
+}
+html[lang^="ko"] h2.section-title,
+html[lang^="ja"] h2.section-title {
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  word-break: keep-all;
+  line-height: 1.2;
+}
+html[lang^="ko"] .pull .quote,
+html[lang^="ja"] .pull .quote {
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  max-width: 28ch;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+html[lang^="ko"] .hero-lede,
+html[lang^="ja"] .hero-lede,
+html[lang^="ko"] .section-sub,
+html[lang^="ja"] .section-sub,
+html[lang^="ko"] .logbook-entry,
+html[lang^="ja"] .logbook-entry {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Kill fake italic in CJK — Gowun Batang/Shippori Mincho don't have real italic,
+   so fake-oblique skew causes edge clipping and looks sloppy. Preserve color +
+   weight emphasis. `font-synthesis: none` prevents automatic italic synthesis. */
+html[lang^="ko"] h1.hero-title .italic,
+html[lang^="ja"] h1.hero-title .italic,
+html[lang^="ko"] h2.section-title .italic,
+html[lang^="ja"] h2.section-title .italic,
+html[lang^="ko"] .slot-role .italic,
+html[lang^="ja"] .slot-role .italic,
+html[lang^="ko"] .slot-q,
+html[lang^="ja"] .slot-q,
+html[lang^="ko"] .hero-lede em,
+html[lang^="ja"] .hero-lede em,
+html[lang^="ko"] .logbook-entry em,
+html[lang^="ja"] .logbook-entry em,
+html[lang^="ko"] .pull .quote,
+html[lang^="ja"] .pull .quote,
+html[lang^="ko"] .logbook-signature,
+html[lang^="ja"] .logbook-signature,
+html[lang^="ko"] .footer-tagline,
+html[lang^="ja"] .footer-tagline,
+html[lang^="ko"] .ticker-track i,
+html[lang^="ja"] .ticker-track i,
+html[lang^="ko"] .annotation-strip em,
+html[lang^="ja"] .annotation-strip em,
+html[lang^="ko"] .section-sub em,
+html[lang^="ja"] .section-sub em {
+  font-style: normal;
+  font-synthesis: none;
+}
+
+/* line-through 선이 fake italic glyph 꼬리와 부딪혀 끝이 잘려보이는 현상 완화 */
+h1.hero-title .strike {
+  text-decoration-skip-ink: none;
+  padding-right: 0.1em;
 }
 
 /* ========== responsive ========== */
