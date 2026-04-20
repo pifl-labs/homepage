@@ -78,21 +78,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth Scroll for Navigation Links — skip elements with data-email-user
+// (runtime obfuscation rewrites their href to "mailto:..." which would break
+// document.querySelector otherwise). Also guard against empty/bare "#" hash and
+// only preventDefault when we actually have a scroll target.
+document.querySelectorAll('a[href^="#"]:not([data-email-user])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const targetHash = this.getAttribute('href');
+        if (!targetHash || targetHash === '#' || !targetHash.startsWith('#')) return;
         const target = document.querySelector(targetHash);
-        if (target) {
-            const navHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
-            history.pushState(null, null, targetHash);
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+        if (!target) return;
+        e.preventDefault();
+        const navEl = document.querySelector('.navbar, .nav');
+        const navHeight = navEl ? navEl.offsetHeight : 0;
+        const targetPosition = target.offsetTop - navHeight;
+        history.pushState(null, null, targetHash);
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
     });
 });
 
