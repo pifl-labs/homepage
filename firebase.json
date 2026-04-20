@@ -104,6 +104,10 @@
           {
             "key": "Referrer-Policy",
             "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0, no-cache, no-store, must-revalidate"
           }
         ]
       },
@@ -113,19 +117,6 @@
           {
             "key": "Cache-Control",
             "value": "max-age=31536000"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(html)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=0, no-cache, no-store, must-revalidate"
-          },
-          {
-            "key": "Content-Type",
-            "value": "text/html; charset=utf-8"
           }
         ]
       }
