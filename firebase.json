@@ -53,6 +53,26 @@
         "destination": "/localized-files/ja/apps/pipi-words/privacy.html"
       },
       {
+        "source": "/en",
+        "destination": "/en/index.html"
+      },
+      {
+        "source": "/en/privacy",
+        "destination": "/en/privacy.html"
+      },
+      {
+        "source": "/en/terms",
+        "destination": "/en/terms.html"
+      },
+      {
+        "source": "/en/apps/pipi-focus/privacy",
+        "destination": "/en/apps/pipi-focus/privacy.html"
+      },
+      {
+        "source": "/en/apps/pipi-words/privacy",
+        "destination": "/en/apps/pipi-words/privacy.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
