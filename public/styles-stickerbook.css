@@ -299,13 +299,38 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   display:flex; align-items:center; justify-content:center;
   transition: transform .35s var(--ease), box-shadow .35s;
   cursor: default;
+
+  /* Per-card accent tokens — overridden by :nth-child rotation below so each
+     sticker picks up one of 6 brand colors. Fallback keeps things neutral. */
+  --sticker-accent: 139,92,246; /* violet fallback (rgb triplet for alpha math) */
 }
 .sticker::before {
+  /* Base panel + top ambient bloom (replaces the visual weight the removed
+     yellow tape used to carry at the card top). */
   content:''; position:absolute; inset:0; border-radius: inherit;
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  background:
+    radial-gradient(80% 45% at 50% 0%, rgba(var(--sticker-accent), 0.10), transparent 72%),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
   border: 1px solid var(--border-subtle);
   z-index: 0;
+  transition: border-color .35s, background .35s;
 }
+.sticker:hover::before,
+.sticker:focus-within::before {
+  border-color: rgba(var(--sticker-accent), 0.42);
+  background:
+    radial-gradient(80% 45% at 50% 0%, rgba(var(--sticker-accent), 0.16), transparent 72%),
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+}
+
+/* 6-color accent rotation — brand palette (teal / cyan / indigo / violet / amber / coral).
+   12 stickers cycle twice; neighbors never share a color. */
+.sticker:nth-child(6n+1) { --sticker-accent: 34,211,238;  } /* teal */
+.sticker:nth-child(6n+2) { --sticker-accent: 6,182,212;   } /* cyan */
+.sticker:nth-child(6n+3) { --sticker-accent: 99,102,241;  } /* indigo */
+.sticker:nth-child(6n+4) { --sticker-accent: 139,92,246;  } /* violet */
+.sticker:nth-child(6n+5) { --sticker-accent: 251,191,36;  } /* amber */
+.sticker:nth-child(6n)   { --sticker-accent: 255,138,91;  } /* coral */
 
 /* Clean-line pipis — CSS adds the sticker halo + white edge.
    Raw pipis (which already have the white outline baked into the PNG)
@@ -328,18 +353,18 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   background: linear-gradient(180deg, rgba(15,23,42,0.7), rgba(11,20,38,0.4)) !important;
 }
 .sticker::after {
-  /* Spotlight halo behind PiPi — matches the dispatches pattern for consistency.
-     Tight at idle, expands on hover/focus. Contained inside the sticker panel. */
+  /* Spotlight halo behind PiPi — tinted per-card via --sticker-accent.
+     Tight at idle, expands on hover/focus. Contained inside the panel. */
   content: '';
   position: absolute;
-  left: 50%; top: 50%;
+  left: 50%; top: 48%;
   width: 66%; aspect-ratio: 1/1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: radial-gradient(
     circle at 50% 55%,
-    rgba(139,92,246,0.32) 0%,
-    rgba(99,102,241,0.12) 45%,
+    rgba(var(--sticker-accent), 0.32) 0%,
+    rgba(var(--sticker-accent), 0.12) 45%,
     transparent 62%
   );
   filter: blur(6px);
@@ -349,14 +374,17 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   pointer-events: none;
 }
 .sticker img {
-  position: relative; z-index: 1; width: 82%; height: 82%; object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+  position: relative; z-index: 1; width: 80%; height: 80%; object-fit: contain;
+  /* Slight upward nudge so the post-tape top isn't empty and the label gets a
+     breathing gap underneath — balances the composition without the tape. */
+  margin-top: -8px;
   transition: transform .4s var(--ease);
 }
 .sticker .label {
-  position:absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+  position:absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
   font-family: var(--font-code); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--text-muted); z-index: 2;
+  color: rgba(var(--sticker-accent), 0.85); z-index: 2;
+  transition: color .35s;
 }
 .sticker:hover,
 .sticker:focus-within { transform: translateY(-6px); }
