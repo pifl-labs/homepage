@@ -171,8 +171,9 @@ h1.hero-title .strike { text-decoration: line-through; text-decoration-thickness
 .pull .quote-by img,
 .footer-sleep {
   filter:
-    drop-shadow(0 0 1px #f5f1e4)
-    drop-shadow(0 0 1px #f5f1e4)
+    drop-shadow(0 0 1.5px #f5f1e4)
+    drop-shadow(0 0 1.5px #f5f1e4)
+    drop-shadow(0 0 4px rgba(245,241,228,0.55))
     drop-shadow(0 10px 20px rgba(0,0,0,0.45))
     drop-shadow(0 0 14px rgba(139,92,246,0.25));
 }
@@ -311,8 +312,9 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
    get a subtler treatment so the border doesn't stack and look fuzzy. */
 .sticker--clean img {
   filter:
-    drop-shadow(0 0 1px #f5f1e4)
-    drop-shadow(0 0 1px #f5f1e4)
+    drop-shadow(0 0 1.5px #f5f1e4)
+    drop-shadow(0 0 1.5px #f5f1e4)
+    drop-shadow(0 0 4px rgba(245,241,228,0.55))
     drop-shadow(0 10px 20px rgba(0,0,0,0.4))
     drop-shadow(0 0 14px rgba(139,92,246,0.25)) !important;
 }
@@ -326,13 +328,25 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   background: linear-gradient(180deg, rgba(15,23,42,0.7), rgba(11,20,38,0.4)) !important;
 }
 .sticker::after {
-  /* fake "sticker tape" at top */
-  content:''; position:absolute; top:-10px; left: 50%; transform: translateX(-50%) rotate(-4deg);
-  width: 48px; height: 18px;
-  background: rgba(251,191,36,0.4);
-  border: 1px dashed rgba(251,191,36,0.55);
-  z-index: 2;
-  backdrop-filter: blur(2px);
+  /* Spotlight halo behind PiPi — matches the dispatches pattern for consistency.
+     Tight at idle, expands on hover/focus. Contained inside the sticker panel. */
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 66%; aspect-ratio: 1/1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 55%,
+    rgba(139,92,246,0.32) 0%,
+    rgba(99,102,241,0.12) 45%,
+    transparent 62%
+  );
+  filter: blur(6px);
+  z-index: 0;
+  opacity: .7;
+  transition: width .45s var(--ease), opacity .45s, filter .45s;
+  pointer-events: none;
 }
 .sticker img {
   position: relative; z-index: 1; width: 82%; height: 82%; object-fit: contain;
@@ -344,12 +358,16 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   font-family: var(--font-code); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
   color: var(--text-muted); z-index: 2;
 }
-.sticker:hover { transform: translateY(-6px) rotate(-2deg); }
-.sticker:hover img { transform: scale(1.08) rotate(4deg); }
-.sticker:nth-child(3n+1) { transform: rotate(-1.5deg); }
-.sticker:nth-child(3n+1):hover { transform: rotate(-3deg) translateY(-6px); }
-.sticker:nth-child(3n+2) { transform: rotate(1.2deg); }
-.sticker:nth-child(3n+2):hover { transform: rotate(3deg) translateY(-6px); }
+.sticker:hover,
+.sticker:focus-within { transform: translateY(-6px); }
+.sticker:hover img,
+.sticker:focus-within img { transform: scale(1.08); }
+.sticker:hover::after,
+.sticker:focus-within::after {
+  width: 90%;
+  opacity: 1;
+  filter: blur(10px);
+}
 
 /* "meet the crew" annotations */
 .annotation-strip {
@@ -499,50 +517,108 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 
 .dispatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 3rem 0; }
 .dispatch {
-  aspect-ratio: 3/4;
   border-radius: 20px;
   background:
     linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
   border: 1px solid var(--border-default);
   padding: 1.5rem;
+  /* Desktop 3-col: reserve right space for the absolutely-positioned PiPi
+     (extra 0.5rem covers the 7deg rotation's bounding-box spread). */
+  padding-right: calc(130px + 1.5rem);
   position: relative;
-  display:flex; flex-direction:column; justify-content:space-between;
+  /* Natural height — head + body stack tight with a fixed gap, no vertical void. */
+  display: flex; flex-direction: column; gap: 1rem;
+  min-height: 200px;
   transition: transform .3s var(--ease), border-color .3s, background .3s;
   overflow: visible; /* let the sticker overhang a touch, like it's peeled onto the card */
 }
 .dispatch::before {
-  content:''; position:absolute; inset:0;
-  background: radial-gradient(400px 300px at 80% 0%, rgba(99,102,241,0.12), transparent 60%);
-  opacity: 0; transition: opacity .3s;
-  pointer-events: none;
+  /* Ambient hover glow — radial indigo bloom from the top-right corner. */
+  content:''; position:absolute; inset:0; border-radius: inherit;
+  background: radial-gradient(400px 300px at 80% 0%, rgba(99,102,241,0.14), transparent 60%);
+  opacity: 0; transition: opacity .4s;
+  pointer-events: none; z-index: 0;
 }
-.dispatch:hover { border-color: rgba(99,102,241,0.5); transform: translateY(-4px); }
-.dispatch:hover::before { opacity: 1; }
-.dispatch-head { display:flex; align-items:center; justify-content:space-between; position: relative; z-index: 2; }
-/* PiPi "stuck" to each log entry like a sticker pasted over the corner.
-   Sized so the whole bird is visible (no more mysterious floating feet) and
-   tilted just enough to read as a physical sticker rather than pinned art. */
+.dispatch::after {
+  /* Hover-only gradient rim. Sits on top of the static border without animating it. */
+  content:''; position:absolute; inset:-1px; border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34,211,238,0.55), rgba(99,102,241,0.55), rgba(139,92,246,0.55));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0; transition: opacity .4s;
+  pointer-events: none; z-index: 1;
+}
+.dispatch:hover { transform: translateY(-4px); }
+.dispatch:hover::before,
+.dispatch:hover::after { opacity: 1; }
+.dispatch-head {
+  display:flex; align-items:center; justify-content:space-between;
+  position: relative; z-index: 2;
+  gap: .6rem;
+}
+/* PiPi floats over a soft spotlight halo — no more masking-tape metaphor.
+   The halo disc is tinted per status via --halo tokens set on the .dispatch element. */
 .dispatch-art {
   position: absolute;
-  right: 10px; top: 10px;
-  width: 46%; max-width: 150px; aspect-ratio: 1/1;
+  right: 14px; top: 14px;
+  width: 130px; aspect-ratio: 1/1;
   pointer-events: none; z-index: 2;
-  transform: rotate(7deg);
-  transition: transform .4s var(--ease);
+  transition: transform .5s var(--ease);
 }
 .dispatch-art::before {
-  /* faux masking tape at the top-left corner of the sticker */
+  /* Spotlight halo: tight glow right behind PiPi at idle, expanding on hover.
+     Stays within the art box so the card background never gets tinted. */
   content: '';
-  position: absolute; top: -6px; left: 18%;
-  width: 36px; height: 14px;
-  background: rgba(251,191,36,0.38);
-  border: 1px dashed rgba(251,191,36,0.6);
-  transform: rotate(-12deg);
-  z-index: 3;
+  position: absolute; inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 55%,
+    var(--halo-inner, rgba(139,92,246,0.28)) 0%,
+    var(--halo-mid, rgba(99,102,241,0.10)) 45%,
+    transparent 62%
+  );
+  filter: blur(4px);
+  z-index: -1;
+  opacity: .7;
+  transition: inset .45s var(--ease), opacity .45s, filter .45s;
 }
-.dispatch-art img { width: 100%; height: 100%; object-fit: contain; }
-.dispatch:hover .dispatch-art { transform: rotate(-3deg) scale(1.06); }
-.dispatch-body { position: relative; z-index: 2; max-width: 100%; margin-top: auto; }
+.dispatch-art img {
+  width: 100%; height: 100%; object-fit: contain;
+  animation: bob 5s ease-in-out infinite;
+}
+.dispatch:hover .dispatch-art,
+.dispatch:focus-within .dispatch-art { transform: scale(1.06); }
+.dispatch:hover .dispatch-art::before,
+.dispatch:focus-within .dispatch-art::before {
+  inset: -12%;
+  opacity: 1;
+  filter: blur(8px);
+}
+
+/* Status-tinted halos + LED dot anchored to the .slot-tag chip. */
+.dispatch--live { --halo-inner: rgba(34,211,238,0.50); --halo-mid: rgba(34,211,238,0.22); }
+.dispatch--next { --halo-inner: rgba(251,191,36,0.45); --halo-mid: rgba(251,191,36,0.18); }
+.dispatch--soon { --halo-inner: rgba(139,92,246,0.45); --halo-mid: rgba(139,92,246,0.20); }
+
+.slot-tag { display: inline-flex; align-items: center; gap: .5rem; }
+.slot-tag::before {
+  content: '';
+  width: 7px; height: 7px; border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+  flex-shrink: 0;
+}
+.dispatch--live .slot-tag::before { animation: ledPulse 1.6s ease-in-out infinite; }
+.dispatch--next .slot-tag { color: var(--accent-highlight); background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.28); }
+.dispatch--soon .slot-tag { color: rgb(167,139,250); background: rgba(139,92,246,0.10); border-color: rgba(139,92,246,0.30); }
+@keyframes ledPulse {
+  0%, 100% { box-shadow: 0 0 6px currentColor; opacity: .75; }
+  50%      { box-shadow: 0 0 12px currentColor, 0 0 18px currentColor; opacity: 1; }
+}
+.dispatch-body { position: relative; z-index: 2; max-width: 100%; }
 .slot-tag {
   font-family: var(--font-code); font-size:.68rem; letter-spacing:.2em; text-transform:uppercase;
   padding: 4px 10px; border-radius: 999px;
@@ -600,8 +676,9 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   width: 96px;
   pointer-events: none;
   filter:
-    drop-shadow(0 0 1px #f5f1e4)
-    drop-shadow(0 0 1px #f5f1e4)
+    drop-shadow(0 0 1.5px #f5f1e4)
+    drop-shadow(0 0 1.5px #f5f1e4)
+    drop-shadow(0 0 4px rgba(245,241,228,0.55))
     drop-shadow(0 12px 24px rgba(0,0,0,0.45))
     drop-shadow(0 0 14px rgba(139,92,246,0.25));
   opacity: .75;
@@ -683,13 +760,64 @@ h1.hero-title .strike {
   padding-right: 0.1em;
 }
 
+/* Mobile: images render smaller so the white sticker edge needs to be
+   proportionally thicker + softer to stay "은은한 스티커" feel without
+   looking jagged at the silhouette. */
+@media (max-width: 768px) {
+  .pipi-sticker,
+  .sticker img,
+  .star-main img,
+  .orbit img,
+  .dispatch-art img,
+  .currently-pipi img,
+  .pull .quote-by img,
+  .footer-sleep {
+    filter:
+      drop-shadow(0 0 2px #f5f1e4)
+      drop-shadow(0 0 2px #f5f1e4)
+      drop-shadow(0 0 6px rgba(245,241,228,0.6))
+      drop-shadow(0 8px 16px rgba(0,0,0,0.45))
+      drop-shadow(0 0 14px rgba(139,92,246,0.25));
+  }
+  .sticker--clean img {
+    filter:
+      drop-shadow(0 0 2px #f5f1e4)
+      drop-shadow(0 0 2px #f5f1e4)
+      drop-shadow(0 0 6px rgba(245,241,228,0.6))
+      drop-shadow(0 8px 16px rgba(0,0,0,0.4))
+      drop-shadow(0 0 14px rgba(139,92,246,0.25)) !important;
+  }
+}
+
 /* ========== responsive ========== */
 @media (max-width: 960px) {
   .hero { min-height: auto; padding: 3rem 0 4rem; }
   .hero-grid, .about-wrap, .footer-grid { grid-template-columns: 1fr; }
   .hero-stage { margin: 2rem auto 0; max-width: 420px; min-height: 380px; }
-  .dispatch-grid { grid-template-columns: 1fr; }
-  .dispatch { aspect-ratio: auto; min-height: 200px; }
+  .dispatch-grid { grid-template-columns: repeat(2, 1fr); }
+  /* At this width we switch the card from "tall vertical" to "wide horizontal":
+     text on the left, PiPi as a flex-row item on the right. No absolute positioning,
+     so overlap is structurally impossible and there's no vertical empty space. */
+  .dispatch {
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    grid-template-areas: "head art" "body art";
+    align-items: start;
+    gap: .6rem 1rem;
+    padding: 1.2rem;
+    padding-right: 1.2rem;
+    min-height: auto;
+  }
+  .dispatch-head { grid-area: head; }
+  .dispatch-body { grid-area: body; }
+  .dispatch-art {
+    grid-area: art;
+    /* keep position: relative so ::before halo stays anchored to the art, not the card */
+    position: relative;
+    right: auto; top: auto;
+    width: 110px; height: 110px;
+    align-self: center;
+  }
   .currently-inner { grid-template-columns: 80px 1fr; }
   .currently-badge { grid-column: 1 / -1; justify-self: start; }
   .currently-pipi { width:80px; height:80px; margin:0; }
@@ -699,6 +827,19 @@ h1.hero-title .strike {
   .orbit--b img, .orbit--c img { width: 56px; height: 56px; }
   @keyframes orbitB { from { transform: translate(-50%,-50%) rotate(0) translateX(170px) rotate(0); } to { transform: translate(-50%,-50%) rotate(360deg) translateX(170px) rotate(-360deg); } }
   @keyframes orbitC { from { transform: translate(-50%,-50%) rotate(0) translateX(130px) rotate(0); } to { transform: translate(-50%,-50%) rotate(360deg) translateX(130px) rotate(-360deg); } }
+}
+
+/* Phone: single-column horizontal cards, smaller PiPi. */
+@media (max-width: 600px) {
+  .dispatch-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .dispatch {
+    grid-template-columns: 1fr 92px;
+    gap: .5rem .9rem;
+    padding: 1rem;
+  }
+  .dispatch-art { width: 92px; height: 92px; }
+  .slot-role { font-size: 1.3rem; }
+  .slot-desc { font-size: .85rem; }
 }
 
 /* ========== entrance animations ========== */
