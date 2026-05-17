@@ -84,12 +84,26 @@
 - 2026-05-17: ⚠️ 동시 세션 충돌 감지 — 작업 중 다른 프로세스가 같은 워크트리에서
   `cfaf3bb`(PiPi D-Day 페이지) 커밋 + `feat/pipi-log-privacy` 브랜치 생성·체크아웃.
   내 stage 2-3 커밋이 그 브랜치에 안착 → `feat/astro-migration` 으로 fast-forward 정리(비파괴).
-  미추적 `src/pages/apps/pipi-log/*` 파일(타 세션 WIP, 소스 HTML 없음)은 빌드 정합성 위해 제거.
+- 2026-05-17: 동시 세션이 `1692463`(PiPi Log 페이지 4개)·`cfaf3bb`(D-Day) 를 같은 브랜치에
+  협업 커밋 — 모두 BaseLayout 컴포넌트 사용, 빌드 정합. 최종 **28페이지**(24 + Log 4).
+- 2026-05-17: **T8 완료** — CF Pages 프로젝트 생성, `homepage-c91.pages.dev` 프리뷰 가동.
+- 2026-05-17: **T9 완료** — 프리뷰 검증. 발견·수정한 버그 2건:
+  - CSP `font-src` 에 `'self'` 누락 → 자체 호스팅 폰트 차단. `_headers` 수정 (커밋 96b6788).
+    (기존 Firebase CSP 부터 있던 버그 — 마이그레이션에서 정정)
+  - build format → `directory` 로 확정. 언어 홈페이지(`/ko/` `/en/` `/ja/`) 슬래시 URL 보존,
+    legacy `/terms` 는 CF 가 `/terms/` 로 308 정규화 (커밋 dbf515b).
+  - 검증 결과: 24개 슬래시 라우트 전부 200, 폰트 woff2 3종 status 200,
+    en/ko 라이트·다크 시각 정상, 콘솔 에러 0.
 
 ## 남은 작업 (사용자 영역)
 
-- **T8 CF Pages 프로젝트 생성** — Cloudflare 대시보드에서 `pifl-labs/homepage` 저장소 연결.
-  build command: `npm run build`, output: `dist`, 브랜치: `feat/astro-migration`(프리뷰) → `main`(프로덕션)
-- **T9 `*.pages.dev` 프리뷰 전수 검증** — 24페이지 × 라이트/다크
-- **T10 DNS 컷오버** — pifl-labs.com Firebase → CF Pages (사용자 직접)
-- **T11** 안정화 후 Firebase Hosting 폐기 + `public/` 디렉토리 삭제 (현재는 병행 유지)
+- **T10 DNS 컷오버** — pifl-labs.com 을 Firebase → CF Pages 로 전환 (사용자 직접).
+  CF Pages 프로젝트 → Custom domains → `pifl-labs.com` 추가 → DNS 레코드 갱신.
+  컷오버 전 production branch 를 `main` 으로 바꾸려면 `feat/astro-migration` → `main` 머지 선행.
+- **T11** 안정화 확인 후 Firebase Hosting 폐기 + `public/` 디렉토리 삭제 (현재는 병행 유지)
+
+## 후속 폴리시 (선택 — 차단 아님)
+
+- legal/app 페이지 canonical 이 무슬래시(`/terms`)로 추출됨 — 실제 서빙은 `/terms/`.
+  CF 308 로 동작엔 무해하나, 추후 canonical 을 슬래시로 정규화하면 더 깔끔.
+- 모바일 375px 히어로 가로 오버플로우 — 라이트모드 작업 때 발견한 기존 버그, 범위 밖.
