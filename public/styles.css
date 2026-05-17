@@ -1886,3 +1886,23 @@ h1, h2, h3, h4, h5, h6 {
 .footer-legal-links span {
     color: rgba(255, 255, 255, 0.2);
 }
+
+/* ============================================================
+   LIGHT MODE — legal 페이지의 흰 알파 보더 재정의
+   .legal-card 표면은 var(--bg-card)(라이트=흰색)로 적응하나,
+   내부 구분선이 흰 알파라 흰 카드 위에서 사라진다 → 짙은 알파로.
+   ============================================================ */
+:root[data-theme="light"] .legal-card {
+    border: 1px solid var(--border-default);
+}
+:root[data-theme="light"] .legal-card h2,
+:root[data-theme="light"] .legal-card h3 {
+    border-bottom-color: var(--border-default);
+}
+:root[data-theme="light"] .legal-card th,
+:root[data-theme="light"] .legal-card td {
+    border-color: var(--border-default);
+}
+:root[data-theme="light"] .legal-card th {
+    background: rgba(15, 23, 42, 0.04);
+}

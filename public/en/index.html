@@ -69,6 +69,7 @@
     "knowsLanguage": ["ko", "en", "ja"]
 }
 </script>
+  <script src="/theme-init.js"></script>
 </head>
 <body>
 
@@ -374,6 +375,24 @@
     </div>
   </div>
   <picture><source srcset="/assets/pipi/pipi-sleepy-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true" loading="lazy"></picture>
+  <div class="footer-prefs">
+    <div class="pref-group">
+      <span class="pref-label">Theme</span>
+      <div class="pref-row" role="group" aria-label="Theme">
+        <button type="button" class="pref-btn" data-theme-btn="auto" aria-pressed="false">Auto</button>
+        <button type="button" class="pref-btn" data-theme-btn="light" aria-pressed="false">Light</button>
+        <button type="button" class="pref-btn" data-theme-btn="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+    <div class="pref-group">
+      <span class="pref-label">Text size</span>
+      <div class="pref-row" role="group" aria-label="Text size">
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="normal" aria-pressed="false" aria-label="Normal text size">A</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="large" aria-pressed="false" aria-label="Large text size">A</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="xlarge" aria-pressed="false" aria-label="Extra large text size">A</button>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="/script.js"></script>

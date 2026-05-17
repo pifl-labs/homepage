@@ -695,6 +695,43 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 }
 .footer-bottom > * { position: relative; z-index: 2; }
 
+/* ── 푸터 환경설정 — 테마 + 글자 크기 토글 ─────────────────────────
+   .container 바깥/안 어디에 삽입돼도 정렬되도록 자체 컨테이너화
+   (max-width + 좌우 패딩이 .container 와 동일). */
+.footer-prefs {
+  max-width: 1280px; margin: 1.5rem auto 0; padding: 1.5rem 2rem 0;
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  position: relative; z-index: 2;
+}
+.pref-group { display: flex; align-items: center; gap: .6rem; }
+.pref-label {
+  font-family: var(--font-code); font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.pref-row {
+  display: inline-flex; gap: 2px; padding: 3px;
+  background: var(--bg-card); border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+}
+.pref-btn {
+  font-family: var(--font-main); color: var(--text-secondary);
+  background: transparent; border: none; cursor: pointer;
+  padding: .35rem .8rem; border-radius: var(--radius-pill);
+  font-size: .82rem; line-height: 1; transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.pref-btn:hover { color: var(--text-primary); }
+.pref-btn[aria-pressed="true"] {
+  background: var(--accent-cta); color: #fff;
+}
+.pref-btn-ts { font-family: var(--font-display); font-weight: 600; }
+.pref-btn-ts[data-ts-btn="normal"] { font-size: .78rem; }
+.pref-btn-ts[data-ts-btn="large"]  { font-size: .95rem; }
+.pref-btn-ts[data-ts-btn="xlarge"] { font-size: 1.15rem; }
+@media (max-width: 480px) {
+  .footer-prefs { flex-direction: column; gap: 1rem; }
+}
+
 /* sleepy pipi hidden in footer corner — placed above footer-bottom (near brand column)
    so it never overlaps legal links. Reduced size + opacity so it reads as ambient decor. */
 .footer-sleep {
@@ -917,4 +954,73 @@ button:focus-visible {
   .hero-stage .halo {
     animation: none !important;
   }
+}
+
+/* ============================================================
+   LIGHT MODE — 하드코딩 다크/화이트 surface 재정의
+   ------------------------------------------------------------
+   colors_and_type.css 의 :root[data-theme="light"] 토큰 블록이
+   토큰 기반 surface 를 처리하고, 여기서는 토큰을 안 쓰고 raw 색을
+   박은 surface(nav·footer·ticker·glass 카드)를 라이트 팔레트로
+   교체한다. dark 의 white-alpha 글래스(raised)는 라이트에선
+   dark-alpha 로 뒤집어 카드 윤곽을 유지한다.
+   ============================================================ */
+
+/* 페이지 배경 — 흰 점 그리드 → 짙은 점, 컬러 글로우 약화 */
+:root[data-theme="light"] body {
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%, rgba(99,102,241,0.10), transparent 60%),
+    radial-gradient(900px 500px at 10% 40%, rgba(34,211,238,0.07), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(15,23,42,0.055) 1px, transparent 0);
+}
+/* paper grain — screen 블렌드는 밝은 배경을 날려버린다 → 라이트에선 숨김 */
+:root[data-theme="light"] body::before { display: none; }
+
+/* 네비게이션 — 다크 글래스 → 화이트 글래스 */
+:root[data-theme="light"] .nav {
+  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.62));
+}
+
+/* 티커 — 다크 그라디언트 → 라이트 */
+:root[data-theme="light"] .ticker {
+  background: linear-gradient(180deg, rgba(230,236,245,0.55), rgba(244,247,251,0.92));
+}
+
+/* 푸터 — 다크 veil → 옅은 회색 veil (텍스트 대비 확보) */
+:root[data-theme="light"] .footer {
+  background: linear-gradient(180deg, transparent, rgba(15,23,42,0.045));
+}
+
+/* white-alpha 글래스 raised surface → dark-alpha (라이트 배경 위 윤곽 유지) */
+:root[data-theme="light"] .lang-pill,
+:root[data-theme="light"] .decoder {
+  background: rgba(15,23,42,0.04);
+}
+:root[data-theme="light"] .btn-ghost:hover {
+  background: rgba(15,23,42,0.06);
+}
+:root[data-theme="light"] .dispatch {
+  background: linear-gradient(180deg, rgba(15,23,42,0.045), rgba(15,23,42,0.015));
+}
+
+/* sticker 카드 베이스 패널 — 흰 글래스 → 흰 카드(라이트 배경 위 살짝 떠보이게) */
+:root[data-theme="light"] .sticker::before {
+  background:
+    radial-gradient(80% 45% at 50% 0%, rgba(var(--sticker-accent), 0.12), transparent 72%),
+    linear-gradient(180deg, #ffffff, #f7f9fc);
+  box-shadow: var(--shadow-sm);
+}
+:root[data-theme="light"] .sticker:hover::before,
+:root[data-theme="light"] .sticker:focus-within::before {
+  background:
+    radial-gradient(80% 45% at 50% 0%, rgba(var(--sticker-accent), 0.20), transparent 72%),
+    linear-gradient(180deg, #ffffff, #f4f7fb);
+}
+:root[data-theme="light"] .sticker--raw::before {
+  background: linear-gradient(180deg, #ffffff, #f4f7fb) !important;
+}
+
+/* logbook 카드 — 다크 패널 → 흰 카드 */
+:root[data-theme="light"] .logbook-card {
+  background: linear-gradient(180deg, #ffffff, #f7f9fc);
 }

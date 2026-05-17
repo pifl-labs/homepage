@@ -32,6 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles-stickerbook.css">
+  <script src="/theme-init.js"></script>
 </head>
 <body>
     <nav class="nav">
@@ -229,7 +230,25 @@
       </div>
     </div>
     <picture><source srcset="/assets/pipi/pipi-sleepy-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true" loading="lazy"></picture>
-  </footer>
+    <div class="footer-prefs">
+    <div class="pref-group">
+      <span class="pref-label">テーマ</span>
+      <div class="pref-row" role="group" aria-label="テーマ">
+        <button type="button" class="pref-btn" data-theme-btn="auto" aria-pressed="false">自動</button>
+        <button type="button" class="pref-btn" data-theme-btn="light" aria-pressed="false">ライト</button>
+        <button type="button" class="pref-btn" data-theme-btn="dark" aria-pressed="false">ダーク</button>
+      </div>
+    </div>
+    <div class="pref-group">
+      <span class="pref-label">文字サイズ</span>
+      <div class="pref-row" role="group" aria-label="文字サイズ">
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="normal" aria-pressed="false" aria-label="標準の文字サイズ">あ</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="large" aria-pressed="false" aria-label="大きい文字サイズ">あ</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="xlarge" aria-pressed="false" aria-label="特大の文字サイズ">あ</button>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script src="/script.js"></script>
 </body>
