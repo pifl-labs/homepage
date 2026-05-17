@@ -2,6 +2,63 @@
 
 ---
 
+## Session 9 — 2026-05-17~18: 라이트모드·글자크기 + Astro·Cloudflare Pages 전면 이전
+
+### 작업 요약
+
+홈페이지를 **순수 정적 HTML + Firebase Hosting → Astro 5 static + Cloudflare Pages**로 전면 이전했다. 시작은 라이트모드·글자크기 환경설정 추가였고, Firebase 인증이 정책 변경으로 계속 풀리는 문제 + 공통 레이아웃 부재로 21개 HTML에 토글을 일일이 주입해야 했던 고통을 근본 해소하기 위해 마이그레이션으로 확장. git push = 자동 배포, pipi-worlds와 스택 통일. PR #25~#28 머지, DNS 컷오버까지 완료.
+
+### 수행한 작업
+
+#### 1. 라이트모드 + 글자크기 환경설정 (PR #25, 머지 `db2e9c0`)
+
+- `colors_and_type.css`: `:root[data-theme="light"]` 라이트 팔레트 + `--type-scale` 변수 (보통/크게/아주크게)
+- `theme-init.js` 신규: CSP(`script-src 'self'`) 대응 외부 동기 스크립트 — paint 전 테마 적용(FOUC 방지)
+- 푸터 토글 UI(테마 자동/밝게/어둡게 + 글자크기) — 20개 HTML + `script.js` 핸들러
+- **1차 라이트모드가 토큰만 뒤집고 하드코딩 다크 surface(nav·footer·ticker·글래스 카드)를 놓쳐** 푸터 깨짐 → `:root[data-theme="light"]` surface별 오버라이드로 보완
+
+#### 2. Astro + Cloudflare Pages 이전 (PR #26, 머지 `2102ccd`)
+
+| 영역 | 내용 |
+|------|------|
+| 스캐폴드 | Astro 5, `astro.config.mjs`, `src/` 구조 |
+| 컴포넌트 | `BaseLayout`/`Nav`/`Footer` + `src/i18n/ui.ts` — 21파일 중복 해소 |
+| 페이지 | `scripts/gen-pages.mjs` 생성기로 24페이지 변환 (head 메타 추출 + 본문 verbatim) |
+| i18n | `functions/_middleware.ts` CF Pages Function — Accept-Language 302, 루트 리다이렉트 랜딩, hreflang 계산식(en→/en/, x-default→/ko/) |
+| 인프라 | `_headers`(보안헤더+CSP), `_redirects`, sitemap |
+
+- 동시 세션이 같은 브랜치에 D-Day·PiPi Log privacy 페이지 협업 커밋 — 빌드 정합, 28페이지로 통합
+
+#### 3. 컷오버·후속 (PR #27 `24acc82`, #28 `33d7d63`, 핫픽스 `0f83c23`)
+
+- **DNS 컷오버**: CF Pages production=`main`, 커스텀 도메인 `pifl-labs.com` 연결
+- **캐시 사고**: Firebase 시절 Cloudflare가 CSS를 1년 캐시 → 컷오버 후 stale 서빙 → 캐시 Purge + `_headers` CSS/JS 캐시 정상화
+- 푸터 환경설정 우측 하단 한 줄 정렬
+- **T11 Firebase 폐기**: `public/`(구 정적 72파일)·`firebase.json`·`.firebaserc`·`gen-pages.mjs` 삭제
+- **관용 구조화**: `static/` → `public/` 리네임, `astro.config` override 제거, README·DEVELOPMENT-GUIDE·CLAUDE.md Astro 기준 재작성
+
+### 빌드 상태
+
+- `astro build` — 28페이지 통과
+- CF 프리뷰/라이브 검증: 24 슬래시 라우트 200, 폰트 woff2 3종 로드, 라이트/다크·i18n 정상, 콘솔 에러 0
+
+### 의사결정 기록
+
+- **Firebase → CF Pages**: 인증 만료 반복 + 21파일 중복(공통 레이아웃 부재) 두 고통을 근본 해소. git push 자동 배포.
+- **i18n**: 루트 `/`는 미들웨어가 Accept-Language 감지 302. x-default=`/ko/`(한국 회사). pipi-worlds 동일 패턴.
+- **build format `directory`**: 언어 홈페이지(`/ko/`) 슬래시 URL 보존. legacy `/terms`는 CF가 308 정규화.
+- **동시 세션 주의**: 같은 워크트리를 다른 세션과 공유하면 브랜치 충돌 — 마이그레이션 중 다른 세션 동시 가동 지양.
+
+### 알려진 이슈 / 남은 작업
+
+1. **모바일 375px 히어로 가로 오버플로우** — 라이트모드 작업 때 발견한 기존 버그, 미해결 (범위 밖).
+2. **Firebase Console 정리** (선택, 코드 무관) — `pifl-labs-main` Hosting 사이트/프로젝트 삭제. DNS 미연결이라 안 해도 무해.
+3. legal/app 페이지 canonical 트레일링 슬래시 — 계산식 전환으로 사실상 해소됨.
+
+상세 이전 기록: `MIGRATION-ASTRO.md`.
+
+---
+
 ## Session 8 — 2026-04-20: Stickerbook 디자인 전면 개편 + 4차 피드백 반영 + Firebase 인증 영구화
 
 ### 작업 요약
