@@ -108,6 +108,9 @@
 - 2026-05-18: **T11 완료** — Firebase 폐기. `public/`(구 정적 사이트 72파일)·`firebase.json`·
   `.firebaserc`·`scripts/gen-pages.mjs`(1회용 마이그레이션 도구) 삭제. CLAUDE.md·astro.config
   주석·launch.json 을 Astro 현실로 갱신. `astro build` 영향 0 확인.
+- 2026-05-18: **관용 구조 정리** — `static/` → `public/` 리네임(Astro 기본 publicDir),
+  astro.config 의 `publicDir`·`outDir` override 제거(기본값 사용). README·DEVELOPMENT-GUIDE 를
+  구 Firebase 정적 사이트 기준 → Astro 기준으로 재작성. `astro build` 28페이지 통과.
 
 ## 마이그레이션 완료
 
