@@ -95,6 +95,12 @@
   - 검증 결과: 24개 슬래시 라우트 전부 200, 폰트 woff2 3종 status 200,
     en/ko 라이트·다크 시각 정상, 콘솔 에러 0.
 
+- 2026-05-18: **i18n 자동 라우팅 추가** (pipi-worlds 방식) — 한국 방문자가 루트에서
+  영어에 갇히던 문제 해결. `functions/_middleware.ts`(CF Pages Function)가 Accept-Language·
+  쿠키 감지 → `/ko//en//ja` 302. 루트 `/`는 리다이렉트 랜딩(noindex + lang-detect.js 폴백).
+  hreflang 계산식화(en→/en/, x-default→/ko/), 영어 루트 중복 제거. 검증: ko/ja/en/미지원
+  언어별 리다이렉트·쿠키 우선·deep link 경로 보존 전부 통과 (커밋 549e4fe).
+
 ## 남은 작업 (사용자 영역)
 
 - **T10 DNS 컷오버** — pifl-labs.com 을 Firebase → CF Pages 로 전환 (사용자 직접).
