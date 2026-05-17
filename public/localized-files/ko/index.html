@@ -69,6 +69,7 @@
     "knowsLanguage": ["ko", "en", "ja"]
 }
 </script>
+  <script src="/theme-init.js"></script>
 </head>
 <body>
 
@@ -373,6 +374,24 @@
     </div>
   </div>
   <picture><source srcset="/assets/pipi/pipi-sleepy-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true" loading="lazy"></picture>
+  <div class="footer-prefs">
+    <div class="pref-group">
+      <span class="pref-label">테마</span>
+      <div class="pref-row" role="group" aria-label="테마">
+        <button type="button" class="pref-btn" data-theme-btn="auto" aria-pressed="false">자동</button>
+        <button type="button" class="pref-btn" data-theme-btn="light" aria-pressed="false">밝게</button>
+        <button type="button" class="pref-btn" data-theme-btn="dark" aria-pressed="false">어둡게</button>
+      </div>
+    </div>
+    <div class="pref-group">
+      <span class="pref-label">글자 크기</span>
+      <div class="pref-row" role="group" aria-label="글자 크기">
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="normal" aria-pressed="false" aria-label="보통 글자 크기">가</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="large" aria-pressed="false" aria-label="큰 글자 크기">가</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="xlarge" aria-pressed="false" aria-label="아주 큰 글자 크기">가</button>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="/script.js"></script>

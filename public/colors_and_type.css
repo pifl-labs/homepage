@@ -169,6 +169,73 @@
   --dur-slow: 0.60s;
   --ease:     cubic-bezier(.22, .61, .36, 1);
 
+  /* ─────────────────────────────────────────────────────────
+     TYPE SCALE  (글자 크기 환경설정 — 보통/크게/아주크게)
+     ─────────────────────────────────────────────────────────
+     html[data-type-scale] 가 이 배수를 바꾸고, html font-size
+     가 calc 로 비례 확대된다. 본문 폰트는 rem 기반이라 자동 적응.
+     paint 전 적용은 theme-init.js 가 담당.
+     ───────────────────────────────────────────────────────── */
+  --type-scale: 1;
+
+}
+
+/* html font-size 를 배수로 스케일 — rem 기반 타이포가 비례 확대된다.
+   100% = 브라우저 기본(보통 16px). scroll-behavior 등은 styles 에서 별도. */
+html { font-size: calc(100% * var(--type-scale)); }
+html[data-type-scale="large"]  { --type-scale: 1.15; }
+html[data-type-scale="xlarge"] { --type-scale: 1.30; }
+
+
+/* ============================================================
+   LIGHT MODE — :root[data-theme="light"]
+   ------------------------------------------------------------
+   다크가 기본. theme-init.js 가 사용자 선택(pifl-theme:
+   auto|light|dark)을 해석해 <html data-theme="light|dark"> 를
+   paint 전에 설정한다. "auto"는 prefers-color-scheme 해석.
+   토큰 값만 재정의하므로 토큰을 소비하는 모든 surface 가 적응.
+   pipi-worlds.com 의 동일 블록에서 포팅 (pifl-labs 존재 토큰만).
+   ============================================================ */
+:root[data-theme="light"] {
+
+  /* SURFACES */
+  --bg-base:    #f4f7fb;
+  --bg-deep:    #eaeef6;
+  --bg-raised:  #ffffff;
+  --bg-card:    #ffffff;
+  --navy:       #e6ecf5;
+
+  /* TEXT */
+  --text-primary:   #0b1426;
+  --text-secondary: #36405a;
+  --text-muted:     #687490;
+  --text-dim:       #98a2b8;
+
+  /* BORDERS — 흰색 알파 → 검정 알파 */
+  --border-subtle:  rgba(15, 23, 42, 0.06);
+  --border-default: rgba(15, 23, 42, 0.10);
+  --border-strong:  rgba(15, 23, 42, 0.18);
+
+  /* NEON — 밝은 배경 대비 확보용으로 teal/cyan 만 어둡게.
+     --gradient-* 은 raw hex라 영향 없음 → 브랜드 그라디언트 유지. */
+  --neon-teal:  #0891b2;
+  --neon-cyan:  #0e7490;
+
+  /* ROLE ACCENTS — amber #fbbf24 는 흰 배경 대비 미달 → 어두운 amber */
+  --accent-highlight:  #b45309;
+  --accent-warm:       #d2541b;
+  --accent-warm-soft:  rgba(210, 84, 27, 0.12);
+
+  /* GLOW — 밝은 배경에선 약하게 */
+  --glow-teal:   rgba(8, 145, 178, 0.30);
+  --glow-indigo: rgba(99, 102, 241, 0.22);
+  --glow-violet: rgba(139, 92, 246, 0.20);
+
+  /* SHADOWS — 라이트에선 부드러운 회색 그림자 */
+  --shadow-sm:      0 1px 3px   rgba(15, 23, 42, 0.10);
+  --shadow-md:      0 6px 20px  rgba(15, 23, 42, 0.12);
+  --shadow-glow-sm: 0 4px 16px  rgba(99, 102, 241, 0.14);
+  --shadow-glow-md: 0 10px 32px rgba(99, 102, 241, 0.18);
 }
 
 

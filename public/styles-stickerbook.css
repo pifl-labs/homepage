@@ -695,6 +695,43 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 }
 .footer-bottom > * { position: relative; z-index: 2; }
 
+/* ── 푸터 환경설정 — 테마 + 글자 크기 토글 ─────────────────────────
+   .container 바깥/안 어디에 삽입돼도 정렬되도록 자체 컨테이너화
+   (max-width + 좌우 패딩이 .container 와 동일). */
+.footer-prefs {
+  max-width: 1280px; margin: 1.5rem auto 0; padding: 1.5rem 2rem 0;
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  position: relative; z-index: 2;
+}
+.pref-group { display: flex; align-items: center; gap: .6rem; }
+.pref-label {
+  font-family: var(--font-code); font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.pref-row {
+  display: inline-flex; gap: 2px; padding: 3px;
+  background: var(--bg-card); border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+}
+.pref-btn {
+  font-family: var(--font-main); color: var(--text-secondary);
+  background: transparent; border: none; cursor: pointer;
+  padding: .35rem .8rem; border-radius: var(--radius-pill);
+  font-size: .82rem; line-height: 1; transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.pref-btn:hover { color: var(--text-primary); }
+.pref-btn[aria-pressed="true"] {
+  background: var(--accent-cta); color: #fff;
+}
+.pref-btn-ts { font-family: var(--font-display); font-weight: 600; }
+.pref-btn-ts[data-ts-btn="normal"] { font-size: .78rem; }
+.pref-btn-ts[data-ts-btn="large"]  { font-size: .95rem; }
+.pref-btn-ts[data-ts-btn="xlarge"] { font-size: 1.15rem; }
+@media (max-width: 480px) {
+  .footer-prefs { flex-direction: column; gap: 1rem; }
+}
+
 /* sleepy pipi hidden in footer corner — placed above footer-bottom (near brand column)
    so it never overlaps legal links. Reduced size + opacity so it reads as ambient decor. */
 .footer-sleep {

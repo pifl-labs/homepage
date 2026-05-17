@@ -214,3 +214,92 @@ document.head.appendChild(style);
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+/* ── 푸터 환경설정 토글 — 테마(자동/라이트/다크) + 글자 크기 ──────────
+   paint 전 적용은 theme-init.js 담당. 여기선 버튼 클릭 핸들링만.
+   CSP-safe: 인라인 핸들러 없이 addEventListener 사용. */
+(function () {
+    var root = document.documentElement;
+
+    // 테마 토글
+    var themeBtns = document.querySelectorAll('[data-theme-btn]');
+    if (themeBtns.length) {
+        var mq = window.matchMedia('(prefers-color-scheme: light)');
+
+        var themeChoice = function () {
+            try {
+                var v = localStorage.getItem('pifl-theme');
+                return v === 'light' || v === 'dark' ? v : 'auto';
+            } catch (e) {
+                return 'auto';
+            }
+        };
+        var resolveTheme = function (c) {
+            return c === 'auto' ? (mq.matches ? 'light' : 'dark') : c;
+        };
+        var applyTheme = function (c) {
+            var resolved = resolveTheme(c);
+            root.dataset.theme = resolved;
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) {
+                meta.setAttribute('content', resolved === 'light' ? '#f4f7fb' : '#020617');
+            }
+        };
+        var syncTheme = function () {
+            var c = themeChoice();
+            themeBtns.forEach(function (b) {
+                b.setAttribute('aria-pressed', b.dataset.themeBtn === c ? 'true' : 'false');
+            });
+        };
+
+        themeBtns.forEach(function (b) {
+            b.addEventListener('click', function () {
+                var c = b.dataset.themeBtn;
+                try {
+                    if (c === 'auto') localStorage.removeItem('pifl-theme');
+                    else localStorage.setItem('pifl-theme', c);
+                } catch (e) {}
+                applyTheme(c);
+                syncTheme();
+            });
+        });
+        mq.addEventListener('change', function () {
+            if (themeChoice() === 'auto') applyTheme('auto');
+        });
+        syncTheme();
+    }
+
+    // 글자 크기 토글
+    var tsBtns = document.querySelectorAll('[data-ts-btn]');
+    if (tsBtns.length) {
+        var tsCurrent = function () {
+            var v = root.dataset.typeScale;
+            return v === 'large' || v === 'xlarge' ? v : 'normal';
+        };
+        var syncTs = function () {
+            var cur = tsCurrent();
+            tsBtns.forEach(function (b) {
+                b.setAttribute('aria-pressed', b.dataset.tsBtn === cur ? 'true' : 'false');
+            });
+        };
+        tsBtns.forEach(function (b) {
+            b.addEventListener('click', function () {
+                var v = b.dataset.tsBtn;
+                try {
+                    if (v === 'normal') {
+                        delete root.dataset.typeScale;
+                        localStorage.removeItem('pifl-type-scale');
+                    } else {
+                        root.dataset.typeScale = v;
+                        localStorage.setItem('pifl-type-scale', v);
+                    }
+                } catch (e) {
+                    if (v === 'normal') delete root.dataset.typeScale;
+                    else root.dataset.typeScale = v;
+                }
+                syncTs();
+            });
+        });
+        syncTs();
+    }
+})();
