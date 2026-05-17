@@ -101,12 +101,20 @@
   hreflang 계산식화(en→/en/, x-default→/ko/), 영어 루트 중복 제거. 검증: ko/ja/en/미지원
   언어별 리다이렉트·쿠키 우선·deep link 경로 보존 전부 통과 (커밋 549e4fe).
 
-## 남은 작업 (사용자 영역)
+- 2026-05-18: **T10 DNS 컷오버 완료** — `feat/astro-migration` → `main` 머지(PR #26),
+  CF Pages production branch `main` 전환, 커스텀 도메인 `pifl-labs.com` 연결(Cloudflare CNAME).
+  컷오버 직후 Firebase 시절 1년 캐시된 CSS가 stale 서빙되던 문제 → Cloudflare 캐시 Purge +
+  `_headers` 루트 CSS/JS 캐시 정상화로 해결. 브랜치 정리 — `main` 단일.
+- 2026-05-18: **T11 완료** — Firebase 폐기. `public/`(구 정적 사이트 72파일)·`firebase.json`·
+  `.firebaserc`·`scripts/gen-pages.mjs`(1회용 마이그레이션 도구) 삭제. CLAUDE.md·astro.config
+  주석·launch.json 을 Astro 현실로 갱신. `astro build` 영향 0 확인.
 
-- **T10 DNS 컷오버** — pifl-labs.com 을 Firebase → CF Pages 로 전환 (사용자 직접).
-  CF Pages 프로젝트 → Custom domains → `pifl-labs.com` 추가 → DNS 레코드 갱신.
-  컷오버 전 production branch 를 `main` 으로 바꾸려면 `feat/astro-migration` → `main` 머지 선행.
-- **T11** 안정화 확인 후 Firebase Hosting 폐기 + `public/` 디렉토리 삭제 (현재는 병행 유지)
+## 마이그레이션 완료
+
+전 단계(T1~T11) 종료. pifl-labs.com = Astro + Cloudflare Pages, git push 자동 배포.
+
+**사용자 잔여(코드 무관, 선택)**: Firebase Console 에서 `pifl-labs-main` Hosting 사이트/프로젝트
+삭제 — DNS 가 더 이상 가리키지 않아 안 해도 무해.
 
 ## 후속 폴리시 (선택 — 차단 아님)
 
