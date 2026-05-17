@@ -7,9 +7,10 @@ import { dirname, join } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 
-// src(기존 HTML) → dest(.astro) → lang 매핑. 기존 URL 1:1 보존.
+// src(기존 HTML) → dest(.astro) → lang 매핑.
+// 루트 index.astro 는 생성 대상 아님 — 언어 감지 리다이렉트 랜딩(수기 작성).
+const SITE = 'https://pifl-labs.com';
 const PAGES = [
-  ['public/index.html',                              'src/pages/index.astro',                       'en'],
   ['public/terms.html',                              'src/pages/terms.astro',                       'en'],
   ['public/privacy.html',                            'src/pages/privacy.astro',                     'en'],
   ['public/en/index.html',                           'src/pages/en/index.astro',                    'en'],
@@ -64,20 +65,41 @@ function layoutImport(dest) {
   return '../'.repeat(depth + 1) + 'layouts/BaseLayout.astro';
 }
 
+// canonical·hreflang 계산 — 모든 콘텐츠는 /ko//en//ja prefix 아래.
+// 루트 무prefix 페이지(예: /terms)는 /en/ 트윈을 canonical 로 가리켜 중복 제거.
+// x-default 는 /ko/ (한국 회사 기준).
+function i18nMeta(dest, lang) {
+  let rel = dest.replace(/^src\/pages\//, '').replace(/\.astro$/, '');
+  rel = rel.replace(/^(en|ko|ja)\//, '');          // 로케일 prefix 제거
+  const key = rel === 'index' ? '' : rel;           // home → ''
+  const suffix = key === '' ? '' : key + '/';
+  return {
+    canonical: `${SITE}/${lang}/${suffix}`,
+    alternates: [
+      { hreflang: 'en', href: `${SITE}/en/${suffix}` },
+      { hreflang: 'ko', href: `${SITE}/ko/${suffix}` },
+      { hreflang: 'ja', href: `${SITE}/ja/${suffix}` },
+      { hreflang: 'x-default', href: `${SITE}/ko/${suffix}` },
+    ],
+  };
+}
+
 let count = 0;
 for (const [src, dest, langHint] of PAGES) {
   const html = readFileSync(join(ROOT, src), 'utf-8');
   const e = extract(html);
   const lang = e.lang || langHint;
-  if (!e.title || !e.canonical) throw new Error(`${src}: title/canonical 누락`);
+  if (!e.title) throw new Error(`${src}: title 누락`);
+
+  const { canonical, alternates } = i18nMeta(dest, lang);
 
   const props = [
     `  lang="${lang}"`,
     `  title={${JSON.stringify(e.title)}}`,
     `  description={${JSON.stringify(e.description ?? '')}}`,
-    `  canonical=${JSON.stringify(e.canonical)}`,
+    `  canonical=${JSON.stringify(canonical)}`,
     e.keywords ? `  keywords={${JSON.stringify(e.keywords)}}` : null,
-    `  alternates={${JSON.stringify(e.alternates)}}`,
+    `  alternates={${JSON.stringify(alternates)}}`,
     e.ogImage ? `  ogImage=${JSON.stringify(e.ogImage)}` : null,
     e.hasStylesCss ? `  extraCss={["/styles.css"]}` : null,
   ].filter(Boolean).join('\n');
