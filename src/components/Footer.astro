@@ -1,0 +1,62 @@
+---
+import { ui, localeBase, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = localeBase(lang);
+const home = `${base}/`;
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href={home}>
+          <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+          <b>PiFl Labs</b><sup>{t.co}</sup>
+        </a>
+        <p class="footer-tagline">{t.footTagline}</p>
+        <p class="footer-desc">{t.footDesc}</p>
+      </div>
+      <div class="footer-col">
+        <h4>{t.footNavigate}</h4>
+        <ul>
+          <li><a href={home}>{t.footHome}</a></li>
+          <li><a href={`${home}#crew`}>{t.navCrew}</a></li>
+          <li><a href={`${home}#about`}>{t.navShip}</a></li>
+          <li><a href={`${home}#log`}>{t.navLog}</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>{t.footContact}</h4>
+        <ul>
+          <li><a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li>
+          <li><a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{t.copyright}</span>
+      <span><a href={`${base}/terms/`}>{t.terms}</a> · <a href={`${base}/privacy/`}>{t.privacy}</a> · Made with ⚓</span>
+    </div>
+  </div>
+  <picture><source srcset="/assets/pipi/pipi-sleepy-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true" loading="lazy"></picture>
+  <div class="footer-prefs">
+    <div class="pref-group">
+      <span class="pref-label">{t.theme}</span>
+      <div class="pref-row" role="group" aria-label={t.theme}>
+        <button type="button" class="pref-btn" data-theme-btn="auto" aria-pressed="false">{t.themeAuto}</button>
+        <button type="button" class="pref-btn" data-theme-btn="light" aria-pressed="false">{t.themeLight}</button>
+        <button type="button" class="pref-btn" data-theme-btn="dark" aria-pressed="false">{t.themeDark}</button>
+      </div>
+    </div>
+    <div class="pref-group">
+      <span class="pref-label">{t.textSize}</span>
+      <div class="pref-row" role="group" aria-label={t.textSize}>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="normal" aria-pressed="false" aria-label={t.tsNormal}>{t.tsGlyph}</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="large" aria-pressed="false" aria-label={t.tsLarge}>{t.tsGlyph}</button>
+        <button type="button" class="pref-btn pref-btn-ts" data-ts-btn="xlarge" aria-pressed="false" aria-label={t.tsXlarge}>{t.tsGlyph}</button>
+      </div>
+    </div>
+  </div>
+</footer>

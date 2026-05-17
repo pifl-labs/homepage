@@ -1,0 +1,1908 @@
+/* Design tokens (:root variables + @font-face) live in colors_and_type.css,
+   which must be loaded BEFORE this file in every HTML entry point. */
+
+/* Display type — headlines use Space Grotesk for brand consistency with apps */
+h1, h2, .hero-title, .section-title, .logo-text {
+    font-family: var(--font-display);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Reduced navbar offset for tighter positioning */
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--s-md);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text-gradient {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-highlight {
+    color: var(--accent-highlight);
+}
+
+/* Desktop text visibility */
+.card-text-mobile,
+.feature-text-mobile,
+.mascot-text-mobile {
+    display: none;
+}
+
+.card-text-full,
+.feature-text-full,
+.mascot-text-full {
+    display: inline;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: var(--s-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--s-md);
+    display: flex;
+    align-items: center;
+    gap: var(--s-md);
+}
+
+/* Group: brand + menu stick to the left, lang + CTA float right. */
+.nav-brand { margin-right: var(--s-md); }
+.nav-menu  { margin-right: auto; gap: var(--s-md); }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--s-xs);
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo-icon-img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo-text {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--s-lg);
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-cta);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    padding: 5px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    padding: 6px 12px !important;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 14px !important;
+    transition: all 0.3s ease;
+    min-width: 40px !important;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background: var(--gradient-cta);
+    border-color: transparent;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: var(--s-md);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='0.2' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+.wave1 {
+    animation: wave 10s linear infinite;
+    opacity: 0.3;
+}
+
+.wave2 {
+    animation: wave 15s linear infinite reverse;
+    opacity: 0.2;
+    bottom: 10px;
+}
+
+.wave3 {
+    animation: wave 20s linear infinite;
+    opacity: 0.1;
+    bottom: 20px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--s-xl);
+    align-items: center;
+    min-height: calc(88vh - 60px);
+    max-width: 1400px;
+}
+
+.hero-title {
+    font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--s-sm);
+    animation: slideInLeft 1s ease-out;
+}
+
+/* Hero eyebrow — small-caps category label with cyan dot indicator. */
+.hero-eyebrow {
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--neon-teal);
+    margin-bottom: var(--s-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    animation: slideInLeft 1s ease-out both;
+}
+
+.hero-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--neon-teal);
+    box-shadow: 0 0 10px var(--glow-teal);
+}
+
+/* Hero copy stack — sub-lead (tagline) + body (concrete promise). */
+.hero-sublead {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: var(--s-sm);
+    animation: slideInLeft 1s ease-out 0.2s both;
+}
+
+/* Inline accent utilities — two-color rhythm on the sub-lead. */
+.hero-sublead .accent-teal,
+.accent-teal   { color: var(--neon-teal);   font-weight: 600; }
+.hero-sublead .accent-violet,
+.accent-violet { color: var(--neon-violet); font-weight: 600; }
+
+.hero-body {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    max-width: 560px;
+    margin-bottom: var(--s-lg);
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+/* Hero stats — trust row, mono caps. */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-lg);
+    margin-top: var(--s-lg);
+    padding-top: var(--s-md);
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-code);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    animation: slideInLeft 1s ease-out 0.5s both;
+}
+
+.hero-stats > span { display: inline-flex; align-items: baseline; gap: 0.4rem; }
+
+.hero-stats strong {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Nav CTA pill — "Join the crew" anchored right. */
+.nav-cta {
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-cta);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);
+    margin-left: var(--s-sm);
+    white-space: nowrap;
+}
+
+.nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow-sm);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--s-md);
+    animation: slideInLeft 1s ease-out 0.4s both;
+}
+
+/* Buttons */
+.btn {
+    padding: var(--s-sm) var(--s-md);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-xs);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--gradient-cta);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--accent-cta);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-cta);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: var(--s-md) var(--s-lg);
+    font-size: 1.25rem;
+}
+
+/* Hero Visual - Clean Image-Based Design */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.pifl-visual {
+    width: 450px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Hero Image Styling — ship gets the brand neon stack (glow reserved for imagery) */
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    filter:
+        drop-shadow(0 0 24px var(--glow-teal))
+        drop-shadow(0 0 48px var(--glow-indigo))
+        drop-shadow(0 8px 32px rgba(0, 0, 0, 0.3));
+    animation: gentle-float 8s ease-in-out infinite;
+}
+
+/* Brand Text Overlay */
+.brand-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.pifl-main-text {
+    font-size: clamp(3.5rem, 7vw, 5rem);
+    font-weight: 900;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    filter: drop-shadow(0 4px 20px rgba(99, 102, 241, 0.4));
+    animation: brand-glow 8s ease-in-out infinite;
+    text-align: center;
+}
+
+/* Floating Keywords around Ship — badges orbit within the .pifl-visual
+   boundary, hugging the ship's silhouette (corners + mid-sides) so they
+   feel like they're sailing alongside, not drifting apart. */
+.floating-keywords { position: absolute; inset: 0; pointer-events: none; }
+.floating-keywords .keyword-badge { pointer-events: auto; }
+
+.keyword-badge {
+    position: absolute;
+    padding: 0.4rem 0.8rem;
+    background: rgba(11, 20, 38, 0.6);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-code);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    opacity: 0.92;
+    pointer-events: auto;
+    transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), opacity var(--dur-base) var(--ease);
+}
+
+.keyword-badge:hover {
+    transform: scale(1.06);
+    opacity: 1;
+    box-shadow: var(--shadow-glow-sm);
+}
+
+/* Floating Keywords — orbit positions hug the ship silhouette.
+   6 badges = 6 points around the image (4 corners + 2 mid-sides).
+   Only inner glow tone varies per badge. */
+.keyword-1 {  /* pirate — upper-left corner of the ship */
+    top: 8%; left: 8%;
+    animation: float-simple 4s ease-in-out infinite;
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
+}
+.keyword-2 {  /* Flutter — upper-right, near the sails */
+    top: 12%; right: 6%;
+    animation: float-simple 4.5s ease-in-out infinite 0.5s;
+    box-shadow: inset 0 0 18px var(--glow-teal), var(--shadow-sm);
+}
+.keyword-3 {  /* crew — mid-left, along the hull */
+    top: 52%; left: 4%;
+    animation: float-simple 5s ease-in-out infinite 1s;
+    box-shadow: inset 0 0 18px rgba(251, 191, 36, 0.24), var(--shadow-sm);
+}
+.keyword-4 {  /* calm — mid-right, along the hull */
+    top: 48%; right: 4%;
+    animation: float-simple 4.8s ease-in-out infinite 2.5s;
+    box-shadow: inset 0 0 18px rgba(192, 201, 221, 0.22), var(--shadow-sm);
+}
+.keyword-5 {  /* single codebase — lower-right corner, near waves */
+    bottom: 12%; right: 8%;
+    animation: float-simple 4.2s ease-in-out infinite 1.5s;
+    box-shadow: inset 0 0 18px var(--glow-indigo), var(--shadow-sm);
+}
+.keyword-6 {  /* iOS · Android — bottom-center, on the waves */
+    bottom: 4%; left: 34%;
+    animation: float-simple 5.5s ease-in-out infinite 2s;
+    box-shadow: inset 0 0 18px var(--glow-violet), var(--shadow-sm);
+}
+
+/* Simplified Floating Animation */
+@keyframes float-simple {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ============================================================
+   Section title system
+   One h2 class + 3 variant modifiers. Pick per section for rhythm.
+   Don't invent a 4th variant without updating this comment.
+   ============================================================ */
+.section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: var(--s-xl);
+    color: var(--text-primary);
+}
+
+/* Variant A — "numbered" (About, Features)
+   Small mono eyebrow above a tight h2. Feels like a spec sheet. */
+.section-title--numbered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+.section-title--numbered::before {
+    content: attr(data-index);
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--neon-teal);
+    text-transform: uppercase;
+}
+
+/* Variant B — "display" (Mascot)
+   Oversized, left-aligned, headline-style. For narrative sections. */
+.section-title--display {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-align: left;
+    max-width: 18ch;
+    margin-bottom: var(--s-lg);
+}
+
+/* Variant C — "quiet" (Crew)
+   Small, uppercase, mono. Signals "this is a status update, not a pitch". */
+.section-title--quiet {
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: var(--s-md);
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    padding: var(--s-xl) 0;
+    background: linear-gradient(180deg, var(--bg-base) 0%, var(--navy) 100%);
+}
+
+/* About 2-col layout: stacked name-cards left, code editor right.
+   Stretch aligns the code block to match the full height of the 3-card stack. */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--s-xl);
+    align-items: stretch;
+}
+
+.about-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-md);
+}
+
+.about-code {
+    display: flex;
+}
+.about-code .code-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.about-code .code-block pre {
+    flex: 1;
+}
+
+@media (max-width: 900px) {
+    .about-layout { grid-template-columns: 1fr; }
+}
+
+.about-card {
+    background: var(--bg-card);
+    padding: var(--s-lg);
+    border-radius: 16px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-md);
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-glow-sm);
+}
+
+/* Typographic glyph replaces FA icon — ties to naming concept */
+.card-glyph {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--neon-teal);
+    width: 3.5rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Crew card icon treatment stays (Features/Crew still use FA icons) */
+.crew-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-cta);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: var(--s-md);
+}
+
+.card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-card h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--s-sm);
+}
+
+/* Features Section */
+.features {
+    padding: var(--s-xl) 0;
+    background: var(--navy);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 780px;
+    margin: 0 auto;
+    gap: var(--s-md);
+}
+
+.feature-card {
+    background: var(--bg-card);
+    padding: var(--s-lg);
+    border-radius: 16px;
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-md);
+}
+
+.feature-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-cta);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover::before {
+    transform: translateX(0);
+}
+
+.feature-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-glow-sm);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-cta);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--s-md);
+}
+
+.feature-card h3 {
+    margin-bottom: var(--s-sm);
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Editor-window styled code block — traffic lights + filename bar.
+   Gives the code block visual completeness and developer brand fit. */
+.code-block {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-default);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.code-block__chrome {
+    display: flex;
+    align-items: center;
+    gap: var(--s-sm);
+    padding: 0.65rem 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.code-block__lights {
+    display: inline-flex;
+    gap: 6px;
+}
+
+.code-block__lights span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    opacity: 0.55;
+}
+
+.code-block__filename {
+    font-family: var(--font-code);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 58px; /* offset to visually re-center despite left lights */
+}
+
+.code-block pre {
+    margin: 0;
+    padding: var(--s-md);
+    font-family: var(--font-code);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.code-block code {
+    display: block;
+    line-height: 1.6;
+}
+
+/* Mascot Section — same background treatment as About/Features/Crew.
+   The PiPi image's own drop-shadow provides the only glow — the section itself is calm. */
+.mascot {
+    padding: var(--s-xl) 0;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+}
+
+.mascot-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.mascot-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    position: relative;
+}
+
+.mascot-image {
+    width: 100%;
+    height: auto;
+    max-width: 380px;
+    filter:
+        drop-shadow(0 0 18px var(--glow-teal))
+        drop-shadow(0 0 36px var(--glow-violet))
+        drop-shadow(0 8px 32px rgba(0, 0, 0, 0.3));
+    animation: cyber-float 6s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.mascot-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--s-md);
+}
+
+.mascot-caption {
+    margin-top: var(--s-md);
+    font-family: var(--font-code);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+.mascot-caption__label {
+    color: var(--text-dim);
+    margin-right: 0.2em;
+}
+
+/* Crew Section */
+.crew {
+    padding: var(--s-xl) 0;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--bg-base) 100%);
+}
+
+.crew-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--s-xl);
+}
+
+.crew-headline {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-align: center;
+    max-width: 22ch;
+    margin: 0 auto var(--s-sm);
+    color: var(--text-primary);
+}
+.crew-lede {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 52ch;
+    margin: 0 auto var(--s-xl);
+    line-height: 1.65;
+}
+.crew-aside {
+    margin-top: var(--s-md);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.crew-aside a {
+    color: var(--neon-teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--dur-base) var(--ease);
+}
+.crew-aside a:hover { border-bottom-color: var(--neon-teal); }
+
+/* Status band — between Hero and About.
+   Pre-launch signal: "we're building this now, here's the stage". */
+.status-band {
+    padding: var(--s-sm) 0;
+    background: var(--bg-raised);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+.status-band__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--s-sm);
+    flex-wrap: wrap;
+    font-family: var(--font-code);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+.status-band__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--neon-teal);
+    box-shadow: 0 0 10px var(--glow-teal);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+.status-band__label {
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+.status-band__value { color: var(--text-secondary); }
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Crew cards — same anatomy as Features (single column, horizontal, icon left).
+   Keeps About/Features/Crew visually consistent. */
+.crew-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 780px;
+    margin: 0 auto var(--s-xl);
+    gap: var(--s-md);
+}
+
+.crew-card {
+    background: var(--bg-card);
+    padding: var(--s-lg);
+    border-radius: 16px;
+    text-align: left;
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-md);
+}
+
+.crew-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-glow-sm);
+}
+
+.crew-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.crew-card h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--s-sm);
+}
+
+.crew-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.crew-cta {
+    text-align: center;
+}
+
+/* Crew CTA */
+.crew-cta {
+    text-align: center;
+}
+
+.crew-email {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(180deg, var(--bg-base) 0%, #0a0f1e 100%);
+    padding: var(--s-xl) 0 var(--s-md);
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: var(--gradient-brand);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: var(--s-xl);
+    margin-bottom: var(--s-lg);
+}
+
+.footer-tagline {
+    color: var(--text-secondary);
+    margin-top: var(--s-sm);
+}
+
+.footer-description {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: var(--s-sm);
+    opacity: 0.7;
+}
+
+.footer-column h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--s-md);
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: var(--s-xs);
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--gradient-cta);
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: var(--s-xs);
+}
+
+.footer-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.footer-nav a:hover {
+    color: var(--text-primary);
+    transform: translateX(4px);
+}
+
+.footer-contact-item {
+    margin-bottom: var(--s-sm);
+}
+
+.footer-contact-item a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-xs);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-contact-item a:hover {
+    color: var(--text-primary);
+}
+
+.footer-contact-item i {
+    width: 18px;
+    text-align: center;
+    color: var(--accent-cta);
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--s-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.footer-tech {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Simplified Animations */
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Logo anchor float */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-6px) rotate(5deg);
+    }
+}
+
+/* Hero ship gentle floating */
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Brand text glow pulse */
+@keyframes brand-glow {
+    0%, 100% {
+        filter: drop-shadow(0 4px 20px rgba(99, 102, 241, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 4px 30px rgba(99, 102, 241, 0.7));
+    }
+}
+
+/* Mascot image cyber float */
+@keyframes cyber-float {
+    0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.4)) drop-shadow(0 0 40px rgba(99, 102, 241, 0.3)) drop-shadow(0 8px 32px rgba(0, 0, 0, 0.3));
+    }
+    50% {
+        transform: translateY(-10px);
+        filter: drop-shadow(0 0 30px rgba(6, 182, 212, 0.6)) drop-shadow(0 0 50px rgba(99, 102, 241, 0.4)) drop-shadow(0 12px 40px rgba(0, 0, 0, 0.3));
+    }
+}
+
+/* Responsive Design */
+/* Medium-Large screens - optimize spacing */
+@media (max-width: 1200px) {
+    .nav-menu {
+        gap: var(--s-md);
+    }
+    
+    .lang-switcher {
+        margin-left: 15px;
+    }
+}
+
+/* Large tablets - reduce navigation gap */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: var(--s-sm);
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .lang-switcher {
+        margin-left: 10px;
+        gap: 6px;
+    }
+    
+    .lang-btn {
+        padding: 4px 8px !important;
+        font-size: 12px !important;
+        min-width: 32px !important;
+    }
+}
+
+/* Mobile-only "Join the crew" surfaced inside hamburger menu.
+   Hidden on desktop (the right-side .nav-cta pill handles it). */
+.mobile-join-cta { display: none; }
+
+/* Critical breakpoint - switch to mobile navigation */
+@media (max-width: 950px) {
+    .nav-menu {
+        display: none;
+    }
+
+    /* Desktop Nav CTA pill is folded into the hamburger menu below.
+       Hiding here prevents overlap with .lang-switcher and .nav-toggle. */
+    .nav-cta {
+        display: none;
+    }
+
+    /* Mobile CTA — revealed alongside nav-links inside the open hamburger. */
+    .mobile-join-cta {
+        display: block;
+        margin-top: var(--s-sm);
+        padding: 0.65rem 1rem;
+        background: var(--gradient-cta);
+        color: #ffffff !important;
+        border-radius: var(--radius-pill);
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+    }
+
+    .mobile-join-cta:hover {
+        box-shadow: var(--shadow-glow-sm);
+    }
+
+    .nav-toggle {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .lang-switcher {
+        position: absolute;
+        top: 50%;
+        right: 65px; /* Moved further left to avoid hamburger overlap */
+        transform: translateY(-50%);
+        margin-left: 0;
+        gap: 5px;
+        z-index: 1001;
+    }
+    
+    .lang-btn {
+        padding: 3px 8px !important;
+        font-size: 11px !important;
+        min-width: 30px !important;
+    }
+    
+    /* Mobile menu when active */
+    .nav-menu.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.98);
+        padding: var(--s-md);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        gap: var(--s-sm);
+        z-index: 999;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--s-lg);
+        text-align: center;
+    }
+    
+    .pifl-visual {
+        width: 400px;
+        height: 300px;
+    }
+    
+    .hero-image {
+        max-width: 400px;
+    }
+    
+    .pifl-main-text {
+        font-size: clamp(3rem, 6vw, 4rem);
+    }
+    
+    .mascot-image {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Fixed navbar scroll offset for mobile */
+    html {
+        scroll-padding-top: 50px;
+    }
+    
+    /* Mobile Language Switcher - refined positioning */
+    .lang-switcher {
+        position: absolute;
+        top: 50%;
+        right: 60px; /* Consistent spacing from hamburger */
+        transform: translateY(-50%);
+        z-index: 1001;
+        margin-left: 0;
+        gap: 4px;
+    }
+    
+    .lang-btn {
+        padding: 3px 7px !important;
+        font-size: 10px !important;
+        min-width: 28px !important;
+    }
+    
+    .nav-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /* Hamburger animation */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Mobile spacing optimization - with proper padding */
+    :root {
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1.25rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+    }
+    
+    /* Mobile container padding */
+    .container {
+        padding: 0 var(--s-md);
+    }
+    
+    /* Mobile text optimization */
+    .card-text-full,
+    .feature-text-full,
+    .mascot-text-full {
+        display: none;
+    }
+
+    .card-text-mobile,
+    .feature-text-mobile,
+    .mascot-text-mobile {
+        display: inline;
+    }
+    
+    /* Hero section - more compact */
+    .hero {
+        min-height: 80vh;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: var(--s-md) 0;
+        gap: var(--s-lg);
+    }
+    
+    .hero-visual {
+        margin-top: 0;
+        order: -1;
+        padding: var(--s-lg) var(--s-sm);
+    }
+    
+    .pifl-visual {
+        width: 320px;
+        height: 220px;
+    }
+    
+    .hero-image {
+        max-width: 320px;
+    }
+    
+    .hero-title {
+        margin-bottom: var(--s-sm);
+    }
+    
+    .pifl-main-text {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+    
+    /* Mobile floating keywords - reduced animation range */
+    .keyword-badge {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    /* Mobile animations use the same simplified animation */
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--s-sm);
+    }
+    
+    /* Sections - reduced padding */
+    .about, .features, .mascot, .crew {
+        padding: var(--s-lg) 0;
+    }
+    
+    .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        margin-bottom: var(--s-md);
+    }
+    
+    /* About — already horizontal on desktop; tighten spacing on mobile */
+    .about-card {
+        padding: var(--s-lg);
+        gap: var(--s-sm);
+    }
+
+    .card-glyph {
+        font-size: 2rem;
+        width: 2.5rem;
+    }
+
+    .about-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--s-xs);
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin: 0;
+    }
+    
+    /* Features - horizontal layout already set; mobile tightening */
+    .feature-card {
+        padding: var(--s-lg);
+        gap: var(--s-sm);
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--s-xs);
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .code-block {
+        margin-top: var(--s-md);
+    }
+    
+    .code-block pre {
+        font-size: 0.8rem;
+    }
+    
+    /* Mascot section - more compact */
+    .mascot-content {
+        grid-template-columns: 1fr;
+        gap: var(--s-lg);
+    }
+    
+    .mascot-visual {
+        padding: var(--s-lg);
+        order: -1;
+    }
+    
+    .mascot-image {
+        max-width: 280px;
+    }
+    
+    .mascot-text p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: var(--s-md);
+    }
+
+    /* Crew section */
+    .crew-cards {
+        gap: var(--s-md);
+        grid-template-columns: 1fr;
+        margin-bottom: var(--s-lg);
+    }
+    
+    .crew-card {
+        padding: var(--s-lg);
+    }
+    
+    .crew-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--s-sm);
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--s-lg) 0 var(--s-sm);
+    }
+
+    .footer::before {
+        display: none;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--s-lg);
+        margin-bottom: var(--s-sm);
+        text-align: center;
+    }
+
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--s-sm);
+    }
+
+    .footer-nav li {
+        margin-bottom: 0;
+    }
+
+    .footer-nav a:hover {
+        transform: none;
+    }
+
+    .footer-contact-item {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--s-xs);
+        text-align: center;
+    }
+
+    /* Legal pages mobile */
+    .legal-hero {
+        padding-top: 70px;
+        padding-bottom: var(--s-sm);
+    }
+
+    .legal-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .legal-page {
+        padding: var(--s-sm) 0 var(--s-lg);
+    }
+
+    .legal-card {
+        padding: var(--s-sm);
+        border-radius: 10px;
+    }
+
+    .legal-card h2 {
+        font-size: 0.95rem;
+    }
+
+    .legal-card p,
+    .legal-card li {
+        font-size: 0.85rem;
+    }
+
+    .legal-card table {
+        font-size: 0.8rem;
+    }
+
+    .legal-card th,
+    .legal-card td {
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Fixed navbar scroll offset for small mobile */
+    html {
+        scroll-padding-top: 45px;
+    }
+    
+    /* Extra mobile optimization - but keep proper padding */
+    :root {
+        --spacing-xs: 0.4rem;
+        --spacing-sm: 0.6rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    /* Maintain good container padding */
+    .container {
+        padding: 0 var(--s-md);
+    }
+    
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .pifl-visual {
+        width: 280px;
+        height: 180px;
+    }
+    
+    .hero-image {
+        max-width: 280px;
+    }
+    
+    .pifl-main-text {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+    }
+    
+    /* Extra small mobile - even smaller keywords */
+    .keyword-badge {
+        font-size: 0.55rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .section-title {
+        font-size: clamp(1.3rem, 4vw, 2rem);
+        margin-bottom: var(--s-sm);
+    }
+    
+    /* Compact about cards */
+    .about-card {
+        padding: var(--s-md);
+        gap: var(--s-sm);
+    }
+
+    .card-glyph {
+        font-size: 1.8rem;
+        width: 2.2rem;
+    }
+
+    .about-card h3 {
+        font-size: 1rem;
+        margin-bottom: var(--s-xs);
+    }
+
+    .about-card p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        margin: 0;
+    }
+
+    /* Compact features */
+    .feature-card {
+        padding: var(--s-md);
+        gap: var(--s-sm);
+    }
+
+    .feature-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+        margin-bottom: var(--s-xs);
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        margin: 0;
+    }
+
+    /* Mascot adjustments */
+    .mascot-image {
+        max-width: 220px;
+    }
+
+    .mascot-visual {
+        padding: var(--s-md);
+    }
+
+    /* Crew section */
+    .crew-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Legal Pages (Privacy Policy, Terms of Service) */
+.legal-hero {
+    padding-top: 80px;
+    padding-bottom: var(--s-md);
+    background: linear-gradient(180deg, var(--bg-base) 0%, var(--navy) 100%);
+}
+
+.legal-hero .container {
+    max-width: 800px;
+}
+
+.legal-hero h1 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: 0.25rem;
+}
+
+.legal-hero h1 i {
+    color: var(--accent-cta);
+    margin-right: 0.4rem;
+    font-size: 0.85em;
+}
+
+.legal-date {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.legal-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--accent-cta);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-bottom: var(--s-sm);
+    transition: color 0.3s;
+}
+
+.legal-back:hover {
+    color: var(--accent-cta-hover);
+}
+
+.legal-page {
+    padding: var(--s-md) 0 var(--s-xl);
+    background: linear-gradient(180deg, var(--navy) 0%, var(--bg-base) 100%);
+    min-height: 50vh;
+}
+
+.legal-page .container {
+    max-width: 800px;
+}
+
+.legal-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: var(--s-md);
+}
+
+.legal-card > p:first-child {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--s-md);
+    padding-bottom: var(--s-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.legal-card h2 {
+    font-size: 1.05rem;
+    color: var(--accent-cta);
+    margin-top: var(--s-md);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.legal-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.legal-card h3 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-top: var(--s-sm);
+    margin-bottom: 0.3rem;
+}
+
+.legal-card p,
+.legal-card li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.legal-card ul,
+.legal-card ol {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.legal-card li {
+    margin-bottom: 0.3rem;
+}
+
+.legal-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: 0.85rem;
+}
+
+.legal-card th,
+.legal-card td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+.legal-card th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.legal-card a {
+    color: var(--accent-cta);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-card a:hover {
+    color: var(--accent-cta-hover);
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: var(--s-sm);
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.footer-legal-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+    color: var(--text-primary);
+}
+
+.footer-legal-links span {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   LIGHT MODE — legal 페이지의 흰 알파 보더 재정의
+   .legal-card 표면은 var(--bg-card)(라이트=흰색)로 적응하나,
+   내부 구분선이 흰 알파라 흰 카드 위에서 사라진다 → 짙은 알파로.
+   ============================================================ */
+:root[data-theme="light"] .legal-card {
+    border: 1px solid var(--border-default);
+}
+:root[data-theme="light"] .legal-card h2,
+:root[data-theme="light"] .legal-card h3 {
+    border-bottom-color: var(--border-default);
+}
+:root[data-theme="light"] .legal-card th,
+:root[data-theme="light"] .legal-card td {
+    border-color: var(--border-default);
+}
+:root[data-theme="light"] .legal-card th {
+    background: rgba(15, 23, 42, 0.04);
+}

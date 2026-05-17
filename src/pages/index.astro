@@ -1,0 +1,40 @@
+---
+// 루트(/) 진입 처리:
+//   1) 프로덕션(CF Pages): functions/_middleware.ts 가 Accept-Language 감지 후 302.
+//      이 정적 HTML 은 보통 노출되지 않음.
+//   2) 미들웨어 미실행 환경(로컬 dev 등): meta refresh + lang-detect.js 폴백.
+const site = 'https://pifl-labs.com';
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PiFl Labs</title>
+    <meta name="description" content="A Flutter-based cross-platform studio. ko · en · ja." />
+    <link rel="canonical" href={`${site}/ko/`} />
+    <link rel="alternate" hreflang="ko" href={`${site}/ko/`} />
+    <link rel="alternate" hreflang="en" href={`${site}/en/`} />
+    <link rel="alternate" hreflang="ja" href={`${site}/ja/`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}/ko/`} />
+    <meta name="robots" content="noindex,follow" />
+    <meta http-equiv="refresh" content="0;url=/ko/" />
+    <style>
+      html, body { height: 100%; margin: 0; background: #020617; color: #c0c9dd;
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+      .root-redirect { display: grid; place-items: center; min-height: 100vh; padding: 24px; text-align: center; }
+      .root-redirect a { color: #22d3ee; }
+    </style>
+  </head>
+  <body>
+    <div class="root-redirect">
+      <div>
+        <p>Detecting language…</p>
+        <noscript>
+          <p>Choose: <a href="/ko/">한국어</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a></p>
+        </noscript>
+      </div>
+    </div>
+    <script is:inline src="/lang-detect.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+# Cloudflare Pages 리다이렉트
+# 구 sitemap.xml → Astro 생성 sitemap-index.xml (검색엔진 캐시 대비)
+/sitemap.xml  /sitemap-index.xml  301

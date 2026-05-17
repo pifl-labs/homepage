@@ -10,6 +10,9 @@ coverage/
 build/
 dist/
 
+# Astro
+.astro/
+
 # Firebase
 .firebase/
 firebase-debug.log

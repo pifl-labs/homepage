@@ -1,0 +1,26 @@
+---
+import { ui, localeBase, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = localeBase(lang); // '' | '/ko' | '/ja'
+const home = `${base}/`;
+---
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href={home}>
+      <picture><source srcset="/emblem.webp" type="image/webp"><img src="/emblem.png" alt="" width="32" height="32"></picture>
+      <b>PiFl Labs</b><sup>{t.co}</sup>
+    </a>
+    <div class="nav-links">
+      <a href={`${home}#crew`}>{t.navCrew}</a>
+      <a href={`${home}#about`}>{t.navShip}</a>
+      <a href={`${home}#log`}>{t.navLog}</a>
+    </div>
+    <div class="lang-pill">
+      <a class={lang === 'en' ? 'on' : undefined} href="/en/" hreflang="en">EN</a><a class={lang === 'ko' ? 'on' : undefined} href="/ko/" hreflang="ko">KO</a><a class={lang === 'ja' ? 'on' : undefined} href="/ja/" hreflang="ja">JA</a>
+    </div>
+    <a href={`${home}#log`} class="nav-cta">{t.navCta} <i class="fas fa-arrow-right nav-cta-arrow" aria-hidden="true"></i></a>
+  </div>
+</nav>

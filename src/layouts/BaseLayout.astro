@@ -1,0 +1,98 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import type { Lang } from '../i18n/ui';
+
+interface Alternate { hreflang: string; href: string }
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  canonical: string;
+  keywords?: string;
+  alternates: Alternate[];
+  ogImage?: string;
+  extraCss?: string[];
+}
+
+const {
+  lang, title, description, canonical, alternates,
+  keywords = 'PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development',
+  ogImage = 'https://pifl-labs.com/pifl-ship-og.jpg',
+  extraCss = [],
+} = Astro.props;
+
+const ogLocale = lang === 'ko' ? 'ko_KR' : lang === 'ja' ? 'ja_JP' : 'en_US';
+const fontCss = lang === 'ja' ? '/fonts-pretendard-jp.css' : '/fonts-pretendard-kren.css';
+const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/fonts/PretendardVariable.woff2';
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#020617" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
+
+<link rel="canonical" href={canonical} />
+{alternates.map((a) => (
+  <link rel="alternate" hreflang={a.hreflang} href={a.href} />
+))}
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="PiFl Labs" />
+<meta property="og:locale" content={ogLocale} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preload" as="font" type="font/woff2" href={preloadFont} crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin />
+<link rel="stylesheet" href={fontCss} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&family=Gowun+Batang:wght@400;700&family=Gaegu:wght@400;700&family=Shippori+Mincho:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="/colors_and_type.css" />
+<link rel="stylesheet" href="/styles-stickerbook.css" />
+{extraCss.map((href) => (<link rel="stylesheet" href={href} />))}
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'PiFl Labs Co., Ltd.',
+  url: 'https://pifl-labs.com',
+  logo: 'https://pifl-labs.com/emblem.png',
+  description: 'A two-person Flutter studio prepping its first voyage for 2026.',
+  email: 'hello@pifl-labs.com',
+  foundingDate: '2026',
+  knowsLanguage: ['ko', 'en', 'ja'],
+})} />
+
+<script is:inline src="/theme-init.js"></script>
+</head>
+<body>
+<Nav lang={lang} />
+<slot />
+<Footer lang={lang} />
+<script is:inline src="/script.js"></script>
+</body>
+</html>
