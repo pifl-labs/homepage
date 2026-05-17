@@ -12,9 +12,10 @@ export default defineConfig({
   output: 'static',
   publicDir: './static',
   outDir: './dist',
-  // 'ignore': CF Pages 가 /terms 와 /terms/ 양쪽 서빙 → 기존 URL(/terms) 보존
   trailingSlash: 'ignore',
-  build: { format: 'directory' },
+  // 'file': 페이지를 terms.html 로 출력 → /terms (무슬래시)로 서빙.
+  // 기존 Firebase URL(/terms, /ko/terms 무슬래시)과 1:1 일치, 308 리다이렉트 제거.
+  build: { format: 'file' },
   i18n: {
     // 현 운영 라우팅 보존: 루트(/) = 영어 x-default, /ko/ 한국어, /ja/ 일본어.
     // 라우팅은 src/pages 파일 구조가 기존 public/ 을 1:1 미러 → URL 동일.
