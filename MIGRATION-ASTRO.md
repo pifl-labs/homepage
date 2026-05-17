@@ -77,3 +77,19 @@
 ## 진행 로그
 
 - 2026-05-17: 계획 문서 작성, `feat/astro-migration` 브랜치 생성, 1단계 착수
+- 2026-05-17: **1단계 완료** — Astro 5 스캐폴드, npm install, 자산 이관 (커밋 5739fae)
+- 2026-05-17: **2~3단계 완료** — BaseLayout/Nav/Footer 컴포넌트 + i18n,
+  생성기(scripts/gen-pages.mjs)로 24페이지 변환, `_headers`/`_redirects`/robots/sitemap.
+  `astro build` 24페이지 통과, en/ko 라이트·다크 시각 검증 (커밋 e34bb29)
+- 2026-05-17: ⚠️ 동시 세션 충돌 감지 — 작업 중 다른 프로세스가 같은 워크트리에서
+  `cfaf3bb`(PiPi D-Day 페이지) 커밋 + `feat/pipi-log-privacy` 브랜치 생성·체크아웃.
+  내 stage 2-3 커밋이 그 브랜치에 안착 → `feat/astro-migration` 으로 fast-forward 정리(비파괴).
+  미추적 `src/pages/apps/pipi-log/*` 파일(타 세션 WIP, 소스 HTML 없음)은 빌드 정합성 위해 제거.
+
+## 남은 작업 (사용자 영역)
+
+- **T8 CF Pages 프로젝트 생성** — Cloudflare 대시보드에서 `pifl-labs/homepage` 저장소 연결.
+  build command: `npm run build`, output: `dist`, 브랜치: `feat/astro-migration`(프리뷰) → `main`(프로덕션)
+- **T9 `*.pages.dev` 프리뷰 전수 검증** — 24페이지 × 라이트/다크
+- **T10 DNS 컷오버** — pifl-labs.com Firebase → CF Pages (사용자 직접)
+- **T11** 안정화 후 Firebase Hosting 폐기 + `public/` 디렉토리 삭제 (현재는 병행 유지)
