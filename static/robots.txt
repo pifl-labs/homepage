@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://pifl-labs.com/sitemap.xml
+Sitemap: https://pifl-labs.com/sitemap-index.xml
 
 # Crawl-delay
 Crawl-delay: 1

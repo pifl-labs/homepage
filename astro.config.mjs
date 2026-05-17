@@ -12,12 +12,16 @@ export default defineConfig({
   output: 'static',
   publicDir: './static',
   outDir: './dist',
-  trailingSlash: 'always',
+  // 'ignore': CF Pages 가 /terms 와 /terms/ 양쪽 서빙 → 기존 URL(/terms) 보존
+  trailingSlash: 'ignore',
+  build: { format: 'directory' },
   i18n: {
-    defaultLocale: 'ko',
-    locales: ['ko', 'en', 'ja'],
+    // 현 운영 라우팅 보존: 루트(/) = 영어 x-default, /ko/ 한국어, /ja/ 일본어.
+    // 라우팅은 src/pages 파일 구조가 기존 public/ 을 1:1 미러 → URL 동일.
+    defaultLocale: 'en',
+    locales: ['en', 'ko', 'ja'],
     routing: {
-      prefixDefaultLocale: false, // ko 는 prefix 없이 루트(/), en→/en/, ja→/ja/
+      prefixDefaultLocale: false,
     },
   },
   integrations: [sitemap()],
