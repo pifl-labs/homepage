@@ -695,12 +695,11 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 }
 .footer-bottom > * { position: relative; z-index: 2; }
 
-/* ── 푸터 환경설정 — 테마 + 글자 크기 토글 ─────────────────────────
-   .container 바깥/안 어디에 삽입돼도 정렬되도록 자체 컨테이너화
-   (max-width + 좌우 패딩이 .container 와 동일). */
+/* ── 푸터 환경설정 — 테마 + 글자 크기 (우측 하단 한 줄) ───────────── */
 .footer-prefs {
-  max-width: 1280px; margin: 1.5rem auto 0; padding: 1.5rem 2rem 0;
-  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  max-width: 1280px; margin: 1.25rem auto 0; padding: 1.25rem 2rem 1.75rem;
+  display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center;
+  gap: 1.75rem;
   border-top: 1px solid var(--border-subtle);
   position: relative; z-index: 2;
 }
@@ -728,8 +727,8 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 .pref-btn-ts[data-ts-btn="normal"] { font-size: .78rem; }
 .pref-btn-ts[data-ts-btn="large"]  { font-size: .95rem; }
 .pref-btn-ts[data-ts-btn="xlarge"] { font-size: 1.15rem; }
-@media (max-width: 480px) {
-  .footer-prefs { flex-direction: column; gap: 1rem; }
+@media (max-width: 600px) {
+  .footer-prefs { flex-direction: column; align-items: flex-end; gap: 1rem; }
 }
 
 /* sleepy pipi hidden in footer corner — placed above footer-bottom (near brand column)

@@ -15,6 +15,13 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# 루트 CSS·JS — 파일명 고정(비해시) 자산이라 짧은 캐시 + 재검증.
+# (Firebase 시절 max-age=31536000 으로 캐시돼 컷오버 후 stale 서빙된 사고 재발 방지)
+/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
 # SEO 자산 — 짧은 캐시
 /robots.txt
   Cache-Control: public, max-age=3600
