@@ -3,13 +3,10 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 // pifl-labs.com — Astro static site (Cloudflare Pages 배포)
-// ------------------------------------------------------------
-// publicDir 는 ./static (패스스루 자산 — CSS·JS·폰트·이미지·_headers).
+// publicDir(public/)·outDir(dist/)는 Astro 기본값 사용.
 export default defineConfig({
   site: 'https://pifl-labs.com',
   output: 'static',
-  publicDir: './static',
-  outDir: './dist',
   trailingSlash: 'ignore',
   // 'directory': 언어 홈페이지(/ko/ /en/ /ja/)를 슬래시 URL로 보존.
   // 레거시 legal URL(/terms)은 CF Pages 가 /terms/ 로 308 정규화(무해).

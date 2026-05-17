@@ -20,7 +20,7 @@ src/
   components/              # Nav.astro / Footer.astro
   i18n/ui.ts               # nav·footer chrome 다국어 사전
 functions/_middleware.ts   # CF Pages Function — Accept-Language i18n 302
-static/                    # 패스스루 자산 (publicDir) — CSS·JS·폰트·이미지·_headers·_redirects·robots
+public/                    # 패스스루 자산 (publicDir) — CSS·JS·폰트·이미지·_headers·_redirects·robots
 astro.config.mjs           # output static, i18n(en/ko/ja), build format directory
 ```
 
@@ -29,14 +29,14 @@ astro.config.mjs           # output static, i18n(en/ko/ja), build format directo
 - **Astro static build**: `npm run build` → `dist/`. CF Pages가 git push 시 자동 빌드·배포.
 - **공통 레이아웃**: `BaseLayout` + `Nav`/`Footer` 컴포넌트. 페이지 본문만 각 `.astro`가 보유.
 - **i18n**: 루트 `/`는 `functions/_middleware.ts`가 `Accept-Language`·쿠키 감지 → `/ko//en//ja` 302.
-  미들웨어 미실행 환경은 `static/lang-detect.js`가 클라이언트 폴백. x-default = `/ko/`.
-- **CSP**: `static/_headers`에 정의. `script-src 'self'` — 인라인 JS 금지. 외부 스크립트(`/theme-init.js`,
+  미들웨어 미실행 환경은 `public/lang-detect.js`가 클라이언트 폴백. x-default = `/ko/`.
+- **CSP**: `public/_headers`에 정의. `script-src 'self'` — 인라인 JS 금지. 외부 스크립트(`/theme-init.js`,
   `/script.js`, `/lang-detect.js`)만 사용.
 - **테마·글자크기**: `<html data-theme>`/`data-type-scale` + `theme-init.js`(pre-paint) + `colors_and_type.css`
   토큰. 라이트모드는 `:root[data-theme="light"]` 오버라이드.
 - **이메일 난독화**: 평문 `mailto:` 금지. `data-email-user`/`data-email-domain` + `script.js` 런타임 조립.
 - **이미지**: `<picture>` WebP + PNG fallback, `width`/`height` 명시.
-- **CSS SSOT**: `static/colors_and_type.css`(토큰) + `styles-stickerbook.css` + `styles.css`(legal).
+- **CSS SSOT**: `public/colors_and_type.css`(토큰) + `styles-stickerbook.css` + `styles.css`(legal).
 
 ## Development Commands
 
