@@ -103,7 +103,9 @@ body::before {
 }
 
 /* ========== HERO ========== */
-.hero { position:relative; padding: 4rem 0 6rem; min-height: 88vh; display:flex; align-items:center; }
+/* overflow-x: clip — 회전하는 .halo 장식 글로우의 회전 AABB 가 좁은 뷰포트를
+   넘쳐 가로 스크롤을 만들던 버그 차단 (데스크탑은 여유 공간이라 no-op). */
+.hero { position:relative; padding: 4rem 0 6rem; min-height: 88vh; display:flex; align-items:center; overflow-x: clip; }
 .hero-grid {
   display:grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items:center; width:100%;
 }
@@ -904,6 +906,9 @@ h1.hero-title .strike {
   .dispatch-art { width: 92px; height: 92px; }
   .slot-role { font-size: 1.3rem; }
   .slot-desc { font-size: .85rem; }
+  /* min-height(380) + aspect-ratio 1/1 이 좁은 폭에서 너비를 380 으로 강제해
+     히어로가 뷰포트를 넘치던 버그 — 폭이 높이를 주도하도록 min-height 해제 */
+  .hero-stage { min-height: 0; }
 }
 
 /* ========== entrance animations ========== */
