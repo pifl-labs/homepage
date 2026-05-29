@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { apps, storeLabels } from '../data/apps';
+import { localeBase, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang; slug: string }
+const { lang, slug } = Astro.props;
+
+const app = apps[slug];
+if (!app) throw new Error(`Unknown app slug: ${slug}`);
+const c = app.content[lang];
+const sl = storeLabels[lang];
+const base = localeBase(lang);
+
+// 경로 — 영어 앱 페이지도 물리적으로 /en/apps/ 에 빌드되므로 항상 /{lang} prefix.
+const path = `/apps/${app.slug}/`;
+const shotBase = `/assets/apps/${app.slug}/${lang}`;
+const iconSrc = `/assets/apps/${app.slug}/icon.webp`;
+const heroSrc = `${shotBase}/${app.heroShot}.webp`; // OG 이미지용
+
+// SEO
+const title = `${app.name} — ${c.tagline} | PiFl Labs`;
+const description = c.metaDesc ?? (c.lede.length > 155 ? c.lede.slice(0, 152) + '…' : c.lede);
+const canonical = `https://pifl-labs.com/${lang}${path}`;
+const alternates = [
+  { hreflang: 'en', href: `https://pifl-labs.com/en${path}` },
+  { hreflang: 'ko', href: `https://pifl-labs.com/ko${path}` },
+  { hreflang: 'ja', href: `https://pifl-labs.com/ja${path}` },
+  { hreflang: 'x-default', href: `https://pifl-labs.com/ko${path}` },
+];
+
+const backLabel = lang === 'ko' ? '모든 앱 보기' : lang === 'ja' ? 'すべてのアプリ' : 'All apps';
+const homeHref = `/${lang}/#apps`;
+
+// SoftwareApplication 구조화 데이터 — 미출시(soon) 앱엔 offers/OS 미출력 (구조화 데이터 정확성)
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: app.name,
+  applicationCategory: 'MobileApplication',
+  description: c.lede,
+  ...(app.status === 'live'
+    ? {
+        operatingSystem: 'iOS, Android',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        ...(app.stores.ios ? { downloadUrl: app.stores.ios } : {}),
+      }
+    : {}),
+};
+---
+<BaseLayout
+  lang={lang}
+  title={title}
+  description={description}
+  canonical={canonical}
+  alternates={alternates}
+  ogImage={`https://pifl-labs.com${heroSrc}`}
+  extraCss={['/styles-app-landing.css']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <main class="app-page">
+    <!-- HERO — 슬로건 강조형 (스크린샷은 아래 쇼케이스가 담당) -->
+    <section class="app-hero">
+      <div class="app-hero-halo" aria-hidden="true"></div>
+      <div class="container">
+        <div class="app-hero-inner">
+          <div class="app-id">
+            <img class="app-id-icon" src={iconSrc} alt={`${app.name} 아이콘`} width="72" height="72" fetchpriority="high" />
+            <div class="app-id-meta">
+              <span class="app-id-name">{app.name}</span>
+              <span class="app-id-cat">{app.category[lang]}</span>
+            </div>
+          </div>
+
+          {app.status === 'soon' && <div class="app-soon-pill">{sl.soon}</div>}
+
+          <h1 class="app-hero-title"><span class="gradient">{c.tagline}</span></h1>
+          <p class="app-hero-lede">{c.lede}</p>
+
+          <div class="app-stores">
+            {app.status === 'live' ? (
+              <>
+                {app.stores.ios && (
+                  <a class="store-badge" href={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
+                    <i class="fab fa-apple" aria-hidden="true"></i>
+                    <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
+                  </a>
+                )}
+                {app.stores.android && (
+                  <a class="store-badge" href={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
+                    <i class="fab fa-google-play" aria-hidden="true"></i>
+                    <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
+                  </a>
+                )}
+              </>
+            ) : (
+              <>
+                <span class="store-badge store-badge--soon" role="text" aria-label={`${sl.ios} — ${sl.soon}`}><i class="fab fa-apple" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.ios}</span></span></span>
+                <span class="store-badge store-badge--soon" role="text" aria-label={`${sl.android} — ${sl.soon}`}><i class="fab fa-google-play" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.android}</span></span></span>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOT SHOWCASE -->
+    <section class="app-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">01 / {app.name}</div>
+          <h2 class="section-title">{c.shotsTitle}</h2>
+        </div>
+        <div class="app-shots-scroll">
+          {c.shots.map((s) => (
+            <figure class="app-shot">
+              <img class="app-shot-img" src={`${shotBase}/${s.file}.webp`} alt={`${app.name} — ${s.label}`} width="250" height="541" loading="lazy" />
+              <figcaption>
+                <div class="app-shot-label">{s.label}</div>
+                <div class="app-shot-desc">{s.desc}</div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE GRID -->
+    <section class="app-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">02 / {c.featuresTitle}</div>
+          <h2 class="section-title">{c.featuresTitle}</h2>
+        </div>
+        <div class="app-features">
+          {c.features.map((f) => (
+            <article class="app-feature">
+              <div class="app-feature-icon"><i class={`fas ${f.icon}`} aria-hidden="true"></i></div>
+              <h3>{f.title}</h3>
+              <p>{f.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="app-cta">
+      <div class="container">
+        <h2 class="app-cta-title">{c.ctaTitle}</h2>
+        <p class="app-cta-sub">{c.ctaSub}</p>
+        <div class="app-stores">
+          {app.status === 'live' ? (
+            <>
+              {app.stores.ios && (
+                <a class="store-badge" href={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
+                  <i class="fab fa-apple" aria-hidden="true"></i>
+                  <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
+                </a>
+              )}
+              {app.stores.android && (
+                <a class="store-badge" href={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
+                  <i class="fab fa-google-play" aria-hidden="true"></i>
+                  <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
+                </a>
+              )}
+            </>
+          ) : (
+            <>
+              <span class="store-badge store-badge--soon"><i class="fab fa-apple" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.ios}</span></span></span>
+              <span class="store-badge store-badge--soon"><i class="fab fa-google-play" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.android}</span></span></span>
+            </>
+          )}
+        </div>
+        <a class="app-back" href={homeHref}><i class="fas fa-arrow-left" aria-hidden="true"></i> {backLabel}</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
