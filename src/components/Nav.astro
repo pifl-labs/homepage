@@ -6,6 +6,11 @@ const { lang } = Astro.props;
 const t = ui[lang];
 const base = localeBase(lang); // '' | '/ko' | '/ja'
 const home = `${base}/`;
+
+// 언어 전환: 현재 경로를 유지한 채 lang prefix 만 교체 (홈으로 튕기지 않도록).
+// 모든 경로가 en/ko/ja 3언어 mirror 라 안전.
+const rest = Astro.url.pathname.replace(/^\/(en|ko|ja)(?=\/|$)/, '') || '/';
+const langHref = (l: Lang) => `/${l}${rest}`;
 ---
 <nav class="nav">
   <div class="nav-inner">
@@ -14,12 +19,13 @@ const home = `${base}/`;
       <b>PiFl Labs</b><sup>{t.co}</sup>
     </a>
     <div class="nav-links">
+      <a href={`${home}#apps`}>{t.navApps}</a>
       <a href={`${home}#crew`}>{t.navCrew}</a>
       <a href={`${home}#about`}>{t.navShip}</a>
       <a href={`${home}#log`}>{t.navLog}</a>
     </div>
     <div class="lang-pill">
-      <a class={lang === 'en' ? 'on' : undefined} href="/en/" hreflang="en">EN</a><a class={lang === 'ko' ? 'on' : undefined} href="/ko/" hreflang="ko">KO</a><a class={lang === 'ja' ? 'on' : undefined} href="/ja/" hreflang="ja">JA</a>
+      <a class={lang === 'en' ? 'on' : undefined} href={langHref('en')} hreflang="en">EN</a><a class={lang === 'ko' ? 'on' : undefined} href={langHref('ko')} hreflang="ko">KO</a><a class={lang === 'ja' ? 'on' : undefined} href={langHref('ja')} hreflang="ja">JA</a>
     </div>
     <a href={`${home}#log`} class="nav-cta">{t.navCta} <i class="fas fa-arrow-right nav-cta-arrow" aria-hidden="true"></i></a>
   </div>

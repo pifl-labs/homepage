@@ -4,6 +4,7 @@ export type Lang = 'en' | 'ko' | 'ja';
 
 export interface UiStrings {
   co: string;
+  navApps: string;
   navCrew: string;
   navShip: string;
   navLog: string;
@@ -30,7 +31,7 @@ export interface UiStrings {
 export const ui: Record<Lang, UiStrings> = {
   en: {
     co: 'CO., LTD.',
-    navCrew: 'Crew', navShip: 'Ship', navLog: 'Log', navCta: 'Read the log',
+    navApps: 'Apps', navCrew: 'Crew', navShip: 'Ship', navLog: 'Log', navCta: 'Read the log',
     footTagline: 'Code like a pirate. Fly like Flutter.',
     footDesc: 'A Flutter-based cross-platform studio. Sailing the digital seas with a very small, very opinionated parrot.',
     footNavigate: 'Navigate', footHome: 'Home', footContact: 'Contact',
@@ -41,7 +42,7 @@ export const ui: Record<Lang, UiStrings> = {
   },
   ko: {
     co: '주식회사',
-    navCrew: '크루', navShip: '배', navLog: '항해일지', navCta: '일지 읽기',
+    navApps: '앱', navCrew: '크루', navShip: '배', navLog: '항해일지', navCta: '일지 읽기',
     footTagline: '해적처럼 코딩, Flutter처럼 비상.',
     footDesc: 'Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.',
     footNavigate: '둘러보기', footHome: '홈', footContact: '연락처',
@@ -52,7 +53,7 @@ export const ui: Record<Lang, UiStrings> = {
   },
   ja: {
     co: '株式会社',
-    navCrew: 'クルー', navShip: '船', navLog: '航海日誌', navCta: '日誌を読む',
+    navApps: 'アプリ', navCrew: 'クルー', navShip: '船', navLog: '航海日誌', navCta: '日誌を読む',
     footTagline: '海賊のようにコード、Flutterのように飛ぶ。',
     footDesc: 'Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。',
     footNavigate: '案内', footHome: 'ホーム', footContact: '連絡先',
