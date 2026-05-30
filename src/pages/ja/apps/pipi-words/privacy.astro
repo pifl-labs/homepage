@@ -25,7 +25,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>第1条 (利用目的)</h2>
                 <ul>
                     <li><strong>アプリ機能の提供</strong>: 単語学習、進捗管理、統計、通知、ユーザー環境設定の保存</li>
-                    <li><strong>広告配信</strong>: Google AdMobによる広告表示および広告関連性の向上</li>
+                    <li><strong>広告配信</strong>: Google AdMobによる非パーソナライズ広告の表示</li>
                     <li><strong>アプリ内課金</strong>: プレミアム機能の購入処理および領収書検証</li>
                     <li><strong>アプリ改善</strong>: ストアのネイティブレビュープロンプトによるユーザーフィードバック収集</li>
                     <li><strong>カスタマーサポート</strong>: メールによるお問い合わせの受付および対応</li>
@@ -45,7 +45,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         <tr>
                             <td>広告識別子</td>
                             <td>広告ID(IDFA/AAID)、おおよその位置(国単位)、デバイス情報(OS、モデル、言語)</td>
-                            <td>Google AdMob SDK による自動収集(同意時)</td>
+                            <td>Google AdMob SDK による自動収集(非パーソナライズ広告)</td>
                         </tr>
                         <tr>
                             <td>アプリ内課金</td>
@@ -104,10 +104,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     </tbody>
                 </table>
 
-                <h2>第6条 (広告識別子およびトラッキング同意)</h2>
+                <h2>第6条 (広告)</h2>
                 <p>本アプリは Google AdMob を通じて広告を表示し、その過程で広告識別子(IDFA/AAID)を収集することがあります。</p>
                 <ul>
-                    <li><strong>iOS ユーザー</strong>: アプリの初回起動時に Apple の App Tracking Transparency (ATT) 同意ダイアログが表示される場合があります。<strong>拒否した場合は非パーソナライズ広告のみ</strong>表示されます。</li>
+                    <li><strong>iOS ユーザー</strong>: 本アプリは非パーソナライズ広告のみを表示し、トラッキング許可を要求しません(ATT ダイアログなし)。広告識別子をアプリやWebサイトをまたいだトラッキング目的で使用しません。</li>
                     <li><strong>Android ユーザー</strong>: デバイス設定 → Google → 広告 → 「広告 ID を削除」または「広告のカスタマイズをオプトアウト」から制御できます。</li>
                 </ul>
                 <p>Google AdMob のデータ処理についての詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご参照ください。</p>
@@ -116,7 +116,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>本アプリはサービス提供のため、以下の権限を要求することがあります。各権限は拒否可能ですが、関連機能の利用が制限される場合があります。</p>
                 <ul>
                     <li><strong>通知</strong>: 毎日の学習リマインダーおよび連続学習日数通知</li>
-                    <li><strong>App Tracking Transparency (iOS)</strong>: 広告関連性向上のためのトラッキング同意</li>
+                    
                     <li><strong>音声合成 (TTS)</strong>: デバイス内蔵の音声合成機能を使用して単語の発音を提供します。音声データは収集・送信されません。</li>
                 </ul>
 

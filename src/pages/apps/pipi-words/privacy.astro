@@ -25,7 +25,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <h2>1. Purpose of Processing</h2>
                 <ul>
                     <li><strong>App functionality</strong>: Vocabulary learning, progress tracking, statistics, notifications, and user preferences</li>
-                    <li><strong>Advertising</strong>: Ad serving and personalization via Google AdMob</li>
+                    <li><strong>Advertising</strong>: Ad serving via Google AdMob (non-personalized)</li>
                     <li><strong>In-app purchases</strong>: Premium feature purchases and receipt validation</li>
                     <li><strong>App improvement</strong>: Soliciting user reviews via native store prompts</li>
                     <li><strong>Customer support</strong>: Receiving and responding to email inquiries</li>
@@ -45,7 +45,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                         <tr>
                             <td>Advertising Identifier</td>
                             <td>Ad ID (IDFA/AAID), coarse location (country level), device info (OS, model, language)</td>
-                            <td>Automatic via Google AdMob SDK (with consent)</td>
+                            <td>Automatic via Google AdMob SDK (non-personalized ads)</td>
                         </tr>
                         <tr>
                             <td>In-App Purchases</td>
@@ -104,10 +104,10 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                     </tbody>
                 </table>
 
-                <h2>6. Advertising Identifier and Tracking Consent</h2>
+                <h2>6. Advertising</h2>
                 <p>The App displays advertisements via Google AdMob and may collect advertising identifiers (IDFA/AAID) for this purpose.</p>
                 <ul>
-                    <li><strong>iOS users</strong>: On first launch, you may see Apple's App Tracking Transparency (ATT) prompt to choose whether to allow tracking. <strong>If denied, only non-personalized ads will be shown.</strong></li>
+                    <li><strong>iOS users</strong>: The App shows only non-personalized ads and does not request tracking permission (no ATT prompt). The advertising identifier is not used to track you across apps or websites.</li>
                     <li><strong>Android users</strong>: You can opt out via Settings → Google → Ads → "Delete advertising ID" or "Opt out of ad personalization".</li>
                 </ul>
                 <p>For details on Google AdMob's data processing, see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
@@ -116,7 +116,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <p>The App may request the following permissions. Each can be denied, though doing so may limit related functionality.</p>
                 <ul>
                     <li><strong>Notifications</strong>: Daily study reminders and learning streak notifications</li>
-                    <li><strong>App Tracking Transparency (iOS)</strong>: Tracking consent for ad relevance</li>
+                    
                     <li><strong>Text-to-Speech</strong>: Uses the device's built-in speech synthesis to pronounce vocabulary. No audio data is collected or transmitted.</li>
                 </ul>
 
