@@ -19,7 +19,7 @@ const iconSrc = `/assets/apps/${app.slug}/icon.webp`;
 const heroSrc = `${shotBase}/${app.heroShot}.webp`; // OG 이미지용
 
 // SEO
-const title = `${app.name} — ${c.tagline} | PiFl Labs`;
+const title = `${app.name} — ${c.tagline.replace(/\n/g, ' ')} | PiFl Labs`;
 const description = c.metaDesc ?? (c.lede.length > 155 ? c.lede.slice(0, 152) + '…' : c.lede);
 const canonical = `https://pifl-labs.com/${lang}${path}`;
 const alternates = [
@@ -75,7 +75,7 @@ const jsonLd = {
 
           {app.status === 'soon' && <div class="app-soon-pill">{sl.soon}</div>}
 
-          <h1 class="app-hero-title"><span class="gradient">{c.tagline}</span></h1>
+          <h1 class="app-hero-title"><span class="gradient">{c.tagline.split('\n').map((line, i) => (<>{i > 0 && <br />}{line}</>))}</span></h1>
           <p class="app-hero-lede">{c.lede}</p>
 
           <div class="app-stores">

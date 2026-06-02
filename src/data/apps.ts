@@ -205,5 +205,155 @@ const words: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-words': words };
-export const appList: AppMeta[] = [focus, words];
+const dday: AppMeta = {
+  slug: 'pipi-dday',
+  name: 'PiPi D-Day',
+  status: 'soon',
+  category: { ko: '생산성 · 디데이', ja: '生産性 · カウントダウン', en: 'Productivity · Countdown' },
+  stores: {},
+  heroShot: 'home',
+  content: {
+    ko: {
+      tagline: '모든 순간이\n목적지로 향하는 항해',
+      lede: '수능·결혼기념일·전역·생일까지, 소중한 날을 해적 항해처럼 카운트다운. D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀌고, 홈 화면 위젯으로 매일 확인합니다.',
+      shotsTitle: '남은 날이 항해가 되는 순간',
+      featuresTitle: '왜 PiPi D-Day 인가',
+      ctaTitle: '곧 항해를 시작합니다',
+      ctaSub: 'App Store · Google Play 출시 준비 중.',
+      shots: [
+        { file: 'home',        label: '모든 D-Day를 한눈에',  desc: '수능·기념일·전역까지, 소중한 날을 홈에서 바로 확인.' },
+        { file: 'detail',      label: 'PiPi가 6단계로 반응',   desc: '남은 날에 따라 표정이 바뀌는 항해형 카운트다운 상세.' },
+        { file: 'widget_skin', label: '홈 화면 위젯 스킨 6종', desc: '기본 항해부터 보물섬·폭풍우까지 위젯을 골라요.' },
+        { file: 'form',        label: '어떤 날이든 등록',      desc: '카테고리 8종·색상 8가지, 카운트다운·업 모두 지원.' },
+        { file: 'onboarding',  label: 'PiPi와 함께 출항',      desc: 'PiPi가 당신의 모든 항해를 함께 카운트다운합니다.' },
+      ],
+      features: [
+        { icon: 'fa-face-smile',       title: 'PiPi의 6단계 리액션', desc: 'D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀝니다.' },
+        { icon: 'fa-table-cells-large', title: '홈 화면 위젯',        desc: 'iOS·Android 위젯과 스킨 6종으로 남은 날을 항상 곁에.' },
+        { icon: 'fa-bell',             title: '마일스톤 알림',       desc: 'D-100·30·7·1·D-Day마다 PiPi의 해적 메시지로 알립니다.' },
+        { icon: 'fa-wifi',             title: '100% 오프라인',       desc: '서버도 계정도 없이, 모든 기록은 기기 안에.' },
+      ],
+    },
+    ja: {
+      tagline: 'すべての瞬間は、\n目的地へ向かう航海',
+      lede: '受験・結婚記念日・誕生日まで、大切な日を海賊の航海としてカウントダウン。D-100からD-DayまでPiPiの表情が6段階で変化し、ホーム画面ウィジェットで毎日確認できます。',
+      shotsTitle: '残り日数が航海になる瞬間',
+      featuresTitle: 'PiPi D-Day を選ぶ理由',
+      ctaTitle: 'まもなく航海へ',
+      ctaSub: 'App Store · Google Play で公開準備中。',
+      shots: [
+        { file: 'home',        label: 'すべてのDデイをひと目で', desc: '受験・記念日・誕生日まで、大切な日をホームですぐ。' },
+        { file: 'detail',      label: 'PiPiが6段階でリアクション', desc: '残り日数で表情が変わる、航海型カウントダウンの詳細。' },
+        { file: 'widget_skin', label: 'ホーム画面ウィジェット6種', desc: 'スタンダード航海から宝の島・嵐の海まで選べる。' },
+        { file: 'form',        label: 'どんな日も登録',          desc: 'カテゴリー8種・色8色、カウントダウンもアップも。' },
+        { file: 'onboarding',  label: 'PiPiと一緒に出航',        desc: 'PiPiがあなたのすべての航海を一緒にカウントダウン。' },
+      ],
+      features: [
+        { icon: 'fa-face-smile',       title: 'PiPiの6段階リアクション', desc: 'D-100からD-DayまでPiPiの表情が6段階で変化します。' },
+        { icon: 'fa-table-cells-large', title: 'ホーム画面ウィジェット',  desc: 'iOS·Androidウィジェットとスキン6種で残り日数をいつも。' },
+        { icon: 'fa-bell',             title: 'マイルストーン通知',     desc: 'D-100·30·7·1·D-Dayごとに PiPiの海賊メッセージでお知らせ。' },
+        { icon: 'fa-wifi',             title: '100% オフライン',       desc: 'サーバーもアカウントも不要、記録はすべて端末内に。' },
+      ],
+    },
+    en: {
+      tagline: 'Every moment is a voyage toward your destination.',
+      lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
+      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — fully offline, no account. Coming to iOS & Android.',
+      shotsTitle: 'The moment days become a voyage',
+      featuresTitle: 'Why PiPi D-Day',
+      ctaTitle: 'A voyage is setting out soon',
+      ctaSub: 'Coming to the App Store & Google Play.',
+      shots: [
+        { file: 'home',        label: 'Every D-Day at a glance',  desc: 'Exams, anniversaries, birthdays — see your big days on the home.' },
+        { file: 'detail',      label: 'PiPi reacts in 6 stages',  desc: 'A voyage-style countdown that changes as your day nears.' },
+        { file: 'widget_skin', label: '6 home screen widget skins', desc: 'From Classic Voyage to Treasure Island and Stormy Seas.' },
+        { file: 'form',        label: 'Add any milestone',        desc: '8 categories, 8 colors, both countdown and count-up.' },
+        { file: 'onboarding',  label: 'Set sail with PiPi',       desc: 'PiPi counts down every one of your voyages with you.' },
+      ],
+      features: [
+        { icon: 'fa-face-smile',       title: "PiPi's 6 reactions",  desc: "PiPi's expression shifts through 6 stages from D-100 to D-Day." },
+        { icon: 'fa-table-cells-large', title: 'Home screen widget', desc: 'iOS & Android widgets with 6 skins keep the count always near.' },
+        { icon: 'fa-bell',             title: 'Milestone alerts',    desc: 'Pirate messages from PiPi at D-100, 30, 7, 1 and D-Day.' },
+        { icon: 'fa-wifi',             title: '100% offline',        desc: 'No server, no account — every record stays on device.' },
+      ],
+    },
+  },
+};
+
+const log: AppMeta = {
+  slug: 'pipi-log',
+  name: 'PiPi Log',
+  status: 'soon',
+  category: { ko: '라이프스타일 · 감정 일기', ja: 'ライフスタイル · 気分日記', en: 'Lifestyle · Mood journal' },
+  stores: {},
+  heroShot: 'home',
+  content: {
+    ko: {
+      tagline: '하루의 마음을\n바다 날씨로 남기다',
+      lede: '매일의 기분을 9단계 바다 날씨로 기록하면 PiPi가 그 마음에 반응합니다. 선장의 질문으로 하루를 돌아보고, 한 달의 항해를 지도 한 장으로. 계정도 서버도 없이, 모든 기록은 기기 안에.',
+      shotsTitle: '마음을 적는 항해일지',
+      featuresTitle: '왜 PiPi Log 인가',
+      ctaTitle: '곧 항해를 시작합니다',
+      ctaSub: 'App Store · Google Play 출시 준비 중.',
+      shots: [
+        { file: 'home',        label: '오늘의 바다 날씨로 기록',  desc: '기분을 9단계 바다 날씨로 고르고 PiPi와 하루를 적어요.' },
+        { file: 'calendar',    label: '한 달을 바다 날씨 달력으로', desc: '날짜마다 그날의 날씨가 찍혀 한 달이 한눈에.' },
+        { file: 'analytics',   label: '마음의 흐름을 한눈에',     desc: '주간 무드 변화와 감정 분포를 차트로 돌아봐요.' },
+        { file: 'monthly-map', label: '한 달의 항해를 한 장으로', desc: '이 달의 바다 날씨 지도를 이미지로 공유합니다.' },
+        { file: 'collection',  label: '지난 일지 다시 꺼내 보기', desc: '날짜·즐겨찾기로 지난 항해 기록을 다시 읽어요.' },
+      ],
+      features: [
+        { icon: 'fa-cloud-sun', title: '9단계 바다 날씨',   desc: '무지개 바다부터 태풍까지, 기분을 날씨로 기록.' },
+        { icon: 'fa-feather',   title: 'PiPi가 마음에 반응', desc: '기록한 기분에 PiPi가 항해 메시지로 답합니다.' },
+        { icon: 'fa-pen-nib',   title: '선장의 질문',       desc: '매일 다른 질문으로 하루를 가볍게 돌아봐요.' },
+        { icon: 'fa-lock',      title: '잠금 + 100% 오프라인', desc: '생체인증 잠금, 계정·서버 없이 기기에만 저장.' },
+      ],
+    },
+    ja: {
+      tagline: '今日の心を、\n海の天気で残す',
+      lede: '毎日の気分を9段階の海の天気で記録すると、PiPiがその心に反応します。船長の質問で一日を振り返り、ひと月の航海を一枚の地図に。アカウントもサーバーもなく、すべて端末の中に。',
+      shotsTitle: '心を綴る航海日誌',
+      featuresTitle: 'PiPi Log を選ぶ理由',
+      ctaTitle: 'まもなく航海へ',
+      ctaSub: 'App Store · Google Play で公開準備中。',
+      shots: [
+        { file: 'home',        label: '今日の海の天気で記録',     desc: '気分を9段階の海の天気で選び、PiPiと一日を綴る。' },
+        { file: 'calendar',    label: 'ひと月を海の天気カレンダーで', desc: '日ごとの天気が並び、ひと月がひと目で。' },
+        { file: 'analytics',   label: '心の流れをひと目で',       desc: '週間の気分変化と感情分布をチャートで振り返る。' },
+        { file: 'monthly-map', label: 'ひと月の航海を一枚に',     desc: '今月の海の天気マップを画像で共有。' },
+        { file: 'collection',  label: '過去の日誌をもう一度',     desc: '日付やお気に入りで過去の記録を読み返す。' },
+      ],
+      features: [
+        { icon: 'fa-cloud-sun', title: '9段階の海の天気',   desc: '虹の海から台風まで、気分を天気で記録。' },
+        { icon: 'fa-feather',   title: 'PiPiが心に反応',    desc: '記録した気分にPiPiが航海メッセージで応える。' },
+        { icon: 'fa-pen-nib',   title: '船長の質問',        desc: '毎日違う質問で一日を軽く振り返る。' },
+        { icon: 'fa-lock',      title: 'ロック + 100%オフライン', desc: '生体認証ロック、アカウント・サーバーなしで端末内に保存。' },
+      ],
+    },
+    en: {
+      tagline: 'Log your heart\nas sea weather.',
+      lede: "Record each day's mood as one of 9 sea-weathers and PiPi reacts to how you feel. Reflect with the captain's prompt, then turn a month's voyage into a single map. No account, no server — everything stays on your device.",
+      metaDesc: "A voyage-log mood journal: record each day's mood as one of 9 sea-weathers and PiPi reacts. Charts, a shareable monthly map, biometric lock — fully offline. Coming to iOS & Android.",
+      shotsTitle: 'A logbook for your heart',
+      featuresTitle: 'Why PiPi Log',
+      ctaTitle: 'A voyage is setting out soon',
+      ctaSub: 'Coming to the App Store & Google Play.',
+      shots: [
+        { file: 'home',        label: "Log today's sea weather",   desc: 'Pick your mood from 9 sea-weathers and write the day with PiPi.' },
+        { file: 'calendar',    label: 'A month as a weather calendar', desc: "Each day's weather lands on the calendar at a glance." },
+        { file: 'analytics',   label: 'Your mood trend at a glance', desc: 'Review weekly mood shifts and emotion distribution in charts.' },
+        { file: 'monthly-map', label: 'A month in one shareable map', desc: "Share this month's sea-weather map as an image." },
+        { file: 'collection',  label: 'Revisit past entries',      desc: 'Reopen past logs by date or favorites.' },
+      ],
+      features: [
+        { icon: 'fa-cloud-sun', title: '9 sea-weathers',    desc: 'From rainbow seas to typhoons — log your mood as weather.' },
+        { icon: 'fa-feather',   title: 'PiPi reacts',        desc: 'PiPi answers your logged mood with a pirate message.' },
+        { icon: 'fa-pen-nib',   title: "The captain's prompt", desc: 'A fresh question each day to reflect, lightly.' },
+        { icon: 'fa-lock',      title: 'Locked & 100% offline', desc: 'Biometric lock, no account or server — stored on device.' },
+      ],
+    },
+  },
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log };
+export const appList: AppMeta[] = [focus, words, dday, log];

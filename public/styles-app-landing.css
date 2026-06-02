@@ -53,6 +53,11 @@
      (예: "Cross the sea," / "connect words."). 미지원 브라우저는 일반 wrap. */
   text-wrap: balance;
 }
+/* CJK 단어 중간 끊김 방지 (영어는 공백 기준이라 무관).
+   ko: 어절(띄어쓰기) 단위 보존 — "목적지"가 "목적/지"로 깨지지 않게.
+   ja: 문절 단위 줄바꿈 — "瞬間"이 "瞬/間"으로 깨지지 않게 (auto-phrase 지원 브라우저). */
+:lang(ko) .app-hero-title { word-break: keep-all; }
+:lang(ja) .app-hero-title { word-break: auto-phrase; }
 .app-hero-title .gradient {
   background: var(--gradient-brand);
   -webkit-background-clip: text; background-clip: text; color: transparent;
