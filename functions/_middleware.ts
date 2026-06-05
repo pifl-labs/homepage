@@ -37,7 +37,10 @@ function readCookie(cookieHeader: string | null, name: string): string | null {
   return match ? decodeURIComponent(match[1]) : null;
 }
 
-const STATIC_PATH_PREFIXES = ['/_astro/', '/fonts/', '/assets/'];
+// `/.well-known/` 은 모바일 딥링크 검증 파일(AASA·assetlinks.json) 경로.
+// AASA는 확장자가 없어 STATIC_FILE_RE에 안 걸리므로 명시적으로 통과시켜야 한다.
+// (i18n 302 리다이렉트가 끼면 Apple CDN이 AASA를 거부한다.)
+const STATIC_PATH_PREFIXES = ['/_astro/', '/fonts/', '/assets/', '/.well-known/'];
 const STATIC_FILE_RE = /\.(woff2?|ttf|otf|png|webp|jpe?g|svg|gif|ico|css|js|mjs|map|xml|txt|json|webmanifest)$/i;
 
 type PagesContext = {

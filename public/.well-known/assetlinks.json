@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pifl.pipi.dday",
+      "sha256_cert_fingerprints": [
+        "06:43:14:99:F8:D6:63:20:8D:18:E1:17:24:B0:25:70:51:03:CB:E7:FF:9E:8A:CC:1D:7C:3D:EB:E5:FF:67:6D"
+      ]
+    }
+  }
+]

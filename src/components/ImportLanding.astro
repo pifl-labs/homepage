@@ -1,0 +1,344 @@
+---
+// PiPi D-Day "선원 초대" 딥링크 웹 랜딩.
+// Universal Link / App Link(https://pifl-labs.com/apps/pipi-dday/import?...)가
+// 앱 미설치 기기에서 열렸을 때의 폴백 페이지. 공유받은 D-Day를 미리보기로
+// 보여주고 → 앱 열기/설치를 유도한다. (설치 후 같은 링크를 다시 누르면 앱이
+// 열려 D-Day가 추가되는 $0 "재탭" 모델.)
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const BASE = 'https://pifl-labs.com';
+const PATH = '/apps/pipi-dday/import/';
+
+const canonical = `${BASE}/${lang}${PATH}`;
+const alternates = [
+  { hreflang: 'en', href: `${BASE}/en${PATH}` },
+  { hreflang: 'ko', href: `${BASE}/ko${PATH}` },
+  { hreflang: 'ja', href: `${BASE}/ja${PATH}` },
+  { hreflang: 'x-default', href: `${BASE}/ko${PATH}` },
+];
+
+type Copy = {
+  title: string;
+  desc: string;
+  eyebrow: string;
+  heading: string;
+  sub: string;
+  cardLoading: string;
+  cardInvalidTitle: string;
+  cardInvalidBody: string;
+  ddLabelFuture: string; // 남은 항해
+  ddLabelToday: string; // 오늘 도착
+  ddLabelPast: string; // 지난 항해
+  openApp: string;
+  getApp: string;
+  playStore: string;
+  appStore: string;
+  howTitle: string;
+  howBody: string;
+};
+
+const COPY: Record<Lang, Copy> = {
+  ko: {
+    title: '선원 초대장 — PiPi D-Day',
+    desc: '친구가 PiPi D-Day 항해에 당신을 초대했어요. 앱에서 열면 같은 D-Day가 추가됩니다.',
+    eyebrow: '🏴‍☠️ 선원 초대장',
+    heading: '함께 항해할래요?',
+    sub: '친구가 공유한 카운트다운이에요. PiPi D-Day 앱에서 열면 같은 D-Day가 추가돼요.',
+    cardLoading: '초대장을 펼치는 중…',
+    cardInvalidTitle: '초대장 정보가 올바르지 않아요',
+    cardInvalidBody: '링크가 손상됐거나 만료됐을 수 있어요. 친구에게 다시 공유해 달라고 해보세요.',
+    ddLabelFuture: '남은 항해',
+    ddLabelToday: '오늘 도착!',
+    ddLabelPast: '지난 항해',
+    openApp: '앱에서 열기',
+    getApp: '앱 설치하기',
+    playStore: 'Google Play',
+    appStore: 'App Store',
+    howTitle: '처음이신가요?',
+    howBody: '앱을 설치한 뒤 이 링크를 다시 누르면 같은 D-Day가 자동으로 추가돼요. 계정·로그인 없이 100% 무료입니다.',
+  },
+  en: {
+    title: 'Crew Invitation — PiPi D-Day',
+    desc: 'A friend invited you to a PiPi D-Day voyage. Open it in the app to add the same countdown.',
+    eyebrow: '🏴‍☠️ Crew Invitation',
+    heading: 'Join the voyage?',
+    sub: 'A friend shared this countdown. Open it in the PiPi D-Day app to add the same D-Day.',
+    cardLoading: 'Unrolling the invitation…',
+    cardInvalidTitle: 'This invitation looks invalid',
+    cardInvalidBody: 'The link may be broken or expired. Ask your friend to share it again.',
+    ddLabelFuture: 'days to go',
+    ddLabelToday: 'Arrives today!',
+    ddLabelPast: 'days since',
+    openApp: 'Open in app',
+    getApp: 'Get the app',
+    playStore: 'Google Play',
+    appStore: 'App Store',
+    howTitle: 'First time here?',
+    howBody: 'Install the app, then tap this link again — the same D-Day is added automatically. 100% free, no account.',
+  },
+  ja: {
+    title: 'クルー招待状 — PiPi D-Day',
+    desc: '友だちがPiPi D-Dayの航海に招待しました。アプリで開くと同じカウントダウンが追加されます。',
+    eyebrow: '🏴‍☠️ クルー招待状',
+    heading: '一緒に航海しませんか？',
+    sub: '友だちが共有したカウントダウンです。PiPi D-Dayアプリで開くと同じD-Dayが追加されます。',
+    cardLoading: '招待状を開いています…',
+    cardInvalidTitle: '招待状の情報が正しくありません',
+    cardInvalidBody: 'リンクが壊れているか期限切れの可能性があります。友だちにもう一度共有してもらってください。',
+    ddLabelFuture: '航海まで',
+    ddLabelToday: '本日到着！',
+    ddLabelPast: '航海から',
+    openApp: 'アプリで開く',
+    getApp: 'アプリを入手',
+    playStore: 'Google Play',
+    appStore: 'App Store',
+    howTitle: '初めてですか？',
+    howBody: 'アプリをインストールしてこのリンクをもう一度タップすると、同じD-Dayが自動で追加されます。アカウント不要・完全無料です。',
+  },
+};
+
+const t = COPY[lang];
+// 앱 정보 페이지(스토어 미출시 동안 배지 폴백 대상).
+const appInfoHref = `/${lang}/apps/pipi-dday/`;
+
+// 스토어 링크 — 출시 시점에 채우는 단일 지점.
+// Play URL 은 패키지명으로 결정적(출시 후 자동 동작). App Store 는 ASC 숫자 ID 발급 후 채운다.
+// APPSTORE_ID 가 빈 값이면 App Store 배지는 앱 정보 페이지로 폴백(깨진 링크 대신 의도된 폴백).
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday';
+const APPSTORE_ID = ''; // TODO(출시): App Store Connect 숫자 앱 ID 입력
+const appStoreHref = APPSTORE_ID ? `https://apps.apple.com/app/id${APPSTORE_ID}` : appInfoHref;
+---
+
+<BaseLayout
+  lang={lang}
+  title={t.title}
+  description={t.desc}
+  canonical={canonical}
+  alternates={alternates}
+  extraCss={["/styles.css"]}
+>
+  <main class="invite-page">
+    <div class="container invite-wrap">
+      <p class="invite-eyebrow">{t.eyebrow}</p>
+      <h1 class="invite-heading">{t.heading}</h1>
+      <p class="invite-sub">{t.sub}</p>
+
+      <!-- 미리보기 카드 — 값은 클라이언트 JS가 쿼리에서 채운다 -->
+      <article id="invite-card" class="invite-card" data-state="loading">
+        <div class="invite-card-loading">{t.cardLoading}</div>
+
+        <div class="invite-card-body" hidden>
+          <span id="invite-emoji" class="invite-emoji" aria-hidden="true">🏴‍☠️</span>
+          <h2 id="invite-title" class="invite-title"></h2>
+          <p id="invite-date" class="invite-date"></p>
+          <div class="invite-dday">
+            <span id="invite-dday-badge" class="invite-dday-badge">D-?</span>
+            <span id="invite-dday-label" class="invite-dday-label"></span>
+          </div>
+        </div>
+
+        <div class="invite-card-invalid" hidden>
+          <h2 class="invite-title">{t.cardInvalidTitle}</h2>
+          <p class="invite-date">{t.cardInvalidBody}</p>
+        </div>
+      </article>
+
+      <!-- CTA -->
+      <div class="invite-cta">
+        <a id="open-app" class="invite-btn invite-btn-primary" href={appInfoHref} role="button">
+          {t.openApp}
+        </a>
+        <div class="invite-stores">
+          <a
+            id="store-play"
+            class="invite-store"
+            href={PLAY_URL}
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-google-play" aria-hidden="true"></i> {t.playStore}
+          </a>
+          <!-- App Store: APPSTORE_ID 미발급 동안 앱 정보 페이지로 폴백(위 frontmatter 참조).
+               Smart App Banner meta 도 ID 확보 후 BaseLayout에 추가 예정. -->
+          <a id="store-apple" class="invite-store" href={appStoreHref}>
+            <i class="fab fa-apple" aria-hidden="true"></i> {t.appStore}
+          </a>
+        </div>
+      </div>
+
+      <section class="invite-how">
+        <h3>{t.howTitle}</h3>
+        <p>{t.howBody}</p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .invite-page {
+    min-height: 70vh;
+    padding: clamp(2rem, 6vw, 5rem) 0;
+    display: flex;
+    align-items: center;
+  }
+  .invite-wrap {
+    max-width: 560px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .invite-eyebrow {
+    font-family: var(--font-code, monospace);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--neon-teal, #2dd4bf);
+    margin: 0 0 0.75rem;
+  }
+  .invite-heading {
+    font-family: var(--font-display, serif);
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+    color: var(--text-primary, #f8fafc);
+  }
+  .invite-sub {
+    color: var(--text-secondary, #cbd5e1);
+    margin: 0 auto 2rem;
+    max-width: 42ch;
+    line-height: 1.6;
+  }
+
+  .invite-card {
+    background: var(--bg-card, #0f172a);
+    border: 1px solid var(--border-default, #1e293b);
+    border-radius: var(--radius-lg, 20px);
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    margin: 0 0 2rem;
+    box-shadow: var(--shadow-glow-md, 0 8px 40px rgba(0, 0, 0, 0.4));
+    /* --accent: 카테고리 색상으로 JS가 덮어씀 */
+    border-top: 4px solid var(--accent, var(--neon-teal, #2dd4bf));
+  }
+  .invite-card-loading {
+    color: var(--text-muted, #94a3b8);
+    font-family: var(--font-code, monospace);
+    padding: 1.5rem 0;
+  }
+  .invite-emoji {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .invite-title {
+    font-family: var(--font-display, serif);
+    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    margin: 0 0 0.5rem;
+    color: var(--text-primary, #f8fafc);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .invite-date {
+    color: var(--text-secondary, #cbd5e1);
+    margin: 0 0 1.25rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .invite-dday {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .invite-dday-badge {
+    font-family: var(--font-code, monospace);
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    font-weight: 700;
+    color: var(--accent, var(--neon-teal, #2dd4bf));
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .invite-dday-label {
+    font-size: 0.8rem;
+    color: var(--text-muted, #94a3b8);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .invite-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .invite-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 2rem;
+    border-radius: var(--radius-pill, 999px);
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    width: 100%;
+    max-width: 340px;
+    transition: transform var(--dur-fast, 0.15s) var(--ease, ease),
+      filter var(--dur-fast, 0.15s) var(--ease, ease);
+  }
+  .invite-btn-primary {
+    background: var(--gradient-cta, var(--accent-cta, #14b8a6));
+    color: #06121a;
+  }
+  .invite-btn-primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+  }
+  .invite-stores {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .invite-store {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0 1.1rem;
+    border-radius: var(--radius-pill, 999px);
+    border: 1px solid var(--border-strong, #334155);
+    color: var(--text-secondary, #cbd5e1);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .invite-store:hover {
+    border-color: var(--neon-teal, #2dd4bf);
+    color: var(--text-primary, #f8fafc);
+  }
+
+  .invite-how {
+    border-top: 1px solid var(--border-subtle, #1e293b);
+    padding-top: 1.5rem;
+    color: var(--text-muted, #94a3b8);
+  }
+  .invite-how h3 {
+    font-size: 1rem;
+    color: var(--text-secondary, #cbd5e1);
+    margin: 0 0 0.5rem;
+  }
+  .invite-how p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 46ch;
+    margin-inline: auto;
+  }
+</style>
+
+<!-- CSP(script-src self) 준수: 인라인 금지 → public/invite.js 동일출처 외부 스크립트 -->
+<script is:inline src="/invite.js" defer></script>

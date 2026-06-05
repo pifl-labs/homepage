@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["2MZNLNQSP8.com.pifl.pipi.dday"],
+        "components": [
+          {
+            "/": "/apps/pipi-dday/import*",
+            "comment": "PiPi D-Day 선원 초대 import 딥링크"
+          }
+        ]
+      }
+    ]
+  }
+}

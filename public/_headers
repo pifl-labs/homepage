@@ -22,6 +22,16 @@
 /*.js
   Cache-Control: public, max-age=3600, must-revalidate
 
+# 모바일 딥링크 검증 파일 (Universal Links / App Links)
+# AASA는 확장자가 없어 기본 Content-Type이 application/json이 아님 → Apple CDN이 거부.
+# 반드시 application/json으로 강제하고 리다이렉트가 끼지 않게 한다(미들웨어 우회와 한 쌍).
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
+
 # SEO 자산 — 짧은 캐시
 /robots.txt
   Cache-Control: public, max-age=3600

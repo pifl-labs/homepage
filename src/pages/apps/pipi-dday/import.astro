@@ -1,0 +1,8 @@
+---
+// 로케일 prefix 없는 canonical 경로. 사람이 브라우저로 접근하면 미들웨어가
+// 언어별 경로로 302 리다이렉트하지만, 직접 접근/크롤러 대비해 ko로 렌더한다.
+// (앱 설치 기기의 Universal/App Link 매칭은 이 경로에서 일어나며 페이지 렌더 없이
+//  앱이 열린다 — 이 HTML 은 미설치 폴백용.)
+import ImportLanding from '../../../components/ImportLanding.astro';
+---
+<ImportLanding lang="ko" />
