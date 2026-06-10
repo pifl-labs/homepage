@@ -133,9 +133,12 @@ const focus: AppMeta = {
 const words: AppMeta = {
   slug: 'pipi-words',
   name: 'PiPi Words',
-  status: 'soon',
+  status: 'live',
   category: { ko: '교육 · 어휘', ja: '教育 · 語彙', en: 'Education · Vocabulary' },
-  stores: {},
+  stores: {
+    ios: 'https://apps.apple.com/app/pipi-words-jlpt-topik-vocab/id6770267735',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
+  },
   heroShot: 'home',
   content: {
     ko: {
@@ -143,8 +146,8 @@ const words: AppMeta = {
       lede: 'JLPT N5~N1과 TOPIK 1~6급 어휘를 시험 출제 유형 그대로. SM-2 간격 반복으로 외운 단어는 오래 남고, 인터넷 없이 어디서나. 한국인은 일본어를, 일본인은 한국어를 — 한 앱에서.',
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
       featuresTitle: '왜 PiPi Words 인가',
-      ctaTitle: '곧 항해를 시작합니다',
-      ctaSub: 'App Store · Google Play 출시 준비 중.',
+      ctaTitle: '단어 항해를 시작하세요',
+      ctaSub: 'iOS · Android에서 무료로.',
       shots: [
         { file: 'home',         label: '오늘의 학습 한눈에', desc: '오늘 외울 단어와 연속 학습일을 홈에서 바로.' },
         { file: 'study',        label: '레벨별 덱 선택',     desc: 'JLPT·TOPIK 레벨을 골라 단어 항해를 시작.' },
@@ -164,8 +167,8 @@ const words: AppMeta = {
       lede: 'TOPIK 1~6級とJLPT N5~N1の語彙を、出題形式そのままで。SM-2間隔反復で覚えた単語は長く記憶に残り、ネットなしでどこでも。日本人は韓国語を、韓国人は日本語を — 一つのアプリで。',
       shotsTitle: '航海のように積み上がる語彙学習',
       featuresTitle: 'PiPi Words を選ぶ理由',
-      ctaTitle: 'まもなく航海へ',
-      ctaSub: 'App Store · Google Play で公開準備中。',
+      ctaTitle: '単語の航海を始めよう',
+      ctaSub: 'iOS · Android で無料。',
       shots: [
         { file: 'home',         label: '今日の学習をひと目で', desc: '今日覚える単語と連続学習日をホームですぐに。' },
         { file: 'study',        label: 'レベル別デッキ選択',   desc: 'JLPT·TOPIKのレベルを選んで単語の航海へ。' },
@@ -186,8 +189,8 @@ const words: AppMeta = {
       metaDesc: 'Learn JLPT N5–N1 and TOPIK 1–6 vocabulary the way exams test it. SM-2 spaced repetition, two-way Korean–Japanese, works fully offline.',
       shotsTitle: 'Vocabulary that builds like a voyage',
       featuresTitle: 'Why PiPi Words',
-      ctaTitle: 'A voyage is setting out soon',
-      ctaSub: 'Coming to the App Store & Google Play.',
+      ctaTitle: 'Set sail on your word voyage',
+      ctaSub: 'Free on iOS & Android.',
       shots: [
         { file: 'home',         label: "Today's study at a glance", desc: "See today's words and your streak right on the home." },
         { file: 'study',        label: 'Pick a level deck',         desc: 'Choose a JLPT or TOPIK level and start the voyage.' },
