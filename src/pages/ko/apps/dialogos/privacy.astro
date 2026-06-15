@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="ko"
+  title={"Dialogos 개인정보처리방침 - PiFl Labs"}
+  description={"PiFl Labs Dialogos 앱 개인정보처리방침 — 계정·광고·추적 없는 스토아 철학 대화 앱"}
+  canonical="https://pifl-labs.com/ko/apps/dialogos/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/dialogos/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/dialogos/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/ko/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Dialogos 소개로 돌아가기</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Dialogos 개인정보처리방침</span></h1>
+            <p class="legal-date">시행일: 2026년 6월 14일 · 제공자: PiFl Labs</p>
+        </div>
+    </section>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>Dialogos(이하 "앱")는 PiFl Labs가 제공하는 스토아 철학 대화 앱입니다. 당사는 가능한 한 적게 수집하도록 Dialogos를 설계했습니다. <strong>계정·광고·분석 SDK·앱 간/사이트 간 추적이 일절 없습니다.</strong></p>
+
+                <h2>1. 처리하는 정보</h2>
+                <ul>
+                    <li><strong>익명 기기 식별자</strong>: 첫 실행 시 생성되는 임의 토큰으로, 기기에 저장되며 <strong>일일 무료 대화 한도</strong>를 공정하게 적용하기 위해서만 요청에 함께 전송됩니다. 이름·이메일·전화번호·광고식별자가 아니며 신원과 연결되지 않습니다.</li>
+                    <li><strong>대화 내용</strong>: 입력하신 메시지와 진행 중인 대화는 암호화된 연결로 백엔드(Cloudflare Worker)와 AI 제공자(<strong>Anthropic</strong>)에 전송되어 <strong>철학자의 답변 생성에만</strong> 사용됩니다. <strong>대화 내용은 당사 서버에 저장하지 않으며</strong>, 서버에는 익명 일일 카운터만 남습니다. Anthropic은 상용 약관에 따라 처리하며 API 입력을 모델 학습에 <strong>사용하지 않습니다.</strong></li>
+                    <li><strong>구독 상태</strong>: Dialogos Pro 구매 시 결제는 Apple 또는 Google이 처리하며, 당사는 구독 활성/만료 여부만 전달받습니다. <strong>결제카드·청구정보는 받지 않습니다.</strong></li>
+                    <li><strong>기기 내 설정</strong>: 언어·테마·온보딩 상태·일일 카운터는 기기에만 저장됩니다.</li>
+                </ul>
+
+                <h2>2. 수집하지 않는 것</h2>
+                <p>이름·이메일·계정·위치·연락처·사진·건강/생체 정보 없음. 분석/광고 SDK 없음. 광고식별자(IDFA/GAID) 없음. 다른 앱·웹사이트에 걸친 추적 없음. <strong>앱은 광고를 표시하지 않으며, 추적하지 않으므로 App Tracking Transparency(ATT) 동의창도 표시하지 않습니다.</strong></p>
+
+                <h2>3. 이용 목적</h2>
+                <p>오직 (a) 요청하신 대화를 생성하고 (b) 공정한 일일 사용량 제한을 적용하기 위해서만 사용합니다. 어떠한 데이터도 판매·임대하지 않으며 광고에 이용하지 않습니다.</p>
+
+                <h2>4. 처리위탁 / 공유</h2>
+                <ul>
+                    <li><strong>Anthropic</strong> (답변 생성을 위한 메시지 AI 처리) — 수탁자</li>
+                    <li><strong>Cloudflare</strong> (프록시/백엔드 호스팅) — 수탁자</li>
+                    <li><strong>Apple / Google</strong> (구독 구매 처리) — 결제에 관한 독립 관리자</li>
+                </ul>
+                <p>앱 운영에 필요한 범위에서만 위 제공자와 데이터를 공유하며, 광고업체·데이터 브로커와는 공유하지 않습니다.</p>
+
+                <h2>5. 보관</h2>
+                <p>대화 내용은 당사 서버에 보관하지 않습니다. 익명 일일 카운터는 약 2일 내 자동 만료됩니다. 기기 내 설정은 앱을 삭제할 때까지 유지되며, 삭제 시 모든 로컬 데이터가 함께 제거됩니다.</p>
+
+                <h2>6. 보안</h2>
+                <p>모든 통신은 전송 구간 암호화(HTTPS/TLS)를 사용합니다. AI 제공자의 API 키는 서버에만 보관하며 앱에 포함하지 않습니다.</p>
+
+                <h2>7. 아동</h2>
+                <p>Dialogos는 만 13세(또는 거주국에서 요구하는 최소 연령) 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+
+                <h2>8. 정보주체의 선택과 권리</h2>
+                <p>당사는 이용자를 식별하는 정보를 보유하지 않으므로, 요청 시 "당신의" 데이터를 특정하기 어렵습니다. 앱을 삭제하면 언제든 모든 로컬 데이터를 지울 수 있습니다. 개인정보 관련 문의: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></p>
+
+                <h2>9. 국외 이전</h2>
+                <p>메시지는 제공자가 운영하는 서버(예: 미국)에서 처리될 수 있습니다. 앱을 사용함으로써 전송하시는 내용이 위와 같이 처리됨을 이해하시는 것으로 봅니다.</p>
+
+                <h2>10. 변경</h2>
+                <p>본 방침은 변경될 수 있으며, 변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다.</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>

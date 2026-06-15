@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="ja"
+  title={"Dialogos プライバシーポリシー - PiFl Labs"}
+  description={"PiFl Labs Dialogos アプリのプライバシーポリシー — アカウント・広告・トラッキングのないストア哲学の対話アプリ"}
+  canonical="https://pifl-labs.com/ja/apps/dialogos/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/dialogos/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/dialogos/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/ja/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Dialogos の紹介に戻る</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Dialogos プライバシーポリシー</span></h1>
+            <p class="legal-date">施行日: 2026年6月14日 · 提供者: PiFl Labs</p>
+        </div>
+    </section>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>Dialogos(以下「本アプリ」)は PiFl Labs が提供するストア哲学の対話アプリです。当社は可能な限り少なく収集するよう Dialogos を設計しています。<strong>アカウント・広告・分析SDK・アプリ間/サイト間トラッキングは一切ありません。</strong></p>
+
+                <h2>1. 取り扱う情報</h2>
+                <ul>
+                    <li><strong>匿名デバイス識別子</strong>: 初回起動時に生成されるランダムなトークンで、端末に保存され、<strong>1日の無料メッセージ上限</strong>を公平に適用するためだけにリクエストへ付与されます。氏名・メール・電話番号・広告識別子ではなく、本人と紐づきません。</li>
+                    <li><strong>対話内容</strong>: 入力したメッセージと進行中の対話は、暗号化された通信でバックエンド(Cloudflare Worker)および AI 提供者(<strong>Anthropic</strong>)へ送信され、<strong>賢者の返答生成のためだけ</strong>に使用されます。<strong>対話内容は当社サーバーに保存しません。</strong> サーバーには匿名の日次カウンターのみ残ります。Anthropic は商用規約に基づき処理し、API入力をモデル学習に<strong>使用しません。</strong></li>
+                    <li><strong>サブスクリプション状態</strong>: Dialogos Pro 購入時、決済は Apple または Google が処理し、当社は有効/失効の状態のみを受け取ります。<strong>カード・請求情報は受け取りません。</strong></li>
+                    <li><strong>端末内設定</strong>: 言語・テーマ・オンボーディング状態・日次カウンターは端末内のみに保存されます。</li>
+                </ul>
+
+                <h2>2. 収集しないもの</h2>
+                <p>氏名・メール・アカウント・位置・連絡先・写真・健康/生体情報なし。分析/広告SDKなし。広告識別子(IDFA/GAID)なし。他のアプリ・ウェブサイトをまたぐトラッキングなし。<strong>本アプリは広告を表示せず、トラッキングを行わないため App Tracking Transparency(ATT)同意ダイアログも表示しません。</strong></p>
+
+                <h2>3. 利用目的</h2>
+                <p>(a) 要求された対話の生成、(b) 公平な1日の利用制限の適用、のためだけに使用します。いかなるデータも販売・貸与せず、広告には利用しません。</p>
+
+                <h2>4. 共有 / 処理者</h2>
+                <ul>
+                    <li><strong>Anthropic</strong>(返答生成のためのメッセージ AI 処理)— 処理者</li>
+                    <li><strong>Cloudflare</strong>(プロキシ/バックエンドのホスティング)— 処理者</li>
+                    <li><strong>Apple / Google</strong>(サブスクリプション購入処理)— 決済に関する独立した管理者</li>
+                </ul>
+                <p>アプリ運営に必要な範囲でのみ上記提供者とデータを共有し、広告業者・データブローカーとは共有しません。</p>
+
+                <h2>5. 保持</h2>
+                <p>対話内容は当社サーバーに保持しません。匿名の日次カウンターは約2日で自動失効します。端末内設定はアプリを削除するまで保持され、削除時にすべてのローカルデータが消去されます。</p>
+
+                <h2>6. セキュリティ</h2>
+                <p>すべての通信は転送時に暗号化(HTTPS/TLS)されます。AI 提供者の API キーはサーバーのみで保管し、アプリには含めません。</p>
+
+                <h2>7. 子ども</h2>
+                <p>Dialogos は13歳(または居住国で求められる最低年齢)未満の子どもを対象とせず、子どもの個人情報を故意に収集しません。</p>
+
+                <h2>8. 利用者の選択と権利</h2>
+                <p>当社は利用者を識別する情報を保持しないため、ご請求に際して「あなたの」データを特定することは困難です。アプリを削除すれば、いつでもすべてのローカルデータを消去できます。プライバシーに関するお問い合わせ: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></p>
+
+                <h2>9. 国外移転</h2>
+                <p>メッセージは提供者が運用するサーバー(例:米国)で処理される場合があります。本アプリの利用により、送信する内容が上記のとおり処理されることをご理解いただいたものとみなします。</p>
+
+                <h2>10. 変更</h2>
+                <p>本ポリシーは更新される場合があり、更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します。</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>

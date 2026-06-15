@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="en"
+  title={"Dialogos Privacy Policy - PiFl Labs"}
+  description={"Privacy policy for the Dialogos app by PiFl Labs — a Stoic-philosophy dialogue app with no accounts, no ads, and no tracking."}
+  canonical="https://pifl-labs.com/en/apps/dialogos/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/dialogos/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/dialogos/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/en/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Dialogos</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Dialogos Privacy Policy</span></h1>
+            <p class="legal-date">Effective date: June 14, 2026 · Provider: PiFl Labs</p>
+        </div>
+    </section>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>Dialogos ("the app", "we") is a Stoic-philosophy dialogue app published by PiFl Labs. We designed Dialogos to collect as little as possible. We have <strong>no user accounts, no advertising, no analytics SDKs, and no cross-app or cross-site tracking.</strong></p>
+
+                <h2>1. Information we process</h2>
+                <ul>
+                    <li><strong>Anonymous device identifier.</strong> On first launch the app generates a random token stored on your device. It is sent with each dialogue request <strong>only</strong> to enforce the daily free-message limit fairly. It is not your name, email, phone number, or an advertising identifier, and it is not linked to your identity.</li>
+                    <li><strong>Conversation content.</strong> The messages you write and the running conversation are sent over an encrypted connection to our backend (a Cloudflare Worker) and to our AI provider (<strong>Anthropic</strong>) for the sole purpose of generating the philosopher's reply. <strong>We do not store your conversation content on our servers</strong> — our server keeps only an anonymous per-day message counter. Anthropic processes the content to produce a response under its commercial terms and does <strong>not</strong> use API inputs to train its models.</li>
+                    <li><strong>Subscription status.</strong> If you buy Dialogos Pro, the purchase is handled by Apple or Google. We receive only whether your subscription is active or expired. <strong>We never receive your payment card or billing details.</strong></li>
+                    <li><strong>On-device settings.</strong> Your language, theme, onboarding state, and daily counter are stored locally on your device only.</li>
+                </ul>
+
+                <h2>2. What we do NOT collect</h2>
+                <p>No name, email, account, location, contacts, photos, health data, or biometric data. No analytics or advertising SDKs. No advertising identifier (IDFA/GAID). No tracking across other apps or websites. <strong>The app does not show ads, and shows no App Tracking Transparency prompt because it does not track you.</strong></p>
+
+                <h2>3. How we use information</h2>
+                <p>Solely to (a) generate the dialogue you request and (b) enforce fair daily-usage limits. We do not sell or rent any data, and we do not use it for advertising.</p>
+
+                <h2>4. Sharing / processors</h2>
+                <ul>
+                    <li><strong>Anthropic</strong> (AI processing of your messages to generate replies) — processor.</li>
+                    <li><strong>Cloudflare</strong> (hosting of our proxy/backend) — processor.</li>
+                    <li><strong>Apple / Google</strong> (processing your subscription purchase) — independent controllers for payment.</li>
+                </ul>
+                <p>We share data with these providers only as needed to run the app. We do not share data with advertisers or data brokers.</p>
+
+                <h2>5. Retention</h2>
+                <p>Conversation content is not retained on our servers. The anonymous daily counter automatically expires within about two days. On-device settings remain until you delete the app, which removes all local data.</p>
+
+                <h2>6. Security</h2>
+                <p>All network traffic uses encryption in transit (HTTPS/TLS). Our AI provider's API key is stored only on the server and is never shipped inside the app.</p>
+
+                <h2>7. Children</h2>
+                <p>Dialogos is not directed at children under 13 (or the minimum age required in your country) and we do not knowingly collect personal information from children.</p>
+
+                <h2>8. Your choices and rights</h2>
+                <p>Because we do not hold any information that identifies you, we generally cannot locate "your" data on request. You can clear all local data at any time by deleting the app. For any privacy question, contact <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text"></span></a>.</p>
+
+                <h2>9. International transfers</h2>
+                <p>Your messages may be processed on servers operated by our providers (e.g. in the United States). By using the app you understand the content you send is processed as described above.</p>
+
+                <h2>10. Changes</h2>
+                <p>We may update this policy; we will revise the effective date above and, for material changes, surface a notice in the app.</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
