@@ -434,5 +434,84 @@ const dialogos: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
-export const appList: AppMeta[] = [focus, words, dday, log, dialogos];
+// PiPi Draw — 사진을 AI 라인아트로 바꿔 색칠하는 드로잉 앱.
+// 콘텐츠 SSOT = pipi_draw/ios/fastlane/metadata + .arb. 미출시 → status 'soon'.
+const draw: AppMeta = {
+  slug: 'pipi-draw',
+  name: 'PiPi Draw',
+  status: 'soon',
+  category: { ko: '크리에이티브 · 색칠', ja: 'クリエイティブ · ぬりえ', en: 'Creative · Coloring' },
+  stores: {},
+  heroShot: 'ai_result',
+  content: {
+    ko: {
+      tagline: '내 사진이\n색칠 도안이 된다',
+      lede: '찍은 사진 한 장을 AI가 깔끔한 라인아트로 바꿔 줍니다. 변환된 스케치를 내 손으로 색칠해 나만의 작품으로 완성하세요. 그림 실력은 필요 없어요 — 색칠의 즐거움만 있으면 됩니다.',
+      metaDesc: '사진을 AI가 색칠하기 좋은 라인아트로 변환해 주는 드로잉 앱. 10종 프로 브러시로 색칠하고, 드로잉 중 광고 없이 집중. iOS · Android.',
+      shotsTitle: '사진 한 장에서 작품까지',
+      featuresTitle: '왜 PiPi Draw 인가',
+      ctaTitle: '곧 만나요',
+      ctaSub: 'iOS · Android 출시 준비 중.',
+      shots: [
+        { file: 'ai_result', label: '사진이 스케치가 된다',  desc: 'AI가 사진을 색칠하기 좋은 라인아트로 변환합니다.' },
+        { file: 'ai_styles', label: '원하는 스타일로',       desc: '기본 · 잉크 · 카툰 · 사실적 + 라인 두께·디테일·대비 조절.' },
+        { file: 'coloring',  label: '내 손으로 색칠',        desc: '변환된 스케치를 캔버스로 가져와 색을 채웁니다.' },
+        { file: 'brushes',   label: '10종 프로 브러시',      desc: '연필·마커·크레용·붓·수채화·형광펜까지 골라 그려요.' },
+        { file: 'home',      label: '작품 보관함',           desc: '그린 작품이 홈에 차곡차곡 — 이어 그리기도 한 번에.' },
+      ],
+      features: [
+        { icon: 'fa-wand-magic-sparkles', title: 'AI 스케치 변환', desc: '카메라·앨범 사진을 색칠하기 좋은 라인아트로 바꿔 줍니다.' },
+        { icon: 'fa-paintbrush',          title: '10종 프로 브러시', desc: '연필·마커·크레용·붓·수채화 등 iPad급 브러시로 색칠.' },
+        { icon: 'fa-ban',                 title: '드로잉 중 광고 없음', desc: '색칠에 빠져 있는 동안에는 광고를 띄우지 않습니다.' },
+        { icon: 'fa-mobile-screen',       title: 'iOS · Android',     desc: 'Flutter 단일 코드베이스로 두 스토어 모두 지원.' },
+      ],
+    },
+    ja: {
+      tagline: '私の写真が\nぬりえ図案になる',
+      lede: '撮った写真をAIがきれいなラインアートに変換。変換されたスケッチを自分の手で塗って、自分だけの作品に仕上げましょう。絵の才能は不要 — 塗る楽しさだけあればいい。',
+      metaDesc: '写真をAIが塗りやすいラインアートに変換するお絵かきアプリ。10種のプロブラシで塗り、お絵かき中は広告なし。iOS · Android。',
+      shotsTitle: '写真一枚から作品まで',
+      featuresTitle: 'PiPi Draw を選ぶ理由',
+      ctaTitle: 'もうすぐ会えます',
+      ctaSub: 'iOS · Android リリース準備中。',
+      shots: [
+        { file: 'ai_result', label: '写真がスケッチになる',  desc: 'AIが写真を塗りやすいラインアートに変換します。' },
+        { file: 'ai_styles', label: '好きなスタイルで',       desc: '基本 · インク · カトゥーン · リアル + 線の太さ·ディテール·コントラスト調整。' },
+        { file: 'coloring',  label: '自分の手で塗る',         desc: '変換したスケッチをキャンバスに取り込んで色を塗ります。' },
+        { file: 'brushes',   label: '10種のプロブラシ',       desc: '鉛筆·マーカー·クレヨン·筆·水彩·蛍光ペンまで選べます。' },
+        { file: 'home',      label: '作品コレクション',       desc: '描いた作品がホームに整列 — 続きを描くのもワンタップ。' },
+      ],
+      features: [
+        { icon: 'fa-wand-magic-sparkles', title: 'AIスケッチ変換',  desc: 'カメラ·アルバムの写真を塗りやすいラインアートに変換。' },
+        { icon: 'fa-paintbrush',          title: '10種のプロブラシ', desc: '鉛筆·マーカー·クレヨン·筆·水彩などiPad級のブラシで。' },
+        { icon: 'fa-ban',                 title: 'お絵かき中は広告なし', desc: '塗りに集中している間は広告を表示しません。' },
+        { icon: 'fa-mobile-screen',       title: 'iOS · Android',     desc: 'Flutter単一コードベースで両ストアに対応。' },
+      ],
+    },
+    en: {
+      tagline: 'Your photo becomes\na coloring page',
+      lede: 'Snap a photo and AI turns it into clean line art. Color the sketch by hand and make it your own — no drawing skill required, just the joy of coloring.',
+      metaDesc: 'A drawing app that turns your photos into colorable line art with AI. Color with 10 pro brushes, with no ads while you draw. iOS & Android.',
+      shotsTitle: 'From one photo to artwork',
+      featuresTitle: 'Why PiPi Draw',
+      ctaTitle: 'Coming soon',
+      ctaSub: 'Launching on iOS & Android.',
+      shots: [
+        { file: 'ai_result', label: 'Your photo becomes a sketch', desc: 'AI converts your photo into colorable line art.' },
+        { file: 'ai_styles', label: 'In the style you want',       desc: 'Default · Ink · Cartoon · Realistic, with line, detail and contrast controls.' },
+        { file: 'coloring',  label: 'Color it by hand',            desc: 'Bring the sketch to the canvas and fill it with color.' },
+        { file: 'brushes',   label: '10 pro brushes',              desc: 'Pencil, marker, crayon, brush, watercolor, highlighter and more.' },
+        { file: 'home',      label: 'Your gallery',                desc: 'Every piece lined up on the home screen — pick up where you left off.' },
+      ],
+      features: [
+        { icon: 'fa-wand-magic-sparkles', title: 'AI sketch conversion', desc: 'Turns camera or album photos into colorable line art.' },
+        { icon: 'fa-paintbrush',          title: '10 pro brushes',       desc: 'Pencil, marker, crayon, brush, watercolor — an iPad-grade engine.' },
+        { icon: 'fa-ban',                 title: 'No ads while drawing',  desc: 'We never interrupt you with an ad while you are coloring.' },
+        { icon: 'fa-mobile-screen',       title: 'iOS & Android',         desc: 'One Flutter codebase, shipped to both stores.' },
+      ],
+    },
+  },
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
+export const appList: AppMeta[] = [focus, draw, words, dday, log, dialogos];
