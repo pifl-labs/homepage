@@ -1,0 +1,191 @@
+---
+// 개별 출처 페이지 — 데이터(dialogos-sources.ts)에서 자동 생성.
+// breadcrumb + 권/편 앵커 섹션 + PD 외부링크 + FAQ + JSON-LD(Article/BreadcrumbList/FAQPage).
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { SourceWork } from '../data/dialogos-sources';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  work: SourceWork;
+  lang: Lang;
+}
+const { work, lang } = Astro.props;
+const c = work.content[lang];
+
+const labels = {
+  ko: {
+    home: '홈', lib: '출처 라이브러리', about: '작품 소개',
+    method: 'Dialogos가 이 출처를 다루는 방식', pd: '퍼블릭 도메인 원문',
+    faq: '자주 묻는 질문', backHub: '출처 라이브러리', toApp: 'Dialogos 앱 보기',
+    ext: '위 링크는 외부 사이트로 연결되며, PiFl Labs는 그 내용을 관리하지 않습니다.',
+  },
+  ja: {
+    home: 'ホーム', lib: '出典ライブラリ', about: '作品について',
+    method: 'Dialogos が出典を扱う方針', pd: 'パブリックドメインの原文',
+    faq: 'よくある質問', backHub: '出典ライブラリ', toApp: 'Dialogos アプリを見る',
+    ext: '上記リンクは外部サイトに接続します。PiFl Labs はその内容を管理していません。',
+  },
+  en: {
+    home: 'Home', lib: 'Source Library', about: 'About the work',
+    method: 'How Dialogos uses this source', pd: 'Public-domain text',
+    faq: 'Frequently asked questions', backHub: 'Source Library', toApp: 'View the Dialogos app',
+    ext: 'These links lead to external sites whose content PiFl Labs does not control.',
+  },
+}[lang];
+
+const base = `/${lang}`;
+const selfPath = `/apps/dialogos/sources/${work.slug}/`;
+const hubHref = `${base}/apps/dialogos/sources/`;
+const appHref = `${base}/apps/dialogos/`;
+const homeHref = `${base}/`;
+const selfUrl = `https://pifl-labs.com${base}${selfPath}`;
+
+const alternates = [
+  { hreflang: 'en', href: `https://pifl-labs.com/en${selfPath}` },
+  { hreflang: 'ko', href: `https://pifl-labs.com/ko${selfPath}` },
+  { hreflang: 'ja', href: `https://pifl-labs.com/ja${selfPath}` },
+  { hreflang: 'x-default', href: `https://pifl-labs.com/ko${selfPath}` },
+];
+
+const titleWord = { ko: '출처', ja: '出典', en: 'Source' }[lang];
+const title = `${c.workName} · ${c.mentorName} — Dialogos ${titleWord} | PiFl Labs`;
+
+// AEO — Article + BreadcrumbList + FAQPage 구조화 데이터
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${c.workName} — ${c.mentorName}`,
+    description: c.lede,
+    inLanguage: lang,
+    dateModified: work.updated,
+    mainEntityOfPage: selfUrl,
+    author: { '@type': 'Organization', name: 'PiFl Labs', url: 'https://pifl-labs.com' },
+    publisher: { '@type': 'Organization', name: 'PiFl Labs', url: 'https://pifl-labs.com' },
+    about: { '@type': 'Book', name: c.workName, author: { '@type': 'Person', name: c.mentorName } },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: labels.home, item: `https://pifl-labs.com${homeHref}` },
+      { '@type': 'ListItem', position: 2, name: 'Dialogos', item: `https://pifl-labs.com${appHref}` },
+      { '@type': 'ListItem', position: 3, name: labels.lib, item: `https://pifl-labs.com${hubHref}` },
+      { '@type': 'ListItem', position: 4, name: c.workName, item: selfUrl },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: c.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  lang={lang}
+  title={title}
+  description={c.lede}
+  canonical={selfUrl}
+  alternates={alternates}
+  extraCss={['/styles.css']}
+>
+  {jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} />)}
+
+  <section class="legal-hero">
+    <div class="container">
+      <nav class="src-crumb" aria-label="breadcrumb">
+        <a href={appHref}>Dialogos</a><span aria-hidden="true">›</span>
+        <a href={hubHref}>{labels.lib}</a><span aria-hidden="true">›</span>
+        <span aria-current="page">{c.workName}</span>
+      </nav>
+      <h1><i class={`fas ${work.icon}`}></i> <span class="text-gradient">{c.workName}</span></h1>
+      <p class="legal-date">{c.mentorName}</p>
+    </div>
+  </section>
+
+  <main class="legal-page">
+    <div class="container">
+      <article class="legal-card">
+        <h2>{labels.about}</h2>
+        <p set:html={c.intro} />
+
+        {c.sections.map((s) => (
+          <section class="src-section" id={s.anchor}>
+            <h3>{s.title}</h3>
+            <p set:html={s.body} />
+          </section>
+        ))}
+
+        <h2>{labels.method}</h2>
+        <p set:html={c.provenance} />
+
+        <h2>{labels.pd}</h2>
+        <p set:html={c.pdIntro} />
+        <ul class="src-pd">
+          {c.pdLinks.map((l) => (
+            <li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a></li>
+          ))}
+        </ul>
+        <p class="src-ext-note">{labels.ext}</p>
+
+        <h2>{labels.faq}</h2>
+        <div class="src-faq">
+          {c.faq.map((f) => (
+            <details class="src-faq-item">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+
+        <nav class="src-nav">
+          <a class="src-nav-btn" href={hubHref}><i class="fas fa-arrow-left"></i> {labels.backHub}</a>
+          <a class="src-nav-btn src-nav-btn--cta" href={appHref}>{labels.toApp} <i class="fas fa-arrow-right"></i></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .src-crumb {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;
+    font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--s-sm);
+  }
+  .src-crumb a { color: var(--text-secondary); text-decoration: none; }
+  .src-crumb a:hover { color: var(--text-primary); }
+  .src-crumb span { color: var(--text-dim); }
+
+  .src-section {
+    margin: var(--s-sm) 0; padding-left: var(--s-sm);
+    border-left: 2px solid var(--border-default); scroll-margin-top: 72px;
+  }
+  .src-section h3 { font-size: 1.02rem; color: var(--accent-highlight); margin-bottom: 0.3rem; }
+
+  .src-pd { margin: var(--s-xs) 0; }
+  .src-ext-note { font-size: 0.8rem; color: var(--text-muted); }
+
+  .src-faq { margin-top: var(--s-xs); }
+  .src-faq-item {
+    border: 1px solid var(--border-default); border-radius: var(--radius-sm);
+    padding: 0.65rem var(--s-sm); margin-bottom: 0.5rem; background: var(--bg-raised);
+  }
+  .src-faq-item summary { cursor: pointer; font-weight: 600; color: var(--text-primary); }
+  .src-faq-item p { margin-top: 0.5rem; color: var(--text-secondary); }
+
+  .src-nav {
+    display: flex; flex-wrap: wrap; gap: var(--s-sm); justify-content: space-between;
+    margin-top: var(--s-md); padding-top: var(--s-md); border-top: 1px solid var(--border-default);
+  }
+  .src-nav-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.1rem;
+    border-radius: var(--radius-pill); border: 1px solid var(--border-strong);
+    color: var(--text-primary); text-decoration: none; font-size: 0.9rem;
+  }
+  .src-nav-btn:hover { border-color: var(--accent-cta); }
+  .src-nav-btn--cta { background: var(--gradient-cta); border: none; color: #fff; }
+</style>

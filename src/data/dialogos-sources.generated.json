@@ -1,0 +1,1183 @@
+{
+  "letters-to-lucilius": {
+    "slug": "letters-to-lucilius",
+    "mentorId": "seneca",
+    "icon": "fa-feather",
+    "updated": "2026-06-19",
+    "content": {
+      "ko": {
+        "workName": "루킬리우스에게 보내는 편지",
+        "mentorName": "세네카",
+        "lede": "루킬리우스에게 보내는 편지 — Dialogos가 인용하는 퍼블릭 도메인 스토아 철학 원전. 세네카의 124통 편지 해설과 무료 원문 안내.",
+        "intro": "<em>루킬리우스에게 보내는 편지</em>(라틴어 <em>Epistulae Morales ad Lucilium</em>)는 로마의 스토아 철학자 세네카가 만년(서기 1세기 중엽)에 친구이자 제자 루킬리우스에게 보낸 124통의 편지 모음이다. 시간의 소중함, 죽음과 두려움, 우정, 군중과의 거리 두기 같은 일상의 주제를 통해 어떻게 평정심과 덕을 갖춘 삶을 살 것인가를 권하는 실천 철학의 고전이다. Dialogos에서 세네카와 나누는 대화는 이 편지들의 사상을 바탕으로 한다.",
+        "sections": [
+          {
+            "anchor": "letter-1",
+            "title": "제1서",
+            "body": "세네카는 시간이야말로 우리가 가진 유일하게 되돌릴 수 없는 재산이라고 말한다. 재물은 잃어도 되찾을 수 있지만 흘러간 시간은 다시 오지 않으니, 무심코 빼앗기거나 흘려보내는 하루하루를 의식적으로 자기 것으로 되찾으라고 권한다. (I.1)"
+          },
+          {
+            "anchor": "letter-6",
+            "title": "제6서",
+            "body": "자신의 결함을 알아차린다는 것 자체가 정신이 더 나아지고 있다는 증거라고 세네카는 말한다. 또한 아무리 좋은 것이라도 함께 나눌 벗이 없으면 진정한 기쁨이 되지 못한다며, 배움을 통한 자기 변화와 그것을 나누는 우정의 가치를 함께 강조한다. (VI.1)"
+          },
+          {
+            "anchor": "letter-7",
+            "title": "제7서",
+            "body": "세네카는 군중과 어울릴수록 악덕에 물들기 쉽다고 경고한다. 잔혹한 검투 경기를 구경하고 돌아온 자신이 더 탐욕스럽고 잔인해진 경험을 들며, 무리에서 한발 물러나 사람을 가려 사귈 것을 권한다. (VII.8)"
+          },
+          {
+            "anchor": "letter-13",
+            "title": "제13서",
+            "body": "세네카는 우리가 실제 현실보다 상상 속에서 더 자주 괴로워한다고 말한다. 근거 없는 소문과 아직 오지 않은 미래에 대한 불안이 눈앞의 진짜 위험보다 더 큰 고통을 안기니, 두려움을 사실과 분리해 따져보라고 조언한다. (XIII.4)"
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대 한국어로 의역한 것이며, 저작권이 살아 있는 현대 번역본의 문장을 그대로 옮기지 않는다. 출처 표기(예: I.1)는 해당 사상이 등장하는 편지·절을 가리킨다.",
+        "faq": [
+          {
+            "q": "세네카의 '루킬리우스에게 보내는 편지'는 어떤 책인가요?",
+            "a": "로마 스토아 철학자 세네카가 친구 루킬리우스에게 보낸 124통의 편지 모음입니다. 시간 관리, 죽음에 대한 태도, 두려움 다스리기, 우정, 군중과의 거리 두기 등 일상의 문제를 철학적으로 다루며, 어떻게 평정심을 잃지 않고 덕 있는 삶을 살 것인가를 구체적으로 조언합니다."
+          },
+          {
+            "q": "세네카는 누구인가요?",
+            "a": "루키우스 안나이우스 세네카(기원전 4년경~서기 65년)는 로마의 스토아 철학자이자 정치가, 극작가입니다. 황제 네로의 스승이자 고문이었고, 말년에 네로의 명으로 스스로 목숨을 끊었습니다. 그의 철학은 추상적 이론보다 실생활에 적용 가능한 윤리적 조언으로 잘 알려져 있습니다."
+          },
+          {
+            "q": "이 편지들을 무료로 읽을 수 있나요?",
+            "a": "네. 리처드 모트 거머(Richard Mott Gummere)의 영어 번역(로엡 고전 총서, 1917~1925년)은 저작권이 만료되어 누구나 무료로 읽을 수 있습니다. 아래 Wikisource와 Internet Archive 링크에서 124통 전체를 온라인으로 보거나 PDF·EPUB로 내려받을 수 있습니다. 한국어 완역 중 퍼블릭 도메인본은 제한적이라 영어 퍼블릭 도메인 역본을 안내합니다."
+          },
+          {
+            "q": "Dialogos는 이 작품을 어떻게 인용하나요?",
+            "a": "Dialogos의 세네카는 편지에 담긴 사상을 현대어로 풀어 대화에 녹여냅니다. 저작권 있는 번역문을 그대로 옮기지 않고, 사상이 등장하는 편지와 절(예: VII.8)을 출처로 표기해 어디에서 비롯된 생각인지 확인할 수 있게 합니다."
+          }
+        ],
+        "pdIntro": "아래는 저작권이 만료되어 자유롭게 읽을 수 있는 영어 원전 링크입니다. 번역은 리처드 모트 거머(Richard Mott Gummere)의 로엡 고전 총서판(1917~1925년)으로, 미국 기준 1929년 이전 출판되어 퍼블릭 도메인입니다. 한국어 완역 중 퍼블릭 도메인본은 제한적이므로 영어 퍼블릭 도메인 역본으로 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 루킬리우스에게 보내는 편지 (Gummere 역)",
+            "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius"
+          },
+          {
+            "label": "Internet Archive — Ad Lucilium epistulae morales, Vol. 1 (Gummere 역, 1917)",
+            "url": "https://archive.org/details/adluciliumepistu01seneuoft"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "ルキリウスへの手紙",
+        "mentorName": "セネカ",
+        "lede": "ルキリウスへの手紙 — Dialogosが引用するパブリックドメインのストア哲学原典。セネカの124通の書簡の解説と無料原文への案内。",
+        "intro": "<em>ルキリウスへの手紙</em>(ラテン語 <em>Epistulae Morales ad Lucilium</em>)は、ローマのストア派哲学者セネカが晩年(紀元1世紀半ば)に友人であり弟子でもあったルキリウスへ送った124通の書簡集である。時間の尊さ、死と恐れ、友情、群衆との距離の取り方といった日常的な主題を通して、いかに心の平静と徳をそなえた生を送るかを説く実践哲学の古典として読み継がれてきた。一通ごとが具体的な助言で結ばれ、抽象論ではなく「今日をどう生きるか」を問いかける。Dialogosでセネカと交わす対話は、これらの書簡の思想にもとづいている。",
+        "sections": [
+          {
+            "anchor": "letter-1",
+            "title": "第1書",
+            "body": "セネカは、時間こそ私たちが持つ唯一取り返しのつかない財産だと語る。財産は失っても取り戻せるが、過ぎ去った時間は二度と戻らない。だからこそ、何気なく奪われ、こぼれ落ちていく一日一日を意識して自分のものとして取り戻すよう勧める。(I.1)"
+          },
+          {
+            "anchor": "letter-6",
+            "title": "第6書",
+            "body": "自分の欠点に気づくこと自体が、精神がより善きものへ変わっている証拠だとセネカは言う。さらに、どれほど良いものでも分かち合う友がいなければ真の喜びにはならないとして、学びによる自己変革と、それを分かち合う友情の価値をともに説く。(VI.1)"
+          },
+          {
+            "anchor": "letter-7",
+            "title": "第7書",
+            "body": "セネカは、群衆と交われば交わるほど悪徳に染まりやすいと警告する。残酷な剣闘試合を見て帰った自分が、より貪欲で残忍になっていた経験を挙げ、群れから一歩退き、人を選んで交わるよう勧める。(VII.8)"
+          },
+          {
+            "anchor": "letter-13",
+            "title": "第13書",
+            "body": "セネカは、私たちは現実そのものよりも想像のなかでより頻繁に苦しむと語る。根拠のない噂や、まだ来ぬ未来への不安が、目の前の本当の危険よりも大きな苦痛をもたらす。だから恐れを事実から切り離して吟味せよと助言する。(XIII.4)"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権が消滅した原典の思想を現代日本語へ意訳したものであり、著作権の残る現代訳の文章をそのまま引き写すことはしない。出典表記(例:I.1)は、その思想が現れる書簡・節を指し示している。",
+        "faq": [
+          {
+            "q": "セネカの『ルキリウスへの手紙』とはどんな本ですか?",
+            "a": "ローマのストア派哲学者セネカが友人ルキリウスへ送った124通の書簡集です。時間の使い方、死への態度、恐れの鎮め方、友情、群衆との距離の取り方など、日常の問題を哲学的に扱い、心の平静を保ちながら徳ある生を送る道を具体的に助言します。"
+          },
+          {
+            "q": "セネカとはどのような人物ですか?",
+            "a": "ルキウス・アンナエウス・セネカ(紀元前4年頃〜紀元65年)はローマのストア派哲学者であり、政治家・劇作家でもありました。皇帝ネロの師であり顧問でしたが、晩年にネロの命を受け自ら命を絶ちました。彼の哲学は抽象的な理論よりも、実生活に応用できる倫理的助言として知られています。"
+          },
+          {
+            "q": "この書簡を無料で読めますか?",
+            "a": "はい。リチャード・モット・ガマー(Richard Mott Gummere)による英訳(ローブ古典叢書、1917〜1925年)は著作権が消滅しており、誰でも無料で読めます。下記のWikisourceとInternet Archiveのリンクから124通すべてをオンラインで閲覧し、PDFやEPUBで入手できます。日本語完訳のパブリックドメイン版は限られるため、英語のパブリックドメイン訳をご案内します。"
+          },
+          {
+            "q": "Dialogosはこの作品をどのように引用しますか?",
+            "a": "Dialogosのセネカは、書簡に込められた思想を現代語に解きほぐして対話に織り込みます。著作権のある訳文をそのまま写すことはせず、思想が現れる書簡と節(例:VII.8)を出典として示し、その考えがどこに由来するかを確認できるようにしています。"
+          }
+        ],
+        "pdIntro": "以下は著作権が消滅し、自由に読める英語原典へのリンクです。訳はリチャード・モット・ガマー(Richard Mott Gummere)によるローブ古典叢書版(1917〜1925年)で、米国基準で1929年以前に出版されたためパブリックドメインです。日本語完訳のパブリックドメイン版は限られるため、英語のパブリックドメイン訳をご案内します。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — ルキリウスへの手紙 (Gummere 訳)",
+            "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius"
+          },
+          {
+            "label": "Internet Archive — Ad Lucilium epistulae morales, Vol. 1 (Gummere 訳, 1917年)",
+            "url": "https://archive.org/details/adluciliumepistu01seneuoft"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Letters to Lucilius",
+        "mentorName": "Seneca",
+        "lede": "Letters to Lucilius — the public-domain Stoic source text Dialogos draws on. Commentary on Seneca's 124 letters plus free original-text links.",
+        "intro": "<em>Letters to Lucilius</em> (Latin <em>Epistulae Morales ad Lucilium</em>) is a collection of 124 letters written by the Roman Stoic philosopher Seneca late in his life (mid-first century CE) to his friend and pupil Lucilius. Through everyday themes — the value of time, death and fear, friendship, and keeping a distance from the crowd — it offers a classic of practical philosophy, urging the reader toward a life of equanimity and virtue. Each letter ends in concrete advice, asking not for abstract theory but for how to live the present day well. The conversations you have with Seneca in Dialogos are grounded in the thought of these letters.",
+        "sections": [
+          {
+            "anchor": "letter-1",
+            "title": "Letter I",
+            "body": "Seneca argues that time is the one possession we can never recover. Property, once lost, can be regained, but time that slips away is gone for good — so he urges Lucilius to reclaim consciously each day that is otherwise carelessly seized or let drift away. (I.1)"
+          },
+          {
+            "anchor": "letter-6",
+            "title": "Letter VI",
+            "body": "Seneca holds that simply noticing one's own faults is proof that the spirit is changing for the better. He adds that no good thing is truly pleasant to possess without a friend to share it — joining self-transformation through learning to the value of a friendship in which that learning is passed on. (VI.1)"
+          },
+          {
+            "anchor": "letter-7",
+            "title": "Letter VII",
+            "body": "Seneca warns that the more one mixes with the crowd, the more easily one is stained by vice. Recalling how he returned from the cruelty of the gladiatorial games more greedy and more callous, he counsels stepping back from the mass and choosing one's company with care. (VII.8)"
+          },
+          {
+            "anchor": "letter-13",
+            "title": "Letter XIII",
+            "body": "Seneca observes that we suffer more often in imagination than in reality. Groundless rumor and dread of a future not yet arrived inflict more pain than the real danger before us, so he advises separating fear from fact and examining it coolly. (XIII.4)"
+          }
+        ],
+        "provenance": "Dialogos's replies paraphrase the ideas of this out-of-copyright source text into modern language; they do not reproduce the wording of any copyrighted modern translation. Citations (for example, I.1) point to the letter and section where a given idea appears.",
+        "faq": [
+          {
+            "q": "What is Seneca's Letters to Lucilius about?",
+            "a": "It is a collection of 124 letters written by the Roman Stoic philosopher Seneca to his friend Lucilius. The letters treat everyday concerns — how to use time, how to face death, how to master fear, friendship, and stepping away from the crowd — philosophically, offering concrete advice on living a virtuous life without losing one's peace of mind."
+          },
+          {
+            "q": "Who was Seneca?",
+            "a": "Lucius Annaeus Seneca (c. 4 BCE – 65 CE) was a Roman Stoic philosopher, statesman, and dramatist. He served as tutor and adviser to the emperor Nero and, late in life, took his own life on Nero's order. His philosophy is best known for ethical advice that can be applied to daily living rather than for abstract theory."
+          },
+          {
+            "q": "Can I read these letters for free?",
+            "a": "Yes. Richard Mott Gummere's English translation (Loeb Classical Library, 1917–1925) is out of copyright and free for anyone to read. The Wikisource and Internet Archive links below let you read all 124 letters online or download them as PDF or EPUB."
+          },
+          {
+            "q": "How does Dialogos cite this work?",
+            "a": "Seneca in Dialogos unfolds the ideas of the letters into modern language within the conversation. Rather than copying any copyrighted translation, it cites the letter and section where an idea appears (for example, VII.8) so you can trace where the thought comes from."
+          }
+        ],
+        "pdIntro": "The links below lead to a free, out-of-copyright English source text. The translation is Richard Mott Gummere's Loeb Classical Library edition (1917–1925), which is in the public domain in the United States because it was published before 1929.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — Moral Letters to Lucilius (Gummere translation)",
+            "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius"
+          },
+          {
+            "label": "Internet Archive — Ad Lucilium epistulae morales, Vol. 1 (Gummere translation, 1917)",
+            "url": "https://archive.org/details/adluciliumepistu01seneuoft"
+          }
+        ]
+      }
+    }
+  },
+  "on-the-shortness-of-life": {
+    "slug": "on-the-shortness-of-life",
+    "mentorId": "seneca",
+    "icon": "fa-hourglass-half",
+    "updated": "2026-06-19",
+    "content": {
+      "ko": {
+        "workName": "인생의 짧음에 관하여",
+        "mentorName": "세네카",
+        "lede": "인생의 짧음에 관하여 — Dialogos가 인용하는 세네카의 퍼블릭 도메인 원전. 시간 낭비와 삶의 길이에 관한 해설과 무료 원문 안내.",
+        "intro": "<em>인생의 짧음에 관하여</em>(De Brevitate Vitae)는 1세기 로마의 스토아 철학자 루키우스 안나이우스 세네카가 친구이자 곡물 행정관이던 파울리누스에게 보낸 도덕 에세이입니다. 세네카는 \"인생은 짧다\"는 흔한 한탄을 정면으로 반박하며, 삶은 충분히 길지만 우리가 그것을 흘려보낼 뿐이라고 말합니다. Dialogos에서 세네카 멘토는 이 작품에 담긴 시간과 분주함에 관한 통찰을 인용합니다.",
+        "sections": [
+          {
+            "anchor": "life-1",
+            "title": "삶은 짧지 않다",
+            "body": "세네카는 자연이 인간에게 너무 짧은 수명을 주었다는 보편적 불평으로 글을 연다. 그러나 그는 삶이 짧은 것이 아니라 우리가 그 많은 부분을 허비하는 것이며, 잘 쓰기만 하면 인생은 위대한 일을 이루기에 충분히 길다고 반박한다 (1)."
+          },
+          {
+            "anchor": "life-3",
+            "title": "시간의 낭비",
+            "body": "사람들은 재산과 토지의 경계는 악착같이 지키면서도 가장 값진 시간은 아무에게나 내어 준다고 세네카는 지적한다. 마치 시간이 무한한 듯 흘려보내지만, 분주함에 삶을 빼앗기다 보면 막상 살아 보려 할 때 이미 인생은 끝나 있다 (3)."
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대어로 의역할 뿐, 저작권이 있는 현대 번역본의 문장을 그대로 옮기지 않습니다. 출처 표기는 해당 사상이 등장하는 작품의 절(장) 번호를 가리킵니다.",
+        "faq": [
+          {
+            "q": "인생의 짧음에 관하여는 어떤 내용인가요?",
+            "a": "세네카가 친구 파울리누스에게 보낸 도덕 에세이로, 인생이 짧은 것이 아니라 우리가 분주함과 헛된 일로 시간을 낭비하는 것이라고 주장합니다. 잘 쓰기만 하면 삶은 충분히 길며, 진정으로 사는 법을 미루지 말라고 권합니다."
+          },
+          {
+            "q": "세네카는 누구인가요?",
+            "a": "루키우스 안나이우스 세네카(기원전 4년경~기원후 65년)는 로마의 스토아 철학자이자 정치가, 극작가입니다. 황제 네로의 스승이기도 했으며, 시간·죽음·평정심을 다룬 도덕 서한과 에세이로 후대 스토아 사상에 큰 영향을 남겼습니다."
+          },
+          {
+            "q": "원문을 무료로 읽을 수 있나요?",
+            "a": "네. 저작권이 만료된 영어 번역본을 무료로 읽을 수 있습니다. 아래 안내에서 Aubrey Stewart(1900) 또는 John W. Basore(1932) 영역본을 Wikisource·Standard Ebooks·Project Gutenberg에서 확인하세요. 한국어 완역은 저작권이 있는 현대 번역본이 많아 여기서는 퍼블릭 도메인 영역본을 안내합니다."
+          },
+          {
+            "q": "Dialogos는 이 작품을 어떻게 인용하나요?",
+            "a": "Dialogos의 세네카 멘토는 이 에세이의 사상을 현대어로 의역해 답하고, 그 생각이 등장하는 절 번호를 출처칩으로 함께 표시합니다. 저작권이 있는 번역문을 그대로 전재하지 않으며, 사용자는 출처를 따라 퍼블릭 도메인 원문을 직접 확인할 수 있습니다."
+          }
+        ],
+        "pdIntro": "한국어 완역본은 대부분 저작권이 있는 현대 번역이라, 여기서는 저작권이 만료된 영어 번역본을 안내합니다. Aubrey Stewart(1900, Bohn's Classical Library) 역본과 John W. Basore(1932, Loeb) 역본은 모두 퍼블릭 도메인으로 무료 열람이 가능합니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 인생의 짧음에 관하여 (John W. Basore 역, 1932)",
+            "url": "https://en.wikisource.org/wiki/On_the_shortness_of_life"
+          },
+          {
+            "label": "Standard Ebooks — 인생의 짧음에 관하여 (Aubrey Stewart 역, 1900)",
+            "url": "https://standardebooks.org/ebooks/seneca/dialogues/aubrey-stewart/text/on-the-shortness-of-life"
+          },
+          {
+            "label": "Project Gutenberg — Minor Dialogues 수록 (Aubrey Stewart 역, 1900)",
+            "url": "https://www.gutenberg.org/ebooks/64576"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "人生の短さについて",
+        "mentorName": "セネカ",
+        "lede": "人生の短さについて — Dialogosが引用するセネカのパブリックドメイン原典。時間の浪費と人生の長さをめぐる解説と無料原文の案内。",
+        "intro": "<em>人生の短さについて</em>（De Brevitate Vitae）は、紀元1世紀ローマのストア派哲学者ルキウス・アンナエウス・セネカが、友人で穀物管理官でもあったパウリヌスに宛てた道徳的エッセイです。セネカは「人生は短い」という世間の嘆きに真っ向から反論し、人生は十分に長いのに私たちがそれを浪費しているだけだと説きます。本書の核心は、時間こそ最も貴重でありながら最も軽んじられる資産だという洞察にあります。Dialogosのセネカは、この作品に込められた時間と多忙さについての思想を引用します。",
+        "sections": [
+          {
+            "anchor": "life-1",
+            "title": "人生は短くない",
+            "body": "セネカは、自然が人間に短すぎる寿命しか与えなかったという誰もが抱く不平から筆を起こす。だが彼は、人生が短いのではなく私たちがその大半を浪費しているのであって、正しく使えば人生は偉業を成すに足るほど十分に長いと反論する（1）。"
+          },
+          {
+            "anchor": "life-3",
+            "title": "時間の浪費",
+            "body": "人は財産や土地の境界は必死に守りながら、最も貴重な時間は誰にでも気前よく明け渡してしまう、とセネカは指摘する。時間が無尽蔵であるかのように浪費するうちに、多忙さに人生を奪われ、いざ生きようとしたときには人生はもう終わっている（3）。"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権の切れた原典の思想を現代語で意訳するものであり、著作権のある現代訳の文章をそのまま転載することはありません。出典表記は、その思想が現れる作品の節（章）番号を指しています。",
+        "faq": [
+          {
+            "q": "『人生の短さについて』はどんな内容ですか？",
+            "a": "セネカが友人パウリヌスに宛てた道徳的エッセイで、人生が短いのではなく、私たちが多忙や無益な事柄で時間を浪費しているのだと論じます。正しく使えば人生は十分に長く、本当に生きることを先延ばしにするなと説きます。"
+          },
+          {
+            "q": "セネカとは誰ですか？",
+            "a": "ルキウス・アンナエウス・セネカ（紀元前4年頃〜紀元後65年）はローマのストア派哲学者であり、政治家・劇作家でもありました。皇帝ネロの師でもあり、時間・死・心の平静を論じた道徳書簡やエッセイで後世のストア思想に大きな影響を残しました。"
+          },
+          {
+            "q": "原文を無料で読めますか？",
+            "a": "はい。著作権の切れた英訳を無料で読めます。下記の案内から、Aubrey Stewart訳（1900年）またはJohn W. Basore訳（1932年）をWikisource・Standard Ebooks・Project Gutenbergで確認できます。日本語の全訳は著作権のある現代訳が多いため、ここではパブリックドメインの英訳をご案内します。"
+          },
+          {
+            "q": "Dialogosはこの作品をどう引用しますか？",
+            "a": "Dialogosのセネカは、このエッセイの思想を現代語で意訳して応答し、その考えが現れる節番号を出典チップとして併記します。著作権のある訳文をそのまま転載することはなく、利用者は出典をたどってパブリックドメインの原文を自分で確認できます。"
+          }
+        ],
+        "pdIntro": "日本語の全訳は著作権のある現代訳が多いため、ここでは著作権の切れた英訳をご案内します。Aubrey Stewart訳（1900年、Bohn's Classical Library）とJohn W. Basore訳（1932年、Loeb）はいずれもパブリックドメインで、無料で閲覧できます。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 人生の短さについて（John W. Basore 訳、1932年）",
+            "url": "https://en.wikisource.org/wiki/On_the_shortness_of_life"
+          },
+          {
+            "label": "Standard Ebooks — 人生の短さについて（Aubrey Stewart 訳、1900年）",
+            "url": "https://standardebooks.org/ebooks/seneca/dialogues/aubrey-stewart/text/on-the-shortness-of-life"
+          },
+          {
+            "label": "Project Gutenberg — Minor Dialogues 所収（Aubrey Stewart 訳、1900年）",
+            "url": "https://www.gutenberg.org/ebooks/64576"
+          }
+        ]
+      },
+      "en": {
+        "workName": "On the Shortness of Life",
+        "mentorName": "Seneca",
+        "lede": "On the Shortness of Life — the public-domain source Dialogos cites from Seneca. A commentary on wasted time and the length of life, with free original-text links.",
+        "intro": "<em>On the Shortness of Life</em> (De Brevitate Vitae) is a moral essay written in the first century AD by the Roman Stoic philosopher Lucius Annaeus Seneca, addressed to his friend Paulinus, then overseer of Rome's grain supply. Seneca directly challenges the common complaint that \"life is short,\" arguing instead that life is long enough, but that we squander most of it. In Dialogos, the Seneca mentor draws on this work's insights about time and busyness.",
+        "sections": [
+          {
+            "anchor": "life-1",
+            "title": "Life is not short",
+            "body": "Seneca opens with the universal complaint that Nature has granted us too brief a span of life. He answers that life is not short; rather, we waste much of it, and that life, well used, is long enough to accomplish great things (1)."
+          },
+          {
+            "anchor": "life-3",
+            "title": "Wasting time",
+            "body": "Seneca observes that people fiercely guard their property and the boundaries of their land, yet hand over their most precious possession, time, to anyone who asks. We squander it as if drawn from an endless supply, until busyness robs us of life and the end arrives just as we prepare to begin living (3)."
+          }
+        ],
+        "provenance": "Dialogos answers by paraphrasing the ideas of out-of-copyright source texts into modern language; it does not reproduce the wording of any copyrighted modern translation. Each citation points to the section (chapter) of the work where the idea appears.",
+        "faq": [
+          {
+            "q": "What is On the Shortness of Life about?",
+            "a": "It is a moral essay Seneca addressed to his friend Paulinus, arguing that life is not short, but that we waste it through busyness and trivial pursuits. Used well, life is long enough, and Seneca urges us not to postpone the work of truly living."
+          },
+          {
+            "q": "Who was Seneca?",
+            "a": "Lucius Annaeus Seneca (c. 4 BC to AD 65) was a Roman Stoic philosopher, statesman, and dramatist who also tutored the emperor Nero. His moral letters and essays on time, death, and tranquillity profoundly shaped later Stoic thought."
+          },
+          {
+            "q": "Can I read the original for free?",
+            "a": "Yes. Public-domain English translations are free to read. The links below point to the Aubrey Stewart translation (1900) and the John W. Basore translation (1932) on Wikisource, Standard Ebooks, and Project Gutenberg."
+          },
+          {
+            "q": "How does Dialogos cite this work?",
+            "a": "The Seneca mentor in Dialogos paraphrases the essay's ideas in modern language and shows a citation chip with the section number where the idea appears. It never copies a copyrighted translation verbatim, and you can follow the citation to read the public-domain original yourself."
+          }
+        ],
+        "pdIntro": "These public-domain English translations are free to read. The Aubrey Stewart translation (1900, Bohn's Classical Library) and the John W. Basore translation (1932, Loeb Classical Library) have both entered the public domain.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — On the Shortness of Life (trans. John W. Basore, 1932)",
+            "url": "https://en.wikisource.org/wiki/On_the_shortness_of_life"
+          },
+          {
+            "label": "Standard Ebooks — On the Shortness of Life (trans. Aubrey Stewart, 1900)",
+            "url": "https://standardebooks.org/ebooks/seneca/dialogues/aubrey-stewart/text/on-the-shortness-of-life"
+          },
+          {
+            "label": "Project Gutenberg — Minor Dialogues, incl. Of the Shortness of Life (trans. Aubrey Stewart, 1900)",
+            "url": "https://www.gutenberg.org/ebooks/64576"
+          }
+        ]
+      }
+    }
+  },
+  "enchiridion": {
+    "slug": "enchiridion",
+    "mentorId": "epictetus",
+    "icon": "fa-compass",
+    "updated": "2026-06-19",
+    "content": {
+      "ko": {
+        "workName": "엥케이리디온",
+        "mentorName": "에픽테토스",
+        "lede": "엥케이리디온 — Dialogos가 인용하는 퍼블릭 도메인 스토아 철학 원전. 에픽테토스의 핵심 사상 해설과 무료 원문 안내.",
+        "intro": "<em>엥케이리디온</em>(그리스어 <em>Encheiridion</em>, '손안의 작은 책' 또는 '편람')은 노예 출신의 스토아 철학자 에픽테토스(서기 50년경~135년경)의 가르침을 제자 아리아노스가 간추려 엮은 짧은 실천 지침서다. 방대한 <em>담화록</em>의 정수만 추려, 무엇이 우리에게 달려 있고 무엇이 달려 있지 않은지를 가려내는 데서 마음의 평정이 시작된다고 가르친다. Dialogos에서 에픽테토스와 나누는 대화는 이 작품의 사상을 바탕으로 한다.",
+        "sections": [
+          {
+            "anchor": "ch-1",
+            "title": "제1장",
+            "body": "세상에는 우리에게 달린 것(판단·욕구·의지)과 달리지 않은 것(육체·재산·평판·지위)이 있다. 행복은 통제할 수 있는 것에만 마음을 두고, 통제할 수 없는 것은 본래 내 것이 아니라 여기는 데서 비롯된다. (1.1)"
+          },
+          {
+            "anchor": "ch-5",
+            "title": "제5장",
+            "body": "사람을 괴롭히는 것은 사건 자체가 아니라 그 사건에 대한 우리의 판단이다. 죽음조차 두려운 것이 아니며, 두렵다는 '생각'이 두려움을 만든다. 그러므로 괴로울 때 탓해야 할 것은 바깥의 일이 아니라 자신의 해석이다. (5)"
+          },
+          {
+            "anchor": "ch-8",
+            "title": "제8장",
+            "body": "일이 네 뜻대로 일어나기를 바라지 말고, 일어나는 그대로 일어나기를 바라라. 그러면 모든 것이 순조롭게 흘러갈 것이다. 현실에 자신의 의지를 맞추는 것이 평정에 이르는 길이다. (8)"
+          },
+          {
+            "anchor": "ch-20",
+            "title": "제20장",
+            "body": "너를 모욕하는 것은 욕하거나 때리는 사람이 아니라, 그 행동이 모욕이라고 여기는 너의 판단이다. 누군가 너를 화나게 했다면, 실은 네 생각이 너를 화나게 한 것이다. 그러니 즉각 반응하지 말고 한 박자 멈춰 판단을 살펴라. (20)"
+          },
+          {
+            "anchor": "ch-33",
+            "title": "제33장",
+            "body": "처신의 규범을 미리 정해 두고 어디서나 그것을 지켜라. 말은 적게 하고, 꼭 필요할 때 짧게 하며, 남의 일을 함부로 비웃거나 험담하지 말라. 흔들리지 않는 사람은 외부의 칭찬과 비난이 아니라 자기 안의 원칙을 기준으로 처신한다. (33.13)"
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대 한국어로 의역한 것으로, 저작권이 있는 현대 번역본의 문장을 그대로 옮기지 않는다. 출처 표기(예: 1.1, 5, 20)는 해당 사상이 등장하는 장·절을 가리킨다.",
+        "faq": [
+          {
+            "q": "엥케이리디온은 어떤 책인가요?",
+            "a": "엥케이리디온은 스토아 철학자 에픽테토스의 가르침을 제자 아리아노스가 짧은 편람 형태로 간추린 실천 지침서입니다. 핵심은 제1장의 '우리에게 달린 것과 달리지 않은 것'의 구분으로, 통제할 수 있는 내면(판단·의지)에 집중하고 통제할 수 없는 외부에 마음을 빼앗기지 말라고 가르칩니다."
+          },
+          {
+            "q": "에픽테토스는 누구인가요?",
+            "a": "에픽테토스(서기 50년경~135년경)는 노예로 태어나 훗날 자유민이 된 후기 스토아 학파의 대표 철학자입니다. 직접 책을 쓰지 않았고, 그의 강의를 제자 아리아노스가 받아 적어 <담화록>과 그 요약본인 <엥케이리디온>으로 전했습니다. 마르쿠스 아우렐리우스에게도 깊은 영향을 주었습니다."
+          },
+          {
+            "q": "엥케이리디온 원문을 무료로 읽을 수 있나요?",
+            "a": "네. 저작권이 만료된 영어 번역본을 무료로 읽을 수 있습니다. George Long(1877) 역본은 Wikisource와 Project Gutenberg에서, Elizabeth Carter(1758) 역본은 MIT Internet Classics Archive에서 전문을 제공합니다. 아래 PD 원문 링크에서 확인하세요. 한국어 퍼블릭 도메인 완역은 제한적이라 영어 PD 역본을 안내합니다."
+          },
+          {
+            "q": "Dialogos는 엥케이리디온을 어떻게 인용하나요?",
+            "a": "Dialogos는 저작권이 만료된 원전의 사상을 현대 한국어로 다시 풀어 설명하며, 특정 현대 번역본의 문장을 그대로 인용하지 않습니다. 답변에 붙는 출처 표기(예: 8, 20)는 그 생각이 담긴 엥케이리디온의 장·절 번호를 가리킵니다."
+          }
+        ],
+        "pdIntro": "아래는 저작권이 만료되어 누구나 무료로 읽을 수 있는 영어 번역본입니다. George Long(1877)과 Elizabeth Carter(1758)의 역본은 번역자 사후 100년 이상 지난 퍼블릭 도메인입니다. 한국어 퍼블릭 도메인 완역은 제한적이므로, 검증된 영어 PD 역본으로 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 엥케이리디온 (George Long 역, 1877)",
+            "url": "https://en.wikisource.org/wiki/Encheiridion_of_Epictetus_(George_Long)"
+          },
+          {
+            "label": "Project Gutenberg — 엥케이리디온 (George Long 역)",
+            "url": "https://www.gutenberg.org/files/10661/10661-h/10661-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — 엥케이리디온 (Elizabeth Carter 역, 1758)",
+            "url": "http://classics.mit.edu/Epictetus/epicench.html"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "提要",
+        "mentorName": "エピクテトス",
+        "lede": "提要（エンケイリディオン）— Dialogosが引用するパブリックドメインのストア哲学原典。エピクテトスの核心思想の解説と無料原文の案内。",
+        "intro": "<em>提要</em>（ギリシア語 <em>Encheiridion</em>、「手に収まる小さな書」「手引き」の意）は、奴隷の身から自由を得たストア派の哲学者エピクテトス（紀元50年頃〜135年頃）の教えを、弟子アリアノスが簡潔にまとめた実践の手引きである。膨大な<em>語録</em>の要点だけを抜き出し、「自分に依るもの」と「依らないもの」を見分けることから心の平静が始まると説く。Dialogosでエピクテトスと交わす対話は、この作品の思想に基づいている。",
+        "sections": [
+          {
+            "anchor": "ch-1",
+            "title": "第1章",
+            "body": "世の中には、自分に依るもの（判断・欲求・意志）と、自分に依らないもの（肉体・財産・評判・地位）がある。幸福は、制御できるものだけに心を向け、制御できないものは本来「自分のもの」ではないと見なすことから生まれる。（1.1）"
+          },
+          {
+            "anchor": "ch-5",
+            "title": "第5章",
+            "body": "人を苦しめるのは出来事そのものではなく、その出来事に対する判断である。死さえも恐ろしいものではなく、「恐ろしい」という考えが恐れを生む。だから苦しいとき責めるべきは外の出来事ではなく、自分自身の解釈である。（5）"
+          },
+          {
+            "anchor": "ch-8",
+            "title": "第8章",
+            "body": "物事が自分の望むように起こることを願わず、起こるがままに起こることを願え。そうすれば、すべては穏やかに運ぶ。現実に自らの意志を合わせることが、平静へと至る道である。（8）"
+          },
+          {
+            "anchor": "ch-20",
+            "title": "第20章",
+            "body": "あなたを侮辱するのは、ののしる人や殴る人ではなく、その行いを「侮辱だ」と見なすあなたの判断である。誰かに腹を立てたとき、実はあなたを怒らせているのはあなた自身の考えだ。だから即座に反応せず、一拍おいて判断を見つめ直すがよい。（20）"
+          },
+          {
+            "anchor": "ch-33",
+            "title": "第33章",
+            "body": "ふるまいの規範をあらかじめ定め、どこにいてもそれを守れ。言葉は少なく、必要なときだけ短く語り、他人を軽々しく嘲ったり悪く言ったりするな。揺るがぬ人は、外の称賛や非難ではなく、自らの内なる原則を基準にふるまう。（33.13）"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権の切れた原典の思想を現代日本語に意訳したものであり、著作権のある現代訳の文章をそのまま写すものではない。出典表記（例：1.1、5、20）は、その思想が現れる章・節を指している。",
+        "faq": [
+          {
+            "q": "提要（エンケイリディオン）とはどんな書物ですか？",
+            "a": "提要は、ストア派の哲学者エピクテトスの教えを、弟子アリアノスが短い手引き（マニュアル）の形にまとめた実践書です。核心は第1章の「自分に依るものと依らないもの」の区別で、制御できる内面（判断・意志）に集中し、制御できない外部に心を奪われないよう説きます。"
+          },
+          {
+            "q": "エピクテトスとは誰ですか？",
+            "a": "エピクテトス（紀元50年頃〜135年頃）は、奴隷として生まれのちに自由民となった後期ストア派を代表する哲学者です。自ら著書を残さず、その講義を弟子アリアノスが書き取り、<語録>とその要約である<提要>として伝えました。マルクス・アウレリウスにも深い影響を与えています。"
+          },
+          {
+            "q": "提要の原文を無料で読めますか？",
+            "a": "はい。著作権の切れた英語訳を無料で読めます。George Long訳（1877年）はWikisourceとProject Gutenbergで、Elizabeth Carter訳（1758年）はMIT Internet Classics Archiveで全文が公開されています。下記のパブリックドメイン原文リンクをご覧ください。日本語のパブリックドメイン全訳は限られるため、英語のPD訳を案内しています。"
+          },
+          {
+            "q": "Dialogosは提要をどのように引用しますか？",
+            "a": "Dialogosは、著作権の切れた原典の思想を現代日本語で語り直して説明し、特定の現代訳の文章をそのまま引用することはありません。応答に付く出典表記（例：8、20）は、その考えが含まれる提要の章・節番号を指しています。"
+          }
+        ],
+        "pdIntro": "以下は、著作権が切れて誰でも無料で読める英語訳です。George Long訳（1877年）とElizabeth Carter訳（1758年）は、訳者の没後100年以上を経たパブリックドメインです。日本語のパブリックドメイン全訳は限られるため、検証済みの英語PD訳を案内します。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 提要 (George Long 訳, 1877)",
+            "url": "https://en.wikisource.org/wiki/Encheiridion_of_Epictetus_(George_Long)"
+          },
+          {
+            "label": "Project Gutenberg — 提要 (George Long 訳)",
+            "url": "https://www.gutenberg.org/files/10661/10661-h/10661-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — 提要 (Elizabeth Carter 訳, 1758)",
+            "url": "http://classics.mit.edu/Epictetus/epicench.html"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Enchiridion",
+        "mentorName": "Epictetus",
+        "lede": "Enchiridion — the public-domain Stoic source text Dialogos draws on. A plain-language guide to Epictetus's core ideas, with free original-text links.",
+        "intro": "The <em>Enchiridion</em> (Greek <em>Encheiridion</em>, meaning 'handbook' or 'a small book held in the hand') is a short practical manual distilling the teachings of the Stoic philosopher Epictetus (c. 50–135 CE), a former slave. Compiled by his pupil Arrian from the larger <em>Discourses</em>, it argues that peace of mind begins with one discipline: distinguishing what is within our power from what is not. Dialogos's conversations with Epictetus are grounded in the ideas of this work.",
+        "sections": [
+          {
+            "anchor": "ch-1",
+            "title": "Ch. 1",
+            "body": "Some things are within our power (judgment, desire, will) and some are not (the body, property, reputation, office). Tranquility comes from caring only about what we control and treating what we cannot control as not truly our own. (1.1)"
+          },
+          {
+            "anchor": "ch-5",
+            "title": "Ch. 5",
+            "body": "People are disturbed not by events themselves, but by their judgments about those events. Even death is not fearful; it is the opinion that death is fearful that frightens us. So when distressed, look not to the outside event but to your own interpretation of it. (5)"
+          },
+          {
+            "anchor": "ch-8",
+            "title": "Ch. 8",
+            "body": "Do not seek to have things happen as you wish, but wish them to happen as they do — and your life will go smoothly. Aligning your will with reality, rather than bending reality to your will, is the path to serenity. (8)"
+          },
+          {
+            "anchor": "ch-20",
+            "title": "Ch. 20",
+            "body": "What insults you is not the person who reviles or strikes you, but your own judgment that their act is an insult. When someone provokes you, it is really your own opinion that provokes you. So do not be carried away by the appearance; pause and examine your judgment first. (20)"
+          },
+          {
+            "anchor": "ch-33",
+            "title": "Ch. 33",
+            "body": "Set a standard of conduct for yourself in advance and keep to it everywhere. Speak little, and only when needed; do not mock others or run them down with idle talk. The steady person acts by inner principle rather than by outside praise or blame. (33.13)"
+          }
+        ],
+        "provenance": "Dialogos's replies paraphrase the ideas of this out-of-copyright source into modern language; they do not reproduce any copyrighted modern translation verbatim. Citations (e.g. 1.1, 5, 20) point to the chapter and section where an idea appears.",
+        "faq": [
+          {
+            "q": "What is the Enchiridion about?",
+            "a": "The Enchiridion is a short practical handbook compiled by Arrian from the teachings of the Stoic philosopher Epictetus. Its central idea, set out in Chapter 1, is the dichotomy of control: focus on what is within your power (your judgments and will) and stop being disturbed by what lies outside it (the body, property, reputation)."
+          },
+          {
+            "q": "Who was Epictetus?",
+            "a": "Epictetus (c. 50–135 CE) was a leading philosopher of the late Stoic school who was born a slave and later freed. He wrote nothing himself; his lectures were recorded by his student Arrian and survive as the Discourses and their summary, the Enchiridion. His thought deeply influenced the emperor Marcus Aurelius."
+          },
+          {
+            "q": "Can I read the Enchiridion for free?",
+            "a": "Yes. Public-domain English translations are freely available. George Long's 1877 translation is on Wikisource and Project Gutenberg, and Elizabeth Carter's 1758 translation is on the MIT Internet Classics Archive. See the public-domain links below."
+          },
+          {
+            "q": "How does Dialogos cite the Enchiridion?",
+            "a": "Dialogos restates the ideas of the out-of-copyright original in modern language rather than quoting any particular modern translation word for word. The citations attached to its replies (e.g. 8, 20) point to the chapter and section of the Enchiridion where the idea is found."
+          }
+        ],
+        "pdIntro": "The translations below are out of copyright and free for anyone to read. George Long's translation (1877) and Elizabeth Carter's (1758) are firmly in the public domain, their translators having died well over a century ago.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — Enchiridion (trans. George Long, 1877)",
+            "url": "https://en.wikisource.org/wiki/Encheiridion_of_Epictetus_(George_Long)"
+          },
+          {
+            "label": "Project Gutenberg — Enchiridion (trans. George Long)",
+            "url": "https://www.gutenberg.org/files/10661/10661-h/10661-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — Enchiridion (trans. Elizabeth Carter, 1758)",
+            "url": "http://classics.mit.edu/Epictetus/epicench.html"
+          }
+        ]
+      }
+    }
+  },
+  "discourses": {
+    "slug": "discourses",
+    "mentorId": "epictetus",
+    "icon": "fa-comments",
+    "updated": "2026-06-19",
+    "content": {
+      "ko": {
+        "workName": "담화록",
+        "mentorName": "에픽테토스",
+        "lede": "담화록 — Dialogos가 인용하는 퍼블릭 도메인 스토아 철학 원전. 에픽테토스 사상 해설과 무료 원문 안내.",
+        "intro": "<em>담화록</em>은 노예 출신의 스토아 철학자 에픽테토스(기원후 약 50~135년)가 제자들에게 들려준 가르침을, 제자 아리아노스가 기록한 책입니다. 에픽테토스 자신은 글을 남기지 않았기에, 이 책은 그의 살아 있는 말투와 강의 현장을 그대로 전합니다. 핵심 주제는 '우리에게 달린 것과 달리지 않은 것'을 구별하고, 오직 우리 자신의 판단과 의지에만 집중하라는 가르침입니다. Dialogos에서 에픽테토스와 대화할 때, 그의 답변은 이 담화록의 사상에 뿌리를 둡니다.",
+        "sections": [
+          {
+            "anchor": "book-1",
+            "title": "제1권",
+            "body": "제1권은 스토아 철학의 출발점인 '우리에게 달린 것'을 다룹니다. 에픽테토스는 우리가 통제할 수 있는 것은 오직 우리 자신의 판단·욕구·의지뿐이며, 몸·재산·평판은 우리 밖에 있다고 말합니다 (1.1). 또한 철학의 진보는 무화과가 익어 가듯 시간이 걸리며 서둘러 이룰 수 없다고 가르칩니다 (1.15)."
+          },
+          {
+            "anchor": "book-2",
+            "title": "제2권",
+            "body": "제2권은 외부의 일에 흔들리지 않는 두려움 없는 삶을 다룹니다. 에픽테토스는 주사위 놀이나 공놀이의 비유로, 외적 결과(재료) 자체는 좋지도 나쁘지도 않으며 중요한 것은 그것을 어떻게 쓰느냐라고 말합니다. 죽음·사슬·추방 앞에서도 평정을 지킨 소크라테스처럼, 결과가 아니라 자신의 태도에 마음을 두면 두려움에서 자유로워진다고 가르칩니다 (2.5)."
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대 한국어로 의역한 것이며, 저작권이 있는 현대 번역본의 문장을 그대로 옮기지 않습니다. 출처에 표기된 권·절 번호는 해당 사상이 등장하는 위치를 가리킬 뿐, 특정 번역본의 인용이 아닙니다.",
+        "faq": [
+          {
+            "q": "에픽테토스의 담화록은 어떤 책인가요?",
+            "a": "담화록은 스토아 철학자 에픽테토스가 제자들에게 강의한 내용을, 제자 아리아노스가 받아 적어 전한 4권의 책입니다. '우리에게 달린 것과 달리지 않은 것'을 구별하라는 가르침이 핵심이며, 제1권은 통제 가능한 것에 집중하는 법(1.1)과 철학적 진보에는 시간이 필요함(1.15)을, 제2권은 외부에 흔들리지 않는 두려움 없는 삶(2.5)을 다룹니다."
+          },
+          {
+            "q": "에픽테토스는 누구인가요?",
+            "a": "에픽테토스(기원후 약 50~135년)는 노예로 태어나 훗날 자유를 얻고 스토아 철학을 가르친 철학자입니다. 그는 직접 글을 쓰지 않았고, 제자 아리아노스가 그의 강의를 기록해 담화록과 엥케이리디온(편람)으로 전했습니다. 후대의 마르쿠스 아우렐리우스에게도 큰 영향을 주었습니다."
+          },
+          {
+            "q": "담화록 원문을 무료로 읽을 수 있나요?",
+            "a": "네. 조지 롱(George Long)의 1877년 영어 번역은 저작권이 만료되어 누구나 무료로 읽을 수 있습니다. 아래 PD 원문 안내의 Wikisource, Project Gutenberg, Standard Ebooks 링크에서 전문을 볼 수 있습니다. 한국어 완역은 현대 출판본이 많아 저작권에 유의해야 합니다."
+          },
+          {
+            "q": "Dialogos는 담화록을 어떻게 인용하나요?",
+            "a": "Dialogos는 저작권이 만료된 원전의 사상을 현대어로 풀어 답변하며, 특정 현대 번역본의 문장을 그대로 옮기지 않습니다. 출처로 표기되는 '1.1', '2.5' 같은 번호는 그 사상이 담화록의 어느 권·절에 나오는지를 알려 주는 표시입니다."
+          }
+        ],
+        "pdIntro": "Dialogos가 참고하는 담화록 원전은 저작권이 만료된 퍼블릭 도메인 번역입니다. 아래는 조지 롱(George Long)의 1877년 영어 번역으로, 번역자 사후 충분한 기간이 지나 자유롭게 읽고 인용할 수 있습니다. 한국어 퍼블릭 도메인 완역은 제한적이라, 신뢰할 수 있는 영어 PD 역본을 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 담화록 (George Long 역, 1877)",
+            "url": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments"
+          },
+          {
+            "label": "Project Gutenberg — 담화록 선집 (George Long 역)",
+            "url": "https://www.gutenberg.org/files/10661/10661-h/10661-h.htm"
+          },
+          {
+            "label": "Standard Ebooks — 담화록 (George Long 역)",
+            "url": "https://standardebooks.org/ebooks/epictetus/discourses/george-long"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "語録",
+        "mentorName": "エピクテトス",
+        "lede": "語録 — Dialogosが引用するパブリックドメインのストア哲学原典。エピクテトスの思想解説と無料原文の案内。",
+        "intro": "<em>語録</em>(ディアトリバイ)は、もと奴隷であったストア派の哲学者エピクテトス(紀元50年頃~135年頃)が弟子たちに語った教えを、弟子のアリアノスが書き留めた書物です。エピクテトス自身は著作を残さなかったため、本書は彼の生きた語り口と講義の臨場感をそのまま伝えています。中心となる主題は、「自分の力の及ぶもの」と「及ばないもの」を見分け、ただ自らの判断と意志だけに心を向けよ、という教えです。Dialogosでエピクテトスと対話するとき、その応答はこの語録の思想に根ざしています。エピクテトスは外的な境遇ではなく、それをどう受けとめるかという内なる態度こそが人を自由にすると説きました。この素朴で力強い実践哲学は、のちにローマ皇帝マルクス・アウレリウスにも深い影響を与えています。",
+        "sections": [
+          {
+            "anchor": "book-1",
+            "title": "第1巻",
+            "body": "第1巻はストア哲学の出発点である「私たちに委ねられたもの」を扱います。エピクテトスは、私たちが制御できるのは自分の判断・欲求・意志だけであり、身体・財産・評判は私たちの外にあると説きます(1.1)。また、哲学の進歩はイチジクが熟すように時間を要し、急いで成し遂げられるものではないと教えます(1.15)。"
+          },
+          {
+            "anchor": "book-2",
+            "title": "第2巻",
+            "body": "第2巻は、外的な事柄に動じない「恐れのない生き方」を扱います。エピクテトスは賽(さい)遊びや球技のたとえを用い、外的な結果(素材)それ自体は善でも悪でもなく、大切なのはそれをどう使うかだと述べます。死・鎖・追放を前にしても平静を保ったソクラテスのように、結果ではなく自らの態度に心を置けば、恐れから自由になれると教えます(2.5)。"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権の切れた原典の思想を現代日本語で意訳したものであり、著作権のある現代の翻訳文をそのまま引き写したものではありません。出典として示される巻・節の番号は、その思想が語録のどこに現れるかを指すものであって、特定の翻訳の引用ではありません。",
+        "faq": [
+          {
+            "q": "エピクテトスの語録とはどんな書物ですか?",
+            "a": "語録は、ストア派哲学者エピクテトスが弟子たちに語った講義を、弟子アリアノスが書き留めて伝えた4巻の書です。「私たちに委ねられたものと委ねられないもの」を区別せよという教えが核心で、第1巻は制御できることに集中する法(1.1)と哲学的進歩には時間がかかること(1.15)を、第2巻は外に揺らがない恐れなき生(2.5)を扱います。"
+          },
+          {
+            "q": "エピクテトスとは誰ですか?",
+            "a": "エピクテトス(紀元50年頃~135年頃)は、奴隷として生まれ、のちに自由を得てストア哲学を教えた哲学者です。自ら著述はせず、弟子のアリアノスが講義を記録し、語録とエンケイリディオン(提要)として後世に伝えました。皇帝マルクス・アウレリウスにも大きな影響を与えています。"
+          },
+          {
+            "q": "語録の原文を無料で読めますか?",
+            "a": "はい。ジョージ・ロング(George Long)による1877年の英訳は著作権が切れており、誰でも無料で読むことができます。下記のパブリックドメイン原文案内にあるWikisource、Project Gutenberg、Standard Ebooksのリンクから全文を読めます。日本語の完訳は現代の出版物が多いため、著作権にご注意ください。"
+          },
+          {
+            "q": "Dialogosは語録をどのように引用しますか?",
+            "a": "Dialogosは著作権の切れた原典の思想を現代語で言い換えて応答し、特定の現代訳の文章をそのまま写すことはありません。出典として示される「1.1」「2.5」などの番号は、その思想が語録のどの巻・節に現れるかを知らせる目印です。"
+          }
+        ],
+        "pdIntro": "Dialogosが参照する語録の原典は、著作権の切れたパブリックドメインの翻訳です。以下はジョージ・ロング(George Long)による1877年の英訳で、翻訳者の没後に十分な年月が経過しており、自由に読み引用できます。日本語のパブリックドメイン完訳は限られているため、信頼できる英語のPD訳をご案内します。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 語録 (George Long 訳, 1877)",
+            "url": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments"
+          },
+          {
+            "label": "Project Gutenberg — 語録 選集 (George Long 訳)",
+            "url": "https://www.gutenberg.org/files/10661/10661-h/10661-h.htm"
+          },
+          {
+            "label": "Standard Ebooks — 語録 (George Long 訳)",
+            "url": "https://standardebooks.org/ebooks/epictetus/discourses/george-long"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Discourses",
+        "mentorName": "Epictetus",
+        "lede": "Discourses — the public-domain Stoic source text Dialogos draws on. Commentary on Epictetus's thought and a guide to free original texts.",
+        "intro": "The <em>Discourses</em> (Diatribai) records the teachings of the Stoic philosopher Epictetus (c. 50–135 CE), a former slave, as preserved by his pupil Arrian. Because Epictetus left no writings of his own, the book conveys his living voice and the immediacy of his lecture room. Its central theme is learning to distinguish what is in our power from what is not, and directing our attention to our own judgments and will alone. When you speak with Epictetus in Dialogos, his replies are rooted in the thought of these Discourses.",
+        "sections": [
+          {
+            "anchor": "book-1",
+            "title": "Book 1",
+            "body": "Book 1 treats the starting point of Stoic philosophy — what is in our power. Epictetus says the only things we control are our own judgements, desires, and will, while body, property, and reputation lie outside us (1.1). He also teaches that progress in philosophy, like a fig ripening, takes time and cannot be rushed (1.15)."
+          },
+          {
+            "anchor": "book-2",
+            "title": "Book 2",
+            "body": "Book 2 turns to a life free from fear of external things. Using the image of dice players and a ball game, Epictetus holds that outcomes themselves (the \"materials\") are neither good nor bad—what matters is how we use them. Like Socrates, who kept his composure before death, chains, and exile, we become free from fear when we fix our attention on our own conduct rather than on results (2.5)."
+          }
+        ],
+        "provenance": "Dialogos's replies paraphrase the ideas of public-domain source texts into contemporary language; they do not reproduce the wording of any copyrighted modern translation. The book and section numbers shown as citations point to where an idea appears in the Discourses, not to a quotation from a particular edition.",
+        "faq": [
+          {
+            "q": "What is Epictetus's Discourses?",
+            "a": "The Discourses are four books in which the teachings Epictetus gave to his students were recorded and preserved by his pupil Arrian. The core lesson is to distinguish what is in our power from what is not; Book 1 covers focusing on what we control (1.1) and that progress in philosophy takes time (1.15), and Book 2 treats a fearless life unshaken by externals (2.5)."
+          },
+          {
+            "q": "Who was Epictetus?",
+            "a": "Epictetus (c. 50–135 CE) was born a slave, later gained his freedom, and taught Stoic philosophy. He wrote nothing himself; his pupil Arrian recorded his lectures, which survive as the Discourses and the Enchiridion (Handbook). His thought deeply influenced the later emperor Marcus Aurelius."
+          },
+          {
+            "q": "Can I read the Discourses for free?",
+            "a": "Yes. George Long's 1877 English translation is out of copyright and free to read. You can find the full text through the Wikisource, Project Gutenberg, and Standard Ebooks links in the public-domain text guide below."
+          },
+          {
+            "q": "How does Dialogos cite the Discourses?",
+            "a": "Dialogos paraphrases the ideas of out-of-copyright source texts in modern language and does not copy the wording of any modern translation. Citations such as \"1.1\" or \"2.5\" simply indicate which book and section of the Discourses a given idea comes from."
+          }
+        ],
+        "pdIntro": "The source text Dialogos draws on is a public-domain translation whose copyright has expired. Below is George Long's 1877 English translation; enough time has passed since the translator's death that it may be read and quoted freely. These are well-established public-domain editions of the Discourses.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — Discourses of Epictetus (trans. George Long, 1877)",
+            "url": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments"
+          },
+          {
+            "label": "Project Gutenberg — Selection from the Discourses (trans. George Long)",
+            "url": "https://www.gutenberg.org/files/10661/10661-h/10661-h.htm"
+          },
+          {
+            "label": "Standard Ebooks — Discourses (trans. George Long)",
+            "url": "https://standardebooks.org/ebooks/epictetus/discourses/george-long"
+          }
+        ]
+      }
+    }
+  },
+  "plato-meno": {
+    "slug": "plato-meno",
+    "mentorId": "socrates",
+    "icon": "fa-circle-question",
+    "updated": "2026-06-19",
+    "content": {
+      "ko": {
+        "workName": "플라톤 대화편 · 메논",
+        "mentorName": "소크라테스",
+        "lede": "플라톤 대화편 · 메논 — Dialogos가 인용하는 퍼블릭 도메인 그리스 철학 원전. 메논의 역설 해설과 무료 원문 안내.",
+        "intro": "<em>메논</em>은 기원전 4세기 그리스 철학자 플라톤이 스승 소크라테스를 화자로 삼아 쓴 초·중기 대화편입니다. 귀족 청년 메논이 던진 \"덕(아레테)은 가르칠 수 있는가\"라는 물음에서 출발해, 안다는 것과 배운다는 것이 도대체 무엇인지를 파고듭니다. Dialogos는 이 대화편에서 소크라테스가 보여 주는 묻고 따지는 탐구의 태도를 인용해 대화를 이끕니다.",
+        "sections": [
+          {
+            "anchor": "meno-80",
+            "title": "메논의 역설",
+            "body": "메논은 답을 잘 안다고 자신하다 소크라테스의 거듭된 물음 앞에서 막혀, 그를 \"닿는 사람을 마비시키는 전기가오리(시끈가오리)\"에 빗댑니다. 이어 메논은 유명한 역설을 제기합니다 — 이미 아는 것은 탐구할 필요가 없고, 모르는 것은 무엇을 찾아야 할지조차 알 수 없으니, 탐구 자체가 불가능하다는 것입니다. 소크라테스는 마비시키는 자가 정작 자신도 마비되어 있다고 답하며, 이 막다른 곤경(아포리아)이야말로 참된 탐구의 출발점임을 보여 줍니다 (80a–b)."
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대 한국어로 의역한 것이며, 저작권이 있는 현대 번역본의 문장을 그대로 옮기지 않습니다. 출처 표기(예: 80a–b)는 그 사상이 등장하는 대화편의 절(스테파누스 번호)을 가리킵니다.",
+        "faq": [
+          {
+            "q": "플라톤의 메논은 어떤 내용인가요?",
+            "a": "\"덕은 가르칠 수 있는가\"라는 물음에서 출발해 앎과 배움의 본질을 따지는 대화편입니다. 대표적으로 '메논의 역설'(이미 알면 탐구할 필요가 없고 모르면 무엇을 찾을지 모른다)과, 이에 대한 소크라테스의 '상기설'(배움이란 영혼이 본래 지닌 앎을 다시 떠올리는 것) 논의가 등장합니다."
+          },
+          {
+            "q": "메논의 저자는 누구인가요?",
+            "a": "저자는 고대 그리스 철학자 플라톤(기원전 약 428~348년)입니다. 대화 속 주된 화자는 그의 스승 소크라테스로, 플라톤은 자신의 철학을 소크라테스의 입을 빌려 펼칩니다."
+          },
+          {
+            "q": "메논 원문을 무료로 읽을 수 있나요?",
+            "a": "네. 벤저민 조이트(Benjamin Jowett, 1817~1893)의 영어 번역이 저작권이 만료되어 퍼블릭 도메인입니다. 아래 Wikisource, Project Gutenberg, MIT Internet Classics Archive 링크에서 전문을 무료로 읽을 수 있습니다."
+          },
+          {
+            "q": "Dialogos는 메논을 어떻게 인용하나요?",
+            "a": "Dialogos는 원전의 사상을 현대어로 의역해 대화에 녹입니다. 현대 번역본의 문장을 그대로 전재하지 않으며, 출처는 사상이 등장하는 절(스테파누스 번호, 예: 80a–b)로 표기합니다."
+          }
+        ],
+        "pdIntro": "한국어로 된 메논의 퍼블릭 도메인 완역은 제한적이므로, 저작권이 만료된 영어 번역으로 안내합니다. 아래는 벤저민 조이트(Benjamin Jowett, 1817~1893)의 영역본으로, 번역자 사후 130여 년이 지나 퍼블릭 도메인입니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 메논 (Benjamin Jowett 역)",
+            "url": "https://en.wikisource.org/wiki/The_Dialogues_of_Plato_(Jowett)/Meno"
+          },
+          {
+            "label": "Project Gutenberg — 메논 (Benjamin Jowett 역)",
+            "url": "https://www.gutenberg.org/ebooks/1643"
+          },
+          {
+            "label": "MIT Internet Classics Archive — 메논 (Benjamin Jowett 역)",
+            "url": "https://classics.mit.edu/Plato/meno.html"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "プラトン対話篇 · メノン",
+        "mentorName": "ソクラテス",
+        "lede": "プラトン対話篇 · メノン — Dialogosが引用するパブリックドメインのギリシア哲学原典。メノンのパラドックス解説と無料原文への案内。",
+        "intro": "<em>メノン</em>は、紀元前4世紀のギリシアの哲学者プラトンが、師ソクラテスを語り手として書いた初期から中期の対話篇です。貴族の青年メノンが投げかける「徳(アレテー)は教えられるか」という問いから出発し、知るとは何か、学ぶとは何かを徹底して掘り下げます。とりわけ「探究は本当に可能なのか」という難問と、それに答える〈想起説(アナムネーシス)〉——学びとは魂がもともと宿していた知を思い出すことだ——が示される点に、本篇の哲学的な核があります。Dialogosは、この対話篇でソクラテスが見せる、問い詰めて吟味する探究の姿勢を引用して対話を導きます。",
+        "sections": [
+          {
+            "anchor": "meno-80",
+            "title": "メノンのパラドックス",
+            "body": "答えをよく知っていると自負していたメノンは、ソクラテスの重ねる問いの前で行き詰まり、彼を「触れた者を痺れさせる電気うなぎ(シビレエイ)」になぞらえます。そして有名なパラドックスを持ち出します——すでに知っていることは探究する必要がなく、知らないことは何を探すべきかさえ分からない、ゆえに探究そのものが不可能だ、と。ソクラテスは、痺れさせる当の自分こそ痺れているのだと応じ、この行き詰まり(アポリア)こそが真の探究の出発点であることを示します (80a–b)。"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権の切れた原典の思想を現代語に意訳したものであり、著作権のある現代訳の文章をそのまま引き写すことはありません。出典の表記(例:80a–b)は、その思想が現れる対話篇の節(ステファヌス番号)を指します。",
+        "faq": [
+          {
+            "q": "プラトンの『メノン』はどんな内容ですか?",
+            "a": "「徳は教えられるか」という問いから出発し、知ることと学ぶことの本質を吟味する対話篇です。代表的には〈メノンのパラドックス〉(すでに知っていれば探究は不要、知らなければ何を探すか分からない)と、それに答えるソクラテスの〈想起説〉(学びとは魂がもともと宿していた知を思い出すこと)が論じられます。"
+          },
+          {
+            "q": "『メノン』の著者は誰ですか?",
+            "a": "著者は古代ギリシアの哲学者プラトン(紀元前約428~348年)です。対話の主な語り手は師ソクラテスで、プラトンは自らの哲学をソクラテスの口を借りて展開しています。"
+          },
+          {
+            "q": "『メノン』の原文を無料で読めますか?",
+            "a": "はい。ベンジャミン・ジョウェット(Benjamin Jowett、1817~1893)の英訳は著作権が切れてパブリックドメインです。下のWikisource、Project Gutenberg、MIT Internet Classics Archiveのリンクから全文を無料で読めます。"
+          },
+          {
+            "q": "Dialogosは『メノン』をどのように引用しますか?",
+            "a": "Dialogosは原典の思想を現代語に意訳して対話に織り込みます。現代訳の文章をそのまま転載することはなく、出典は思想が現れる節(ステファヌス番号、例:80a–b)で示します。"
+          }
+        ],
+        "pdIntro": "日本語によるメノンのパブリックドメイン完訳は限られているため、著作権の切れた英訳でご案内します。以下はベンジャミン・ジョウェット(Benjamin Jowett、1817~1893)の英訳で、訳者の没後130年以上を経てパブリックドメインです。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — メノン (Benjamin Jowett 訳)",
+            "url": "https://en.wikisource.org/wiki/The_Dialogues_of_Plato_(Jowett)/Meno"
+          },
+          {
+            "label": "Project Gutenberg — メノン (Benjamin Jowett 訳)",
+            "url": "https://www.gutenberg.org/ebooks/1643"
+          },
+          {
+            "label": "MIT Internet Classics Archive — メノン (Benjamin Jowett 訳)",
+            "url": "https://classics.mit.edu/Plato/meno.html"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Plato's Meno",
+        "mentorName": "Socrates",
+        "lede": "Plato's Meno — the public-domain Greek philosophical source Dialogos cites. A guide to Meno's paradox and where to read the original for free.",
+        "intro": "<em>Meno</em> is an early-to-middle dialogue written by the 4th-century BCE Greek philosopher Plato, with his teacher Socrates as its central speaker. It opens with the young aristocrat Meno's question — can virtue (<em>aretē</em>) be taught? — and turns it into a deeper inquiry into what it really means to know and to learn. Dialogos draws on the questioning, examining spirit Socrates shows in this dialogue to guide its conversations.",
+        "sections": [
+          {
+            "anchor": "meno-80",
+            "title": "Meno's paradox",
+            "body": "Confident that he knows his answers, Meno is brought to a standstill by Socrates' repeated questioning and compares him to a torpedo fish (a sting ray) that numbs whoever touches it. Meno then raises his famous paradox: a person cannot inquire into what he already knows, since there is nothing to seek, nor into what he does not know, since he would not know what to look for — so inquiry seems impossible. Socrates replies that the one who numbs others is himself numb too, and shows that this very impasse (<em>aporia</em>) is where genuine inquiry begins (80a–b)."
+          }
+        ],
+        "provenance": "Dialogos paraphrases the ideas of out-of-copyright source texts into modern language; it does not reproduce the wording of any copyrighted modern translation. A citation (for example, 80a–b) points to the section of the dialogue (the Stephanus number) where the idea appears.",
+        "faq": [
+          {
+            "q": "What is Plato's Meno about?",
+            "a": "It is a dialogue that begins with the question \"Can virtue be taught?\" and uses it to examine the nature of knowledge and learning. Its most famous moments are Meno's paradox (you cannot inquire into what you already know, nor into what you don't know) and Socrates' reply, the theory of recollection — that learning is the soul recalling knowledge it already possessed."
+          },
+          {
+            "q": "Who wrote the Meno?",
+            "a": "The author is the ancient Greek philosopher Plato (c. 428–348 BCE). The main speaker in the dialogue is his teacher Socrates, through whom Plato voices his own philosophy."
+          },
+          {
+            "q": "Can I read the Meno for free?",
+            "a": "Yes. Benjamin Jowett's English translation (Jowett, 1817–1893) is out of copyright and in the public domain. You can read the full text for free at the Wikisource, Project Gutenberg, and MIT Internet Classics Archive links below."
+          },
+          {
+            "q": "How does Dialogos cite the Meno?",
+            "a": "Dialogos weaves the ideas of the original into conversation in modern paraphrase. It does not reprint any modern translation verbatim, and it cites sources by the section where an idea appears (the Stephanus number, e.g. 80a–b)."
+          }
+        ],
+        "pdIntro": "The text below is Benjamin Jowett's English translation (Jowett, 1817–1893), which is in the public domain more than a century after the translator's death.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — Meno (trans. Benjamin Jowett)",
+            "url": "https://en.wikisource.org/wiki/The_Dialogues_of_Plato_(Jowett)/Meno"
+          },
+          {
+            "label": "Project Gutenberg — Meno (trans. Benjamin Jowett)",
+            "url": "https://www.gutenberg.org/ebooks/1643"
+          },
+          {
+            "label": "MIT Internet Classics Archive — Meno (trans. Benjamin Jowett)",
+            "url": "https://classics.mit.edu/Plato/meno.html"
+          }
+        ]
+      }
+    }
+  },
+  "plato-euthyphro": {
+    "content": {
+      "ko": {
+        "workName": "플라톤 대화편 · 에우티프론",
+        "mentorName": "소크라테스",
+        "lede": "플라톤 『에우티프론』 — Dialogos가 인용하는 퍼블릭 도메인 철학 원전. 경건의 정의를 묻는 소크라테스 대화 해설과 무료 원문 안내.",
+        "intro": "『에우티프론』은 고대 그리스 철학자 <em>플라톤</em>이 스승 소크라테스를 화자로 삼아 기원전 4세기경에 쓴 초기 대화편입니다. 불경죄로 재판을 앞둔 소크라테스가 법정 앞에서 예언자 에우티프론을 만나 '경건(敬虔)이란 무엇인가'를 캐묻는 짧은 대화로, 도덕의 근거를 신의 뜻에 두는 사고를 흔드는 이른바 '에우티프론 딜레마'로 유명합니다. Dialogos는 이 대화편이 보여 주는 소크라테스식 문답(엘렝코스)을 인용해, 손쉬운 정의를 의심하고 개념의 본질을 되묻는 태도를 전합니다.",
+        "sections": [
+          {
+            "anchor": "euthyphro-6",
+            "title": "경건의 정의",
+            "body": "소크라테스는 에우티프론에게 '신들이 사랑하는 것'이나 개별 사례가 아니라, 모든 경건한 행위를 경건하게 만드는 하나의 본(本)·형상(에이도스)을 제시하라고 요구합니다. 이어 '신들이 사랑하기에 경건한가, 아니면 경건하기에 신들이 사랑하는가'라고 되물어, 신의 승인이 도덕의 근거가 될 수 없음을 드러냅니다 (6d–e, 딜레마는 10a에서 완성)."
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대 한국어로 의역한 것이며, 저작권이 있는 현대 번역본을 그대로 옮기지 않습니다. 출처 표기는 해당 사상이 등장하는 대화편의 절(스테파누스 번호)을 가리킵니다.",
+        "faq": [
+          {
+            "q": "플라톤 『에우티프론』은 어떤 작품인가요?",
+            "a": "소크라테스가 불경죄 재판을 앞두고 예언자 에우티프론과 '경건이란 무엇인가'를 두고 나누는 짧은 대화편입니다. 도덕의 근거를 신의 뜻에 두려는 시도를 의심하는 '에우티프론 딜레마'(6d–e, 10a)로 잘 알려져 있습니다."
+          },
+          {
+            "q": "이 작품의 저자와 화자는 누구인가요?",
+            "a": "저자는 고대 그리스 철학자 플라톤이고, 대화를 이끄는 화자는 그의 스승 소크라테스입니다. 플라톤이 소크라테스를 등장인물로 삼아 기원전 4세기경에 쓴 초기 대화편입니다."
+          },
+          {
+            "q": "『에우티프론』 원문을 무료로 읽을 수 있나요?",
+            "a": "네. 벤저민 조웟(Benjamin Jowett, 1817–1893)의 영어 번역은 저작권이 만료되어 퍼블릭 도메인입니다. Wikisource, Project Gutenberg, MIT Internet Classics Archive에서 전문을 무료로 읽을 수 있습니다."
+          },
+          {
+            "q": "Dialogos는 이 작품을 어떻게 인용하나요?",
+            "a": "Dialogos는 원전의 사상을 현대어로 의역해 전하며, 저작권 있는 현대 번역을 그대로 옮기지 않습니다. 인용 표기는 사상이 등장하는 대화편의 절(예: 6d–e)을 가리킵니다."
+          }
+        ],
+        "pdIntro": "아래는 저작권이 만료된 퍼블릭 도메인 원문입니다. 번역은 옥스퍼드 학자 벤저민 조웟(Benjamin Jowett, 1817–1893)의 고전 영어 역본으로, 번역자 사후 100년이 넘어 퍼블릭 도메인입니다. 한국어 PD 완역은 제한적이어서, 무료로 확인 가능한 영어 PD 역본을 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 에우티프론 (Benjamin Jowett 역)",
+            "url": "https://en.wikisource.org/wiki/Euthyphro_(Jowett)"
+          },
+          {
+            "label": "Project Gutenberg — 에우티프론 (Benjamin Jowett 역)",
+            "url": "https://www.gutenberg.org/files/1642/1642-h/1642-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — 에우티프론 (Benjamin Jowett 역)",
+            "url": "https://classics.mit.edu/Plato/euthyfro.html"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "プラトン対話篇 · エウテュプロン",
+        "mentorName": "ソクラテス",
+        "lede": "プラトン『エウテュプロン』——Dialogosが引用するパブリックドメインの哲学原典。敬虔の定義を問うソクラテスの対話解説と無料原文案内。",
+        "intro": "『エウテュプロン』は、古代ギリシアの哲学者<em>プラトン</em>が師ソクラテスを語り手として紀元前4世紀ごろに著した初期対話篇です。不敬の罪で裁判を控えたソクラテスが、法廷の前で予言者エウテュプロンと出会い、「敬虔（けいけん）とは何か」を問い詰める短い対話で、道徳の根拠を神々の意志に置く考えを揺さぶる「エウテュプロンのジレンマ」で知られます。Dialogosはこの対話篇が示すソクラテス式問答（エレンコス）を引用し、安易な定義を疑い、概念の本質を問い直す姿勢を伝えます。日本語では、神が善を命じるから善いのか、善いから神が命じるのか——という倫理学の根本問いとして今も論じられています。",
+        "sections": [
+          {
+            "anchor": "euthyphro-6",
+            "title": "敬虔の定義",
+            "body": "ソクラテスはエウテュプロンに、「神々が愛するもの」や個々の事例ではなく、すべての敬虔な行いを敬虔たらしめる一つの本（エイドス・形相）を示すよう求めます。さらに「神々が愛するから敬虔なのか、それとも敬虔だから神々が愛するのか」と問い返し、神々の承認が道徳の根拠とはなり得ないことを明らかにします（6d–e、ジレンマは10aで完成）。"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権が消滅した原典の思想を現代日本語に意訳したものであり、著作権のある現代訳をそのまま引き写すものではありません。出典表記は、その思想が現れる対話篇の節（ステファヌス番号）を指します。",
+        "faq": [
+          {
+            "q": "プラトン『エウテュプロン』とはどんな作品ですか？",
+            "a": "ソクラテスが不敬罪の裁判を前に、予言者エウテュプロンと「敬虔とは何か」を論じる短い対話篇です。道徳の根拠を神々の意志に置こうとする試みを疑う「エウテュプロンのジレンマ」（6d–e、10a）で広く知られています。"
+          },
+          {
+            "q": "この作品の著者と語り手は誰ですか？",
+            "a": "著者は古代ギリシアの哲学者プラトンで、対話を導く語り手はその師ソクラテスです。プラトンがソクラテスを登場人物として紀元前4世紀ごろに著した初期対話篇です。"
+          },
+          {
+            "q": "『エウテュプロン』の原文を無料で読めますか？",
+            "a": "はい。ベンジャミン・ジャウェット（Benjamin Jowett, 1817–1893）の英訳は著作権が消滅したパブリックドメインです。Wikisource、Project Gutenberg、MIT Internet Classics Archiveで全文を無料で読めます。"
+          },
+          {
+            "q": "Dialogosはこの作品をどのように引用しますか？",
+            "a": "Dialogosは原典の思想を現代語に意訳して伝え、著作権のある現代訳をそのまま引き写すことはありません。出典表記は思想が現れる対話篇の節（例：6d–e）を指します。"
+          }
+        ],
+        "pdIntro": "以下は著作権が消滅したパブリックドメインの原文です。訳はオックスフォードの学者ベンジャミン・ジャウェット（Benjamin Jowett, 1817–1893）による古典英訳で、訳者没後100年以上が経過しパブリックドメインです。日本語のPD完訳は限られるため、無料で確認できる英語のPD訳を案内します。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — エウテュプロン（Benjamin Jowett 訳）",
+            "url": "https://en.wikisource.org/wiki/Euthyphro_(Jowett)"
+          },
+          {
+            "label": "Project Gutenberg — エウテュプロン（Benjamin Jowett 訳）",
+            "url": "https://www.gutenberg.org/files/1642/1642-h/1642-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — エウテュプロン（Benjamin Jowett 訳）",
+            "url": "https://classics.mit.edu/Plato/euthyfro.html"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Plato's Euthyphro",
+        "mentorName": "Socrates",
+        "lede": "Plato's Euthyphro — the public-domain philosophical source Dialogos draws on. Commentary on Socrates' inquiry into piety, plus free original-text links.",
+        "intro": "The <em>Euthyphro</em> is an early dialogue written by the ancient Greek philosopher <em>Plato</em> around the 4th century BC, with his teacher Socrates as its speaker. Awaiting his own trial on a charge of impiety, Socrates meets the self-assured seer Euthyphro outside the court and presses him on a single question: what is piety? The dialogue is famous for the 'Euthyphro dilemma,' which unsettles the idea that morality can be grounded in the will of the gods. Dialogos draws on its Socratic method of question and answer (elenchus) to model the habit of doubting easy definitions and asking after the essence of a concept.",
+        "sections": [
+          {
+            "anchor": "euthyphro-6",
+            "title": "Defining piety",
+            "body": "Socrates asks Euthyphro not for examples or for 'what the gods love,' but for the single form (eidos) by which all pious acts are pious. He then turns the question around — are pious things loved by the gods because they are pious, or pious because they are loved? — to show that divine approval cannot be what makes an act holy (6d–e; the dilemma is fully drawn at 10a)."
+          }
+        ],
+        "provenance": "Dialogos paraphrases the ideas of out-of-copyright source texts into modern language; it does not reproduce any copyrighted modern translation verbatim. Citations point to the section (Stephanus number) of the dialogue where an idea appears.",
+        "faq": [
+          {
+            "q": "What is Plato's Euthyphro about?",
+            "a": "It is a short dialogue in which Socrates, awaiting his own trial for impiety, questions the seer Euthyphro about what piety really is. It is best known for the 'Euthyphro dilemma' (6d–e, 10a), which challenges the attempt to ground morality in the will of the gods."
+          },
+          {
+            "q": "Who wrote it, and who is the speaker?",
+            "a": "The author is the ancient Greek philosopher Plato, and the speaker who leads the conversation is his teacher Socrates. Plato wrote it as an early dialogue, casting Socrates as its central character, around the 4th century BC."
+          },
+          {
+            "q": "Can I read the Euthyphro for free?",
+            "a": "Yes. Benjamin Jowett's English translation (Jowett, 1817–1893) is out of copyright and in the public domain. You can read the full text for free at Wikisource, Project Gutenberg, and the MIT Internet Classics Archive."
+          },
+          {
+            "q": "How does Dialogos cite this work?",
+            "a": "Dialogos paraphrases the source's ideas into modern language and never copies a copyrighted modern translation. Citations point to the section of the dialogue (for example, 6d–e) where the idea appears."
+          }
+        ],
+        "pdIntro": "The text below is in the public domain. The translation is the classic English version by the Oxford scholar Benjamin Jowett (1817–1893); more than a century after the translator's death, it is firmly in the public domain.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — Euthyphro (trans. Benjamin Jowett)",
+            "url": "https://en.wikisource.org/wiki/Euthyphro_(Jowett)"
+          },
+          {
+            "label": "Project Gutenberg — Euthyphro (trans. Benjamin Jowett)",
+            "url": "https://www.gutenberg.org/files/1642/1642-h/1642-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — Euthyphro (trans. Benjamin Jowett)",
+            "url": "https://classics.mit.edu/Plato/euthyfro.html"
+          }
+        ]
+      }
+    },
+    "icon": "fa-scale-balanced",
+    "mentorId": "socrates",
+    "slug": "plato-euthyphro",
+    "updated": "2026-06-19"
+  },
+  "plato-apology": {
+    "slug": "plato-apology",
+    "mentorId": "socrates",
+    "icon": "fa-gavel",
+    "updated": "2026-06-19",
+    "content": {
+      "ko": {
+        "workName": "플라톤 대화편 · 변론",
+        "mentorName": "소크라테스",
+        "lede": "플라톤 대화편 · 변론 — Dialogos가 인용하는 퍼블릭 도메인 소크라테스 법정 변론의 원전. 해설과 무료 원문 안내.",
+        "intro": "<em>변론(Apologia)</em>은 기원전 399년, 불경과 청년 타락을 이유로 고발당한 소크라테스가 아테네 법정에서 행한 자기 변론을 제자 플라톤이 기록한 대화편이다. 죽음을 앞두고도 타협 없이 철학적 삶을 옹호하는 이 연설은 서양 철학의 출발점으로 꼽힌다. Dialogos는 이 작품 속 소크라테스의 핵심 사상을 인용해 화자 '소크라테스'의 대화를 구성한다.",
+        "sections": [
+          {
+            "anchor": "apology-21",
+            "title": "무지의 지",
+            "body": "델포이 신탁이 '소크라테스보다 지혜로운 자는 없다'고 한 까닭을 캐묻던 소크라테스는, 자신은 아무것도 모르면서 안다고 착각하는 사람들과 달리 적어도 자신이 모른다는 것을 안다는 점에서만 더 지혜롭다고 결론짓는다. (21d)"
+          },
+          {
+            "anchor": "apology-38",
+            "title": "성찰하는 삶",
+            "body": "유죄 판결 뒤 소크라테스는 침묵하고 살라는 제안을 거부하며, 날마다 덕과 자기 자신을 캐묻고 따지는 것이야말로 인간 최고의 선이고, 성찰하지 않는 삶은 사람으로서 살 가치가 없다고 선언한다. (38a)"
+          }
+        ],
+        "provenance": "Dialogos의 답변은 저작권이 만료된 원전의 사상을 현대 한국어로 의역한 것이며, 저작권이 있는 현대 번역본을 그대로 옮기지 않는다. 출처 표기(예: 21d, 38a)는 해당 사상이 등장하는 절(Stephanus 번호)을 가리킨다.",
+        "faq": [
+          {
+            "q": "플라톤의 변론은 어떤 작품인가요?",
+            "a": "소크라테스가 기원전 399년 아테네 법정에서 불경죄와 청년 타락 혐의에 맞서 자신을 변론한 연설을, 제자 플라톤이 기록한 대화편입니다. '무지의 지'(21d)와 '성찰하지 않는 삶은 살 가치가 없다'(38a)는 두 명제가 가장 널리 인용됩니다."
+          },
+          {
+            "q": "변론의 저자는 누구인가요?",
+            "a": "저자는 플라톤이고, 작품 속에서 말하는 화자는 그의 스승 소크라테스입니다. 소크라테스 자신은 글을 남기지 않았기에, 우리가 아는 소크라테스의 변론은 플라톤이 기록한 이 대화편을 통해 전해집니다."
+          },
+          {
+            "q": "변론 원문을 무료로 읽을 수 있나요?",
+            "a": "네. 벤저민 조웻(1892)의 영어 번역이 저작권 만료로 퍼블릭 도메인이라, Wikisource·Project Gutenberg·MIT Internet Classics Archive에서 전문을 무료로 읽을 수 있습니다. 아래 링크를 참고하세요."
+          },
+          {
+            "q": "Dialogos는 변론을 어떻게 인용하나요?",
+            "a": "Dialogos는 원전의 사상을 현대어로 다시 풀어 화자 '소크라테스'의 대화를 만들고, 사상이 등장하는 절 번호(예: 21d, 38a)를 출처로 표기합니다. 저작권 있는 번역문을 그대로 인용하지 않습니다."
+          }
+        ],
+        "pdIntro": "한국어로 된 변론의 퍼블릭 도메인 완역은 제한적이라, 저작권이 만료된 영어 표준 역본인 벤저민 조웻(Benjamin Jowett, 1892년 번역, 1893년 사망)의 번역으로 안내합니다. 아래 사이트에서 전문을 무료로 읽을 수 있습니다.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — 플라톤 변론 (각종 퍼블릭 도메인 역본)",
+            "url": "https://en.wikisource.org/wiki/Apology_(Plato)"
+          },
+          {
+            "label": "Project Gutenberg — 플라톤 변론 (조웻 역)",
+            "url": "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — 플라톤 변론 (조웻 역)",
+            "url": "http://classics.mit.edu/Plato/apology.html"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "プラトン対話篇 · 弁明",
+        "mentorName": "ソクラテス",
+        "lede": "プラトン対話篇 · 弁明 — Dialogosが引用するパブリックドメインのソクラテス法廷弁論の原典。解説と無料原文の案内。",
+        "intro": "<em>弁明（Apologia）</em>は、紀元前399年、不敬と若者を堕落させた罪で告発されたソクラテスがアテナイの法廷で行った自己弁論を、弟子プラトンが記録した対話篇です。死を前にしても妥協せず哲学的な生き方を擁護するこの演説は、西洋哲学の出発点とされます。問答を重ねて相手の思い込みを吟味するソクラテスの姿勢がここに鮮やかに描かれます。Dialogosはこの作品におけるソクラテスの核心思想を引用し、話者「ソクラテス」との対話を組み立てています。",
+        "sections": [
+          {
+            "anchor": "apology-21",
+            "title": "無知の知",
+            "body": "「ソクラテスより賢い者はいない」というデルフォイの神託の意味を確かめようとしたソクラテスは、自分は何も知らないのに知っていると思い込む人々と違い、少なくとも自分が知らないことを自覚している点でだけ賢いのだ、と結論づけます。(21d)"
+          },
+          {
+            "anchor": "apology-38",
+            "title": "吟味する生",
+            "body": "有罪判決のあと、黙って暮らせという提案を退けたソクラテスは、日々徳について、また自分自身について問い吟味することこそ人間にとって最大の善であり、吟味されない生は人として生きるに値しない、と宣言します。(38a)"
+          }
+        ],
+        "provenance": "Dialogosの応答は、著作権が消滅した原典の思想を現代の日本語で意訳したものであり、著作権のある現代語訳をそのまま転載するものではありません。出典表記（例：21d、38a）は、その思想が現れる節（ステファヌス番号）を指しています。",
+        "faq": [
+          {
+            "q": "プラトンの『弁明』とはどんな作品ですか？",
+            "a": "ソクラテスが紀元前399年、アテナイの法廷で不敬罪と若者を堕落させた罪に対して自らを弁護した演説を、弟子プラトンが記録した対話篇です。「無知の知」(21d)と「吟味されない生は生きるに値しない」(38a)という二つの命題が最もよく引用されます。"
+          },
+          {
+            "q": "『弁明』の著者は誰ですか？",
+            "a": "著者はプラトンで、作中で語る話者はその師ソクラテスです。ソクラテス自身は著作を残さなかったため、私たちが知るソクラテスの弁論は、プラトンが記したこの対話篇を通じて伝えられています。"
+          },
+          {
+            "q": "『弁明』の原文を無料で読めますか？",
+            "a": "はい。ベンジャミン・ジョウェット（1892年訳）の英訳は著作権が消滅しパブリックドメインなので、Wikisource・Project Gutenberg・MIT Internet Classics Archiveで全文を無料で読めます。下のリンクをご覧ください。"
+          },
+          {
+            "q": "Dialogosは『弁明』をどのように引用しますか？",
+            "a": "Dialogosは原典の思想を現代語で言い換えて話者「ソクラテス」との対話を作り、思想が現れる節番号（例：21d、38a）を出典として示します。著作権のある翻訳文をそのまま引用することはありません。"
+          }
+        ],
+        "pdIntro": "日本語による『弁明』のパブリックドメイン全訳は限られているため、著作権が消滅した英語の標準訳であるベンジャミン・ジョウェット（Benjamin Jowett、1892年訳、1893年没）の翻訳をご案内します。下記サイトで全文を無料で読めます。",
+        "pdLinks": [
+          {
+            "label": "Wikisource — プラトン『弁明』（各種パブリックドメイン訳）",
+            "url": "https://en.wikisource.org/wiki/Apology_(Plato)"
+          },
+          {
+            "label": "Project Gutenberg — プラトン『弁明』（ジョウェット訳）",
+            "url": "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — プラトン『弁明』（ジョウェット訳）",
+            "url": "http://classics.mit.edu/Plato/apology.html"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Plato's Apology",
+        "mentorName": "Socrates",
+        "lede": "Plato's Apology — the public-domain source for the Socratic courtroom defense that Dialogos quotes. Commentary and free full-text links.",
+        "intro": "<em>The Apology</em> is Plato's record of the defense speech Socrates gave before an Athenian jury in 399 BCE, charged with impiety and corrupting the young. Refusing to compromise even with death at hand, Socrates defends the philosophical life itself, and the dialogue is widely regarded as a founding text of Western philosophy. Dialogos draws on the core ideas of this work to shape its conversations with the mentor 'Socrates'.",
+        "sections": [
+          {
+            "anchor": "apology-21",
+            "title": "Knowing that one does not know",
+            "body": "Investigating why the Delphic oracle declared that no one was wiser than he, Socrates concludes that he is wiser only in this one respect: unlike those who think they know what they do not, he is at least aware of his own ignorance. (21d)"
+          },
+          {
+            "anchor": "apology-38",
+            "title": "The examined life",
+            "body": "After his conviction, Socrates refuses the option of living in silence, declaring that daily inquiry into virtue and into oneself is the greatest good for a human being, and that the unexamined life is not worth living. (38a)"
+          }
+        ],
+        "provenance": "Dialogos's replies paraphrase the ideas of this out-of-copyright source into contemporary language; they do not reproduce any copyrighted modern translation. Citations such as 21d and 38a point to the section (Stephanus number) where each idea appears.",
+        "faq": [
+          {
+            "q": "What is Plato's Apology about?",
+            "a": "It is Plato's record of the speech Socrates gave defending himself before an Athenian court in 399 BCE against charges of impiety and corrupting the young. Its two most-quoted ideas are knowing that one does not know (21d) and that the unexamined life is not worth living (38a)."
+          },
+          {
+            "q": "Who wrote the Apology?",
+            "a": "The author is Plato, and the speaker within the work is his teacher Socrates. Because Socrates wrote nothing himself, the defense we know comes to us through this dialogue as Plato set it down."
+          },
+          {
+            "q": "Can I read the Apology for free?",
+            "a": "Yes. Benjamin Jowett's English translation (1892) is out of copyright and in the public domain, so you can read the full text for free on Wikisource, Project Gutenberg, and the MIT Internet Classics Archive. See the links below."
+          },
+          {
+            "q": "How does Dialogos cite the Apology?",
+            "a": "Dialogos paraphrases the source's ideas into modern language to build conversations with the mentor 'Socrates', and cites the section number (such as 21d or 38a) where each idea appears, rather than quoting any copyrighted translation."
+          }
+        ],
+        "pdIntro": "The standard public-domain English text is Benjamin Jowett's translation (published 1892; Jowett died in 1893), which is out of copyright. You can read the full work for free at the sites below.",
+        "pdLinks": [
+          {
+            "label": "Wikisource — Apology (Plato), public-domain translations",
+            "url": "https://en.wikisource.org/wiki/Apology_(Plato)"
+          },
+          {
+            "label": "Project Gutenberg — Apology by Plato (Jowett translation)",
+            "url": "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm"
+          },
+          {
+            "label": "MIT Internet Classics Archive — Apology by Plato (Jowett translation)",
+            "url": "http://classics.mit.edu/Plato/apology.html"
+          }
+        ]
+      }
+    }
+  }
+}

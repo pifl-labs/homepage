@@ -1,0 +1,9 @@
+---
+import DialogosSourcePage from '../../../../../components/DialogosSourcePage.astro';
+import { sourceList } from '../../../../../data/dialogos-sources';
+export function getStaticPaths() {
+  return sourceList.map((w) => ({ params: { slug: w.slug }, props: { work: w } }));
+}
+const { work } = Astro.props;
+---
+<DialogosSourcePage work={work} lang="ja" />

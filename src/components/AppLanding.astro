@@ -32,6 +32,27 @@ const alternates = [
 const backLabel = lang === 'ko' ? '모든 앱 보기' : lang === 'ja' ? 'すべてのアプリ' : 'All apps';
 const homeHref = `/${lang}/#apps`;
 
+// Dialogos 전용 — 출처 라이브러리(허브)로 잇는 다리 섹션.
+const sourceLib = app.slug === 'dialogos'
+  ? {
+      ko: {
+        title: '출처 라이브러리',
+        desc: 'Dialogos가 인용하는 퍼블릭 도메인 원전 — 명상록·세네카 편지·엥케이리디온·플라톤 대화편의 해설과 무료 원문을 한곳에서.',
+        cta: '출처 라이브러리 보기',
+      },
+      ja: {
+        title: '出典ライブラリ',
+        desc: 'Dialogos が引用するパブリックドメインの原典 — 自省録・セネカの手紙・提要・プラトン対話篇の解説と無料原文を一覧で。',
+        cta: '出典ライブラリを見る',
+      },
+      en: {
+        title: 'Source Library',
+        desc: 'The public-domain texts Dialogos cites — the Meditations, Seneca’s letters, the Enchiridion, and Plato’s dialogues, with overviews and free originals.',
+        cta: 'Browse the Source Library',
+      },
+    }[lang]
+  : null;
+
 // SoftwareApplication 구조화 데이터 — 미출시(soon) 앱엔 offers/OS 미출력 (구조화 데이터 정확성)
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -145,6 +166,23 @@ const jsonLd = {
       </div>
     </section>
 
+    {sourceLib && (
+      <section class="app-section">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">03 / {sourceLib.title}</div>
+            <h2 class="section-title">{sourceLib.title}</h2>
+          </div>
+          <div class="app-srclib">
+            <p class="app-srclib-desc">{sourceLib.desc}</p>
+            <a class="app-srclib-link" href={`/${lang}/apps/dialogos/sources/`}>
+              <i class="fas fa-book-open" aria-hidden="true"></i> {sourceLib.cta} <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
+
     <!-- FINAL CTA -->
     <section class="app-cta">
       <div class="container">
@@ -178,3 +216,15 @@ const jsonLd = {
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .app-srclib { text-align: center; max-width: 680px; margin: 0 auto; }
+  .app-srclib-desc { color: var(--text-secondary); margin-bottom: var(--s-md); line-height: 1.7; }
+  .app-srclib-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.85rem 1.7rem; border-radius: var(--radius-pill);
+    background: var(--gradient-cta); color: #fff; text-decoration: none; font-weight: 600;
+    transition: transform 0.15s;
+  }
+  .app-srclib-link:hover { transform: translateY(-2px); }
+</style>

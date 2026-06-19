@@ -1,3 +1,9 @@
 # Cloudflare Pages 리다이렉트
 # 구 sitemap.xml → Astro 생성 sitemap-index.xml (검색엔진 캐시 대비)
 /sitemap.xml  /sitemap-index.xml  301
+
+# Dialogos 출처: 프로토타입 권 단위 slug → 저작 단위 통합 페이지
+/ko/apps/dialogos/sources/meditations-book-5  /ko/apps/dialogos/sources/meditations  301
+/ja/apps/dialogos/sources/meditations-book-5  /ja/apps/dialogos/sources/meditations  301
+/en/apps/dialogos/sources/meditations-book-5  /en/apps/dialogos/sources/meditations  301
+/apps/dialogos/sources/meditations-book-5  /en/apps/dialogos/sources/meditations  301
