@@ -211,9 +211,12 @@ const words: AppMeta = {
 const dday: AppMeta = {
   slug: 'pipi-dday',
   name: 'PiPi D-Day',
-  status: 'soon',
+  status: 'live',
   category: { ko: '생산성 · 디데이', ja: '生産性 · カウントダウン', en: 'Productivity · Countdown' },
-  stores: {},
+  stores: {
+    ios: 'https://apps.apple.com/app/pipi-d-day/id6770268950',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday',
+  },
   heroShot: 'home',
   content: {
     ko: {
@@ -221,8 +224,8 @@ const dday: AppMeta = {
       lede: '수능·결혼기념일·전역·생일까지, 소중한 날을 해적 항해처럼 카운트다운. D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀌고, 홈 화면 위젯으로 매일 확인합니다.',
       shotsTitle: '남은 날이 항해가 되는 순간',
       featuresTitle: '왜 PiPi D-Day 인가',
-      ctaTitle: '곧 항해를 시작합니다',
-      ctaSub: 'App Store · Google Play 출시 준비 중.',
+      ctaTitle: '지금 항해를 시작하세요',
+      ctaSub: 'iOS · Android에서 무료로.',
       shots: [
         { file: 'home',        label: '모든 D-Day를 한눈에',  desc: '수능·기념일·전역까지, 소중한 날을 홈에서 바로 확인.' },
         { file: 'detail',      label: 'PiPi가 6단계로 반응',   desc: '남은 날에 따라 표정이 바뀌는 항해형 카운트다운 상세.' },
@@ -242,8 +245,8 @@ const dday: AppMeta = {
       lede: '受験・結婚記念日・誕生日まで、大切な日を海賊の航海としてカウントダウン。D-100からD-DayまでPiPiの表情が6段階で変化し、ホーム画面ウィジェットで毎日確認できます。',
       shotsTitle: '残り日数が航海になる瞬間',
       featuresTitle: 'PiPi D-Day を選ぶ理由',
-      ctaTitle: 'まもなく航海へ',
-      ctaSub: 'App Store · Google Play で公開準備中。',
+      ctaTitle: '今すぐ航海を始めよう',
+      ctaSub: 'iOS · Android で無料。',
       shots: [
         { file: 'home',        label: 'すべてのDデイをひと目で', desc: '受験・記念日・誕生日まで、大切な日をホームですぐ。' },
         { file: 'detail',      label: 'PiPiが6段階でリアクション', desc: '残り日数で表情が変わる、航海型カウントダウンの詳細。' },
@@ -261,11 +264,11 @@ const dday: AppMeta = {
     en: {
       tagline: 'Every moment is a voyage toward your destination.',
       lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
-      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — fully offline, no account. Coming to iOS & Android.',
+      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — fully offline, no account. Free on iOS & Android.',
       shotsTitle: 'The moment days become a voyage',
       featuresTitle: 'Why PiPi D-Day',
-      ctaTitle: 'A voyage is setting out soon',
-      ctaSub: 'Coming to the App Store & Google Play.',
+      ctaTitle: 'Start your voyage now',
+      ctaSub: 'Free on iOS & Android.',
       shots: [
         { file: 'home',        label: 'Every D-Day at a glance',  desc: 'Exams, anniversaries, birthdays — see your big days on the home.' },
         { file: 'detail',      label: 'PiPi reacts in 6 stages',  desc: 'A voyage-style countdown that changes as your day nears.' },
@@ -286,9 +289,12 @@ const dday: AppMeta = {
 const log: AppMeta = {
   slug: 'pipi-log',
   name: 'PiPi Log',
-  status: 'soon',
+  status: 'live',
   category: { ko: '라이프스타일 · 감정 일기', ja: 'ライフスタイル · 気分日記', en: 'Lifestyle · Mood journal' },
-  stores: {},
+  stores: {
+    ios: 'https://apps.apple.com/app/pipi-log/id6770272665',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.log',
+  },
   heroShot: 'home',
   content: {
     ko: {
@@ -296,8 +302,8 @@ const log: AppMeta = {
       lede: '매일의 기분을 9단계 바다 날씨로 기록하면 PiPi가 그 마음에 반응합니다. 선장의 질문으로 하루를 돌아보고, 한 달의 항해를 지도 한 장으로. 계정도 서버도 없이, 모든 기록은 기기 안에.',
       shotsTitle: '마음을 적는 항해일지',
       featuresTitle: '왜 PiPi Log 인가',
-      ctaTitle: '곧 항해를 시작합니다',
-      ctaSub: 'App Store · Google Play 출시 준비 중.',
+      ctaTitle: '지금 항해를 시작하세요',
+      ctaSub: 'iOS · Android에서 무료로.',
       shots: [
         { file: 'home',        label: '오늘의 바다 날씨로 기록',  desc: '기분을 9단계 바다 날씨로 고르고 PiPi와 하루를 적어요.' },
         { file: 'calendar',    label: '한 달을 바다 날씨 달력으로', desc: '날짜마다 그날의 날씨가 찍혀 한 달이 한눈에.' },
@@ -317,8 +323,8 @@ const log: AppMeta = {
       lede: '毎日の気分を9段階の海の天気で記録すると、PiPiがその心に反応します。船長の質問で一日を振り返り、ひと月の航海を一枚の地図に。アカウントもサーバーもなく、すべて端末の中に。',
       shotsTitle: '心を綴る航海日誌',
       featuresTitle: 'PiPi Log を選ぶ理由',
-      ctaTitle: 'まもなく航海へ',
-      ctaSub: 'App Store · Google Play で公開準備中。',
+      ctaTitle: '今すぐ航海を始めよう',
+      ctaSub: 'iOS · Android で無料。',
       shots: [
         { file: 'home',        label: '今日の海の天気で記録',     desc: '気分を9段階の海の天気で選び、PiPiと一日を綴る。' },
         { file: 'calendar',    label: 'ひと月を海の天気カレンダーで', desc: '日ごとの天気が並び、ひと月がひと目で。' },
@@ -336,11 +342,11 @@ const log: AppMeta = {
     en: {
       tagline: 'Log your heart\nas sea weather.',
       lede: "Record each day's mood as one of 9 sea-weathers and PiPi reacts to how you feel. Reflect with the captain's prompt, then turn a month's voyage into a single map. No account, no server — everything stays on your device.",
-      metaDesc: "A voyage-log mood journal: record each day's mood as one of 9 sea-weathers and PiPi reacts. Charts, a shareable monthly map, biometric lock — fully offline. Coming to iOS & Android.",
+      metaDesc: "A voyage-log mood journal: record each day's mood as one of 9 sea-weathers and PiPi reacts. Charts, a shareable monthly map, biometric lock — fully offline. Free on iOS & Android.",
       shotsTitle: 'A logbook for your heart',
       featuresTitle: 'Why PiPi Log',
-      ctaTitle: 'A voyage is setting out soon',
-      ctaSub: 'Coming to the App Store & Google Play.',
+      ctaTitle: 'Start your voyage now',
+      ctaSub: 'Free on iOS & Android.',
       shots: [
         { file: 'home',        label: "Log today's sea weather",   desc: 'Pick your mood from 9 sea-weathers and write the day with PiPi.' },
         { file: 'calendar',    label: 'A month as a weather calendar', desc: "Each day's weather lands on the calendar at a glance." },
