@@ -15,18 +15,24 @@ const c = work.content[lang];
 const labels = {
   ko: {
     home: '홈', lib: '출처 라이브러리', about: '작품 소개',
+    context: '역사적 배경', quotes: '핵심 명언', concepts: '핵심 개념',
+    apply: '오늘 어떻게 적용할까', related: '함께 보면 좋은 출처',
     method: 'Dialogos가 이 출처를 다루는 방식', pd: '퍼블릭 도메인 원문',
     faq: '자주 묻는 질문', backHub: '출처 라이브러리', toApp: 'Dialogos 앱 보기',
     ext: '위 링크는 외부 사이트로 연결되며, PiFl Labs는 그 내용을 관리하지 않습니다.',
   },
   ja: {
     home: 'ホーム', lib: '出典ライブラリ', about: '作品について',
+    context: '歴史的背景', quotes: '主な名言', concepts: '重要な概念',
+    apply: '今日どう活かすか', related: '関連する出典',
     method: 'Dialogos が出典を扱う方針', pd: 'パブリックドメインの原文',
     faq: 'よくある質問', backHub: '出典ライブラリ', toApp: 'Dialogos アプリを見る',
     ext: '上記リンクは外部サイトに接続します。PiFl Labs はその内容を管理していません。',
   },
   en: {
     home: 'Home', lib: 'Source Library', about: 'About the work',
+    context: 'Historical background', quotes: 'Key quotations', concepts: 'Key concepts',
+    apply: 'How to apply it today', related: 'Related sources',
     method: 'How Dialogos uses this source', pd: 'Public-domain text',
     faq: 'Frequently asked questions', backHub: 'Source Library', toApp: 'View the Dialogos app',
     ext: 'These links lead to external sites whose content PiFl Labs does not control.',
@@ -83,6 +89,15 @@ const jsonLd = [
       acceptedAnswer: { '@type': 'Answer', text: f.a },
     })),
   },
+  // 핵심 명언이 있으면 schema.org/Quotation 으로 구조화 (AI 인용 친화)
+  ...((c.quotes ?? []).map((q) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Quotation',
+    text: q.text,
+    spokenByCharacter: { '@type': 'Person', name: c.mentorName },
+    isPartOf: { '@type': 'Book', name: c.workName, author: { '@type': 'Person', name: c.mentorName } },
+    citation: `${c.workName} ${q.cite}`,
+  }))),
 ];
 ---
 <BaseLayout
@@ -113,12 +128,55 @@ const jsonLd = [
         <h2>{labels.about}</h2>
         <p set:html={c.intro} />
 
+        {c.context && (
+          <>
+            <h2>{labels.context}</h2>
+            <p set:html={c.context} />
+          </>
+        )}
+
         {c.sections.map((s) => (
           <section class="src-section" id={s.anchor}>
             <h3>{s.title}</h3>
             <p set:html={s.body} />
           </section>
         ))}
+
+        {c.quotes && c.quotes.length > 0 && (
+          <>
+            <h2>{labels.quotes}</h2>
+            <ul class="src-quotes">
+              {c.quotes.map((q) => (
+                <li class="src-quote">
+                  <blockquote set:html={q.text} />
+                  <span class="src-quote-cite">{c.workName} · {q.cite}</span>
+                  <p class="src-quote-gloss" set:html={q.gloss} />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {c.concepts && c.concepts.length > 0 && (
+          <>
+            <h2>{labels.concepts}</h2>
+            <dl class="src-concepts">
+              {c.concepts.map((cc) => (
+                <div class="src-concept">
+                  <dt set:html={cc.term} />
+                  <dd set:html={cc.def} />
+                </div>
+              ))}
+            </dl>
+          </>
+        )}
+
+        {c.apply && (
+          <>
+            <h2>{labels.apply}</h2>
+            <div class="src-apply" set:html={c.apply} />
+          </>
+        )}
 
         <h2>{labels.method}</h2>
         <p set:html={c.provenance} />
@@ -141,6 +199,19 @@ const jsonLd = [
             </details>
           ))}
         </div>
+
+        {c.related && c.related.length > 0 && (
+          <>
+            <h2>{labels.related}</h2>
+            <ul class="src-related">
+              {c.related.map((r) => (
+                <li>
+                  <a href={`${base}/apps/dialogos/sources/${r.slug}/`}>{r.label} <i class="fas fa-arrow-right"></i></a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
 
         <nav class="src-nav">
           <a class="src-nav-btn" href={hubHref}><i class="fas fa-arrow-left"></i> {labels.backHub}</a>
@@ -165,6 +236,45 @@ const jsonLd = [
     border-left: 2px solid var(--border-default); scroll-margin-top: 72px;
   }
   .src-section h3 { font-size: 1.02rem; color: var(--accent-highlight); margin-bottom: 0.3rem; }
+
+  /* 핵심 명언 (quotes) — Quotation 카드 */
+  .src-quotes { list-style: none; padding: 0; margin: var(--s-xs) 0; display: grid; gap: var(--s-sm); }
+  .src-quote {
+    padding: var(--s-sm); border: 1px solid var(--border-default);
+    border-left: 3px solid var(--accent-highlight); border-radius: var(--radius-sm);
+    background: var(--bg-raised);
+  }
+  .src-quote blockquote {
+    margin: 0; font-size: 1.02rem; line-height: 1.6; color: var(--text-primary); font-style: italic;
+  }
+  .src-quote-cite {
+    display: inline-block; margin-top: 0.4rem; font-size: 0.78rem;
+    font-weight: 600; color: var(--accent-highlight);
+  }
+  .src-quote-gloss { margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; }
+
+  /* 핵심 개념 (concepts) — 정의 리스트 */
+  .src-concepts { margin: var(--s-xs) 0; display: grid; gap: 0.6rem; }
+  .src-concept {
+    padding: 0.6rem var(--s-sm); border: 1px solid var(--border-default);
+    border-radius: var(--radius-sm); background: var(--bg-card);
+  }
+  .src-concept dt { font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem; }
+  .src-concept dd { margin: 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.55; }
+
+  /* 오늘 어떻게 적용할까 (apply) */
+  .src-apply { color: var(--text-secondary); line-height: 1.7; }
+  .src-apply :global(p) { margin: 0 0 0.6rem; }
+  .src-apply :global(p:last-child) { margin-bottom: 0; }
+
+  /* 함께 보면 좋은 출처 (related) */
+  .src-related { list-style: none; padding: 0; margin: var(--s-xs) 0; display: grid; gap: 0.4rem; }
+  .src-related a {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--text-secondary); text-decoration: none; font-size: 0.92rem;
+  }
+  .src-related a:hover { color: var(--accent-cta); }
+  .src-related i { font-size: 0.72rem; }
 
   .src-pd { margin: var(--s-xs) 0; }
   .src-ext-note { font-size: 0.8rem; color: var(--text-muted); }

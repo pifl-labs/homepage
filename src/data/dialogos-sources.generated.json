@@ -43,8 +43,24 @@
             "a": "루키우스 안나이우스 세네카(기원전 4년경~서기 65년)는 로마의 스토아 철학자이자 정치가, 극작가입니다. 황제 네로의 스승이자 고문이었고, 말년에 네로의 명으로 스스로 목숨을 끊었습니다. 그의 철학은 추상적 이론보다 실생활에 적용 가능한 윤리적 조언으로 잘 알려져 있습니다."
           },
           {
+            "q": "이 편지들의 핵심 내용을 짧게 요약하면?",
+            "a": "세네카는 시간을 우리의 유일한 진짜 재산으로 보고 낭비를 경계합니다(제1서). 자기 결함을 알아차리는 것을 성장의 증거로 삼고 그 배움을 벗과 나누라 권하며(제6서), 군중에 휩쓸려 악덕에 물드는 것을 경계하고(제7서), 아직 오지 않은 일을 상상하며 미리 괴로워하지 말라고 조언합니다(제13서). 관통하는 주제는 '내가 통제할 수 있는 것에 집중하라'입니다."
+          },
+          {
+            "q": "가장 유명한 구절은 무엇인가요?",
+            "a": "제1서의 \"우리 것이라 할 수 있는 것은 시간뿐이다\"와 제13서의 \"우리는 현실보다 상상 속에서 더 자주 괴로워한다\"가 가장 널리 인용됩니다. 제7서의 \"군중과 어울리는 것은 해롭다\"도 자주 인용됩니다. Dialogos는 저작권 있는 번역문을 옮기지 않고 이 사상들을 현대 한국어로 의역합니다."
+          },
+          {
+            "q": "스토아 철학을 처음 접하는데 어떤 편지부터 읽으면 좋나요?",
+            "a": "제1서(시간), 제7서(군중과 거리 두기), 제13서(두려움 다스리기)처럼 짧고 주제가 분명한 편지부터 권합니다. 각 편지가 독립된 에세이라 순서대로 읽지 않아도 됩니다. 에픽테토스의 《엥케이리디온》이나 마르쿠스 아우렐리우스의 《명상록》과 함께 읽으면 스토아 윤리의 전체 그림이 잡힙니다."
+          },
+          {
             "q": "이 편지들을 무료로 읽을 수 있나요?",
             "a": "네. 리처드 모트 거머(Richard Mott Gummere)의 영어 번역(로엡 고전 총서, 1917~1925년)은 저작권이 만료되어 누구나 무료로 읽을 수 있습니다. 아래 Wikisource와 Internet Archive 링크에서 124통 전체를 온라인으로 보거나 PDF·EPUB로 내려받을 수 있습니다. 한국어 완역 중 퍼블릭 도메인본은 제한적이라 영어 퍼블릭 도메인 역본을 안내합니다."
+          },
+          {
+            "q": "세네카의 조언이 오늘날에도 의미가 있나요?",
+            "a": "있습니다. 시간을 빼앗기는 방식(끝없는 알림·미루기), 군중에 휩쓸리는 방식(SNS 타임라인), 오지 않은 일에 대한 불안 같은 문제는 2천 년 전과 본질이 같습니다. 세네카의 처방 — 시간을 의식적으로 되찾고, 사귈 사람을 가리고, 두려움을 사실과 분리하라 — 은 번아웃과 불안을 다루는 현대적 자기관리에 그대로 적용됩니다."
           },
           {
             "q": "Dialogos는 이 작품을 어떻게 인용하나요?",
@@ -60,6 +76,67 @@
           {
             "label": "Internet Archive — Ad Lucilium epistulae morales, Vol. 1 (Gummere 역, 1917)",
             "url": "https://archive.org/details/adluciliumepistu01seneuoft"
+          }
+        ],
+        "context": "<p>《루킬리우스에게 보내는 편지》(라틴어 <em>Epistulae Morales ad Lucilium</em>)는 세네카가 정계에서 물러난 만년(서기 62~65년경)에 시칠리아 총독을 지낸 친구 루킬리우스에게 라틴어로 써 보낸 124통의 편지 모음이다. 실제 서신 형식을 빌렸지만 처음부터 출판을 염두에 둔 철학 산문으로, 한 통이 하나의 주제를 다루는 짧은 에세이처럼 읽힌다. 추상적 교리보다 시간·죽음·우정·두려움 같은 일상의 문제에 스토아 윤리를 적용하는 데 집중해, 후대 유럽 자기성찰 문학의 원천이 되었다.</p>",
+        "quotes": [
+          {
+            "text": "우리 것이라 할 수 있는 것은 시간뿐이다. 다른 무엇도 우리 손에서 빠져나가지만, 시간만은 자연이 우리에게 맡긴 유일한 소유물이다.",
+            "cite": "I.1",
+            "gloss": "돈·자리·평판은 빌린 것이지만 시간만은 진짜 내 것 — 번아웃으로 흘려보내는 하루를 의식적으로 되찾으라는 첫 문장."
+          },
+          {
+            "text": "어떤 시간은 우리에게서 강제로 뜯겨 나가고, 어떤 시간은 슬그머니 빼앗기며, 또 어떤 시간은 손가락 사이로 흘러나간다.",
+            "cite": "I.1",
+            "gloss": "시간 도둑은 회의·알림·미루기처럼 대개 조용하다. 무엇이 내 하루를 새게 하는지부터 적어 보라는 권유."
+          },
+          {
+            "text": "나는 고쳐지는 것이 아니라 통째로 바뀌고 있다고 느낀다. 자기 결함을 알아차린다는 것 자체가 정신이 더 나아지고 있다는 증거다.",
+            "cite": "VI.1",
+            "gloss": "결함이 보인다고 자책할 일이 아니라, 그것을 보는 눈이 생겼다는 게 성장의 신호 — 자기계발의 출발점."
+          },
+          {
+            "text": "군중과 어울리는 것은 해롭다. 그들은 우리 모르게 어떤 악덕을 매력적으로 보이게 하거나 우리에게 그것을 새겨 넣는다.",
+            "cite": "VII.8",
+            "gloss": "검투 경기를 보고 돌아온 자신이 더 탐욕스럽고 잔인해졌다는 고백. SNS 타임라인도 같은 방식으로 나를 물들인다."
+          },
+          {
+            "text": "우리는 현실에서보다 상상 속에서 더 자주 괴로워한다. 우리를 짓누르는 일보다 우리를 겁주는 일이 더 많다.",
+            "cite": "XIII.4",
+            "gloss": "아직 오지 않은 일에 대한 불안이 진짜 위험보다 큰 고통을 준다 — 두려움과 사실을 분리해 따져보라는 처방."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "시간 (tempus)",
+            "def": "세네카가 유일하게 온전히 우리 것이라 본 자산. 잃은 돈은 되찾아도 흘러간 시간은 돌아오지 않으므로, 시간을 모으고 지키는 일이 스토아적 삶의 출발점이다."
+          },
+          {
+            "term": "전진 중인 사람 (proficiens)",
+            "def": "완성된 현자가 아니라 덕을 향해 나아가는 도중의 사람. 세네카는 자기 결함을 알아차리는 것 자체를 이 전진의 증거로 본다."
+          },
+          {
+            "term": "군중 (turba)",
+            "def": "우리를 알게 모르게 악덕에 물들이는 다수. 세네카는 군중에서 한발 물러나 자신과 좋은 벗에게로 돌아가라고 권한다."
+          },
+          {
+            "term": "예견된 고통 (praemeditatio)",
+            "def": "아직 오지 않은 불행을 미리 그려 괴로워하는 마음. 세네카는 이 상상의 고통이 실제 위험보다 크다며, 두려움을 사실과 견주어 검증하라고 조언한다."
+          }
+        ],
+        "apply": "<p>오늘 한 가지만 해보자. 잠들기 전, 세네카가 권한 '시간 회계'를 따라 오늘 하루 시간이 어디로 샜는지 세 칸으로 적어 본다 — ① 내가 선택해 쓴 시간 ② 누가 뜯어간 시간(불필요한 회의·연락) ③ 나도 모르게 흘러나간 시간(무한 스크롤·미루기). 잃은 칸을 보고 자책하는 대신, 내일 그중 30분을 내가 정한 일로 되찾을 계획만 세운다.</p><p>두려움이 머릿속을 채울 때는 제13서의 처방을 쓴다. \"이 일이 확실히 일어나는가, 아니면 그저 상상인가?\"를 적어 보고, 실제 위험과 상상의 고통을 분리한다. 대부분은 후자다.</p>",
+        "related": [
+          {
+            "slug": "on-the-shortness-of-life",
+            "label": "인생의 짧음에 관하여 · 세네카"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
           }
         ]
       },
@@ -93,20 +170,36 @@
         "provenance": "Dialogosの応答は、著作権が消滅した原典の思想を現代日本語へ意訳したものであり、著作権の残る現代訳の文章をそのまま引き写すことはしない。出典表記(例:I.1)は、その思想が現れる書簡・節を指し示している。",
         "faq": [
           {
-            "q": "セネカの『ルキリウスへの手紙』とはどんな本ですか?",
-            "a": "ローマのストア派哲学者セネカが友人ルキリウスへ送った124通の書簡集です。時間の使い方、死への態度、恐れの鎮め方、友情、群衆との距離の取り方など、日常の問題を哲学的に扱い、心の平静を保ちながら徳ある生を送る道を具体的に助言します。"
+            "q": "セネカの『ルキリウスへの手紙』とはどんな本ですか？",
+            "a": "ローマのストア派哲学者セネカが友人ルキリウスに宛てた124通の書簡集です。時間の使い方、死への向き合い方、恐れの鎮め方、友情、群衆との距離の取り方といった日常の問題を哲学的に扱い、平静さを失わず徳ある生をどう送るかを具体的に助言します。"
           },
           {
-            "q": "セネカとはどのような人物ですか?",
-            "a": "ルキウス・アンナエウス・セネカ(紀元前4年頃〜紀元65年)はローマのストア派哲学者であり、政治家・劇作家でもありました。皇帝ネロの師であり顧問でしたが、晩年にネロの命を受け自ら命を絶ちました。彼の哲学は抽象的な理論よりも、実生活に応用できる倫理的助言として知られています。"
+            "q": "セネカとは誰ですか？",
+            "a": "ルキウス・アンナエウス・セネカ（紀元前4年頃~西暦65年）はローマのストア派哲学者・政治家・劇作家です。皇帝ネロの師であり顧問でしたが、晩年にネロの命で自ら命を絶ちました。その哲学は抽象的な理論よりも、日々の生活に応用できる倫理的助言で知られています。"
           },
           {
-            "q": "この書簡を無料で読めますか?",
-            "a": "はい。リチャード・モット・ガマー(Richard Mott Gummere)による英訳(ローブ古典叢書、1917〜1925年)は著作権が消滅しており、誰でも無料で読めます。下記のWikisourceとInternet Archiveのリンクから124通すべてをオンラインで閲覧し、PDFやEPUBで入手できます。日本語完訳のパブリックドメイン版は限られるため、英語のパブリックドメイン訳をご案内します。"
+            "q": "日本語で読めますか？",
+            "a": "はい。岩波書店『セネカ哲学全集』第5・6巻に『倫理書簡集』全124書簡の邦訳が収められています。現代日本語でまとまった訳を読みたい場合の定番です。著作権の切れた無料の原文を読みたい場合は、下記のリチャード・モット・ガマーによる英訳（パブリックドメイン）のリンクから全文を閲覧・ダウンロードできます。"
           },
           {
-            "q": "Dialogosはこの作品をどのように引用しますか?",
-            "a": "Dialogosのセネカは、書簡に込められた思想を現代語に解きほぐして対話に織り込みます。著作権のある訳文をそのまま写すことはせず、思想が現れる書簡と節(例:VII.8)を出典として示し、その考えがどこに由来するかを確認できるようにしています。"
+            "q": "核心を短くまとめると？",
+            "a": "セネカは時間を我々の唯一の本当の財産とみなし浪費を戒めます（第1書）。自分の欠点に気づくことを成長の証とし、その学びを友と分かち合えと説き（第6書）、群衆に流されて悪徳に染まることを警告し（第7書）、まだ来ていない事を想像して先に苦しむなと助言します（第13書）。一貫する主題は「自分が制御できることに集中せよ」です。"
+          },
+          {
+            "q": "最も有名な一節は？",
+            "a": "第1書の「我々のものと言えるのは時間だけだ」と、第13書の「我々は現実よりも想像の中でより多く苦しむ」が最も広く引用されます。第7書の「群衆と交わるのは害になる」もよく知られています。Dialogosは著作権のある翻訳文を写すのではなく、これらの思想を現代語に意訳して用います。"
+          },
+          {
+            "q": "ストア哲学が初めてです。どの手紙から読むとよいですか？",
+            "a": "第1書（時間）、第7書（群衆との距離）、第13書（恐れの鎮め方）のように短く主題が明確な手紙から勧めます。各書簡が独立したエッセイなので、順番に読まなくても構いません。エピクテトス『エンケイリディオン』やマルクス・アウレリウス『自省録』と併せて読むと、ストア倫理の全体像がつかめます。"
+          },
+          {
+            "q": "セネカの助言は現代でも役に立ちますか？",
+            "a": "役に立ちます。時間を奪われる仕方（絶え間ない通知・先延ばし）、群衆に流される仕方（SNSのタイムライン）、来ていない事への不安といった問題は、二千年前と本質が同じです。時間を意識的に取り戻し、付き合う相手を選び、恐れを事実と切り分けよというセネカの処方は、職場のストレスや不安に向き合う現代の自己管理にそのまま応用できます。"
+          },
+          {
+            "q": "Dialogosはこの作品をどう引用しますか？",
+            "a": "Dialogosのセネカは手紙の思想を現代語に解きほぐして対話に織り込みます。著作権のある翻訳文をそのまま写すのではなく、思想が現れる手紙と節（例：VII.8）を出典として示し、その考えがどこに由来するかを確認できるようにしています。"
           }
         ],
         "pdIntro": "以下は著作権が消滅し、自由に読める英語原典へのリンクです。訳はリチャード・モット・ガマー(Richard Mott Gummere)によるローブ古典叢書版(1917〜1925年)で、米国基準で1929年以前に出版されたためパブリックドメインです。日本語完訳のパブリックドメイン版は限られるため、英語のパブリックドメイン訳をご案内します。",
@@ -118,6 +211,67 @@
           {
             "label": "Internet Archive — Ad Lucilium epistulae morales, Vol. 1 (Gummere 訳, 1917年)",
             "url": "https://archive.org/details/adluciliumepistu01seneuoft"
+          }
+        ],
+        "context": "<p>『ルキリウスへの手紙』（ラテン語 <em>Epistulae Morales ad Lucilium</em>）は、政界を退いた晩年（西暦62~65年頃）のセネカが、シチリア属州の長官を務めた友人ルキリウスにラテン語で書き送った124通の書簡集である。手紙の形を借りているが、当初から公刊を念頭に置いた哲学エッセイで、一通ごとに時間・死・友情・恐れといった日常の主題へストア倫理を当てはめていく。日本では岩波書店『セネカ哲学全集』第5・6巻に『倫理書簡集』全124書簡が収められ、まとまった邦訳で読める。</p>",
+        "quotes": [
+          {
+            "text": "我々のものと言えるのは時間だけだ。他のすべては手から滑り落ちるが、時間こそ自然が我々に託した唯一の所有物だ。",
+            "cite": "I.1",
+            "gloss": "残業や会議で消えていく一日も、本当は自分の唯一の財産。まず「何に時間を奪われているか」を意識せよという冒頭の一文。"
+          },
+          {
+            "text": "ある時間は無理やり奪われ、ある時間はこっそり取られ、ある時間は指の間から流れ去る。",
+            "cite": "I.1",
+            "gloss": "時間泥棒は割り込み・通知・先延ばしのように静かに来る。仕事の段取りを見直す出発点。"
+          },
+          {
+            "text": "私は直されているのではなく、まるごと造り変えられていると感じる。自分の欠点に気づくこと自体が、精神がより良くなっている証だ。",
+            "cite": "VI.1",
+            "gloss": "上司や同僚に指摘される前に自分の至らなさが見える——それは落ち込む材料ではなく成長の合図。"
+          },
+          {
+            "text": "群衆と交わるのは害になる。彼らは知らぬ間に、ある悪徳を魅力的に見せたり、我々に刻みつけたりする。",
+            "cite": "VII.8",
+            "gloss": "残酷な見世物から帰った自分が貪欲で残酷になっていたという告白。職場の悪口や同調圧力にも同じ作用がある。"
+          },
+          {
+            "text": "我々は現実よりも想像の中でより多く苦しむ。我々を打ちのめすものより、我々を怖がらせるものの方が多い。",
+            "cite": "XIII.4",
+            "gloss": "上司の一言、来週の評価——まだ来ていない出来事への不安が、目の前の現実より大きな苦しみを生む。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "時間 (tempus)",
+            "def": "セネカが唯一まったく我々のものと見なした財産。失った金は取り戻せても流れ去った時間は戻らないため、時間を蓄え守ることがストア的生き方の起点となる。"
+          },
+          {
+            "term": "前進する者 (proficiens)",
+            "def": "完成した賢者ではなく、徳へ向かって進む途上の人。セネカは自分の欠点に気づくこと自体をこの前進の証とみなす。"
+          },
+          {
+            "term": "群衆 (turba)",
+            "def": "知らぬ間に我々を悪徳に染める多数者。セネカは群衆から一歩退き、自分と良き友のもとへ戻ることを勧める。"
+          },
+          {
+            "term": "予期される苦しみ (praemeditatio)",
+            "def": "まだ来ていない不幸を先回りして思い描き苦しむ心。セネカはこの想像上の苦しみが現実の危険より大きいとし、恐れを事実と照らし合わせて検証せよと説く。"
+          }
+        ],
+        "apply": "<p>今日ひとつだけ試そう。寝る前に、セネカの「時間の会計」にならって、今日の時間がどこへ消えたかを三つの欄に書き出す——① 自分で選んで使った時間 ② 誰かに奪われた時間（不要な会議・連絡） ③ 知らぬ間に流れ去った時間（無限スクロール・先延ばし）。失った欄を見て自分を責めるのではなく、明日そのうち30分を自分の決めた仕事に取り戻す計画だけを立てる。</p><p>人間関係で消耗したときは第7書を思い出す。誰と過ごすかが自分を形づくるなら、悪口や同調圧力の輪から一歩退き、より良い自分にしてくれる相手を選ぶ。それだけで一日の質が変わる。</p>",
+        "related": [
+          {
+            "slug": "on-the-shortness-of-life",
+            "label": "人生の短さについて · セネカ"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
           }
         ]
       },
@@ -159,8 +313,24 @@
             "a": "Lucius Annaeus Seneca (c. 4 BCE – 65 CE) was a Roman Stoic philosopher, statesman, and dramatist. He served as tutor and adviser to the emperor Nero and, late in life, took his own life on Nero's order. His philosophy is best known for ethical advice that can be applied to daily living rather than for abstract theory."
           },
           {
+            "q": "What is the core of the letters in brief?",
+            "a": "Seneca treats time as our only true possession and warns against wasting it (Letter 1). He counts noticing one's own faults as proof of growth and urges sharing what you learn with a friend (Letter 6), warns against being stained by vice when you drift with the crowd (Letter 7), and advises against suffering in advance over things that have not yet happened (Letter 13). The thread running through all of it: focus on what is within your control."
+          },
+          {
+            "q": "What is the most famous passage?",
+            "a": "Letter 1's \"nothing is truly ours except time\" and Letter 13's \"we suffer more often in imagination than in reality\" are the most widely quoted. Letter 7's \"to mix with the crowd is harmful\" is also well known. Dialogos does not copy any copyrighted translation; it paraphrases these ideas into modern language."
+          },
+          {
+            "q": "I'm new to Stoicism — which letters should I read first?",
+            "a": "Start with short, single-theme letters such as Letter 1 (time), Letter 7 (distance from the crowd), and Letter 13 (mastering fear). Each letter is a self-contained essay, so you need not read them in order. Pairing them with Epictetus's Enchiridion or Marcus Aurelius's Meditations gives you the fuller picture of Stoic ethics."
+          },
+          {
             "q": "Can I read these letters for free?",
             "a": "Yes. Richard Mott Gummere's English translation (Loeb Classical Library, 1917–1925) is out of copyright and free for anyone to read. The Wikisource and Internet Archive links below let you read all 124 letters online or download them as PDF or EPUB."
+          },
+          {
+            "q": "Is Seneca's advice still relevant today?",
+            "a": "Yes. The ways time is taken from us (endless notifications, procrastination), the way we drift with the crowd (social feeds), and anxiety over things that haven't happened are essentially the same as they were two thousand years ago. Seneca's prescriptions — reclaim time consciously, choose your company, separate fear from fact — apply directly to managing modern burnout and anxiety."
           },
           {
             "q": "How does Dialogos cite this work?",
@@ -176,6 +346,67 @@
           {
             "label": "Internet Archive — Ad Lucilium epistulae morales, Vol. 1 (Gummere translation, 1917)",
             "url": "https://archive.org/details/adluciliumepistu01seneuoft"
+          }
+        ],
+        "context": "<p><em>Letters to Lucilius</em> (Latin <em>Epistulae Morales ad Lucilium</em>) is a collection of 124 letters Seneca wrote in Latin during his final years (c. 62–65 CE), after withdrawing from public life, to his friend Lucilius, a governor of Sicily. Though cast as real correspondence, they were conceived from the start as philosophical essays for publication, each letter reading as a short piece on a single theme. Rather than abstract doctrine, they apply Stoic ethics to everyday concerns — time, death, friendship, fear — and became a foundational source for later European literature of self-examination.</p>",
+        "quotes": [
+          {
+            "text": "Nothing is truly ours except time. Everything else can be taken from our hands, but time alone is the one possession nature entrusted to us.",
+            "cite": "I.1",
+            "gloss": "The hours lost to back-to-back meetings are your only real asset. The opening move: notice what is draining your day before you can reclaim it."
+          },
+          {
+            "text": "Some of our time is wrenched away by force, some is quietly stolen, and some simply slips through our fingers.",
+            "cite": "I.1",
+            "gloss": "The thief of time is usually quiet — notifications, interruptions, procrastination. Start by auditing where your day actually leaks."
+          },
+          {
+            "text": "I feel that I am not merely being corrected but remade; noticing my own faults is itself proof that my mind is changing for the better.",
+            "cite": "VI.1",
+            "gloss": "Seeing your shortcomings isn't cause for self-reproach — the very fact that you can see them is the signal of growth."
+          },
+          {
+            "text": "To mix with the crowd is harmful; without your noticing, it makes some vice attractive or stamps it onto you.",
+            "cite": "VII.8",
+            "gloss": "Seneca confesses he came home from the games more greedy and more cruel. A scrolling feed stains you the same quiet way."
+          },
+          {
+            "text": "We suffer more often in imagination than in reality; there are more things to frighten us than there are to crush us.",
+            "cite": "XIII.4",
+            "gloss": "Dread of what hasn't happened yet inflicts more pain than the real danger in front of you — so weigh the fear against the fact."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "time (tempus)",
+            "def": "The one asset Seneca regarded as wholly ours. Lost money can be regained, but time that has slipped away never returns, so saving and guarding time is the starting point of the Stoic life."
+          },
+          {
+            "term": "one who is progressing (proficiens)",
+            "def": "Not the finished sage but a person still moving toward virtue. Seneca treats the very act of noticing one's own faults as evidence of this progress."
+          },
+          {
+            "term": "the crowd (turba)",
+            "def": "The many who stain us with vice without our noticing. Seneca urges stepping back from the crowd and returning to oneself and to good friends."
+          },
+          {
+            "term": "anticipated suffering (praemeditatio)",
+            "def": "The mind's habit of picturing misfortune that has not yet come and suffering it in advance. Seneca holds this imagined pain often exceeds the real danger, and urges testing fear against fact."
+          }
+        ],
+        "apply": "<p>Try one thing today. Before sleep, follow Seneca's \"accounting of time\": write where today's hours went in three columns — (1) time you chose to spend, (2) time taken from you (needless meetings, pings), (3) time that simply slipped away (endless scrolling, putting things off). Instead of berating yourself over the lost column, make a single plan to reclaim thirty minutes of it tomorrow for something you decide.</p><p>When fear fills your head, use the prescription of Letter 13: write down \"Is this certain to happen, or am I only imagining it?\" Separating the real danger from the imagined one usually shrinks it — most of what we dread never arrives.</p>",
+        "related": [
+          {
+            "slug": "on-the-shortness-of-life",
+            "label": "On the Shortness of Life · Seneca"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
           }
         ]
       }
@@ -215,6 +446,22 @@
             "a": "루키우스 안나이우스 세네카(기원전 4년경~기원후 65년)는 로마의 스토아 철학자이자 정치가, 극작가입니다. 황제 네로의 스승이기도 했으며, 시간·죽음·평정심을 다룬 도덕 서한과 에세이로 후대 스토아 사상에 큰 영향을 남겼습니다."
           },
           {
+            "q": "이 책의 핵심 한 문장은 무엇인가요?",
+            "a": "1장의 \"우리는 짧은 인생을 받은 것이 아니라 우리가 인생을 짧게 만든다\"입니다. 삶의 길이가 문제가 아니라 그 시간을 어떻게 쓰느냐가 문제라는, 책 전체를 관통하는 주장입니다."
+          },
+          {
+            "q": "1장과 3장에는 무슨 이야기가 나오나요?",
+            "a": "1장은 \"인생은 짧다\"는 보편적 불평을 반박하며 삶은 충분히 길지만 우리가 허비한다고 말합니다. 3장은 사람들이 재산은 악착같이 지키면서 가장 값진 시간은 누구에게나 헤프게 내준다고 지적합니다."
+          },
+          {
+            "q": "왜 바쁜 사람이 사는 법을 모른다고 하나요?",
+            "a": "7장에서 세네카는 분주한 사람일수록 정작 '사는 일'에는 무지하다고 봅니다. 잘 사는 법도, 잘 죽는 법도 배우는 데 평생이 걸리는데, 분주함은 그 배움에 쓸 시간을 빼앗기 때문입니다."
+          },
+          {
+            "q": "현대 번아웃에 어떤 통찰을 주나요?",
+            "a": "이 책은 \"시간이 없다\"는 호소를 \"시간을 흘려보낸다\"로 다시 정의합니다. 바쁨을 유능함으로 착각하지 말고, '나중에 진짜 살자'며 미루는 습관을 끊어 지금 의미 있게 쓰라는 것이 번아웃 세대에 주는 핵심 메시지입니다."
+          },
+          {
             "q": "원문을 무료로 읽을 수 있나요?",
             "a": "네. 저작권이 만료된 영어 번역본을 무료로 읽을 수 있습니다. 아래 안내에서 Aubrey Stewart(1900) 또는 John W. Basore(1932) 영역본을 Wikisource·Standard Ebooks·Project Gutenberg에서 확인하세요. 한국어 완역은 저작권이 있는 현대 번역본이 많아 여기서는 퍼블릭 도메인 영역본을 안내합니다."
           },
@@ -236,6 +483,67 @@
           {
             "label": "Project Gutenberg — Minor Dialogues 수록 (Aubrey Stewart 역, 1900)",
             "url": "https://www.gutenberg.org/ebooks/64576"
+          }
+        ],
+        "context": "<p><em>인생의 짧음에 관하여</em>(De Brevitate Vitae)는 1세기 로마의 스토아 철학자 세네카가 라틴어로 쓴 도덕 에세이로, 곡물 행정관이던 친구 파울리누스에게 보내는 형식을 띱니다. 정확한 집필 연도는 불확실하나 대체로 서기 49~55년경으로 봅니다. 짧은 산문 대화(dialogi) 형식이며, 세네카는 \"인생은 짧다\"는 통념을 반박하고 시간을 어떻게 쓰는가의 문제로 논의를 끌고 갑니다. 분주함(occupatio)에 삶을 빼앗기지 말고 지금 제대로 살라는 권고가 핵심입니다.</p>",
+        "quotes": [
+          {
+            "text": "우리는 짧은 인생을 받은 게 아니라, 우리가 인생을 짧게 만든다. 날이 모자란 게 아니라 날을 헤프게 쓰는 것이다.",
+            "cite": "1",
+            "gloss": "\"시간이 없다\"가 아니라 \"시간을 흘려보낸다\"가 진실 — 번아웃의 출발점을 다시 정의하는 문장."
+          },
+          {
+            "text": "사람들은 재산이 새어 나가는 건 악착같이 막으면서, 정작 아껴야 할 시간은 누구에게나 헤프게 내준다.",
+            "cite": "3",
+            "gloss": "돈 관리는 깐깐하면서 시간 관리는 무방비인 모순 — 시간을 가계부에 올려야 할 이유."
+          },
+          {
+            "text": "분주한 사람만큼 사는 법을 모르는 이도 없다. 사는 법을 배우는 데도, 죽는 법을 배우는 데도 평생이 걸린다.",
+            "cite": "7",
+            "gloss": "바쁨은 유능함의 증거가 아니다 — 멈춰서 '잘 사는 법'을 배울 시간을 비워야 한다."
+          },
+          {
+            "text": "미루는 것이야말로 인생의 가장 큰 낭비다. 내일에 기대어 오늘을 잃게 만든다.",
+            "cite": "9",
+            "gloss": "'나중에 진짜 살자'는 결심이 오늘을 갉아먹는다 — 미루기를 끊는 게 곧 사는 것."
+          },
+          {
+            "text": "철학에 자신을 바친 이들만이 참으로 한가하고, 참으로 산다. 그들은 자기 생애에 모든 시대를 더한다.",
+            "cite": "14",
+            "gloss": "배움에 쓴 시간은 인생을 늘린다 — 좋은 책 한 권이 수백 년의 지혜를 오늘로 끌어온다."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "분주함 (occupatio)",
+            "def": "쉴 틈 없이 일·약속·욕망에 사로잡힌 상태. 세네카는 바쁜 사람일수록 정작 '사는 일'은 못 한다고 본다."
+          },
+          {
+            "term": "한가함 (otium)",
+            "def": "게으름이 아니라, 사색과 배움에 쓰는 능동적 여가. 진짜로 사는 시간이 여기서 나온다."
+          },
+          {
+            "term": "시간의 세 갈래",
+            "def": "세네카는 시간을 과거·현재·미래로 나눈다. 지난 시간만이 빼앗기지 않는 온전한 내 것이라고 본다."
+          },
+          {
+            "term": "삶을 미룸 (procrastinatio)",
+            "def": "내일에 기대어 오늘을 흘려보내는 습관. 세네카가 꼽는 인생 최대의 낭비다."
+          }
+        ],
+        "apply": "<p>오늘 한 가지만 해 보자. 잠들기 전, 지난 24시간을 30분 단위로 되짚으며 \"이 시간은 내가 고른 것인가, 끌려간 것인가\"를 표시해 본다. 돈은 가계부로 관리하면서 시간은 무방비로 두는 모순을 눈으로 확인하기 위해서다(3장).</p><p>그다음 \"여유가 생기면 하겠다\"고 미뤄 온 일 하나를 골라, 완벽한 때를 기다리지 말고 이번 주에 15분만 시작하라. 세네카가 말한 인생 최대의 낭비는 '미루기'다(9장). 거창한 시간 관리법보다, 미룬 것 하나를 오늘 손대는 작은 행동이 번아웃에서 빠져나오는 첫걸음이다.</p>",
+        "related": [
+          {
+            "slug": "letters-to-lucilius",
+            "label": "루킬리우스에게 보내는 편지 · 세네카"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
           }
         ]
       },
@@ -267,6 +575,22 @@
             "a": "ルキウス・アンナエウス・セネカ（紀元前4年頃〜紀元後65年）はローマのストア派哲学者であり、政治家・劇作家でもありました。皇帝ネロの師でもあり、時間・死・心の平静を論じた道徳書簡やエッセイで後世のストア思想に大きな影響を残しました。"
           },
           {
+            "q": "この本を象徴する一文は何ですか？",
+            "a": "第1章の「私たちは短い人生を受け取るのではなく、人生を短くしているのだ」です。人生の長さそのものではなく、その時間をどう使うかが問題だという、本全体を貫く主張です。"
+          },
+          {
+            "q": "第1章と第3章には何が書かれていますか？",
+            "a": "第1章は「人生は短い」という世間の不平に反論し、人生は十分に長いのに私たちが浪費していると説きます。第3章は、人が財産は必死に守りながら、最も貴重な時間は誰にでも気前よく明け渡してしまうと指摘します。"
+          },
+          {
+            "q": "なぜ多忙な人ほど生きる術を知らないのですか？",
+            "a": "第7章でセネカは、忙しい人ほど肝心の「生きること」に無知だとみます。よく生きる術も、よく死ぬ術も、学ぶには一生を要するのに、多忙さがその学びの時間を奪うからです。"
+          },
+          {
+            "q": "現代の仕事・人間関係にどう活かせますか？",
+            "a": "「時間がない」という嘆きを「時間を流している」と捉え直す視点を与えます。忙しさを有能さと取り違えず、断れない会議や惰性のつき合いを見直し、後回しにした一言を今日切り出すことが、停滞を解く鍵になります。"
+          },
+          {
             "q": "原文を無料で読めますか？",
             "a": "はい。著作権の切れた英訳を無料で読めます。下記の案内から、Aubrey Stewart訳（1900年）またはJohn W. Basore訳（1932年）をWikisource・Standard Ebooks・Project Gutenbergで確認できます。日本語の全訳は著作権のある現代訳が多いため、ここではパブリックドメインの英訳をご案内します。"
           },
@@ -288,6 +612,67 @@
           {
             "label": "Project Gutenberg — Minor Dialogues 所収（Aubrey Stewart 訳、1900年）",
             "url": "https://www.gutenberg.org/ebooks/64576"
+          }
+        ],
+        "context": "<p><em>人生の短さについて</em>（De Brevitate Vitae）は、紀元1世紀ローマのストア派哲学者セネカがラテン語で著した道徳的エッセイで、穀物管理官だった友人パウリヌスに宛てる形式をとります。執筆年は確定しませんが、おおむね紀元49〜55年頃とされます。短い散文対話（dialogi）の形式で、セネカは「人生は短い」という通念に反論し、問題は長さではなく時間の使い方だと論じます。多忙さに人生を奪われず、今このときを正しく生きよ、という勧めが核心です。日本では茂手木元蔵訳（岩波文庫、1980年）が広く読まれてきました。</p>",
+        "quotes": [
+          {
+            "text": "私たちは短い人生を受け取るのではなく、人生を短くしているのだ。日数が足りないのではなく、日数を浪費しているのだ。",
+            "cite": "1",
+            "gloss": "「時間がない」ではなく「時間を流している」が真実 — 残業と多忙を見直す出発点となる一文。"
+          },
+          {
+            "text": "人は財産が減るのは必死に防ぐのに、惜しむべき時間だけは誰にでも気前よく差し出してしまう。",
+            "cite": "3",
+            "gloss": "お金には細かいのに、つき合いや雑務に時間を安売りする矛盾 — 時間こそ最大の資産と気づかせる。"
+          },
+          {
+            "text": "多忙な者ほど生きる術を知らない。生きる術も死ぬ術も、学ぶには一生かかる。",
+            "cite": "7",
+            "gloss": "忙しさは有能さの証ではない — 仕事に追われるほど「よく生きる」学びの時間が削られていく。"
+          },
+          {
+            "text": "先延ばしこそ人生最大の浪費だ。明日を当てにして、今日を失わせる。",
+            "cite": "9",
+            "gloss": "「落ち着いたら本気を出す」という先送りが今日を奪う — 人間関係でも仕事でも、後回しを断つことが生きること。"
+          },
+          {
+            "text": "哲学に身を捧げた者だけが真に閑暇をもち、真に生きる。彼らは自らの生涯にあらゆる時代を加える。",
+            "cite": "14",
+            "gloss": "学びに使った時間は人生を延ばす — 良書一冊が数百年の知恵を今日の自分に連れてくる。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "多忙 (occupatio)",
+            "def": "仕事・約束・欲望に絶え間なく囚われた状態。セネカは、忙しい人ほど肝心の「生きること」ができていないとみる。"
+          },
+          {
+            "term": "閑暇 (otium)",
+            "def": "怠惰ではなく、思索と学びに充てる能動的な余暇。本当に生きる時間はここから生まれる。"
+          },
+          {
+            "term": "時間の三区分",
+            "def": "セネカは時間を過去・現在・未来に分ける。過ぎ去った時間だけが奪われない、完全に自分のものだとする。"
+          },
+          {
+            "term": "生の先延ばし (procrastinatio)",
+            "def": "明日を当てにして今日を流す習慣。セネカが挙げる人生最大の浪費である。"
+          }
+        ],
+        "apply": "<p>今日ひとつ試してみましょう。寝る前に、過去24時間を30分単位で振り返り、「この時間は自分で選んだか、流されたか」を印づけます。お金は家計簿で管理するのに、時間は無防備に差し出してしまう矛盾を、目で確かめるためです（第3章）。とくに、断れなかった会議や惰性のつき合いに注目を。</p><p>次に、「落ち着いたらやる」と先延ばしにしてきたこと——同僚への相談、ためらっていた一言——をひとつ選び、完璧なタイミングを待たず今週15分だけ着手します。セネカが言う人生最大の浪費は「先延ばし」です（第9章）。大げさな時間術より、後回しのひとつに今日手をつける小さな行動が、人間関係と仕事の停滞を解く第一歩になります。</p>",
+        "related": [
+          {
+            "slug": "letters-to-lucilius",
+            "label": "ルキリウスへの手紙 · セネカ"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
           }
         ]
       },
@@ -319,6 +704,22 @@
             "a": "Lucius Annaeus Seneca (c. 4 BC to AD 65) was a Roman Stoic philosopher, statesman, and dramatist who also tutored the emperor Nero. His moral letters and essays on time, death, and tranquillity profoundly shaped later Stoic thought."
           },
           {
+            "q": "What is the single most famous line in the essay?",
+            "a": "From chapter 1: \"It is not that we have a short time to live, but that we waste much of it.\" The whole work flows from this claim — that the problem is not life's length but how we spend the time we are given."
+          },
+          {
+            "q": "What do chapters 1 and 3 say?",
+            "a": "Chapter 1 rebuts the universal complaint that life is short, insisting it is long enough but that we squander it. Chapter 3 observes that people guard their property and land fiercely, yet hand over their most precious possession, time, to anyone who asks."
+          },
+          {
+            "q": "Why does Seneca say busy people don't know how to live?",
+            "a": "In chapter 7 he argues the preoccupied are the most ignorant of living. Both learning how to live and learning how to die take a whole lifetime, and constant busyness steals the very time that learning requires."
+          },
+          {
+            "q": "What does the essay offer for modern stress and overwork?",
+            "a": "It reframes \"I have no time\" as \"I waste my time.\" Rather than mistaking busyness for competence, Seneca urges us to stop postponing life to some future moment and to spend today deliberately — a direct answer to modern burnout."
+          },
+          {
             "q": "Can I read the original for free?",
             "a": "Yes. Public-domain English translations are free to read. The links below point to the Aubrey Stewart translation (1900) and the John W. Basore translation (1932) on Wikisource, Standard Ebooks, and Project Gutenberg."
           },
@@ -340,6 +741,67 @@
           {
             "label": "Project Gutenberg — Minor Dialogues, incl. Of the Shortness of Life (trans. Aubrey Stewart, 1900)",
             "url": "https://www.gutenberg.org/ebooks/64576"
+          }
+        ],
+        "context": "<p><em>On the Shortness of Life</em> (De Brevitate Vitae) is a moral essay written in Latin in the first century AD by the Roman Stoic philosopher Seneca, framed as a letter to his friend Paulinus, then overseer of Rome's grain supply. Its exact date is uncertain, but it is usually placed around AD 49–55. Written as a short prose dialogue (dialogus), it rejects the common complaint that \"life is short,\" arguing that the real issue is not length but how we spend our time. Its core counsel: do not let busyness rob you of life — live properly now.</p>",
+        "quotes": [
+          {
+            "text": "We are not given a short life; we make it short, and we are not ill-supplied with time but wasteful of it.",
+            "cite": "1",
+            "gloss": "Reframes \"I have no time\" as \"I waste my time\" — the real starting point for anyone feeling overstretched."
+          },
+          {
+            "text": "People fiercely guard their money from loss, yet when it comes to time, the one thing worth hoarding, they are the most lavish of all.",
+            "cite": "3",
+            "gloss": "We budget cash to the cent but give time away for free — the case for tracking hours like a bank balance."
+          },
+          {
+            "text": "No one knows less about living than the busy person; learning how to live, and how to die, takes a whole lifetime.",
+            "cite": "7",
+            "gloss": "Busy is not the same as capable — the more we're swamped, the less time we keep for learning to live well."
+          },
+          {
+            "text": "Putting things off is the greatest waste of life: it strips away each day in turn, losing the present in exchange for a promised future.",
+            "cite": "9",
+            "gloss": "\"I'll really start living once things settle\" quietly eats today — ending procrastination is itself living."
+          },
+          {
+            "text": "Only those devoted to philosophy are truly at leisure and truly alive; they annex every age to their own.",
+            "cite": "14",
+            "gloss": "Time spent learning lengthens life — a good book pulls centuries of thought into your single day."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "busyness (occupatio)",
+            "def": "Being constantly seized by work, appointments, and desires. Seneca holds that the busiest people are precisely those who never get around to living."
+          },
+          {
+            "term": "leisure (otium)",
+            "def": "Not idleness, but the active free time given to reflection and study. For Seneca, this is where real life happens."
+          },
+          {
+            "term": "the three parts of time",
+            "def": "Seneca divides time into past, present, and future. Only the past, he argues, is secure and wholly ours, beyond fortune's reach."
+          },
+          {
+            "term": "postponement (procrastinatio)",
+            "def": "The habit of leaning on tomorrow and letting today slip by. Seneca names it the single greatest waste of a life."
+          }
+        ],
+        "apply": "<p>Try one thing today. Before sleep, replay the last 24 hours in 30-minute blocks and mark each as \"chosen\" or \"swept along.\" The point is to see, with your own eyes, the contradiction Seneca names: we track money to the cent yet leave our time undefended (chapter 3). Pay special attention to the meetings and obligations you didn't really agree to.</p><p>Then pick one thing you've been deferring until life \"settles down,\" and instead of waiting for the perfect moment, start it for just 15 minutes this week. Seneca calls postponement the greatest waste of life (chapter 9). More than any elaborate time-management system, the small act of touching one deferred task today is the first step out of constant overwhelm.</p>",
+        "related": [
+          {
+            "slug": "letters-to-lucilius",
+            "label": "Letters to Lucilius · Seneca"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
           }
         ]
       }
@@ -394,8 +856,24 @@
             "a": "에픽테토스(서기 50년경~135년경)는 노예로 태어나 훗날 자유민이 된 후기 스토아 학파의 대표 철학자입니다. 직접 책을 쓰지 않았고, 그의 강의를 제자 아리아노스가 받아 적어 <담화록>과 그 요약본인 <엥케이리디온>으로 전했습니다. 마르쿠스 아우렐리우스에게도 깊은 영향을 주었습니다."
           },
           {
+            "q": "엥케이리디온을 한 문장으로 요약하면?",
+            "a": "'내게 달린 것과 달리지 않은 것을 구별하고, 달린 것에만 마음을 쏟으라'는 책입니다. 판단·욕구·행동은 내 몫이지만 몸·재산·평판은 내 몫이 아니며, 통제할 수 없는 것을 통제하려 할 때 괴로움이 생긴다고 봅니다. 약 53개의 짧은 장이 이 한 원칙을 여러 상황에 적용합니다."
+          },
+          {
+            "q": "엥케이리디온의 가장 유명한 구절은 무엇인가요?",
+            "a": "제8장 '일이 네 뜻대로 일어나기를 바라지 말고, 일어나는 그대로 일어나기를 바라라'와 제5장 '사람을 괴롭히는 것은 사건이 아니라 그에 대한 판단이다'가 가장 자주 인용됩니다. 제1장의 통제 이분법과 함께 현대 자기계발·인지행동치료(CBT)의 원형으로 꼽힙니다."
+          },
+          {
+            "q": "엥케이리디온이 오늘날에도 의미가 있나요?",
+            "a": "네. '바꿀 수 없는 것에 휘둘리지 말고 통제할 수 있는 반응에 집중하라'는 가르침은 번아웃·불안 관리의 핵심이며, 인지행동치료(CBT)의 사고 전환 기법과 직접 닿아 있습니다. 불확실성이 큰 시대에 평정을 지키는 실천 매뉴얼로 다시 읽힙니다."
+          },
+          {
             "q": "엥케이리디온 원문을 무료로 읽을 수 있나요?",
-            "a": "네. 저작권이 만료된 영어 번역본을 무료로 읽을 수 있습니다. George Long(1877) 역본은 Wikisource와 Project Gutenberg에서, Elizabeth Carter(1758) 역본은 MIT Internet Classics Archive에서 전문을 제공합니다. 아래 PD 원문 링크에서 확인하세요. 한국어 퍼블릭 도메인 완역은 제한적이라 영어 PD 역본을 안내합니다."
+            "a": "네. 저작권이 만료된 영어 번역본을 무료로 읽을 수 있습니다. George Long(1877) 역본은 Wikisource와 Project Gutenberg에서, Elizabeth Carter(1758) 역본은 MIT Internet Classics Archive에서 전문을 제공합니다. 한국어 퍼블릭 도메인 완역은 제한적이라 영어 PD 역본을 안내합니다."
+          },
+          {
+            "q": "엥케이리디온과 담화록은 어떻게 다른가요?",
+            "a": "둘 다 에픽테토스의 강의를 제자 아리아노스가 기록한 것이지만, <담화록>은 폭넓은 대화와 사례가 담긴 긴 저작이고, <엥케이리디온>은 그 정수만 추려 늘 곁에 두고 보도록 만든 짧은 편람입니다. 입문자는 엥케이리디온부터, 더 깊이 들어가려면 담화록을 권합니다."
           },
           {
             "q": "Dialogos는 엥케이리디온을 어떻게 인용하나요?",
@@ -415,6 +893,67 @@
           {
             "label": "MIT Internet Classics Archive — 엥케이리디온 (Elizabeth Carter 역, 1758)",
             "url": "http://classics.mit.edu/Epictetus/epicench.html"
+          }
+        ],
+        "context": "<p><em>엥케이리디온</em>은 서기 2세기 초, 노예 출신 스토아 철학자 에픽테토스가 직접 쓴 책이 아니라 제자 아리아노스(아리안)가 스승의 강의를 그리스어 코이네로 받아 적은 <em>담화록</em>에서 가장 실천적인 핵심만 추려 엮은 짧은 편람이다. 책 제목은 '손안에 쥐는 것'이라는 뜻으로, 늘 곁에 두고 펼쳐 보는 행동 지침을 노린 것이다. 53개 안팎의 짧은 장으로 이루어졌고, 무엇이 우리에게 달려 있고 무엇이 달려 있지 않은지를 가르는 데서 시작한다.</p>",
+        "quotes": [
+          {
+            "text": "어떤 것은 우리에게 달려 있고, 어떤 것은 달려 있지 않다. 판단과 욕구는 내 몫이지만, 몸과 재산과 평판은 내 몫이 아니다.",
+            "cite": "1.1",
+            "gloss": "내 손에 없는 것을 통제하려다 번아웃이 온다. 에너지를 '바꿀 수 있는 것'에만 쓰라는 첫 문장."
+          },
+          {
+            "text": "사람을 괴롭히는 것은 일어난 일이 아니라, 그 일을 두고 내리는 우리의 판단이다.",
+            "cite": "5",
+            "gloss": "같은 마감, 같은 메일에도 무너지는 사람과 버티는 사람의 차이는 사건이 아니라 해석에 있다."
+          },
+          {
+            "text": "일이 네 뜻대로 일어나기를 바라지 말고, 일어나는 그대로 일어나기를 바라라. 그러면 삶이 순조로울 것이다.",
+            "cite": "8",
+            "gloss": "계획대로 안 될 때 분노 대신 적응으로 방향을 트는 한 줄 — 통제 불능 앞에서의 평정 스위치."
+          },
+          {
+            "text": "잃었다고 말하지 말고 돌려주었다고 말하라. 그것은 처음부터 잠시 맡겨진 것이었다.",
+            "cite": "11",
+            "gloss": "성과도 관계도 영원히 내 것이 아니라 잠시 빌린 것. 상실의 무게를 줄이는 시선의 전환."
+          },
+          {
+            "text": "너를 모욕하는 것은 욕하는 상대가 아니라, 그것이 모욕이라고 여기는 너의 판단이다.",
+            "cite": "20",
+            "gloss": "남의 한마디에 하루가 흔들릴 때, 반응 버튼을 쥔 사람이 결국 나라는 사실을 되새기는 문장."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "프로하이레시스 (prohairesis, 의지)",
+            "def": "찬성하고 거절하고 욕구하는 우리 내면의 선택 능력. 에픽테토스는 오직 이것만이 진정 '우리에게 달린 것'이며 자유의 자리라고 본다."
+          },
+          {
+            "term": "우리에게 달린 것 / 달리지 않은 것 (eph' hēmin)",
+            "def": "판단·욕구·행동은 우리 몫이고 몸·재산·평판·지위는 우리 몫이 아니다. 이 이분법을 가르는 데서 평정이 시작된다."
+          },
+          {
+            "term": "판단 (hupolēpsis)",
+            "def": "사건 자체가 아니라 그 사건에 붙이는 우리의 해석. 괴로움의 진짜 원인은 외부가 아니라 이 판단이라고 본다."
+          },
+          {
+            "term": "아파테이아 (apatheia, 정념으로부터의 자유)",
+            "def": "외부에 휘둘리는 격정에서 벗어난 흔들리지 않는 마음 상태. 통제 불능을 그대로 받아들일 때 도달한다."
+          },
+          {
+            "term": "두 개의 손잡이",
+            "def": "모든 일에는 견딜 수 있는 손잡이와 견딜 수 없는 손잡이가 있다. 같은 상황도 어느 쪽을 잡느냐로 무게가 달라진다(43장)."
+          }
+        ],
+        "apply": "<p>오늘 가장 스트레스 주는 일 하나를 종이 왼쪽·오른쪽 두 칸으로 나눠 적어 보라. 왼쪽엔 '내가 바꿀 수 있는 것'(내 답변·태도·다음 행동), 오른쪽엔 '바꿀 수 없는 것'(상대의 반응·이미 벌어진 일·평판)을 적는다. 그리고 오늘 에너지를 오직 왼쪽 칸에만 쓴다.</p><p>누군가의 말에 욱할 때는 1초 멈추고 '나를 화나게 한 건 저 말인가, 그것이 모욕이라는 내 판단인가'를 물어라(20장). 번아웃은 대개 오른쪽 칸을 통제하려 애쓸 때 온다 — 거기서 손을 떼는 연습이 회복의 시작이다.</p>",
+        "related": [
+          {
+            "slug": "discourses",
+            "label": "담화록 · 에픽테토스"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
           }
         ]
       },
@@ -461,12 +1000,28 @@
             "a": "エピクテトス（紀元50年頃〜135年頃）は、奴隷として生まれのちに自由民となった後期ストア派を代表する哲学者です。自ら著書を残さず、その講義を弟子アリアノスが書き取り、<語録>とその要約である<提要>として伝えました。マルクス・アウレリウスにも深い影響を与えています。"
           },
           {
+            "q": "提要を一文で要約すると？",
+            "a": "「自分に依るものと依らないものを見分け、依るものだけに心を注げ」という書です。判断・欲求・行動は自分のものでも、身体・財産・評判は自分のものではなく、制御できないものを制御しようとするとき苦しみが生まれると説きます。約53の短い章がこの一原則を様々な場面に当てはめています。"
+          },
+          {
+            "q": "提要でもっとも有名な一節は？",
+            "a": "第8章「物事が自分の望むように起こることを願わず、起こるがままに起こることを願え」と、第5章「人を悩ませるのは出来事ではなく、それについての判断だ」が最もよく引かれます。第1章の制御の区別とともに、現代の自己啓発や認知行動療法（CBT）の原型とされています。"
+          },
+          {
+            "q": "提要は現代にも意味がありますか？",
+            "a": "はい。「変えられないものに振り回されず、制御できる反応に集中せよ」という教えは、職場のストレスや不安の管理に直結し、認知行動療法（CBT）の思考の捉え直しの技法とも重なります。先の見えない時代に平静を保つ実践マニュアルとして読み直されています。"
+          },
+          {
             "q": "提要の原文を無料で読めますか？",
-            "a": "はい。著作権の切れた英語訳を無料で読めます。George Long訳（1877年）はWikisourceとProject Gutenbergで、Elizabeth Carter訳（1758年）はMIT Internet Classics Archiveで全文が公開されています。下記のパブリックドメイン原文リンクをご覧ください。日本語のパブリックドメイン全訳は限られるため、英語のPD訳を案内しています。"
+            "a": "はい。著作権の切れた英語訳を無料で読めます。George Long訳（1877年）はWikisourceとProject Gutenbergで、Elizabeth Carter訳（1758年）はMIT Internet Classics Archiveで全文が公開されています。日本語では鹿野治助訳『人生談義』（岩波文庫）に全訳が収められています。"
+          },
+          {
+            "q": "提要と語録はどう違いますか？",
+            "a": "どちらもエピクテトスの講義を弟子アリアノスが記録したものですが、<語録>は幅広い対話と事例を含む長い著作で、<提要>はその要点だけを抜き出し、つねに傍らに置いて読めるようにした短い手引きです。入門なら提要から、より深く学ぶなら語録へ進むのがおすすめです。"
           },
           {
             "q": "Dialogosは提要をどのように引用しますか？",
-            "a": "Dialogosは、著作権の切れた原典の思想を現代日本語で語り直して説明し、特定の現代訳の文章をそのまま引用することはありません。応答に付く出典表記（例：8、20）は、その考えが含まれる提要の章・節番号を指しています。"
+            "a": "Dialogosは、著作権の切れた原典の思想を現代日本語で語り直して説明し、特定の現代訳の文章をそのまま引用することはありません。応答に付く出典表記（例：8、20）は、その考えが含まれる提要の章・節の番号を指しています。"
           }
         ],
         "pdIntro": "以下は、著作権が切れて誰でも無料で読める英語訳です。George Long訳（1877年）とElizabeth Carter訳（1758年）は、訳者の没後100年以上を経たパブリックドメインです。日本語のパブリックドメイン全訳は限られるため、検証済みの英語PD訳を案内します。",
@@ -482,6 +1037,67 @@
           {
             "label": "MIT Internet Classics Archive — 提要 (Elizabeth Carter 訳, 1758)",
             "url": "http://classics.mit.edu/Epictetus/epicench.html"
+          }
+        ],
+        "context": "<p><em>提要</em>（エンケイリディオン）は紀元2世紀初め、奴隷の身から自由を得たストア派の哲学者エピクテトスが自ら著したものではなく、弟子アリアノスがコイネー・ギリシア語で書き取った<em>語録</em>から最も実践的な核心だけを抜き出してまとめた短い手引きである。題名は「手に握るもの」を意味し、つねに傍らに置いて開く行動指針を狙ったものだ。約53の短い章からなり、何が「自分に依るもの」で何が「依らないもの」かを見分けることから始まる。日本では鹿野治助訳『人生談義』（岩波文庫）に「提要（要録）」として全訳が収められている。</p>",
+        "quotes": [
+          {
+            "text": "あるものは自分に依り、あるものは依らない。判断と欲求は自分のものだが、身体や財産や評判は自分のものではない。",
+            "cite": "1.1",
+            "gloss": "自分に依らない上司の評価や人事を握ろうとして消耗する。力を「変えられること」だけに注ぐ最初の一文。"
+          },
+          {
+            "text": "人を悩ませるのは起こった出来事ではなく、その出来事についての判断である。",
+            "cite": "5",
+            "gloss": "同じ叱責、同じ無理な依頼でも崩れる人と耐える人の差は、出来事ではなく解釈にある。"
+          },
+          {
+            "text": "物事が自分の望むように起こることを願わず、起こるがままに起こることを願え。そうすれば穏やかに運ぶ。",
+            "cite": "8",
+            "gloss": "計画どおりにいかない職場で、怒りではなく適応へ舵を切る一行。コントロール不能の前での平静スイッチ。"
+          },
+          {
+            "text": "失ったと言わず、返したと言え。それは初めから一時的に預けられたものだ。",
+            "cite": "11",
+            "gloss": "役職も人間関係も永遠に自分のものではなく、しばらく借りているだけ。喪失の重さを軽くする視点。"
+          },
+          {
+            "text": "あなたを侮辱するのは、ののしる相手ではなく、それを侮辱だと見なすあなたの判断である。",
+            "cite": "20",
+            "gloss": "同僚の一言で一日が揺れるとき、反応のボタンを握っているのは結局自分だと思い出させる文。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "プロハイレシス (prohairesis, 意志)",
+            "def": "同意し拒み欲する内なる選択の能力。エピクテトスはこれだけが真に「自分に依るもの」であり、自由の在り処だと考える。"
+          },
+          {
+            "term": "自分に依るもの／依らないもの (eph' hēmin)",
+            "def": "判断・欲求・行動は自分のもの、身体・財産・評判・地位は自分のものではない。この区別から心の平静が始まる。"
+          },
+          {
+            "term": "判断 (hupolēpsis)",
+            "def": "出来事そのものではなく、それに付ける自分の解釈。苦しみの本当の原因は外ではなくこの判断にあるとする。"
+          },
+          {
+            "term": "アパテイア (apatheia, 情念からの自由)",
+            "def": "外に振り回される激情から解き放たれた、揺るがない心の状態。制御できないものをそのまま受け入れるとき到達する。"
+          },
+          {
+            "term": "二つの取っ手",
+            "def": "あらゆる事には耐えられる取っ手と耐えられない取っ手がある。同じ状況も、どちらを握るかで重さが変わる（第43章）。"
+          }
+        ],
+        "apply": "<p>今いちばんストレスになっている職場の一件を、紙の左右二つの欄に分けて書いてみよう。左には「自分が変えられること」（自分の返答・態度・次の一手）、右には「変えられないこと」（相手の反応・すでに起きたこと・評判）。そして今日のエネルギーは左の欄だけに注ぐ。</p><p>同僚や上司の一言にカッとなったら、一拍おいて「自分を怒らせたのはあの言葉か、それを侮辱だと見なす自分の判断か」を問う（第20章）。人間関係の消耗は、たいてい右の欄を握ろうとするときに起こる。そこから手を離す練習が、回復の始まりだ。</p>",
+        "related": [
+          {
+            "slug": "discourses",
+            "label": "語録 · エピクテトス"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
           }
         ]
       },
@@ -521,19 +1137,35 @@
         "faq": [
           {
             "q": "What is the Enchiridion about?",
-            "a": "The Enchiridion is a short practical handbook compiled by Arrian from the teachings of the Stoic philosopher Epictetus. Its central idea, set out in Chapter 1, is the dichotomy of control: focus on what is within your power (your judgments and will) and stop being disturbed by what lies outside it (the body, property, reputation)."
+            "a": "The Enchiridion is a short practical manual that distills the teachings of the Stoic philosopher Epictetus, compiled by his pupil Arrian. Its core, set out in Chapter 1, is the distinction between what is 'up to us' and what is not: focus on the inner things you control (judgment, will) and stop handing your peace to externals you cannot."
           },
           {
             "q": "Who was Epictetus?",
-            "a": "Epictetus (c. 50–135 CE) was a leading philosopher of the late Stoic school who was born a slave and later freed. He wrote nothing himself; his lectures were recorded by his student Arrian and survive as the Discourses and their summary, the Enchiridion. His thought deeply influenced the emperor Marcus Aurelius."
+            "a": "Epictetus (c. 50–135 CE) was a leading later-Stoic philosopher, born a slave and later freed. He wrote nothing himself; his lectures were recorded by his pupil Arrian as the <Discourses> and condensed into the <Enchiridion>. His thought deeply influenced the emperor Marcus Aurelius."
+          },
+          {
+            "q": "What is the Enchiridion's message in one sentence?",
+            "a": "Tell apart what is in your power from what is not, and invest yourself only in what is. Judgment, desire, and action are yours, but body, property, and reputation are not—and suffering arises when we try to control what we cannot. Its roughly 53 short chapters apply this single principle to everyday situations."
+          },
+          {
+            "q": "What is the most famous quote from the Enchiridion?",
+            "a": "Chapter 8's 'Do not wish things to happen as you would like, but wish them to happen as they do' and Chapter 5's 'People are disturbed not by things but by their judgments about them' are the most quoted. Together with the control dichotomy of Chapter 1, they are often called the blueprint for modern self-help and cognitive behavioral therapy."
+          },
+          {
+            "q": "Is the Enchiridion still relevant today?",
+            "a": "Yes. Its guidance—stop being ruled by what you cannot change and focus on the responses you control—sits at the heart of stress and anxiety management, and maps directly onto the reframing techniques of cognitive behavioral therapy (CBT). In an age of uncertainty it is read again as a practical manual for staying calm."
           },
           {
             "q": "Can I read the Enchiridion for free?",
-            "a": "Yes. Public-domain English translations are freely available. George Long's 1877 translation is on Wikisource and Project Gutenberg, and Elizabeth Carter's 1758 translation is on the MIT Internet Classics Archive. See the public-domain links below."
+            "a": "Yes. Out-of-copyright English translations are free to read. George Long's translation (1877) is on Wikisource and Project Gutenberg, and Elizabeth Carter's (1758) is on the MIT Internet Classics Archive, both with full text. See the public-domain links below."
+          },
+          {
+            "q": "How is the Enchiridion different from the Discourses?",
+            "a": "Both record Epictetus's lectures as written down by his pupil Arrian, but the <Discourses> is a longer work full of wide-ranging dialogue and examples, while the <Enchiridion> extracts only the essentials into a short handbook meant to be kept at hand. Beginners usually start with the Enchiridion and move to the Discourses for depth."
           },
           {
             "q": "How does Dialogos cite the Enchiridion?",
-            "a": "Dialogos restates the ideas of the out-of-copyright original in modern language rather than quoting any particular modern translation word for word. The citations attached to its replies (e.g. 8, 20) point to the chapter and section of the Enchiridion where the idea is found."
+            "a": "Dialogos re-expresses the ideas of the out-of-copyright original in modern language and does not quote any specific copyrighted translation verbatim. The citations attached to answers (e.g., 8, 20) point to the chapter and section of the Enchiridion where that idea appears."
           }
         ],
         "pdIntro": "The translations below are out of copyright and free for anyone to read. George Long's translation (1877) and Elizabeth Carter's (1758) are firmly in the public domain, their translators having died well over a century ago.",
@@ -549,6 +1181,67 @@
           {
             "label": "MIT Internet Classics Archive — Enchiridion (trans. Elizabeth Carter, 1758)",
             "url": "http://classics.mit.edu/Epictetus/epicench.html"
+          }
+        ],
+        "context": "<p>The <em>Enchiridion</em> dates to the early 2nd century CE and was not written by Epictetus himself. His pupil Arrian, who recorded the philosopher's lectures in Koine Greek as the <em>Discourses</em>, distilled the most practical essentials into this short handbook. The title means 'something held in the hand'—a manual of conduct meant to be kept close and consulted often. Made up of roughly 53 brief chapters, it opens with the single discipline at its core: telling apart what is in our power from what is not.</p>",
+        "quotes": [
+          {
+            "text": "Some things are up to us and some are not. Our judgments and desires are ours; our body, property, and reputation are not.",
+            "cite": "1.1",
+            "gloss": "The modern stressor is trying to control what was never yours. The opening line that points your energy at what you can actually change."
+          },
+          {
+            "text": "People are disturbed not by things, but by the judgments they make about them.",
+            "cite": "5",
+            "gloss": "Same deadline, same harsh message—those who hold up and those who crack differ in interpretation, not in the event."
+          },
+          {
+            "text": "Do not wish things to happen as you would like, but wish them to happen as they do, and your life will go smoothly.",
+            "cite": "8",
+            "gloss": "The single line that swaps frustration for adaptation when a plan collapses—a tranquility switch for what you cannot control."
+          },
+          {
+            "text": "Never say you have lost a thing, only that you have returned it. It was lent to you, not given.",
+            "cite": "11",
+            "gloss": "Status, relationships, even good health are on loan, not owned. A reframe that lightens the weight of any loss."
+          },
+          {
+            "text": "It is not the one who reviles you that insults you, but your own opinion that what he does is insulting.",
+            "cite": "20",
+            "gloss": "When a stranger's comment hijacks your day, the reminder that you are the one holding the reaction button."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "prohairesis (will, moral choice)",
+            "def": "The inner faculty of assenting, refusing, and desiring. Epictetus holds that this alone is truly 'up to us' and is the seat of freedom."
+          },
+          {
+            "term": "what is up to us vs. not (eph' hēmin)",
+            "def": "Judgment, desire, and action are ours; body, property, reputation, and status are not. Peace begins by drawing this dividing line."
+          },
+          {
+            "term": "judgment (hupolēpsis)",
+            "def": "Not the event itself but the interpretation we attach to it. The real source of distress lies in this judgment, not in the outside world."
+          },
+          {
+            "term": "apatheia (freedom from passion)",
+            "def": "An unshakable state of mind, freed from the passions that toss us around. Reached by accepting what cannot be controlled."
+          },
+          {
+            "term": "two handles",
+            "def": "Everything can be grasped by a handle that bears its weight or one that does not. The same event changes weight depending on which you take hold of (Ch. 43)."
+          }
+        ],
+        "apply": "<p>Take the one thing weighing on you most today and split a page into two columns. On the left, write what you can change (your reply, your attitude, your next move); on the right, what you cannot (someone else's reaction, what already happened, your reputation). Then spend today's energy only on the left column.</p><p>When a remark makes your chest tighten, pause one beat and ask: was it the remark that angered me, or my judgment that it was an insult? (Ch. 20) Most modern burnout comes from gripping the right-hand column—learning to let go of it is where recovery starts.</p>",
+        "related": [
+          {
+            "slug": "discourses",
+            "label": "Discourses · Epictetus"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
           }
         ]
       }
@@ -581,15 +1274,31 @@
         "faq": [
           {
             "q": "에픽테토스의 담화록은 어떤 책인가요?",
-            "a": "담화록은 스토아 철학자 에픽테토스가 제자들에게 강의한 내용을, 제자 아리아노스가 받아 적어 전한 4권의 책입니다. '우리에게 달린 것과 달리지 않은 것'을 구별하라는 가르침이 핵심이며, 제1권은 통제 가능한 것에 집중하는 법(1.1)과 철학적 진보에는 시간이 필요함(1.15)을, 제2권은 외부에 흔들리지 않는 두려움 없는 삶(2.5)을 다룹니다."
+            "a": "스토아 철학자 에픽테토스가 제자들에게 강의한 내용을, 제자 아리아노스가 받아 적어 전한 책입니다. 원래 8권 중 현재 4권이 남아 있습니다. '우리에게 달린 것과 달리지 않은 것'을 구별하라는 가르침이 핵심이며, 다듬은 논문이 아니라 살아 있는 강의실의 말투를 그대로 담고 있습니다."
+          },
+          {
+            "q": "담화록을 한 문장으로 요약하면?",
+            "a": "통제할 수 있는 것(내 판단·의지)과 없는 것(몸·재산·평판·남의 생각)을 구별하고, 오직 내게 달린 것에만 마음을 두라는 책입니다. 그렇게 할 때 외부 사건에 흔들리지 않는 평정과 자유를 얻는다고 가르칩니다."
+          },
+          {
+            "q": "담화록에서 가장 유명한 구절은 무엇인가요?",
+            "a": "\"내 다리는 묶을 수 있어도, 내 의지만은 제우스조차 꺾지 못한다\"(1.1)가 대표적입니다. 또한 \"위대한 것은 단번에 생기지 않는다 — 포도도 무화과도 먼저 꽃피고 열매 맺고 익는다\"(1.15)라는 성장의 비유도 널리 인용됩니다."
           },
           {
             "q": "에픽테토스는 누구인가요?",
-            "a": "에픽테토스(기원후 약 50~135년)는 노예로 태어나 훗날 자유를 얻고 스토아 철학을 가르친 철학자입니다. 그는 직접 글을 쓰지 않았고, 제자 아리아노스가 그의 강의를 기록해 담화록과 엥케이리디온(편람)으로 전했습니다. 후대의 마르쿠스 아우렐리우스에게도 큰 영향을 주었습니다."
+            "a": "에픽테토스(기원후 약 50~135년)는 노예로 태어나 훗날 자유를 얻고 스토아 철학을 가르친 철학자입니다. 직접 글을 쓰지 않았고, 제자 아리아노스가 강의를 기록해 담화록과 엥케이리디온(편람)으로 전했습니다. 후대의 황제 마르쿠스 아우렐리우스에게도 큰 영향을 주었습니다."
+          },
+          {
+            "q": "담화록 1.15 '무화과 비유'는 무슨 뜻인가요?",
+            "a": "제1권 15장에서 에픽테토스는 무화과를 달라면 시간이 필요하다고 답합니다 — 꽃이 피고 열매가 맺히고 익어야 하기 때문입니다. 사람의 마음이 성숙하는 데에도 그만한 시간이 걸린다는 뜻으로, 철학적 진보는 단번에 이룰 수 없으니 조급해하지 말라는 가르침입니다."
+          },
+          {
+            "q": "담화록이 오늘날에도 의미가 있나요?",
+            "a": "네. '통제할 수 있는 것에 집중하라'는 핵심 가르침은 현대 인지행동치료(CBT)의 뿌리로 꼽힐 만큼 실용적입니다. 번아웃·불안·타인의 평가에 휘둘리는 상황에서, 무엇이 내 몫이고 무엇이 아닌지 가르는 도구로 지금도 널리 읽힙니다."
           },
           {
             "q": "담화록 원문을 무료로 읽을 수 있나요?",
-            "a": "네. 조지 롱(George Long)의 1877년 영어 번역은 저작권이 만료되어 누구나 무료로 읽을 수 있습니다. 아래 PD 원문 안내의 Wikisource, Project Gutenberg, Standard Ebooks 링크에서 전문을 볼 수 있습니다. 한국어 완역은 현대 출판본이 많아 저작권에 유의해야 합니다."
+            "a": "네. 조지 롱(George Long)의 1877년 영어 번역은 저작권이 만료되어 누구나 무료로 읽을 수 있습니다. 아래 PD 원문 안내의 Wikisource, Project Gutenberg, Standard Ebooks 링크에서 전문을 볼 수 있습니다."
           },
           {
             "q": "Dialogos는 담화록을 어떻게 인용하나요?",
@@ -609,6 +1318,58 @@
           {
             "label": "Standard Ebooks — 담화록 (George Long 역)",
             "url": "https://standardebooks.org/ebooks/epictetus/discourses/george-long"
+          }
+        ],
+        "context": "<p><em>담화록</em>(그리스어 <em>디아트리바이</em>)은 기원후 2세기 초 그리스 동부 니코폴리스에서, 노예 출신의 스토아 철학자 에픽테토스가 제자들에게 들려준 강의를 제자 아리아노스가 코이네 그리스어로 받아 적은 책입니다. 원래 8권으로 전해지나 현재는 4권만 남아 있습니다. 에픽테토스 본인은 한 줄도 쓰지 않았기에, 이 책은 다듬어진 논문이 아니라 질문과 꾸짖음이 오가는 살아 있는 교실의 말투를 그대로 담고 있습니다. 그래서 추상적 이론보다 '오늘 어떻게 살 것인가'에 답하는 실천 매뉴얼에 가깝습니다.</p>",
+        "quotes": [
+          {
+            "text": "내 다리는 묶을 수 있어도, 내 의지만은 제우스조차 꺾지 못한다.",
+            "cite": "1.1",
+            "gloss": "외부는 나를 가둘 수 있어도 내 마음의 결정권은 빼앗지 못한다 — 통제 밖의 일에 짓눌릴 때 붙드는 한 문장."
+          },
+          {
+            "text": "죽어야 한다면, 신음하며 죽어야 하는가? 사슬에 묶여야 한다면, 통곡하며 묶여야 하는가? 누가 내가 웃으며 의연히 가는 것을 막을 수 있는가.",
+            "cite": "1.1",
+            "gloss": "벌어질 일은 못 막아도 그것을 맞는 태도는 끝까지 내 몫이다 — 번아웃과 불안 앞에서 되새길 자유의 선언."
+          },
+          {
+            "text": "위대한 것은 단번에 생기지 않는다. 포도도 무화과도 그렇지 않으니, 지금 무화과를 달라 하면 나는 시간이 필요하다 답한다 — 먼저 꽃피고, 열매 맺고, 그러고서 익는다.",
+            "cite": "1.15",
+            "gloss": "사람의 성장도 무화과처럼 단계를 건너뛸 수 없다 — 빨리 달라질 거라는 조급함을 내려놓게 하는 비유."
+          },
+          {
+            "text": "공놀이를 잘하는 사람은 공이 좋은지 나쁜지는 신경 쓰지 않고, 오직 잘 던지고 잘 받는 데에만 마음을 쏟는다.",
+            "cite": "2.5",
+            "gloss": "결과(공) 자체는 좋지도 나쁘지도 않다 — 통제할 수 없는 결과 대신 내 기량과 태도에 집중하라는 가르침."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "우리에게 달린 것 (ta eph' hēmin)",
+            "def": "오직 우리 자신의 판단·욕구·의지처럼 우리가 온전히 통제할 수 있는 것. 스토아 윤리의 출발점이자 자유의 유일한 근거다."
+          },
+          {
+            "term": "프로하이레시스 (prohairesis)",
+            "def": "선택하고 동의하는 의지의 능력. 에픽테토스가 인간의 진짜 '나'로 보는 핵심으로, 외부의 그 무엇도 이것만은 강제하지 못한다."
+          },
+          {
+            "term": "표상의 사용 (chrēsis phantasiōn)",
+            "def": "마음에 떠오른 인상에 곧바로 휩쓸리지 않고, 옳은지 판단해 동의 여부를 고르는 능력. 신이 우리 손에 맡긴 가장 중요한 힘이다."
+          },
+          {
+            "term": "아무래도 좋은 것 (adiaphora)",
+            "def": "건강·재산·평판처럼 그 자체로 선도 악도 아닌 것. 좋고 나쁨은 그것을 어떻게 쓰느냐에 달렸다."
+          }
+        ],
+        "apply": "<p>오늘 마음이 무너질 때, 에픽테토스의 첫 질문을 그대로 던져 보세요. \"이건 나에게 달린 일인가, 아닌가?\" 상사의 평가, 동료의 반응, 어제 한 실수에 대한 남들의 기억 — 이것들은 모두 내 통제 밖입니다. 통제 밖의 일에 쏟던 에너지를 거두어, 오직 내가 정할 수 있는 것(지금 보일 태도, 다음에 할 한 가지 행동)에만 다시 집중하세요.</p><p>그리고 변화가 더디다고 자책하지 마세요. 무화과가 꽃피고 열매 맺고 익기까지 시간이 걸리듯, 사람의 성장도 단계를 건너뛸 수 없습니다 (1.15). 오늘 한 걸음이면 충분합니다.</p>",
+        "related": [
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
           }
         ]
       },
@@ -632,19 +1393,35 @@
         "provenance": "Dialogosの応答は、著作権の切れた原典の思想を現代日本語で意訳したものであり、著作権のある現代の翻訳文をそのまま引き写したものではありません。出典として示される巻・節の番号は、その思想が語録のどこに現れるかを指すものであって、特定の翻訳の引用ではありません。",
         "faq": [
           {
-            "q": "エピクテトスの語録とはどんな書物ですか?",
-            "a": "語録は、ストア派哲学者エピクテトスが弟子たちに語った講義を、弟子アリアノスが書き留めて伝えた4巻の書です。「私たちに委ねられたものと委ねられないもの」を区別せよという教えが核心で、第1巻は制御できることに集中する法(1.1)と哲学的進歩には時間がかかること(1.15)を、第2巻は外に揺らがない恐れなき生(2.5)を扱います。"
+            "q": "エピクテトスの語録とはどんな書物ですか？",
+            "a": "ストア派哲学者エピクテトスが弟子たちに語った講義を、弟子アリアノスが書き留めて伝えた書です。もと8巻のうち現在4巻が残っています。「私たちに委ねられたものと委ねられないもの」を区別せよという教えが核心で、整えた論文ではなく生きた講義室の語り口をそのまま伝えています。"
           },
           {
-            "q": "エピクテトスとは誰ですか?",
-            "a": "エピクテトス(紀元50年頃~135年頃)は、奴隷として生まれ、のちに自由を得てストア哲学を教えた哲学者です。自ら著述はせず、弟子のアリアノスが講義を記録し、語録とエンケイリディオン(提要)として後世に伝えました。皇帝マルクス・アウレリウスにも大きな影響を与えています。"
+            "q": "語録を一文で要約すると？",
+            "a": "制御できるもの（自分の判断・意志）と、できないもの（身体・財産・評判・他人の考え）を区別し、ただ自分に委ねられたものだけに心を向けよという書です。そうすることで外的な出来事に揺らがない平静と自由が得られると教えます。"
           },
           {
-            "q": "語録の原文を無料で読めますか?",
-            "a": "はい。ジョージ・ロング(George Long)による1877年の英訳は著作権が切れており、誰でも無料で読むことができます。下記のパブリックドメイン原文案内にあるWikisource、Project Gutenberg、Standard Ebooksのリンクから全文を読めます。日本語の完訳は現代の出版物が多いため、著作権にご注意ください。"
+            "q": "語録で最も有名な一節は？",
+            "a": "「私の脚を鎖でつなぐことはできても、私の意志だけはゼウスでさえ屈服させられない」（1.1）が代表的です。また「偉大なものは一瞬には生まれない — ぶどうもイチジクもまず花が咲き、実をつけ、それから熟す」（1.15）という成長の比喩も広く引かれます。"
           },
           {
-            "q": "Dialogosは語録をどのように引用しますか?",
+            "q": "エピクテトスとは誰ですか？",
+            "a": "エピクテトス（紀元50年頃〜135年頃）は、奴隷として生まれ、のちに自由を得てストア哲学を教えた哲学者です。自ら著述はせず、弟子アリアノスが講義を記録し、語録とエンケイリディオン（提要）として後世に伝えました。皇帝マルクス・アウレリウスにも大きな影響を与えています。"
+          },
+          {
+            "q": "語録1.15の「イチジクのたとえ」とは？",
+            "a": "第1巻15章で、エピクテトスはイチジクを今すぐ求められれば時間が要ると答えます — 花が咲き、実がなり、熟さねばならないからです。人の心が成熟するにも同じだけ時間がかかるという意味で、哲学的進歩は一気に成し遂げられないので焦るなという教えです。"
+          },
+          {
+            "q": "語録は現代でも意味がありますか？",
+            "a": "はい。「制御できることに集中せよ」という核心は、現代の認知行動療法（CBT）の源流とされるほど実用的です。仕事のストレスや人間関係の不安、他人の評価に振り回される場面で、何が自分の領分で何がそうでないかを見分ける道具として今も広く読まれています。"
+          },
+          {
+            "q": "語録の原文を無料で読めますか？",
+            "a": "はい。ジョージ・ロング（George Long）による1877年の英訳は著作権が切れており、誰でも無料で読めます。下記のパブリックドメイン原文案内にあるWikisource、Project Gutenberg、Standard Ebooksのリンクから全文を読めます。"
+          },
+          {
+            "q": "Dialogosは語録をどのように引用しますか？",
             "a": "Dialogosは著作権の切れた原典の思想を現代語で言い換えて応答し、特定の現代訳の文章をそのまま写すことはありません。出典として示される「1.1」「2.5」などの番号は、その思想が語録のどの巻・節に現れるかを知らせる目印です。"
           }
         ],
@@ -661,6 +1438,58 @@
           {
             "label": "Standard Ebooks — 語録 (George Long 訳)",
             "url": "https://standardebooks.org/ebooks/epictetus/discourses/george-long"
+          }
+        ],
+        "context": "<p><em>語録</em>（ギリシア語<em>ディアトリバイ</em>）は、紀元2世紀初頭、ギリシア東部ニコポリスで、もと奴隷のストア派哲学者エピクテトスが弟子たちに語った講義を、弟子アリアノスがコイネー・ギリシア語で書き留めた書物です。もとは8巻でしたが、現存するのは4巻です。エピクテトス自身は一行も書かなかったため、本書は整えられた論文ではなく、問いと叱咤が飛び交う生きた教室の語り口をそのまま伝えます。日本では鹿野治助訳『人生談義』（岩波文庫、1958年）で広く知られ、近年は國方栄二による新訳（岩波文庫、2020〜21年）も刊行されています。</p>",
+        "quotes": [
+          {
+            "text": "私の脚を鎖でつなぐことはできても、私の意志だけはゼウスでさえ屈服させられない。",
+            "cite": "1.1",
+            "gloss": "外の力は人を縛れても、心の決定権までは奪えない — 理不尽な上司や状況に直面したとき支えになる一文。"
+          },
+          {
+            "text": "死なねばならぬのなら、嘆きながら死なねばならぬのか。鎖につながれるなら、泣きながらつながれるのか。私が笑って堂々と行くのを、誰が妨げられようか。",
+            "cite": "1.1",
+            "gloss": "起こることは止められなくても、それを受けとめる態度は最後まで自分のもの — 職場の不安に押しつぶされそうな時の自由の宣言。"
+          },
+          {
+            "text": "偉大なものは一瞬には生まれない。ぶどうもイチジクもそうだ。今すぐイチジクをと言われれば、私はこう答える — まず花が咲き、実をつけ、それから熟すのだと。",
+            "cite": "1.15",
+            "gloss": "人の成長もイチジクのように段階を飛び越せない — 「すぐ変わりたい」という焦りを手放させる比喩。"
+          },
+          {
+            "text": "球技の上手な者は、球が良いか悪いかは気にせず、ただ上手に投げ、上手に受けることだけに心を注ぐ。",
+            "cite": "2.5",
+            "gloss": "結果（球）それ自体は善でも悪でもない — 制御できない成果ではなく、自分の技量と態度に集中せよという教え。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "私たちに委ねられたもの (ta eph' hēmin)",
+            "def": "自らの判断・欲求・意志のように、私たちが完全に制御できるもの。ストア倫理の出発点であり、自由の唯一の根拠です。"
+          },
+          {
+            "term": "プロハイレシス (prohairesis)",
+            "def": "選び、同意する意志の力。エピクテトスが人間の本当の「私」とみなす核心で、外的な何ものもこれだけは強制できません。"
+          },
+          {
+            "term": "表象の使用 (chrēsis phantasiōn)",
+            "def": "心に浮かぶ印象にすぐ流されず、正しいかを吟味して同意するか否かを選ぶ力。神が人間の手に委ねた最も重要な能力です。"
+          },
+          {
+            "term": "どちらでもよいもの (adiaphora)",
+            "def": "健康・財産・評判のように、それ自体は善でも悪でもないもの。善悪はそれをどう使うかにかかっています。"
+          }
+        ],
+        "apply": "<p>仕事や人間関係で心が乱れたとき、エピクテトスの最初の問いをそのまま使ってみてください。「これは私に委ねられたことか、そうでないか」。上司の評価、同僚の機嫌、取引先の決定 — これらはすべて私の制御の外にあります。制御できないものに注いでいた力を引き戻し、自分が決められること（今示す態度、次にとる一つの行動）だけに振り向けましょう。</p><p>そして進歩が遅いと自分を責めないこと。イチジクが花を咲かせ、実をつけ、熟すまでに時間がかかるように、人の成熟も段階を飛ばせません（1.15）。今日の一歩で十分です。</p>",
+        "related": [
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
           }
         ]
       },
@@ -685,11 +1514,27 @@
         "faq": [
           {
             "q": "What is Epictetus's Discourses?",
-            "a": "The Discourses are four books in which the teachings Epictetus gave to his students were recorded and preserved by his pupil Arrian. The core lesson is to distinguish what is in our power from what is not; Book 1 covers focusing on what we control (1.1) and that progress in philosophy takes time (1.15), and Book 2 treats a fearless life unshaken by externals (2.5)."
+            "a": "It records the lectures the Stoic philosopher Epictetus gave to his students, written down and preserved by his pupil Arrian. Four of the original eight books survive. Its core lesson is to distinguish what is in our power from what is not, and it preserves the living voice of his classroom rather than a polished treatise."
+          },
+          {
+            "q": "What is the Discourses about, in one sentence?",
+            "a": "It teaches you to separate what you control (your own judgement and will) from what you don't (your body, property, reputation, other people's opinions), and to invest yourself only in what is truly yours — which is where Stoic calm and freedom come from."
+          },
+          {
+            "q": "What is the most famous line in the Discourses?",
+            "a": "\"You may fetter my leg, but my will not even Zeus himself can overpower\" (1.1) is the best known. Also widely quoted is the image of growth from Book 1.15: \"Nothing great is produced suddenly — not even the grape or the fig, which must flower, fruit, and then ripen.\""
           },
           {
             "q": "Who was Epictetus?",
             "a": "Epictetus (c. 50–135 CE) was born a slave, later gained his freedom, and taught Stoic philosophy. He wrote nothing himself; his pupil Arrian recorded his lectures, which survive as the Discourses and the Enchiridion (Handbook). His thought deeply influenced the later emperor Marcus Aurelius."
+          },
+          {
+            "q": "What does the 'fig' analogy in Discourses 1.15 mean?",
+            "a": "In Book 1, chapter 15, Epictetus says that if you want a fig you must wait — it has to flower, bear fruit, and ripen. The maturing of a person's mind takes the same kind of time. The point is that philosophical progress cannot be rushed, so there is no cause for impatience."
+          },
+          {
+            "q": "Is the Discourses still relevant today?",
+            "a": "Yes. Its central lesson — focus on what you can control — is often cited as a root of modern cognitive behavioral therapy (CBT). For burnout, anxiety, and being ruled by others' opinions, it remains a practical tool for sorting what is yours to manage from what is not."
           },
           {
             "q": "Can I read the Discourses for free?",
@@ -713,6 +1558,58 @@
           {
             "label": "Standard Ebooks — Discourses (trans. George Long)",
             "url": "https://standardebooks.org/ebooks/epictetus/discourses/george-long"
+          }
+        ],
+        "context": "<p>The <em>Discourses</em> (Greek <em>Diatribai</em>) records lectures the Stoic philosopher Epictetus — a former slave — gave to his students in Nicopolis, on the Greek eastern coast, in the early second century CE. His pupil Arrian took them down in Koine Greek. Of the original eight books, four survive. Because Epictetus wrote nothing himself, the text is not a polished treatise but the living voice of a classroom, full of questions, challenges, and blunt rebukes. That is why it reads less like abstract theory and more like a practical manual for how to live today.</p>",
+        "quotes": [
+          {
+            "text": "You may fetter my leg, but my will not even Zeus himself can overpower.",
+            "cite": "1.1",
+            "gloss": "External force can confine you, but it can't seize your power to decide — a line to hold onto when circumstances feel beyond your control."
+          },
+          {
+            "text": "I must die. Must I then die lamenting? I must be put in chains. Must I then also lament? Does any man hinder me from going with smiles and cheerfulness and contentment?",
+            "cite": "1.1",
+            "gloss": "What happens may be fixed, but the attitude you meet it with stays yours — a declaration of freedom for moments of stress and dread."
+          },
+          {
+            "text": "Nothing great is produced suddenly, since not even the grape or the fig is. If you want a fig now, I answer that it takes time: let it flower first, then bear fruit, then ripen.",
+            "cite": "1.15",
+            "gloss": "Growth, like a fig, can't skip stages — a corrective to the impatient wish to change all at once."
+          },
+          {
+            "text": "Those who play ball skilfully do not care whether the ball is good or bad, but only about throwing and catching it well.",
+            "cite": "2.5",
+            "gloss": "The outcome itself (the ball) is neither good nor bad — fix your attention on your own skill and conduct, not on results you can't command."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "what is in our power (ta eph' hēmin)",
+            "def": "The things we fully control — our own judgements, desires, and will. This is the starting point of Stoic ethics and the only ground of real freedom."
+          },
+          {
+            "term": "prohairesis (faculty of choice)",
+            "def": "The will's power to choose and to give or withhold assent. Epictetus treats it as a person's true self, which nothing external can compel."
+          },
+          {
+            "term": "use of impressions (chrēsis phantasiōn)",
+            "def": "The ability to pause before an impression that strikes the mind, judge whether it is true, and choose whether to assent — the most important faculty the gods placed in our hands."
+          },
+          {
+            "term": "indifferents (adiaphora)",
+            "def": "Things like health, wealth, and reputation that are in themselves neither good nor bad; their value lies entirely in how we use them."
+          }
+        ],
+        "apply": "<p>When you feel overwhelmed, run Epictetus's first question on the situation: is this in my power, or not? A market downturn, a colleague's mood, what people remember about a mistake — all of it lies outside your control. Pull back the energy you were spending on those, and redirect it to the one thing you can decide: the attitude you show now, and the single next action you take.</p><p>And don't punish yourself for slow progress. Just as a fig must flower, fruit, and then ripen, a person's growth can't skip stages (1.15). One step today is enough.</p>",
+        "related": [
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
           }
         ]
       }
@@ -747,12 +1644,28 @@
             "a": "저자는 고대 그리스 철학자 플라톤(기원전 약 428~348년)입니다. 대화 속 주된 화자는 그의 스승 소크라테스로, 플라톤은 자신의 철학을 소크라테스의 입을 빌려 펼칩니다."
           },
           {
-            "q": "메논 원문을 무료로 읽을 수 있나요?",
-            "a": "네. 벤저민 조이트(Benjamin Jowett, 1817~1893)의 영어 번역이 저작권이 만료되어 퍼블릭 도메인입니다. 아래 Wikisource, Project Gutenberg, MIT Internet Classics Archive 링크에서 전문을 무료로 읽을 수 있습니다."
+            "q": "'메논의 역설'이란 무엇인가요?",
+            "a": "탐구가 불가능하다는 논변입니다. 이미 아는 것은 찾을 필요가 없고, 모르는 것은 무엇을 찾아야 할지조차 모르니 어느 쪽이든 탐구할 수 없다는 것이죠(80e). 소크라테스는 이 막힘(아포리아)을 부정하지 않고, 오히려 그것을 참된 탐구의 출발점으로 삼아 상기설로 답합니다."
           },
           {
-            "q": "Dialogos는 메논을 어떻게 인용하나요?",
-            "a": "Dialogos는 원전의 사상을 현대어로 의역해 대화에 녹입니다. 현대 번역본의 문장을 그대로 전재하지 않으며, 출처는 사상이 등장하는 절(스테파누스 번호, 예: 80a–b)로 표기합니다."
+            "q": "노예 소년 이야기는 무엇을 보여 주나요?",
+            "a": "소크라테스는 기하를 배운 적 없는 노예 소년에게 정사각형의 넓이를 두 배로 만드는 문제를 냅니다(82b~85b). 소년은 처음 '변을 두 배로'라고 답했다 틀리고, 막힌 뒤, 질문만으로 대각선이 답임을 스스로 찾아냅니다. 가르치지 않고 물었을 뿐인데 답에 이른 것이 상기설의 예시입니다."
+          },
+          {
+            "q": "메논에서 결국 덕은 가르칠 수 있다고 결론 나나요?",
+            "a": "단정적인 결론은 나지 않습니다. 덕을 가르치는 스승이 실제로 보이지 않는다는 점에서, 소크라테스는 덕이 가르침이나 연습이나 타고난 본성보다 '신적인 섭리(theia moira)'로 온다고 잠정적으로 말합니다. 다만 덕이 무엇인지부터 다시 물어야 한다며 열린 채로 끝맺습니다."
+          },
+          {
+            "q": "메논의 명언이나 핵심 구절은 무엇인가요?",
+            "a": "가장 유명한 것은 소크라테스를 \"닿으면 마비시키는 전기가오리\"에 빗댄 메논의 말(80a~b)과, \"나도 남을 마비시키지만 그건 내가 누구보다 막막하기 때문\"이라는 소크라테스의 응답(80c~d)입니다. \"모든 배움은 상기다\"(81d)도 자주 인용됩니다."
+          },
+          {
+            "q": "메논을 읽기 전에 알아 두면 좋은 배경은?",
+            "a": "메논은 테살리아의 부유한 귀족 청년으로, 소피스트 고르기아스의 제자입니다. 그래서 처음엔 덕의 정의를 자신 있게 줄줄 늘어놓습니다. 이 자신감이 소크라테스의 문답에 부딪혀 무너지는 과정을 알고 읽으면, 왜 '시끈가오리' 비유가 나오는지 더 또렷이 보입니다."
+          },
+          {
+            "q": "메논 원문을 무료로 읽을 수 있나요?",
+            "a": "네. 벤저민 조이트(Benjamin Jowett)의 영어 번역이 저작권이 만료되어 퍼블릭 도메인입니다. 아래 Wikisource, Project Gutenberg, MIT Internet Classics Archive 링크에서 전문을 무료로 읽을 수 있습니다. 한국어 완역은 별도의 현대 번역본을 참고하세요."
           }
         ],
         "pdIntro": "한국어로 된 메논의 퍼블릭 도메인 완역은 제한적이므로, 저작권이 만료된 영어 번역으로 안내합니다. 아래는 벤저민 조이트(Benjamin Jowett, 1817~1893)의 영역본으로, 번역자 사후 130여 년이 지나 퍼블릭 도메인입니다.",
@@ -768,6 +1681,62 @@
           {
             "label": "MIT Internet Classics Archive — 메논 (Benjamin Jowett 역)",
             "url": "https://classics.mit.edu/Plato/meno.html"
+          }
+        ],
+        "context": "<p><em>메논</em>은 기원전 4세기 초 아테네에서 활동한 플라톤이 그리스어로 쓴 초·중기 대화편으로, 스승 소크라테스를 주된 화자로 삼습니다. 테살리아 출신 귀족 청년 메논이 \"덕(아레테)은 가르칠 수 있는가\"라고 묻자, 소크라테스는 그 전에 \"덕이 도대체 무엇인지\"부터 모른다고 응수하며 물음의 방향을 뒤집습니다. 본편은 짧지만 메논의 역설과 상기설(아남네시스), 노예 소년의 기하 문답이라는 인식론의 핵심 장면을 담아, 안다는 것과 배운다는 것이 무엇인지를 묻는 서양 철학의 전환점으로 읽힙니다.</p>",
+        "quotes": [
+          {
+            "text": "소크라테스, 당신은 닿는 사람을 마비시키는 전기가오리(시끈가오리) 같습니다. 당신과 이야기하면 제 마음도 혀도 굳어 버립니다.",
+            "cite": "80a–b",
+            "gloss": "쉴 새 없이 답을 내놓던 사람이 좋은 질문 앞에서 멈춰 서는 순간 — 막힘은 무능이 아니라 생각이 시작됐다는 신호다."
+          },
+          {
+            "text": "내가 남을 마비시킨다면, 그건 내가 명료해서가 아니라 나 자신이 누구보다 막막하기 때문입니다.",
+            "cite": "80c–d",
+            "gloss": "가르치는 자도 함께 모른다고 인정할 때 진짜 탐구가 열린다 — 다 안다는 얼굴보다 솔직한 모름이 힘이 세다."
+          },
+          {
+            "text": "이미 아는 것은 더 찾을 까닭이 없고, 모르는 것은 무엇을 찾아야 할지조차 모른다. 그러니 탐구가 어떻게 가능한가?",
+            "cite": "80e",
+            "gloss": "성장이 막힌 듯한 정체기의 논리 그대로다 — 메논의 역설은 \"그래서 묻기를 멈추라\"가 아니라 \"그래도 물어라\"의 출발점이다."
+          },
+          {
+            "text": "배움이란 새것을 집어넣는 일이 아니라, 영혼이 본래 지녔던 앎을 다시 떠올리는 일이다.",
+            "cite": "81d",
+            "gloss": "상기설 — 답은 바깥의 정보가 아니라 좋은 질문이 끌어낸 내 안의 실마리일 수 있다."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "아레테 (aretē / 덕)",
+            "def": "사람이나 사물이 제 몫을 가장 잘 해내는 탁월함. 메논이 \"가르칠 수 있는가\"를 물은 바로 그 대상이며, 소크라테스는 그 정의부터 따진다."
+          },
+          {
+            "term": "아포리아 (aporia / 막다른 곤경)",
+            "def": "물음 앞에서 답이 막혀 어쩔 줄 모르는 상태. 소크라테스에게는 실패가 아니라 참된 탐구가 시작되는 자리다."
+          },
+          {
+            "term": "아남네시스 (anamnēsis / 상기설)",
+            "def": "배움이란 영혼이 이미 지녔던 앎을 다시 떠올리는 것이라는 학설. 노예 소년이 배운 적 없는 기하 문제를 문답만으로 풀어내며 예시된다."
+          },
+          {
+            "term": "엘렝코스 (elenchos / 논박)",
+            "def": "상대의 답을 거듭 되물어 모순을 드러내고 함께 막힘에 이르게 하는 소크라테스의 문답법. 안다고 믿던 것을 흔들어 다시 묻게 만든다."
+          }
+        ],
+        "apply": "<p>오늘의 한 가지 실천: 막혔다고 느낄 때 곧장 검색하거나 정답을 받아 적지 말고, 메논의 역설을 거꾸로 써 보세요. 종이에 \"내가 이미 아는 것\"과 \"전혀 모르는 것\"을 적은 뒤, 그 사이 회색지대 — <em>어렴풋이 짐작은 가는데 말로 못 하던 것</em> — 에 질문 하나를 던지는 겁니다.</p><p>노예 소년이 그랬듯, 좋은 질문은 바깥에서 답을 가져오기 전에 내 안의 실마리를 먼저 끌어냅니다. 번아웃의 정체기에 필요한 건 더 많은 정보가 아니라, 멈춰 서서 \"나는 사실 무엇을 묻고 있나\"를 또렷이 하는 한 번의 아포리아입니다.</p>",
+        "related": [
+          {
+            "slug": "plato-apology",
+            "label": "소크라테스의 변명 · 플라톤"
+          },
+          {
+            "slug": "plato-euthyphro",
+            "label": "에우티프론 · 플라톤"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
           }
         ]
       },
@@ -786,20 +1755,36 @@
         "provenance": "Dialogosの応答は、著作権の切れた原典の思想を現代語に意訳したものであり、著作権のある現代訳の文章をそのまま引き写すことはありません。出典の表記(例:80a–b)は、その思想が現れる対話篇の節(ステファヌス番号)を指します。",
         "faq": [
           {
-            "q": "プラトンの『メノン』はどんな内容ですか?",
-            "a": "「徳は教えられるか」という問いから出発し、知ることと学ぶことの本質を吟味する対話篇です。代表的には〈メノンのパラドックス〉(すでに知っていれば探究は不要、知らなければ何を探すか分からない)と、それに答えるソクラテスの〈想起説〉(学びとは魂がもともと宿していた知を思い出すこと)が論じられます。"
+            "q": "プラトンの『メノン』はどんな内容ですか？",
+            "a": "「徳は教えられるか」という問いから出発し、知ることと学ぶことの本質を吟味する対話篇です。代表的には〈メノンのパラドックス〉（すでに知っていれば探究は不要、知らなければ何を探すか分からない）と、それに答えるソクラテスの〈想起説〉（学びとは魂がもともと宿していた知を思い出すこと）が論じられます。"
           },
           {
-            "q": "『メノン』の著者は誰ですか?",
-            "a": "著者は古代ギリシアの哲学者プラトン(紀元前約428~348年)です。対話の主な語り手は師ソクラテスで、プラトンは自らの哲学をソクラテスの口を借りて展開しています。"
+            "q": "『メノン』の著者は誰ですか？",
+            "a": "著者は古代ギリシアの哲学者プラトン（紀元前約428~348年）です。対話の主な語り手は師ソクラテスで、プラトンは自らの哲学をソクラテスの口を借りて展開しています。"
           },
           {
-            "q": "『メノン』の原文を無料で読めますか?",
-            "a": "はい。ベンジャミン・ジョウェット(Benjamin Jowett、1817~1893)の英訳は著作権が切れてパブリックドメインです。下のWikisource、Project Gutenberg、MIT Internet Classics Archiveのリンクから全文を無料で読めます。"
+            "q": "〈メノンのパラドックス〉とは何ですか？",
+            "a": "探究は不可能だ、という論です。すでに知っていることは探す必要がなく、知らないことは何を探すべきかさえ分からない。ゆえにどちらにせよ探究できない、というものです（80e）。ソクラテスはこの行き詰まり（アポリア）を否定せず、むしろ真の探究の出発点とし、想起説で応じます。"
           },
           {
-            "q": "Dialogosは『メノン』をどのように引用しますか?",
-            "a": "Dialogosは原典の思想を現代語に意訳して対話に織り込みます。現代訳の文章をそのまま転載することはなく、出典は思想が現れる節(ステファヌス番号、例:80a–b)で示します。"
+            "q": "奴隷の少年の話は何を示していますか？",
+            "a": "ソクラテスは幾何を習ったことのない奴隷の少年に、正方形の面積を二倍にする問題を出します（82b~85b）。少年は最初「辺を二倍に」と答えて誤り、行き詰まったのち、問いだけで対角線が答えだと自ら見いだします。教えずに問うただけで答えに至ったことが、想起説の例示です。"
+          },
+          {
+            "q": "『メノン』では結局、徳は教えられると結論づけられますか？",
+            "a": "断定的な結論は出ません。徳を教える師が実際には見当たらない点から、ソクラテスは徳が教えや訓練や生まれつきの本性よりも〈神的な配剤（テイア・モイラ）〉によって与えられる、と暫定的に述べます。ただし、まず徳とは何かを問い直すべきだとして、開かれたまま閉じられます。"
+          },
+          {
+            "q": "『メノン』の名言や核心の一節は何ですか？",
+            "a": "最も有名なのは、ソクラテスを「触れると痺れさせる電気うなぎ」になぞらえたメノンの言葉（80a~b）と、「私も人を痺れさせるが、それは誰より自分が途方に暮れているからだ」というソクラテスの応答（80c~d）です。「すべての学びは想起である」（81d）もよく引かれます。"
+          },
+          {
+            "q": "『メノン』を読む前に知っておくとよい背景は？",
+            "a": "メノンはテッサリアの裕福な貴族の青年で、ソフィストのゴルギアスの弟子です。だから初めは徳の定義を自信たっぷりに並べ立てます。この自信がソクラテスの問答にぶつかって崩れていく過程を知って読むと、なぜ「シビレエイ」のたとえが出るのかがより鮮明に見えてきます。"
+          },
+          {
+            "q": "『メノン』の原文を無料で読めますか？",
+            "a": "はい。ベンジャミン・ジョウェット（Benjamin Jowett）の英訳は著作権が切れてパブリックドメインです。下のWikisource、Project Gutenberg、MIT Internet Classics Archiveのリンクから全文を無料で読めます。日本語の完訳は藤沢令夫訳（岩波文庫）などの現代訳をご参照ください。"
           }
         ],
         "pdIntro": "日本語によるメノンのパブリックドメイン完訳は限られているため、著作権の切れた英訳でご案内します。以下はベンジャミン・ジョウェット(Benjamin Jowett、1817~1893)の英訳で、訳者の没後130年以上を経てパブリックドメインです。",
@@ -815,6 +1800,62 @@
           {
             "label": "MIT Internet Classics Archive — メノン (Benjamin Jowett 訳)",
             "url": "https://classics.mit.edu/Plato/meno.html"
+          }
+        ],
+        "context": "<p><em>メノン</em>は、紀元前4世紀初めのアテナイで活動したプラトンがギリシア語で書いた初期から中期の対話篇で、師ソクラテスを主たる語り手とします。テッサリア出身の貴族の青年メノンが「徳（アレテー）は教えられるか」と問うと、ソクラテスはまず「徳とはそもそも何か」を自分は知らないと応じ、問いの向きを反転させます。短いながら、メノンのパラドックス・想起説（アナムネーシス）・奴隷の少年の幾何問答という認識論の核心場面を含み、知るとは何か・学ぶとは何かを問う転回点として読まれます。日本では藤沢令夫の訳で岩波文庫に収められ、広く読まれてきました。</p>",
+        "quotes": [
+          {
+            "text": "ソクラテス、あなたは触れた者を痺れさせる電気うなぎ（シビレエイ）のようです。話していると私の心も舌もこわばってしまう。",
+            "cite": "80a–b",
+            "gloss": "答えをすらすら出していた人が、よい問いの前で立ち止まる瞬間 — 行き詰まりは無能ではなく、考えが動き出した合図だ。"
+          },
+          {
+            "text": "私が人を痺れさせるなら、それは私が明晰だからではなく、誰よりも自分が途方に暮れているからです。",
+            "cite": "80c–d",
+            "gloss": "教える側も「ともに分からない」と認めるとき、本当の探究が開く — 全部分かった顔より、正直な「分からない」が強い。"
+          },
+          {
+            "text": "すでに知っていることは探す必要がなく、知らないことは何を探すべきかさえ分からない。ならば探究はどうして可能なのか。",
+            "cite": "80e",
+            "gloss": "仕事で手詰まりに感じる時の理屈そのもの — メノンのパラドックスは「だから問うのをやめよ」ではなく「それでも問え」の出発点だ。"
+          },
+          {
+            "text": "学びとは新しい知を詰め込むことではなく、魂がもともと宿していた知を思い出すことだ。",
+            "cite": "81d",
+            "gloss": "想起説 — 答えは外からの情報ではなく、よい問いが引き出した自分の中の手がかりかもしれない。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "アレテー (aretē / 徳)",
+            "def": "人や物がその役割を最もよく果たす卓越性。メノンが「教えられるか」と問うた当の対象であり、ソクラテスはまずその定義を吟味する。"
+          },
+          {
+            "term": "アポリア (aporia / 行き詰まり)",
+            "def": "問いの前で答えに詰まり、途方に暮れる状態。ソクラテスにとっては失敗ではなく、真の探究が始まる場所である。"
+          },
+          {
+            "term": "アナムネーシス (anamnēsis / 想起説)",
+            "def": "学びとは魂がすでに宿していた知を思い出すことだ、という説。奴隷の少年が習ったことのない幾何の問題を問答だけで解く場面で示される。"
+          },
+          {
+            "term": "エレンコス (elenchos / 論駁)",
+            "def": "相手の答えを問い返して矛盾を露わにし、ともに行き詰まりへ導くソクラテスの問答法。知っていると思い込んだことを揺さぶり、問い直させる。"
+          }
+        ],
+        "apply": "<p>今日の小さな実践: 仕事で行き詰まったとき、すぐ検索したり正解をメモしたりせず、メノンのパラドックスを逆に使ってみてください。紙に「すでに分かっていること」と「まったく分からないこと」を書き、その中間 — <em>なんとなく察しはつくが言葉にできていないこと</em> — に問いを一つ立てるのです。</p><p>奴隷の少年がそうだったように、よい問いは外から答えを持ち込む前に、自分の中の手がかりをまず引き出します。人間関係や仕事の停滞に必要なのは、より多くの情報ではなく、立ち止まって「自分は本当は何を問うているのか」を明らかにする一度のアポリアです。</p>",
+        "related": [
+          {
+            "slug": "plato-apology",
+            "label": "ソクラテスの弁明 · プラトン"
+          },
+          {
+            "slug": "plato-euthyphro",
+            "label": "エウテュプロン · プラトン"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
           }
         ]
       },
@@ -841,12 +1882,28 @@
             "a": "The author is the ancient Greek philosopher Plato (c. 428–348 BCE). The main speaker in the dialogue is his teacher Socrates, through whom Plato voices his own philosophy."
           },
           {
-            "q": "Can I read the Meno for free?",
-            "a": "Yes. Benjamin Jowett's English translation (Jowett, 1817–1893) is out of copyright and in the public domain. You can read the full text for free at the Wikisource, Project Gutenberg, and MIT Internet Classics Archive links below."
+            "q": "What is Meno's paradox?",
+            "a": "It is an argument that inquiry is impossible: you need not seek what you already know, and you cannot seek what you don't know because you wouldn't recognize it (80e). Socrates does not deny this impasse (aporia); instead he treats it as the starting point of real inquiry and answers it with the theory of recollection."
           },
           {
-            "q": "How does Dialogos cite the Meno?",
-            "a": "Dialogos weaves the ideas of the original into conversation in modern paraphrase. It does not reprint any modern translation verbatim, and it cites sources by the section where an idea appears (the Stephanus number, e.g. 80a–b)."
+            "q": "What does the slave-boy story show?",
+            "a": "Socrates poses an untaught slave boy a problem: double the area of a square (82b–85b). The boy first answers \"double the side,\" gets it wrong, reaches an impasse, and then, through questions alone, discovers that the diagonal is the answer. Arriving at truth without being told illustrates the theory of recollection."
+          },
+          {
+            "q": "Does the Meno conclude that virtue can be taught?",
+            "a": "It reaches no firm conclusion. Since no actual teachers of virtue can be found, Socrates tentatively says virtue comes not by teaching, practice, or nature, but by a kind of divine dispensation (theia moira). He ends open-endedly, insisting we must first re-ask what virtue itself is."
+          },
+          {
+            "q": "What are the famous quotes or key lines in the Meno?",
+            "a": "The best known is Meno comparing Socrates to a \"torpedo fish that numbs whoever touches it\" (80a–b), and Socrates' reply that he numbs others only because he is more perplexed than anyone himself (80c–d). \"All learning is recollection\" (81d) is also widely quoted."
+          },
+          {
+            "q": "What background helps before reading the Meno?",
+            "a": "Meno is a wealthy young aristocrat from Thessaly and a student of the sophist Gorgias, which is why he confidently rattles off definitions of virtue at the start. Reading with that confidence in mind — and watching it collapse under Socrates' questioning — makes the \"torpedo fish\" image land more sharply."
+          },
+          {
+            "q": "Can I read the Meno for free?",
+            "a": "Yes. Benjamin Jowett's English translation is out of copyright and in the public domain. You can read the full text for free at the Wikisource, Project Gutenberg, and MIT Internet Classics Archive links below."
           }
         ],
         "pdIntro": "The text below is Benjamin Jowett's English translation (Jowett, 1817–1893), which is in the public domain more than a century after the translator's death.",
@@ -862,6 +1919,62 @@
           {
             "label": "MIT Internet Classics Archive — Meno (trans. Benjamin Jowett)",
             "url": "https://classics.mit.edu/Plato/meno.html"
+          }
+        ],
+        "context": "<p><em>Meno</em> is an early-to-middle dialogue written in Greek by Plato in early-4th-century BCE Athens, with his teacher Socrates as its central speaker. When Meno, a young aristocrat from Thessaly, asks whether virtue (<em>aretē</em>) can be taught, Socrates replies that he does not even know what virtue <em>is</em>, and so turns the question on its head. Though short, the dialogue contains three pillars of epistemology — Meno's paradox, the theory of recollection (<em>anamnēsis</em>), and the slave-boy geometry demonstration — making it a turning point in how the West asks what it means to know and to learn.</p>",
+        "quotes": [
+          {
+            "text": "Socrates, you are like the flat torpedo fish that numbs whoever comes near it — talk with you and my mind and tongue go numb.",
+            "cite": "80a–b",
+            "gloss": "The moment a fluent problem-solver hits a question and stalls — being stuck isn't incompetence, it's the sign that real thinking just started."
+          },
+          {
+            "text": "If I numb others, it is not because I am clear, but because I am more perplexed than anyone myself.",
+            "cite": "80c–d",
+            "gloss": "Inquiry opens when even the teacher admits 'I don't know either' — honest not-knowing beats a confident face."
+          },
+          {
+            "text": "You cannot inquire into what you know, for there is nothing to seek; nor into what you don't, for you would not know what to look for.",
+            "cite": "80e",
+            "gloss": "The exact logic of feeling stuck under modern stress — Meno's paradox isn't 'so stop asking,' it's the starting line for 'ask anyway.'"
+          },
+          {
+            "text": "Learning is not packing in something new; it is the soul recollecting knowledge it always had.",
+            "cite": "81d",
+            "gloss": "Recollection — the answer may not be outside information but a thread inside you that a good question pulls loose."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "aretē (virtue / excellence)",
+            "def": "The excellence by which a person or thing performs its proper function best. It is the very thing Meno asks whether one can teach, and the term Socrates insists on defining first."
+          },
+          {
+            "term": "aporia (impasse)",
+            "def": "The state of being stuck before a question, at a loss for an answer. For Socrates this is not failure but the place where genuine inquiry begins."
+          },
+          {
+            "term": "anamnēsis (recollection)",
+            "def": "The doctrine that learning is the soul recalling knowledge it already possessed. It is illustrated when an untaught slave boy solves a geometry problem through questioning alone."
+          },
+          {
+            "term": "elenchos (refutation)",
+            "def": "Socrates' method of questioning an answer until its contradictions surface, leading both parties into a shared impasse — shaking what one assumed one knew so it can be asked anew."
+          }
+        ],
+        "apply": "<p>One thing to try today: when you feel stuck, don't immediately search for the answer or copy down a fix. Use Meno's paradox in reverse. On paper, write \"what I already know\" and \"what I have no idea about,\" then aim a single question at the gray zone between them — <em>the thing you vaguely sense but can't yet put into words</em>.</p><p>As the slave boy showed, a good question draws out a thread inside you before any outside answer arrives. Under modern stress, what an impasse calls for isn't more information but one clear pause to ask: what am I actually trying to find out?</p>",
+        "related": [
+          {
+            "slug": "plato-apology",
+            "label": "Apology · Plato"
+          },
+          {
+            "slug": "plato-euthyphro",
+            "label": "Euthyphro · Plato"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
           }
         ]
       }
@@ -885,19 +1998,35 @@
         "faq": [
           {
             "q": "플라톤 『에우티프론』은 어떤 작품인가요?",
-            "a": "소크라테스가 불경죄 재판을 앞두고 예언자 에우티프론과 '경건이란 무엇인가'를 두고 나누는 짧은 대화편입니다. 도덕의 근거를 신의 뜻에 두려는 시도를 의심하는 '에우티프론 딜레마'(6d–e, 10a)로 잘 알려져 있습니다."
+            "a": "기원전 399년 무렵, 불경죄로 재판을 앞둔 소크라테스가 법정 앞에서 예언자 에우티프론과 '경건이란 무엇인가'를 두고 나누는 짧은 대화편입니다. 도덕의 근거를 신의 뜻에 두려는 시도를 의심하는 '에우티프론 딜레마'(10a)로 잘 알려져 있습니다."
           },
           {
             "q": "이 작품의 저자와 화자는 누구인가요?",
-            "a": "저자는 고대 그리스 철학자 플라톤이고, 대화를 이끄는 화자는 그의 스승 소크라테스입니다. 플라톤이 소크라테스를 등장인물로 삼아 기원전 4세기경에 쓴 초기 대화편입니다."
+            "a": "저자는 고대 그리스 철학자 플라톤이고, 대화를 이끄는 화자는 그의 스승 소크라테스입니다. 플라톤이 소크라테스를 등장인물로 삼아 기원전 4세기 초에 쓴 초기 대화편입니다."
+          },
+          {
+            "q": "'에우티프론 딜레마'가 무엇인가요?",
+            "a": "10a에서 소크라테스가 던지는 물음입니다. '경건한 것은 신들이 사랑하기에 경건한가, 아니면 경건하기에 신들이 사랑하는가.' 전자라면 도덕은 변덕스러운 승인에 좌우되고, 후자라면 도덕의 근거는 신의 뜻 바깥에 따로 있어야 합니다. 권위가 옳음을 만드는지 묻는 윤리학의 고전적 난제입니다."
+          },
+          {
+            "q": "왜 에우티프론은 자기 아버지를 고발하나요?",
+            "a": "에우티프론의 집 품팔이꾼이 술김에 다른 하인을 죽이자, 그의 아버지가 그 살인자를 묶어 도랑에 가둬 둔 사이 그자가 추위와 굶주림으로 죽었습니다. 에우티프론은 이를 살인으로 보고 아버지를 고발하러 법정에 온 것이며, 그 확신이 '경건'을 안다는 자부심의 배경입니다."
+          },
+          {
+            "q": "이 대화편은 결론이 나나요?",
+            "a": "아니요. 경건의 여러 정의가 차례로 무너지고, 마지막에 에우티프론은 급한 볼일이 있다며 자리를 떠 버립니다(15e). 정의에 이르지 못한 채 끝나는 '아포리아' 대화편으로, 답을 주기보다 손쉬운 정의를 의심하게 만드는 데 목적이 있습니다."
           },
           {
             "q": "『에우티프론』 원문을 무료로 읽을 수 있나요?",
             "a": "네. 벤저민 조웟(Benjamin Jowett, 1817–1893)의 영어 번역은 저작권이 만료되어 퍼블릭 도메인입니다. Wikisource, Project Gutenberg, MIT Internet Classics Archive에서 전문을 무료로 읽을 수 있습니다."
           },
           {
+            "q": "어떤 순서로 읽으면 좋나요?",
+            "a": "소크라테스의 재판을 다룬 세 대화편을 묶어 읽으면 좋습니다. 재판 직전의 『에우티프론』 → 법정 변론인 『변론(Apology)』 → 탈옥 권유를 거절하는 『크리톤』 순서가 사건의 흐름과 일치합니다. 모두 분량이 짧아 입문으로 적합합니다."
+          },
+          {
             "q": "Dialogos는 이 작품을 어떻게 인용하나요?",
-            "a": "Dialogos는 원전의 사상을 현대어로 의역해 전하며, 저작권 있는 현대 번역을 그대로 옮기지 않습니다. 인용 표기는 사상이 등장하는 대화편의 절(예: 6d–e)을 가리킵니다."
+            "a": "Dialogos는 원전의 사상을 현대어로 의역해 전하며, 저작권 있는 현대 번역을 그대로 옮기지 않습니다. 인용 표기는 사상이 등장하는 대화편의 절(예: 6d–e, 10a)을 가리킵니다."
           }
         ],
         "pdIntro": "아래는 저작권이 만료된 퍼블릭 도메인 원문입니다. 번역은 옥스퍼드 학자 벤저민 조웟(Benjamin Jowett, 1817–1893)의 고전 영어 역본으로, 번역자 사후 100년이 넘어 퍼블릭 도메인입니다. 한국어 PD 완역은 제한적이어서, 무료로 확인 가능한 영어 PD 역본을 안내합니다.",
@@ -913,6 +2042,66 @@
           {
             "label": "MIT Internet Classics Archive — 에우티프론 (Benjamin Jowett 역)",
             "url": "https://classics.mit.edu/Plato/euthyfro.html"
+          }
+        ],
+        "context": "<p>『에우티프론』은 플라톤이 기원전 4세기 초에 고대 그리스어(아티카 방언)로 쓴 초기 대화편입니다. 무대는 기원전 399년 무렵, 불경죄로 고발당해 재판을 기다리는 소크라테스가 왕의 주랑(아르콘 바실레우스의 법정) 앞에서 예언자 에우티프론과 마주치는 장면입니다. 마침 에우티프론은 품팔이꾼을 죽게 한 자기 아버지를 살인죄로 고발하러 온 참이었습니다. 두 사람은 '경건이란 무엇인가'를 두고 짧지만 집요한 문답을 나누는데, 끝내 정의에 이르지 못하고 끝나는 이른바 '아포리아(난관)' 대화편의 전형입니다.</p>",
+        "quotes": [
+          {
+            "text": "경건이란 바로 지금 내가 하는 일, 곧 살인·신성모독 같은 죄를 지은 자라면 그가 내 아버지라 해도 고발하는 것입니다.",
+            "cite": "5d",
+            "gloss": "에우티프론의 첫 답은 '정의'가 아니라 '사례'다 — 한 가지 예를 든다고 개념을 안 것은 아니라는 첫 함정."
+          },
+          {
+            "text": "내가 알고 싶은 것은 모든 경건한 것을 경건하게 만드는 하나의 본(本)이다. 그것을 기준 삼아 행동을 견주고 싶다.",
+            "cite": "6d",
+            "gloss": "낱낱의 사례가 아니라 '척도'를 달라는 요구 — 좋은 정의란 판단의 자(尺)가 되어야 한다."
+          },
+          {
+            "text": "그러면 묻겠다. 경건한 것은 신들이 사랑하기에 경건한가, 아니면 경건하기에 신들이 사랑하는가?",
+            "cite": "10a",
+            "gloss": "'에우티프론 딜레마'. 권위가 옳음을 만드는지, 옳기에 권위가 따르는지 — 도덕의 근거를 캐묻는 한 문장."
+          },
+          {
+            "text": "자네 말은 내 조상 다이달로스의 조각상 같아서, 세워 두려 하면 자꾸 걸어 달아나 한자리에 머물지 않는군.",
+            "cite": "11b",
+            "gloss": "정의가 손에 잡힐 듯 자꾸 빠져나가는 순간 — 생각이 흔들릴 땐 도망친 게 아니라 더 캐물을 자리에 온 것이다."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "경건 (to hosion)",
+            "def": "신과 사람에 대한 올바른 태도. 이 대화편 전체가 '경건이란 무엇인가'라는 단 하나의 정의를 좇는다."
+          },
+          {
+            "term": "에이도스·형상 (eidos)",
+            "def": "모든 경건한 것을 경건하게 만드는 하나의 본질·형태. 소크라테스는 사례가 아니라 이 형상을 묻는다."
+          },
+          {
+            "term": "엘렝코스 (elenchos)",
+            "def": "상대의 답을 되물어 모순을 드러내는 소크라테스식 논박. 손쉬운 정의를 무너뜨려 무지를 자각하게 한다."
+          },
+          {
+            "term": "에우티프론 딜레마",
+            "def": "옳은 것이 사랑받기에 옳은가, 옳기에 사랑받는가. 도덕의 근거를 권위(신의 뜻)에 둘 수 있는지를 가르는 물음."
+          },
+          {
+            "term": "아포리아 (aporia)",
+            "def": "출구 없는 막다른 곳. 대화는 정의에 닿지 못한 채 끝나지만, 그 '모름의 자각'이 탐구의 출발점이 된다."
+          }
+        ],
+        "apply": "<p>오늘의 적용은 '내가 옳다고 믿는 한 가지'를 에우티프론처럼 정의해 보는 일입니다. 예컨대 '성실'이나 '프로답다'를 두고, 사례 하나(\"야근을 한다\")가 아니라 그것을 성실하게 만드는 기준을 한 문장으로 적어 보세요. 막히면 실패가 아니라 좋은 신호입니다 — 다이달로스의 조각상처럼 정의가 걸어 달아날 때가 가장 많이 배우는 지점이니까요.</p><p>또 하나. 어떤 규칙을 따를 때 '윗사람이 시켜서 옳은가, 옳아서 따르는가'를 자신에게 물어 보세요. 이 한 번의 질문이 맹목적 순응과 납득된 판단을 가릅니다.</p>",
+        "related": [
+          {
+            "slug": "plato-apology",
+            "label": "변론 · 소크라테스"
+          },
+          {
+            "slug": "plato-meno",
+            "label": "메논 · 소크라테스"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
           }
         ]
       },
@@ -932,19 +2121,35 @@
         "faq": [
           {
             "q": "プラトン『エウテュプロン』とはどんな作品ですか？",
-            "a": "ソクラテスが不敬罪の裁判を前に、予言者エウテュプロンと「敬虔とは何か」を論じる短い対話篇です。道徳の根拠を神々の意志に置こうとする試みを疑う「エウテュプロンのジレンマ」（6d–e、10a）で広く知られています。"
+            "a": "紀元前399年ごろ、不敬罪の裁判を前にしたソクラテスが、法廷の前で予言者エウテュプロンと「敬虔とは何か」を論じる短い対話篇です。道徳の根拠を神々の意志に置こうとする試みを疑う「エウテュプロンのジレンマ」（10a）で広く知られています。"
           },
           {
             "q": "この作品の著者と語り手は誰ですか？",
-            "a": "著者は古代ギリシアの哲学者プラトンで、対話を導く語り手はその師ソクラテスです。プラトンがソクラテスを登場人物として紀元前4世紀ごろに著した初期対話篇です。"
+            "a": "著者は古代ギリシアの哲学者プラトンで、対話を導く語り手はその師ソクラテスです。プラトンがソクラテスを登場人物として紀元前4世紀初頭に著した初期対話篇です。"
+          },
+          {
+            "q": "「エウテュプロンのジレンマ」とは何ですか？",
+            "a": "10aでソクラテスが投げかける問いです。「敬虔なものは神々が愛するから敬虔なのか、それとも敬虔だから神々が愛するのか」。前者なら道徳は気まぐれな承認に左右され、後者なら道徳の根拠は神々の意志の外に別にあることになります。権威が正しさを作るのかを問う倫理学の古典的難問です。"
+          },
+          {
+            "q": "なぜエウテュプロンは自分の父を告発するのですか？",
+            "a": "エウテュプロンの家の日雇いが酔って別の召使いを殺すと、父はその下手人を縛って溝に放置し、その間に男は寒さと飢えで死にました。エウテュプロンはこれを殺人とみなして父を告発しに法廷へ来たのであり、その確信が「敬虔」を知っているという自負の背景になっています。"
+          },
+          {
+            "q": "この対話篇は結論が出ますか？",
+            "a": "いいえ。敬虔のさまざまな定義が次々に崩され、最後にエウテュプロンは急用があると言って立ち去ってしまいます（15e）。定義に至らぬまま終わる「アポリア」対話篇で、答えを与えるより、安易な定義を疑わせることに目的があります。"
           },
           {
             "q": "『エウテュプロン』の原文を無料で読めますか？",
             "a": "はい。ベンジャミン・ジャウェット（Benjamin Jowett, 1817–1893）の英訳は著作権が消滅したパブリックドメインです。Wikisource、Project Gutenberg、MIT Internet Classics Archiveで全文を無料で読めます。"
           },
           {
+            "q": "どの順番で読むとよいですか？",
+            "a": "ソクラテスの裁判を扱う三つの対話篇をまとめて読むのがおすすめです。裁判直前の『エウテュプロン』→法廷弁論の『ソクラテスの弁明』→脱獄の勧めを断る『クリトン』の順が、出来事の流れと一致します。いずれも短く、入門に適しています。"
+          },
+          {
             "q": "Dialogosはこの作品をどのように引用しますか？",
-            "a": "Dialogosは原典の思想を現代語に意訳して伝え、著作権のある現代訳をそのまま引き写すことはありません。出典表記は思想が現れる対話篇の節（例：6d–e）を指します。"
+            "a": "Dialogosは原典の思想を現代語に意訳して伝え、著作権のある現代訳をそのまま引き写すことはありません。出典表記は思想が現れる対話篇の節（例：6d–e、10a）を指します。"
           }
         ],
         "pdIntro": "以下は著作権が消滅したパブリックドメインの原文です。訳はオックスフォードの学者ベンジャミン・ジャウェット（Benjamin Jowett, 1817–1893）による古典英訳で、訳者没後100年以上が経過しパブリックドメインです。日本語のPD完訳は限られるため、無料で確認できる英語のPD訳を案内します。",
@@ -960,6 +2165,66 @@
           {
             "label": "MIT Internet Classics Archive — エウテュプロン（Benjamin Jowett 訳）",
             "url": "https://classics.mit.edu/Plato/euthyfro.html"
+          }
+        ],
+        "context": "<p>『エウテュプロン』は、プラトンが紀元前4世紀初頭に古代ギリシア語（アッティカ方言）で著した初期対話篇です。舞台は紀元前399年ごろ、不敬罪で告発され裁判を控えたソクラテスが、王の柱廊（アルコン・バシレウスの法廷）の前で予言者エウテュプロンと出会う場面。エウテュプロンは、日雇いの男を死なせた自分の父を殺人罪で告発しに来たところでした。二人は「敬虔とは何か」をめぐって問答を重ねますが、定義に至らぬまま終わる典型的な「アポリア（行き詰まり）」対話篇です。日本語では田中美知太郎ら訳の岩波『プラトン全集』（1975年）や西洋古典叢書版（2017年）で読めます。</p>",
+        "quotes": [
+          {
+            "text": "敬虔とは、まさに今わたしがしていること——殺人や冒涜の罪を犯した者なら、たとえ父であろうと告発することです。",
+            "cite": "5d",
+            "gloss": "最初の答えは「定義」ではなく「一例」。例を一つ挙げても、概念を理解したことにはならない——職場でも陥りやすい最初の罠。"
+          },
+          {
+            "text": "わたしが知りたいのは、すべての敬虔なものを敬虔たらしめる一つの本（形相）だ。それを基準として行いを測りたい。",
+            "cite": "6d",
+            "gloss": "個々の事例ではなく「ものさし」を求める。良い定義とは、判断の基準として使えるものでなければならない。"
+          },
+          {
+            "text": "では問おう。敬虔なものは神々が愛するから敬虔なのか、それとも敬虔だから神々が愛するのか。",
+            "cite": "10a",
+            "gloss": "「エウテュプロンのジレンマ」。権威が正しさを作るのか、正しいから権威が従うのか——上司の指示にも当てはまる問い。"
+          },
+          {
+            "text": "君の言葉はわが祖先ダイダロスの彫像のようだ。据えようとすると歩き去り、一所にとどまらない。",
+            "cite": "11b",
+            "gloss": "定義が手からすり抜けていく瞬間。考えが揺らぐのは逃げたのではなく、もう一歩問い直すべき地点に来たということ。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "敬虔 (to hosion)",
+            "def": "神と人に対する正しいあり方。この対話篇全体が「敬虔とは何か」という一つの定義を追い求める。"
+          },
+          {
+            "term": "エイドス・形相 (eidos)",
+            "def": "すべての敬虔なものを敬虔たらしめる一つの本質・形。ソクラテスは事例ではなくこの形相を問う。"
+          },
+          {
+            "term": "エレンコス (elenchos)",
+            "def": "相手の答えを問い返して矛盾をあぶり出すソクラテス式の論駁。安易な定義を崩し、無知の自覚へ導く。"
+          },
+          {
+            "term": "エウテュプロンのジレンマ",
+            "def": "正しいものは愛されるから正しいのか、正しいから愛されるのか。道徳の根拠を権威（神々の意志）に置けるかを分ける問い。"
+          },
+          {
+            "term": "アポリア (aporia)",
+            "def": "出口のない行き詰まり。対話は定義に届かず終わるが、その「分からなさの自覚」が探究の出発点となる。"
+          }
+        ],
+        "apply": "<p>職場での適用です。同僚や上司と「責任感」や「プロらしさ」といった言葉で評価し合うとき、エウテュプロンのように一例（「残業する」）ではなく、それを責任感たらしめる基準を一文で書いてみましょう。書けずに行き詰まったら失敗ではなく、ダイダロスの彫像のように定義が歩き去る——いちばん学べる地点に来た合図です。</p><p>もう一つ。ある社内ルールに従うとき、「上が決めたから正しい」のか「正しいから従う」のかを自問してください。この一度の問いが、思考停止の同調と、納得したうえでの判断とを分けます。</p>",
+        "related": [
+          {
+            "slug": "plato-apology",
+            "label": "ソクラテスの弁明 · ソクラテス"
+          },
+          {
+            "slug": "plato-meno",
+            "label": "メノン · ソクラテス"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
           }
         ]
       },
@@ -979,19 +2244,35 @@
         "faq": [
           {
             "q": "What is Plato's Euthyphro about?",
-            "a": "It is a short dialogue in which Socrates, awaiting his own trial for impiety, questions the seer Euthyphro about what piety really is. It is best known for the 'Euthyphro dilemma' (6d–e, 10a), which challenges the attempt to ground morality in the will of the gods."
+            "a": "Set around 399 BC, it is a short dialogue in which Socrates, awaiting his own trial for impiety, questions the seer Euthyphro about what piety really is. It is best known for the 'Euthyphro dilemma' (10a), which challenges the attempt to ground morality in the will of the gods."
           },
           {
             "q": "Who wrote it, and who is the speaker?",
-            "a": "The author is the ancient Greek philosopher Plato, and the speaker who leads the conversation is his teacher Socrates. Plato wrote it as an early dialogue, casting Socrates as its central character, around the 4th century BC."
+            "a": "The author is the ancient Greek philosopher Plato, and the speaker who leads the conversation is his teacher Socrates. Plato wrote it as an early dialogue, casting Socrates as its central character, in the early 4th century BC."
+          },
+          {
+            "q": "What exactly is the 'Euthyphro dilemma'?",
+            "a": "It is the question Socrates poses at 10a: is the holy loved by the gods because it is holy, or holy because it is loved by them? If the former, morality bends to fickle approval; if the latter, its ground must lie outside the gods' will. It is the classic ethical puzzle about whether authority can make something right."
+          },
+          {
+            "q": "Why is Euthyphro prosecuting his own father?",
+            "a": "A hired laborer of Euthyphro's, drunk, killed one of the household servants. Euthyphro's father bound the killer and left him in a ditch, where he died of cold and hunger before word came back from the authorities. Euthyphro calls this murder and has come to court to charge his father — a confidence that underlies his claim to know what piety is."
+          },
+          {
+            "q": "Does the dialogue reach a conclusion?",
+            "a": "No. Each proposed definition of piety collapses, and at the end Euthyphro suddenly remembers an appointment and hurries off (15e), leaving the question unanswered. It is an 'aporetic' dialogue: its aim is less to give an answer than to make us distrust easy definitions."
           },
           {
             "q": "Can I read the Euthyphro for free?",
             "a": "Yes. Benjamin Jowett's English translation (Jowett, 1817–1893) is out of copyright and in the public domain. You can read the full text for free at Wikisource, Project Gutenberg, and the MIT Internet Classics Archive."
           },
           {
+            "q": "In what order should I read it?",
+            "a": "Read it with the other dialogues on Socrates' trial. The sequence that matches the events is the Euthyphro (just before the trial), then the Apology (his courtroom defense), then the Crito (refusing a plan of escape). All three are short and make a good first encounter with Plato."
+          },
+          {
             "q": "How does Dialogos cite this work?",
-            "a": "Dialogos paraphrases the source's ideas into modern language and never copies a copyrighted modern translation. Citations point to the section of the dialogue (for example, 6d–e) where the idea appears."
+            "a": "Dialogos paraphrases the source's ideas into modern language and never copies a copyrighted modern translation. Citations point to the section of the dialogue (for example, 6d–e or 10a) where the idea appears."
           }
         ],
         "pdIntro": "The text below is in the public domain. The translation is the classic English version by the Oxford scholar Benjamin Jowett (1817–1893); more than a century after the translator's death, it is firmly in the public domain.",
@@ -1007,6 +2288,66 @@
           {
             "label": "MIT Internet Classics Archive — Euthyphro (trans. Benjamin Jowett)",
             "url": "https://classics.mit.edu/Plato/euthyfro.html"
+          }
+        ],
+        "context": "<p>The <em>Euthyphro</em> is an early dialogue Plato wrote in ancient Greek (the Attic dialect) in the early 4th century BC. It is set around 399 BC: Socrates, indicted for impiety and awaiting trial, runs into the seer Euthyphro outside the porch of the King Archon. Euthyphro, it turns out, has come to prosecute his own father for the death of a hired laborer. The two trade a short but relentless series of questions about a single topic — what is piety? — and the dialogue ends without reaching a definition, the classic shape of an 'aporetic' (dead-end) Socratic work.</p>",
+        "quotes": [
+          {
+            "text": "Piety is doing what I am doing now: prosecuting anyone guilty of murder or sacrilege, even if he happens to be your own father.",
+            "cite": "5d",
+            "gloss": "Euthyphro's first answer is an example, not a definition. Naming one instance is not the same as knowing the concept — the dialogue's opening trap."
+          },
+          {
+            "text": "What I want is the single form that makes all pious things pious — a standard I can hold actions up against and measure them by.",
+            "cite": "6d",
+            "gloss": "Socrates wants a yardstick, not a list. A good definition has to work as a measure you can actually apply."
+          },
+          {
+            "text": "Then tell me: is the holy loved by the gods because it is holy, or is it holy because it is loved by them?",
+            "cite": "10a",
+            "gloss": "The Euthyphro dilemma. Does authority make a thing right, or does authority follow from its being right? — the question under every appeal to 'because the rules say so.'"
+          },
+          {
+            "text": "Your words, Euthyphro, are like the statues of my ancestor Daedalus: set them down and they walk away, refusing to stay put.",
+            "cite": "11b",
+            "gloss": "The moment a definition keeps slipping free. When your thinking won't hold still, you haven't lost the thread — you've reached the spot worth pressing on."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "piety (to hosion)",
+            "def": "The right disposition toward gods and humans. The whole dialogue chases a single definition of it: what is piety?"
+          },
+          {
+            "term": "form / eidos",
+            "def": "The one essence or shape that makes all pious things pious. Socrates asks not for examples but for this form."
+          },
+          {
+            "term": "elenchus (elenchos)",
+            "def": "Socrates' method of cross-questioning an answer until its contradictions surface, dissolving easy definitions and exposing one's ignorance."
+          },
+          {
+            "term": "the Euthyphro dilemma",
+            "def": "Is the good loved because it is good, or good because it is loved? It tests whether morality can be grounded in authority — the will of the gods."
+          },
+          {
+            "term": "aporia",
+            "def": "A state of being stuck with no way out. The dialogue never reaches a definition, but that awareness of not-knowing is where genuine inquiry begins."
+          }
+        ],
+        "apply": "<p>Try Euthyphro's exercise on one thing you're sure about. Take a word you use to judge people or work — 'reliable,' 'professional' — and write down not an example ('they stay late') but the standard that makes something reliable in one sentence. If you get stuck, that's not failure: like the statues of Daedalus, a definition that walks away is the point where you learn the most.</p><p>And one more habit: when you follow a rule, ask yourself whether it's right because someone in charge said so, or whether you follow it because it's right. That single question is what separates going along with things from actually judging them.</p>",
+        "related": [
+          {
+            "slug": "plato-apology",
+            "label": "Apology · Socrates"
+          },
+          {
+            "slug": "plato-meno",
+            "label": "Meno · Socrates"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
           }
         ]
       }
@@ -1046,8 +2387,24 @@
             "a": "소크라테스가 기원전 399년 아테네 법정에서 불경죄와 청년 타락 혐의에 맞서 자신을 변론한 연설을, 제자 플라톤이 기록한 대화편입니다. '무지의 지'(21d)와 '성찰하지 않는 삶은 살 가치가 없다'(38a)는 두 명제가 가장 널리 인용됩니다."
           },
           {
+            "q": "변론의 핵심 내용을 짧게 요약하면?",
+            "a": "소크라테스는 자신이 도시를 깨우는 '등에'(30e)일 뿐 죄인이 아니라며, 죽음이 두려워 철학을 그만두느니 신께 복종해 진리 탐구를 계속하겠다(29d)고 말합니다. 유죄와 사형이 선고된 뒤에도 그는 침묵하며 사느니 성찰하는 삶을 택하겠다고 선언합니다."
+          },
+          {
+            "q": "변론에서 가장 유명한 명언은 무엇인가요?",
+            "a": "단연 '성찰하지 않는 삶은 살 가치가 없다'(38a)입니다. 그 다음으로 자신의 무지를 아는 것이 유일한 지혜라는 '무지의 지'(21d), 자신을 도시를 깨우는 등에에 비유한 구절(30e)이 자주 인용됩니다."
+          },
+          {
+            "q": "'무지의 지'는 무슨 뜻인가요?",
+            "a": "자신이 모른다는 사실을 아는 것이 곧 지혜라는 소크라테스의 통찰입니다(21d). 그는 자신이 특별히 박식해서가 아니라, 모르면서 안다고 착각하는 사람들과 달리 자신의 무지를 자각하기에 더 지혜롭다고 보았습니다."
+          },
+          {
             "q": "변론의 저자는 누구인가요?",
             "a": "저자는 플라톤이고, 작품 속에서 말하는 화자는 그의 스승 소크라테스입니다. 소크라테스 자신은 글을 남기지 않았기에, 우리가 아는 소크라테스의 변론은 플라톤이 기록한 이 대화편을 통해 전해집니다."
+          },
+          {
+            "q": "변론은 오늘날 왜 중요한가요?",
+            "a": "권력과 다수의 압력 앞에서도 양심과 진리 탐구를 포기하지 않은 사상의 자유를 상징하기 때문입니다. 비판적 사고, 자기 성찰, 소신을 지키는 용기라는 주제는 2,400년이 지난 지금도 교육과 윤리의 출발점으로 인용됩니다."
           },
           {
             "q": "변론 원문을 무료로 읽을 수 있나요?",
@@ -1072,6 +2429,66 @@
             "label": "MIT Internet Classics Archive — 플라톤 변론 (조웻 역)",
             "url": "http://classics.mit.edu/Plato/apology.html"
           }
+        ],
+        "context": "<p>《변론》(Apologia)은 기원전 399년 아테네 법정에서 소크라테스가 불경과 청년 타락 혐의에 맞서 행한 자기 변론을, 제자 플라톤이 고대 그리스어로 기록한 대화편이다. 실제 재판의 속기록이 아니라 플라톤이 스승의 정신을 재구성한 문학적 변론으로, 소크라테스가 직접 한 권의 책도 남기지 않았기에 그를 아는 거의 유일한 출발점이 된다. 죽음 앞에서도 철학적 삶을 굽히지 않는 이 연설은 서양 철학과 양심의 자유를 상징하는 텍스트로 읽힌다.</p>",
+        "quotes": [
+          {
+            "text": "내가 더 지혜로운 것은 단 하나, 모르는 것을 안다고 착각하지 않는다는 점뿐이다.",
+            "cite": "21d",
+            "gloss": "다 안다는 자신감보다, 모른다는 자각이 먼저다 — 자기계발에 지친 사람이 다시 출발선에 서는 자리."
+          },
+          {
+            "text": "날마다 덕과 나 자신을 캐묻고 따지는 것이야말로 사람의 가장 큰 선이며, 성찰하지 않는 삶은 살 가치가 없다.",
+            "cite": "38a",
+            "gloss": "바쁘게 사는 것과 잘 사는 것은 다르다 — 멈춰서 자신을 점검하는 시간이 곧 성장이다."
+          },
+          {
+            "text": "나는 신께서 이 나라에 붙여 놓은 등에다. 졸고 있는 큰 말을 쉴 새 없이 쏘아 깨운다.",
+            "cite": "30e",
+            "gloss": "불편한 질문이 나를 깨운다 — 듣기 싫은 피드백이야말로 정체된 나를 흔드는 자극."
+          },
+          {
+            "text": "나는 너희가 아니라 신께 복종하겠다. 숨이 붙어 있는 한 철학하기를 멈추지 않겠다.",
+            "cite": "29d",
+            "gloss": "남들의 눈치보다 내 양심의 명령을 따른다 — 타협하라는 압박 앞에서 지킬 한 줄."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "무지의 지 (docta ignorantia)",
+            "def": "자신이 모른다는 사실을 아는 것. 소크라테스가 자신을 '지혜롭다'고 본 유일한 근거이며, 모든 탐구의 출발점이다."
+          },
+          {
+            "term": "엘렝코스 (elenchos)",
+            "def": "상대의 주장을 질문으로 검증해 그 안의 모순을 드러내는 소크라테스식 반대신문. 진리가 아니라 거짓 확신을 걷어내는 방법."
+          },
+          {
+            "term": "다이모니온 (daimonion)",
+            "def": "소크라테스가 따랐다고 말한 내면의 신적 신호. 무엇을 하라고 시키지 않고, 잘못된 행동을 하려 할 때만 그를 막았다."
+          },
+          {
+            "term": "등에 (gadfly)",
+            "def": "소크라테스가 자신을 비유한 말. 안주하는 도시(아테네)를 끊임없는 질문으로 쏘아 깨우는 성가시지만 꼭 필요한 존재."
+          },
+          {
+            "term": "성찰하는 삶 (the examined life)",
+            "def": "덕과 자기 자신을 날마다 캐묻고 따지며 사는 삶. 소크라테스가 인간이 누릴 수 있는 가장 큰 선이라 본 것."
+          }
+        ],
+        "apply": "<p>오늘 '내가 안다고 믿는 것' 하나를 골라 한 번만 의심해 보자. 당연하게 여기던 습관·목표·평가에 '정말 그런가, 왜?'를 붙이는 순간이 소크라테스의 무지의 지(21d)다.</p><p>그리고 하루를 마칠 때 90초만 멈춰 '오늘 한 일 중 나를 키운 건 무엇이고, 그냥 바빴을 뿐인 건 무엇인가'를 적어 보라. 성찰하지 않는 삶은 살 가치가 없다(38a)는 말은 거창한 반성이 아니라, 흘려보내던 하루에 작은 점검 한 줄을 더하는 습관이다. 번아웃은 대개 방향 없이 달릴 때 온다 — 멈춰 묻는 사람만이 방향을 바꾼다.</p>",
+        "related": [
+          {
+            "slug": "plato-euthyphro",
+            "label": "에우티프론 · 소크라테스"
+          },
+          {
+            "slug": "plato-meno",
+            "label": "메논 · 소크라테스"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
+          }
         ]
       },
       "ja": {
@@ -1095,11 +2512,27 @@
         "faq": [
           {
             "q": "プラトンの『弁明』とはどんな作品ですか？",
-            "a": "ソクラテスが紀元前399年、アテナイの法廷で不敬罪と若者を堕落させた罪に対して自らを弁護した演説を、弟子プラトンが記録した対話篇です。「無知の知」(21d)と「吟味されない生は生きるに値しない」(38a)という二つの命題が最もよく引用されます。"
+            "a": "ソクラテスが紀元前399年、アテナイの法廷で不敬罪と若者を堕落させた罪に対して自らを弁護した演説を、弟子プラトンが記録した対話篇です。「無知の知」（21d）と「吟味されない生は生きるに値しない」（38a）という二つの命題が最もよく引用されます。"
+          },
+          {
+            "q": "『弁明』の内容を短く要約すると？",
+            "a": "ソクラテスは自分が都市を目覚めさせる「虻」（30e）であって罪人ではないと主張し、死を恐れて哲学をやめるより神に従って真理の探究を続ける（29d）と語ります。有罪と死刑が宣告された後も、黙って生きるより吟味する生を選ぶと宣言します。"
+          },
+          {
+            "q": "『弁明』で最も有名な名言は何ですか？",
+            "a": "何といっても「吟味されない生は生きるに値しない」（38a）です。次いで、自らの無知を知ることが唯一の知恵だとする「無知の知」（21d）、自分を都市を目覚めさせる虻にたとえた一節（30e）がよく引用されます。"
+          },
+          {
+            "q": "「無知の知」とはどういう意味ですか？",
+            "a": "自分が知らないということを知ることこそ知恵だという、ソクラテスの洞察です（21d）。彼は自分が特別に博識だからではなく、知らないのに知っていると思い込む人々と違い、自らの無知を自覚しているがゆえに賢いと考えました。"
           },
           {
             "q": "『弁明』の著者は誰ですか？",
             "a": "著者はプラトンで、作中で語る話者はその師ソクラテスです。ソクラテス自身は著作を残さなかったため、私たちが知るソクラテスの弁論は、プラトンが記したこの対話篇を通じて伝えられています。"
+          },
+          {
+            "q": "『弁明』は今日なぜ重要なのですか？",
+            "a": "権力や多数の圧力の前でも良心と真理の探究を捨てなかった、思想の自由を象徴するからです。批判的思考、自己吟味、信念を貫く勇気というテーマは、2400年を経た今も教育と倫理の出発点として引用されています。"
           },
           {
             "q": "『弁明』の原文を無料で読めますか？",
@@ -1123,6 +2556,66 @@
           {
             "label": "MIT Internet Classics Archive — プラトン『弁明』（ジョウェット訳）",
             "url": "http://classics.mit.edu/Plato/apology.html"
+          }
+        ],
+        "context": "<p>『弁明』（Apologia）は、紀元前399年、不敬と若者を堕落させた罪で告発されたソクラテスがアテナイの法廷で行った自己弁論を、弟子プラトンが古代ギリシア語で記録した対話篇です。実際の法廷記録ではなく、師の精神を再構成した文学的な弁論であり、自ら一冊も著作を残さなかったソクラテスを知るためのほぼ唯一の出発点となります。死を前にしても哲学的な生き方を曲げないこの演説は、西洋哲学と良心の自由を象徴する古典として読み継がれてきました。日本では久保勉（1883–1972）による岩波文庫『ソクラテスの弁明・クリトン』が長く標準訳として親しまれています。</p>",
+        "quotes": [
+          {
+            "text": "私がいくらか賢いとすれば、知らないことを知っていると思い込まない、その一点においてだけだ。",
+            "cite": "21d",
+            "gloss": "「全部わかっている」という顔より、「まだ知らない」という自覚を先に — 職場で人の話を本当に聞ける人の構え。"
+          },
+          {
+            "text": "日々、徳について、また自分自身について問い吟味することこそ人間最大の善であり、吟味されない生は生きるに値しない。",
+            "cite": "38a",
+            "gloss": "忙しく働くことと、よく生きることは別 — 一日の終わりに自分を振り返る数分が、関係も仕事も変える。"
+          },
+          {
+            "text": "私は神がこの国に付けた虻（あぶ）だ。眠りかけた大きな馬を、休まず刺して目覚めさせる。",
+            "cite": "30e",
+            "gloss": "耳の痛い問いが人を目覚めさせる — 同僚からの率直なフィードバックは、なれ合った職場を揺さぶる刺激。"
+          },
+          {
+            "text": "私は君たちにではなく神に従う。息のある限り、哲学することをやめはしない。",
+            "cite": "29d",
+            "gloss": "周囲の空気より自分の良心の声に従う — 「ここは妥協しろ」という圧力の前で守る一線。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "無知の知 (docta ignorantia)",
+            "def": "自分が知らないということを知ること。ソクラテスが自らを「賢い」とみなした唯一の根拠であり、あらゆる探究の出発点。"
+          },
+          {
+            "term": "エレンコス (elenchos)",
+            "def": "相手の主張を問いで吟味し、その中の矛盾をあらわにするソクラテス式の反対尋問。真理ではなく誤った思い込みを取り除く方法。"
+          },
+          {
+            "term": "ダイモニオン (daimonion)",
+            "def": "ソクラテスが従ったと語る内なる神的な合図。何かをせよとは命じず、間違った行いをしようとするときだけ彼を引き止めた。"
+          },
+          {
+            "term": "虻 (gadfly)",
+            "def": "ソクラテスが自分自身をたとえた言葉。安住する都市（アテナイ）を絶え間ない問いで刺し、目覚めさせる、煩わしいが必要な存在。"
+          },
+          {
+            "term": "吟味する生 (the examined life)",
+            "def": "徳と自分自身を日々問い吟味しながら生きること。ソクラテスが人間にとって最大の善とみなしたもの。"
+          }
+        ],
+        "apply": "<p>今日、自分が「当然だ」と思っている職場の前提を一つ選び、「本当にそうか、なぜか」と問い直してみましょう。当たり前にしていた進め方や評価に疑問を一つ添える、その瞬間がソクラテスの無知の知（21d）です。相手を論破するためではなく、自分の思い込みを点検するために問うのがコツです。</p><p>そして一日の終わりに90秒だけ立ち止まり、「今日の行動のうち、人間関係や仕事を本当に良くしたものは何で、ただ忙しかっただけのものは何か」を書き出してみましょう。吟味されない生は生きるに値しない（38a）とは、大げさな反省ではなく、流れていく一日に小さな点検の一行を足す習慣のことです。</p>",
+        "related": [
+          {
+            "slug": "plato-euthyphro",
+            "label": "エウテュプロン · ソクラテス"
+          },
+          {
+            "slug": "plato-meno",
+            "label": "メノン · ソクラテス"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
           }
         ]
       },
@@ -1150,8 +2643,24 @@
             "a": "It is Plato's record of the speech Socrates gave defending himself before an Athenian court in 399 BCE against charges of impiety and corrupting the young. Its two most-quoted ideas are knowing that one does not know (21d) and that the unexamined life is not worth living (38a)."
           },
           {
+            "q": "Can you summarize the Apology briefly?",
+            "a": "Socrates argues he is a 'gadfly' (30e) who wakes the city rather than a criminal, and that he would sooner obey the god and keep seeking truth than stop philosophy out of fear of death (29d). Even after conviction and a death sentence, he declares he would choose the examined life over living in silence."
+          },
+          {
+            "q": "What is the most famous quote from the Apology?",
+            "a": "By far it is 'the unexamined life is not worth living' (38a). Close behind are the idea that knowing one's own ignorance is the only real wisdom (21d), and the passage where Socrates calls himself a gadfly sent to wake the city (30e)."
+          },
+          {
+            "q": "What does 'knowing that one does not know' mean?",
+            "a": "It is Socrates' insight that awareness of one's own ignorance is itself wisdom (21d). He claimed to be wiser not because he knew more, but because, unlike those who think they know what they don't, he was honest about the limits of his knowledge."
+          },
+          {
             "q": "Who wrote the Apology?",
             "a": "The author is Plato, and the speaker within the work is his teacher Socrates. Because Socrates wrote nothing himself, the defense we know comes to us through this dialogue as Plato set it down."
+          },
+          {
+            "q": "Why does the Apology still matter today?",
+            "a": "It stands as a symbol of intellectual freedom — of refusing to surrender conscience and the pursuit of truth to power or to the majority. Its themes of critical thinking, self-examination, and the courage to hold one's convictions remain a touchstone of education and ethics 2,400 years later."
           },
           {
             "q": "Can I read the Apology for free?",
@@ -1175,6 +2684,66 @@
           {
             "label": "MIT Internet Classics Archive — Apology by Plato (Jowett translation)",
             "url": "http://classics.mit.edu/Plato/apology.html"
+          }
+        ],
+        "context": "<p>The <em>Apology</em> (Apologia) is Plato's record, in ancient Greek, of the defense speech Socrates gave before an Athenian jury in 399 BCE, charged with impiety and corrupting the young. It is not a courtroom transcript but a literary reconstruction of his master's spirit, and since Socrates wrote nothing himself, it is one of our only starting points for knowing him at all. Refusing to abandon the philosophical life even with death at hand, the speech is read as a founding text of Western philosophy and a lasting symbol of freedom of conscience.</p>",
+        "quotes": [
+          {
+            "text": "If I am wiser at all, it is only in this: I do not imagine I know what I do not know.",
+            "cite": "21d",
+            "gloss": "Real wisdom starts by admitting the gaps — the mindset that turns endless information into actual learning."
+          },
+          {
+            "text": "The greatest good for a person is to examine virtue and oneself each day; the unexamined life is not worth living.",
+            "cite": "38a",
+            "gloss": "Staying busy and living well are not the same thing — a daily pause to examine your life is how it changes."
+          },
+          {
+            "text": "I am a gadfly the god has set upon this city, stirring a great, sluggish horse awake all day long.",
+            "cite": "30e",
+            "gloss": "The questions that sting are the ones that wake us — uncomfortable feedback is what shakes a stalled life loose."
+          },
+          {
+            "text": "I will obey the god rather than you, and while I have breath I will never stop practicing philosophy.",
+            "cite": "29d",
+            "gloss": "Answer to your own conscience before the crowd's approval — the line to hold when pressured to compromise."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "Knowing that one does not know",
+            "def": "Awareness of one's own ignorance. Socrates' single ground for calling himself wise, and the starting point of all genuine inquiry."
+          },
+          {
+            "term": "Elenchus (elenchos)",
+            "def": "The Socratic method of cross-examining a claim with questions until its contradictions surface. It clears away false certainty rather than delivering truth ready-made."
+          },
+          {
+            "term": "Daimonion",
+            "def": "The inner divine sign Socrates says he obeyed. It never told him what to do; it only held him back when he was about to act wrongly."
+          },
+          {
+            "term": "The gadfly",
+            "def": "Socrates' image for himself: an irritating but necessary creature that stings a complacent city (Athens) awake with relentless questions."
+          },
+          {
+            "term": "The examined life",
+            "def": "A life spent daily questioning virtue and oneself. Socrates held this to be the greatest good a human being can pursue."
+          }
+        ],
+        "apply": "<p>Pick one thing you currently treat as obvious — a routine, a goal, a verdict you've already reached — and question it just once today: <em>is that actually true, and why?</em> That small act of doubt, aimed not at winning an argument but at testing your own assumptions, is Socrates' knowing that one does not know (21d).</p><p>Then, at the end of the day, stop for ninety seconds and write down one line: what did I do today that actually grew me, and what was merely being busy? The unexamined life is not worth living (38a) is not a demand for grand self-criticism — it's the habit of adding one small check to a day that would otherwise just slip past. In a world built to keep you reacting, the examined pause is where direction comes from.</p>",
+        "related": [
+          {
+            "slug": "plato-euthyphro",
+            "label": "Euthyphro · Socrates"
+          },
+          {
+            "slug": "plato-meno",
+            "label": "Meno · Socrates"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
           }
         ]
       }
