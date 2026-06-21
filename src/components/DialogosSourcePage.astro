@@ -184,12 +184,12 @@ const jsonLd = [
           </>
         )}
 
-        {c.jaEditions && c.jaEditions.length > 0 && (
+        {c.editions && c.editions.length > 0 && (
           <>
             <h2>{labels.editions}</h2>
             <p class="src-editions-intro">{labels.editionsIntro}</p>
             <ul class="src-editions">
-              {c.jaEditions.map((e) => (
+              {c.editions.map((e) => (
                 <li class="src-edition">
                   <span class="src-edition-title" set:html={e.title} />
                   <span class="src-edition-meta">{e.translator}・{e.publisher}</span>

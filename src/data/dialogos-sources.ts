@@ -52,15 +52,16 @@ export interface SourceRelated {
 }
 
 /**
- * 현대 일본어 정본 번역 안내 — ja 페이지 전용(現代日本語訳ガイド).
- * 일본 독자의 "어느 번역본?(おすすめ訳)" 검색에 응답. 광고·가격·구입링크·어필리에이트
+ * 현대 정본 번역 안내 — 각 언어 페이지의 "번역본 가이드"(어느 번역본을 읽을까).
+ * 독자의 "おすすめ訳 / 번역본 추천 / best translation" 검색에 응답. 광고·가격·구입링크
  * 없는 중립 정보. note는 우리 고유 평(검증된 사실 기반) — 역자 번역문 전재 금지.
- * 역자·출판사·총서·수록위치는 1차 출처(출판사 공식·NDL)로 확증한 사실만 싣는다.
+ * 역자·출판사·총서·수록위치는 1차 출처(출판사 공식·국립도서관)로 확증한 사실만 싣는다.
+ * 각 언어 content의 editions = 그 언어(ko/ja/en)의 번역본.
  */
-export interface JaEdition {
-  title: string; // '自省録（岩波文庫 改版）'
-  translator: string; // '神谷美恵子'
-  publisher: string; // '岩波書店（岩波文庫）'
+export interface Edition {
+  title: string; // ja '自省録（岩波文庫 改版）' · ko '명상록（도서출판 숲）' · en 'Meditations (Modern Library)'
+  translator: string;
+  publisher: string;
   note: string; // 1~2문장 특징 (정본/입문용/수록위치 등)
 }
 
@@ -80,7 +81,7 @@ export interface SourceContent {
   pdIntro: string; // 퍼블릭 도메인 원문 안내문
   pdLinks: SourcePdLink[]; // 검증된 PD 외부 링크
   related?: SourceRelated[]; // [심화] 저작 간 교차참조 (선택)
-  jaEditions?: JaEdition[]; // [심화·ja전용] 현대 일본어 정본 번역 안내(現代日本語訳ガイド)
+  editions?: Edition[]; // [심화] 현대 정본 번역 안내(번역본 가이드) — 각 언어별
 }
 
 export interface SourceWork {
@@ -140,6 +141,11 @@ export const sourceWorks: Record<string, SourceWork> = {
         concepts: [{"term": "헤게모니콘 (지배 이성, hēgemonikon)", "def": "마음의 지휘부, 즉 판단하고 동의하는 이성의 핵심. 외부 사건이 아니라 이것이 평정과 동요를 결정한다."}, {"term": "통제의 구분 (what is up to us)", "def": "내 의지·판단·행동은 나에게 달렸고, 결과·평판·타인은 그렇지 않다. 스토아 평정은 이 경계를 지키는 데서 온다."}, {"term": "우주의 본성 (전체의 자연, Universal Nature)", "def": "만물을 질서 짓는 이성적 섭리. 일어나는 일은 전체에 합당하므로 받아들임이 곧 건강한 영혼이다."}, {"term": "무상 (흐름, impermanence)", "def": "모든 것은 변하고 사라진다. 명성도 기억도 곧 잊히니, 지금의 의무에 집중하는 근거가 된다."}],
         apply: "<p>오늘 한 가지만 해보세요. 아침에 눈을 떴는데 일어나기 싫다면, 5.1을 빌려 '나는 인간이 할 일을 하러 일어난다'고 한 문장으로 되뇌고 발을 바닥에 내려놓으세요. 동기를 기다리지 말고 동작을 먼저 만드는 겁니다.</p><p>일과 중 누군가에게 화가 치밀면 4.7을 적용하세요. '그가 나를 해쳤다'는 판단을 잠깐 거두고, 사실(무슨 일이 일어났나)과 해석(내가 거기 붙인 의미)을 분리해 적어 보면, 화의 절반은 사건이 아니라 내 해석이었음이 드러납니다. 좌절이 닥치면 5.20처럼 '이 막힘을 다음 행동의 재료로 어떻게 쓸까'를 한 줄 적어 두세요.</p>",
         related: [{"slug": "enchiridion", "label": "엥케이리디온 · 에픽테토스"}, {"slug": "letters-to-lucilius", "label": "루킬리우스에게 보내는 편지 · 세네카"}, {"slug": "discourses", "label": "담화록 · 에픽테토스"}],
+        editions: [
+          { title: '명상록 (원전으로 읽는 순수고전세계)', translator: '천병희', publisher: '도서출판 숲 (원전으로 읽는 순수고전세계 총서)', note: '국내 최초의 그리스어 원전 직역으로 꼽히는 정본. 그동안의 영어·일본어 중역을 대체한 표준 번역으로 평가받는다. 2005년 초판 이후 개정을 거쳤다.' },
+          { title: '명상록 (그리스어 원전 완역본) — 철학자 황제가 전쟁터에서 자신에게 쓴 일기', translator: '박문재', publisher: '현대지성 (현대지성 클래식 18)', note: '그리스어 원전 완역본으로, 역자의 상세한 해제와 함께 아우렐리우스가 영향을 받은 에픽테토스 명언집을 부록으로 실었다. 비교적 평이한 현대어로 옮겨 입문 독자에게 무난하다.' },
+          { title: '자기 자신에게 이르는 것들 (명상록 헬라스어 완역본)', translator: '김재홍', publisher: '그린비 (그린비 고전의 숲 5)', note: "서양고전학 전공자가 옮긴 헬라스어(그리스어) 원전 완역본. '명상록'이라는 통칭 대신 원제 '자기 자신에게 이르는 것들'을 살리고 풍부한 주석·연보·찾아보기를 더한 학술 충실형 번역(2023)." },
+        ],
         pdIntro:
           '아래는 저작권이 만료된 조지 롱(George Long, 1862) 영역본입니다. 한국어 퍼블릭 도메인 완역본은 제한적이어서, 원문은 영어 역본으로 안내합니다.',
         pdLinks: [
@@ -198,7 +204,7 @@ export const sourceWorks: Record<string, SourceWork> = {
         concepts: [{"term": "ヘゲモニコン (指導理性, hēgemonikon)", "def": "心の中枢、すなわち判断し同意する理性の核。平静と動揺を決めるのは外の出来事ではなくこれである。"}, {"term": "統制の区別 (我々次第なもの)", "def": "判断・意志・行動は自分次第だが、結果・評判・他人はそうではない。ストアの平静はこの境界を守ることから生まれる。"}, {"term": "宇宙の本性 (全体の自然, Universal Nature)", "def": "万物を秩序づける理性的な摂理。起こることは全体にとって適切であり、それを受け入れることが健やかな魂である。"}, {"term": "無常 (流転, impermanence)", "def": "すべては変わり、消えていく。名声も記憶もやがて忘れられるからこそ、今の務めに集中する根拠となる。"}],
         apply: "<p>今日、一つだけ試してください。朝、目は覚めたのに起きたくない時は、5.1を借りて「私は人間としての務めのために起きる」と一文だけ唱え、足を床に下ろします。やる気を待たず、動作を先につくるのです。</p><p>職場で誰かに苛立ったら、4.7を使ってみてください。「あの人が私を害した」という判断を一度脇に置き、事実(何が起きたか)と解釈(自分がそこに付けた意味)を分けて書き出すと、怒りの半分は出来事ではなく自分の解釈だったと見えてきます。理不尽な状況に詰まったら、5.20のように「この妨げを次の一手の材料にどう使うか」を一行メモしておきましょう。</p>",
         related: [{"slug": "enchiridion", "label": "エンケイリディオン · エピクテトス"}, {"slug": "letters-to-lucilius", "label": "ルキリウスへの手紙 · セネカ"}, {"slug": "discourses", "label": "語録 · エピクテトス"}],
-        jaEditions: [
+        editions: [
           { title: '自省録（岩波文庫 改版）', translator: '神谷美恵子', publisher: '岩波書店（岩波文庫 青610-1）', note: '日本で最も広く読まれてきた定番の訳。2007年の改版で新たな補注が加えられた。原典の格調を保ちつつ通読できる、まず手に取りたい一冊。' },
           { title: 'マルクス・アウレリウス「自省録」（講談社学術文庫）', translator: '鈴木照雄', publisher: '講談社（講談社学術文庫）', note: 'ギリシア哲学研究者による学術的な新訳。読み比べたい人や、語句を踏み込んで理解したい読者に向く。' },
         ],
@@ -260,6 +266,11 @@ export const sourceWorks: Record<string, SourceWork> = {
         concepts: [{"term": "hēgemonikon (the ruling faculty)", "def": "The command center of the mind — the reasoning part that judges and assents. It, not external events, decides your calm or your turmoil."}, {"term": "what is up to us (the dichotomy of control)", "def": "Your judgements, will, and actions are yours; outcomes, reputation, and other people are not. Stoic calm comes from guarding this boundary."}, {"term": "Universal Nature", "def": "The rational providence that orders all things. Whatever happens is fitting for the whole, so accepting it is the health of the soul."}, {"term": "impermanence (flux)", "def": "Everything changes and passes; fame and memory are soon forgotten. This is precisely why the present duty deserves your full attention."}],
         apply: "<p>Try just one thing today. When you wake and don't want to get up, borrow 5.1: say the single line \"I am rising to do the work of a human being,\" and put your feet on the floor. Don't wait for motivation — build the motion first.</p><p>When someone irritates you during the day, apply 4.7. Set aside the judgement \"that person harmed me\" for a moment and write the fact (what happened) separately from the interpretation (the meaning you attached). Often half the anger turns out to live in the interpretation, not the event. When you hit a wall, do as 5.20 suggests and jot one line: how can I make this very obstacle the material for my next move?</p>",
         related: [{"slug": "enchiridion", "label": "The Enchiridion · Epictetus"}, {"slug": "letters-to-lucilius", "label": "Letters to Lucilius · Seneca"}, {"slug": "discourses", "label": "Discourses · Epictetus"}],
+        editions: [
+          { title: 'Meditations: A New Translation (Modern Library)', translator: 'Gregory Hays', publisher: 'Modern Library (Penguin Random House)', note: "The most widely recommended modern English version, prized for its spare, immediate, plain-spoken prose. Hays's introduction surveys Marcus's life, Stoic doctrine, and the work's lasting influence — a strong entry point for new readers. A free public-domain translation (George Long) is linked below." },
+          { title: "Meditations: with Selected Correspondence (Oxford World's Classics)", translator: 'Robin Hard (intro & notes by Christopher Gill)', publisher: 'Oxford University Press', note: "A scholarly yet accessible edition whose introduction and notes by Christopher Gill set the text in its ancient philosophical context. It uniquely adds a selection of Marcus's correspondence with his tutor Fronto." },
+          { title: 'Meditations (Penguin Classics)', translator: 'Martin Hammond (intro by Diskin Clay)', publisher: 'Penguin Classics', note: "A faithful, eloquent rendering close to the Greek, with detailed explanatory notes and an introduction by Diskin Clay on the development of the text. Good for readers who want fidelity plus thorough scholarly apparatus." },
+        ],
         pdIntro:
           'The links below are the public-domain George Long (1862) translation, long out of copyright.',
         pdLinks: [

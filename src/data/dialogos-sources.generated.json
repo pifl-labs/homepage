@@ -138,6 +138,15 @@
             "slug": "meditations",
             "label": "명상록 · 마르쿠스 아우렐리우스"
           }
+        ],
+        "editions": [
+          {
+            "title": "세네카 삶의 지혜를 위한 편지 (동서문화사 세계사상전집/월드북)",
+            "translator": "김천운",
+            "publisher": "동서문화사 (세계사상전집 / 월드북)",
+            "note": "세네카가 루킬리우스에게 보낸 〈윤리서간집(도덕서한)〉을 포함해 인생론·행복론을 함께 묶은 한국어판. 2007년 『세네카 인생론』(동서문화사 월드북 4)으로 처음 나왔고, 2016년 『세네카 삶의 지혜를 위한 편지』(동서문화사 세계사상전집)로 개정 출간되었다(ISBN 9788949715674). 동서문화사 월드북/세계사상전집 계열은 일본어판을 거친 중역으로 널리 알려져 있어 라틴어 원전 직역은 아니다. 문장이 평이해 입문·통독용으로 무난하다. (검증 보정: '루시어스/루키우스 세네카' 저자 표기는 매체별 혼용이며 동일 인물이다.)",
+            "verifiedSource": "https://kobic.net/book/bookInfo/view.do?isbn=9788949715674"
+          }
         ]
       },
       "ja": {
@@ -274,7 +283,7 @@
             "label": "自省録 · マルクス・アウレリウス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "セネカ哲学全集 第5巻・第6巻『倫理書簡集 I・II』",
             "translator": "高橋宏幸（第5巻）／大芝芳弘（第6巻）",
@@ -422,6 +431,29 @@
             "slug": "meditations",
             "label": "Meditations · Marcus Aurelius"
           }
+        ],
+        "editions": [
+          {
+            "title": "Letters on Ethics: To Lucilius (The Complete Works of Lucius Annaeus Seneca)",
+            "translator": "Margaret Graver and A. A. Long",
+            "publisher": "University of Chicago Press (The Complete Works of Lucius Annaeus Seneca)",
+            "note": "The first complete modern English translation in nearly a century, covering all 124 surviving letters (plus fragments) with full introduction and commentary. The scholarly standard for reading Seneca's Epistulae Morales in their entirety.",
+            "verifiedSource": "https://press.uchicago.edu/ucp/books/book/chicago/L/bo20612233.html"
+          },
+          {
+            "title": "Letters from a Stoic",
+            "translator": "Robin Campbell",
+            "publisher": "Penguin Classics",
+            "note": "A selection of the moral letters in fluent, aphoristic English, prized for its readability and the most popular entry point for general readers. A free public-domain translation (Richard Gummere) is also linked below for those wanting the full text at no cost.",
+            "verifiedSource": "https://www.penguinrandomhouse.com/books/317438/letters-from-a-stoic-by-seneca-translated-with-an-introduction-by-robin-campbell-cover-illustrated-by-coralie-bickford-smith/"
+          },
+          {
+            "title": "Selected Letters (Oxford World's Classics)",
+            "translator": "Elaine Fantham",
+            "publisher": "Oxford University Press (Oxford World's Classics)",
+            "note": "Described by the publisher as the largest selection of the letters currently available, with an accurate, readable translation, a substantial introduction, and short head-notes summarizing each letter's themes. A strong middle ground between a brief sampler and the complete edition.",
+            "verifiedSource": "https://global.oup.com/academic/product/selected-letters-9780199533213"
+          }
         ]
       }
     }
@@ -559,6 +591,22 @@
             "slug": "enchiridion",
             "label": "엥케이리디온 · 에픽테토스"
           }
+        ],
+        "editions": [
+          {
+            "title": "인생이 왜 짧은가 (원전으로 읽는 순수고전세계)",
+            "translator": "천병희",
+            "publisher": "도서출판 숲",
+            "note": "라틴어 원전에서 직접 옮긴 정본. 「인생의 짧음에 관하여」를 비롯해 「마음의 평정에 관하여」, 「섭리에 관하여」, 「행복한 삶에 관하여」 네 편을 묶었다. 그리스·라틴 고전 원전 번역의 대표 역자가 옮긴 권위 있는 판본으로, 군더더기 없는 직역체가 특징이다.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=591112 (역자·출판사·총서) + https://sootax.co.kr/2582 (수록 4편 목차)"
+          },
+          {
+            "title": "인생의 짧음에 대하여 (현대지성 클래식 68)",
+            "translator": "박문재",
+            "publisher": "현대지성",
+            "note": "라틴어 원전 완역본. 표제작 외에 「행복한 삶에 대하여」, 「은둔에 대하여」, 「섭리에 대하여」와 세 편의 위로문(마르키아·헬비아·폴리비우스에게)까지 일곱 편을 한데 담았다. 현대 한국어 문장과 역자 해설을 갖춰 입문용으로 읽기 편하다.",
+            "verifiedSource": "https://www.hdjisung.com/bbs/board.php?bo_table=22&wr_id=244 (출판사 공식 목차 7편) + https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368876659 (역자·시리즈 68·완역본)"
+          }
         ]
       },
       "ja": {
@@ -689,7 +737,7 @@
             "label": "エンケイリディオン · エピクテトス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "生の短さについて 他二篇（岩波文庫）",
             "translator": "大西英文",
@@ -830,6 +878,29 @@
           {
             "slug": "enchiridion",
             "label": "Enchiridion · Epictetus"
+          }
+        ],
+        "editions": [
+          {
+            "title": "On the Shortness of Life (Penguin Great Ideas)",
+            "translator": "C. D. N. Costa",
+            "publisher": "Penguin Books (Penguin Great Ideas)",
+            "note": "A slim, affordable standalone selection drawn from the Penguin Classics edition of Dialogues and Letters; pairs On the Shortness of Life with Consolation to Helvia and On Tranquillity of Mind. A popular, very readable entry point for first-time readers.",
+            "verifiedSource": "https://www.penguinrandomhouse.com/books/297632/on-the-shortness-of-life-by-seneca/"
+          },
+          {
+            "title": "Dialogues and Essays (Oxford World's Classics)",
+            "translator": "John Davie (introduction and notes by Tobias Reinhardt)",
+            "publisher": "Oxford University Press (Oxford World's Classics)",
+            "note": "The fullest single-volume collection of Seneca's prose treatises, with On the Shortness of Life set alongside eight other works (On Anger, On the Happy Life, On Tranquillity of Mind, the Consolations, and more). Davie's modern, accurate translation plus Reinhardt's scholarly introduction make it the best choice for reading the essay in its wider context.",
+            "verifiedSource": "https://global.oup.com/academic/product/dialogues-and-essays-9780199552405"
+          },
+          {
+            "title": "How to Have a Life: An Ancient Guide to Using Our Time Wisely (Ancient Wisdom for Modern Readers)",
+            "translator": "James S. Romm",
+            "publisher": "Princeton University Press (Ancient Wisdom for Modern Readers)",
+            "note": "A focused modern translation devoted to this essay, adding two related letters (Moral Epistles 1 and 49) and printing the original Latin on facing pages. Ideal for readers who want one lively, contemporary rendering of De Brevitate Vitae with the Latin alongside. A free public-domain translation (Aubrey Stewart) is linked below.",
+            "verifiedSource": "https://muse.jhu.edu/pub/267/monograph/book/103245"
           }
         ]
       }
@@ -983,6 +1054,29 @@
             "slug": "meditations",
             "label": "명상록 · 마르쿠스 아우렐리우스"
           }
+        ],
+        "editions": [
+          {
+            "title": "에픽테토스 강의 3·4, 엥케이리디온, 단편 (그린비 고전의 숲 3)",
+            "translator": "김재홍",
+            "publisher": "그린비 (고전의 숲 시리즈)",
+            "note": "정암학당 연구원 김재홍이 그리스어 원전에서 직접 옮긴 학술 정본. 『엥케이리디온』이 「강의 3·4」·「단편」과 한 권으로 합본되어 수록되며(엥케이리디온은 책 후반부에 별도 장으로 배치), 상세한 주석과 해설을 갖춰 원전에 충실하게 읽고 싶은 독자에게 적합하다.",
+            "verifiedSource": "https://greenbee.co.kr/226"
+          },
+          {
+            "title": "엥케이리디온 — 도덕에 관한 작은 책",
+            "translator": "김재홍",
+            "publisher": "까치",
+            "note": "같은 역자(김재홍)가 엥케이리디온만 단행본으로 옮긴 초기 번역(2003). 그리스어 원전 기반의 정본 성격이나 현재 절판(품절) 상태로, 그린비 합본판이 사실상 이 번역의 후속·확장판에 해당한다.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403392"
+          },
+          {
+            "title": "엥케이리디온, 내 맘대로 되지 않는 세상에서 살아남고 싶을 때",
+            "translator": "신혜연",
+            "publisher": "이소노미아",
+            "note": "엥케이리디온 전문을 현대 한국어로 읽기 쉽게 옮긴 대중 입문용 단행본(2022). 학술 주석보다 가독성과 실생활 적용에 초점을 두어 스토아 철학을 처음 접하는 독자에게 권할 만하다.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290596948"
+          }
         ]
       },
       "ja": {
@@ -1128,7 +1222,7 @@
             "label": "自省録 · マルクス・アウレリウス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "エピクテトス 人生談義（下）— 要録",
             "translator": "國方栄二",
@@ -1291,6 +1385,29 @@
             "slug": "meditations",
             "label": "Meditations · Marcus Aurelius"
           }
+        ],
+        "editions": [
+          {
+            "title": "Discourses, Fragments, Handbook (Oxford World's Classics)",
+            "translator": "Robin Hard (translation); Christopher Gill (introduction and notes)",
+            "publisher": "Oxford University Press, Oxford World's Classics",
+            "note": "The only complete modern English translation of Epictetus's surviving works, presenting the Handbook (Enchiridion) alongside the full Discourses and Fragments in one volume. Robin Hard's accurate, readable rendering is paired with Christopher Gill's introduction and notes, making it the standard scholarly choice for reading the Handbook in its wider Stoic context. A free public-domain translation of the Handbook is linked below for those who want a no-cost option first.",
+            "verifiedSource": "https://global.oup.com/academic/product/discourses-fragments-handbook-9780199595181"
+          },
+          {
+            "title": "The Handbook (The Encheiridion) (Hackett Classics)",
+            "translator": "Nicholas P. White",
+            "publisher": "Hackett Publishing Company, Hackett Classics",
+            "note": "A compact, inexpensive standalone edition of the Handbook alone, translated with a clear introduction and explanatory annotations by philosopher Nicholas P. White. Widely assigned in university courses, it is a strong entry point for a reader who wants just the Handbook with concise scholarly guidance rather than the full Discourses.",
+            "verifiedSource": "https://www.abebooks.com/9780872200494/Handbook-Encheiridion-Hackett-Classics-Epictetus-0872200493/plp"
+          },
+          {
+            "title": "How to Be Free: An Ancient Guide to the Stoic Life (Ancient Wisdom for Modern Readers)",
+            "translator": "A. A. Long",
+            "publisher": "Princeton University Press, Ancient Wisdom for Modern Readers",
+            "note": "A fresh, accessible translation of the Handbook (Encheiridion) together with selected related passages from the Discourses, by leading Stoicism scholar A. A. Long. It prints the original Greek on facing pages and adds an introduction and glossary of key terms, suiting modern readers who want an authoritative yet approachable version focused on Stoic freedom.",
+            "verifiedSource": "https://press.princeton.edu/books/hardcover/9780691177717/how-to-be-free"
+          }
         ]
       }
     }
@@ -1419,6 +1536,29 @@
             "slug": "meditations",
             "label": "명상록 · 마르쿠스 아우렐리우스"
           }
+        ],
+        "editions": [
+          {
+            "title": "에픽테토스 강의 1·2 (그린비 고전의 숲 2)",
+            "translator": "김재홍",
+            "publisher": "그린비출판사 (그린비 고전의 숲)",
+            "note": "제자 아리아노스가 받아 적은 『강의(Diatribai/Discourses)』(원래 8권 저술, 현존 4권) 중 1·2권을 그리스어 원전에서 원문 형태를 살려 옮긴 완역. 담화록의 표준 한국어 정본으로 꼽힌다.",
+            "verifiedSource": "https://greenbee.co.kr/171"
+          },
+          {
+            "title": "에픽테토스 강의 3·4, 엥케이리디온, 단편 (그린비 고전의 숲 3)",
+            "translator": "김재홍",
+            "publisher": "그린비출판사 (그린비 고전의 숲)",
+            "note": "위 1·2권의 후속편으로 『강의』 3·4권과 요약본 『엥케이리디온』, 단편까지 그리스어 원전에서 완역. 두 권을 합치면 현존하는 에픽테토스 저작 전체를 담은 정본 세트가 된다.",
+            "verifiedSource": "https://greenbee.co.kr/226"
+          },
+          {
+            "title": "엥케이리디온, 내 맘대로 되지 않는 세상에서 살아남고 싶을 때",
+            "translator": "신혜연",
+            "publisher": "이소노미아",
+            "note": "『강의』의 핵심을 요약한 소책자 『엥케이리디온(편람)』만 옮긴 대중 입문서. 평이한 현대 한국어로 읽기 쉬워 처음 접하는 독자에게 적합하나, 담화록(강의) 본문 전체가 아니라 요약본이라는 점은 유의.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290596948"
+          }
         ]
       },
       "ja": {
@@ -1540,7 +1680,7 @@
             "label": "自省録 · マルクス・アウレリウス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "エピクテトス 人生談義（上・下）— 語録",
             "translator": "國方栄二",
@@ -1679,6 +1819,29 @@
             "slug": "meditations",
             "label": "Meditations · Marcus Aurelius"
           }
+        ],
+        "editions": [
+          {
+            "title": "Discourses and Selected Writings (Penguin Classics)",
+            "translator": "Robert Dobbin",
+            "publisher": "Penguin Classics (Penguin Random House)",
+            "note": "A widely read, accessible modern translation in fluent contemporary English. It is a selection rather than the full corpus: it gathers material from the four surviving books of the Discourses together with the Fragments and the Enchiridion (Handbook). Dobbin's Note on the Translation states that repetitive passages in Books III and IV are omitted, so the Discourses are abridged rather than complete. A good single-volume entry point for general readers.",
+            "verifiedSource": "https://www.penguin.co.uk/books/35501/discourses-and-selected-writings-by-epictetus/9780241764060"
+          },
+          {
+            "title": "Discourses, Fragments, Handbook (Oxford World's Classics)",
+            "translator": "Robin Hard (Introduction and notes by Christopher Gill)",
+            "publisher": "Oxford University Press, Oxford World's Classics",
+            "note": "Described by the publisher as the only complete modern translation of Epictetus's Discourses, presented together with the surviving Fragments and the Handbook (Enchiridion). Accurate yet readable, with Christopher Gill's full introduction reflecting recent work on Stoic ethics; the best choice for readers who want the whole text plus serious notes. ISBN 9780199595181.",
+            "verifiedSource": "https://global.oup.com/academic/product/discourses-fragments-handbook-9780199595181"
+          },
+          {
+            "title": "Epictetus, Discourses, Books 1-2 (Loeb Classical Library 131) and Discourses, Books 3-4. Fragments. The Encheiridion (Loeb Classical Library 218)",
+            "translator": "W. A. Oldfather",
+            "publisher": "Harvard University Press, Loeb Classical Library",
+            "note": "The standard scholarly reference edition, a two-volume set with the original Greek on facing pages and a literal English translation. Volume one (LCL 131, ISBN 9780674991453) covers Books 1-2; volume two (LCL 218, ISBN 9780674992405) covers Books 3-4 plus the Fragments and the Encheiridion. Best for study and comparison with the Greek; a free public-domain translation by George Long is available for casual reading.",
+            "verifiedSource": "https://www.loebclassics.com/view/LCL131/1925/volume.xml"
+          }
         ]
       }
     }
@@ -1806,6 +1969,29 @@
             "slug": "enchiridion",
             "label": "엥케이리디온 · 에픽테토스"
           }
+        ],
+        "editions": [
+          {
+            "title": "메논 (정암고전총서 — 플라톤 전집)",
+            "translator": "이상인",
+            "publisher": "아카넷 (정암고전총서, 옛 이제이북스판)",
+            "note": "정암학당의 그리스어 원전 직역 단행본으로, 메논만 한 권에 담은 표준 정본. 학술적 주석과 옮긴이 해설이 풍부해 연구·정독용으로 널리 인용된다. 초판은 정암학당/이제이북스에서 나왔고(2009) 이후 아카넷으로 옮겨 종이책(2019-08-19)·전자책(2023-06-26)으로 유통된다. ISBN 9788957336397.",
+            "verifiedSource": "https://product.kyobobook.co.kr/detail/S000000848280"
+          },
+          {
+            "title": "플라톤전집 2 (파이드로스/메논/뤼시스/라케스/카르미데스/에우튀프론/에우튀데모스/메넥세노스)",
+            "translator": "천병희",
+            "publisher": "도서출판 숲 (원전으로 읽는 순수고전세계)",
+            "note": "그리스어 원전을 평이한 현대어로 옮긴 천병희 완역으로, 메논은 단독 단행본이 아니라 8편이 묶인 전집 제2권에 합본 수록되어 있다. 주석이 간결해 일반 독자가 여러 대화편을 통독하기 좋은 입문용 정본. (구판 단행본 «파이드로스/메논»은 절판되고 신판 전집 2권으로 통합되었다.)",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=199745296"
+          },
+          {
+            "title": "플라톤의 프로타고라스 / 라케스 / 메논 (헬라스 고전 출판 기획 시리즈 6)",
+            "translator": "박종현",
+            "publisher": "서광사 (헬라스 고전 출판 기획 시리즈)",
+            "note": "그리스어 원전을 역주한 박종현판으로, 메논은 프로타고라스·라케스와 함께 한 권에 합본되어 있다. 상세한 역주와 용어 해설로 정평이 난 학술 번역이며 '탁월함(aretē)' 등 핵심 개념을 깊이 다룬다. 서광사, 2010.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8529550"
+          }
         ]
       },
       "ja": {
@@ -1926,7 +2112,7 @@
             "label": "エンケイリディオン · エピクテトス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "メノン（岩波文庫）",
             "translator": "藤沢令夫",
@@ -2064,6 +2250,29 @@
             "slug": "enchiridion",
             "label": "Enchiridion · Epictetus"
           }
+        ],
+        "editions": [
+          {
+            "title": "Plato: Five Dialogues — Euthyphro, Apology, Crito, Meno, Phaedo (Hackett Classics)",
+            "translator": "G. M. A. Grube, revised by John M. Cooper",
+            "publisher": "Hackett Publishing Company (Hackett Classics)",
+            "note": "The standard classroom edition in North America. Grube's accurate, readable translation, revised by Cooper for the one-volume Plato: Complete Works, gathers the Meno alongside the four dialogues on Socrates' trial and death. A free public-domain translation by Benjamin Jowett is linked below.",
+            "verifiedSource": "https://booksrun.com/9780872206335-plato-five-dialogues-euthyphro-apology-crito-meno-phaedo-hackett-classics-2nd-edition"
+          },
+          {
+            "title": "Meno and Other Dialogues — Charmides, Laches, Lysis, Meno (Oxford World's Classics)",
+            "translator": "Robin Waterfield",
+            "publisher": "Oxford University Press (Oxford World's Classics)",
+            "note": "Waterfield's clear modern-English translation pairs the Meno with three early dialogues on individual virtues, with an accessible introduction and notes aimed at students and general readers. A good choice for studying the Meno within Plato's wider inquiry into virtue.",
+            "verifiedSource": "https://www.amazon.com/Other-Dialogues-Oxford-Worlds-Classics/dp/0199555664"
+          },
+          {
+            "title": "Protagoras and Meno (Penguin Classics)",
+            "translator": "Adam Beresford (introduction by Lesley Brown)",
+            "publisher": "Penguin Books (Penguin Classics)",
+            "note": "A lively, idiomatic contemporary rendering that places the Meno next to the Protagoras, the two dialogues most concerned with whether virtue can be taught. Beresford's natural English makes it an approachable entry point for first-time readers.",
+            "verifiedSource": "https://www.penguin.co.uk/books/35460/protagoras-and-meno-by-plato-transadan-beresford/9780140449037"
+          }
         ]
       }
     }
@@ -2190,6 +2399,22 @@
           {
             "slug": "enchiridion",
             "label": "엥케이리디온 · 에픽테토스"
+          }
+        ],
+        "editions": [
+          {
+            "title": "에우튀프론 (정암고전총서 — 정암학당 플라톤 전집 20)",
+            "translator": "강성훈",
+            "publisher": "아카넷 (정암고전총서) — 구판은 이제이북스(2008·2018)",
+            "note": "그리스어 원전을 직접 옮긴 정암학당 공동 번역의 단행본. 상세한 작품 안내와 주석을 갖춘 학술 정본으로, 에우튀프론 한 편만 단독으로 깊이 읽고 싶을 때 적합하다. 출판사가 이제이북스에서 아카넷으로 옮겨 현재는 아카넷판으로 유통된다.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=272171162"
+          },
+          {
+            "title": "플라톤의 네 대화편: 에우티프론 / 소크라테스의 변론 / 크리톤 / 파이돈",
+            "translator": "박종현 (역주)",
+            "publisher": "서광사",
+            "note": "그리스어 원전 직역에 본문과 맞먹는 분량의 상세 역주를 붙인 고전적 정본(서광사, 2003). 에우티프론·변론·크리톤·파이돈을 소크라테스 재판·죽음의 흐름으로 한데 묶어, 에우티프론을 그 서막으로 읽기에 좋다. 2005년도 대한민국학술원 기초학문육성 우수학술도서로 선정되었다.",
+            "verifiedSource": "https://ko.wikipedia.org/wiki/%EB%B0%95%EC%A2%85%ED%98%84_(1934%EB%85%84)"
           }
         ]
       },
@@ -2319,7 +2544,7 @@
             "label": "エンケイリディオン · エピクテトス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "エウテュプロン／ソクラテスの弁明／クリトン（西洋古典叢書）",
             "translator": "西尾浩二",
@@ -2454,6 +2679,29 @@
           {
             "slug": "enchiridion",
             "label": "Enchiridion · Epictetus"
+          }
+        ],
+        "editions": [
+          {
+            "title": "Plato: Five Dialogues — Euthyphro, Apology, Crito, Meno, Phaedo (Hackett Classics)",
+            "translator": "G. M. A. Grube, revised by John M. Cooper",
+            "publisher": "Hackett Publishing Company (Hackett Classics)",
+            "note": "The standard classroom edition in North America, valued for its clear, accurate prose; Grube's translations were revised by John Cooper for Plato: Complete Works. Euthyphro opens the volume, where Socrates, on his way to answer a charge of impiety, questions Euthyphro about the nature of piety. A free public-domain translation (Benjamin Jowett) is linked below.",
+            "verifiedSource": "https://hackettpublishing.com/five-dialogues (corroborated by https://www.amazon.com/Plato-Dialogues-Euthyphro-Apology-Classics/dp/0872206335 and https://books.google.com/books/about/Five_Dialogues.html?id=T6yTDzV4XXUC)"
+          },
+          {
+            "title": "The Last Days of Socrates — Euthyphro, Apology, Crito, Phaedo (Penguin Classics)",
+            "translator": "Christopher Rowe",
+            "publisher": "Penguin Books (Penguin Classics)",
+            "note": "A fresh, fluent modern translation (2010) with introduction and notes by the Greek scholar Christopher Rowe, grouping the four dialogues set around Socrates' trial and death. Includes Euthyphro but not Meno. An earlier Penguin version translated by Hugh Tredennick and revised by Harold Tarrant also circulates.",
+            "verifiedSource": "https://www.penguinrandomhouse.com/books/308548/the-last-days-of-socrates-by-plato/ (corroborated by https://www.penguin.co.uk/books/459889/the-last-days-of-socrates-by-plato-trans-with-comm--christopher-rowe/9780140455496)"
+          },
+          {
+            "title": "Defence of Socrates, Euthyphro, Crito (Oxford World's Classics)",
+            "translator": "David Gallop",
+            "publisher": "Oxford University Press (Oxford World's Classics)",
+            "note": "A close, readable rendering of the three dialogues dramatizing the events around Socrates' trial in 399 BC, with a philosophical and historical introduction plus explanatory notes. 'Defence of Socrates' is Gallop's title for the Apology; the volume contains only these three works (no Phaedo or Meno).",
+            "verifiedSource": "https://global.oup.com/academic/product/defence-of-socrates-euthyphro-crito-9780199540501 (corroborated by https://global.oup.com/ukhe/product/defence-of-socrates-euthyphro-crito-9780199540501 and https://www.waterstones.com/book/defence-of-socrates-euthyphro-crito/plato/david-gallop/9780199540501)"
           }
         ]
       }
@@ -2595,6 +2843,29 @@
             "slug": "enchiridion",
             "label": "엥케이리디온 · 에픽테토스"
           }
+        ],
+        "editions": [
+          {
+            "title": "소크라테스의 변명 (정암고전총서 플라톤 전집)",
+            "translator": "강철웅",
+            "publisher": "아카넷 (정암고전총서 플라톤 전집)",
+            "note": "정암학당이 그리스어 원전에서 옮긴 학술 정본. 변명만 단독으로 묶은 단행본으로, 상세한 주석과 역자 해제가 풍부해 본격적으로 파고드는 독자에게 적합하다. 제목을 '변론'이 아닌 '변명'으로 옮긴 학당의 관점을 따른다.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=234167449"
+          },
+          {
+            "title": "플라톤의 네 대화편: 에우티프론·소크라테스의 변론·크리톤·파이돈",
+            "translator": "박종현",
+            "publisher": "서광사",
+            "note": "그리스어 원전을 직접 옮긴 상세 역주본으로, 한국 서양고전철학 연구의 기준이 되어온 정본. 에우티프론·변론·크리톤·파이돈 네 편을 한 권에 묶어 소크라테스 재판과 죽음의 흐름을 통째로 읽을 수 있다. 엄밀한 주석이 많아 다소 무게감이 있다.",
+            "verifiedSource": "https://sootax.co.kr/2953"
+          },
+          {
+            "title": "소크라테스의 변론·크리톤·파이돈",
+            "translator": "천병희",
+            "publisher": "도서출판 숲",
+            "note": "그리스어 원전을 옮긴 번역으로, 문장이 평이하고 읽기 편해 입문용으로 널리 권해진다. 변론·크리톤·파이돈 세 편을 함께 실어 소크라테스의 변론과 마지막 날들을 이어서 볼 수 있다.",
+            "verifiedSource": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106016578"
+          }
         ]
       },
       "ja": {
@@ -2724,7 +2995,7 @@
             "label": "エンケイリディオン · エピクテトス"
           }
         ],
-        "jaEditions": [
+        "editions": [
           {
             "title": "ソクラテスの弁明（光文社古典新訳文庫）",
             "translator": "納富信留",
@@ -2870,6 +3141,29 @@
           {
             "slug": "enchiridion",
             "label": "Enchiridion · Epictetus"
+          }
+        ],
+        "editions": [
+          {
+            "title": "Plato: Five Dialogues — Euthyphro, Apology, Crito, Meno, Phaedo (Hackett Classics)",
+            "translator": "G. M. A. Grube, revised by John M. Cooper",
+            "publisher": "Hackett Publishing Company (Hackett Classics)",
+            "note": "The standard classroom edition in North America. The Apology appears alongside Euthyphro, Crito, Meno, and Phaedo; Grube's accurate, readable translation was revised by John Cooper for Plato: Complete Works, with helpful footnotes and an updated bibliography. A good entry point that places the trial in its full dramatic arc.",
+            "verifiedSource": "https://www.amazon.com/Plato-Dialogues-Euthyphro-Apology-Classics/dp/0872206335"
+          },
+          {
+            "title": "The Last Days of Socrates — Euthyphro, Apology, Crito, Phaedo (Penguin Classics)",
+            "translator": "Hugh Tredennick, revised by Harold Tarrant",
+            "publisher": "Penguin Books (Penguin Classics)",
+            "note": "Groups the four dialogues around the trial and death of Socrates: Euthyphro, the Apology (his defence against the charges of impiety and corrupting the young), Crito, and Phaedo. Tredennick's landmark translation, revised by Harold Tarrant with a fresh introduction and notes, reads fluently for the general reader.",
+            "verifiedSource": "https://www.penguinrandomhouse.com/books/286347/the-last-days-of-socrates-by-plato-translated-by-hugh-tredennick-and-harold-tarrant-introduction-and-notes-by-harold-tarrant/"
+          },
+          {
+            "title": "Defence of Socrates, Euthyphro, Crito (Oxford World's Classics)",
+            "translator": "David Gallop",
+            "publisher": "Oxford University Press (Oxford World's Classics)",
+            "note": "Oxford titles the Apology 'Defence of Socrates' and pairs it with Euthyphro and Crito — the three dialogues set around the trial of 399 BC on charges of irreligion and corrupting the young (it does not include Phaedo or Meno). Gallop's careful translation comes with a substantial philosophical introduction and explanatory notes. A free public-domain translation by Benjamin Jowett is linked below.",
+            "verifiedSource": "https://www.amazon.com/Defence-Socrates-Euthyphro-Oxford-Classics/dp/0199540500"
           }
         ]
       }
