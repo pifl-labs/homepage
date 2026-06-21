@@ -19,6 +19,8 @@ const labels = {
     apply: '오늘 어떻게 적용할까', related: '함께 보면 좋은 출처',
     method: 'Dialogos가 이 출처를 다루는 방식', pd: '퍼블릭 도메인 원문',
     faq: '자주 묻는 질문', backHub: '출처 라이브러리', toApp: 'Dialogos 앱 보기',
+    editions: '현대 번역본 가이드',
+    editionsIntro: '시중 번역본 중 먼저 손에 잡을 만한 정본을 광고 없이 정리했습니다.',
     ext: '위 링크는 외부 사이트로 연결되며, PiFl Labs는 그 내용을 관리하지 않습니다.',
   },
   ja: {
@@ -27,6 +29,8 @@ const labels = {
     apply: '今日どう活かすか', related: '関連する出典',
     method: 'Dialogos が出典を扱う方針', pd: 'パブリックドメインの原文',
     faq: 'よくある質問', backHub: '出典ライブラリ', toApp: 'Dialogos アプリを見る',
+    editions: '現代日本語訳ガイド',
+    editionsIntro: '市販の現代語訳のうち、まず手に取りたい定番を広告なしで中立にまとめました。原文を無料で読みたい方は、下の「パブリックドメインの原文」をご覧ください。',
     ext: '上記リンクは外部サイトに接続します。PiFl Labs はその内容を管理していません。',
   },
   en: {
@@ -35,6 +39,8 @@ const labels = {
     apply: 'How to apply it today', related: 'Related sources',
     method: 'How Dialogos uses this source', pd: 'Public-domain text',
     faq: 'Frequently asked questions', backHub: 'Source Library', toApp: 'View the Dialogos app',
+    editions: 'Modern translations',
+    editionsIntro: 'A neutral, ad-free guide to standard modern editions worth starting with.',
     ext: 'These links lead to external sites whose content PiFl Labs does not control.',
   },
 }[lang];
@@ -178,6 +184,22 @@ const jsonLd = [
           </>
         )}
 
+        {c.jaEditions && c.jaEditions.length > 0 && (
+          <>
+            <h2>{labels.editions}</h2>
+            <p class="src-editions-intro">{labels.editionsIntro}</p>
+            <ul class="src-editions">
+              {c.jaEditions.map((e) => (
+                <li class="src-edition">
+                  <span class="src-edition-title" set:html={e.title} />
+                  <span class="src-edition-meta">{e.translator}・{e.publisher}</span>
+                  <p class="src-edition-note" set:html={e.note} />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
         <h2>{labels.method}</h2>
         <p set:html={c.provenance} />
 
@@ -266,6 +288,17 @@ const jsonLd = [
   .src-apply { color: var(--text-secondary); line-height: 1.7; }
   .src-apply :global(p) { margin: 0 0 0.6rem; }
   .src-apply :global(p:last-child) { margin-bottom: 0; }
+
+  /* 현대 일본어 번역본 가이드 (jaEditions) */
+  .src-editions-intro { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0 0 var(--s-sm); }
+  .src-editions { list-style: none; padding: 0; margin: var(--s-xs) 0; display: grid; gap: 0.6rem; }
+  .src-edition {
+    padding: 0.6rem var(--s-sm); border: 1px solid var(--border-default);
+    border-left: 3px solid var(--accent-cta); border-radius: var(--radius-sm); background: var(--bg-card);
+  }
+  .src-edition-title { display: block; font-weight: 700; color: var(--text-primary); }
+  .src-edition-meta { display: block; margin-top: 0.15rem; font-size: 0.8rem; color: var(--accent-highlight); font-weight: 600; }
+  .src-edition-note { margin: 0.35rem 0 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55; }
 
   /* 함께 보면 좋은 출처 (related) */
   .src-related { list-style: none; padding: 0; margin: var(--s-xs) 0; display: grid; gap: 0.4rem; }

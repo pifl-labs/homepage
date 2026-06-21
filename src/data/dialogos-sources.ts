@@ -51,6 +51,19 @@ export interface SourceRelated {
   label: string; // '엥케이리디온 · 에픽테토스'
 }
 
+/**
+ * 현대 일본어 정본 번역 안내 — ja 페이지 전용(現代日本語訳ガイド).
+ * 일본 독자의 "어느 번역본?(おすすめ訳)" 검색에 응답. 광고·가격·구입링크·어필리에이트
+ * 없는 중립 정보. note는 우리 고유 평(검증된 사실 기반) — 역자 번역문 전재 금지.
+ * 역자·출판사·총서·수록위치는 1차 출처(출판사 공식·NDL)로 확증한 사실만 싣는다.
+ */
+export interface JaEdition {
+  title: string; // '自省録（岩波文庫 改版）'
+  translator: string; // '神谷美恵子'
+  publisher: string; // '岩波書店（岩波文庫）'
+  note: string; // 1~2문장 특징 (정본/입문용/수록위치 등)
+}
+
 /** 한 언어(ko/ja/en)에 대한 출처 페이지 콘텐츠. */
 export interface SourceContent {
   workName: string; // '명상록'
@@ -67,6 +80,7 @@ export interface SourceContent {
   pdIntro: string; // 퍼블릭 도메인 원문 안내문
   pdLinks: SourcePdLink[]; // 검증된 PD 외부 링크
   related?: SourceRelated[]; // [심화] 저작 간 교차참조 (선택)
+  jaEditions?: JaEdition[]; // [심화·ja전용] 현대 일본어 정본 번역 안내(現代日本語訳ガイド)
 }
 
 export interface SourceWork {
@@ -83,7 +97,7 @@ export const sourceWorks: Record<string, SourceWork> = {
     slug: 'meditations',
     mentorId: 'marcus',
     icon: 'fa-book-open',
-    updated: '2026-06-19',
+    updated: '2026-06-21',
     content: {
       ko: {
         workName: '명상록',
@@ -184,6 +198,10 @@ export const sourceWorks: Record<string, SourceWork> = {
         concepts: [{"term": "ヘゲモニコン (指導理性, hēgemonikon)", "def": "心の中枢、すなわち判断し同意する理性の核。平静と動揺を決めるのは外の出来事ではなくこれである。"}, {"term": "統制の区別 (我々次第なもの)", "def": "判断・意志・行動は自分次第だが、結果・評判・他人はそうではない。ストアの平静はこの境界を守ることから生まれる。"}, {"term": "宇宙の本性 (全体の自然, Universal Nature)", "def": "万物を秩序づける理性的な摂理。起こることは全体にとって適切であり、それを受け入れることが健やかな魂である。"}, {"term": "無常 (流転, impermanence)", "def": "すべては変わり、消えていく。名声も記憶もやがて忘れられるからこそ、今の務めに集中する根拠となる。"}],
         apply: "<p>今日、一つだけ試してください。朝、目は覚めたのに起きたくない時は、5.1を借りて「私は人間としての務めのために起きる」と一文だけ唱え、足を床に下ろします。やる気を待たず、動作を先につくるのです。</p><p>職場で誰かに苛立ったら、4.7を使ってみてください。「あの人が私を害した」という判断を一度脇に置き、事実(何が起きたか)と解釈(自分がそこに付けた意味)を分けて書き出すと、怒りの半分は出来事ではなく自分の解釈だったと見えてきます。理不尽な状況に詰まったら、5.20のように「この妨げを次の一手の材料にどう使うか」を一行メモしておきましょう。</p>",
         related: [{"slug": "enchiridion", "label": "エンケイリディオン · エピクテトス"}, {"slug": "letters-to-lucilius", "label": "ルキリウスへの手紙 · セネカ"}, {"slug": "discourses", "label": "語録 · エピクテトス"}],
+        jaEditions: [
+          { title: '自省録（岩波文庫 改版）', translator: '神谷美恵子', publisher: '岩波書店（岩波文庫 青610-1）', note: '日本で最も広く読まれてきた定番の訳。2007年の改版で新たな補注が加えられた。原典の格調を保ちつつ通読できる、まず手に取りたい一冊。' },
+          { title: 'マルクス・アウレリウス「自省録」（講談社学術文庫）', translator: '鈴木照雄', publisher: '講談社（講談社学術文庫）', note: 'ギリシア哲学研究者による学術的な新訳。読み比べたい人や、語句を踏み込んで理解したい読者に向く。' },
+        ],
         pdIntro:
           '以下は著作権が切れたジョージ・ロング(George Long, 1862)の英訳です。日本語のパブリックドメイン全訳は限られているため、原文は英訳で案内します。',
         pdLinks: [

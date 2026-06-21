@@ -31,6 +31,44 @@ const labels = {
   },
 }[lang];
 
+// 입문 읽는 순서 — "어디서부터 읽을까(入門 順番)" 검색 유입 대응. 저작 횡단(언어 무관 순서 + 언어별 이유).
+// 작품명·멘토명은 sourceList에서 동적으로 가져와 데이터 일관성을 보장한다.
+const readingPath = {
+  ko: {
+    title: '어디서부터 읽을까 — 스토아 입문 순서',
+    intro: '여덟 권을 다 읽을 필요는 없습니다. 처음이라면 이 순서를 권합니다.',
+    steps: [
+      { slug: 'enchiridion', why: '가장 짧고 실천적인 한 권. “내가 통제할 수 있는 것”이라는 스토아의 핵심을 단숨에 잡습니다.' },
+      { slug: 'meditations', why: '로마 황제가 자신에게 쓴 일기. 가장 널리 사랑받는 입문서입니다.' },
+      { slug: 'on-the-shortness-of-life', why: '짧은 에세이 한 편. 시간을 어떻게 쓸지 오늘 바로 적용됩니다.' },
+      { slug: 'discourses', why: '엥케이리디온의 모체가 된 강의록. 한 걸음 더 깊이 들어갑니다.' },
+      { slug: 'plato-apology', why: '스토아가 뿌리를 둔 소크라테스의 문답. 철학적 용기의 원형입니다.' },
+    ],
+  },
+  ja: {
+    title: 'どこから読むか — ストア哲学 入門の順番',
+    intro: '八冊すべてを読む必要はありません。初めてなら、この順番をおすすめします。',
+    steps: [
+      { slug: 'enchiridion', why: '最も短く実践的な一冊。「自分に統制できるもの」というストアの核心を一気につかめます。' },
+      { slug: 'meditations', why: 'ローマ皇帝が自らに書いた日記。最も広く愛される入門書です。' },
+      { slug: 'on-the-shortness-of-life', why: '短いエッセイ一篇。時間の使い方が今日すぐに変わります。' },
+      { slug: 'discourses', why: '『要録』のもとになった講義録。さらに一歩深く入ります。' },
+      { slug: 'plato-apology', why: 'ストア派が源流とするソクラテスの問答。哲学的な勇気の原型です。' },
+    ],
+  },
+  en: {
+    title: 'Where to start — a reading path into Stoicism',
+    intro: 'You do not need to read all eight. If you are new, this is the order we suggest.',
+    steps: [
+      { slug: 'enchiridion', why: 'The shortest, most practical book — the Stoic core of “what is up to you,” in one sitting.' },
+      { slug: 'meditations', why: 'A Roman emperor’s diary to himself. The most widely loved entry point.' },
+      { slug: 'on-the-shortness-of-life', why: 'A single short essay; it changes how you spend today.' },
+      { slug: 'discourses', why: 'The lectures behind the Enchiridion — going one step deeper.' },
+      { slug: 'plato-apology', why: 'The Socratic questioning Stoicism springs from — the archetype of philosophical courage.' },
+    ],
+  },
+}[lang];
+
 const base = `/${lang}`;
 const selfPath = `/apps/dialogos/sources/`;
 const appHref = `${base}/apps/dialogos/`;
@@ -120,6 +158,24 @@ const title = `${labels.title} — Dialogos | PiFl Labs`;
         </section>
       ))}
 
+      <section class="src-path">
+        <h2 class="src-group-title">{readingPath.title}</h2>
+        <p class="src-path-intro">{readingPath.intro}</p>
+        <ol class="src-path-list">
+          {readingPath.steps.map((s) => {
+            const w = sourceList.find((x) => x.slug === s.slug);
+            return (
+              <li class="src-path-step">
+                <a class="src-path-link" href={`${base}/apps/dialogos/sources/${s.slug}/`}>
+                  {w ? `${w.content[lang].workName} · ${w.content[lang].mentorName}` : s.slug}
+                </a>
+                <span class="src-path-why">{s.why}</span>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+
       <div class="src-hub-cta">
         <a class="src-nav-btn src-nav-btn--cta" href={appHref}>{labels.toApp} <i class="fas fa-arrow-right"></i></a>
       </div>
@@ -158,6 +214,15 @@ const title = `${labels.title} — Dialogos | PiFl Labs`;
   .src-card-name { font-weight: 700; color: var(--text-primary); font-size: 1rem; }
   .src-card-lede { color: var(--text-secondary); font-size: 0.82rem; line-height: 1.5; }
   .src-card-more { color: var(--accent-cta); font-size: 0.8rem; font-weight: 600; margin-top: auto; }
+
+  /* 입문 읽는 순서 (readingPath) */
+  .src-path { margin: var(--s-md) 0; }
+  .src-path-intro { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0 0 var(--s-sm); }
+  .src-path-list { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.7rem; }
+  .src-path-step { line-height: 1.5; }
+  .src-path-link { display: inline-block; font-weight: 700; color: var(--text-primary); text-decoration: none; }
+  .src-path-link:hover { color: var(--accent-cta); }
+  .src-path-why { display: block; color: var(--text-secondary); font-size: 0.88rem; line-height: 1.55; margin-top: 0.15rem; }
 
   .src-hub-cta { display: flex; justify-content: center; margin-top: var(--s-md); }
   .src-nav-btn {
