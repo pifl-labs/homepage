@@ -130,6 +130,83 @@ const focus: AppMeta = {
   },
 };
 
+const hello: AppMeta = {
+  slug: 'pipi-hello',
+  name: 'PiPi Hello',
+  status: 'soon',
+  category: { ko: '교육 · 어린이 일본어', ja: '教育 · こども韓国語', en: 'Education · Kids Japanese' },
+  stores: {},
+  heroShot: 'home',
+  content: {
+    ko: {
+      tagline: '첫 일본어 한마디를,\n놀이처럼',
+      lede: '6~8세 우리 아이의 첫 일본어. 히라가나·가타카나부터 기초 단어·인사까지, 글자카드와 듣기 놀이로 하나씩 인출하며 익혀요. 광고 없이, 계정 없이, 100% 기기 안에서.',
+      metaDesc: '6~8세 어린이의 첫 일본어. 히라가나·가타카나·기초 단어·인사를 놀이처럼. 광고 0, 데이터 수집 0, 부모게이트로 안전하게.',
+      shotsTitle: '글자에서 첫 한마디까지',
+      featuresTitle: '부모가 안심하는 이유',
+      ctaTitle: '첫 일본어, 오늘 시작해요',
+      ctaSub: 'iOS · Android에서. 광고 없이, 무료체험으로.',
+      shots: [
+        { file: 'home',  label: '오늘의 학습',      desc: '지도를 따라 글자와 단어를 차례로 만나요.' },
+        { file: 'cards', label: '글자카드',         desc: '히라가나·가타카나를 그림·소리와 함께.' },
+        { file: 'words', label: '기초 단어',        desc: '동물·숫자·색깔 같은 첫 단어 100개.' },
+        { file: 'learn', label: '소리로 익히는 드릴', desc: '듣고 고르며 글자를 인출해요.' },
+        { file: 'write', label: '획순 따라 쓰기',    desc: '손가락으로 획순을 따라 그으며 익혀요.' },
+      ],
+      features: [
+        { icon: 'fa-ban',           title: '광고 0',         desc: '아이가 보는 화면에 광고 surface가 하나도 없습니다.' },
+        { icon: 'fa-shield-halved', title: '데이터 수집 0',  desc: '계정도 서버도 없이, 학습 기록은 100% 기기 안에만.' },
+        { icon: 'fa-user-shield',   title: '부모게이트',     desc: '결제·설정은 어른용 곱셈 문제를 통과해야 열려요.' },
+        { icon: 'fa-volume-high',   title: '듣고 익히는 발음', desc: '기기 TTS로 글자·단어 소리를 바로 들려줘요(녹음 없음).' },
+      ],
+    },
+    ja: {
+      tagline: 'はじめての韓国語を、\nあそぶように。',
+      lede: '6〜8歳のはじめての韓国語。ハングルの反切表から基礎単語・あいさつまで、文字カードと聞き取り遊びでひとつずつ覚えます。広告なし、アカウントなし、100%端末の中で。',
+      metaDesc: '6〜8歳のはじめての韓国語。ハングル・基礎単語・あいさつをあそぶように。広告ゼロ、データ収集ゼロ、保護者ゲートで安心。',
+      shotsTitle: '文字から最初のひとことまで',
+      featuresTitle: '保護者が安心できる理由',
+      ctaTitle: 'はじめての韓国語を、今日から。',
+      ctaSub: 'iOS · Android で。広告なし、無料体験から。',
+      shots: [
+        { file: 'home',  label: '今日の学習',        desc: 'マップに沿って文字や単語を順番に。' },
+        { file: 'cards', label: '文字カード',        desc: 'ハングルを絵と音といっしょに。' },
+        { file: 'words', label: '基礎単語',          desc: '動物・数・色などはじめての単語100。' },
+        { file: 'learn', label: '音で覚えるドリル',   desc: '聞いて選んで文字を思い出す。' },
+        { file: 'match', label: '音と文字のマッチング', desc: '音を聞いて正しい文字を合わせる遊び。' },
+      ],
+      features: [
+        { icon: 'fa-ban',           title: '広告ゼロ',       desc: '子どもの画面に広告は一切表示されません。' },
+        { icon: 'fa-shield-halved', title: 'データ収集ゼロ', desc: 'アカウントもサーバーもなく、記録は100%端末内だけ。' },
+        { icon: 'fa-user-shield',   title: '保護者ゲート',   desc: '課金や設定は大人向けの計算問題を解いてから。' },
+        { icon: 'fa-volume-high',   title: '聞いて覚える発音', desc: '端末のTTSで文字や単語の音をすぐに再生(録音なし)。' },
+      ],
+    },
+    en: {
+      tagline: "A child's first Japanese,\nlearned through play.",
+      lede: 'A first Japanese for kids aged 6–8. From hiragana and katakana to basic words and greetings, learned by recall with letter cards and listening games. No ads, no account, fully on device.',
+      metaDesc: 'A first Japanese for kids 6–8. Hiragana, katakana, first words and greetings through play. No ads, no data collected, 100% on-device with a parental gate.',
+      shotsTitle: 'From letters to a first hello',
+      featuresTitle: 'Why PiPi Hello',
+      ctaTitle: 'Start their first Japanese today',
+      ctaSub: 'On iOS & Android. No ads, free trial.',
+      shots: [
+        { file: 'home',  label: "Today's lesson",  desc: 'Follow the map through letters and words, one at a time.' },
+        { file: 'cards', label: 'Letter cards',    desc: 'Hiragana and katakana paired with picture and sound.' },
+        { file: 'words', label: 'First words',     desc: '100 first words — animals, numbers, colors.' },
+        { file: 'learn', label: 'Learn by listening', desc: 'Listen and choose to recall each letter.' },
+        { file: 'write', label: 'Trace the strokes',  desc: 'Follow the stroke order with a fingertip.' },
+      ],
+      features: [
+        { icon: 'fa-ban',           title: 'Zero ads',          desc: 'No ads anywhere — not a single ad surface a child can see.' },
+        { icon: 'fa-shield-halved', title: 'Zero data collected', desc: 'No account, no server — every record stays on the device.' },
+        { icon: 'fa-user-shield',   title: 'Parental gate',     desc: 'Payments and settings open only after an adult math problem.' },
+        { icon: 'fa-volume-high',   title: 'Hear every sound',  desc: 'On-device TTS plays each letter and word aloud (no recording).' },
+      ],
+    },
+  },
+};
+
 const words: AppMeta = {
   slug: 'pipi-words',
   name: 'PiPi Words',
@@ -519,5 +596,5 @@ const draw: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
-export const appList: AppMeta[] = [focus, draw, words, dday, log, dialogos];
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
+export const appList: AppMeta[] = [focus, draw, hello, words, dday, log, dialogos];
