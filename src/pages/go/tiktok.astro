@@ -7,8 +7,9 @@
 import { apps } from '../../data/apps';
 
 // App Store Connect provider ID (App Analytics 캠페인 귀속용).
-// 빈 값이면 ct만 부착 — ASC > App Analytics > 캠페인 링크 생성에서 pt 확인 후 채울 것.
-const APPLE_PT = '';
+// 출처: ASC olympus 세션 API providerId=128720089 (PiFl Labs Co., Ltd., 2026-07-06 확인).
+// 귀속 데이터가 안 잡히면 ASC 추세>캠페인 링크 생성기에서 pt 재확인할 것 (캠페인당 5다운로드+부터 표시).
+const APPLE_PT = '128720089';
 
 const ORDER = ['pipi-words', 'pipi-dday', 'pipi-focus', 'pipi-log'] as const;
 
