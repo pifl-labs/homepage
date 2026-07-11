@@ -133,9 +133,12 @@ const focus: AppMeta = {
 const hello: AppMeta = {
   slug: 'pipi-hello',
   name: 'PiPi Hello',
-  status: 'soon',
+  status: 'live',
   category: { ko: '교육 · 어린이 일본어', ja: '教育 · こども韓国語', en: 'Education · Kids Japanese' },
-  stores: {},
+  stores: {
+    ios: 'https://apps.apple.com/app/id6777299814',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.hello',
+  },
   heroShot: 'home',
   content: {
     ko: {
