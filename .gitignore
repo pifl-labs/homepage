@@ -13,6 +13,12 @@ dist/
 # Astro
 .astro/
 
+# Cloudflare Wrangler (local state/cache)
+.wrangler/
+
+# Generated docs (rendered from HANDOFF.md — regenerable, not deployed)
+HANDOFF.html
+
 # Firebase
 .firebase/
 firebase-debug.log
