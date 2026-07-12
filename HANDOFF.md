@@ -2,6 +2,69 @@
 
 ---
 
+## Session 10 — 2026-06-02: pipi-dday·pipi-log 마케팅 랜딩 추가 + hero CJK 줄바꿈 수정 (라이브 배포)
+
+### 작업 요약
+
+홈페이지에 **pipi-dday·pipi-log 앱 마케팅 랜딩(ko/ja/en)을 추가**했다. 둘 다 기존 `AppLanding.astro` + `apps.ts`(SSOT) 구조를 그대로 재사용 — 데이터만 추가하면 라우트·홈 카드가 자동 생성되는 패턴. 작업 중 hero 타이틀의 **CJK 줄바꿈 결함**(한국어 "목적지"→"목적/지", 일본어 "瞬間"→"瞬/間"으로 글자 중간에서 깨짐)을 발견·수정. `main` push → CF Pages 라이브 반영(`pifl-labs.com`)까지 확인. 커밋 `002c63e`.
+
+### 수행한 작업
+
+#### 1. pipi-dday / pipi-log 마케팅 랜딩 추가
+
+**구조**: `src/data/apps.ts`에 `AppMeta` 추가 → `src/pages/{ko,ja,en}/apps/{slug}/index.astro`(각 4줄, `<AppLanding lang slug>` 호출). 홈은 `appList.map`이라 카드 자동 노출.
+
+- **카피 근거(할루시네이션 금지)**: dday=`code/pipi_dday/STORE_LISTING.md`, log=`code/pipi_log/.claude/CLAUDE.md`(주의: `pipi_log/README.md`는 pipi_starter 잔재라 무시). 실제 출시 기능만 기술.
+- **스크린샷**: 각 앱 `store_assets/screenshots/<최신>/ios/{lang}` 캡션본(words/dday 동일 store-screenshots 템플릿) → 540×1169 webp 변환. dday 5샷(home/detail/widget_skin/form/onboarding), log 5샷(home/calendar/analytics/monthly-map/collection) × ko/ja/en + 아이콘 256.
+- 홈 카드 순서 `focus(출시) → words → dday → log`. dday·log `status: 'soon'`(스토어 링크 없음).
+
+**생성된 파일:**
+
+| 파일 | 역할 |
+|------|------|
+| `src/pages/{ko,ja,en}/apps/pipi-dday/index.astro` | dday 랜딩 라우트 3종 |
+| `src/pages/{ko,ja,en}/apps/pipi-log/index.astro` | log 랜딩 라우트 3종 |
+| `public/assets/apps/pipi-dday/**` | dday 스크린샷 15 + 아이콘 (webp) |
+| `public/assets/apps/pipi-log/**` | log 스크린샷 15 + 아이콘 (webp) |
+
+**수정된 파일:** `src/data/apps.ts` — `dday`·`log` `AppMeta` 추가 + `apps`/`appList` 등록.
+
+#### 2. hero 타이틀 CJK 줄바꿈 수정 (focus/words 포함 공통 개선)
+
+`.app-hero-title`에 `text-wrap: balance`만 있고 `word-break`가 없어 CJK가 글자 단위로 깨지던 문제. `<html lang>`이 정확하므로 `:lang()`으로 언어별 처리.
+
+| 언어 | 처리 | 이유 |
+|---|---|---|
+| ko | `word-break: keep-all` + 긴 tagline 명시 `\n`→`<br>` | 어절(띄어쓰기) 보존 |
+| ja | `word-break: auto-phrase` + 긴 tagline 명시 `\n` | 문절 단위 (공백 없어 keep-all 부적합) |
+| en | `text-wrap: balance`(기존) | 공백 기준이라 원래 단어 중간 안 깨짐 |
+
+- `AppLanding.astro`: hero는 `c.tagline.split('\n')`→`<br>` 렌더, SEO title은 `\n`→공백(검색결과 깨짐 방지). 홈 카드는 white-space normal이라 `\n` 자동 공백 처리.
+- 명시 2줄 적용: ko dday/log, ja dday/log, en log = **모바일(390) 실측 2줄**. **en dday만 2줄 물리적 불가**(50자, 강제 시 4줄) → 자연 3줄 유지.
+
+**수정된 파일:** `public/styles-app-landing.css`(`:lang(ko/ja)` 규칙), `src/components/AppLanding.astro`.
+
+### 빌드 상태
+
+- `npm run build` — ✅ exit 0, **40 페이지**(기존 34 + dday 3 + log 3)
+- headless(playwright) 모바일 390 실측: hero 줄 수 — ko/ja dday·log=2, en log=2, en dday=3(자연), overflowX 0, broken img 0
+- 라이브: `pifl-labs.com/ko/apps/pipi-dday/`·`/pipi-log/` HTTP 200, dday hero `모든 순간이<br>목적지로 향하는 항해`, 홈 4카드 확인
+
+### 의사결정 기록
+
+- **en dday hero는 자연 3줄 유지**: "Every moment is a voyage toward your destination."(50자)는 모바일 폭에서 2줄 불가(강제 시 4줄). 영어는 단어 중간이 안 깨지므로 자연 줄바꿈이 최선. 2줄 강제하려면 영문 카피 단축 필요(**미결**).
+- **스크린샷 신규 캡처 없이 store_assets 캡션본 재사용** — focus 제외 words/dday/log 모두 store-screenshots 동일 템플릿이라 톤 일관.
+- **HANDOFF.html(5/19 기존 파일)은 커밋 제외** — 웹 콘텐츠 아님, 라이브 무영향.
+
+### 남은 작업
+
+1. (선택) **en dday hero 2줄** 원하면 영문 tagline 단축(의미 일부 손실).
+2. **pipi-dday 출시 시**: `apps.ts` dday `status: 'soon'→'live'` + `stores.ios/android` 링크.
+3. **pipi-log 출시 시**: 동일하게 `status`/`stores` 갱신.
+4. (선택) focus/words ja/en hero도 의미단위 2줄 원하면 동일 `\n` 적용 가능(현재 짧아 불필요).
+
+---
+
 ## Session 9 — 2026-05-17~18: 라이트모드·글자크기 + Astro·Cloudflare Pages 전면 이전
 
 ### 작업 요약
