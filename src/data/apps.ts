@@ -599,5 +599,82 @@ const draw: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
-export const appList: AppMeta[] = [focus, draw, hello, words, dday, log, dialogos];
+const wordVoyage: AppMeta = {
+  slug: 'pipi-word-voyage',
+  name: 'PiPi Word Voyage',
+  status: 'soon',
+  category: { ko: '게임 · 낱말 퍼즐', ja: 'ゲーム · 単語パズル', en: 'Games · Word Puzzle' },
+  stores: {},
+  heroShot: 'game',
+  content: {
+    ko: {
+      tagline: '글자를 이어\n섬을 하나씩 개척하라',
+      lede: '원형으로 놓인 글자를 드래그로 이어 낱말을 완성하고, 12개 해역 120개 섬의 바다 지도를 개척하는 한글 워드 퍼즐. 계정 없이 바로 시작하고, 오프라인으로 조용히 즐기세요.',
+      metaDesc: '글자를 드래그로 이어 낱말을 완성하는 오프라인 한글 워드 퍼즐. 12개 해역 120개 섬, 오늘의 퍼즐과 항해일지까지. iOS · Android.',
+      shotsTitle: '낱말로 그리는 바다 지도',
+      featuresTitle: '왜 피피 낱말항해인가',
+      ctaTitle: '곧 만나요',
+      ctaSub: 'iOS · Android 출시 준비 중.',
+      shots: [
+        { file: 'home',    label: '항해 준비',             desc: '항해사 PiPi와 함께 낱말 항해를 시작합니다.' },
+        { file: 'game',    label: '드래그 한 번에 낱말 완성', desc: '원형 글자를 이어 목표 낱말을 채웁니다.' },
+        { file: 'voyage',  label: '12개 해역, 120개 섬',    desc: '섬을 하나씩 개척하며 바다 지도를 완성해요.' },
+        { file: 'daily',   label: '오늘의 퍼즐',            desc: '하루 한 판으로 연속 항해 기록을 쌓아요.' },
+        { file: 'logbook', label: '항해일지',               desc: '발견한 낱말이 도감에 차곡차곡 남습니다.' },
+      ],
+      features: [
+        { icon: 'fa-spell-check',  title: '검증된 낱말만',      desc: '표준국어대사전을 바탕으로 검증한 낱말만 담았습니다.' },
+        { icon: 'fa-calendar-day', title: '오늘의 퍼즐 · 스트릭', desc: '하루 한 판, 연속 항해 기록이 매일의 동기를 만듭니다.' },
+        { icon: 'fa-book-open',    title: '항해일지(낱말 도감)', desc: '발견한 모든 낱말이 항해일지에 영구히 남습니다.' },
+        { icon: 'fa-wifi',         title: '계정 없이 오프라인',  desc: '로그인 없이 바로 시작, 진행도는 기기 안에만 저장됩니다.' },
+      ],
+    },
+    ja: {
+      tagline: '文字をつないで\n島を開拓しよう',
+      lede: '円形に並んだ文字をドラッグでつないで単語を完成し、12海域120の島の海図を開拓する韓国語単語パズル。アカウント不要ですぐ始められ、オフラインで静かに楽しめます。',
+      metaDesc: '文字をドラッグでつないで単語を完成するオフライン韓国語単語パズル。12海域120の島、今日のパズルと航海日誌も。iOS · Android。',
+      shotsTitle: '単語で描く海図',
+      featuresTitle: 'ピピ ことばの航海を選ぶ理由',
+      ctaTitle: 'もうすぐ会えます',
+      ctaSub: 'iOS · Android リリース準備中。',
+      shots: [
+        { file: 'home',    label: '出航の準備',           desc: '航海士ピピと一緒に言葉の航海を始めます。' },
+        { file: 'game',    label: 'ドラッグ一回で単語完成', desc: '円形の文字をつないで目標の単語を埋めます。' },
+        { file: 'voyage',  label: '12海域、120の島',      desc: '島を一つずつ開拓して海図を完成させましょう。' },
+        { file: 'daily',   label: '今日のパズル',          desc: '一日一回のパズルで連続航海記録を積み上げます。' },
+        { file: 'logbook', label: '航海日誌',              desc: '見つけた単語がコレクションに残ります。' },
+      ],
+      features: [
+        { icon: 'fa-spell-check',  title: '検証済みの単語だけ',   desc: '標準国語大辞典で検証した単語だけを収録しています。' },
+        { icon: 'fa-calendar-day', title: '今日のパズル · 連続記録', desc: '一日一回、連続航海記録が毎日のモチベーションに。' },
+        { icon: 'fa-book-open',    title: '航海日誌(単語図鑑)',   desc: '発見したすべての単語が航海日誌に永久に残ります。' },
+        { icon: 'fa-wifi',         title: 'アカウント不要 · オフライン', desc: 'ログインなしですぐ開始、進捗は端末内にのみ保存。' },
+      ],
+    },
+    en: {
+      tagline: 'Link letters,\nchart the sea',
+      lede: 'Drag across a ring of letters to form words and chart 120 islands across 12 seas in this Korean word puzzle. No account needed — start instantly and play fully offline.',
+      metaDesc: 'Offline Korean word puzzle: link letters to form words, clear 120 islands across 12 seas, keep a daily streak and a word logbook. iOS & Android.',
+      shotsTitle: 'A sea chart drawn with words',
+      featuresTitle: 'Why PiPi Word Voyage',
+      ctaTitle: 'Coming soon',
+      ctaSub: 'Launching on iOS & Android.',
+      shots: [
+        { file: 'home',    label: 'Ready to sail',        desc: 'Begin your word voyage with navigator PiPi.' },
+        { file: 'game',    label: 'One drag, one word',   desc: 'Link the ring of letters to fill the target words.' },
+        { file: 'voyage',  label: '120 islands, 12 seas', desc: 'Clear islands one by one and complete the chart.' },
+        { file: 'daily',   label: 'Daily puzzle',         desc: 'One puzzle a day keeps your voyage streak alive.' },
+        { file: 'logbook', label: 'Word logbook',         desc: 'Every word you discover is logged forever.' },
+      ],
+      features: [
+        { icon: 'fa-spell-check',  title: 'Dictionary-verified words', desc: 'Every word is validated against the Standard Korean Dictionary.' },
+        { icon: 'fa-calendar-day', title: 'Daily puzzle & streak',     desc: 'One puzzle a day builds a voyage streak that keeps you coming back.' },
+        { icon: 'fa-book-open',    title: 'Voyage logbook',            desc: 'Every word you discover is recorded permanently.' },
+        { icon: 'fa-wifi',         title: 'Offline, no account',       desc: 'Start instantly with no login — progress stays on your device.' },
+      ],
+    },
+  },
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
+export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos];
