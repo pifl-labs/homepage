@@ -31,7 +31,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>AI 스케치 변환</strong>: 사용자가 촬영하거나 기기 갤러리에서 선택한 사진을 라인아트 스케치로 변환</li>
                     <li><strong>앱 기능 제공</strong>: 변환된 스케치의 색칠·드로잉, 작업 세션의 기기 내 저장, 사용량 관리</li>
-                    <li><strong>계정 식별</strong>: Google/Apple/익명 로그인을 통한 사용자 구분 및 사용량·포인트 관리</li>
+                    <li><strong>사용자 식별</strong>: 앱 최초 실행 시 자동 생성되는 익명 식별자(Firebase 익명 인증)를 통한 사용자 구분 및 사용량·포인트 관리 — 별도의 회원가입·로그인 절차는 없습니다</li>
                     <li><strong>광고 게재</strong>: Google AdMob을 통한 광고 노출 및 광고 관련성 향상</li>
                     <li><strong>인앱 결제</strong>: 포인트팩 구매 및 프리미엄 구독 처리, 영수증 검증</li>
                     <li><strong>분석 및 안정성</strong>: Firebase Analytics·Crashlytics를 통한 사용 분석 및 오류 추적(선택)</li>
@@ -55,9 +55,9 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>AI 변환을 위해 Cloud Functions(서버)로 전송 후 Cloud Storage에 일시 저장</td>
                         </tr>
                         <tr>
-                            <td>계정 식별자</td>
-                            <td>Firebase 인증 UID, 로그인 방식(Google/Apple/익명), 이메일(소셜 로그인 시 제공자 제공분)</td>
-                            <td>Firebase Authentication을 통한 로그인 시</td>
+                            <td>사용자 식별자</td>
+                            <td>Firebase 익명 인증 UID(앱이 자동 생성하는 무작위 식별자 — 이름·이메일 등 신원 정보는 수집하지 않습니다)</td>
+                            <td>앱 최초 실행 시 Firebase Authentication이 자동 생성</td>
                         </tr>
                         <tr>
                             <td>스케치 메타데이터</td>
@@ -189,7 +189,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li>개인정보의 처리 정지, 정정·삭제 및 파기를 요구할 권리</li>
                     <li>개인정보의 처리로 인하여 발생한 피해를 신속하고 공정한 절차에 따라 구제받을 권리</li>
                 </ol>
-                <p>앱 내 설정에서 계정 삭제를 요청하면 관련 데이터가 전체 삭제되며, 위 권리 행사는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a>로도 요청하실 수 있습니다. 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
+                <p>위 권리 행사(열람·정정·삭제·처리정지 등)는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a>로 요청하실 수 있습니다. 데이터 삭제를 요청하시면 해당 사용자 식별자에 연결된 스케치·저장 이미지·메타데이터를 전체 삭제하며, 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
 
                 <h2>제12조 (개인정보의 안전성 확보조치)</h2>
                 <ul>
@@ -218,7 +218,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Firebase)</td>
                             <td>미국</td>
                             <td>인증·AI 변환·저장·메타데이터·분석</td>
-                            <td>사진, 스케치, 계정 식별자, 메타데이터</td>
+                            <td>사진, 스케치, 사용자 식별자, 메타데이터</td>
                         </tr>
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>

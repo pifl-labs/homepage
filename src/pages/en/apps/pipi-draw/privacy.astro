@@ -28,7 +28,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>AI sketch conversion</strong>: Converting a photo you take or pick from your device gallery into a line-art sketch</li>
                     <li><strong>App functionality</strong>: Coloring and drawing on converted sketches, on-device saving of work sessions, and usage management</li>
-                    <li><strong>Account identification</strong>: Distinguishing users via Google/Apple/anonymous sign-in and managing usage and points</li>
+                    <li><strong>User identification</strong>: Distinguishing users via an anonymous identifier created automatically on first launch (Firebase anonymous authentication) and managing usage and points — no sign-up or login is required</li>
                     <li><strong>Advertising</strong>: Ad serving and personalization via Google AdMob</li>
                     <li><strong>In-app purchases</strong>: Point pack purchases, premium subscription processing, and receipt validation</li>
                     <li><strong>Analytics and stability</strong>: Usage analytics and crash reporting via Firebase Analytics / Crashlytics (optional)</li>
@@ -51,9 +51,9 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Transmitted to Cloud Functions (server) for AI conversion, then temporarily stored in Cloud Storage</td>
                         </tr>
                         <tr>
-                            <td>Account Identifier</td>
-                            <td>Firebase Auth UID, sign-in method (Google/Apple/anonymous), email (as provided by the social provider when used)</td>
-                            <td>On sign-in via Firebase Authentication</td>
+                            <td>User Identifier</td>
+                            <td>Firebase anonymous auth UID (a random identifier generated automatically by the App — no name, email, or other identity data is collected)</td>
+                            <td>Generated automatically by Firebase Authentication on first launch</td>
                         </tr>
                         <tr>
                             <td>Sketch Metadata</td>
@@ -183,7 +183,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li>Right to request correction, deletion, suspension, or destruction</li>
                     <li>Right to seek redress for damages caused by processing</li>
                 </ol>
-                <p>Requesting account deletion from within the App's settings will delete your related data. You may also exercise these rights by contacting us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a>.</p>
+                <p>You may exercise these rights (access, correction, deletion, restriction) by contacting us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a>. Upon a deletion request, we will delete all sketches, stored images, and metadata linked to your user identifier without undue delay.</p>
 
                 <h2>12. Security Measures</h2>
                 <ul>
@@ -211,7 +211,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Firebase)</td>
                             <td>United States</td>
                             <td>Auth, AI conversion, storage, metadata, analytics</td>
-                            <td>Photos, sketches, account identifier, metadata</td>
+                            <td>Photos, sketches, user identifier, metadata</td>
                         </tr>
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>

@@ -28,7 +28,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>AI スケッチ変換</strong>: お客様が撮影またはデバイスのギャラリーから選択した写真を線画スケッチに変換</li>
                     <li><strong>アプリ機能の提供</strong>: 変換したスケッチの塗り絵・お絵描き、作業セッションのデバイス内保存、利用量管理</li>
-                    <li><strong>アカウント識別</strong>: Google/Apple/匿名ログインによるユーザー識別、利用量・ポイント管理</li>
+                    <li><strong>ユーザー識別</strong>: アプリ初回起動時に自動生成される匿名識別子(Firebase 匿名認証)によるユーザー識別、利用量・ポイント管理 — 会員登録・ログイン手続きはありません</li>
                     <li><strong>広告配信</strong>: Google AdMobによる広告表示および広告関連性の向上</li>
                     <li><strong>アプリ内課金</strong>: ポイントパックの購入およびプレミアムサブスクリプションの処理、領収書検証</li>
                     <li><strong>分析と安定性</strong>: Firebase Analytics・Crashlytics による利用分析およびエラー追跡(任意)</li>
@@ -52,9 +52,9 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>AI変換のため Cloud Functions(サーバー)へ送信後、Cloud Storage に一時保存</td>
                         </tr>
                         <tr>
-                            <td>アカウント識別子</td>
-                            <td>Firebase 認証 UID、ログイン方式(Google/Apple/匿名)、メールアドレス(ソーシャルログイン時に提供元から提供される分)</td>
-                            <td>Firebase Authentication によるログイン時</td>
+                            <td>ユーザー識別子</td>
+                            <td>Firebase 匿名認証 UID(アプリが自動生成するランダムな識別子 — 氏名・メールアドレス等の身元情報は収集しません)</td>
+                            <td>アプリ初回起動時に Firebase Authentication が自動生成</td>
                         </tr>
                         <tr>
                             <td>スケッチメタデータ</td>
@@ -184,7 +184,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li>個人情報の訂正、削除、処理停止、破棄を要求する権利</li>
                     <li>処理によって生じた損害に対する救済を求める権利</li>
                 </ol>
-                <p>アプリ内設定からアカウント削除をリクエストすると関連データが全削除されます。上記の権利行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a> までご連絡ください。</p>
+                <p>上記の権利行使(閲覧・訂正・削除・処理停止など)は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a> までご連絡ください。データ削除のご請求があった場合、当該ユーザー識別子に紐づくスケッチ・保存画像・メタデータを遅滞なく全て削除します。</p>
 
                 <h2>第12条 (安全管理措置)</h2>
                 <ul>
@@ -212,7 +212,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Firebase)</td>
                             <td>米国</td>
                             <td>認証・AI変換・保存・メタデータ・分析</td>
-                            <td>写真、スケッチ、アカウント識別子、メタデータ</td>
+                            <td>写真、スケッチ、ユーザー識別子、メタデータ</td>
                         </tr>
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>
