@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { appList, statusLabels } from '../../data/apps';
+import { appList, appName, statusLabels } from '../../data/apps';
 const lang = 'en' as const;
 ---
 <BaseLayout
   lang="en"
   title={"PiFl Labs — A crew of one parrot. Allegedly."}
-  description={"A one-human, one-parrot Flutter studio already at sea — four apps shipping on both stores. One codebase, two stores, zero krakens."}
+  description={"A one-human, one-parrot Flutter studio already at sea — seven apps shipping on both stores. One codebase, two stores, zero krakens."}
   canonical="https://pifl-labs.com/en/"
   keywords={"PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
@@ -36,7 +36,7 @@ const lang = 'en' as const;
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>4</b> apps shipped</span>
+          <span><b>7</b> apps shipped</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
           <span><b>100%</b> Flutter</span>
           <span><b>14+</b> pipi forms</span>
@@ -76,7 +76,7 @@ const lang = 'en' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>Already at sea</i> · charting what's next</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>Fleet at sea:</i> 4 apps</span>
+    <span><b>// 04</b> <i>Fleet at sea:</i> 7 apps</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> One human. <i>One parrot.</i> Many hats.</span>
     <span class="sep">✦</span>
@@ -86,7 +86,7 @@ const lang = 'en' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>Already at sea</i> · charting what's next</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>Fleet at sea:</i> 4 apps</span>
+    <span><b>// 04</b> <i>Fleet at sea:</i> 7 apps</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> One human. <i>One parrot.</i> Many hats.</span>
     <span class="sep">✦</span>
@@ -106,10 +106,10 @@ const lang = 'en' as const;
     <div class="app-card-grid">
       {appList.map((app) => (
         <a class="app-card" href={`/${lang}/apps/${app.slug}/`}>
-          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${app.name} icon`} width="64" height="64" loading="lazy" />
+          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${appName(app, lang)} icon`} width="64" height="64" loading="lazy" />
           <div class="app-card-body">
             <div class="app-card-head">
-              <span class="app-card-name">{app.name}</span>
+              <span class="app-card-name">{appName(app, lang)}</span>
               <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
             </div>
             <span class="app-card-cat">{app.category[lang]}</span>
@@ -166,7 +166,7 @@ const lang = 'en' as const;
       <div>
         <div class="currently-meta">● Currently</div>
         <div class="currently-text">
-          Heads down, sails up. <b>Four apps are out at sea on both stores.</b> Two more (Draw and Dialogos) are still in drydock. Trademark pending — and there's still one human, one parrot, a codebase, and a lot of coffee.
+          Heads down, sails up. <b>Seven apps are out at sea on both stores.</b> One more (Dialogos) is still in drydock. Trademark pending — and there's still one human, one parrot, a codebase, and a lot of coffee.
         </div>
       </div>
       <div class="currently-badge">Live log</div>
@@ -244,7 +244,7 @@ const lang = 'en' as const;
       <div class="kicker">03 / Dispatches</div>
       <h2 class="section-title">From the log. <span class="italic">Quiet but moving.</span></h2>
       <p class="section-sub">
-        Four apps are already live. We're <em>not done yet.</em> Here's what's on deck this season.
+        Seven apps are already live. We're <em>not done yet.</em> Here's what's on deck this season.
       </p>
     </div>
 
@@ -256,7 +256,7 @@ const lang = 'en' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">Already</span> shipped</div>
-          <div class="slot-desc">Focus, Words, D-Day and Log — four apps live on both stores. Short on features, long on care.</div>
+          <div class="slot-desc">Focus, Words, D-Day, Log, Hello, Draw and Word Voyage — seven apps live on both stores. Short on features, long on care.</div>
         </div>
       </article>
 
@@ -278,7 +278,7 @@ const lang = 'en' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">Next</span> to sail</div>
-          <div class="slot-desc">Draw and Dialogos are fitting out in drydock. When they're ready, quietly out to sea.</div>
+          <div class="slot-desc">Dialogos is fitting out in drydock. When it's ready, quietly out to sea.</div>
         </div>
       </article>
     </div>

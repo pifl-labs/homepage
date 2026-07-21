@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { appList, statusLabels } from '../../data/apps';
+import { appList, appName, statusLabels } from '../../data/apps';
 const lang = 'ja' as const;
 ---
 <BaseLayout
   lang="ja"
   title={"PiFl Labs — 一羽のオウムだけのクルー。とのうわさ。"}
-  description={"人ひとり、オウム一羽のFlutterスタジオ。すでに航海中、4つのアプリが両ストアで公開中 — コードベースはひとつ、ストアはふたつ、モンスターはゼロ。"}
+  description={"人ひとり、オウム一羽のFlutterスタジオ。すでに航海中、7つのアプリが両ストアで公開中 — コードベースはひとつ、ストアはふたつ、モンスターはゼロ。"}
   canonical="https://pifl-labs.com/ja/"
   keywords={"PiFl Labs, Flutter, アプリ開発, クロスプラットフォーム, iOS, Android, ソフトウェア開発"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
@@ -36,7 +36,7 @@ const lang = 'ja' as const;
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>4</b> アプリ就航</span>
+          <span><b>7</b> アプリ就航</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
           <span><b>100%</b> Flutter</span>
           <span><b>14+</b> ピピの姿</span>
@@ -75,7 +75,7 @@ const lang = 'ja' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>すでに航海中</i> · 次の海図を作成中</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ4つ</span>
+    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ7つ</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 人ひとり、 <i>オウム一羽、</i> 帽子はたくさん。</span>
     <span class="sep">✦</span>
@@ -85,7 +85,7 @@ const lang = 'ja' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>すでに航海中</i> · 次の海図を作成中</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ4つ</span>
+    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ7つ</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 人ひとり、 <i>オウム一羽、</i> 帽子はたくさん。</span>
     <span class="sep">✦</span>
@@ -105,10 +105,10 @@ const lang = 'ja' as const;
     <div class="app-card-grid">
       {appList.map((app) => (
         <a class="app-card" href={`/${lang}/apps/${app.slug}/`}>
-          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${app.name} アイコン`} width="64" height="64" loading="lazy" />
+          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${appName(app, lang)} アイコン`} width="64" height="64" loading="lazy" />
           <div class="app-card-body">
             <div class="app-card-head">
-              <span class="app-card-name">{app.name}</span>
+              <span class="app-card-name">{appName(app, lang)}</span>
               <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
             </div>
             <span class="app-card-cat">{app.category[lang]}</span>
@@ -165,7 +165,7 @@ const lang = 'ja' as const;
       <div>
         <div class="currently-meta">● いま</div>
         <div class="currently-text">
-          頭を下げて、帆は上げたまま。 <b>いま4つのアプリが両ストアで航海中です。</b> 次の二隻（Draw・Dialogos）はドライドックで仕上げ中。商標は出願中 — あるのは人ひとり、オウム一羽、コードベース、そしてたっぷりのコーヒー。
+          頭を下げて、帆は上げたまま。 <b>いま7つのアプリが両ストアで航海中です。</b> 次の一隻（Dialogos）はドライドックで仕上げ中。商標は出願中 — あるのは人ひとり、オウム一羽、コードベース、そしてたっぷりのコーヒー。
         </div>
       </div>
       <div class="currently-badge">進行中</div>
@@ -243,7 +243,7 @@ const lang = 'ja' as const;
       <div class="kicker">03 / 航海記録</div>
       <h2 class="section-title">日誌より。 <span class="italic">静かに、でも進んでいます。</span></h2>
       <p class="section-sub">
-        すでに4つが公開中です。 <em>次も準備中。</em> 今シーズン、甲板に上がっているものたち。
+        すでに7つが公開中です。 <em>次も準備中。</em> 今シーズン、甲板に上がっているものたち。
       </p>
     </div>
 
@@ -255,7 +255,7 @@ const lang = 'ja' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">就航</span> 済み</div>
-          <div class="slot-desc">Focus・Words・D-Day・Log — 4隻が両ストアで航海中。機能は少なく、気配りは多く。</div>
+          <div class="slot-desc">Focus・Words・D-Day・Log・Hello・Draw・ことばの航海 — 7隻が両ストアで航海中。機能は少なく、気配りは多く。</div>
         </div>
       </article>
 
@@ -277,7 +277,7 @@ const lang = 'ja' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">次の</span> 出航</div>
-          <div class="slot-desc">DrawとDialogosがドライドックで仕上げ中。準備ができたら、静かに海へ。</div>
+          <div class="slot-desc">Dialogosがドライドックで仕上げ中。準備ができたら、静かに海へ。</div>
         </div>
       </article>
     </div>

@@ -17,7 +17,9 @@ src/
     en/  ko/  ja/          # 로케일별 index·terms·privacy·apps/*/privacy
     terms.astro privacy.astro apps/*/privacy.astro  # 무prefix(영어) — /en/ canonical
   layouts/BaseLayout.astro # head·meta·hreflang·nav·footer·scripts 공통 골격
-  components/              # Nav.astro / Footer.astro
+  components/              # Nav · Footer · AppLanding · ImportLanding · DialogosSource*
+  data/apps.ts             # ★앱 랜딩 카피 SSOT (status/stores/nameByLang/schemaCategory)
+  pages/go/tiktok.astro    # link-in-bio 허브 (noindex, apps.ts 파생)
   i18n/ui.ts               # nav·footer chrome 다국어 사전
 functions/_middleware.ts   # CF Pages Function — Accept-Language i18n 302
 public/                    # 패스스루 자산 (publicDir) — CSS·JS·폰트·이미지·_headers·_redirects·robots
