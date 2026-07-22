@@ -20,5 +20,14 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // noindex 페이지는 사이트맵에 넣지 않는다 — GSC "제출된 URL이 noindex로 표시됨" 오류 방지.
+      // 제외 대상 (dist 산출물에서 robots noindex 를 실제로 내보내는 페이지 전부):
+      //   · /          — 언어 감지 리다이렉트 랜딩(noindex,follow). 색인 대상은 /ko/ /en/ /ja/
+      //   · /go/*      — link-in-bio 허브(noindex,nofollow). 향후 추가되는 허브도 함께 제외
+      // 새 noindex 페이지를 만들면 여기에도 추가할 것.
+      filter: (page) => page !== 'https://pifl-labs.com/' && !page.includes('/go/'),
+    }),
+  ],
 });
