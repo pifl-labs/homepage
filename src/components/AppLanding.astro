@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { apps, storeLabels } from '../data/apps';
+import { appName, apps, storeLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
 
 interface Props { lang: Lang; slug: string }
@@ -9,6 +9,7 @@ const { lang, slug } = Astro.props;
 const app = apps[slug];
 if (!app) throw new Error(`Unknown app slug: ${slug}`);
 const c = app.content[lang];
+const name = appName(app, lang);
 const sl = storeLabels[lang];
 const base = localeBase(lang);
 
@@ -19,7 +20,7 @@ const iconSrc = `/assets/apps/${app.slug}/icon.webp`;
 const heroSrc = `${shotBase}/${app.heroShot}.webp`; // OG 이미지용
 
 // SEO
-const title = `${app.name} — ${c.tagline.replace(/\n/g, ' ')} | PiFl Labs`;
+const title = `${name} — ${c.tagline.replace(/\n/g, ' ')} | PiFl Labs`;
 const description = c.metaDesc ?? (c.lede.length > 155 ? c.lede.slice(0, 152) + '…' : c.lede);
 const canonical = `https://pifl-labs.com/${lang}${path}`;
 const alternates = [
@@ -30,6 +31,7 @@ const alternates = [
 ];
 
 const backLabel = lang === 'ko' ? '모든 앱 보기' : lang === 'ja' ? 'すべてのアプリ' : 'All apps';
+const iconAlt = lang === 'ko' ? `${name} 아이콘` : lang === 'ja' ? `${name} アイコン` : `${name} icon`;
 const homeHref = `/${lang}/#apps`;
 
 // Dialogos 전용 — 출처 라이브러리(허브)로 잇는 다리 섹션.
@@ -57,8 +59,8 @@ const sourceLib = app.slug === 'dialogos'
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: app.name,
-  applicationCategory: 'MobileApplication',
+  name,
+  applicationCategory: app.schemaCategory ?? 'MobileApplication',
   description: c.lede,
   ...(app.status === 'live'
     ? {
@@ -87,9 +89,9 @@ const jsonLd = {
       <div class="container">
         <div class="app-hero-inner">
           <div class="app-id">
-            <img class="app-id-icon" src={iconSrc} alt={`${app.name} 아이콘`} width="72" height="72" fetchpriority="high" />
+            <img class="app-id-icon" src={iconSrc} alt={iconAlt} width="72" height="72" fetchpriority="high" />
             <div class="app-id-meta">
-              <span class="app-id-name">{app.name}</span>
+              <span class="app-id-name">{name}</span>
               <span class="app-id-cat">{app.category[lang]}</span>
             </div>
           </div>
@@ -130,13 +132,13 @@ const jsonLd = {
     <section class="app-section">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">01 / {app.name}</div>
+          <div class="kicker">01 / {name}</div>
           <h2 class="section-title">{c.shotsTitle}</h2>
         </div>
         <div class="app-shots-scroll">
           {c.shots.map((s) => (
             <figure class="app-shot">
-              <img class="app-shot-img" src={`${shotBase}/${s.file}.webp`} alt={`${app.name} — ${s.label}`} width="250" height="541" loading="lazy" />
+              <img class="app-shot-img" src={`${shotBase}/${s.file}.webp`} alt={`${name} — ${s.label}`} width="250" height="541" loading="lazy" />
               <figcaption>
                 <div class="app-shot-label">{s.label}</div>
                 <div class="app-shot-desc">{s.desc}</div>

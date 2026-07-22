@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { appList, statusLabels } from '../../data/apps';
+import { appList, appName, statusLabels } from '../../data/apps';
 const lang = 'ko' as const;
 ---
 <BaseLayout
   lang="ko"
   title={"PiFl Labs — 앵무새 한 마리짜리 크루. 그런 소문이 있다."}
-  description={"사람 하나와 앵무새 하나가 띄운 Flutter 스튜디오. 2026년 출항, 앱 넷이 양 스토어에서 항해 중 — 코드베이스 하나, 스토어 둘, 괴물은 없습니다."}
+  description={"사람 하나와 앵무새 하나가 띄운 Flutter 스튜디오. 2026년 출항, 앱 일곱이 양 스토어에서 항해 중 — 코드베이스 하나, 스토어 둘, 괴물은 없습니다."}
   canonical="https://pifl-labs.com/ko/"
   keywords={"PiFl Labs, Flutter, 앱개발, 크로스플랫폼, iOS, Android, 소프트웨어 개발"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
@@ -36,7 +36,7 @@ const lang = 'ko' as const;
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>4</b> 앱 출항</span>
+          <span><b>7</b> 앱 출항</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
           <span><b>100%</b> Flutter</span>
           <span><b>14+</b> 피피 모습</span>
@@ -75,7 +75,7 @@ const lang = 'ko' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>이미 바다 위</i> · 다음 해도 그리는 중</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>출항한 함대:</i> 앱 넷</span>
+    <span><b>// 04</b> <i>출항한 함대:</i> 앱 일곱</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 사람 하나, <i>앵무새 하나,</i> 모자는 한 무더기.</span>
     <span class="sep">✦</span>
@@ -85,7 +85,7 @@ const lang = 'ko' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>이미 바다 위</i> · 다음 해도 그리는 중</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>출항한 함대:</i> 앱 넷</span>
+    <span><b>// 04</b> <i>출항한 함대:</i> 앱 일곱</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 사람 하나, <i>앵무새 하나,</i> 모자는 한 무더기.</span>
     <span class="sep">✦</span>
@@ -105,10 +105,10 @@ const lang = 'ko' as const;
     <div class="app-card-grid">
       {appList.map((app) => (
         <a class="app-card" href={`/${lang}/apps/${app.slug}/`}>
-          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${app.name} 아이콘`} width="64" height="64" loading="lazy" />
+          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${appName(app, lang)} 아이콘`} width="64" height="64" loading="lazy" />
           <div class="app-card-body">
             <div class="app-card-head">
-              <span class="app-card-name">{app.name}</span>
+              <span class="app-card-name">{appName(app, lang)}</span>
               <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
             </div>
             <span class="app-card-cat">{app.category[lang]}</span>
@@ -165,7 +165,7 @@ const lang = 'ko' as const;
       <div>
         <div class="currently-meta">● 지금</div>
         <div class="currently-text">
-          조용히, 그러나 쉬지 않고. <b>지금 앱 네 개가 양 스토어에서 항해 중입니다.</b> 다음 두 척(Draw·Dialogos)은 드라이독에서 단장 중. 상표 출원 중 — 있는 건 사람 하나, 앵무새 하나, 코드베이스, 그리고 커피입니다.
+          조용히, 그러나 쉬지 않고. <b>지금 앱 일곱 개가 양 스토어에서 항해 중입니다.</b> 다음 한 척(Dialogos)은 드라이독에서 단장 중. 상표 출원 중 — 있는 건 사람 하나, 앵무새 하나, 코드베이스, 그리고 커피입니다.
         </div>
       </div>
       <div class="currently-badge">진행 중</div>
@@ -243,7 +243,7 @@ const lang = 'ko' as const;
       <div class="kicker">03 / 항해 기록</div>
       <h2 class="section-title">조용하지만 <span class="italic">계속 움직이는 중.</span></h2>
       <p class="section-sub">
-        이미 네 척이 바다 위에 있습니다. <em>다음 항해도 준비 중.</em> 이번 분기 갑판 위에 올라온 것들입니다.
+        이미 일곱 척이 바다 위에 있습니다. <em>다음 항해도 준비 중.</em> 이번 분기 갑판 위에 올라온 것들입니다.
       </p>
     </div>
 
@@ -255,7 +255,7 @@ const lang = 'ko' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">출항</span> 완료</div>
-          <div class="slot-desc">Focus · Words · D-Day · Log — 네 척이 양 스토어에서 항해 중. 기능은 적게, 정성은 많이.</div>
+          <div class="slot-desc">Focus · Words · D-Day · Log · Hello · Draw · 낱말항해 — 일곱 척이 양 스토어에서 항해 중. 기능은 적게, 정성은 많이.</div>
         </div>
       </article>
 
@@ -277,7 +277,7 @@ const lang = 'ko' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">다음</span> 출항</div>
-          <div class="slot-desc">Draw와 Dialogos가 드라이독에서 단장 중. 준비되면, 조용히 바다로.</div>
+          <div class="slot-desc">Dialogos가 드라이독에서 단장 중. 준비되면, 조용히 바다로.</div>
         </div>
       </article>
     </div>

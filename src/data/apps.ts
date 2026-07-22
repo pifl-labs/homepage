@@ -28,12 +28,19 @@ export interface StoreLinks { ios?: string; android?: string }
 export interface AppMeta {
   slug: string;
   name: string;
+  /** 스토어 등재명이 언어별로 다른 앱만 지정 (미지정 언어는 name 사용) */
+  nameByLang?: Partial<Record<Lang, string>>;
   status: 'live' | 'soon';
   category: Record<Lang, string>;
   stores: StoreLinks;
+  /** schema.org applicationCategory (미지정 시 MobileApplication). 게임은 GameApplication. */
+  schemaCategory?: string;
   heroShot: string;          // hero 대표 스크린샷 file 명
   content: Record<Lang, AppContent>;
 }
+
+/** 언어별 표시명 — 스토어 등재명과 일치시킨다 (예: ko '피피 낱말항해'). */
+export const appName = (app: AppMeta, lang: Lang): string => app.nameByLang?.[lang] ?? app.name;
 
 // 앱 상태 라벨 (홈 카드 배지용) — 3개 홈 파일이 공유하는 SSOT
 export const statusLabels: Record<Lang, { live: string; soon: string }> = {
@@ -226,8 +233,8 @@ const words: AppMeta = {
       lede: 'JLPT N5~N1과 TOPIK 1~6급 어휘를 시험 출제 유형 그대로. SM-2 간격 반복으로 외운 단어는 오래 남고, 인터넷 없이 어디서나. 한국인은 일본어를, 일본인은 한국어를 — 한 앱에서.',
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
       featuresTitle: '왜 PiPi Words 인가',
-      ctaTitle: '단어 항해를 시작하세요',
-      ctaSub: 'iOS · Android에서 무료로.',
+      ctaTitle: '오늘 단어 학습을 시작하세요',
+      ctaSub: 'iOS · Android에서 무료로 시작.',
       shots: [
         { file: 'home',         label: '오늘의 학습 한눈에', desc: '오늘 외울 단어와 연속 학습일을 홈에서 바로.' },
         { file: 'study',        label: '레벨별 덱 선택',     desc: 'JLPT·TOPIK 레벨을 골라 단어 항해를 시작.' },
@@ -247,8 +254,8 @@ const words: AppMeta = {
       lede: 'TOPIK 1~6級とJLPT N5~N1の語彙を、出題形式そのままで。SM-2間隔反復で覚えた単語は長く記憶に残り、ネットなしでどこでも。日本人は韓国語を、韓国人は日本語を — 一つのアプリで。',
       shotsTitle: '航海のように積み上がる語彙学習',
       featuresTitle: 'PiPi Words を選ぶ理由',
-      ctaTitle: '単語の航海を始めよう',
-      ctaSub: 'iOS · Android で無料。',
+      ctaTitle: '今日から単語学習を始めよう',
+      ctaSub: 'iOS · Android で無料ではじめる。',
       shots: [
         { file: 'home',         label: '今日の学習をひと目で', desc: '今日覚える単語と連続学習日をホームですぐに。' },
         { file: 'study',        label: 'レベル別デッキ選択',   desc: 'JLPT·TOPIKのレベルを選んで単語の航海へ。' },
@@ -269,8 +276,8 @@ const words: AppMeta = {
       metaDesc: 'Learn JLPT N5–N1 and TOPIK 1–6 vocabulary the way exams test it. SM-2 spaced repetition, two-way Korean–Japanese, works fully offline.',
       shotsTitle: 'Vocabulary that builds like a voyage',
       featuresTitle: 'Why PiPi Words',
-      ctaTitle: 'Set sail on your word voyage',
-      ctaSub: 'Free on iOS & Android.',
+      ctaTitle: 'Start studying today',
+      ctaSub: 'Free to start on iOS & Android.',
       shots: [
         { file: 'home',         label: "Today's study at a glance", desc: "See today's words and your streak right on the home." },
         { file: 'study',        label: 'Pick a level deck',         desc: 'Choose a JLPT or TOPIK level and start the voyage.' },
@@ -305,7 +312,7 @@ const dday: AppMeta = {
       shotsTitle: '남은 날이 항해가 되는 순간',
       featuresTitle: '왜 PiPi D-Day 인가',
       ctaTitle: '지금 항해를 시작하세요',
-      ctaSub: 'iOS · Android에서 무료로.',
+      ctaSub: 'iOS · Android에서 무료로 시작.',
       shots: [
         { file: 'home',        label: '모든 D-Day를 한눈에',  desc: '수능·기념일·전역까지, 소중한 날을 홈에서 바로 확인.' },
         { file: 'detail',      label: 'PiPi가 6단계로 반응',   desc: '남은 날에 따라 표정이 바뀌는 항해형 카운트다운 상세.' },
@@ -326,7 +333,7 @@ const dday: AppMeta = {
       shotsTitle: '残り日数が航海になる瞬間',
       featuresTitle: 'PiPi D-Day を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
-      ctaSub: 'iOS · Android で無料。',
+      ctaSub: 'iOS · Android で無料ではじめる。',
       shots: [
         { file: 'home',        label: 'すべてのDデイをひと目で', desc: '受験・記念日・誕生日まで、大切な日をホームですぐ。' },
         { file: 'detail',      label: 'PiPiが6段階でリアクション', desc: '残り日数で表情が変わる、航海型カウントダウンの詳細。' },
@@ -348,7 +355,7 @@ const dday: AppMeta = {
       shotsTitle: 'The moment days become a voyage',
       featuresTitle: 'Why PiPi D-Day',
       ctaTitle: 'Start your voyage now',
-      ctaSub: 'Free on iOS & Android.',
+      ctaSub: 'Free to start on iOS & Android.',
       shots: [
         { file: 'home',        label: 'Every D-Day at a glance',  desc: 'Exams, anniversaries, birthdays — see your big days on the home.' },
         { file: 'detail',      label: 'PiPi reacts in 6 stages',  desc: 'A voyage-style countdown that changes as your day nears.' },
@@ -383,7 +390,7 @@ const log: AppMeta = {
       shotsTitle: '마음을 적는 항해일지',
       featuresTitle: '왜 PiPi Log 인가',
       ctaTitle: '지금 항해를 시작하세요',
-      ctaSub: 'iOS · Android에서 무료로.',
+      ctaSub: 'iOS · Android에서 무료로 시작.',
       shots: [
         { file: 'home',        label: '오늘의 바다 날씨로 기록',  desc: '기분을 9단계 바다 날씨로 고르고 PiPi와 하루를 적어요.' },
         { file: 'calendar',    label: '한 달을 바다 날씨 달력으로', desc: '날짜마다 그날의 날씨가 찍혀 한 달이 한눈에.' },
@@ -404,7 +411,7 @@ const log: AppMeta = {
       shotsTitle: '心を綴る航海日誌',
       featuresTitle: 'PiPi Log を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
-      ctaSub: 'iOS · Android で無料。',
+      ctaSub: 'iOS · Android で無料ではじめる。',
       shots: [
         { file: 'home',        label: '今日の海の天気で記録',     desc: '気分を9段階の海の天気で選び、PiPiと一日を綴る。' },
         { file: 'calendar',    label: 'ひと月を海の天気カレンダーで', desc: '日ごとの天気が並び、ひと月がひと目で。' },
@@ -426,7 +433,7 @@ const log: AppMeta = {
       shotsTitle: 'A logbook for your heart',
       featuresTitle: 'Why PiPi Log',
       ctaTitle: 'Start your voyage now',
-      ctaSub: 'Free on iOS & Android.',
+      ctaSub: 'Free to start on iOS & Android.',
       shots: [
         { file: 'home',        label: "Log today's sea weather",   desc: 'Pick your mood from 9 sea-weathers and write the day with PiPi.' },
         { file: 'calendar',    label: 'A month as a weather calendar', desc: "Each day's weather lands on the calendar at a glance." },
@@ -521,13 +528,16 @@ const dialogos: AppMeta = {
 };
 
 // PiPi Draw — 사진을 AI 라인아트로 바꿔 색칠하는 드로잉 앱.
-// 콘텐츠 SSOT = pipi_draw/ios/fastlane/metadata + .arb. 미출시 → status 'soon'.
+// 콘텐츠 SSOT = pipi_draw/ios/fastlane/metadata + .arb. 2026-07-22 양 스토어 출시.
 const draw: AppMeta = {
   slug: 'pipi-draw',
   name: 'PiPi Draw',
-  status: 'soon',
+  status: 'live',
   category: { ko: '크리에이티브 · 색칠', ja: 'クリエイティブ · ぬりえ', en: 'Creative · Coloring' },
-  stores: {},
+  stores: {
+    ios: 'https://apps.apple.com/app/id6779071131',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
+  },
   heroShot: 'ai_result',
   content: {
     ko: {
@@ -536,8 +546,8 @@ const draw: AppMeta = {
       metaDesc: '사진을 AI가 색칠하기 좋은 라인아트로 변환해 주는 드로잉 앱. 10종 프로 브러시로 색칠하고, 드로잉 중 광고 없이 집중. iOS · Android.',
       shotsTitle: '사진 한 장에서 작품까지',
       featuresTitle: '왜 PiPi Draw 인가',
-      ctaTitle: '곧 만나요',
-      ctaSub: 'iOS · Android 출시 준비 중.',
+      ctaTitle: '지금 색칠을 시작하세요',
+      ctaSub: 'iOS · Android에서 무료로 시작.',
       shots: [
         { file: 'ai_result', label: '사진이 스케치가 된다',  desc: 'AI가 사진을 색칠하기 좋은 라인아트로 변환합니다.' },
         { file: 'ai_styles', label: '원하는 스타일로',       desc: '기본 · 잉크 · 카툰 · 사실적 + 라인 두께·디테일·대비 조절.' },
@@ -558,8 +568,8 @@ const draw: AppMeta = {
       metaDesc: '写真をAIが塗りやすいラインアートに変換するお絵かきアプリ。10種のプロブラシで塗り、お絵かき中は広告なし。iOS · Android。',
       shotsTitle: '写真一枚から作品まで',
       featuresTitle: 'PiPi Draw を選ぶ理由',
-      ctaTitle: 'もうすぐ会えます',
-      ctaSub: 'iOS · Android リリース準備中。',
+      ctaTitle: '今すぐ塗りはじめよう',
+      ctaSub: 'iOS · Android で無料ではじめる。',
       shots: [
         { file: 'ai_result', label: '写真がスケッチになる',  desc: 'AIが写真を塗りやすいラインアートに変換します。' },
         { file: 'ai_styles', label: '好きなスタイルで',       desc: '基本 · インク · カトゥーン · リアル + 線の太さ·ディテール·コントラスト調整。' },
@@ -580,8 +590,8 @@ const draw: AppMeta = {
       metaDesc: 'A drawing app that turns your photos into colorable line art with AI. Color with 10 pro brushes, with no ads while you draw. iOS & Android.',
       shotsTitle: 'From one photo to artwork',
       featuresTitle: 'Why PiPi Draw',
-      ctaTitle: 'Coming soon',
-      ctaSub: 'Launching on iOS & Android.',
+      ctaTitle: 'Start coloring today',
+      ctaSub: 'Free to start on iOS & Android.',
       shots: [
         { file: 'ai_result', label: 'Your photo becomes a sketch', desc: 'AI converts your photo into colorable line art.' },
         { file: 'ai_styles', label: 'In the style you want',       desc: 'Default · Ink · Cartoon · Realistic, with line, detail and contrast controls.' },
@@ -599,12 +609,19 @@ const draw: AppMeta = {
   },
 };
 
+// PiPi Word Voyage(피피 낱말항해) — 콘텐츠 SSOT = games/pipi_word_voyage/docs/release/_app-facts.md.
+// 2026-07-22 양 스토어 출시. ko 단독 소프트런치(ja/en UI 뼈대) — 랜딩 3언어는 유지.
 const wordVoyage: AppMeta = {
   slug: 'pipi-word-voyage',
   name: 'PiPi Word Voyage',
-  status: 'soon',
+  nameByLang: { ko: '피피 낱말항해', ja: 'ピピ ことばの航海' }, // 실제 스토어 등재명
+  status: 'live',
   category: { ko: '게임 · 낱말 퍼즐', ja: 'ゲーム · 単語パズル', en: 'Games · Word Puzzle' },
-  stores: {},
+  schemaCategory: 'GameApplication',
+  stores: {
+    ios: 'https://apps.apple.com/app/id6788949612',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage',
+  },
   heroShot: 'game',
   content: {
     ko: {
@@ -613,8 +630,8 @@ const wordVoyage: AppMeta = {
       metaDesc: '글자를 드래그로 이어 낱말을 완성하는 오프라인 한글 워드 퍼즐. 12개 해역 120개 섬, 오늘의 퍼즐과 항해일지까지. iOS · Android.',
       shotsTitle: '낱말로 그리는 바다 지도',
       featuresTitle: '왜 피피 낱말항해인가',
-      ctaTitle: '곧 만나요',
-      ctaSub: 'iOS · Android 출시 준비 중.',
+      ctaTitle: '낱말 항해를 시작하세요',
+      ctaSub: 'iOS · Android에서 무료로.',
       shots: [
         { file: 'home',    label: '항해 준비',             desc: '항해사 PiPi와 함께 낱말 항해를 시작합니다.' },
         { file: 'game',    label: '드래그 한 번에 낱말 완성', desc: '원형 글자를 이어 목표 낱말을 채웁니다.' },
@@ -635,8 +652,8 @@ const wordVoyage: AppMeta = {
       metaDesc: '文字をドラッグでつないで単語を完成するオフライン韓国語単語パズル。12海域120の島、今日のパズルと航海日誌も。iOS · Android。',
       shotsTitle: '単語で描く海図',
       featuresTitle: 'ピピ ことばの航海を選ぶ理由',
-      ctaTitle: 'もうすぐ会えます',
-      ctaSub: 'iOS · Android リリース準備中。',
+      ctaTitle: '言葉の航海を始めよう',
+      ctaSub: 'iOS · Android で無料。',
       shots: [
         { file: 'home',    label: '出航の準備',           desc: '航海士ピピと一緒に言葉の航海を始めます。' },
         { file: 'game',    label: 'ドラッグ一回で単語完成', desc: '円形の文字をつないで目標の単語を埋めます。' },
@@ -657,8 +674,8 @@ const wordVoyage: AppMeta = {
       metaDesc: 'Offline Korean word puzzle: link letters to form words, clear 120 islands across 12 seas, keep a daily streak and a word logbook. iOS & Android.',
       shotsTitle: 'A sea chart drawn with words',
       featuresTitle: 'Why PiPi Word Voyage',
-      ctaTitle: 'Coming soon',
-      ctaSub: 'Launching on iOS & Android.',
+      ctaTitle: 'Start your word voyage',
+      ctaSub: 'Free on iOS & Android.',
       shots: [
         { file: 'home',    label: 'Ready to sail',        desc: 'Begin your word voyage with navigator PiPi.' },
         { file: 'game',    label: 'One drag, one word',   desc: 'Link the ring of letters to fill the target words.' },
@@ -678,3 +695,5 @@ const wordVoyage: AppMeta = {
 
 export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
 export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos];
+/** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
+export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;

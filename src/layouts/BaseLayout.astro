@@ -1,7 +1,11 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { liveAppCount } from '../data/apps';
 import type { Lang } from '../i18n/ui';
+
+// 기본 OG 카드(1200×630). 앱 랜딩은 세로 스크린샷을 넘기므로 크기 메타를 붙이지 않는다.
+const DEFAULT_OG = 'https://pifl-labs.com/pifl-ship-og.jpg';
 
 interface Alternate { hreflang: string; href: string }
 interface Props {
@@ -18,11 +22,17 @@ interface Props {
 const {
   lang, title, description, canonical, alternates,
   keywords = 'PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development',
-  ogImage = 'https://pifl-labs.com/pifl-ship-og.jpg',
+  ogImage = DEFAULT_OG,
   extraCss = [],
 } = Astro.props;
 
 const ogLocale = lang === 'ko' ? 'ko_KR' : lang === 'ja' ? 'ja_JP' : 'en_US';
+// Organization 설명 — 언어별 + 라이브 앱 수는 apps.ts 에서 파생(수동 숫자 금지).
+const orgDescription = lang === 'ko'
+  ? `사람 하나와 앵무새 하나의 Flutter 스튜디오. 앱 ${liveAppCount}개가 iOS · Android에서 항해 중입니다.`
+  : lang === 'ja'
+    ? `人ひとり、オウム一羽のFlutterスタジオ。${liveAppCount}つのアプリが iOS · Android で公開中です。`
+    : `A one-human, one-parrot Flutter studio already at sea, with ${liveAppCount} apps shipping on iOS and Android.`;
 const fontCss = lang === 'ja' ? '/fonts-pretendard-jp.css' : '/fonts-pretendard-kren.css';
 const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/fonts/PretendardVariable.woff2';
 ---
@@ -47,8 +57,12 @@ const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/font
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={ogImage} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+{ogImage === DEFAULT_OG && (
+  <>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+  </>
+)}
 <meta property="og:site_name" content="PiFl Labs" />
 <meta property="og:locale" content={ogLocale} />
 
@@ -81,7 +95,7 @@ const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/font
   name: 'PiFl Labs Co., Ltd.',
   url: 'https://pifl-labs.com',
   logo: 'https://pifl-labs.com/emblem.png',
-  description: 'A one-human, one-parrot Flutter studio already at sea, with four apps shipping on iOS and Android.',
+  description: orgDescription,
   email: 'hello@pifl-labs.com',
   foundingDate: '2026',
   knowsLanguage: ['ko', 'en', 'ja'],
