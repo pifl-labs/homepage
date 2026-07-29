@@ -14,7 +14,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Word Voyage Privacy Policy</span></h1>
-            <p class="legal-date">Effective Date: July 13, 2026</p>
+            <p class="legal-date">Effective Date: July 30, 2026 (revised for ad activation)</p>
         </div>
     </section>
 
@@ -25,7 +25,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your privacy. This Privacy Policy explains how information is handled when you use the mobile application <strong>PiPi Word Voyage</strong> ("App"). For matters not covered here, our <a href="/en/privacy">general Privacy Policy</a> applies.</p>
 
                 <h2>Summary</h2>
-                <p><strong>PiPi Word Voyage has no accounts or login and collects no personal information that identifies you.</strong> Your game progress (islands charted, coins, streaks, word logbook, preferences) is stored only on your device. The App collects <strong>anonymized usage statistics</strong> (such as which levels are played) through Google Firebase Analytics to help us improve the game; these statistics are not linked to your identity.</p>
+                <p><strong>PiPi Word Voyage has no accounts or login and collects no personal information that identifies you.</strong> Your game progress (islands charted, coins, streaks, word logbook, preferences) is stored only on your device. The App collects <strong>anonymized usage statistics</strong> (such as which levels are played) through Google Firebase Analytics to help us improve the game; these statistics are not linked to your identity. To keep the App free, we show <strong>Google AdMob ads</strong>, and an <strong>advertising identifier (IDFA / Advertising ID)</strong> may be used to deliver them. On iOS we ask for tracking permission (ATT); <strong>declining does not limit any feature of the App</strong>.</p>
 
                 <h2>1. Information We Collect</h2>
                 <p>There is no account registration and we never collect your name, email address, contacts, location, or photos. The data the App handles is:</p>
@@ -49,13 +49,18 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                             <td>Collected in anonymized form to understand how the game is played and improve it; <strong>not linked to your identity</strong> and not used for advertising</td>
                         </tr>
                         <tr>
+                            <td>Advertising (Google AdMob)</td>
+                            <td>Advertising identifier (iOS IDFA / Android Advertising ID), approximate device and network information, ad impression and click events</td>
+                            <td>Used to deliver ads and measure their performance. On iOS the identifier is used <strong>only if you allow tracking</strong> (non-personalized ads otherwise); on Android you can reset or delete the Advertising ID in system settings</td>
+                        </tr>
+                        <tr>
                             <td>Email inquiries (optional)</td>
                             <td>Email address, message content</td>
                             <td>Only if you contact us by email yourself</td>
                         </tr>
                     </tbody>
                 </table>
-                <p>Note: an advertising SDK is present in the code but is <strong>disabled</strong> in this version, so no ads are shown and no advertising identifiers are collected or used for tracking. If we enable ads in the future, we will update this policy and disclose it within the app (including the iOS App Tracking Transparency prompt).</p>
+                <p>Note: <strong>ads are enabled from version 1.1.0</strong> (as of July 30, 2026). The App shows banner and interstitial ads, plus rewarded ads that play <strong>only when you choose to watch one</strong> (to reveal a hint, up to 5 per day). Rewarded ads are never forced and can be replaced with coins. You can access all of the game's content without watching any ads.</p>
 
                 <h2>2. Data Retention</h2>
                 <ul>
@@ -65,7 +70,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>3. Sharing and Processors</h2>
-                <p>We do not sell or share your data with third parties for their own purposes. Anonymized usage statistics are processed on our behalf by <strong>Google LLC (Firebase Analytics)</strong>; see <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase Privacy and Security</a>. Information collected by the app stores (Apple App Store, Google Play) during distribution is governed by their respective privacy policies.</p>
+                <p>We do not sell or share your data with third parties for their own purposes. Anonymized usage statistics are processed on our behalf by <strong>Google LLC (Firebase Analytics)</strong>, and ad delivery is handled by <strong>Google LLC (AdMob)</strong>; see <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase Privacy and Security</a> and the <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">Google partner sites policy</a>. Information collected by the app stores (Apple App Store, Google Play) during distribution is governed by their respective privacy policies.</p>
 
                 <h2>4. Permissions</h2>
                 <p>The App requires no special system permissions for gameplay. Internet access is used only to transmit the anonymized usage statistics described above. If ad functionality is enabled in the future, the iOS App Tracking Transparency prompt may be added, and you will be able to decline it.</p>

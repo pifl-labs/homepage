@@ -14,7 +14,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">ピピ ことばの航海 プライバシーポリシー</span></h1>
-            <p class="legal-date">施行日: 2026年7月13日</p>
+            <p class="legal-date">施行日: 2026年7月30日（改定: 広告有効化を反映）</p>
         </div>
     </section>
 
@@ -25,7 +25,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>株式会社ピプルラボ（以下「当社」）は、モバイルアプリケーション <strong>ピピ ことばの航海</strong>（以下「本アプリ」）に関するプライバシーポリシーを以下のとおり定めます。本ポリシーに定めのない事項は、当社ウェブサイトの<a href="/ja/privacy">総合プライバシーポリシー</a>が適用されます。</p>
 
                 <h2>概要</h2>
-                <p><strong>ピピ ことばの航海にはアカウントやログインがなく、個人を特定できる情報は収集しません。</strong>ゲームの進捗（開拓した島、コイン、連続記録、ことばの航海日誌、設定）は端末内にのみ保存されます。ゲーム改善のため、Google Firebase アナリティクスによる<strong>匿名化された利用統計</strong>（どのレベルがプレイされたか等）を収集しますが、個人と紐付けられることはありません。</p>
+                <p><strong>ピピ ことばの航海にはアカウントやログインがなく、個人を特定できる情報は収集しません。</strong>ゲームの進捗（開拓した島、コイン、連続記録、ことばの航海日誌、設定）は端末内にのみ保存されます。ゲーム改善のため、Google Firebase アナリティクスによる<strong>匿名化された利用統計</strong>（どのレベルがプレイされたか等）を収集しますが、個人と紐付けられることはありません。アプリを無料で提供するため<strong>Google AdMob の広告を表示</strong>し、広告配信の過程で<strong>広告識別子（IDFA／広告ID）</strong>が利用される場合があります。iOSではトラッキング許可（ATT）を求めますが、<strong>拒否してもアプリのすべての機能をそのままご利用いただけます</strong>。</p>
 
                 <h2>第1条（収集する情報）</h2>
                 <p>会員登録の手続きはなく、氏名・メールアドレス・連絡先・位置情報など個人を特定できる情報は収集しません。本アプリが扱うデータは以下のとおりです。</p>
@@ -49,13 +49,18 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>匿名化された形で収集、<strong>個人と紐付けなし</strong>、広告目的では使用しません</td>
                         </tr>
                         <tr>
+                            <td>広告（Google AdMob）</td>
+                            <td>広告識別子（iOS IDFA・Android 広告ID）、おおよその端末・ネットワーク情報、広告の表示・クリックイベント</td>
+                            <td>広告配信および効果測定のため。iOSは<strong>ATTに同意した場合のみ</strong>識別子を利用（拒否時は非パーソナライズ広告）。Androidは設定から広告IDのリセット・削除が可能</td>
+                        </tr>
+                        <tr>
                             <td>メールでのお問い合わせ（任意）</td>
                             <td>メールアドレス、お問い合わせ内容</td>
                             <td>お客様ご自身がメールで連絡された場合のみ</td>
                         </tr>
                     </tbody>
                 </table>
-                <p>備考: 本アプリには広告SDKがコードに含まれていますが、本バージョンでは<strong>無効</strong>になっており、広告は表示されず、広告識別子は収集・使用されません。今後、広告機能を有効にする場合は、本ポリシーを更新し、アプリ内で別途お知らせします（iOSのトラッキング許可要求を含む）。</p>
+                <p>備考: <strong>バージョン1.1.0より広告を有効化</strong>しました（2026年7月30日時点）。バナー・インタースティシャル広告と、ユーザーが<strong>自ら選択したときにのみ</strong>再生されるリワード広告（ヒント解放、1日5回まで）を表示します。リワード広告は強制表示されず、コインで代替できます。広告を見なくてもゲームのすべてのコンテンツをご利用いただけます。</p>
 
                 <h2>第2条（データの保持期間）</h2>
                 <ul>
@@ -65,10 +70,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>第3条（第三者提供・委託）</h2>
-                <p>当社はお客様のデータを第三者の目的のために販売・提供しません。匿名化された利用統計の処理は<strong>Google LLC（Firebase アナリティクス）</strong>に委託しています。詳細は<a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebaseのプライバシーとセキュリティ</a>をご覧ください。アプリストア（Apple App Store、Google Play）が配信の過程で収集する情報は、各社のプライバシーポリシーに従います。</p>
+                <p>当社はお客様のデータを第三者の目的のために販売・提供しません。匿名化された利用統計の処理は<strong>Google LLC（Firebase アナリティクス）</strong>に、広告配信は<strong>Google LLC（AdMob）</strong>に委託しています。詳細は<a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebaseのプライバシーとセキュリティ</a>および<a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">Googleのパートナーサイトポリシー</a>をご覧ください。アプリストア（Apple App Store、Google Play）が配信の過程で収集する情報は、各社のプライバシーポリシーに従います。</p>
 
                 <h2>第4条（アプリの権限）</h2>
-                <p>本アプリはプレイのために特別なシステム権限を必要としません。インターネットアクセスは上記の匿名利用統計の送信にのみ使用されます。将来、広告機能が有効になる場合、iOSのApp Tracking Transparency（トラッキング許可）の要求が追加される場合があり、ユーザーはこれを拒否できます。</p>
+                <p>本アプリはプレイのために特別なシステム権限を必要としません。インターネットアクセスは匿名利用統計の送信と広告の受信に使用されます。iOSでは初回起動時に<strong>App Tracking Transparency（トラッキング許可）</strong>を求めます。拒否した場合はパーソナライズ広告の代わりに非パーソナライズ広告が表示されるだけで、<strong>機能制限はありません</strong>。Androidでは端末の設定＞プライバシー＞広告から広告IDをリセット・削除できます。</p>
 
                 <h2>第5条（お子様のプライバシー）</h2>
                 <p>本アプリは13歳未満のお子様を主な対象とせず、個人を特定できる情報は収集しません。ご質問は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a> までご連絡ください。</p>
