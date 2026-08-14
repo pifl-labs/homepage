@@ -19,7 +19,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
       <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> PiFl Labs</a>
       <p class="bridge-policy-kicker">PiPi Bridge · Child-first privacy</p>
       <h1><i class="fas fa-shield-heart" aria-hidden="true"></i> <span class="text-gradient">Privacy Policy</span></h1>
-      <p class="legal-date">Effective: August 11, 2026 · Version 1.0</p>
+      <p class="legal-date">Effective: August 14, 2026 · Version 1.1</p>
       <nav class="bridge-policy-languages" aria-label="Policy language">
         <a href="#ko" lang="ko">한국어</a>
         <a href="#en" lang="en">English</a>
@@ -47,7 +47,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         </ul>
         <p>아이의 이름, 생년월일, 사진, 목소리, 연락처, 정확한 위치, 광고 식별자, 결제정보는 앱에서 요구하거나 수집하지 않습니다.</p>
         <h3>2. 광고·추적·결제·권한</h3>
-        <p>앱에는 광고, 인앱결제, 구독, 회원가입, 분석 SDK, 행동 추적 SDK가 없습니다. 카메라, 마이크 녹음, 위치, 연락처 권한을 요청하지 않습니다. 한국어 듣기는 운영체제의 음성합성(TTS)을 사용하며 앱은 음성을 녹음하지 않습니다. 기기에 한국어 음성이 없으면 운영체제 또는 TTS 제공자가 보호자의 기기 설정에 따라 음성 파일을 내려받을 수 있습니다.</p>
+        <p>앱에는 광고, 인앱결제, 구독, 회원가입, 분석 SDK, 행동 추적 SDK가 없습니다. 카메라, 마이크 녹음, 위치, 연락처 권한을 요청하지 않습니다. 한국어 듣기는 출시 전에 합성해 앱에 포함한 음성 파일을 기기에서 재생합니다. 앱 실행 중 외부 음성 API로 텍스트나 데이터를 보내지 않습니다. 포함된 음성 파일이 없거나 재생할 수 없을 때만 운영체제의 음성합성을 안전 폴백으로 사용합니다. 어느 경로도 아이의 목소리를 녹음하지 않습니다.</p>
         <h3>3. 이용 목적과 보관</h3>
         <p>로컬 설정은 학습 진도 표시, 복습 순서, 보호자 언어와 소리 설정을 유지하는 데만 사용합니다. 보호자가 앱에서 진도를 초기화하거나 앱을 삭제할 때 제거됩니다. 앱은 이 학습 기록을 Android 클라우드·기기 간 백업에서 제외하며 iOS에서도 앱 밖 동기화 기능을 제공하지 않습니다. 이메일 문의 기록은 답변과 분쟁 대응을 위해 처리 종료 후 최대 3년 보관할 수 있습니다.</p>
         <h3>4. 제3자 제공과 국외 이전</h3>
@@ -72,7 +72,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         </ul>
         <p>The app does not ask for or collect a child's name, birth date, photo, voice, contacts, precise location, advertising identifier or payment information.</p>
         <h3>2. Ads, tracking, payments and permissions</h3>
-        <p>There are no ads, purchases, subscriptions, accounts, analytics SDKs or behavioral tracking SDKs. The app does not request camera, voice-recording, location or contacts permission. Korean listening uses the operating system's text-to-speech service; the app does not record audio. If a Korean voice is missing, the operating system or TTS provider may download one under the grown-up's device settings.</p>
+        <p>There are no ads, purchases, subscriptions, accounts, analytics SDKs or behavioral tracking SDKs. The app does not request camera, voice-recording, location or contacts permission. Korean listening plays audio files synthesized before release and included in the app. The running app does not send text or data to an external voice API. The operating system's text-to-speech service is used only as a safety fallback when a bundled file is missing or cannot be played. Neither path records a child's voice.</p>
         <h3>3. Purpose and retention</h3>
         <p>Local settings are used only to show progress, arrange review, and remember language and sound choices. They are removed when a grown-up resets progress or deletes the app. The app excludes these learning records from Android cloud and device-to-device backup and provides no app-level sync on iOS. Support email records may be retained for up to three years after resolution for support and dispute handling.</p>
         <h3>4. Sharing and international transfer</h3>
@@ -94,7 +94,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li><strong>仅保存在应用本地：</strong>家长帮助语言、学习起点、已完成活动的标识、学习日期和声音设置。</li><li><strong>家长主动发送支持邮件时：</strong>邮箱地址、邮件内容以及家长自愿提供的信息；应用不会自动收集这些信息。</li></ul>
         <p>应用不会要求或收集儿童姓名、出生日期、照片、声音、联系人、精确位置、广告标识符或支付信息。</p>
         <h3>2. 广告、追踪、付费与权限</h3>
-        <p>应用无广告、购买、订阅、账号、分析SDK或行为追踪SDK。不请求相机、录音、位置或联系人权限。韩语朗读使用操作系统文字转语音服务，应用不会录音。如果设备缺少韩语语音，操作系统或TTS提供方可能根据家长的设备设置下载语音。</p>
+        <p>应用无广告、购买、订阅、账号、分析SDK或行为追踪SDK。不请求相机、录音、位置或联系人权限。韩语朗读使用发布前合成并随应用提供的音频文件。应用运行时不会向外部语音 API 发送文字或数据。只有在内置音频缺失或无法播放时，才会使用操作系统文字转语音作为安全备用。两种方式都不会录制儿童的声音。</p>
         <h3>3. 用途与保留</h3>
         <p>本地设置仅用于显示进度、安排复习以及记住语言和声音选择。家长重置进度或删除应用时会清除。应用会将这些学习记录排除在 Android 云备份和设备间备份之外，在 iOS 上也不提供应用级同步。支持邮件记录可在问题解决后最多保留三年，用于支持和争议处理。</p>
         <h3>4. 共享与跨境传输</h3>
@@ -116,7 +116,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li><strong>Chỉ lưu trong bộ nhớ ứng dụng:</strong> ngôn ngữ trợ giúp cho phụ huynh, lộ trình bắt đầu, mã hoạt động đã hoàn thành, ngày học và cài đặt âm thanh.</li><li><strong>Khi phụ huynh tự gửi email hỗ trợ:</strong> địa chỉ email, nội dung và thông tin tự nguyện cung cấp. Ứng dụng không tự động thu thập các thông tin này.</li></ul>
         <p>Ứng dụng không yêu cầu hoặc thu thập tên, ngày sinh, ảnh, giọng nói, danh bạ, vị trí chính xác, mã quảng cáo hoặc thông tin thanh toán của trẻ.</p>
         <h3>2. Quảng cáo, theo dõi, thanh toán và quyền truy cập</h3>
-        <p>Không có quảng cáo, mua hàng, thuê bao, tài khoản, SDK phân tích hay theo dõi hành vi. Ứng dụng không yêu cầu quyền camera, ghi âm, vị trí hoặc danh bạ. Chức năng nghe tiếng Hàn dùng dịch vụ chuyển văn bản thành giọng nói của hệ điều hành; ứng dụng không ghi âm. Nếu thiết bị chưa có giọng tiếng Hàn, hệ điều hành hoặc nhà cung cấp TTS có thể tải giọng theo cài đặt thiết bị của phụ huynh.</p>
+        <p>Không có quảng cáo, mua hàng, thuê bao, tài khoản, SDK phân tích hay theo dõi hành vi. Ứng dụng không yêu cầu quyền camera, ghi âm, vị trí hoặc danh bạ. Chức năng nghe tiếng Hàn phát các tệp âm thanh được tổng hợp trước khi phát hành và đóng gói trong ứng dụng. Khi chạy, ứng dụng không gửi văn bản hoặc dữ liệu đến API giọng nói bên ngoài. Dịch vụ chuyển văn bản thành giọng nói của hệ điều hành chỉ được dùng làm phương án dự phòng khi tệp đóng gói bị thiếu hoặc không phát được. Cả hai cách đều không ghi âm giọng nói của trẻ.</p>
         <h3>3. Mục đích và thời gian lưu</h3>
         <p>Cài đặt cục bộ chỉ dùng để hiển thị tiến độ, sắp xếp ôn tập và ghi nhớ lựa chọn ngôn ngữ, âm thanh. Dữ liệu bị xóa khi phụ huynh đặt lại tiến độ hoặc xóa ứng dụng. Ứng dụng loại trừ dữ liệu học tập khỏi sao lưu đám mây và chuyển thiết bị trên Android, đồng thời không cung cấp đồng bộ ở cấp ứng dụng trên iOS. Email hỗ trợ có thể được giữ tối đa ba năm sau khi xử lý để hỗ trợ và giải quyết tranh chấp.</p>
         <h3>4. Chia sẻ và chuyển dữ liệu quốc tế</h3>
