@@ -62,7 +62,7 @@ const COPY: Record<Lang, Copy> = {
     playStore: 'Google Play',
     appStore: 'App Store',
     howTitle: '처음이신가요?',
-    howBody: '앱을 설치한 뒤 이 링크를 다시 누르면 같은 D-Day가 자동으로 추가돼요. 계정·로그인 없이 100% 무료입니다.',
+    howBody: '앱을 설치한 뒤 이 링크를 다시 누르면 같은 D-Day가 자동으로 추가돼요. 계정·로그인 없이 무료로 시작할 수 있어요.',
   },
   en: {
     title: 'Crew Invitation — PiPi D-Day',
@@ -81,7 +81,7 @@ const COPY: Record<Lang, Copy> = {
     playStore: 'Google Play',
     appStore: 'App Store',
     howTitle: 'First time here?',
-    howBody: 'Install the app, then tap this link again — the same D-Day is added automatically. 100% free, no account.',
+    howBody: 'Install the app, then tap this link again — the same D-Day is added automatically. Free to start, no account.',
   },
   ja: {
     title: 'クルー招待状 — PiPi D-Day',
@@ -100,7 +100,7 @@ const COPY: Record<Lang, Copy> = {
     playStore: 'Google Play',
     appStore: 'App Store',
     howTitle: '初めてですか？',
-    howBody: 'アプリをインストールしてこのリンクをもう一度タップすると、同じD-Dayが自動で追加されます。アカウント不要・完全無料です。',
+    howBody: 'アプリをインストールしてこのリンクをもう一度タップすると、同じD-Dayが自動で追加されます。アカウント不要、無料ではじめられます。',
   },
 };
 
@@ -121,6 +121,7 @@ const appStoreHref = dday.stores.ios ?? appInfoHref;
   canonical={canonical}
   alternates={alternates}
   extraCss={["/styles.css"]}
+  robots="noindex,follow"
 >
   <main class="invite-page">
     <div class="container invite-wrap">

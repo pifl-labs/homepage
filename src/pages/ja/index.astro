@@ -1,18 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { appList, appName, statusLabels } from '../../data/apps';
+import AppCatalog from '../../components/AppCatalog.astro';
+import FleetLog from '../../components/FleetLog.astro';
+import AppsJsonLd from '../../components/AppsJsonLd.astro';
+import { fleetLastUpdated, formatDate, liveAppCount } from '../../data/apps';
 const lang = 'ja' as const;
 ---
 <BaseLayout
   lang="ja"
   title={"PiFl Labs — 一羽のオウムだけのクルー。とのうわさ。"}
-  description={"人ひとり、オウム一羽のFlutterスタジオ。すでに航海中、7つのアプリが両ストアで公開中 — コードベースはひとつ、ストアはふたつ、モンスターはゼロ。"}
+  description={`人ひとり、オウム一羽のFlutterスタジオ。${liveAppCount}つのアプリが iOS·Android の両ストアで公開中 — コードベースはひとつ、ストアはふたつ、モンスターはゼロ。`}
   canonical="https://pifl-labs.com/ja/"
   keywords={"PiFl Labs, Flutter, アプリ開発, クロスプラットフォーム, iOS, Android, ソフトウェア開発"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
   ogImage="https://pifl-labs.com/pifl-ship-og.jpg"
   extraCss={['/styles-app-landing.css']}
 >
+<main id="main">
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="container">
@@ -27,19 +31,19 @@ const lang = 'ja' as const;
         </h1>
 
         <p class="hero-lede reveal d2">
-          PiFl Labsは <em>静かなクロスプラットフォーム</em> アプリをつくる小さなスタジオ。コードベースはひとつ、ストアはふたつ、モンスターはゼロ。人ひとりと、帽子を同時に十個ほどかぶった（本当に）<em>一等航海士</em>一羽で。ひとり、でもひとりじゃない。
+          PiFl Labsは <em>静かなクロスプラットフォーム</em> アプリをつくる小さなスタジオ。コードベースはひとつ、ストアはふたつ、モンスターはゼロ。人ひとりと、帽子をいくつも同時にかぶった（本当に）<em>一等航海士</em>一羽で。ひとり、でもひとりじゃない。
         </p>
 
         <div class="hero-cta-row reveal d3">
-          <a class="btn btn-primary" href="#crew">クルーに会う <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          <a class="btn btn-ghost" href="#about">名前のはなし <i class="fas fa-book-open" aria-hidden="true"></i></a>
+          <a class="btn btn-primary" href="#apps">アプリを見る <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#crew">クルーに会う <i class="fas fa-book-open" aria-hidden="true"></i></a>
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>7</b> アプリ就航</span>
+          <span><b>{liveAppCount}</b> アプリ就航</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
-          <span><b>100%</b> Flutter</span>
-          <span><b>14+</b> ピピの姿</span>
+          <span><b>無料</b> · アカウント不要</span>
+          <span><b>{formatDate(fleetLastUpdated, lang)}</b> 最終整備</span>
         </div>
       </div>
 
@@ -75,7 +79,7 @@ const lang = 'ja' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>すでに航海中</i> · 次の海図を作成中</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ7つ</span>
+    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ{liveAppCount}つ</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 人ひとり、 <i>オウム一羽、</i> 帽子はたくさん。</span>
     <span class="sep">✦</span>
@@ -85,66 +89,41 @@ const lang = 'ja' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>すでに航海中</i> · 次の海図を作成中</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ7つ</span>
+    <span><b>// 04</b> <i>就航した艦隊:</i> アプリ{liveAppCount}つ</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 人ひとり、 <i>オウム一羽、</i> 帽子はたくさん。</span>
     <span class="sep">✦</span>
   </div>
 </div>
 
-<!-- APPS SECTION -->
-<section class="apps-home" id="apps">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">00 / 艦隊</div>
-      <h2 class="section-title">小さな艦隊、<span class="italic">もう海の上。</span></h2>
-      <p class="section-sub">
-        PiPiがつくるアプリです。コードベースはひとつ、ストアはふたつ — 静かに、ていねいに。
-      </p>
-    </div>
-    <div class="app-card-grid">
-      {appList.map((app) => (
-        <a class="app-card" href={`/${lang}/apps/${app.slug}/`}>
-          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${appName(app, lang)} アイコン`} width="64" height="64" loading="lazy" />
-          <div class="app-card-body">
-            <div class="app-card-head">
-              <span class="app-card-name">{appName(app, lang)}</span>
-              <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
-            </div>
-            <span class="app-card-cat">{app.category[lang]}</span>
-            <p class="app-card-tag">{app.content[lang].tagline}</p>
-          </div>
-          <span class="app-card-go" aria-hidden="true">→</span>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+<AppCatalog lang="ja" />
+
+<FleetLog lang="ja" />
 
 <!-- CREW SECTION -->
 <section class="crew-section" id="crew">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">01 / 乗組員名簿</div>
+      <div class="kicker">02 / 乗組員名簿</div>
       <h2 class="section-title">クルー全員を紹介します。 <span class="italic">全部この子一羽。</span></h2>
       <p class="section-sub">
-        私の<em>AI航海士</em>PiPiは、一日に役を十四こなします。船長、地図屋、応援団長、そして — そう、ハンモックにいるあの子も同じ鳥。帽子ひとつひとつがその日の担当です。タップしてみてください。
+        私の<em>AI航海士</em>PiPiは、一日に役を十二こなします。船長、地図屋、応援団長、そして — そう、ハンモックにいるあの子も同じ鳥。帽子ひとつひとつがその日の担当です。タップしてみてください。
       </p>
     </div>
 
     <div class="sticker-wall">
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture><span class="label">提督</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-helm-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-helm-trim.png" alt="" loading="lazy"></picture><span class="label">操舵手</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-explorer-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-explorer-trim.png" alt="" loading="lazy"></picture><span class="label">斥候</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture><span class="label">航海士</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" loading="lazy"></picture><span class="label">検査役</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-celebrate-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-celebrate-trim.png" alt="" loading="lazy"></picture><span class="label">士気担当</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-eyepatch.webp" type="image/webp"><img src="/assets/pipi/pipi-eyepatch.png" alt="" loading="lazy"></picture><span class="label">悪党</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" loading="lazy"></picture><span class="label">王族</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" loading="lazy"></picture><span class="label">甲板員</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-skull.webp" type="image/webp"><img src="/assets/pipi/pipi-skull.png" alt="" loading="lazy"></picture><span class="label">ジョリー・ロジャー</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-wink-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-wink-trim.png" alt="" loading="lazy"></picture><span class="label">伝令</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-hammock-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-hammock-trim.png" alt="" loading="lazy"></picture><span class="label">非番</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">提督</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-helm-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-helm-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">操舵手</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-explorer-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-explorer-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">斥候</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">航海士</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">検査役</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-celebrate-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-celebrate-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">士気担当</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-eyepatch.webp" type="image/webp"><img src="/assets/pipi/pipi-eyepatch.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">悪党</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">王族</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">甲板員</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-skull.webp" type="image/webp"><img src="/assets/pipi/pipi-skull.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">ジョリー・ロジャー</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-wink-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-wink-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">伝令</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-hammock-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-hammock-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">非番</span></div>
     </div>
 
     <div class="annotation-strip">
@@ -159,13 +138,13 @@ const lang = 'ja' as const;
   <div class="container">
     <div class="currently-inner">
       <div class="currently-pipi">
-        <picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" loading="lazy"></picture>
+        <picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" width="256" height="256" loading="lazy"></picture>
         <div class="currently-bubble">次の航海を準備中 🔭</div>
       </div>
       <div>
         <div class="currently-meta">● いま</div>
         <div class="currently-text">
-          頭を下げて、帆は上げたまま。 <b>いま7つのアプリが両ストアで航海中です。</b> 次の一隻（Dialogos）はドライドックで仕上げ中。商標は出願中 — あるのは人ひとり、オウム一羽、コードベース、そしてたっぷりのコーヒー。
+          頭を下げて、帆は上げたまま。 <b>いま{liveAppCount}つのアプリが両ストアで航海中で、直近の整備は {formatDate(fleetLastUpdated, lang)} です。</b> 次の船たちはドライドックで仕上げ中 — Dialogos もその一隻。商標は出願中 — あるのは人ひとり、オウム一羽、コードベース、そしてたっぷりのコーヒー。
         </div>
       </div>
       <div class="currently-badge">進行中</div>
@@ -177,7 +156,7 @@ const lang = 'ja' as const;
 <section class="about" id="about">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">02 / 名前のはなし</div>
+      <div class="kicker">03 / 名前のはなし</div>
       <h2 class="section-title">二音節に、 <span class="italic">ちょっとした冗談。</span></h2>
     </div>
 
@@ -189,7 +168,7 @@ const lang = 'ja' as const;
         <div class="logbook-entry">
           <p>半分は数学、半分は言葉遊びの名前が欲しかった。 <strong>Pi</strong> はソフトウェアの無限ループ。 <strong>Fl</strong> はひとつのコードベースで、あらゆるプラットフォームへ飛んでいけるフレームワーク。</p>
           <p>つなげると <strong>PiFl</strong> — 早口で言うと、ちょっと舌ったらずな海賊のように聞こえます。それでいい。うちのブランドに合っています。</p>
-          <p>一等航海士は、コードを書くオウム — つまり、人ひとりが舵を取り、すべてに責任を持つ傍らに乗るAIです。帽子は十四、竜骨はひとつ。</p>
+          <p>一等航海士は、コードを書くオウム — つまり、人ひとりが舵を取り、すべてに責任を持つ傍らに乗るAIです。帽子は十二、竜骨はひとつ。</p>
         </div>
         <div class="logbook-signature">— クルーより</div>
       </div>
@@ -231,7 +210,7 @@ const lang = 'ja' as const;
       モンスターはゼロ。
     </p>
     <div class="quote-by">
-      <picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" loading="lazy"></picture> — 一等航海士 PiPi
+      <picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" width="256" height="256" loading="lazy"></picture> — 一等航海士 PiPi
     </div>
   </div>
 </section>
@@ -240,22 +219,22 @@ const lang = 'ja' as const;
 <section class="join" id="log">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">03 / 航海記録</div>
+      <div class="kicker">04 / 航海記録</div>
       <h2 class="section-title">日誌より。 <span class="italic">静かに、でも進んでいます。</span></h2>
       <p class="section-sub">
-        すでに7つが公開中です。 <em>次も準備中。</em> 今シーズン、甲板に上がっているものたち。
+        すでに{liveAppCount}つが公開中です。 <em>次も準備中。</em> いま甲板の上で進んでいることです。
       </p>
     </div>
 
     <div class="dispatch-grid">
       <article class="dispatch dispatch--live">
         <div class="dispatch-head">
-          <span class="slot-tag">記録 · 今シーズン</span>
+          <span class="slot-tag">記録 · いま</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">就航</span> 済み</div>
-          <div class="slot-desc">Focus・Words・D-Day・Log・Hello・Draw・ことばの航海 — 7隻が両ストアで航海中。機能は少なく、気配りは多く。</div>
+          <div class="slot-desc">{liveAppCount}隻が両ストアで航海中。機能は少なく、気配りは多く — そして出したあとも手を入れ続けます。</div>
         </div>
       </article>
 
@@ -263,7 +242,7 @@ const lang = 'ja' as const;
         <div class="dispatch-head">
           <span class="slot-tag">記録 · 次</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">船を</span> 整える</div>
           <div class="slot-desc">デザインシステム、モジュラーなDart、アイコングリッド。誰も拍手しないけれど、みんなが頼りにする下地。</div>
@@ -274,20 +253,24 @@ const lang = 'ja' as const;
         <div class="dispatch-head">
           <span class="slot-tag">記録 · まもなく</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">次の</span> 出航</div>
-          <div class="slot-desc">Dialogosがドライドックで仕上げ中。準備ができたら、静かに海へ。</div>
+          <div class="slot-desc">ドライドックにはまだ数隻 — Dialogos もその一隻です。仕上がった船から静かに送り出します。</div>
         </div>
       </article>
     </div>
 
     <div class="join-cta">
       <a class="btn btn-primary btn-large" href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> ご挨拶ください</a>
-      <p class="hint">はがき一枚で十分です — <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></p>
+      <p class="hint">はがき一枚で十分です — <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text">hello (at) pifl-labs.com</span></a></p>
     </div>
   </div>
 </section>
+
+</main>
+
+<AppsJsonLd lang="ja" />
 
 <!-- FOOTER -->
 </BaseLayout>

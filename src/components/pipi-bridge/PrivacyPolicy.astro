@@ -1,17 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-interface Props { homeHref?: string; }
+import type { Lang } from '../../i18n/ui';
 
-const { homeHref = '/en/' } = Astro.props;
+interface Props { lang?: Lang; homeHref?: string; }
+
+// 본문은 ko/en/zh/vi 4개 언어 병기다. 렌더되는 경로의 로케일을 <html lang> 에 반영하고,
+// canonical 은 ko 한 곳으로 모은다(4개 URL 중복 색인 방지).
+const { lang = 'ko', homeHref = '/ko/' } = Astro.props;
 const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
 ---
 <BaseLayout
-  lang="en"
+  lang={lang}
   title="PiPi Bridge Privacy Policy · 개인정보처리방침"
   description="PiPi Bridge child privacy policy in Korean, English, Simplified Chinese and Vietnamese. No ads, account, tracking or in-app data transmission."
   canonical={policyUrl}
-  alternates={[{ hreflang: 'x-default', href: policyUrl }]}
+  alternates={[{ hreflang: 'ko', href: policyUrl }, { hreflang: 'x-default', href: policyUrl }]}
   extraCss={["/styles.css"]}
 >
   <section class="legal-hero bridge-policy-hero">
@@ -57,7 +61,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <h3>6. 보호자의 권리와 삭제</h3>
         <p>보호자는 앱의 부모 영역에서 진도를 즉시 초기화할 수 있고 앱 삭제로 로컬 데이터를 지울 수 있습니다. 이메일 문의정보의 열람·정정·삭제·처리정지를 요청하려면 아래 개인정보 보호 연락처로 문의해 주세요.</p>
         <h3>7. 연락처와 변경</h3>
-        <ul><li>개인정보 보호 책임자: 주식회사 피플랩스</li><li>이메일: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li></ul>
+        <ul><li>개인정보 보호 책임자: 주식회사 피플랩스</li><li>이메일: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>정책이 중요한 방식으로 바뀌면 이 페이지의 시행일과 내용을 갱신합니다.</p>
       </article>
 
@@ -82,7 +86,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <h3>6. Grown-up rights and deletion</h3>
         <p>A grown-up can reset progress immediately in the grown-up area or erase local data by deleting the app. To request access, correction, deletion or restriction of support-email information, contact the privacy address below.</p>
         <h3>7. Contact and changes</h3>
-        <ul><li>Privacy contact: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li></ul>
+        <ul><li>Privacy contact: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>If this policy changes materially, we will update its contents and effective date on this page.</p>
       </article>
 
@@ -104,7 +108,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <h3>6. 家长权利与删除</h3>
         <p>家长可在家长区域立即重置进度，或通过删除应用清除本地数据。如需访问、更正、删除或限制处理支持邮件信息，请联系下方隐私邮箱。</p>
         <h3>7. 联系与更新</h3>
-        <ul><li>隐私联系人：PiFl Labs Co., Ltd.</li><li>邮箱：<a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li></ul>
+        <ul><li>隐私联系人：PiFl Labs Co., Ltd.</li><li>邮箱：<a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>如政策发生重大变化，我们会更新本页面的内容和生效日期。</p>
       </article>
 
@@ -126,7 +130,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <h3>6. Quyền và xóa dữ liệu</h3>
         <p>Phụ huynh có thể đặt lại tiến độ ngay trong khu vực phụ huynh hoặc xóa dữ liệu cục bộ bằng cách gỡ ứng dụng. Để yêu cầu truy cập, sửa, xóa hoặc hạn chế xử lý thông tin email hỗ trợ, hãy liên hệ địa chỉ riêng tư bên dưới.</p>
         <h3>7. Liên hệ và thay đổi</h3>
-        <ul><li>Liên hệ quyền riêng tư: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li></ul>
+        <ul><li>Liên hệ quyền riêng tư: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>Nếu chính sách thay đổi đáng kể, chúng tôi sẽ cập nhật nội dung và ngày hiệu lực trên trang này.</p>
       </article>
     </div>

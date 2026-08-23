@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { appName, apps, storeLabels } from '../data/apps';
+import { appName, apps, displayVersion, formatDate, latestUpdate, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
 
 interface Props { lang: Lang; slug: string }
@@ -34,6 +34,20 @@ const backLabel = lang === 'ko' ? '모든 앱 보기' : lang === 'ja' ? 'すべ�
 const iconAlt = lang === 'ko' ? `${name} 아이콘` : lang === 'ja' ? `${name} アイコン` : `${name} icon`;
 const homeHref = `/${lang}/#apps`;
 
+// 신뢰 링크(방침·문의) — 스토어 리스팅에만 있던 방침 페이지를 사이트 안에서도 잇는다.
+const trust = {
+  ko: { privacy: '개인정보처리방침', support: '문의하기' },
+  ja: { privacy: 'プライバシーポリシー', support: 'お問い合わせ' },
+  en: { privacy: 'Privacy policy', support: 'Contact support' },
+}[lang];
+
+// 스토어 실측 릴리스 줄 — "지금 받는 버전이 언제 손본 것인지"를 앱 페이지에서 바로 보이게.
+const rel = app.release;
+const relUpdated = rel ? formatDate(latestUpdate(app), lang) : '';
+const relSince = rel?.since ? formatDate(rel.since, lang) : '';
+const relVersion = rel ? displayVersion(app) : '';
+const ul = updatedLabels[lang];
+
 // Dialogos 전용 — 출처 라이브러리(허브)로 잇는 다리 섹션.
 const sourceLib = app.slug === 'dialogos'
   ? {
@@ -62,11 +76,20 @@ const jsonLd = {
   name,
   applicationCategory: app.schemaCategory ?? 'MobileApplication',
   description: c.lede,
+  url: canonical,
+  image: `https://pifl-labs.com${iconSrc}`,
+  inLanguage: lang,
+  publisher: { '@id': 'https://pifl-labs.com/#organization' },
   ...(app.status === 'live'
     ? {
         operatingSystem: 'iOS, Android',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         ...(app.stores.ios ? { downloadUrl: app.stores.ios } : {}),
+        ...(app.release ? {
+          softwareVersion: displayVersion(app),
+          datePublished: app.release.since,
+          dateModified: latestUpdate(app),
+        } : {}),
       }
     : {}),
 };
@@ -124,6 +147,15 @@ const jsonLd = {
               </>
             )}
           </div>
+
+          {rel && (
+            <p class="app-rel-line">
+              <span class="app-rel-ver">v{relVersion}</span>
+              <span class="app-rel-sep" aria-hidden="true">·</span>
+              <time datetime={latestUpdate(app)}>{relUpdated} {ul.updated}</time>
+              {relSince && (<><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} {relSince}</span></>)}
+            </p>
+          )}
         </div>
       </div>
     </section>
@@ -213,6 +245,11 @@ const jsonLd = {
             </>
           )}
         </div>
+        <div class="app-trust">
+          <a href={`/${lang}/apps/${app.slug}/privacy/`}><i class="fas fa-shield-halved" aria-hidden="true"></i> {trust.privacy}</a>
+          <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a>
+        </div>
+
         <a class="app-back" href={homeHref}><i class="fas fa-arrow-left" aria-hidden="true"></i> {backLabel}</a>
       </div>
     </section>

@@ -1906,3 +1906,18 @@ h1, h2, h3, h4, h5, h6 {
 :root[data-theme="light"] .legal-card th {
     background: rgba(15, 23, 42, 0.04);
 }
+
+/* ============================================================
+   접근성 — 모션 최소화 설정 존중.
+   이 파일의 애니메이션은 전부 장식(float/wave/glow/pulse)이라 정보 손실이 없다.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,5 +1,6 @@
 ---
 import { ui, localeBase, type Lang } from '../i18n/ui';
+import { appName, liveApps } from '../data/apps';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -29,10 +30,18 @@ const home = `${base}/`;
         </ul>
       </div>
       <div class="footer-col">
+        <h4>{t.navApps}</h4>
+        <ul>
+          {liveApps.map((app) => (
+            <li><a href={`/${lang}/apps/${app.slug}/`}>{appName(app, lang)}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer-col">
         <h4>{t.footContact}</h4>
         <ul>
-          <li><a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li>
-          <li><a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></li>
+          <li><a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text">hello (at) pifl-labs.com</span></a></li>
+          <li><a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
         </ul>
       </div>
     </div>
@@ -41,7 +50,7 @@ const home = `${base}/`;
       <span><a href={`${base}/terms/`}>{t.terms}</a> · <a href={`${base}/privacy/`}>{t.privacy}</a> · Made with ⚓</span>
     </div>
   </div>
-  <picture><source srcset="/assets/pipi/pipi-sleepy-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-sleepy-trim.png" alt="" class="footer-sleep" aria-hidden="true" loading="lazy"></picture>
+  <picture><source srcset="/assets/pipi/pipi-sleepy-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-sleepy-trim.png" alt="" width="256" height="256" class="footer-sleep" aria-hidden="true" loading="lazy"></picture>
   <div class="footer-prefs">
     <div class="pref-group">
       <span class="pref-label">{t.theme}</span>

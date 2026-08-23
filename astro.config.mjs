@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { apps, latestUpdate } from './src/data/apps.ts';
 
 // pifl-labs.com — Astro static site (Cloudflare Pages 배포)
 // publicDir(public/)·outDir(dist/)는 Astro 기본값 사용.
@@ -23,15 +24,33 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      // noindex 페이지는 사이트맵에 넣지 않는다 — GSC "제출된 URL이 noindex로 표시됨" 오류 방지.
-      // 제외 대상 (dist 산출물에서 robots noindex 를 실제로 내보내는 페이지 전부):
-      //   · /          — 언어 감지 리다이렉트 랜딩(noindex,follow). 색인 대상은 /ko/ /en/ /ja/
-      //   · /go/*      — link-in-bio 허브(noindex,nofollow). 향후 추가되는 허브도 함께 제외
-      // 새 noindex 페이지를 만들면 여기에도 추가할 것.
+      // 색인 대상 = 로케일 prefix 가 붙은 URL 뿐이다.
+      //  · '/'          — 언어 감지 리다이렉트 랜딩(noindex)
+      //  · '/terms' '/privacy' '/apps/**' 등 무prefix 경로 — functions/_middleware.ts 가
+      //    Accept-Language 로 302 하므로 프로덕션에서 200 으로 서빙되지 않는다(중복 URL).
+      //  · '/go/*'      — link-in-bio 허브(noindex,nofollow)
+      //  · '/apps/pipi-dday/import' — 쿼리 없이는 의미 없는 딥링크 폴백(noindex,follow)
       // 경로로 판정한다 — 도메인 문자열로 비교하면 site 값이 바뀔 때 조용히 무력화된다.
       filter: (page) => {
         const { pathname } = new URL(page);
-        return pathname !== '/' && !pathname.startsWith('/go/');
+        if (!/^\/(ko|en|ja)\//.test(pathname)) return false;
+        if (pathname.startsWith('/go/')) return false;
+        if (/\/apps\/pipi-dday\/import\/?$/.test(pathname)) return false;
+        return true;
+      },
+      // 언어별 대체 URL(xhtml:link)을 사이트맵이 직접 선언하게 한다 — 3언어가 1:1 미러라 안전.
+      i18n: {
+        defaultLocale: 'ko',
+        locales: { ko: 'ko-KR', en: 'en-US', ja: 'ja-JP' },
+      },
+      // 앱 랜딩은 스토어 실측 업데이트일을 lastmod 로 쓴다(수기 날짜 금지).
+      serialize(item) {
+        const m = new URL(item.url).pathname.match(/^\/(?:ko|en|ja)\/apps\/([^/]+)\/?$/);
+        const slug = m?.[1];
+        const app = slug ? apps[slug] : undefined;
+        const updated = app ? latestUpdate(app) : '';
+        if (updated) item.lastmod = `${updated}T00:00:00+09:00`;
+        return item;
       },
     }),
   ],

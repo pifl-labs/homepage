@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#020617">
+    <meta name="robots" content="noindex">
     <title>404 - Lost at Sea | PiFl Labs</title>
     <!-- Fonts (self-hosted, unified with pipi_* apps) -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/PretendardVariable.woff2" crossorigin>
@@ -114,21 +115,35 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
+            .harbor-links {
+            display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center;
+        }
+        .error-message + .error-message { margin-top: 0.35rem; }
     </style>
 </head>
 <body>
     <div class="waves"></div>
-    <div class="container">
+    <main class="container">
         <div class="error-code">404</div>
         <h1 class="error-title">Oops! We hit a Kraken!</h1>
-        <p class="error-message">
+        <p class="error-message" lang="ko">
             해적선이 미지의 해역에 표류했습니다.<br>
-            이 페이지는 아직 탐험되지 않은 영역인 것 같네요.
+            찾으시는 페이지는 아직 탐험되지 않은 영역인 것 같네요.
+        </p>
+        <p class="error-message" lang="ja">
+            海賊船が未知の海域に流されました。<br>
+            お探しのページはまだ探検されていないようです。
+        </p>
+        <p class="error-message" lang="en">
+            This ship drifted into uncharted waters.<br>
+            The page you were looking for hasn't been explored yet.
         </p>
         <div class="kraken">🐙</div>
-        <a href="/" class="btn-home">
-            ⚓ Return to Safe Harbor
-        </a>
-    </div>
+        <nav class="harbor-links" aria-label="Return to a language home">
+            <a href="/ko/" class="btn-home" hreflang="ko">⚓ 한국어</a>
+            <a href="/en/" class="btn-home" hreflang="en">⚓ English</a>
+            <a href="/ja/" class="btn-home" hreflang="ja">⚓ 日本語</a>
+        </nav>
+    </main>
 </body>
 </html>

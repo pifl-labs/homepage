@@ -1,0 +1,89 @@
+---
+// 홈 앱 카탈로그 — 카드 그리드 + 스토어 직행 링크.
+// 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
+// 카피는 lang 별 map, 나머지는 전부 apps.ts 파생.
+import {
+  appList, appName, displayVersion, formatDate, latestUpdate,
+  statusLabels, storeLabels, updatedLabels,
+} from '../data/apps';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const sl = storeLabels[lang];
+const ul = updatedLabels[lang];
+
+const copy = {
+  ko: {
+    kicker: '00 / 함대',
+    title: '작은 함대,',
+    titleEm: '이미 바다 위.',
+    // 서사 규칙: 제작 주체는 사람, PiPi 는 동행자 (AI 저작 주장은 crew·about 에서만)
+    sub: 'PiPi와 함께 만든 앱들입니다. 코드베이스 하나, 스토어 둘 — 조용하지만 정성껏.',
+    iconAlt: (n: string) => `${n} 아이콘`,
+  },
+  ja: {
+    kicker: '00 / 艦隊',
+    title: '小さな艦隊、',
+    titleEm: 'もう海の上。',
+    sub: 'PiPiと一緒につくったアプリです。コードベースはひとつ、ストアはふたつ — 静かに、ていねいに。',
+    iconAlt: (n: string) => `${n} アイコン`,
+  },
+  en: {
+    kicker: '00 / Fleet',
+    title: 'A small fleet,',
+    titleEm: 'already at sea.',
+    sub: 'The apps we make with PiPi. One codebase, two stores — quiet, but made with care.',
+    iconAlt: (n: string) => `${n} icon`,
+  },
+}[lang];
+---
+<section class="apps-home" id="apps">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">{copy.kicker}</div>
+      <h2 class="section-title">{copy.title} <span class="italic">{copy.titleEm}</span></h2>
+      <p class="section-sub">{copy.sub}</p>
+    </div>
+
+    <div class="app-card-grid">
+      {appList.map((app) => {
+        const name = appName(app, lang);
+        return (
+          <article class="app-card">
+            <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
+              <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={copy.iconAlt(name)} width="64" height="64" loading="lazy" />
+              <div class="app-card-body">
+                <div class="app-card-head">
+                  <span class="app-card-name">{name}</span>
+                  <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
+                </div>
+                <span class="app-card-cat">{app.category[lang]}</span>
+                <p class="app-card-tag">{app.content[lang].tagline.replace(/\n/g, ' ')}</p>
+                {app.release && (
+                  <span class="app-card-rel"><b>v{displayVersion(app)}</b> · {formatDate(latestUpdate(app), lang)} {ul.updated}</span>
+                )}
+              </div>
+              <span class="app-card-go" aria-hidden="true">→</span>
+            </a>
+
+            {app.status === 'live' && (app.stores.ios || app.stores.android) && (
+              <div class="app-card-stores">
+                {app.stores.ios && (
+                  <a class="app-card-store" href={app.stores.ios} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onIos}`}>
+                    <i class="fab fa-apple" aria-hidden="true"></i> {sl.ios}
+                  </a>
+                )}
+                {app.stores.android && (
+                  <a class="app-card-store" href={app.stores.android} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onAndroid}`}>
+                    <i class="fab fa-google-play" aria-hidden="true"></i> {sl.android}
+                  </a>
+                )}
+              </div>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>
