@@ -25,6 +25,16 @@ export interface AppContent {
   features: AppFeature[];
 }
 export interface StoreLinks { ios?: string; android?: string }
+/** 스토어 실측 릴리스 사실 — 출처: iTunes Lookup API + Play 스토어 페이지 (수기 추정 금지). */
+export interface StoreRelease { version: string; updated: string } // updated = ISO yyyy-mm-dd
+export interface AppRelease {
+  ios?: StoreRelease;
+  android?: StoreRelease;
+  /** 최초 공개일(양 스토어 중 빠른 쪽) */
+  since: string;
+  /** 실측 확인 시각 — 이 값이 오래되면 카피가 낡았다는 신호 */
+  checkedAt: string;
+}
 export interface AppMeta {
   slug: string;
   name: string;
@@ -35,7 +45,10 @@ export interface AppMeta {
   stores: StoreLinks;
   /** schema.org applicationCategory (미지정 시 MobileApplication). 게임은 GameApplication. */
   schemaCategory?: string;
-  heroShot: string;          // hero 대표 스크린샷 file 명
+  /** 출시 앱만 — 스토어 실측 버전·업데이트일. 카드/랜딩/구조화 데이터가 공유하는 SSOT. */
+  release?: AppRelease;
+  /** hero 대표 스크린샷 file 명. 스크린샷이 아직 없는 '출시 예정' 앱은 생략한다. */
+  heroShot?: string;
   content: Record<Lang, AppContent>;
 }
 
@@ -44,15 +57,15 @@ export const appName = (app: AppMeta, lang: Lang): string => app.nameByLang?.[la
 
 // 앱 상태 라벨 (홈 카드 배지용) — 3개 홈 파일이 공유하는 SSOT
 export const statusLabels: Record<Lang, { live: string; soon: string }> = {
-  ko: { live: '출시됨', soon: '곧 출시' },
-  ja: { live: '公開中', soon: '近日' },
+  ko: { live: '출시됨', soon: '출시 예정' },
+  ja: { live: '公開中', soon: '公開予定' },
   en: { live: 'Live', soon: 'Soon' },
 };
 
 // 스토어 배지 라벨 (status·플랫폼별)
 export const storeLabels: Record<Lang, { ios: string; android: string; soon: string; onIos: string; onAndroid: string }> = {
-  ko: { ios: 'App Store', android: 'Google Play', soon: '곧 출시', onIos: 'App Store에서 받기', onAndroid: 'Google Play에서 받기' },
-  ja: { ios: 'App Store', android: 'Google Play', soon: '近日公開', onIos: 'App Storeで入手', onAndroid: 'Google Playで入手' },
+  ko: { ios: 'App Store', android: 'Google Play', soon: '출시 예정', onIos: 'App Store에서 받기', onAndroid: 'Google Play에서 받기' },
+  ja: { ios: 'App Store', android: 'Google Play', soon: '公開予定', onIos: 'App Storeで入手', onAndroid: 'Google Playで入手' },
   en: { ios: 'App Store', android: 'Google Play', soon: 'Coming soon', onIos: 'Download on the App Store', onAndroid: 'Get it on Google Play' },
 };
 
@@ -65,11 +78,18 @@ const focus: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-focus-pirate-pomodoro/id6762258878',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
+  release: {
+    ios: { version: '1.0.11', updated: '2026-08-20' },
+    android: { version: '1.0.11', updated: '2026-08-20' },
+    since: '2026-05-15',
+    checkedAt: '2026-08-23',
+  },
   heroShot: 'sail',
   content: {
     ko: {
       tagline: '집중은 한 번의 항해다',
       lede: '25분 집중하면 PiPi의 배가 바다를 건넙니다. 세션을 끝낼 때마다 보물이 쌓이고, 선장을 꾸미고, 새로운 섬이 열려요. 포모도로를 대항해로 바꾼 집중 타이머.',
+      metaDesc: '포모도로를 대항해로. 25분 집중하면 배가 바다를 건너고 보물이 쌓입니다. PiPi 선장 꾸미기와 항해 기록까지. iOS · Android 무료.',
       shotsTitle: '한 번의 세션, 한 번의 항해',
       featuresTitle: '왜 PiPi Focus 인가',
       ctaTitle: '첫 항해를 시작하세요',
@@ -84,7 +104,7 @@ const focus: AppMeta = {
       ],
       features: [
         { icon: 'fa-ban',          title: '집중 중 광고 없음', desc: '집중을 깨는 광고는 항해 중 절대 띄우지 않습니다.' },
-        { icon: 'fa-wifi',         title: '100% 오프라인',     desc: '계정도 인터넷도 필요 없이, 모든 기록은 기기 안에.' },
+        { icon: 'fa-wifi',         title: '기록은 전부 기기 안에', desc: '계정 없이 바로 시작. 기록은 서버가 아니라 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
         { icon: 'fa-gem',          title: '게임처럼 쌓이는 동기', desc: '보물·섬·업적이 매일의 집중에 보상을 줍니다.' },
         { icon: 'fa-mobile-screen', title: 'iOS · Android',     desc: 'Flutter 단일 코드베이스로 두 스토어 모두 지원.' },
       ],
@@ -92,6 +112,7 @@ const focus: AppMeta = {
     ja: {
       tagline: '集中は、一度の航海。',
       lede: '25分集中すると、PiPiの船が海を渡ります。セッションを終えるたびに宝物が貯まり、船長を着せ替え、新しい島が開きます。ポモドーロを大航海に変えた集中タイマー。',
+      metaDesc: 'ポモドーロを大航海に。25分の集中で船が海を渡り、宝物が貯まります。PiPi船長の着せ替えと航海の記録も。iOS · Android 無料。',
       shotsTitle: '一度のセッション、一度の航海',
       featuresTitle: 'PiPi Focus を選ぶ理由',
       ctaTitle: '最初の航海を始めよう',
@@ -106,7 +127,7 @@ const focus: AppMeta = {
       ],
       features: [
         { icon: 'fa-ban',          title: '集中中は広告なし',   desc: '集中を妨げる広告は航海中に一切表示しません。' },
-        { icon: 'fa-wifi',         title: '100% オフライン',    desc: 'アカウントもネットも不要、記録はすべて端末内に。' },
+        { icon: 'fa-wifi',         title: '記録はすべて端末内',  desc: 'アカウント不要ですぐ開始。記録はサーバーではなく端末にのみ保存されます(通信は広告表示にのみ使用)。' },
         { icon: 'fa-gem',          title: 'ゲームのように続く動機', desc: '宝物・島・実績が毎日の集中にごほうびを。' },
         { icon: 'fa-mobile-screen', title: 'iOS · Android',     desc: 'Flutter単一コードベースで両ストアに対応。' },
       ],
@@ -114,7 +135,7 @@ const focus: AppMeta = {
     en: {
       tagline: 'Focus is a single voyage.',
       lede: "Focus for 25 minutes and PiPi's ship crosses the sea. Every session you finish stacks treasure, dresses up the captain, and unlocks a new island. A focus timer that turns the Pomodoro into a grand voyage.",
-      metaDesc: 'Turn the Pomodoro into a voyage. Focus 25 minutes, sail the sea, earn treasure and dress up Captain PiPi. Free on iOS & Android, fully offline.',
+      metaDesc: 'Turn the Pomodoro into a voyage. Focus 25 minutes, sail the sea, earn treasure and dress up Captain PiPi. Free on iOS & Android, no account needed.',
       shotsTitle: 'One session, one voyage',
       featuresTitle: 'Why PiPi Focus',
       ctaTitle: 'Set sail on your first voyage',
@@ -129,7 +150,7 @@ const focus: AppMeta = {
       ],
       features: [
         { icon: 'fa-ban',          title: 'No ads while focusing', desc: 'We never interrupt a voyage with a focus-breaking ad.' },
-        { icon: 'fa-wifi',         title: '100% offline',          desc: 'No account, no internet — every record stays on device.' },
+        { icon: 'fa-wifi',         title: 'Your data stays on device', desc: 'No account needed — records live on your device, not our servers (the network is only used to show ads).' },
         { icon: 'fa-gem',          title: 'Motivation that builds', desc: 'Treasure, islands and achievements reward daily focus.' },
         { icon: 'fa-mobile-screen', title: 'iOS & Android',         desc: 'One Flutter codebase, shipped to both stores.' },
       ],
@@ -145,6 +166,12 @@ const hello: AppMeta = {
   stores: {
     ios: 'https://apps.apple.com/app/id6777299814',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.hello',
+  },
+  release: {
+    ios: { version: '1.0.4', updated: '2026-08-10' },
+    android: { version: '1.0.5', updated: '2026-08-20' },
+    since: '2026-06-24',
+    checkedAt: '2026-08-23',
   },
   heroShot: 'home',
   content: {
@@ -226,11 +253,18 @@ const words: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-words-jlpt-topik-vocab/id6770267735',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
+  release: {
+    ios: { version: '1.0.9', updated: '2026-08-19' },
+    android: { version: '1.0.9', updated: '2026-08-19' },
+    since: '2026-05-29',
+    checkedAt: '2026-08-23',
+  },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '바다를 건너, 말을 잇다',
-      lede: 'JLPT N5~N1과 TOPIK 1~6급 어휘를 시험 출제 유형 그대로. SM-2 간격 반복으로 외운 단어는 오래 남고, 인터넷 없이 어디서나. 한국인은 일본어를, 일본인은 한국어를 — 한 앱에서.',
+      lede: 'JLPT N5~N1과 TOPIK 1~6급 어휘를 시험 출제 유형 그대로. SM-2 간격 반복으로 외운 단어는 오래 남고, 학습은 인터넷 없이도 어디서나. 한국인은 일본어를, 일본인은 한국어를 — 한 앱에서.',
+      metaDesc: 'JLPT N5~N1 · TOPIK 1~6급 어휘를 시험이 묻는 방식 그대로. SM-2 간격 반복으로 오래 기억하고, 한↔일 양방향 학습을 한 앱에서. iOS · Android 무료.',
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
       featuresTitle: '왜 PiPi Words 인가',
       ctaTitle: '오늘 단어 학습을 시작하세요',
@@ -246,12 +280,13 @@ const words: AppMeta = {
         { icon: 'fa-bullseye',  title: '시험 출제 유형 맞춤', desc: '단순 단어장이 아닌 JLPT·TOPIK 출제 유형 학습.' },
         { icon: 'fa-rotate',    title: 'SM-2 간격 반복',     desc: '잊을 때쯤 다시 꺼내 학습 시간을 아낍니다.' },
         { icon: 'fa-language',  title: '한일 양방향',        desc: '한국인은 일본어, 일본인은 한국어 — 한 앱에서.' },
-        { icon: 'fa-wifi',      title: '100% 오프라인',      desc: '계정 없이, 비행기 안에서도 학습할 수 있습니다.' },
+        { icon: 'fa-wifi',      title: '오프라인 학습',       desc: '계정 없이, 비행기 안에서도 학습할 수 있습니다(통신은 광고 표시에만 씁니다).' },
       ],
     },
     ja: {
       tagline: '海を越えて、言葉をつなぐ',
-      lede: 'TOPIK 1~6級とJLPT N5~N1の語彙を、出題形式そのままで。SM-2間隔反復で覚えた単語は長く記憶に残り、ネットなしでどこでも。日本人は韓国語を、韓国人は日本語を — 一つのアプリで。',
+      lede: 'TOPIK 1~6級とJLPT N5~N1の語彙を、出題形式そのままで。SM-2間隔反復で覚えた単語は長く記憶に残り、学習はネットなしでもどこでも。日本人は韓国語を、韓国人は日本語を — 一つのアプリで。',
+      metaDesc: 'JLPT N5〜N1・TOPIK 1〜6級の語彙を出題形式そのままで。SM-2の間隔反復で長く記憶し、韓⇄日の双方向学習をひとつのアプリで。iOS · Android 無料。',
       shotsTitle: '航海のように積み上がる語彙学習',
       featuresTitle: 'PiPi Words を選ぶ理由',
       ctaTitle: '今日から単語学習を始めよう',
@@ -267,13 +302,13 @@ const words: AppMeta = {
         { icon: 'fa-bullseye',  title: '出題形式に最適化',   desc: '単なる単語帳ではなくJLPT·TOPIK出題形式で学習。' },
         { icon: 'fa-rotate',    title: 'SM-2 間隔反復',      desc: '忘れる頃に復習して学習時間を節約します。' },
         { icon: 'fa-language',  title: '韓日双方向',         desc: '日本人は韓国語、韓国人は日本語 — 一つのアプリで。' },
-        { icon: 'fa-wifi',      title: '100% オフライン',    desc: 'アカウントなし、飛行機の中でも学習できます。' },
+        { icon: 'fa-wifi',      title: 'オフライン学習',      desc: 'アカウントなし、飛行機の中でも学習できます(通信は広告表示にのみ使用)。' },
       ],
     },
     en: {
       tagline: 'Cross the sea, connect words.',
-      lede: 'Learn JLPT N5–N1 and TOPIK level 1–6 vocabulary the way exams actually test it. SM-2 spaced repetition keeps words in memory, fully offline, anywhere. Korean speakers learn Japanese, Japanese speakers learn Korean — in one app.',
-      metaDesc: 'Learn JLPT N5–N1 and TOPIK 1–6 vocabulary the way exams test it. SM-2 spaced repetition, two-way Korean–Japanese, works fully offline.',
+      lede: 'Learn JLPT N5–N1 and TOPIK level 1–6 vocabulary the way exams actually test it. SM-2 spaced repetition keeps words in memory, and studying works offline, anywhere. Korean speakers learn Japanese, Japanese speakers learn Korean — in one app.',
+      metaDesc: 'Learn JLPT N5–N1 and TOPIK 1–6 vocabulary the way exams test it. SM-2 spaced repetition, two-way Korean–Japanese, studying works offline.',
       shotsTitle: 'Vocabulary that builds like a voyage',
       featuresTitle: 'Why PiPi Words',
       ctaTitle: 'Start studying today',
@@ -289,7 +324,7 @@ const words: AppMeta = {
         { icon: 'fa-bullseye',  title: 'Built around exams', desc: 'Not a plain word list — tuned to JLPT & TOPIK question types.' },
         { icon: 'fa-rotate',    title: 'SM-2 spaced repetition', desc: 'Resurfaces each word right before you forget it.' },
         { icon: 'fa-language',  title: 'Two-way Korean–Japanese', desc: 'Learn Japanese or Korean — both directions, one app.' },
-        { icon: 'fa-wifi',      title: '100% offline',       desc: 'No account required — study even on a plane.' },
+        { icon: 'fa-wifi',      title: 'Study offline',      desc: 'No account required — study even on a plane (the network is only used to show ads).' },
       ],
     },
   },
@@ -304,11 +339,18 @@ const dday: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-d-day/id6770268950',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday',
   },
+  release: {
+    ios: { version: '1.0.4', updated: '2026-08-14' },
+    android: { version: '1.0.4', updated: '2026-08-11' },
+    since: '2026-06-02',
+    checkedAt: '2026-08-23',
+  },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '모든 순간이\n목적지로 향하는 항해',
       lede: '수능·결혼기념일·전역·생일까지, 소중한 날을 해적 항해처럼 카운트다운. D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀌고, 홈 화면 위젯으로 매일 확인합니다.',
+      metaDesc: '앵무새 PiPi가 D-100부터 당일까지 6단계로 반응하는 디데이 위젯. 수능·결혼기념일·생일 무엇이든 계정 없이 홈 화면에서. iOS · Android 무료.',
       shotsTitle: '남은 날이 항해가 되는 순간',
       featuresTitle: '왜 PiPi D-Day 인가',
       ctaTitle: '지금 항해를 시작하세요',
@@ -324,12 +366,13 @@ const dday: AppMeta = {
         { icon: 'fa-face-smile',       title: 'PiPi의 6단계 리액션', desc: 'D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀝니다.' },
         { icon: 'fa-table-cells-large', title: '홈 화면 위젯',        desc: 'iOS·Android 위젯과 스킨 6종으로 남은 날을 항상 곁에.' },
         { icon: 'fa-bell',             title: '마일스톤 알림',       desc: 'D-100·30·7·1·D-Day마다 PiPi의 해적 메시지로 알립니다.' },
-        { icon: 'fa-wifi',             title: '100% 오프라인',       desc: '서버도 계정도 없이, 모든 기록은 기기 안에.' },
+        { icon: 'fa-wifi',             title: '기록은 전부 기기 안에', desc: '서버도 계정도 없이, 기록은 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
       ],
     },
     ja: {
       tagline: 'すべての瞬間は、\n目的地へ向かう航海',
       lede: '受験・結婚記念日・誕生日まで、大切な日を海賊の航海としてカウントダウン。D-100からD-DayまでPiPiの表情が6段階で変化し、ホーム画面ウィジェットで毎日確認できます。',
+      metaDesc: 'オウムのPiPiがD-100から当日まで6段階で反応するカウントダウンウィジェット。受験・記念日・誕生日をアカウントなしでホーム画面に。iOS · Android 無料。',
       shotsTitle: '残り日数が航海になる瞬間',
       featuresTitle: 'PiPi D-Day を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
@@ -345,13 +388,13 @@ const dday: AppMeta = {
         { icon: 'fa-face-smile',       title: 'PiPiの6段階リアクション', desc: 'D-100からD-DayまでPiPiの表情が6段階で変化します。' },
         { icon: 'fa-table-cells-large', title: 'ホーム画面ウィジェット',  desc: 'iOS·Androidウィジェットとスキン6種で残り日数をいつも。' },
         { icon: 'fa-bell',             title: 'マイルストーン通知',     desc: 'D-100·30·7·1·D-Dayごとに PiPiの海賊メッセージでお知らせ。' },
-        { icon: 'fa-wifi',             title: '100% オフライン',       desc: 'サーバーもアカウントも不要、記録はすべて端末内に。' },
+        { icon: 'fa-wifi',             title: '記録はすべて端末内',     desc: 'サーバーもアカウントも不要、記録は端末にのみ保存されます(通信は広告表示にのみ使用)。' },
       ],
     },
     en: {
       tagline: 'Every moment is a voyage toward your destination.',
       lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
-      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — fully offline, no account. Free on iOS & Android.',
+      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free on iOS & Android.',
       shotsTitle: 'The moment days become a voyage',
       featuresTitle: 'Why PiPi D-Day',
       ctaTitle: 'Start your voyage now',
@@ -367,7 +410,7 @@ const dday: AppMeta = {
         { icon: 'fa-face-smile',       title: "PiPi's 6 reactions",  desc: "PiPi's expression shifts through 6 stages from D-100 to D-Day." },
         { icon: 'fa-table-cells-large', title: 'Home screen widget', desc: 'iOS & Android widgets with 6 skins keep the count always near.' },
         { icon: 'fa-bell',             title: 'Milestone alerts',    desc: 'Pirate messages from PiPi at D-100, 30, 7, 1 and D-Day.' },
-        { icon: 'fa-wifi',             title: '100% offline',        desc: 'No server, no account — every record stays on device.' },
+        { icon: 'fa-wifi',             title: 'Stays on your device', desc: 'No server, no account — records stay on your device (the network is only used to show ads).' },
       ],
     },
   },
@@ -382,11 +425,18 @@ const log: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-log/id6770272665',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.log',
   },
+  release: {
+    ios: { version: '1.0.7', updated: '2026-08-20' },
+    android: { version: '1.0.7', updated: '2026-08-20' },
+    since: '2026-06-09',
+    checkedAt: '2026-08-23',
+  },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '하루의 마음을\n바다 날씨로 남기다',
       lede: '매일의 기분을 9단계 바다 날씨로 기록하면 PiPi가 그 마음에 반응합니다. 선장의 질문으로 하루를 돌아보고, 한 달의 항해를 지도 한 장으로. 계정도 서버도 없이, 모든 기록은 기기 안에.',
+      metaDesc: '하루의 기분을 아홉 가지 바다 날씨로 남기는 항해일지형 감정 일기. 추이 차트와 한 달 항해 지도, 생체인증 잠금까지. iOS · Android 무료.',
       shotsTitle: '마음을 적는 항해일지',
       featuresTitle: '왜 PiPi Log 인가',
       ctaTitle: '지금 항해를 시작하세요',
@@ -402,12 +452,13 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9단계 바다 날씨',   desc: '무지개 바다부터 태풍까지, 기분을 날씨로 기록.' },
         { icon: 'fa-feather',   title: 'PiPi가 마음에 반응', desc: '기록한 기분에 PiPi가 항해 메시지로 답합니다.' },
         { icon: 'fa-pen-nib',   title: '선장의 질문',       desc: '매일 다른 질문으로 하루를 가볍게 돌아봐요.' },
-        { icon: 'fa-lock',      title: '잠금 + 100% 오프라인', desc: '생체인증 잠금, 계정·서버 없이 기기에만 저장.' },
+        { icon: 'fa-lock',      title: '잠금 + 기기 저장',      desc: '생체인증 잠금, 계정·서버 없이 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
       ],
     },
     ja: {
       tagline: '今日の心を、\n海の天気で残す',
       lede: '毎日の気分を9段階の海の天気で記録すると、PiPiがその心に反応します。船長の質問で一日を振り返り、ひと月の航海を一枚の地図に。アカウントもサーバーもなく、すべて端末の中に。',
+      metaDesc: '一日の気分を九つの海の天気で残す航海日誌型の気分日記。推移チャートとひと月の航海マップ、生体認証ロックも。iOS · Android 無料。',
       shotsTitle: '心を綴る航海日誌',
       featuresTitle: 'PiPi Log を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
@@ -423,13 +474,13 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9段階の海の天気',   desc: '虹の海から台風まで、気分を天気で記録。' },
         { icon: 'fa-feather',   title: 'PiPiが心に反応',    desc: '記録した気分にPiPiが航海メッセージで応える。' },
         { icon: 'fa-pen-nib',   title: '船長の質問',        desc: '毎日違う質問で一日を軽く振り返る。' },
-        { icon: 'fa-lock',      title: 'ロック + 100%オフライン', desc: '生体認証ロック、アカウント・サーバーなしで端末内に保存。' },
+        { icon: 'fa-lock',      title: 'ロック + 端末内保存',      desc: '生体認証ロック、アカウント・サーバーなしで端末内に保存(通信は広告表示にのみ使用)。' },
       ],
     },
     en: {
       tagline: 'Log your heart\nas sea weather.',
       lede: "Record each day's mood as one of 9 sea-weathers and PiPi reacts to how you feel. Reflect with the captain's prompt, then turn a month's voyage into a single map. No account, no server — everything stays on your device.",
-      metaDesc: "A voyage-log mood journal: record each day's mood as one of 9 sea-weathers and PiPi reacts. Charts, a shareable monthly map, biometric lock — fully offline. Free on iOS & Android.",
+      metaDesc: "A voyage-log mood journal: record each day's mood as one of 9 sea-weathers and PiPi reacts. Charts, a shareable monthly map, biometric lock — all on your device. Free on iOS & Android.",
       shotsTitle: 'A logbook for your heart',
       featuresTitle: 'Why PiPi Log',
       ctaTitle: 'Start your voyage now',
@@ -445,7 +496,7 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9 sea-weathers',    desc: 'From rainbow seas to typhoons — log your mood as weather.' },
         { icon: 'fa-feather',   title: 'PiPi reacts',        desc: 'PiPi answers your logged mood with a pirate message.' },
         { icon: 'fa-pen-nib',   title: "The captain's prompt", desc: 'A fresh question each day to reflect, lightly.' },
-        { icon: 'fa-lock',      title: 'Locked & 100% offline', desc: 'Biometric lock, no account or server — stored on device.' },
+        { icon: 'fa-lock',      title: 'Locked & on-device',    desc: 'Biometric lock, no account or server — stored on your device (the network is only used to show ads).' },
       ],
     },
   },
@@ -473,7 +524,7 @@ const dialogos: AppMeta = {
         { file: 'home',          label: '고대의 현자와 마주 앉다', desc: '마르쿠스·세네카·에픽테토스·소크라테스 중 오늘의 상대를 고릅니다.' },
         { file: 'chat_marcus',   label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
         { file: 'chat_socrates', label: '답을 주지 않고 되묻는다',   desc: '소크라테스는 결론 대신 당신을 다시 생각하게 합니다.' },
-        { file: 'onboarding',    label: '매일 무료로, 광고 없이',     desc: '계정 가입 없이 매일 무료로 대화를 시작합니다.' },
+        { file: 'onboarding',    label: '매일 무료로, 광고 없이',     desc: '계정 가입 없이 매일 무료로 대화를 시작합니다. 하루 대화량을 늘리려면 Dialogos Pro(자동 갱신 구독)를 선택할 수 있습니다.' },
       ],
       features: [
         { icon: 'fa-feather',     title: '네 명의 현자',     desc: '명상록·편지·엥케이리디온·대화편 — 각자의 목소리로 답합니다.' },
@@ -494,7 +545,7 @@ const dialogos: AppMeta = {
         { file: 'home',          label: '古代の賢者と向き合う', desc: 'マルクス・セネカ・エピクテトス・ソクラテスから今日の相手を選ぶ。' },
         { file: 'chat_marcus',   label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
         { file: 'chat_socrates', label: '答えを与えず、問い返す',   desc: 'ソクラテスは結論ではなく、あなたに問い返します。' },
-        { file: 'onboarding',    label: '毎日無料、広告なし',       desc: 'アカウント登録なしで毎日無料で対話を始めます。' },
+        { file: 'onboarding',    label: '毎日無料、広告なし',       desc: 'アカウント登録なしで毎日無料で対話を始められます。1日の対話量を増やしたい場合は Dialogos Pro(自動更新サブスクリプション)を選べます。' },
       ],
       features: [
         { icon: 'fa-feather',     title: '四人の賢者',       desc: '自省録・手紙・提要・対話篇——それぞれの声で答えます。' },
@@ -515,7 +566,7 @@ const dialogos: AppMeta = {
         { file: 'home',          label: 'Sit with the ancient sages',  desc: "Choose today's mentor from Marcus, Seneca, Epictetus and Socrates." },
         { file: 'chat_marcus',   label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
         { file: 'chat_socrates', label: "He doesn't answer — he asks",  desc: 'Socrates makes you think again instead of handing you a conclusion.' },
-        { file: 'onboarding',    label: 'Free every day, no ads',       desc: 'Start talking for free every day, with no account.' },
+        { file: 'onboarding',    label: 'Free every day, no ads',       desc: 'Start talking for free every day with no account; Dialogos Pro (an auto-renewing subscription) raises the daily limit.' },
       ],
       features: [
         { icon: 'fa-feather',     title: 'Four sages',         desc: 'Meditations, Letters, Enchiridion, Dialogues — each in their own voice.' },
@@ -537,6 +588,12 @@ const draw: AppMeta = {
   stores: {
     ios: 'https://apps.apple.com/app/id6779071131',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
+  },
+  release: {
+    ios: { version: '1.0.6', updated: '2026-08-19' },
+    android: { version: '1.0.6', updated: '2026-08-20' },
+    since: '2026-07-14',
+    checkedAt: '2026-08-23',
   },
   heroShot: 'ai_result',
   content: {
@@ -622,12 +679,18 @@ const wordVoyage: AppMeta = {
     ios: 'https://apps.apple.com/app/id6788949612',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage',
   },
+  release: {
+    ios: { version: '1.0.3', updated: '2026-08-21' },
+    android: { version: '1.0.3', updated: '2026-08-20' },
+    since: '2026-07-13',
+    checkedAt: '2026-08-23',
+  },
   heroShot: 'game',
   content: {
     ko: {
       tagline: '글자를 이어\n섬을 하나씩 개척하라',
-      lede: '원형으로 놓인 글자를 드래그로 이어 낱말을 완성하고, 12개 해역 120개 섬의 바다 지도를 개척하는 한글 워드 퍼즐. 계정 없이 바로 시작하고, 오프라인으로 조용히 즐기세요.',
-      metaDesc: '글자를 드래그로 이어 낱말을 완성하는 오프라인 한글 워드 퍼즐. 12개 해역 120개 섬, 오늘의 퍼즐과 항해일지까지. iOS · Android.',
+      lede: '원형으로 놓인 글자를 드래그로 이어 낱말을 완성하고, 12개 해역 120개 섬의 바다 지도를 개척하는 한글 워드 퍼즐. 계정 없이 바로 시작하고, 진행도는 기기 안에만 조용히 쌓입니다.',
+      metaDesc: '글자를 드래그로 이어 낱말을 완성하는 한글 워드 퍼즐. 12개 해역 120개 섬, 오늘의 퍼즐과 항해일지까지. 계정 없이 iOS · Android.',
       shotsTitle: '낱말로 그리는 바다 지도',
       featuresTitle: '왜 피피 낱말항해인가',
       ctaTitle: '낱말 항해를 시작하세요',
@@ -643,13 +706,13 @@ const wordVoyage: AppMeta = {
         { icon: 'fa-spell-check',  title: '검증된 낱말만',      desc: '표준국어대사전을 바탕으로 검증한 낱말만 담았습니다.' },
         { icon: 'fa-calendar-day', title: '오늘의 퍼즐 · 스트릭', desc: '하루 한 판, 연속 항해 기록이 매일의 동기를 만듭니다.' },
         { icon: 'fa-book-open',    title: '항해일지(낱말 도감)', desc: '발견한 모든 낱말이 항해일지에 영구히 남습니다.' },
-        { icon: 'fa-wifi',         title: '계정 없이 오프라인',  desc: '로그인 없이 바로 시작, 진행도는 기기 안에만 저장됩니다.' },
+        { icon: 'fa-wifi',         title: '계정 없이 바로 시작',  desc: '로그인 없이 시작하고, 진행도는 기기 안에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
       ],
     },
     ja: {
       tagline: '文字をつないで\n島を開拓しよう',
-      lede: '円形に並んだ文字をドラッグでつないで単語を完成し、12海域120の島の海図を開拓する韓国語単語パズル。アカウント不要ですぐ始められ、オフラインで静かに楽しめます。',
-      metaDesc: '文字をドラッグでつないで単語を完成するオフライン韓国語単語パズル。12海域120の島、今日のパズルと航海日誌も。iOS · Android。',
+      lede: '円形に並んだ文字をドラッグでつないで単語を完成し、12海域120の島の海図を開拓する韓国語単語パズル。アカウント不要ですぐ始められ、進捗は端末の中だけに静かに積み上がります。',
+      metaDesc: '文字をドラッグでつないで単語を完成する韓国語単語パズル。12海域120の島、今日のパズルと航海日誌も。アカウント不要、iOS · Android。',
       shotsTitle: '単語で描く海図',
       featuresTitle: 'ピピ ことばの航海を選ぶ理由',
       ctaTitle: '言葉の航海を始めよう',
@@ -665,13 +728,13 @@ const wordVoyage: AppMeta = {
         { icon: 'fa-spell-check',  title: '検証済みの単語だけ',   desc: '標準国語大辞典で検証した単語だけを収録しています。' },
         { icon: 'fa-calendar-day', title: '今日のパズル · 連続記録', desc: '一日一回、連続航海記録が毎日のモチベーションに。' },
         { icon: 'fa-book-open',    title: '航海日誌(単語図鑑)',   desc: '発見したすべての単語が航海日誌に永久に残ります。' },
-        { icon: 'fa-wifi',         title: 'アカウント不要 · オフライン', desc: 'ログインなしですぐ開始、進捗は端末内にのみ保存。' },
+        { icon: 'fa-wifi',         title: 'アカウント不要ですぐ開始', desc: 'ログインなしで始められ、進捗は端末内にのみ保存(通信は広告表示にのみ使用)。' },
       ],
     },
     en: {
       tagline: 'Link letters,\nchart the sea',
-      lede: 'Drag across a ring of letters to form words and chart 120 islands across 12 seas in this Korean word puzzle. No account needed — start instantly and play fully offline.',
-      metaDesc: 'Offline Korean word puzzle: link letters to form words, clear 120 islands across 12 seas, keep a daily streak and a word logbook. iOS & Android.',
+      lede: 'Drag across a ring of letters to form words and chart 120 islands across 12 seas in this Korean word puzzle. No account needed — start instantly, and your progress stays on your device.',
+      metaDesc: 'Korean word puzzle: link letters to form words, clear 120 islands across 12 seas, keep a daily streak and a word logbook. No account, iOS & Android.',
       shotsTitle: 'A sea chart drawn with words',
       featuresTitle: 'Why PiPi Word Voyage',
       ctaTitle: 'Start your word voyage',
@@ -687,13 +750,176 @@ const wordVoyage: AppMeta = {
         { icon: 'fa-spell-check',  title: 'Dictionary-verified words', desc: 'Every word is validated against the Standard Korean Dictionary.' },
         { icon: 'fa-calendar-day', title: 'Daily puzzle & streak',     desc: 'One puzzle a day builds a voyage streak that keeps you coming back.' },
         { icon: 'fa-book-open',    title: 'Voyage logbook',            desc: 'Every word you discover is recorded permanently.' },
-        { icon: 'fa-wifi',         title: 'Offline, no account',       desc: 'Start instantly with no login — progress stays on your device.' },
+        { icon: 'fa-wifi',         title: 'No account needed',         desc: 'Start instantly with no login — progress stays on your device (the network is only used to show ads).' },
       ],
     },
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
-export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos];
+
+// PiPi Bridge — 스토어 미등재(출시 예정). 콘텐츠 근거 = code/pipi_bridge/README.md +
+// 사이트 내 개인정보처리방침(ko/en/zh/vi 병기). 스크린샷 자산이 아직 없어 shots 는 비운다.
+const bridge: AppMeta = {
+  slug: 'pipi-bridge',
+  name: 'PiPi Bridge',
+  status: 'soon',
+  category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean & school prep' },
+  stores: {},
+  content: {
+    ko: {
+      tagline: '한국어가 낯선 아이의\n첫 학교 준비',
+      lede: '한국어가 낯선 4~8세 아이와 부모를 위한 배움 앱. 한국어와 기초 수학, 학교생활 표현, 감정·자연 활동을 네 개의 배움 세계에 80개 활동으로 담았습니다. 광고도 계정도 없고, 부모 안내는 다섯 개 언어로 제공합니다.',
+      metaDesc: '한국어가 낯선 4~8세 아이의 한국어·학교 준비 앱. 네 개 배움 세계 80개 활동, 하루 10분 루틴, 광고·계정 없음. 부모 안내 5개 언어.',
+      shotsTitle: '',
+      featuresTitle: '왜 PiPi Bridge 인가',
+      ctaTitle: '출항 준비 중입니다',
+      ctaSub: '준비가 끝나면 iOS · Android에 조용히 올립니다.',
+      shots: [],
+      features: [
+        { icon: 'fa-clock',        title: '하루 10분 루틴',      desc: '활동 10개, 다섯 개마다 놀이 쉼, 그리고 간격 복습 — 아이 호흡에 맞춰 진행합니다.' },
+        { icon: 'fa-language',     title: '부모 안내 5개 언어',   desc: '한국어·영어·일본어·중국어 간체·베트남어로 부모 화면을 제공합니다.' },
+        { icon: 'fa-volume-high',  title: '한국어 문장 음성',     desc: '79개 문장 음성을 앱에 담아, 인터넷 없이도 발음을 들려줍니다.' },
+        { icon: 'fa-shield-heart', title: '광고·계정·결제 없음',  desc: '아이 화면에 광고가 없고, 진도는 기기 안에만 저장됩니다.' },
+      ],
+    },
+    ja: {
+      tagline: '韓国語がはじめての子の\n学校準備',
+      lede: '韓国語がはじめての4〜8歳の子どもと保護者のための学習アプリ。韓国語と基礎の算数、学校生活の表現、気持ち・自然の活動を、四つの学びの世界に80のアクティビティで収めました。広告もアカウントもなく、保護者向けの案内は五つの言語で提供します。',
+      metaDesc: '韓国語がはじめての4〜8歳向け、韓国語と学校準備のアプリ。四つの学びの世界に80のアクティビティ、1日10分、広告・アカウントなし。保護者案内は5言語。',
+      shotsTitle: '',
+      featuresTitle: 'PiPi Bridge を選ぶ理由',
+      ctaTitle: '出航の準備中です',
+      ctaSub: '仕上がったら iOS · Android に静かに公開します。',
+      shots: [],
+      features: [
+        { icon: 'fa-clock',        title: '1日10分の習慣',        desc: 'アクティビティ10個、5個ごとに遊びの休憩、そして間隔をあけた復習 — 子どもの呼吸に合わせて進みます。' },
+        { icon: 'fa-language',     title: '保護者案内は5言語',     desc: '韓国語・英語・日本語・簡体中国語・ベトナム語で保護者画面を用意しています。' },
+        { icon: 'fa-volume-high',  title: '韓国語の文の音声',      desc: '79文の音声をアプリに収録。ネットがなくても発音を聞けます。' },
+        { icon: 'fa-shield-heart', title: '広告・アカウント・課金なし', desc: '子どもの画面に広告はなく、進捗は端末内にのみ保存されます。' },
+      ],
+    },
+    en: {
+      tagline: 'First Korean,\nfirst school days',
+      lede: 'A learning app for children aged 4–8 who are new to Korean, and for their parents. Korean, early math, classroom phrases and feelings-and-nature activities across four learning worlds and 80 activities. No ads, no account, and a parent guide in five languages.',
+      metaDesc: 'Korean and school-readiness for children aged 4–8 who are new to Korean. Four learning worlds, 80 activities, a 10-minute daily routine, no ads or account. Parent guide in 5 languages.',
+      shotsTitle: '',
+      featuresTitle: 'Why PiPi Bridge',
+      ctaTitle: 'Still fitting out',
+      ctaSub: 'When it is ready, it goes quietly to iOS and Android.',
+      shots: [],
+      features: [
+        { icon: 'fa-clock',        title: 'Ten minutes a day',    desc: 'Ten activities, a play break every five, and spaced review — paced to a small child.' },
+        { icon: 'fa-language',     title: 'Parent guide in 5 languages', desc: 'Korean, English, Japanese, Simplified Chinese and Vietnamese.' },
+        { icon: 'fa-volume-high',  title: 'Korean sentence audio', desc: '79 recorded sentences ship inside the app, so pronunciation works offline.' },
+        { icon: 'fa-shield-heart', title: 'No ads, account or purchases', desc: 'Nothing is sold to the child, and progress stays on the device.' },
+      ],
+    },
+  },
+};
+
+// PiPi Legion Chronicle(피피 군단전기) — 스토어 미등재(출시 예정).
+// 근거 = code/games/pipi_legion/HANDOFF.md + 사이트 내 지원·방침 페이지(0.6.0).
+const legion: AppMeta = {
+  slug: 'pipi-legion',
+  name: 'PiPi Legion Chronicle',
+  nameByLang: { ko: '피피 군단전기', ja: 'ピピ軍団戦記' },
+  status: 'soon',
+  category: { ko: '게임 · 해상 전투', ja: 'ゲーム · 海戦', en: 'Games · Naval duels' },
+  schemaCategory: 'GameApplication',
+  stores: {},
+  content: {
+    ko: {
+      tagline: '한 척을 직접 몰고\n바다에서 겨룬다',
+      lede: '기함 한 척을 손으로 조종하는 소규모 해상 결투. 1:1로 시작해 3:3, 5:5로 넓어지고, 이긴 배는 나포해 이름을 붙여 함대에 넣습니다. 광고도 뽑기도, 부활 결제도 없습니다.',
+      metaDesc: '기함을 직접 조종하는 1:1 해상 결투 게임. 현측 포격과 충각, 나포와 명명, 1:1에서 5:5까지. 광고·가챠·인앱결제 없음.',
+      shotsTitle: '',
+      featuresTitle: '왜 피피 군단전기인가',
+      ctaTitle: '드라이독에서 단장 중',
+      ctaSub: '준비가 끝나면 iOS · Android에 조용히 올립니다.',
+      shots: [],
+      features: [
+        { icon: 'fa-gamepad',   title: '한 척을 직접 조종',    desc: '조이스틱으로 침로와 속력을 잡고, 두 손가락으로 확대·이동하며 위치를 만듭니다.' },
+        { icon: 'fa-crosshairs', title: '현측 포격과 충각',     desc: '거리와 각도가 모두 맞으면 완벽 조준, 정면으로 파고들면 충각입니다.' },
+        { icon: 'fa-anchor',    title: '나포하고 이름 붙이기',  desc: '이긴 배를 나포해 이름을 붙이고 다음 임무에 데려갑니다.' },
+        { icon: 'fa-ban',       title: '광고·가챠·결제 없음',   desc: '부활 결제나 뽑기가 없고, 전투 표식은 능력치에 영향을 주지 않는 기념 기록입니다.' },
+      ],
+    },
+    ja: {
+      tagline: '一隻を自分で操り\n海で競う',
+      lede: '旗艦一隻を自分の手で操る小規模な海戦。1対1から始まり、3対3、5対5へと広がります。勝った船は捕獲して名前をつけ、艦隊に加えます。広告もガチャも、復活課金もありません。',
+      metaDesc: '旗艦を自分で操る1対1の海戦ゲーム。舷側砲撃と衝角、捕獲と命名、1対1から5対5まで。広告・ガチャ・アプリ内課金なし。',
+      shotsTitle: '',
+      featuresTitle: 'ピピ軍団戦記を選ぶ理由',
+      ctaTitle: 'ドライドックで仕上げ中',
+      ctaSub: '仕上がったら iOS · Android に静かに公開します。',
+      shots: [],
+      features: [
+        { icon: 'fa-gamepad',   title: '一隻を自分で操る',      desc: 'ジョイスティックで針路と速力を決め、二本指で拡大・移動して位置を作ります。' },
+        { icon: 'fa-crosshairs', title: '舷側砲撃と衝角',       desc: '距離と角度が揃えば完璧な照準、正面から突っ込めば衝角です。' },
+        { icon: 'fa-anchor',    title: '捕獲して名前をつける',   desc: '勝った船を捕獲し、名前をつけて次の任務に連れて行きます。' },
+        { icon: 'fa-ban',       title: '広告・ガチャ・課金なし', desc: '復活課金もガチャもなく、戦いの印は能力値に影響しない記念の記録です。' },
+      ],
+    },
+    en: {
+      tagline: 'Steer one ship,\nwin one duel',
+      lede: 'A small-scale naval duel where you steer the flagship yourself. It starts one on one, then opens up to three and five a side. Ships you beat are captured, named, and added to your fleet. No ads, no gacha, no paying to revive.',
+      metaDesc: 'A naval duel game where you steer the flagship yourself: broadsides and ramming, capture and naming, one-on-one up to five a side. No ads, gacha or in-app purchases.',
+      shotsTitle: '',
+      featuresTitle: 'Why PiPi Legion Chronicle',
+      ctaTitle: 'Fitting out in drydock',
+      ctaSub: 'When it is ready, it goes quietly to iOS and Android.',
+      shots: [],
+      features: [
+        { icon: 'fa-gamepad',   title: 'You steer the ship',   desc: 'Set heading and throttle with the stick; pinch to zoom and pan while you work for position.' },
+        { icon: 'fa-crosshairs', title: 'Broadsides and ramming', desc: 'Line up range and angle for a perfect shot, or drive straight in and ram.' },
+        { icon: 'fa-anchor',    title: 'Capture and name',     desc: 'Take the ship you beat, give it a name, and bring it on the next mission.' },
+        { icon: 'fa-ban',       title: 'No ads, gacha or purchases', desc: 'Nothing to buy and nothing to roll for; battle marks are keepsakes, not stats.' },
+      ],
+    },
+  },
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion };
+// 순서 = 출시 앱 먼저(최근 출시 순), 그 뒤 '출시 예정' 3척.
+export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos, bridge, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
+/** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */
+export const liveApps: AppMeta[] = appList.filter((a) => a.status === 'live');
+
+/** 앱의 최신 스토어 업데이트일(양 스토어 중 늦은 쪽). 릴리스 정보 없으면 빈 문자열. */
+export function latestUpdate(app: AppMeta): string {
+  const d = [app.release?.ios?.updated, app.release?.android?.updated].filter(Boolean) as string[];
+  return d.length ? d.sort().slice(-1)[0] : '';
+}
+
+/** 앱의 대표 표시 버전 — 양 스토어가 같으면 하나, 다르면 늦게 업데이트된 쪽. */
+export function displayVersion(app: AppMeta): string {
+  const r = app.release;
+  if (!r) return '';
+  if (r.ios && r.android) {
+    if (r.ios.version === r.android.version) return r.ios.version;
+    return r.ios.updated >= r.android.updated ? r.ios.version : r.android.version;
+  }
+  return (r.ios ?? r.android)?.version ?? '';
+}
+
+/** 함대 최신 업데이트일 / 첫 출항일 — 수동 숫자·날짜 하드코딩을 없애기 위한 파생값. */
+export const fleetLastUpdated: string = liveApps.map(latestUpdate).filter(Boolean).sort().slice(-1)[0] ?? '';
+export const fleetSince: string = liveApps.map((a) => a.release?.since).filter(Boolean).sort()[0] ?? '';
+
+/** 날짜 표기 — ko/ja 는 2026.08.20, en 은 Aug 20, 2026. 상대시간("3일 전")은 정적 빌드에서 낡으므로 쓰지 않는다. */
+const EN_MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+export function formatDate(iso: string, lang: Lang): string {
+  if (!iso) return '';
+  const [y, m, d] = iso.split('-');
+  if (lang === 'en') return `${EN_MONTHS[Number(m) - 1]} ${Number(d)}, ${y}`;
+  return `${y}.${m}.${d}`;
+}
+
+/** 카드·랜딩이 함께 쓰는 릴리스 라벨: "v1.0.11 · 2026.08.20 업데이트" */
+export const updatedLabels: Record<Lang, { updated: string; since: string; fleetUpdated: string }> = {
+  ko: { updated: '업데이트', since: '첫 출항', fleetUpdated: '마지막 정비' },
+  ja: { updated: '更新', since: '初就航', fleetUpdated: '最終整備' },
+  en: { updated: 'updated', since: 'first launch', fleetUpdated: 'last maintained' },
+};

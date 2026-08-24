@@ -678,7 +678,7 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   overflow: hidden;
 }
 .footer-grid {
-  display:grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+  display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.4rem;
   padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-subtle);
 }
 .footer-brand { max-width: 380px; }
@@ -946,17 +946,16 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* Respect reduced-motion for continuous loops (orbit + ticker) */
+/* Respect reduced-motion — 선택자 열거는 새 애니메이션을 계속 놓친다(eyebrow 점멸·dispatch bob 등).
+   장식용 모션만 있는 사이트라 전역 가드가 안전하다. */
 @media (prefers-reduced-motion: reduce) {
-  .orbit--a,
-  .orbit--b,
-  .orbit--c,
-  .orbit--d,
-  .ticker-track,
-  .star-main,
-  .currently-pipi img,
-  .hero-stage .halo {
-    animation: none !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

@@ -17,6 +17,8 @@ interface Props {
   alternates: Alternate[];
   ogImage?: string;
   extraCss?: string[];
+  /** 색인 제외 페이지용 — 예: 'noindex,follow'. astro.config 사이트맵 필터와 짝으로 관리한다. */
+  robots?: string;
 }
 
 const {
@@ -24,6 +26,7 @@ const {
   keywords = 'PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development',
   ogImage = DEFAULT_OG,
   extraCss = [],
+  robots,
 } = Astro.props;
 
 const ogLocale = lang === 'ko' ? 'ko_KR' : lang === 'ja' ? 'ja_JP' : 'en_US';
@@ -33,6 +36,7 @@ const orgDescription = lang === 'ko'
   : lang === 'ja'
     ? `人ひとり、オウム一羽のFlutterスタジオ。${liveAppCount}つのアプリが iOS · Android で公開中です。`
     : `A one-human, one-parrot Flutter studio already at sea, with ${liveAppCount} apps shipping on iOS and Android.`;
+const skipLabel = lang === 'ko' ? '본문으로 건너뛰기' : lang === 'ja' ? '本文へスキップ' : 'Skip to content';
 const fontCss = lang === 'ja' ? '/fonts-pretendard-jp.css' : '/fonts-pretendard-kren.css';
 const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/fonts/PretendardVariable.woff2';
 ---
@@ -47,6 +51,7 @@ const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/font
 <meta name="keywords" content={keywords} />
 <meta name="google-site-verification" content="38LJlsbWZHqmzSXNKyybWTFcuVzx8UyajrWhdi8-gAw" />
 
+{robots && <meta name="robots" content={robots} />}
 <link rel="canonical" href={canonical} />
 {alternates.map((a) => (
   <link rel="alternate" hreflang={a.hreflang} href={a.href} />
@@ -66,7 +71,7 @@ const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/font
 <meta property="og:site_name" content="PiFl Labs" />
 <meta property="og:locale" content={ogLocale} />
 
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content={ogImage === DEFAULT_OG ? 'summary_large_image' : 'summary'} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
@@ -92,18 +97,21 @@ const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/font
 <script type="application/ld+json" set:html={JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://pifl-labs.com/#organization',
   name: 'PiFl Labs Co., Ltd.',
   url: 'https://pifl-labs.com',
   logo: 'https://pifl-labs.com/emblem.png',
   description: orgDescription,
   email: 'hello@pifl-labs.com',
   foundingDate: '2026',
+  inLanguage: lang,
   knowsLanguage: ['ko', 'en', 'ja'],
 })} />
 
 <script is:inline src="/theme-init.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">{skipLabel}</a>
 <Nav lang={lang} />
 <slot />
 <Footer lang={lang} />

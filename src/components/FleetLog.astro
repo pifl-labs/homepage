@@ -1,0 +1,98 @@
+---
+// 함대 정비 기록 — 홈 #log 아래에 붙는 "실제로 지금 스토어에 올라간 버전" 섹션.
+// 모든 숫자·날짜는 src/data/apps.ts 의 실측 release 데이터에서 파생한다(하드코딩 금지).
+import {
+  appName, displayVersion, formatDate, fleetLastUpdated, fleetSince,
+  latestUpdate, liveApps, liveAppCount,
+} from '../data/apps';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+// 최신 정비 순 정렬 — "지금 무엇이 움직이고 있나"가 먼저 보이도록.
+const rows = [...liveApps].sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
+
+// "최근 30일" 기준일은 빌드 시각이 아니라 데이터(마지막 정비일)다.
+// 빌드할 때마다 값이 흔들리지 않고, 정비를 멈추면 숫자가 저절로 줄어든다.
+const cutoff = new Date(`${fleetLastUpdated}T00:00:00Z`);
+cutoff.setUTCDate(cutoff.getUTCDate() - 30);
+const cutoffIso = cutoff.toISOString().slice(0, 10);
+const recentCount = rows.filter((a) => latestUpdate(a) >= cutoffIso).length;
+const allRecent = recentCount === liveAppCount;
+
+const checkedAt = liveApps.map((a) => a.release?.checkedAt).filter(Boolean).sort().slice(-1)[0] ?? '';
+
+const copy = {
+  ko: {
+    kicker: '01 / 정비 기록',
+    title: '출항이 끝이 아니라,',
+    titleEm: '거기서 시작입니다.',
+    sub: `첫 배가 바다에 나간 건 ${formatDate(fleetSince, 'ko')}. 그 뒤로 ${allRecent ? `${liveAppCount}척 전부를` : `${liveAppCount}척 중 ${recentCount}척을`} 최근 30일 안에 다시 갑판에 올렸습니다. 아래는 지금 스토어에 실제로 올라가 있는 버전입니다.`,
+    updated: '업데이트',
+    both: '양 스토어 동일',
+    note: `스토어 실측 · ${formatDate(checkedAt, 'ko')} 확인`,
+  },
+  ja: {
+    kicker: '01 / 整備記録',
+    title: '就航は終わりではなく、',
+    titleEm: 'そこからが始まり。',
+    sub: `最初の船が海に出たのは ${formatDate(fleetSince, 'ja')}。それから ${allRecent ? `${liveAppCount}隻すべて` : `${liveAppCount}隻のうち ${recentCount}隻`}を、直近30日でもう一度整備しました。以下はいまストアに並んでいる実際のバージョンです。`,
+    updated: '更新',
+    both: '両ストア同一',
+    note: `ストア実測 · ${formatDate(checkedAt, 'ja')} 確認`,
+  },
+  en: {
+    kicker: '01 / Maintenance log',
+    title: 'Shipping is the start,',
+    titleEm: 'not the finish line.',
+    sub: `The first ship sailed on ${formatDate(fleetSince, 'en')}. Since then, ${allRecent ? `all ${liveAppCount}` : `${recentCount} of ${liveAppCount}`} have been back on deck within the last 30 days. These are the versions live on the stores right now.`,
+    updated: 'updated',
+    both: 'same on both stores',
+    note: `Checked against the stores on ${formatDate(checkedAt, 'en')}`,
+  },
+}[lang];
+---
+<section class="fleet-log-section" id="fleet">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">{copy.kicker}</div>
+      <h2 class="section-title">{copy.title} <span class="italic">{copy.titleEm}</span></h2>
+      <p class="section-sub">{copy.sub}</p>
+    </div>
+
+    <ol class="fleet-log">
+      {rows.map((app) => {
+        const r = app.release!;
+        const split = r.ios && r.android && r.ios.version !== r.android.version;
+        return (
+          <li class="fleet-row">
+            <a class="fleet-link" href={`/${lang}/apps/${app.slug}/`}>
+              <img class="fleet-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt="" width="44" height="44" loading="lazy" />
+              <span class="fleet-main">
+                <span class="fleet-name">{appName(app, lang)}</span>
+                <span class="fleet-cat">{app.category[lang]}</span>
+              </span>
+              <span class="fleet-meta">
+                {split ? (
+                  <span class="fleet-ver">
+                    <span class="fleet-chip"><i class="fab fa-apple" aria-hidden="true"></i> v{r.ios!.version}</span>
+                    <span class="fleet-chip"><i class="fab fa-google-play" aria-hidden="true"></i> v{r.android!.version}</span>
+                  </span>
+                ) : (
+                  <span class="fleet-ver">
+                    <span class="fleet-chip fleet-chip--solo">v{displayVersion(app)}</span>
+                    <span class="fleet-both">{copy.both}</span>
+                  </span>
+                )}
+                <time class="fleet-date" datetime={latestUpdate(app)}>{formatDate(latestUpdate(app), lang)} {copy.updated}</time>
+              </span>
+            </a>
+          </li>
+        );
+      })}
+    </ol>
+
+    <p class="fleet-note">{copy.note}</p>
+  </div>
+</section>

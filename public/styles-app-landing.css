@@ -168,14 +168,33 @@
    ============================================================ */
 .apps-home { padding: var(--s-xl) 0; }
 .app-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-md); }
+/* 카드 컨테이너 = article. 안쪽 .app-card-main(랜딩 링크) + .app-card-stores(스토어 직행)
+   — 중첩 <a> 를 피하려고 앵커를 형제로 분리했다. */
 .app-card {
-  display: grid; grid-template-columns: auto 1fr auto; align-items: center;
-  gap: 1.25rem; padding: 1.6rem; text-decoration: none;
+  display: flex; flex-direction: column;
   background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-lg); overflow: hidden;
   transition: transform var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease),
     box-shadow var(--dur-base) var(--ease);
 }
+.app-card-main {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center;
+  gap: 1.25rem; padding: 1.6rem; text-decoration: none; flex: 1;
+}
+.app-card-stores {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  padding: .75rem 1.6rem 1.1rem;
+  border-top: 1px solid var(--border-default);
+}
+.app-card-store {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .42rem .85rem; border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default);
+  font-family: var(--font-code); font-size: .72rem; font-weight: 600;
+  color: var(--text-secondary); text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.app-card-store:hover { border-color: var(--accent-warm); color: var(--accent-warm); }
 .app-card:hover { transform: translateY(-4px); border-color: var(--border-strong); box-shadow: var(--shadow-glow-sm); }
 .app-card-icon { width: 64px; height: 64px; border-radius: 16px; box-shadow: var(--shadow-sm); }
 .app-card-body { min-width: 0; }
@@ -191,12 +210,14 @@
 .app-card-tag { font-size: .95rem; line-height: 1.5; color: var(--text-secondary); }
 .app-card-go { color: var(--accent-warm); font-size: 1.1rem; transition: transform var(--dur-fast) var(--ease); }
 .app-card:hover .app-card-go { transform: translateX(4px); }
+.app-card-grid { align-items: stretch; }
 
 @media (max-width: 760px) {
   .app-card-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .app-card { grid-template-columns: auto 1fr; }
+  .app-card-main { grid-template-columns: auto 1fr; padding: 1.25rem; }
+  .app-card-stores { padding: .7rem 1.25rem 1rem; }
   .app-card-go { display: none; }
 }
 
@@ -215,3 +236,73 @@
   .app-features { grid-template-columns: 1fr; }
   .app-shots-scroll { grid-auto-columns: 78vw; }
 }
+
+/* ============================================================
+   HOME — 함대 정비 기록 (components/FleetLog.astro)
+   스토어 실측 버전·업데이트일을 한 줄씩. 숫자는 apps.ts 파생.
+   ============================================================ */
+.fleet-log-section { padding: var(--s-xl) 0; }
+.fleet-log { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.fleet-row { margin: 0; }
+.fleet-link {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem;
+  padding: .9rem 1.15rem; text-decoration: none;
+  background: var(--bg-card); border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.fleet-link:hover { border-color: var(--border-strong); transform: translateX(3px); }
+.fleet-icon { width: 44px; height: 44px; border-radius: 11px; box-shadow: var(--shadow-sm); }
+.fleet-main { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
+.fleet-name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--text-primary); }
+.fleet-cat { font-family: var(--font-code); font-size: .7rem; color: var(--text-muted); }
+.fleet-meta { display: flex; flex-direction: column; align-items: flex-end; gap: .28rem; text-align: right; }
+.fleet-ver { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; justify-content: flex-end; }
+.fleet-chip {
+  font-family: var(--font-code); font-size: .72rem; font-weight: 600;
+  padding: 3px 9px; border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--neon-teal) 14%, transparent); color: var(--neon-teal);
+  white-space: nowrap;
+}
+.fleet-both { font-family: var(--font-code); font-size: .66rem; color: var(--text-muted); }
+.fleet-date { font-family: var(--font-code); font-size: .72rem; color: var(--text-secondary); white-space: nowrap; }
+.fleet-note {
+  margin-top: 1.1rem; text-align: right;
+  font-family: var(--font-code); font-size: .7rem; color: var(--text-muted);
+}
+
+@media (max-width: 620px) {
+  .fleet-link { grid-template-columns: auto 1fr; row-gap: .5rem; }
+  .fleet-meta { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; }
+  .fleet-note { text-align: left; }
+}
+
+/* ============================================================
+   HOME — 앱 카드 릴리스 줄 (index.astro 카드 그리드)
+   ============================================================ */
+.app-card-rel {
+  display: block; margin-top: .55rem;
+  font-family: var(--font-code); font-size: .7rem; color: var(--text-muted);
+}
+.app-card-rel b { color: var(--text-secondary); font-weight: 600; }
+
+/* 앱 랜딩 — 스토어 실측 릴리스 줄 (버전 · 업데이트일 · 첫 출항) */
+.app-rel-line {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem;
+  margin-top: 1.1rem;
+  font-family: var(--font-code); font-size: .74rem; color: var(--text-muted);
+}
+.app-rel-ver {
+  font-weight: 600; padding: 3px 10px; border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--neon-teal) 14%, transparent); color: var(--neon-teal);
+}
+.app-rel-sep { opacity: .5; }
+
+/* 앱 랜딩 — 신뢰 링크 행(방침·문의) */
+.app-trust {
+  display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center;
+  margin: 1.6rem 0 .4rem;
+  font-family: var(--font-code); font-size: .76rem;
+}
+.app-trust a { color: var(--text-muted); text-decoration: none; }
+.app-trust a:hover { color: var(--accent-warm); text-decoration: underline; }

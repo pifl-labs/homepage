@@ -1,18 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { appList, appName, statusLabels } from '../../data/apps';
+import AppCatalog from '../../components/AppCatalog.astro';
+import FleetLog from '../../components/FleetLog.astro';
+import AppsJsonLd from '../../components/AppsJsonLd.astro';
+import { fleetLastUpdated, formatDate, liveAppCount } from '../../data/apps';
 const lang = 'ko' as const;
 ---
 <BaseLayout
   lang="ko"
   title={"PiFl Labs — 앵무새 한 마리짜리 크루. 그런 소문이 있다."}
-  description={"사람 하나와 앵무새 하나가 띄운 Flutter 스튜디오. 2026년 출항, 앱 일곱이 양 스토어에서 항해 중 — 코드베이스 하나, 스토어 둘, 괴물은 없습니다."}
+  description={`사람 하나와 앵무새 하나가 띄운 Flutter 스튜디오. 앱 ${liveAppCount}개가 iOS·Android 양 스토어에서 항해 중 — 코드베이스 하나, 스토어 둘, 괴물은 없습니다.`}
   canonical="https://pifl-labs.com/ko/"
   keywords={"PiFl Labs, Flutter, 앱개발, 크로스플랫폼, iOS, Android, 소프트웨어 개발"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
   ogImage="https://pifl-labs.com/pifl-ship-og.jpg"
   extraCss={['/styles-app-landing.css']}
 >
+<main id="main">
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="container">
@@ -27,19 +31,19 @@ const lang = 'ko' as const;
         </h1>
 
         <p class="hero-lede reveal d2">
-          PiFl Labs는 <em>조용한 크로스플랫폼</em> 앱을 만드는 작은 스튜디오입니다. 코드베이스 하나, 스토어 둘, 괴물은 없어요. 사람 하나와, 모자를 한꺼번에 열 개쯤 쓴 — 정말로요 — <em>일등항해사</em> 한 마리. 혼자, 그러나 혼자가 아니게.
+          PiFl Labs는 <em>조용한 크로스플랫폼</em> 앱을 만드는 작은 스튜디오입니다. 코드베이스 하나, 스토어 둘, 괴물은 없어요. 사람 하나와, 모자를 한 무더기 쓴 — 정말로요 — <em>일등항해사</em> 한 마리. 혼자, 그러나 혼자가 아니게.
         </p>
 
         <div class="hero-cta-row reveal d3">
-          <a class="btn btn-primary" href="#crew">크루 만나러 가기 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          <a class="btn btn-ghost" href="#about">이름 이야기 <i class="fas fa-book-open" aria-hidden="true"></i></a>
+          <a class="btn btn-primary" href="#apps">앱 보러 가기 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#crew">크루 만나러 가기 <i class="fas fa-book-open" aria-hidden="true"></i></a>
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>7</b> 앱 출항</span>
+          <span><b>{liveAppCount}</b> 앱 출항</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
-          <span><b>100%</b> Flutter</span>
-          <span><b>14+</b> 피피 모습</span>
+          <span><b>무료</b> · 계정 없이</span>
+          <span><b>{formatDate(fleetLastUpdated, lang)}</b> 마지막 정비</span>
         </div>
       </div>
 
@@ -75,7 +79,7 @@ const lang = 'ko' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>이미 바다 위</i> · 다음 해도 그리는 중</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>출항한 함대:</i> 앱 일곱</span>
+    <span><b>// 04</b> <i>출항한 함대:</i> 앱 {liveAppCount}척</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 사람 하나, <i>앵무새 하나,</i> 모자는 한 무더기.</span>
     <span class="sep">✦</span>
@@ -85,66 +89,41 @@ const lang = 'ko' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>이미 바다 위</i> · 다음 해도 그리는 중</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>출항한 함대:</i> 앱 일곱</span>
+    <span><b>// 04</b> <i>출항한 함대:</i> 앱 {liveAppCount}척</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> 사람 하나, <i>앵무새 하나,</i> 모자는 한 무더기.</span>
     <span class="sep">✦</span>
   </div>
 </div>
 
-<!-- APPS SECTION -->
-<section class="apps-home" id="apps">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">00 / 함대</div>
-      <h2 class="section-title">작은 함대, <span class="italic">이미 바다 위.</span></h2>
-      <p class="section-sub">
-        PiPi가 만든 앱들입니다. 코드베이스 하나, 스토어 둘 — 조용하지만 정성껏.
-      </p>
-    </div>
-    <div class="app-card-grid">
-      {appList.map((app) => (
-        <a class="app-card" href={`/${lang}/apps/${app.slug}/`}>
-          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${appName(app, lang)} 아이콘`} width="64" height="64" loading="lazy" />
-          <div class="app-card-body">
-            <div class="app-card-head">
-              <span class="app-card-name">{appName(app, lang)}</span>
-              <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
-            </div>
-            <span class="app-card-cat">{app.category[lang]}</span>
-            <p class="app-card-tag">{app.content[lang].tagline}</p>
-          </div>
-          <span class="app-card-go" aria-hidden="true">→</span>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+<AppCatalog lang="ko" />
+
+<FleetLog lang="ko" />
 
 <!-- CREW SECTION -->
 <section class="crew-section" id="crew">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">01 / 승선 명부</div>
+      <div class="kicker">02 / 승선 명부</div>
       <h2 class="section-title">전 크루 소개. <span class="italic">전부 이 새 한 마리입니다.</span></h2>
       <p class="section-sub">
-        제 <em>AI 항해사</em> PiPi는 하루에 역할 열네 개를 소화합니다. 선장, 지도 그리는 사람, 응원단장, 그리고 — 네, 해먹에 누운 저 친구도 같은 앵무새입니다. 모자 하나하나가 그날 맡은 일이에요. 한 번 눌러보세요.
+        제 <em>AI 항해사</em> PiPi는 하루에 역할 열두 개를 소화합니다. 선장, 지도 그리는 사람, 응원단장, 그리고 — 네, 해먹에 누운 저 친구도 같은 앵무새입니다. 모자 하나하나가 그날 맡은 일이에요. 한 번 눌러보세요.
       </p>
     </div>
 
     <div class="sticker-wall">
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture><span class="label">제독</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-helm-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-helm-trim.png" alt="" loading="lazy"></picture><span class="label">조타수</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-explorer-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-explorer-trim.png" alt="" loading="lazy"></picture><span class="label">척후병</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture><span class="label">항해사</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" loading="lazy"></picture><span class="label">감독관</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-celebrate-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-celebrate-trim.png" alt="" loading="lazy"></picture><span class="label">분위기 담당</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-eyepatch.webp" type="image/webp"><img src="/assets/pipi/pipi-eyepatch.png" alt="" loading="lazy"></picture><span class="label">무법자</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" loading="lazy"></picture><span class="label">왕</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" loading="lazy"></picture><span class="label">갑판병</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-skull.webp" type="image/webp"><img src="/assets/pipi/pipi-skull.png" alt="" loading="lazy"></picture><span class="label">졸리 로저</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-wink-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-wink-trim.png" alt="" loading="lazy"></picture><span class="label">전령</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-hammock-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-hammock-trim.png" alt="" loading="lazy"></picture><span class="label">휴식 중</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">제독</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-helm-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-helm-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">조타수</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-explorer-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-explorer-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">척후병</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">항해사</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">감독관</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-celebrate-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-celebrate-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">분위기 담당</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-eyepatch.webp" type="image/webp"><img src="/assets/pipi/pipi-eyepatch.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">무법자</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">왕</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">갑판병</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-skull.webp" type="image/webp"><img src="/assets/pipi/pipi-skull.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">졸리 로저</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-wink-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-wink-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">전령</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-hammock-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-hammock-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">휴식 중</span></div>
     </div>
 
     <div class="annotation-strip">
@@ -159,13 +138,13 @@ const lang = 'ko' as const;
   <div class="container">
     <div class="currently-inner">
       <div class="currently-pipi">
-        <picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" loading="lazy"></picture>
+        <picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" width="256" height="256" loading="lazy"></picture>
         <div class="currently-bubble">다음 항해를 준비 중 🔭</div>
       </div>
       <div>
         <div class="currently-meta">● 지금</div>
         <div class="currently-text">
-          조용히, 그러나 쉬지 않고. <b>지금 앱 일곱 개가 양 스토어에서 항해 중입니다.</b> 다음 한 척(Dialogos)은 드라이독에서 단장 중. 상표 출원 중 — 있는 건 사람 하나, 앵무새 하나, 코드베이스, 그리고 커피입니다.
+          조용히, 그러나 쉬지 않고. <b>지금 앱 {liveAppCount}개가 양 스토어에서 항해 중이고, 가장 최근 정비는 {formatDate(fleetLastUpdated, lang)}입니다.</b> 다음 배들은 드라이독에서 단장 중 — Dialogos도 그중 하나. 상표 출원 중 — 있는 건 사람 하나, 앵무새 하나, 코드베이스, 그리고 커피입니다.
         </div>
       </div>
       <div class="currently-badge">진행 중</div>
@@ -177,7 +156,7 @@ const lang = 'ko' as const;
 <section class="about" id="about">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">02 / 이름에 대하여</div>
+      <div class="kicker">03 / 이름에 대하여</div>
       <h2 class="section-title">두 글자에 <span class="italic">농담 하나.</span></h2>
     </div>
 
@@ -189,7 +168,7 @@ const lang = 'ko' as const;
         <div class="logbook-entry">
           <p>반은 수학, 반은 말장난인 이름을 원했습니다. <strong>Pi</strong>는 소프트웨어의 무한 루프. <strong>Fl</strong>은 하나의 코드베이스로 모든 플랫폼을 날아다니게 해주는 프레임워크.</p>
           <p>둘을 붙이면 <strong>PiFl</strong> — 빠르게 읽으면 발음이 새는 해적처럼 들립니다. 괜찮아요. 저희 컨셉과 잘 맞습니다.</p>
-          <p>일등항해사는 코드를 짜는 앵무새 — 말하자면, 사람 하나가 키를 잡고 모든 걸 책임지는 동안 옆자리에 탄 AI입니다. 모자는 열네 개, 용골은 하나.</p>
+          <p>일등항해사는 코드를 짜는 앵무새 — 말하자면, 사람 하나가 키를 잡고 모든 걸 책임지는 동안 옆자리에 탄 AI입니다. 모자는 열두 개, 용골은 하나.</p>
         </div>
         <div class="logbook-signature">— 크루 일동</div>
       </div>
@@ -231,7 +210,7 @@ const lang = 'ko' as const;
       괴물은 없습니다.
     </p>
     <div class="quote-by">
-      <picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" loading="lazy"></picture> — 일등항해사 PiPi
+      <picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" width="256" height="256" loading="lazy"></picture> — 일등항해사 PiPi
     </div>
   </div>
 </section>
@@ -240,22 +219,22 @@ const lang = 'ko' as const;
 <section class="join" id="log">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">03 / 항해 기록</div>
+      <div class="kicker">04 / 항해 기록</div>
       <h2 class="section-title">조용하지만 <span class="italic">계속 움직이는 중.</span></h2>
       <p class="section-sub">
-        이미 일곱 척이 바다 위에 있습니다. <em>다음 항해도 준비 중.</em> 이번 분기 갑판 위에 올라온 것들입니다.
+        이미 {liveAppCount}척이 바다 위에 있습니다. <em>다음 항해도 준비 중.</em> 지금 갑판 위에서 벌어지고 있는 일들입니다.
       </p>
     </div>
 
     <div class="dispatch-grid">
       <article class="dispatch dispatch--live">
         <div class="dispatch-head">
-          <span class="slot-tag">기록 · 이번 분기</span>
+          <span class="slot-tag">기록 · 지금</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">출항</span> 완료</div>
-          <div class="slot-desc">Focus · Words · D-Day · Log · Hello · Draw · 낱말항해 — 일곱 척이 양 스토어에서 항해 중. 기능은 적게, 정성은 많이.</div>
+          <div class="slot-desc">{liveAppCount}척이 양 스토어에서 항해 중. 기능은 적게, 정성은 많이 — 그리고 내놓은 뒤에도 계속 손봅니다.</div>
         </div>
       </article>
 
@@ -263,7 +242,7 @@ const lang = 'ko' as const;
         <div class="dispatch-head">
           <span class="slot-tag">기록 · 다음</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">배</span> 정비</div>
           <div class="slot-desc">디자인 시스템, 모듈러 Dart, 아이콘 그리드. 아무도 박수쳐주지 않지만 다들 의지하게 되는 기반 작업.</div>
@@ -274,20 +253,24 @@ const lang = 'ko' as const;
         <div class="dispatch-head">
           <span class="slot-tag">기록 · 곧</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">다음</span> 출항</div>
-          <div class="slot-desc">Dialogos가 드라이독에서 단장 중. 준비되면, 조용히 바다로.</div>
+          <div class="slot-desc">드라이독에는 아직 몇 척이 더 있습니다 — Dialogos를 포함해, 준비된 배부터 조용히 내보냅니다.</div>
         </div>
       </article>
     </div>
 
     <div class="join-cta">
       <a class="btn btn-primary btn-large" href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> 인사 남기기</a>
-      <p class="hint">엽서 한 장이면 충분해요 — <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></p>
+      <p class="hint">엽서 한 장이면 충분해요 — <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text">hello (at) pifl-labs.com</span></a></p>
     </div>
   </div>
 </section>
+
+</main>
+
+<AppsJsonLd lang="ko" />
 
 <!-- FOOTER -->
 </BaseLayout>

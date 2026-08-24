@@ -7,3 +7,9 @@
 /ja/apps/dialogos/sources/meditations-book-5  /ja/apps/dialogos/sources/meditations  301
 /en/apps/dialogos/sources/meditations-book-5  /en/apps/dialogos/sources/meditations  301
 /apps/dialogos/sources/meditations-book-5  /en/apps/dialogos/sources/meditations  301
+
+# PiPi Legion 법적·지원 문서는 한/영 병기 한국어 기준 단일 페이지로 운영
+/en/apps/pipi-legion/privacy  /ko/apps/pipi-legion/privacy/  302
+/ja/apps/pipi-legion/privacy  /ko/apps/pipi-legion/privacy/  302
+/en/apps/pipi-legion/support  /ko/apps/pipi-legion/support/  302
+/ja/apps/pipi-legion/support  /ko/apps/pipi-legion/support/  302

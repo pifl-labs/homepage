@@ -1,18 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { appList, appName, statusLabels } from '../../data/apps';
+import AppCatalog from '../../components/AppCatalog.astro';
+import FleetLog from '../../components/FleetLog.astro';
+import AppsJsonLd from '../../components/AppsJsonLd.astro';
+import { fleetLastUpdated, formatDate, liveAppCount } from '../../data/apps';
 const lang = 'en' as const;
 ---
 <BaseLayout
   lang="en"
   title={"PiFl Labs — A crew of one parrot. Allegedly."}
-  description={"A one-human, one-parrot Flutter studio already at sea — seven apps shipping on both stores. One codebase, two stores, zero krakens."}
+  description={`A one-human, one-parrot Flutter studio already at sea — ${liveAppCount} apps shipping on both stores. One codebase, two stores, zero krakens.`}
   canonical="https://pifl-labs.com/en/"
   keywords={"PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
   ogImage="https://pifl-labs.com/pifl-ship-og.jpg"
   extraCss={['/styles-app-landing.css']}
 >
+<main id="main">
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="container">
@@ -31,15 +35,15 @@ const lang = 'en' as const;
         </p>
 
         <div class="hero-cta-row reveal d3">
-          <a class="btn btn-primary" href="#crew">Meet the crew <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          <a class="btn btn-ghost" href="#about">The story <i class="fas fa-book-open" aria-hidden="true"></i></a>
+          <a class="btn btn-primary" href="#apps">See the apps <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#crew">Meet the crew <i class="fas fa-book-open" aria-hidden="true"></i></a>
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>7</b> apps shipped</span>
+          <span><b>{liveAppCount}</b> apps shipped</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
-          <span><b>100%</b> Flutter</span>
-          <span><b>14+</b> pipi forms</span>
+          <span><b>Free</b> · no account</span>
+          <span><b>{formatDate(fleetLastUpdated, lang)}</b> last maintained</span>
         </div>
       </div>
 
@@ -76,7 +80,7 @@ const lang = 'en' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>Already at sea</i> · charting what's next</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>Fleet at sea:</i> 7 apps</span>
+    <span><b>// 04</b> <i>Fleet at sea:</i> {liveAppCount} apps</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> One human. <i>One parrot.</i> Many hats.</span>
     <span class="sep">✦</span>
@@ -86,66 +90,41 @@ const lang = 'en' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>Already at sea</i> · charting what's next</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>Fleet at sea:</i> 7 apps</span>
+    <span><b>// 04</b> <i>Fleet at sea:</i> {liveAppCount} apps</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> One human. <i>One parrot.</i> Many hats.</span>
     <span class="sep">✦</span>
   </div>
 </div>
 
-<!-- APPS SECTION -->
-<section class="apps-home" id="apps">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">00 / Fleet</div>
-      <h2 class="section-title">A small fleet, <span class="italic">already at sea.</span></h2>
-      <p class="section-sub">
-        The apps PiPi makes. One codebase, two stores — quiet, but made with care.
-      </p>
-    </div>
-    <div class="app-card-grid">
-      {appList.map((app) => (
-        <a class="app-card" href={`/${lang}/apps/${app.slug}/`}>
-          <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={`${appName(app, lang)} icon`} width="64" height="64" loading="lazy" />
-          <div class="app-card-body">
-            <div class="app-card-head">
-              <span class="app-card-name">{appName(app, lang)}</span>
-              <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
-            </div>
-            <span class="app-card-cat">{app.category[lang]}</span>
-            <p class="app-card-tag">{app.content[lang].tagline}</p>
-          </div>
-          <span class="app-card-go" aria-hidden="true">→</span>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+<AppCatalog lang="en" />
+
+<FleetLog lang="en" />
 
 <!-- CREW SECTION -->
 <section class="crew-section" id="crew">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">01 / The Manifest</div>
+      <div class="kicker">02 / The Manifest</div>
       <h2 class="section-title">Meet the entire crew. <span class="italic">It's one bird.</span></h2>
       <p class="section-sub">
-        PiPi, my <em>AI first mate</em>, does fourteen jobs. Captain, cartographer, cheerleader, and yes — the one in the hammock. Every hat is a context she gets pulled into. Tap one.
+        PiPi, my <em>AI first mate</em>, does twelve jobs. Captain, cartographer, cheerleader, and yes — the one in the hammock. Every hat is a context she gets pulled into. Tap one.
       </p>
     </div>
 
     <div class="sticker-wall">
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture><span class="label">Admiral</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-helm-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-helm-trim.png" alt="" loading="lazy"></picture><span class="label">Helmsman</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-explorer-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-explorer-trim.png" alt="" loading="lazy"></picture><span class="label">Scout</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture><span class="label">Navigator</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" loading="lazy"></picture><span class="label">Inspector</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-celebrate-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-celebrate-trim.png" alt="" loading="lazy"></picture><span class="label">Morale</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-eyepatch.webp" type="image/webp"><img src="/assets/pipi/pipi-eyepatch.png" alt="" loading="lazy"></picture><span class="label">Rogue</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" loading="lazy"></picture><span class="label">Royalty</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" loading="lazy"></picture><span class="label">Deckhand</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-skull.webp" type="image/webp"><img src="/assets/pipi/pipi-skull.png" alt="" loading="lazy"></picture><span class="label">Jolly</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-wink-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-wink-trim.png" alt="" loading="lazy"></picture><span class="label">Relay</span></div>
-      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-hammock-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-hammock-trim.png" alt="" loading="lazy"></picture><span class="label">Off-duty</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Admiral</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-helm-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-helm-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Helmsman</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-explorer-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-explorer-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Scout</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Navigator</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Inspector</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-celebrate-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-celebrate-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Morale</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-eyepatch.webp" type="image/webp"><img src="/assets/pipi/pipi-eyepatch.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Rogue</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Royalty</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Deckhand</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-skull.webp" type="image/webp"><img src="/assets/pipi/pipi-skull.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Jolly</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-wink-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-wink-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Relay</span></div>
+      <div class="sticker sticker--clean"><picture><source srcset="/assets/pipi/pipi-hammock-trim.webp" type="image/webp"><img src="/assets/pipi/pipi-hammock-trim.png" alt="" width="256" height="256" loading="lazy"></picture><span class="label">Off-duty</span></div>
     </div>
 
     <div class="annotation-strip">
@@ -160,13 +139,13 @@ const lang = 'en' as const;
   <div class="container">
     <div class="currently-inner">
       <div class="currently-pipi">
-        <picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" loading="lazy"></picture>
+        <picture><source srcset="/assets/pipi/pipi-king.webp" type="image/webp"><img src="/assets/pipi/pipi-king.png" alt="" width="256" height="256" loading="lazy"></picture>
         <div class="currently-bubble">Charting what's next 🔭</div>
       </div>
       <div>
         <div class="currently-meta">● Currently</div>
         <div class="currently-text">
-          Heads down, sails up. <b>Seven apps are out at sea on both stores.</b> One more (Dialogos) is still in drydock. Trademark pending — and there's still one human, one parrot, a codebase, and a lot of coffee.
+          Heads down, sails up. <b>{liveAppCount} apps are out at sea on both stores, and the most recent refit landed on {formatDate(fleetLastUpdated, lang)}.</b> More ships are in drydock — Dialogos among them. Trademark pending — and there's still one human, one parrot, a codebase, and a lot of coffee.
         </div>
       </div>
       <div class="currently-badge">Live log</div>
@@ -178,7 +157,7 @@ const lang = 'en' as const;
 <section class="about" id="about">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">02 / The Name</div>
+      <div class="kicker">03 / The Name</div>
       <h2 class="section-title">Two syllables. <span class="italic">One dumb joke.</span></h2>
     </div>
 
@@ -190,7 +169,7 @@ const lang = 'en' as const;
         <div class="logbook-entry">
           <p>We wanted a name that was half math, half nonsense. <strong>Pi</strong> for the endless loop of software. <strong>Fl</strong> for the framework that lets one codebase fly across every platform.</p>
           <p>Put them together and you get <strong>PiFl</strong> — which, read fast, sounds like a pirate with a lisp. Good. That's on-brand.</p>
-          <p>Our first mate is a parrot who codes — which is to say, she's the AI that rides shotgun while one human steers and signs off on everything. Fourteen hats, one keel.</p>
+          <p>Our first mate is a parrot who codes — which is to say, she's the AI that rides shotgun while one human steers and signs off on everything. Twelve hats, one keel.</p>
         </div>
         <div class="logbook-signature">— the crew</div>
       </div>
@@ -232,7 +211,7 @@ const lang = 'en' as const;
       Zero krakens.
     </p>
     <div class="quote-by">
-      <picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" loading="lazy"></picture> — PiPi, first mate
+      <picture><source srcset="/assets/pipi/pipi-sailor.webp" type="image/webp"><img src="/assets/pipi/pipi-sailor.png" alt="" width="256" height="256" loading="lazy"></picture> — PiPi, first mate
     </div>
   </div>
 </section>
@@ -241,22 +220,22 @@ const lang = 'en' as const;
 <section class="join" id="log">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">03 / Dispatches</div>
+      <div class="kicker">04 / Dispatches</div>
       <h2 class="section-title">From the log. <span class="italic">Quiet but moving.</span></h2>
       <p class="section-sub">
-        Seven apps are already live. We're <em>not done yet.</em> Here's what's on deck this season.
+        {liveAppCount} apps are already live. We're <em>not done yet.</em> Here's what's on deck right now.
       </p>
     </div>
 
     <div class="dispatch-grid">
       <article class="dispatch dispatch--live">
         <div class="dispatch-head">
-          <span class="slot-tag">Entry · this season</span>
+          <span class="slot-tag">Entry · now</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">Already</span> shipped</div>
-          <div class="slot-desc">Focus, Words, D-Day, Log, Hello, Draw and Word Voyage — seven apps live on both stores. Short on features, long on care.</div>
+          <div class="slot-desc">{liveAppCount} apps live on both stores. Short on features, long on care — and we keep working on them after launch.</div>
         </div>
       </article>
 
@@ -264,7 +243,7 @@ const lang = 'en' as const;
         <div class="dispatch-head">
           <span class="slot-tag">Entry · next</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-monocle.webp" type="image/webp"><img src="/assets/pipi/pipi-monocle.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role">Rig <span class="italic">the ship</span></div>
           <div class="slot-desc">Design system, modular Dart, icon grids. The plumbing no one applauds but everyone relies on.</div>
@@ -275,20 +254,24 @@ const lang = 'en' as const;
         <div class="dispatch-head">
           <span class="slot-tag">Entry · soon</span>
         </div>
-        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" loading="lazy"></picture></div>
+        <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-compass.webp" type="image/webp"><img src="/assets/pipi/pipi-compass.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">Next</span> to sail</div>
-          <div class="slot-desc">Dialogos is fitting out in drydock. When it's ready, quietly out to sea.</div>
+          <div class="slot-desc">A few more ships are still in drydock — Dialogos among them. We launch each one when it is ready, quietly.</div>
         </div>
       </article>
     </div>
 
     <div class="join-cta">
       <a class="btn btn-primary btn-large" href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> Say hi</a>
-      <p class="hint">We like a good postcard — <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text"></span></a></p>
+      <p class="hint">We like a good postcard — <a href="#" data-email-user="hello" data-email-domain="pifl-labs.com"><span class="email-text">hello (at) pifl-labs.com</span></a></p>
     </div>
   </div>
 </section>
+
+</main>
+
+<AppsJsonLd lang="en" />
 
 <!-- FOOTER -->
 </BaseLayout>
