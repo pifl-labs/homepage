@@ -57,6 +57,10 @@
 - 머지 후 기본 브랜치 재빌드·재검증 PASS
 - ⚠️ 로컬 main 에 미푸시 커밋(`83f8682` Legion 지원 페이지)이 남아 있어 squash 후 fast-forward 실패 → `git reset --hard origin/main`로 정렬(스쿼시가 내 작업 전부를 담았는지 트리 diff 0 확인 후 실행)
 
+### 후속 — 푸터 잠자는 PiPi 세로 늘어남 수정 (PR #43 머지, `main@eacc1c1`)
+
+대표가 라이브에서 발견: 푸터 우측 잠자는 PiPi(`.footer-sleep`)가 96×256 으로 세로 왜곡. **원인 = 이번 세션의 CLS 방지 부작용** — 1024×1024 pipi 스티커에 `width="256" height="256"` 속성을 일괄 추가했는데 `.footer-sleep` 만 CSS 가 `width: 96px`(height 없음)이라 height 속성값(256)이 그대로 남았다. fix = `.footer-sleep { height: auto }`(1:1 복원). 나머지 pipi 이미지는 전부 양축 지정/`%`+`object-fit` 이라 무영향(정규식 전수 확인). 라이브 실측 computed 96×96·비율 1.0. 재발 방지 규칙 메모리 등재([[reference_img_dimension_css_conflict]]): **이미지에 치수 속성 추가 시 그 CSS 는 양축 지정 / 한 축+`auto` / `%`+`object-fit` 중 하나여야 한다.**
+
 ### 남은 작업
 
 1. **앱별 OG 이미지** — 현재 세로 스크린샷이라 1200×630 규격 미달. 임시로 `twitter:card=summary`로 낮춤. 7앱×3언어 카드 생성 필요.
