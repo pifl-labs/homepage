@@ -17,7 +17,8 @@ const base = localeBase(lang);
 const path = `/apps/${app.slug}/`;
 const shotBase = `/assets/apps/${app.slug}/${lang}`;
 const iconSrc = `/assets/apps/${app.slug}/icon.webp`;
-const heroSrc = `${shotBase}/${app.heroShot}.webp`; // OG 이미지용
+// OG 이미지 — 스크린샷이 없는 '출시 예정' 앱은 기본 카드(BaseLayout DEFAULT_OG)로 넘긴다.
+const heroSrc = app.heroShot ? `${shotBase}/${app.heroShot}.webp` : null;
 
 // SEO
 const title = `${name} — ${c.tagline.replace(/\n/g, ' ')} | PiFl Labs`;
@@ -47,6 +48,12 @@ const relUpdated = rel ? formatDate(latestUpdate(app), lang) : '';
 const relSince = rel?.since ? formatDate(rel.since, lang) : '';
 const relVersion = rel ? displayVersion(app) : '';
 const ul = updatedLabels[lang];
+
+// 섹션 번호는 실제로 렌더되는 섹션만 센다(스크린샷 없는 앱은 기능이 01).
+const hasShots = c.shots.length > 0;
+const nShots = hasShots ? '01' : '';
+const nFeatures = hasShots ? '02' : '01';
+const nSourceLib = hasShots ? '03' : '02';
 
 // Dialogos 전용 — 출처 라이브러리(허브)로 잇는 다리 섹션.
 const sourceLib = app.slug === 'dialogos'
@@ -100,7 +107,7 @@ const jsonLd = {
   description={description}
   canonical={canonical}
   alternates={alternates}
-  ogImage={`https://pifl-labs.com${heroSrc}`}
+  ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
   extraCss={['/styles-app-landing.css']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -160,11 +167,12 @@ const jsonLd = {
       </div>
     </section>
 
-    <!-- SCREENSHOT SHOWCASE -->
+    <!-- SCREENSHOT SHOWCASE — 스크린샷이 준비된 앱만 -->
+    {hasShots && (
     <section class="app-section">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">01 / {name}</div>
+          <div class="kicker">{nShots} / {name}</div>
           <h2 class="section-title">{c.shotsTitle}</h2>
         </div>
         <div class="app-shots-scroll">
@@ -180,12 +188,13 @@ const jsonLd = {
         </div>
       </div>
     </section>
+    )}
 
     <!-- FEATURE GRID -->
     <section class="app-section">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">02 / {c.featuresTitle}</div>
+          <div class="kicker">{nFeatures} / {c.featuresTitle}</div>
           <h2 class="section-title">{c.featuresTitle}</h2>
         </div>
         <div class="app-features">
@@ -204,7 +213,7 @@ const jsonLd = {
       <section class="app-section">
         <div class="container">
           <div class="section-head">
-            <div class="kicker">03 / {sourceLib.title}</div>
+            <div class="kicker">{nSourceLib} / {sourceLib.title}</div>
             <h2 class="section-title">{sourceLib.title}</h2>
           </div>
           <div class="app-srclib">

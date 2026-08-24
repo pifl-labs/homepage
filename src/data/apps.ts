@@ -47,7 +47,8 @@ export interface AppMeta {
   schemaCategory?: string;
   /** 출시 앱만 — 스토어 실측 버전·업데이트일. 카드/랜딩/구조화 데이터가 공유하는 SSOT. */
   release?: AppRelease;
-  heroShot: string;          // hero 대표 스크린샷 file 명
+  /** hero 대표 스크린샷 file 명. 스크린샷이 아직 없는 '출시 예정' 앱은 생략한다. */
+  heroShot?: string;
   content: Record<Lang, AppContent>;
 }
 
@@ -56,15 +57,15 @@ export const appName = (app: AppMeta, lang: Lang): string => app.nameByLang?.[la
 
 // 앱 상태 라벨 (홈 카드 배지용) — 3개 홈 파일이 공유하는 SSOT
 export const statusLabels: Record<Lang, { live: string; soon: string }> = {
-  ko: { live: '출시됨', soon: '곧 출시' },
-  ja: { live: '公開中', soon: '近日' },
+  ko: { live: '출시됨', soon: '출시 예정' },
+  ja: { live: '公開中', soon: '公開予定' },
   en: { live: 'Live', soon: 'Soon' },
 };
 
 // 스토어 배지 라벨 (status·플랫폼별)
 export const storeLabels: Record<Lang, { ios: string; android: string; soon: string; onIos: string; onAndroid: string }> = {
-  ko: { ios: 'App Store', android: 'Google Play', soon: '곧 출시', onIos: 'App Store에서 받기', onAndroid: 'Google Play에서 받기' },
-  ja: { ios: 'App Store', android: 'Google Play', soon: '近日公開', onIos: 'App Storeで入手', onAndroid: 'Google Playで入手' },
+  ko: { ios: 'App Store', android: 'Google Play', soon: '출시 예정', onIos: 'App Store에서 받기', onAndroid: 'Google Play에서 받기' },
+  ja: { ios: 'App Store', android: 'Google Play', soon: '公開予定', onIos: 'App Storeで入手', onAndroid: 'Google Playで入手' },
   en: { ios: 'App Store', android: 'Google Play', soon: 'Coming soon', onIos: 'Download on the App Store', onAndroid: 'Get it on Google Play' },
 };
 
@@ -755,8 +756,132 @@ const wordVoyage: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos };
-export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos];
+
+// PiPi Bridge — 스토어 미등재(출시 예정). 콘텐츠 근거 = code/pipi_bridge/README.md +
+// 사이트 내 개인정보처리방침(ko/en/zh/vi 병기). 스크린샷 자산이 아직 없어 shots 는 비운다.
+const bridge: AppMeta = {
+  slug: 'pipi-bridge',
+  name: 'PiPi Bridge',
+  status: 'soon',
+  category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean & school prep' },
+  stores: {},
+  content: {
+    ko: {
+      tagline: '한국어가 낯선 아이의\n첫 학교 준비',
+      lede: '한국어가 낯선 4~8세 아이와 부모를 위한 배움 앱. 한국어와 기초 수학, 학교생활 표현, 감정·자연 활동을 네 개의 배움 세계에 80개 활동으로 담았습니다. 광고도 계정도 없고, 부모 안내는 다섯 개 언어로 제공합니다.',
+      metaDesc: '한국어가 낯선 4~8세 아이의 한국어·학교 준비 앱. 네 개 배움 세계 80개 활동, 하루 10분 루틴, 광고·계정 없음. 부모 안내 5개 언어.',
+      shotsTitle: '',
+      featuresTitle: '왜 PiPi Bridge 인가',
+      ctaTitle: '출항 준비 중입니다',
+      ctaSub: '준비가 끝나면 iOS · Android에 조용히 올립니다.',
+      shots: [],
+      features: [
+        { icon: 'fa-clock',        title: '하루 10분 루틴',      desc: '활동 10개, 다섯 개마다 놀이 쉼, 그리고 간격 복습 — 아이 호흡에 맞춰 진행합니다.' },
+        { icon: 'fa-language',     title: '부모 안내 5개 언어',   desc: '한국어·영어·일본어·중국어 간체·베트남어로 부모 화면을 제공합니다.' },
+        { icon: 'fa-volume-high',  title: '한국어 문장 음성',     desc: '79개 문장 음성을 앱에 담아, 인터넷 없이도 발음을 들려줍니다.' },
+        { icon: 'fa-shield-heart', title: '광고·계정·결제 없음',  desc: '아이 화면에 광고가 없고, 진도는 기기 안에만 저장됩니다.' },
+      ],
+    },
+    ja: {
+      tagline: '韓国語がはじめての子の\n学校準備',
+      lede: '韓国語がはじめての4〜8歳の子どもと保護者のための学習アプリ。韓国語と基礎の算数、学校生活の表現、気持ち・自然の活動を、四つの学びの世界に80のアクティビティで収めました。広告もアカウントもなく、保護者向けの案内は五つの言語で提供します。',
+      metaDesc: '韓国語がはじめての4〜8歳向け、韓国語と学校準備のアプリ。四つの学びの世界に80のアクティビティ、1日10分、広告・アカウントなし。保護者案内は5言語。',
+      shotsTitle: '',
+      featuresTitle: 'PiPi Bridge を選ぶ理由',
+      ctaTitle: '出航の準備中です',
+      ctaSub: '仕上がったら iOS · Android に静かに公開します。',
+      shots: [],
+      features: [
+        { icon: 'fa-clock',        title: '1日10分の習慣',        desc: 'アクティビティ10個、5個ごとに遊びの休憩、そして間隔をあけた復習 — 子どもの呼吸に合わせて進みます。' },
+        { icon: 'fa-language',     title: '保護者案内は5言語',     desc: '韓国語・英語・日本語・簡体中国語・ベトナム語で保護者画面を用意しています。' },
+        { icon: 'fa-volume-high',  title: '韓国語の文の音声',      desc: '79文の音声をアプリに収録。ネットがなくても発音を聞けます。' },
+        { icon: 'fa-shield-heart', title: '広告・アカウント・課金なし', desc: '子どもの画面に広告はなく、進捗は端末内にのみ保存されます。' },
+      ],
+    },
+    en: {
+      tagline: 'First Korean,\nfirst school days',
+      lede: 'A learning app for children aged 4–8 who are new to Korean, and for their parents. Korean, early math, classroom phrases and feelings-and-nature activities across four learning worlds and 80 activities. No ads, no account, and a parent guide in five languages.',
+      metaDesc: 'Korean and school-readiness for children aged 4–8 who are new to Korean. Four learning worlds, 80 activities, a 10-minute daily routine, no ads or account. Parent guide in 5 languages.',
+      shotsTitle: '',
+      featuresTitle: 'Why PiPi Bridge',
+      ctaTitle: 'Still fitting out',
+      ctaSub: 'When it is ready, it goes quietly to iOS and Android.',
+      shots: [],
+      features: [
+        { icon: 'fa-clock',        title: 'Ten minutes a day',    desc: 'Ten activities, a play break every five, and spaced review — paced to a small child.' },
+        { icon: 'fa-language',     title: 'Parent guide in 5 languages', desc: 'Korean, English, Japanese, Simplified Chinese and Vietnamese.' },
+        { icon: 'fa-volume-high',  title: 'Korean sentence audio', desc: '79 recorded sentences ship inside the app, so pronunciation works offline.' },
+        { icon: 'fa-shield-heart', title: 'No ads, account or purchases', desc: 'Nothing is sold to the child, and progress stays on the device.' },
+      ],
+    },
+  },
+};
+
+// PiPi Legion Chronicle(피피 군단전기) — 스토어 미등재(출시 예정).
+// 근거 = code/games/pipi_legion/HANDOFF.md + 사이트 내 지원·방침 페이지(0.6.0).
+const legion: AppMeta = {
+  slug: 'pipi-legion',
+  name: 'PiPi Legion Chronicle',
+  nameByLang: { ko: '피피 군단전기', ja: 'ピピ軍団戦記' },
+  status: 'soon',
+  category: { ko: '게임 · 해상 전투', ja: 'ゲーム · 海戦', en: 'Games · Naval duels' },
+  schemaCategory: 'GameApplication',
+  stores: {},
+  content: {
+    ko: {
+      tagline: '한 척을 직접 몰고\n바다에서 겨룬다',
+      lede: '기함 한 척을 손으로 조종하는 소규모 해상 결투. 1:1로 시작해 3:3, 5:5로 넓어지고, 이긴 배는 나포해 이름을 붙여 함대에 넣습니다. 광고도 뽑기도, 부활 결제도 없습니다.',
+      metaDesc: '기함을 직접 조종하는 1:1 해상 결투 게임. 현측 포격과 충각, 나포와 명명, 1:1에서 5:5까지. 광고·가챠·인앱결제 없음.',
+      shotsTitle: '',
+      featuresTitle: '왜 피피 군단전기인가',
+      ctaTitle: '드라이독에서 단장 중',
+      ctaSub: '준비가 끝나면 iOS · Android에 조용히 올립니다.',
+      shots: [],
+      features: [
+        { icon: 'fa-gamepad',   title: '한 척을 직접 조종',    desc: '조이스틱으로 침로와 속력을 잡고, 두 손가락으로 확대·이동하며 위치를 만듭니다.' },
+        { icon: 'fa-crosshairs', title: '현측 포격과 충각',     desc: '거리와 각도가 모두 맞으면 완벽 조준, 정면으로 파고들면 충각입니다.' },
+        { icon: 'fa-anchor',    title: '나포하고 이름 붙이기',  desc: '이긴 배를 나포해 이름을 붙이고 다음 임무에 데려갑니다.' },
+        { icon: 'fa-ban',       title: '광고·가챠·결제 없음',   desc: '부활 결제나 뽑기가 없고, 전투 표식은 능력치에 영향을 주지 않는 기념 기록입니다.' },
+      ],
+    },
+    ja: {
+      tagline: '一隻を自分で操り\n海で競う',
+      lede: '旗艦一隻を自分の手で操る小規模な海戦。1対1から始まり、3対3、5対5へと広がります。勝った船は捕獲して名前をつけ、艦隊に加えます。広告もガチャも、復活課金もありません。',
+      metaDesc: '旗艦を自分で操る1対1の海戦ゲーム。舷側砲撃と衝角、捕獲と命名、1対1から5対5まで。広告・ガチャ・アプリ内課金なし。',
+      shotsTitle: '',
+      featuresTitle: 'ピピ軍団戦記を選ぶ理由',
+      ctaTitle: 'ドライドックで仕上げ中',
+      ctaSub: '仕上がったら iOS · Android に静かに公開します。',
+      shots: [],
+      features: [
+        { icon: 'fa-gamepad',   title: '一隻を自分で操る',      desc: 'ジョイスティックで針路と速力を決め、二本指で拡大・移動して位置を作ります。' },
+        { icon: 'fa-crosshairs', title: '舷側砲撃と衝角',       desc: '距離と角度が揃えば完璧な照準、正面から突っ込めば衝角です。' },
+        { icon: 'fa-anchor',    title: '捕獲して名前をつける',   desc: '勝った船を捕獲し、名前をつけて次の任務に連れて行きます。' },
+        { icon: 'fa-ban',       title: '広告・ガチャ・課金なし', desc: '復活課金もガチャもなく、戦いの印は能力値に影響しない記念の記録です。' },
+      ],
+    },
+    en: {
+      tagline: 'Steer one ship,\nwin one duel',
+      lede: 'A small-scale naval duel where you steer the flagship yourself. It starts one on one, then opens up to three and five a side. Ships you beat are captured, named, and added to your fleet. No ads, no gacha, no paying to revive.',
+      metaDesc: 'A naval duel game where you steer the flagship yourself: broadsides and ramming, capture and naming, one-on-one up to five a side. No ads, gacha or in-app purchases.',
+      shotsTitle: '',
+      featuresTitle: 'Why PiPi Legion Chronicle',
+      ctaTitle: 'Fitting out in drydock',
+      ctaSub: 'When it is ready, it goes quietly to iOS and Android.',
+      shots: [],
+      features: [
+        { icon: 'fa-gamepad',   title: 'You steer the ship',   desc: 'Set heading and throttle with the stick; pinch to zoom and pan while you work for position.' },
+        { icon: 'fa-crosshairs', title: 'Broadsides and ramming', desc: 'Line up range and angle for a perfect shot, or drive straight in and ram.' },
+        { icon: 'fa-anchor',    title: 'Capture and name',     desc: 'Take the ship you beat, give it a name, and bring it on the next mission.' },
+        { icon: 'fa-ban',       title: 'No ads, gacha or purchases', desc: 'Nothing to buy and nothing to roll for; battle marks are keepsakes, not stats.' },
+      ],
+    },
+  },
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion };
+// 순서 = 출시 앱 먼저(최근 출시 순), 그 뒤 '출시 예정' 3척.
+export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos, bridge, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */
