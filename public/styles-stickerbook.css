@@ -740,6 +740,9 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   right: 2.5%;
   top: 2rem;
   width: 96px;
+  /* height 를 CSS로 잡지 않으면 HTML width/height 속성(256×256)의 height 가 남아
+     96×256 으로 세로로 늘어난다. auto 로 1:1 비율을 복원. */
+  height: auto;
   pointer-events: none;
   filter:
     drop-shadow(0 0 1.5px #f5f1e4)
