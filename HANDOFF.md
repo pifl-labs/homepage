@@ -2,6 +2,70 @@
 
 ---
 
+## Session 12 — 2026-08-23/24: 홈페이지 전면 개선 — 스토어 실측 반영 · 카피 정합성 · 출시 예정 3척 (PR #42 머지)
+
+### 작업 요약
+
+앱 7종이 8월 내내 업데이트됐는데 사이트 카피는 7월 22일(`4fbc233`) 그대로였다. **스토어에 실제로 올라간 버전을 실측**(App Store Lookup API `artistId=1893574694` kr/jp/us + Play 리스팅, 2026-08-23)해 `apps.ts`에 `AppRelease` SSOT를 심고, 화면·구조화 데이터·사이트맵이 모두 그 값을 파생해 쓰게 했다. 병행한 감사에서 **치명 2건**(광고 게재 앱의 "100% 오프라인" 주장이 자사 방침과 충돌 / Dialogos 자동갱신 구독 미고지)을 찾아 정정. 대표 지시로 Bridge·Legion 을 '출시 예정'으로 등재하고 배지 문구를 '곧 출시'→'출시 예정'으로 통일. PR #42 squash 머지(`main@f2a052d`).
+
+### 실측 기준값 (2026-08-23)
+
+| 앱 | App Store | Google Play | 첫 출항 | 저장소 |
+|---|---|---|---|---|
+| 낱말항해 | 1.0.3 · 08.21 | 1.0.3 · 08.20 | 07.13 | 1.0.4 대기 |
+| Focus | 1.0.11 · 08.20 | 1.0.11 · 08.20 | 05.15 | 동일 |
+| Log | 1.0.7 · 08.20 | 1.0.7 · 08.20 | 06.09 | 동일 |
+| Draw | 1.0.6 · 08.19 | 1.0.6 · 08.20 | 07.14 | 동일(빌드 앞섬) |
+| Hello | 1.0.4 · 08.10 | 1.0.5 · 08.20 | 06.24 | 1.0.6 대기 |
+| Words | 1.0.9 · 08.19 | 1.0.9 · 08.19 | 05.29 | 1.0.10 대기 |
+| D-Day | 1.0.4 · 08.14 | 1.0.4 · 08.11 | 06.02 | 1.0.5 대기 |
+
+7앱 전부 리뷰 0건. 드라이독 4척 = Bridge(TestFlight 15) · Sky(TestFlight/Play 내부) · Legion(App Store RC) · Dialogos(6월부터 Worker 배포 블로커).
+
+### 수행한 작업
+
+**카피 정합성(치명 2건)**
+- 광고 게재 5개 앱(Focus·Words·D-Day·Log·낱말항해)의 "100% 오프라인 / 계정도 인터넷도 필요 없이" → "기록은 전부 기기 안에 — 통신은 광고 표시에만". 근거: 각 앱 `pubspec.yaml` google_mobile_ads + **같은 사이트의 개인정보처리방침이 AdMob·IDFA/AAID 수집을 명시**하고 있었다.
+- Dialogos 랜딩에 `Dialogos Pro(자동 갱신 구독)` 3언어 고지 — 자사 이용약관 제4조와 정합(App Store 3.1.2 리스크 제거).
+- D-Day 초대 랜딩 "100% 무료"→"무료로 시작", 홈 "PiPi가 만든 앱들"→"PiPi와 함께 만든 앱들"(제작 주체는 사람), 14→12 지표 통일, 푸터 저작권 정본('주식회사 피플랩스' / '株式会社ピープルラブズ').
+
+**데이터·구조**
+- `apps.ts`: `AppRelease{ios,android,since,checkedAt}` + 파생 헬퍼(`liveApps`/`latestUpdate`/`displayVersion`/`fleetLastUpdated`/`fleetSince`/`formatDate`/`updatedLabels`).
+- 하드코딩 앱 개수 **21곳(3언어×7)** → `liveAppCount` 파생. 컴포넌트 3종 신설(`AppCatalog`·`FleetLog`·`AppsJsonLd`)로 홈 3언어 마크업 3중 복제 해소.
+- 홈 '정비 기록' 섹션 신설 — 7척 실측 버전·업데이트일·확인일(리뷰 0건이라 유일한 신뢰 신호).
+
+**전환** — 홈에서 스토어로 나가는 링크가 **0개**였다. 앱 카드마다 App Store·Google Play 직행 버튼(중첩 `<a>` 회피용으로 카드를 `article` + `a.app-card-main` + 형제 스토어 행으로 재구성), 히어로·네비 CTA를 `#apps`로, 히어로 지표를 [앱 수·플랫폼·무료·마지막 정비일]로, 앱 랜딩에 방침·문의 링크, 푸터에 앱 열.
+
+**출시 예정 3척(대표 지시)** — Bridge·Legion `status:'soon'` 등재 + 3언어 랜딩 신설(고아 페이지 해소). 스크린샷 없는 앱 대응: `heroShot` 옵션화 · 쇼케이스 섹션 조건부 · 섹션 번호 동적 · OG 기본 카드 폴백. 아이콘은 각 앱 실제 런처 아이콘에서 256 webp 추출(legion 은 iOS 빌드 산출물 AppIcon 과 대조해 `app_icon_lantern_fleet_1024.png` 확인).
+
+**SEO·기술**
+- ★`localeBase('en')`이 `''` 라 **영어 페이지 크롬 전체가 무prefix 루트로 가고**, `functions/_middleware.ts` 302가 한국어 브라우저를 `/ko/`로 튕기던 버그 수정(3언어 대칭).
+- 사이트맵: 리다이렉트 전용 URL 24개 제거(119→102) + `i18n` hreflang alternates + 앱 랜딩 `lastmod`(실측 업데이트일). `serialize` 훅이 `apps.ts`를 직접 import.
+- `ItemList` JSON-LD(홈), `SoftwareApplication`에 softwareVersion/datePublished/dateModified/publisher/url/image, Organization `@id`.
+- `BaseLayout` `robots` prop + D-Day import 랜딩 noindex, 세로 OG 는 `twitter:card=summary`.
+- Legion·Bridge 를 lang prop 컴포넌트로 전환 + ko/en/ja 3경로(언어 전환 404 해소). Bridge 방침이 모든 경로에서 `<html lang="en">`이던 것도 수정.
+- CSP `base-uri`·`form-action`·`frame-ancestors`, Permissions-Policy `payment`·`usb`.
+
+**접근성** — `<main id="main">`+건너뛰기 링크, `prefers-reduced-motion` 전역 가드(`styles.css`엔 가드 자체가 없었다), `--text-dim` AA 미달(2.38~2.85:1) 보정, 이메일 링크 144곳에 파싱 시점 텍스트(런타임 조립 전까지 접근가능 이름이 비어 있었음), 스티커 이미지 52곳 width/height.
+
+**기타** — 404 3언어화+noindex, `public/.well-known/README.md`(공개 배포되고 있던 내부 문서) → `docs/well-known.md`, prebuild 게이트 `scripts/check-site-facts.mjs`(실측 만료·미등재 앱 페이지 경고).
+
+### 빌드/검증
+
+- `npm run build` ✅ **131페이지** 0경고 · 내부 링크 141개 0깨짐 · JSON-LD 12개 파싱 0오류 · 사이트맵 102(무prefix 0, lastmod 21)
+- 데스크톱 1440 / 모바일 390 × 다크·라이트 실캡처, 콘솔 에러 0, 가로 넘침 0 — Slack #random 13장 전송
+- 머지 후 기본 브랜치 재빌드·재검증 PASS
+- ⚠️ 로컬 main 에 미푸시 커밋(`83f8682` Legion 지원 페이지)이 남아 있어 squash 후 fast-forward 실패 → `git reset --hard origin/main`로 정렬(스쿼시가 내 작업 전부를 담았는지 트리 diff 0 확인 후 실행)
+
+### 남은 작업
+
+1. **앱별 OG 이미지** — 현재 세로 스크린샷이라 1200×630 규격 미달. 임시로 `twitter:card=summary`로 낮춤. 7앱×3언어 카드 생성 필요.
+2. **Font Awesome 100KB + PNG 폴백 약 13MB** — 아이콘 12개 때문에 cdnjs 를 전 페이지 임계 경로에 두고 있고, WebP 와 함께 PNG 원본을 전부 배포 중.
+3. **`public/*.css` 3개가 미니파이·해시 없이 배포** — `src/styles/`로 옮겨 import 하면 Astro 가 처리.
+4. 승격 대기 4건(Words 1.0.10 · D-Day 1.0.5 · Hello 1.0.6 · 낱말항해 1.0.4) — 승격하면 사이트 값은 자동으로 따라오지만 `checkedAt` 갱신은 수동(45일 경과 시 prebuild 경고).
+
+---
+
 ## Session 11 — 2026-08-01: 낱말항해 개인정보방침 광고 문구 정정 (PR #39 머지·라이브)
 
 ### 작업 요약
