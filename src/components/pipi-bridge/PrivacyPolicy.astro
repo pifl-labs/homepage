@@ -5,7 +5,7 @@ import type { Lang } from '../../i18n/ui';
 
 interface Props { lang?: Lang; homeHref?: string; }
 
-// 본문은 ko/en/zh/vi 4개 언어 병기다. 렌더되는 경로의 로케일을 <html lang> 에 반영하고,
+// 본문은 ko/en/ja/zh/vi 5개 언어 병기다. 렌더되는 경로의 로케일을 <html lang> 에 반영하고,
 // canonical 은 ko 한 곳으로 모은다(4개 URL 중복 색인 방지).
 const { lang = 'ko', homeHref = '/ko/' } = Astro.props;
 const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
@@ -13,7 +13,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
 <BaseLayout
   lang={lang}
   title="PiPi Bridge Privacy Policy · 개인정보처리방침"
-  description="PiPi Bridge child privacy policy in Korean, English, Simplified Chinese and Vietnamese. No ads, account, tracking or in-app data transmission."
+  description="PiPi Bridge child privacy policy in Korean, English, Japanese, Simplified Chinese and Vietnamese. No ads, account, tracking or in-app data transmission."
   canonical={policyUrl}
   alternates={[{ hreflang: 'ko', href: policyUrl }, { hreflang: 'x-default', href: policyUrl }]}
   extraCss={["/styles.css"]}
@@ -23,10 +23,11 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
       <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> PiFl Labs</a>
       <p class="bridge-policy-kicker">PiPi Bridge · Child-first privacy</p>
       <h1><i class="fas fa-shield-heart" aria-hidden="true"></i> <span class="text-gradient">Privacy Policy</span></h1>
-      <p class="legal-date">Effective: August 14, 2026 · Version 1.1</p>
+      <p class="legal-date">Effective: August 14, 2026 · Version 1.2 · Japanese text added September 2, 2026</p>
       <nav class="bridge-policy-languages" aria-label="Policy language">
         <a href="#ko" lang="ko">한국어</a>
         <a href="#en" lang="en">English</a>
+        <a href="#ja" lang="ja">日本語</a>
         <a href="#zh" lang="zh-Hans">简体中文</a>
         <a href="#vi" lang="vi">Tiếng Việt</a>
       </nav>
@@ -36,7 +37,7 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
   <main class="legal-page bridge-policy-page">
     <div class="container">
       <aside class="bridge-policy-summary" aria-label="Privacy summary">
-        <strong>One promise in four languages</strong>
+        <strong>One promise in five languages</strong>
         <span>No account · No ads · No purchases · No analytics · Learning records stay under the guardian's device control</span>
       </aside>
 
@@ -88,6 +89,31 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <h3>7. Contact and changes</h3>
         <ul><li>Privacy contact: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>If this policy changes materially, we will update its contents and effective date on this page.</p>
+      </article>
+
+      <article id="ja" lang="ja" class="legal-card policy-language">
+        <p class="policy-language-label">日本語</p>
+        <h2>PiPi Bridge プライバシーポリシー</h2>
+        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、4〜8歳の子どもと保護者のための教育アプリ <strong>PiPi Bridge</strong>（以下「本アプリ」）を運営しています。本アプリは、子どもの個人情報を収集したり、アプリの外へ送信したりしないように設計されています。</p>
+        <h3>1. 本アプリで取り扱う情報</h3>
+        <ul>
+          <li><strong>端末内にのみ保存される設定：</strong>保護者向けヘルプの言語、学習のスタート地点、完了した活動の識別子、学習した日付、音声再生の設定</li>
+          <li><strong>保護者からメールでお問い合わせいただく場合：</strong>メールアドレス、お問い合わせ内容、保護者が任意で記載した情報。これらを本アプリが自動的に収集することはありません。</li>
+        </ul>
+        <p>子どもの氏名、生年月日、写真、声、連絡先、正確な位置情報、広告識別子、支払い情報を本アプリが求めたり収集したりすることはありません。</p>
+        <h3>2. 広告・トラッキング・課金・権限</h3>
+        <p>本アプリには、広告、アプリ内課金、サブスクリプション、アカウント登録、分析SDK、行動トラッキングSDKはありません。カメラ、マイク（録音）、位置情報、連絡先の権限を要求しません。韓国語の聞き取り機能では、リリース前に合成してアプリに同梱した音声ファイルを端末内で再生します。本アプリの使用中に外部の音声APIへテキストやデータを送信することはありません。同梱の音声ファイルがない場合や再生できない場合に限り、代替手段としてOSの音声合成機能を使用します。いずれの方法でも子どもの声を録音することはありません。</p>
+        <h3>3. 利用目的と保有期間</h3>
+        <p>端末内の設定は、学習の進捗の表示、復習の順序の決定、保護者向けの言語と音声の設定の保持のためにのみ使用します。保護者が本アプリ内で進捗をリセットしたとき、または本アプリを削除したときに消去されます。本アプリはこれらの学習記録をAndroidのクラウドバックアップおよび端末間バックアップの対象外とし、iOSでもアプリ外への同期機能を提供しません。メールでのお問い合わせ記録は、回答および紛争対応のため、対応完了後最長3年間保有することがあります。</p>
+        <h3>4. 第三者提供と国外移転</h3>
+        <p>本アプリの学習情報を当社のサーバーへ送信したり、第三者に提供・販売・共有したりすることはありません。保護者がメールを送信する場合、メールサービス事業者のサーバーを経由することがあり、当該事業者のポリシーと保護者の設定が適用されます。法令上の義務がある場合を除き、お問い合わせ情報を他の目的で提供することはありません。</p>
+        <h3>5. 子どもの保護</h3>
+        <p>保護者向け設定、言語の変更、進捗のリセットは、保護者確認（計算問題によるペアレンタルゲート）を通過した後にのみ利用できます。間違えても点数を減らしたり子どもを急かしたりすることはなく、子ども向けの画面には外部リンクや購入機能を設けていません。本アプリは学校や先生の代わりになるものではありません。</p>
+        <h3>6. 保護者の権利と削除</h3>
+        <p>保護者は本アプリの保護者エリアで進捗をすぐにリセットでき、本アプリを削除することで端末内のデータを消去できます。メールでのお問い合わせ情報の開示・訂正・削除・利用停止をご希望の場合は、下記の連絡先までご連絡ください。</p>
+        <h3>7. 連絡先と変更</h3>
+        <ul><li>個人情報に関するお問い合わせ窓口：株式会社ピープルラブズ（PiFl Labs Co., Ltd.）</li><li>メールアドレス：<a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
+        <p>本ポリシーに重要な変更がある場合は、本ページの施行日と内容を更新します。</p>
       </article>
 
       <article id="zh" lang="zh-Hans" class="legal-card policy-language">
