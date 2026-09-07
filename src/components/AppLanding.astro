@@ -2,9 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { appName, apps, displayVersion, formatDate, latestUpdate, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
+import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
 
 interface Props { lang: Lang; slug: string }
 const { lang, slug } = Astro.props;
+const campaign = websiteCampaign(lang);
 
 const app = apps[slug];
 if (!app) throw new Error(`Unknown app slug: ${slug}`);
@@ -135,13 +137,13 @@ const jsonLd = {
             {app.status === 'live' ? (
               <>
                 {app.stores.ios && (
-                  <a class="store-badge" href={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
+                  <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
                     <i class="fab fa-apple" aria-hidden="true"></i>
                     <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
                   </a>
                 )}
                 {app.stores.android && (
-                  <a class="store-badge" href={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
+                  <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
                     <i class="fab fa-google-play" aria-hidden="true"></i>
                     <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
                   </a>
@@ -235,13 +237,13 @@ const jsonLd = {
           {app.status === 'live' ? (
             <>
               {app.stores.ios && (
-                <a class="store-badge" href={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
+                <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
                   <i class="fab fa-apple" aria-hidden="true"></i>
                   <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
                 </a>
               )}
               {app.stores.android && (
-                <a class="store-badge" href={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
+                <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
                   <i class="fab fa-google-play" aria-hidden="true"></i>
                   <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
                 </a>
