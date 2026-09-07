@@ -7,9 +7,11 @@ import {
   statusLabels, storeLabels, updatedLabels,
 } from '../data/apps';
 import type { Lang } from '../i18n/ui';
+import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
+const campaign = websiteCampaign(lang);
 const sl = storeLabels[lang];
 const ul = updatedLabels[lang];
 
@@ -70,12 +72,12 @@ const copy = {
             {app.status === 'live' && (app.stores.ios || app.stores.android) && (
               <div class="app-card-stores">
                 {app.stores.ios && (
-                  <a class="app-card-store" href={app.stores.ios} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onIos}`}>
+                  <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onIos}`}>
                     <i class="fab fa-apple" aria-hidden="true"></i> {sl.ios}
                   </a>
                 )}
                 {app.stores.android && (
-                  <a class="app-card-store" href={app.stores.android} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onAndroid}`}>
+                  <a class="app-card-store" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onAndroid}`}>
                     <i class="fab fa-google-play" aria-hidden="true"></i> {sl.android}
                   </a>
                 )}

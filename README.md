@@ -35,6 +35,8 @@ npm install
 npm run dev      # 로컬 dev 서버 (http://localhost:4321)
 npm run build    # dist/ 빌드
 npm run preview  # 빌드 결과 미리보기
+npm test         # 스토어 캠페인 URL·전달·안전성 테스트
+npm run test:built # build 후 3언어 홈·앱 링크 회귀 검사
 ```
 
 ## 배포
@@ -48,3 +50,4 @@ npm run preview  # 빌드 결과 미리보기
 - `MIGRATION-ASTRO.md` — Astro 이전 기록
 - `STRATEGY-2026.md` — 사업 전략
 - `HANDOFF.md` — 세션별 변경 이력
+- [캠페인 연결·측정 규약](docs/campaign-attribution.md) — 콘텐츠→웹→스토어, Apple 활성화 게이트·검증 현황
