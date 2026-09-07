@@ -778,7 +778,7 @@ const bridge: AppMeta = {
       features: [
         { icon: 'fa-clock',        title: '하루 10분 루틴',      desc: '활동 10개, 다섯 개마다 놀이 쉼, 그리고 간격 복습 — 아이 호흡에 맞춰 진행합니다.' },
         { icon: 'fa-language',     title: '부모 안내 5개 언어',   desc: '한국어·영어·일본어·중국어 간체·베트남어로 부모 화면을 제공합니다.' },
-        { icon: 'fa-volume-high',  title: '한국어 문장 음성',     desc: '79개 문장 음성을 앱에 담아, 인터넷 없이도 발음을 들려줍니다.' },
+        { icon: 'fa-volume-high',  title: '한국어 문장 음성',     desc: '300개 문장 음성을 앱에 담아, 인터넷 없이도 발음을 들려줍니다.' },
         { icon: 'fa-shield-heart', title: '광고·계정·결제 없음',  desc: '아이 화면에 광고가 없고, 진도는 기기 안에만 저장됩니다.' },
       ],
     },
@@ -794,7 +794,7 @@ const bridge: AppMeta = {
       features: [
         { icon: 'fa-clock',        title: '1日10分の習慣',        desc: 'アクティビティ10個、5個ごとに遊びの休憩、そして間隔をあけた復習 — 子どもの呼吸に合わせて進みます。' },
         { icon: 'fa-language',     title: '保護者案内は5言語',     desc: '韓国語・英語・日本語・簡体中国語・ベトナム語で保護者画面を用意しています。' },
-        { icon: 'fa-volume-high',  title: '韓国語の文の音声',      desc: '79文の音声をアプリに収録。ネットがなくても発音を聞けます。' },
+        { icon: 'fa-volume-high',  title: '韓国語の文の音声',      desc: '300文の音声をアプリに収録。ネットがなくても発音を聞けます。' },
         { icon: 'fa-shield-heart', title: '広告・アカウント・課金なし', desc: '子どもの画面に広告はなく、進捗は端末内にのみ保存されます。' },
       ],
     },
@@ -810,7 +810,7 @@ const bridge: AppMeta = {
       features: [
         { icon: 'fa-clock',        title: 'Ten minutes a day',    desc: 'Ten activities, a play break every five, and spaced review — paced to a small child.' },
         { icon: 'fa-language',     title: 'Parent guide in 5 languages', desc: 'Korean, English, Japanese, Simplified Chinese and Vietnamese.' },
-        { icon: 'fa-volume-high',  title: 'Korean sentence audio', desc: '79 recorded sentences ship inside the app, so pronunciation works offline.' },
+        { icon: 'fa-volume-high',  title: 'Korean sentence audio', desc: '300 sentence clips ship inside the app, so pronunciation works offline.' },
         { icon: 'fa-shield-heart', title: 'No ads, account or purchases', desc: 'Nothing is sold to the child, and progress stays on the device.' },
       ],
     },
