@@ -757,11 +757,11 @@ const wordVoyage: AppMeta = {
 };
 
 
-// PiPi Bridge — 스토어 미등재(출시 예정). 콘텐츠 근거 = code/pipi_bridge/README.md +
+// Korean Bridge — 스토어 미등재(출시 예정). 콘텐츠 근거 = code/pipi_bridge/README.md +
 // 사이트 내 개인정보처리방침(ko/en/zh/vi 병기). 스크린샷 자산이 아직 없어 shots 는 비운다.
 const bridge: AppMeta = {
   slug: 'pipi-bridge',
-  name: 'PiPi Bridge',
+  name: 'Korean Bridge',
   status: 'soon',
   category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean & school prep' },
   stores: {},
@@ -771,7 +771,7 @@ const bridge: AppMeta = {
       lede: '한국어가 낯선 4~8세 아이와 부모를 위한 배움 앱. 한국어와 기초 수학, 학교생활 표현, 감정·자연 활동을 네 개의 배움 세계에 80개 활동으로 담았습니다. 광고도 계정도 없고, 부모 안내는 다섯 개 언어로 제공합니다.',
       metaDesc: '한국어가 낯선 4~8세 아이의 한국어·학교 준비 앱. 네 개 배움 세계 80개 활동, 하루 10분 루틴, 광고·계정 없음. 부모 안내 5개 언어.',
       shotsTitle: '',
-      featuresTitle: '왜 PiPi Bridge 인가',
+      featuresTitle: '왜 Korean Bridge 인가',
       ctaTitle: '출항 준비 중입니다',
       ctaSub: '준비가 끝나면 iOS · Android에 조용히 올립니다.',
       shots: [],
@@ -787,7 +787,7 @@ const bridge: AppMeta = {
       lede: '韓国語がはじめての4〜8歳の子どもと保護者のための学習アプリ。韓国語と基礎の算数、学校生活の表現、気持ち・自然の活動を、四つの学びの世界に80のアクティビティで収めました。広告もアカウントもなく、保護者向けの案内は五つの言語で提供します。',
       metaDesc: '韓国語がはじめての4〜8歳向け、韓国語と学校準備のアプリ。四つの学びの世界に80のアクティビティ、1日10分、広告・アカウントなし。保護者案内は5言語。',
       shotsTitle: '',
-      featuresTitle: 'PiPi Bridge を選ぶ理由',
+      featuresTitle: 'Korean Bridge を選ぶ理由',
       ctaTitle: '出航の準備中です',
       ctaSub: '仕上がったら iOS · Android に静かに公開します。',
       shots: [],
@@ -803,7 +803,7 @@ const bridge: AppMeta = {
       lede: 'A learning app for children aged 4–8 who are new to Korean, and for their parents. Korean, early math, classroom phrases and feelings-and-nature activities across four learning worlds and 80 activities. No ads, no account, and a parent guide in five languages.',
       metaDesc: 'Korean and school-readiness for children aged 4–8 who are new to Korean. Four learning worlds, 80 activities, a 10-minute daily routine, no ads or account. Parent guide in 5 languages.',
       shotsTitle: '',
-      featuresTitle: 'Why PiPi Bridge',
+      featuresTitle: 'Why Korean Bridge',
       ctaTitle: 'Still fitting out',
       ctaSub: 'When it is ready, it goes quietly to iOS and Android.',
       shots: [],
