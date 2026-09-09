@@ -3,46 +3,121 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 import type { Lang } from '../../i18n/ui';
 
-interface Props { lang?: Lang; homeHref?: string; }
+// Korean Bridge 스토어는 5개 로케일(en/ko/ja/zh-Hans/vi)로 제출된다. 사이트가 색인하는
+// 로케일은 en/ko/ja 3개뿐(astro.config i18n)이므로, 개인정보처리방침도 형제 앱과 똑같이
+// "로케일 경로마다 그 언어 한 개만" 서빙한다(자기 canonical + 3로케일 alternate). 예전 구현은
+// 다섯 언어를 한 페이지에 #ko/#en/#ja/#zh/#vi 앵커로 쌓아 네 URL에 그대로 반복했는데,
+// 그러면 en/ko/ja 로케일 접두가 사실상 무의미해진다. 앱이 추가로 지원하는 보호자 언어
+// zh·vi 는 사이트 언어 체계 밖이라 /en/apps/pipi-bridge/privacy/{zh|vi}/ 에 noindex 로 두고
+// 앱 설명 페이지에서만 링크한다(대표 지시 2026-09-10).
+type PolicyLang = 'ko' | 'en' | 'ja' | 'zh' | 'vi';
+interface Props { lang: PolicyLang; }
 
-// 본문은 ko/en/ja/zh/vi 5개 언어 병기다. 렌더되는 경로의 로케일을 <html lang> 에 반영하고,
-// canonical 은 ko 한 곳으로 모은다(4개 URL 중복 색인 방지).
-const { lang = 'ko', homeHref = '/ko/' } = Astro.props;
-const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
+const { lang } = Astro.props;
+
+const BASE = 'https://pifl-labs.com';
+const INDEXED: readonly PolicyLang[] = ['ko', 'en', 'ja'];
+const isIndexed = INDEXED.includes(lang);
+
+const canonical = isIndexed
+  ? `${BASE}/${lang}/apps/pipi-bridge/privacy/`
+  : `${BASE}/en/apps/pipi-bridge/privacy/${lang}/`;
+
+const alternates = isIndexed
+  ? [
+      { hreflang: 'ko', href: `${BASE}/ko/apps/pipi-bridge/privacy/` },
+      { hreflang: 'en', href: `${BASE}/en/apps/pipi-bridge/privacy/` },
+      { hreflang: 'ja', href: `${BASE}/ja/apps/pipi-bridge/privacy/` },
+      { hreflang: 'x-default', href: `${BASE}/ko/apps/pipi-bridge/privacy/` },
+    ]
+  : [{ hreflang: lang === 'zh' ? 'zh-Hans' : 'vi', href: canonical }];
+
+// zh/vi 는 사이트 로케일이 아니므로 BaseLayout 크롬(폰트·네비·<html lang>)은 en 으로 두고,
+// 문서 언어는 각 article 의 lang 속성으로 정확히 표기한다.
+const baseLang: Lang = isIndexed ? (lang as Lang) : 'en';
+const homeHref = `/${baseLang}/`;
+const robots = isIndexed ? undefined : 'noindex,follow';
+
+const chrome = {
+  ko: {
+    docTitle: 'Korean Bridge 개인정보처리방침 · PiFl Labs',
+    docDesc: 'Korean Bridge(4~8세 아동용 무료 학습 앱) 개인정보처리방침. 광고·계정·추적·앱 외부 데이터 전송이 없습니다.',
+    kicker: 'Korean Bridge · 아동 우선 개인정보',
+    back: 'PiFl Labs 홈',
+    title: '개인정보처리방침',
+    date: '시행일: 2026년 8월 14일 · 버전 1.2',
+    summaryTitle: '하나의 약속',
+    summary: '계정 없음 · 광고 없음 · 결제 없음 · 분석 없음 · 학습 기록은 보호자 기기 관리 아래',
+  },
+  en: {
+    docTitle: 'Korean Bridge Privacy Policy · PiFl Labs',
+    docDesc: 'Korean Bridge child privacy policy. No ads, account, tracking or in-app data transmission for this free app for ages 4–8.',
+    kicker: 'Korean Bridge · Child-first privacy',
+    back: 'PiFl Labs home',
+    title: 'Privacy Policy',
+    date: 'Effective: August 14, 2026 · Version 1.2',
+    summaryTitle: 'One promise',
+    summary: "No account · No ads · No purchases · No analytics · Learning records stay under the guardian's device control",
+  },
+  ja: {
+    docTitle: 'Korean Bridge プライバシーポリシー · PiFl Labs',
+    docDesc: 'Korean Bridge（4〜8歳向けの無料学習アプリ）のプライバシーポリシー。広告・アカウント・トラッキング・アプリ外へのデータ送信はありません。',
+    kicker: 'Korean Bridge · 子ども優先のプライバシー',
+    back: 'PiFl Labs ホーム',
+    title: 'プライバシーポリシー',
+    date: '施行日: 2026年8月14日 · バージョン 1.2',
+    summaryTitle: 'ひとつの約束',
+    summary: 'アカウントなし · 広告なし · 課金なし · 分析なし · 学習記録は保護者の端末管理の下に',
+  },
+  zh: {
+    docTitle: 'Korean Bridge 隐私政策 · PiFl Labs',
+    docDesc: 'Korean Bridge（面向4至8岁儿童的免费学习应用）隐私政策。无广告、无账号、无追踪，不向应用之外传输数据。',
+    kicker: 'Korean Bridge · 儿童优先隐私',
+    back: 'PiFl Labs 主页',
+    title: '隐私政策',
+    date: '生效日期：2026年8月14日 · 版本 1.2',
+    summaryTitle: '一个承诺',
+    summary: '无账号 · 无广告 · 无购买 · 无分析 · 学习记录始终在家长的设备管理之下',
+  },
+  vi: {
+    docTitle: 'Chính sách quyền riêng tư Korean Bridge · PiFl Labs',
+    docDesc: 'Chính sách quyền riêng tư của Korean Bridge (ứng dụng học miễn phí cho trẻ 4–8 tuổi). Không quảng cáo, tài khoản, theo dõi hay truyền dữ liệu ra ngoài ứng dụng.',
+    kicker: 'Korean Bridge · Quyền riêng tư ưu tiên trẻ em',
+    back: 'Trang chủ PiFl Labs',
+    title: 'Chính sách quyền riêng tư',
+    date: 'Hiệu lực: 14 tháng 8, 2026 · Phiên bản 1.2',
+    summaryTitle: 'Một cam kết',
+    summary: 'Không tài khoản · Không quảng cáo · Không mua hàng · Không phân tích · Hồ sơ học tập luôn nằm dưới sự quản lý thiết bị của phụ huynh',
+  },
+}[lang];
 ---
 <BaseLayout
-  lang={lang}
-  title="Korean Bridge Privacy Policy · 개인정보처리방침"
-  description="Korean Bridge child privacy policy in Korean, English, Japanese, Simplified Chinese and Vietnamese. No ads, account, tracking or in-app data transmission."
-  canonical={policyUrl}
-  alternates={[{ hreflang: 'ko', href: policyUrl }, { hreflang: 'x-default', href: policyUrl }]}
+  lang={baseLang}
+  title={chrome.docTitle}
+  description={chrome.docDesc}
+  canonical={canonical}
+  alternates={alternates}
+  robots={robots}
   extraCss={["/styles.css"]}
 >
   <section class="legal-hero bridge-policy-hero">
     <div class="container">
-      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> PiFl Labs</a>
-      <p class="bridge-policy-kicker">Korean Bridge · Child-first privacy</p>
-      <h1><i class="fas fa-shield-heart" aria-hidden="true"></i> <span class="text-gradient">Privacy Policy</span></h1>
-      <p class="legal-date">Effective: August 14, 2026 · Version 1.2 · Japanese text added September 2, 2026</p>
-      <nav class="bridge-policy-languages" aria-label="Policy language">
-        <a href="#ko" lang="ko">한국어</a>
-        <a href="#en" lang="en">English</a>
-        <a href="#ja" lang="ja">日本語</a>
-        <a href="#zh" lang="zh-Hans">简体中文</a>
-        <a href="#vi" lang="vi">Tiếng Việt</a>
-      </nav>
+      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {chrome.back}</a>
+      <p class="bridge-policy-kicker">{chrome.kicker}</p>
+      <h1><i class="fas fa-shield-heart" aria-hidden="true"></i> <span class="text-gradient">{chrome.title}</span></h1>
+      <p class="legal-date">{chrome.date}</p>
     </div>
   </section>
 
   <main class="legal-page bridge-policy-page">
     <div class="container">
       <aside class="bridge-policy-summary" aria-label="Privacy summary">
-        <strong>One promise in five languages</strong>
-        <span>No account · No ads · No purchases · No analytics · Learning records stay under the guardian's device control</span>
+        <strong>{chrome.summaryTitle}</strong>
+        <span>{chrome.summary}</span>
       </aside>
 
-      <article id="ko" lang="ko" class="legal-card policy-language">
-        <p class="policy-language-label">한국어</p>
+      {lang === 'ko' && (
+      <article lang="ko" class="legal-card policy-language">
         <h2>Korean Bridge 개인정보처리방침</h2>
         <p>주식회사 피플랩스(이하 “회사”)는 4~8세 어린이와 보호자를 위한 교육 앱 <strong>Korean Bridge</strong>(이하 “앱”)를 운영합니다. 앱은 어린이의 개인정보를 앱 밖으로 수집하거나 전송하지 않도록 설계되었습니다.</p>
         <h3>1. 앱에서 처리하는 정보</h3>
@@ -65,9 +140,10 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li>개인정보 보호 책임자: 주식회사 피플랩스</li><li>이메일: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>정책이 중요한 방식으로 바뀌면 이 페이지의 시행일과 내용을 갱신합니다.</p>
       </article>
+      )}
 
-      <article id="en" lang="en" class="legal-card policy-language">
-        <p class="policy-language-label">English</p>
+      {lang === 'en' && (
+      <article lang="en" class="legal-card policy-language">
         <h2>Korean Bridge Privacy Policy</h2>
         <p>PiFl Labs Co., Ltd. ("we") operates <strong>Korean Bridge</strong>, an educational app for children ages 4–8 and their grown-ups. The app is designed not to collect or transmit a child's personal information outside the app.</p>
         <h3>1. Information handled</h3>
@@ -90,9 +166,10 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li>Privacy contact: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>If this policy changes materially, we will update its contents and effective date on this page.</p>
       </article>
+      )}
 
-      <article id="ja" lang="ja" class="legal-card policy-language">
-        <p class="policy-language-label">日本語</p>
+      {lang === 'ja' && (
+      <article lang="ja" class="legal-card policy-language">
         <h2>Korean Bridge プライバシーポリシー</h2>
         <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、4〜8歳の子どもと保護者のための教育アプリ <strong>Korean Bridge</strong>（以下「本アプリ」）を運営しています。本アプリは、子どもの個人情報を収集したり、アプリの外へ送信したりしないように設計されています。</p>
         <h3>1. 本アプリで取り扱う情報</h3>
@@ -115,9 +192,10 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li>個人情報に関するお問い合わせ窓口：株式会社ピープルラブズ（PiFl Labs Co., Ltd.）</li><li>メールアドレス：<a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>本ポリシーに重要な変更がある場合は、本ページの施行日と内容を更新します。</p>
       </article>
+      )}
 
-      <article id="zh" lang="zh-Hans" class="legal-card policy-language">
-        <p class="policy-language-label">简体中文</p>
+      {lang === 'zh' && (
+      <article lang="zh-Hans" class="legal-card policy-language">
         <h2>Korean Bridge 隐私政策</h2>
         <p>PiFl Labs Co., Ltd.（“我们”）运营面向4至8岁儿童及家长的教育应用 <strong>Korean Bridge</strong>。应用的设计原则是不在应用之外收集或传输儿童个人信息。</p>
         <h3>1. 处理的信息</h3>
@@ -137,9 +215,10 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li>隐私联系人：PiFl Labs Co., Ltd.</li><li>邮箱：<a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>如政策发生重大变化，我们会更新本页面的内容和生效日期。</p>
       </article>
+      )}
 
-      <article id="vi" lang="vi" class="legal-card policy-language">
-        <p class="policy-language-label">Tiếng Việt</p>
+      {lang === 'vi' && (
+      <article lang="vi" class="legal-card policy-language">
         <h2>Chính sách quyền riêng tư Korean Bridge</h2>
         <p>PiFl Labs Co., Ltd. ("chúng tôi") vận hành <strong>Korean Bridge</strong>, ứng dụng giáo dục cho trẻ 4–8 tuổi và phụ huynh. Ứng dụng được thiết kế để không thu thập hoặc truyền thông tin cá nhân của trẻ ra ngoài ứng dụng.</p>
         <h3>1. Thông tin được xử lý</h3>
@@ -159,20 +238,17 @@ const policyUrl = 'https://pifl-labs.com/ko/apps/pipi-bridge/privacy/';
         <ul><li>Liên hệ quyền riêng tư: PiFl Labs Co., Ltd.</li><li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li></ul>
         <p>Nếu chính sách thay đổi đáng kể, chúng tôi sẽ cập nhật nội dung và ngày hiệu lực trên trang này.</p>
       </article>
+      )}
     </div>
   </main>
 
   <style>
     .bridge-policy-hero { padding-bottom: 2rem; }
     .bridge-policy-kicker { color: var(--text-secondary); font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
-    .bridge-policy-languages { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.5rem; }
-    .bridge-policy-languages a { border: 1px solid var(--border); border-radius: 999px; color: var(--text-primary); font-weight: 800; padding: .55rem 1rem; text-decoration: none; }
-    .bridge-policy-languages a:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
     .bridge-policy-summary { background: var(--bg-card); border: 1px solid var(--border); border-radius: 1.25rem; display: grid; gap: .35rem; margin-bottom: 1.25rem; padding: 1.25rem 1.5rem; }
     .bridge-policy-summary strong { color: var(--accent-primary); font-size: 1.15rem; }
-    .policy-language { margin-bottom: 1.5rem; scroll-margin-top: 6rem; }
+    .policy-language { margin-bottom: 1.5rem; }
     .policy-language h2 { margin-top: 0; }
     .policy-language h3 { font-size: 1.15rem; margin-top: 1.7rem; }
-    .policy-language-label { color: var(--accent-primary); font-size: .85rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
   </style>
 </BaseLayout>
