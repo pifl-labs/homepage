@@ -420,6 +420,8 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 /* ========== ABOUT ========== */
 .about { padding: 5rem 0; position: relative; }
 .about-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items:center; }
+/* CJK keep-all content must not force the grid wider than its column. */
+.about-wrap > * { min-width: 0; }
 
 .logbook-card {
   background:
@@ -776,6 +778,12 @@ html[lang^="ja"] h2.section-title {
   font-size: clamp(1.7rem, 3.4vw, 2.6rem);
   word-break: keep-all;
   line-height: 1.2;
+}
+/* Japanese titles have no word spaces: wrap phrases before overflowing narrow screens. */
+html[lang^="ja"] h2.section-title {
+  word-break: normal;
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
 }
 html[lang^="ko"] .pull .quote,
 html[lang^="ja"] .pull .quote {
