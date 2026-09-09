@@ -8,14 +8,17 @@
   try {
     var supported = ['ko', 'en', 'ja'];
     var match = function (l) {
-      l = (l || '').toLowerCase();
-      if (l.indexOf('ko') === 0) return 'ko';
-      if (l.indexOf('ja') === 0) return 'ja';
-      if (l.indexOf('en') === 0) return 'en';
-      return null;
+      var tag = (l || '').toLowerCase().match(/^([a-z]{2,8})(?:-[a-z0-9]{1,8})*$/);
+      return tag && supported.indexOf(tag[1]) !== -1 ? tag[1] : null;
     };
-    var cookieMatch = document.cookie.match(/(?:^|;\s*)pref-lang=([a-z]{2})/);
-    var pref = cookieMatch && supported.indexOf(cookieMatch[1]) !== -1 ? cookieMatch[1] : null;
+    var pref = null;
+    try {
+      var cookieMatch = document.cookie.match(/(?:^|;\s*)pref-lang=([^;]+)/);
+      var saved = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
+      if (supported.indexOf(saved) !== -1) pref = saved;
+    } catch (_) {
+      // Malformed/blocked cookies are not a reason to lose the entry campaign.
+    }
     if (!pref && navigator.languages && navigator.languages.length) {
       for (var i = 0; i < navigator.languages.length; i++) {
         var m = match(navigator.languages[i]);
@@ -23,9 +26,13 @@
       }
     }
     if (!pref) pref = match(navigator.language) || 'ko';
-    document.cookie = 'pref-lang=' + pref + '; path=/; max-age=' + (60 * 60 * 24 * 365) + '; SameSite=Lax';
+    try {
+      document.cookie = 'pref-lang=' + pref + '; path=/; max-age=' + (60 * 60 * 24 * 365) + '; SameSite=Lax';
+    } catch (_) {
+      // Navigation still works when the browser disallows preference storage.
+    }
     window.location.replace('/' + pref + '/' + window.location.search + window.location.hash);
   } catch (_) {
-    window.location.replace('/ko/');
+    window.location.replace('/ko/' + window.location.search + window.location.hash);
   }
 })();

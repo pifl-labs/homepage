@@ -21,20 +21,35 @@ function isLocale(value: string): value is Locale {
 
 function detectFromAcceptLanguage(header: string | null): Locale | null {
   if (!header) return null;
-  // "ko-KR,ko;q=0.9,en-US;q=0.8" → 등장 순서 우선
-  const parts = header.split(',').map((s) => s.split(';')[0].trim().toLowerCase());
-  for (const lang of parts) {
-    if (lang.startsWith('ko')) return 'ko';
-    if (lang.startsWith('ja')) return 'ja';
-    if (lang.startsWith('en')) return 'en';
+  // RFC 9110: q defaults to 1; q=0 is not acceptable. Equal weights keep
+  // header order. Ignore malformed/unsupported ranges, retaining our default
+  // locale (rather than an error page) if none of the supported locales match.
+  let preferred: Locale | null = null;
+  let highestQuality = 0;
+  for (const part of header.split(',')) {
+    const match = part.trim().match(/^([a-z]{2,8})(?:-[a-z0-9]{1,8})*(?:\s*;\s*q=(0(?:\.\d{0,3})?|1(?:\.0{0,3})?))?$/i);
+    if (!match) continue;
+    const locale = match[1].toLowerCase();
+    const quality = match[2] === undefined ? 1 : Number(match[2]);
+    if (isLocale(locale) && quality > highestQuality) {
+      preferred = locale;
+      highestQuality = quality;
+    }
   }
-  return null;
+  return preferred;
 }
 
 function readCookie(cookieHeader: string | null, name: string): string | null {
   if (!cookieHeader) return null;
   const match = cookieHeader.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]+)'));
-  return match ? decodeURIComponent(match[1]) : null;
+  if (!match) return null;
+  try {
+    return decodeURIComponent(match[1]);
+  } catch {
+    // A stale or malformed preference cookie must not turn an entry URL into
+    // HTTP 500. Ignore only this value and continue browser-language detection.
+    return null;
+  }
 }
 
 // `/.well-known/` 은 모바일 딥링크 검증 파일(AASA·assetlinks.json) 경로.
