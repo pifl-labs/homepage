@@ -30,16 +30,30 @@
   display: flex; flex-direction: column; align-items: center;
 }
 
-.app-id { display: inline-flex; align-items: center; gap: .85rem; margin-bottom: 1.6rem; }
+.app-id { max-width: 100%; display: inline-flex; align-items: center; gap: .85rem; margin-bottom: 1.6rem; }
 .app-id-icon {
   width: 64px; height: 64px; border-radius: 16px;
   box-shadow: var(--shadow-glow-sm); flex-shrink: 0;
 }
-.app-id-meta { display: flex; flex-direction: column; gap: .2rem; text-align: left; }
+.app-id-meta { min-width: 0; display: flex; flex-direction: column; gap: .2rem; text-align: left; }
 .app-id-name {
   font-family: var(--font-display); font-weight: 700;
   font-size: 1.25rem; color: var(--text-primary); line-height: 1.1;
 }
+.app-name-part { display: inline-block; }
+.app-version-part, .app-release-date { white-space: nowrap; }
+.app-release-date--split { display: block; }
+.app-previous-name {
+  display: block; color: var(--text-secondary); font-size: .8rem; line-height: 1.5;
+}
+.app-store-name-note {
+  max-width: 65ch; margin: 1rem auto 0; text-align: left;
+  font-size: .8rem; line-height: 1.7; color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+.app-store-name-note span { display: block; }
+.app-store-name-note--compact { margin: 0; padding: 0 1.6rem 1.1rem; }
+:lang(ko) .app-id-name, :lang(ko) .app-card-name { word-break: keep-all; overflow-wrap: anywhere; }
 .app-id-cat {
   font-family: var(--font-code); font-size: .76rem;
   color: var(--text-muted); letter-spacing: .02em;

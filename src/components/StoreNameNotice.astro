@@ -1,0 +1,22 @@
+---
+// 스토어별 개명 전환은 고정 확인일과 함께 표시한다. 현재 완료 상태를 추정하지 않는다.
+import { formatDate, type AppMeta } from '../data/apps';
+import type { Lang } from '../i18n/ui';
+
+interface Props { app: AppMeta; lang: Lang; compact?: boolean }
+const { app, lang, compact = false } = Astro.props;
+const names = app.storeNames;
+const checkedAt = app.release?.checkedAt;
+const copy = {
+  ko: { title: '스토어 표시명', checked: '확인' },
+  ja: { title: 'ストアの表示名', checked: '確認' },
+  en: { title: 'Store listing names', checked: 'checked' },
+}[lang];
+---
+{names && checkedAt && (
+  <p class:list={['app-store-name-note', { 'app-store-name-note--compact': compact }]}>
+    <span>{copy.title} · <time datetime={checkedAt}>{formatDate(checkedAt, lang)}</time>{' '}{copy.checked}</span>
+    <span>App Store: {names.ios[lang]}</span>
+    <span>Google Play: {names.android[lang]}</span>
+  </p>
+)}

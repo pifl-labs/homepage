@@ -21,7 +21,11 @@ const cutoffIso = cutoff.toISOString().slice(0, 10);
 const recentCount = rows.filter((a) => latestUpdate(a) >= cutoffIso).length;
 const allRecent = recentCount === liveAppCount;
 
-const checkedAt = liveApps.map((a) => a.release?.checkedAt).filter(Boolean).sort().slice(-1)[0] ?? '';
+// 서로 다른 앱의 관측일을 모두 오늘 확인한 것처럼 보이지 않게 범위로 표시한다.
+const checkedDates = [...new Set(liveApps.map((a) => a.release?.checkedAt).filter(Boolean) as string[])].sort();
+const checkedRange = checkedDates.length
+  ? [checkedDates[0], checkedDates.at(-1)!].filter((date, i, dates) => i === 0 || date !== dates[0]).map(date => formatDate(date, lang)).join(' – ')
+  : '';
 
 const copy = {
   ko: {
@@ -31,7 +35,7 @@ const copy = {
     sub: `첫 배가 바다에 나간 건 ${formatDate(fleetSince, 'ko')}. 그 뒤로 ${allRecent ? `${liveAppCount}척 전부를` : `${liveAppCount}척 중 ${recentCount}척을`} 최근 30일 안에 다시 갑판에 올렸습니다. 아래는 지금 스토어에 실제로 올라가 있는 버전입니다.`,
     updated: '업데이트',
     both: '양 스토어 동일',
-    note: `스토어 실측 · ${formatDate(checkedAt, 'ko')} 확인`,
+    note: `스토어 실측 · ${checkedRange} 확인`,
   },
   ja: {
     kicker: '01 / 整備記録',
@@ -40,7 +44,7 @@ const copy = {
     sub: `最初の船が海に出たのは ${formatDate(fleetSince, 'ja')}。それから ${allRecent ? `${liveAppCount}隻すべて` : `${liveAppCount}隻のうち ${recentCount}隻`}を、直近30日でもう一度整備しました。以下はいまストアに並んでいる実際のバージョンです。`,
     updated: '更新',
     both: '両ストア同一',
-    note: `ストア実測 · ${formatDate(checkedAt, 'ja')} 確認`,
+    note: `ストア実測 · ${checkedRange} 確認`,
   },
   en: {
     kicker: '01 / Maintenance log',
@@ -49,7 +53,7 @@ const copy = {
     sub: `The first ship sailed on ${formatDate(fleetSince, 'en')}. Since then, ${allRecent ? `all ${liveAppCount}` : `${recentCount} of ${liveAppCount}`} have been back on deck within the last 30 days. These are the versions live on the stores right now.`,
     updated: 'updated',
     both: 'same on both stores',
-    note: `Checked against the stores on ${formatDate(checkedAt, 'en')}`,
+    note: `Checked against the stores on ${checkedRange}`,
   },
 }[lang];
 ---
