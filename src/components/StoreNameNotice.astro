@@ -13,7 +13,7 @@ const copy = {
   en: { title: 'Store listing names', checked: 'checked' },
 }[lang];
 ---
-{names && checkedAt && (
+{names && checkedAt && names.ios[lang] !== names.android[lang] && (
   <p class:list={['app-store-name-note', { 'app-store-name-note--compact': compact }]}>
     <span>{copy.title} · <time datetime={checkedAt}>{formatDate(checkedAt, lang)}</time>{' '}{copy.checked}</span>
     <span>App Store: {names.ios[lang]}</span>
