@@ -43,7 +43,7 @@ export interface AppMeta {
   nameByLang?: Partial<Record<Lang, string>>;
   /** 제품명이 바뀌어도 기존 이름으로 찾을 수 있게 병기한다. */
   previousName?: string;
-  /** 스토어별 공개 표시명이 다른 전환기만 지정. release.checkedAt 시점의 관측값. */
+  /** 스토어별 공개 표시명 스냅샷. release.checkedAt 시점의 관측값. */
   storeNames?: Record<'ios' | 'android', Record<Lang, string>>;
   status: 'live' | 'soon';
   category: Record<Lang, string>;
@@ -79,10 +79,10 @@ const focus: AppMeta = {
   name: 'Pomodoro at Sea: Focus Timer',
   nameByLang: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー' },
   previousName: 'PiPi Focus',
-  // 2026-09-09 공개 KR/JP/US 관측. Apple 구이름 / Google Play 새 이름.
-  // 양스토어 전환이 확인되면 storeNames 안내를 갱신한다. 자동 실시간 상태가 아니다.
+  // 2026-09-10 공개 KR/JP/US 6페이지와 Apple Lookup 관측: 양스토어 개명 완료.
+  // 이름/버전 확인이며 다음 승인 아이콘의 공개 배포를 뜻하지 않는다.
   storeNames: {
-    ios: { ko: 'PiPi Focus: 해적 포모도로', ja: 'PiPi Focus: 海賊ポモドーロ', en: 'PiPi Focus: Pirate Pomodoro' },
+    ios: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー', en: 'Pomodoro at Sea: Focus Timer' },
     android: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー', en: 'Pomodoro at Sea: Focus Timer' },
   },
   status: 'live',
@@ -92,10 +92,10 @@ const focus: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
   release: {
-    ios: { version: '1.0.13', updated: '2026-09-08' },
+    ios: { version: '1.0.14', updated: '2026-09-09' },
     android: { version: '1.0.14', updated: '2026-09-09' },
     since: '2026-05-15',
-    checkedAt: '2026-09-09',
+    checkedAt: '2026-09-10',
   },
   heroShot: 'sail',
   content: {
