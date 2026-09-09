@@ -41,6 +41,10 @@ export interface AppMeta {
   name: string;
   /** 스토어 등재명이 언어별로 다른 앱만 지정 (미지정 언어는 name 사용) */
   nameByLang?: Partial<Record<Lang, string>>;
+  /** 제품명이 바뀌어도 기존 이름으로 찾을 수 있게 병기한다. */
+  previousName?: string;
+  /** 스토어별 공개 표시명이 다른 전환기만 지정. release.checkedAt 시점의 관측값. */
+  storeNames?: Record<'ios' | 'android', Record<Lang, string>>;
   status: 'live' | 'soon';
   category: Record<Lang, string>;
   stores: StoreLinks;
@@ -72,7 +76,15 @@ export const storeLabels: Record<Lang, { ios: string; android: string; soon: str
 
 const focus: AppMeta = {
   slug: 'pipi-focus',
-  name: 'PiPi Focus',
+  name: 'Pomodoro at Sea: Focus Timer',
+  nameByLang: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー' },
+  previousName: 'PiPi Focus',
+  // 2026-09-09 공개 KR/JP/US 관측. Apple 구이름 / Google Play 새 이름.
+  // 양스토어 전환이 확인되면 storeNames 안내를 갱신한다. 자동 실시간 상태가 아니다.
+  storeNames: {
+    ios: { ko: 'PiPi Focus: 해적 포모도로', ja: 'PiPi Focus: 海賊ポモドーロ', en: 'PiPi Focus: Pirate Pomodoro' },
+    android: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー', en: 'Pomodoro at Sea: Focus Timer' },
+  },
   status: 'live',
   category: { ko: '생산성 · 집중', ja: '生産性 · 集中', en: 'Productivity · Focus' },
   stores: {
@@ -80,10 +92,10 @@ const focus: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
   release: {
-    ios: { version: '1.0.11', updated: '2026-08-20' },
-    android: { version: '1.0.11', updated: '2026-08-20' },
+    ios: { version: '1.0.13', updated: '2026-09-08' },
+    android: { version: '1.0.14', updated: '2026-09-09' },
     since: '2026-05-15',
-    checkedAt: '2026-08-23',
+    checkedAt: '2026-09-09',
   },
   heroShot: 'sail',
   content: {
@@ -92,7 +104,7 @@ const focus: AppMeta = {
       lede: '25분 집중하면 PiPi의 배가 바다를 건넙니다. 세션을 끝낼 때마다 보물이 쌓이고, 선장을 꾸미고, 새로운 섬이 열려요. 포모도로를 대항해로 바꾼 집중 타이머.',
       metaDesc: '포모도로를 대항해로. 25분 집중하면 배가 바다를 건너고 보물이 쌓입니다. PiPi 선장 꾸미기와 항해 기록까지. iOS · Android 무료.',
       shotsTitle: '한 번의 세션, 한 번의 항해',
-      featuresTitle: '왜 PiPi Focus 인가',
+      featuresTitle: '왜 집중항해인가',
       ctaTitle: '첫 항해를 시작하세요',
       ctaSub: 'iOS · Android에서 무료로.',
       shots: [
@@ -115,7 +127,7 @@ const focus: AppMeta = {
       lede: '25分集中すると、PiPiの船が海を渡ります。セッションを終えるたびに宝物が貯まり、船長を着せ替え、新しい島が開きます。ポモドーロを大航海に変えた集中タイマー。',
       metaDesc: 'ポモドーロを大航海に。25分の集中で船が海を渡り、宝物が貯まります。PiPi船長の着せ替えと航海の記録も。iOS · Android 無料。',
       shotsTitle: '一度のセッション、一度の航海',
-      featuresTitle: 'PiPi Focus を選ぶ理由',
+      featuresTitle: '集中航海を選ぶ理由',
       ctaTitle: '最初の航海を始めよう',
       ctaSub: 'iOS · Android で無料。',
       shots: [
@@ -138,7 +150,7 @@ const focus: AppMeta = {
       lede: "Focus for 25 minutes and PiPi's ship crosses the sea. Every session you finish stacks treasure, dresses up the captain, and unlocks a new island. A focus timer that turns the Pomodoro into a grand voyage.",
       metaDesc: 'Turn the Pomodoro into a voyage. Focus 25 minutes, sail the sea, earn treasure and dress up Captain PiPi. Free on iOS & Android, no account needed.',
       shotsTitle: 'One session, one voyage',
-      featuresTitle: 'Why PiPi Focus',
+      featuresTitle: 'Why Pomodoro at Sea',
       ctaTitle: 'Set sail on your first voyage',
       ctaSub: 'Free on iOS & Android.',
       shots: [
@@ -895,16 +907,31 @@ export function latestUpdate(app: AppMeta): string {
   return d.length ? d.sort().slice(-1)[0] : '';
 }
 
-/** 앱의 대표 표시 버전 — 양 스토어가 같으면 하나, 다르면 늦게 업데이트된 쪽. */
+/** 공통 버전만 반환한다. 다른 플랫폼 버전을 하나로 대표하거나 JSON-LD에 단정하지 않는다. */
 export function displayVersion(app: AppMeta): string {
   const r = app.release;
   if (!r) return '';
   if (r.ios && r.android) {
-    if (r.ios.version === r.android.version) return r.ios.version;
-    return r.ios.updated >= r.android.updated ? r.ios.version : r.android.version;
+    return r.ios.version === r.android.version ? r.ios.version : '';
   }
   return (r.ios ?? r.android)?.version ?? '';
 }
+
+/** 화면용 버전 — 서로 다르면 플랫폼 이름과 함께 둘 다 표시한다. */
+export function releaseVersionLabel(app: AppMeta): string {
+  const r = app.release;
+  if (!r) return '';
+  const common = displayVersion(app);
+  if (common) return `v${common}`;
+  return [r.ios ? `iOS v${r.ios.version}` : '', r.android ? `Android v${r.android.version}` : ''].filter(Boolean).join(' · ');
+}
+
+/** 개명 전환기에는 버튼의 접근성 이름도 실제 목적지 표시명을 따른다. */
+export function storeAppName(app: AppMeta, platform: 'ios' | 'android', lang: Lang): string {
+  return app.storeNames?.[platform][lang] ?? appName(app, lang);
+}
+
+export const previousNameLabels: Record<Lang, string> = { ko: '기존', ja: '旧名', en: 'Previously' };
 
 /** 함대 최신 업데이트일 / 첫 출항일 — 수동 숫자·날짜 하드코딩을 없애기 위한 파생값. */
 export const fleetLastUpdated: string = liveApps.map(latestUpdate).filter(Boolean).sort().slice(-1)[0] ?? '';

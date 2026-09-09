@@ -3,9 +3,10 @@
 // 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
 // 카피는 lang 별 map, 나머지는 전부 apps.ts 파생.
 import {
-  appList, appName, displayVersion, formatDate, latestUpdate,
+  appList, appName, displayVersion, releaseVersionLabel, formatDate, latestUpdate, previousNameLabels, storeAppName,
   statusLabels, storeLabels, updatedLabels,
 } from '../data/apps';
+import StoreNameNotice from './StoreNameNotice.astro';
 import type { Lang } from '../i18n/ui';
 import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
 
@@ -57,13 +58,18 @@ const copy = {
               <img class="app-card-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt={copy.iconAlt(name)} width="64" height="64" loading="lazy" />
               <div class="app-card-body">
                 <div class="app-card-head">
-                  <span class="app-card-name">{name}</span>
+                  <span class="app-card-name">{lang === 'ja' && app.previousName ? name.split('：').map((part, i, parts) => <span class="app-name-part">{part}{i < parts.length - 1 ? '：' : ''}</span>) : name}</span>
                   <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
                 </div>
+                {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
                 <span class="app-card-cat">{app.category[lang]}</span>
                 <p class="app-card-tag">{app.content[lang].tagline.replace(/\n/g, ' ')}</p>
                 {app.release && (
-                  <span class="app-card-rel"><b>v{displayVersion(app)}</b> · {formatDate(latestUpdate(app), lang)} {ul.updated}</span>
+                  <span class="app-card-rel">
+                    <b>{releaseVersionLabel(app).split(' · ').map((version, i) => <>{i > 0 && ' · '}<span class="app-version-part">{version}</span></>)}</b>
+                    {displayVersion(app) && ' · '}
+                    <span class:list={['app-release-date', { 'app-release-date--split': !displayVersion(app) }]}>{formatDate(latestUpdate(app), lang)} {ul.updated}</span>
+                  </span>
                 )}
               </div>
               <span class="app-card-go" aria-hidden="true">→</span>
@@ -72,17 +78,18 @@ const copy = {
             {app.status === 'live' && (app.stores.ios || app.stores.android) && (
               <div class="app-card-stores">
                 {app.stores.ios && (
-                  <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onIos}`}>
+                  <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'ios', lang)} — ${sl.onIos}`}>
                     <i class="fab fa-apple" aria-hidden="true"></i> {sl.ios}
                   </a>
                 )}
                 {app.stores.android && (
-                  <a class="app-card-store" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={`${name} — ${sl.onAndroid}`}>
+                  <a class="app-card-store" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'android', lang)} — ${sl.onAndroid}`}>
                     <i class="fab fa-google-play" aria-hidden="true"></i> {sl.android}
                   </a>
                 )}
               </div>
             )}
+            <StoreNameNotice app={app} lang={lang} compact />
           </article>
         );
       })}

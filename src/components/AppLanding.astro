@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { appName, apps, displayVersion, formatDate, latestUpdate, storeLabels, updatedLabels } from '../data/apps';
+import StoreNameNotice from './StoreNameNotice.astro';
+import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
 import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
 
@@ -48,7 +49,7 @@ const trust = {
 const rel = app.release;
 const relUpdated = rel ? formatDate(latestUpdate(app), lang) : '';
 const relSince = rel?.since ? formatDate(rel.since, lang) : '';
-const relVersion = rel ? displayVersion(app) : '';
+const relVersion = releaseVersionLabel(app);
 const ul = updatedLabels[lang];
 
 // 섹션 번호는 실제로 렌더되는 섹션만 센다(스크린샷 없는 앱은 기능이 01).
@@ -83,6 +84,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name,
+  ...(app.previousName ? { alternateName: app.previousName } : {}),
   applicationCategory: app.schemaCategory ?? 'MobileApplication',
   description: c.lede,
   url: canonical,
@@ -95,7 +97,7 @@ const jsonLd = {
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         ...(app.stores.ios ? { downloadUrl: app.stores.ios } : {}),
         ...(app.release ? {
-          softwareVersion: displayVersion(app),
+          ...(displayVersion(app) ? { softwareVersion: displayVersion(app) } : {}),
           datePublished: app.release.since,
           dateModified: latestUpdate(app),
         } : {}),
@@ -123,7 +125,8 @@ const jsonLd = {
           <div class="app-id">
             <img class="app-id-icon" src={iconSrc} alt={iconAlt} width="72" height="72" fetchpriority="high" />
             <div class="app-id-meta">
-              <span class="app-id-name">{name}</span>
+              <span class="app-id-name">{lang === 'ja' && app.previousName ? name.split('：').map((part, i, parts) => <span class="app-name-part">{part}{i < parts.length - 1 ? '：' : ''}</span>) : name}</span>
+              {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
               <span class="app-id-cat">{app.category[lang]}</span>
             </div>
           </div>
@@ -137,13 +140,13 @@ const jsonLd = {
             {app.status === 'live' ? (
               <>
                 {app.stores.ios && (
-                  <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
+                  <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'ios', lang)} — ${sl.onIos}` : sl.onIos}>
                     <i class="fab fa-apple" aria-hidden="true"></i>
                     <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
                   </a>
                 )}
                 {app.stores.android && (
-                  <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
+                  <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'android', lang)} — ${sl.onAndroid}` : sl.onAndroid}>
                     <i class="fab fa-google-play" aria-hidden="true"></i>
                     <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
                   </a>
@@ -157,11 +160,13 @@ const jsonLd = {
             )}
           </div>
 
+          <StoreNameNotice app={app} lang={lang} />
+
           {c.downloadNote && <p class="app-download-note">{c.downloadNote}</p>}
 
           {rel && (
             <p class="app-rel-line">
-              <span class="app-rel-ver">v{relVersion}</span>
+              <span class="app-rel-ver">{relVersion}</span>
               <span class="app-rel-sep" aria-hidden="true">·</span>
               <time datetime={latestUpdate(app)}>{relUpdated} {ul.updated}</time>
               {relSince && (<><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} {relSince}</span></>)}
@@ -239,13 +244,13 @@ const jsonLd = {
           {app.status === 'live' ? (
             <>
               {app.stores.ios && (
-                <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={sl.onIos}>
+                <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'ios', lang)} — ${sl.onIos}` : sl.onIos}>
                   <i class="fab fa-apple" aria-hidden="true"></i>
                   <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
                 </a>
               )}
               {app.stores.android && (
-                <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={sl.onAndroid}>
+                <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'android', lang)} — ${sl.onAndroid}` : sl.onAndroid}>
                   <i class="fab fa-google-play" aria-hidden="true"></i>
                   <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
                 </a>
@@ -263,6 +268,7 @@ const jsonLd = {
           <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a>
         </div>
 
+        <StoreNameNotice app={app} lang={lang} />
         <a class="app-back" href={homeHref}><i class="fas fa-arrow-left" aria-hidden="true"></i> {backLabel}</a>
       </div>
     </section>
