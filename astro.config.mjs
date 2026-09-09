@@ -36,6 +36,9 @@ export default defineConfig({
         if (!/^\/(ko|en|ja)\//.test(pathname)) return false;
         if (pathname.startsWith('/go/')) return false;
         if (/\/apps\/pipi-dday\/import\/?$/.test(pathname)) return false;
+        // Korean Bridge 개인정보처리방침의 zh·vi 판은 사이트 색인 로케일(en/ko/ja) 밖의
+        // 보호자 언어 전용 noindex 페이지 — 앱 설명 페이지에서만 링크한다.
+        if (/\/apps\/pipi-bridge\/privacy\/(zh|vi)\/?$/.test(pathname)) return false;
         return true;
       },
       // 언어별 대체 URL(xhtml:link)을 사이트맵이 직접 선언하게 한다 — 3언어가 1:1 미러라 안전.
