@@ -640,7 +640,7 @@ const draw: AppMeta = {
       shotsTitle: '写真一枚から作品まで',
       featuresTitle: 'PiPi Draw を選ぶ理由',
       ctaTitle: '今すぐ塗りはじめよう',
-      ctaSub: 'お気に入りの写真1枚から。AI変換は1日2回無料、会員登録なしで始められます。',
+      ctaSub: '写真1枚で塗り絵に。AI変換は1日2回無料。会員登録不要。',
       downloadNote: 'AI変換は1日2回無料・インターネット接続が必要です。広告と任意の変換チケット購入があります。色塗り画面内には広告を表示しません。',
       shots: [
         { file: 'ai_result', label: 'ぬりえ図案を確認',      desc: 'サンプル図案の画面です。自分の写真をAIで変換してから色塗りを始められます。' },
