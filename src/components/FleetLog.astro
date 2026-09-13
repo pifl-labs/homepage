@@ -5,6 +5,7 @@ import {
   appName, displayVersion, formatDate, fleetLastUpdated, fleetSince,
   latestUpdate, liveApps, liveAppCount,
 } from '../data/apps';
+import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import type { Lang } from '../i18n/ui';
 
 interface Props { lang: Lang }
@@ -74,8 +75,8 @@ const copy = {
             <a class="fleet-link" href={`/${lang}/apps/${app.slug}/`}>
               <img class="fleet-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt="" width="44" height="44" loading="lazy" />
               <span class="fleet-main">
-                <span class="fleet-name">{appName(app, lang)}</span>
-                <span class="fleet-cat">{app.category[lang]}</span>
+                <span class="fleet-name">{lang === 'ja' ? japaneseAppNameParts(appName(app, lang)).map(part => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : appName(app, lang)}</span>
+                <span class="fleet-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
               </span>
               <span class="fleet-meta">
                 {split ? (

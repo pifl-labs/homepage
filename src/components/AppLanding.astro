@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
+import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
 import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
@@ -125,16 +126,16 @@ const jsonLd = {
           <div class="app-id">
             <img class="app-id-icon" src={iconSrc} alt={iconAlt} width="72" height="72" fetchpriority="high" />
             <div class="app-id-meta">
-              <span class="app-id-name">{lang === 'ja' && app.previousName ? name.split('：').map((part, i, parts) => <span class="app-name-part">{part}{i < parts.length - 1 ? '：' : ''}</span>) : name}</span>
+              <span class="app-id-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
               {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
-              <span class="app-id-cat">{app.category[lang]}</span>
+              <span class="app-id-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
             </div>
           </div>
 
           {app.status === 'soon' && <div class="app-soon-pill">{sl.soon}</div>}
 
-          <h1 class="app-hero-title"><span class="gradient">{c.tagline.split('\n').map((line, i) => (<>{i > 0 && <br />}{line}</>))}</span></h1>
-          <p class="app-hero-lede">{c.lede}</p>
+          <h1 class="app-hero-title"><span class="gradient">{c.tagline.split('\n').map((line, i) => (<>{i > 0 && <br />}{lang === 'ja' ? japaneseReadingParts(line, 'title').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : line}</>))}</span></h1>
+          <p class="app-hero-lede">{lang === 'ja' ? japaneseReadingParts(c.lede, 'lede').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : c.lede}</p>
 
           <div class="app-stores">
             {app.status === 'live' ? (
@@ -142,13 +143,13 @@ const jsonLd = {
                 {app.stores.ios && (
                   <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'ios', lang)} — ${sl.onIos}` : sl.onIos}>
                     <i class="fab fa-apple" aria-hidden="true"></i>
-                    <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
+                    <span class="store-badge-txt"><span class="store-badge-sm">{lang === 'ja' ? japaneseReadingParts(sl.onIos, 'storeLabel').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
                   </a>
                 )}
                 {app.stores.android && (
                   <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'android', lang)} — ${sl.onAndroid}` : sl.onAndroid}>
                     <i class="fab fa-google-play" aria-hidden="true"></i>
-                    <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
+                    <span class="store-badge-txt"><span class="store-badge-sm">{lang === 'ja' ? japaneseReadingParts(sl.onAndroid, 'storeLabel').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
                   </a>
                 )}
               </>
@@ -246,13 +247,13 @@ const jsonLd = {
               {app.stores.ios && (
                 <a class="store-badge" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'ios', lang)} — ${sl.onIos}` : sl.onIos}>
                   <i class="fab fa-apple" aria-hidden="true"></i>
-                  <span class="store-badge-txt"><span class="store-badge-sm">{sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
+                  <span class="store-badge-txt"><span class="store-badge-sm">{lang === 'ja' ? japaneseReadingParts(sl.onIos, 'storeLabel').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : sl.onIos}</span><span class="store-badge-lg">{sl.ios}</span></span>
                 </a>
               )}
               {app.stores.android && (
                 <a class="store-badge" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={app.storeNames ? `${storeAppName(app, 'android', lang)} — ${sl.onAndroid}` : sl.onAndroid}>
                   <i class="fab fa-google-play" aria-hidden="true"></i>
-                  <span class="store-badge-txt"><span class="store-badge-sm">{sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
+                  <span class="store-badge-txt"><span class="store-badge-sm">{lang === 'ja' ? japaneseReadingParts(sl.onAndroid, 'storeLabel').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : sl.onAndroid}</span><span class="store-badge-lg">{sl.android}</span></span>
                 </a>
               )}
             </>

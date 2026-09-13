@@ -8,6 +8,8 @@
   --paper: #fef8ea;
   --ink: #0c1324;
   --stamp: #c2463a;
+  /* Reclaim gutters when default text grows; never scale the text back down. */
+  --page-gutter: clamp(4px, calc(10vw - 1rem), 2rem);
 }
 
 /* Locale overrides — keep the "editorial serif + hand" feeling across KO / JA */
@@ -43,7 +45,7 @@ body::before {
   opacity: .55;
 }
 
-.container { max-width: 1280px; margin:0 auto; padding: 0 2rem; position:relative; z-index:1; }
+.container { max-width: 1280px; margin:0 auto; padding: 0 var(--page-gutter); position:relative; z-index:1; }
 
 /* ========== NAVBAR ========== */
 .nav {
@@ -53,22 +55,22 @@ body::before {
   border-bottom: 1px solid var(--border-subtle);
 }
 .nav-inner {
-  max-width:1280px; margin:0 auto; padding: 14px 2rem;
-  display:flex; align-items:center; gap: 2rem;
+  max-width:1280px; margin:0 auto; padding: 14px var(--page-gutter);
+  display:flex; flex-wrap:wrap; align-items:center; gap: .5rem 2rem;
 }
 .brand {
-  display:flex; align-items:center; gap:.6rem;
+  display:flex; flex-wrap:wrap; align-items:center; gap:.6rem;
   font-family: var(--font-display); font-weight:700; letter-spacing:-0.02em;
   color: var(--text-primary);
   text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
+  min-width:0; max-width:100%;
+  flex-shrink:1;
 }
 .brand:hover { color: var(--text-primary); }
 .brand img { width:32px; height:32px; filter: drop-shadow(0 0 10px var(--glow-indigo)); flex-shrink: 0; }
 .brand b { font-size: 1.05rem; white-space: nowrap; }
 .brand sup { font-size: .55rem; color: var(--text-muted); letter-spacing:.15em; margin-left:.25rem; white-space: nowrap; }
-.nav-links { display:flex; gap:1.5rem; margin-left:auto; }
+.nav-links { display:flex; flex-wrap:wrap; min-width:0; gap:1.5rem; margin-left:auto; }
 .nav-links a {
   color: var(--text-secondary); text-decoration:none; font-size:.92rem; letter-spacing:.02em;
   padding: 6px 2px; position:relative;
@@ -82,6 +84,7 @@ body::before {
 .lang-pill {
   display:inline-flex; background: rgba(255,255,255,0.04);
   border:1px solid var(--border-subtle); border-radius: 999px; padding:3px;
+  flex-shrink:0;
 }
 .lang-pill a {
   padding: 4px 10px; border-radius: 999px; font-size:.7rem; letter-spacing:.08em;
@@ -280,6 +283,7 @@ h2.section-title {
   font-size: clamp(2.2rem, 4.5vw, 3.6rem); font-weight: 900;
   letter-spacing: -0.03em; line-height: 1;
   font-variation-settings: 'opsz' 144;
+  text-wrap: balance;
 }
 h2.section-title .italic { font-style:italic; color: var(--accent-highlight); font-weight:700; }
 .section-sub {
@@ -793,6 +797,7 @@ html[lang^="ja"] .pull .quote {
   word-break: keep-all;
 }
 html[lang^="ko"] .hero-lede,
+html[lang^="ko"] .app-hero-lede,
 html[lang^="ja"] .hero-lede,
 html[lang^="ko"] .section-sub,
 html[lang^="ja"] .section-sub,
@@ -801,6 +806,8 @@ html[lang^="ja"] .logbook-entry {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+/* Keep Korean prose words intact; distribute the final line without shortening copy. */
+html[lang^="ko"] .app-hero-lede { text-wrap: pretty; }
 
 /* Kill fake italic in CJK — Gowun Batang/Shippori Mincho don't have real italic,
    so fake-oblique skew causes edge clipping and looks sloppy. Preserve color +
@@ -922,6 +929,104 @@ h1.hero-title .strike {
   .hero-stage { min-height: 0; }
 }
 
+/* Reflow from available space, including a doubled browser default font.
+   Viewport-bounded gutters leave room for whole words instead of shrinking type. */
+.app-section > .container,
+.fleet-log-section > .container,
+.currently > .container,
+.join > .container { padding-inline: var(--page-gutter); }
+
+.fleet-log .fleet-link { display: flex; flex-wrap: wrap; min-width: 0; padding-inline: min(1.15rem, 4vw); }
+/* Keep the name longest word; move release metadata to another row first. */
+.fleet-log .fleet-main { flex: 1 1 min-content; }
+.fleet-log .fleet-meta { min-width: 0; flex-wrap: wrap; }
+.fleet-log .fleet-date { max-width: 100%; white-space: normal; }
+
+@media (max-width: 960px) {
+  .currently-inner {
+    display: flex; flex-wrap: wrap;
+    padding-inline: min(2rem, 4vw);
+  }
+  .currently-inner > :nth-child(2) { flex: 1 1 12rem; min-width: 0; }
+  .currently-pipi, .currently-badge { flex-shrink: 0; }
+  .dispatch-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+  .dispatch {
+    display: flex; flex-direction: row; flex-wrap: wrap;
+    padding-inline: min(1.2rem, 4vw);
+  }
+  .dispatch-head { flex-basis: 100%; min-width: 0; }
+  .dispatch-body { order: 1; flex: 1 1 10rem; min-width: 0; }
+  .dispatch-art { order: 2; flex-shrink: 0; }
+}
+
+/* Enlarged text: keep information in the layout, not behind existing
+   decorative clips. Flexible groups stack before their min-content collides. */
+.hero > .container { width: 100%; min-width: 0; }
+.hero-grid > * { min-width: 0; max-width: 100%; }
+.eyebrow { min-width: 0; max-width: 100%; }
+.eyebrow::before { flex-shrink: 0; }
+.hero-meta { flex-wrap: wrap; }
+html[lang^="en"] h1.hero-title .strike { hyphens: auto; }
+.annotation-strip { flex-wrap: wrap; padding-inline: min(2rem, 4vw); }
+.annotation-strip > span { flex: 1 1 12rem; min-width: 0; }
+.logbook-card { padding-inline: min(2.2rem, 4vw); }
+.logbook-date { flex-wrap: wrap; gap: .5rem 1rem; }
+.decoder { display: flex; flex-wrap: wrap; padding-inline: min(1.3rem, 4vw); }
+.decoder .glyph { flex-shrink: 0; }
+.decoder > div:not(.glyph) { flex: 1 1 12rem; min-width: 0; }
+
+/* Override the later landing sheet by component specificity, not !important. */
+.app-page .app-id { flex-wrap: wrap; }
+.app-page .app-id-meta { flex: 1 1 12rem; }
+.app-page .app-hero-title { max-width: 100%; min-width: 0; }
+.apps-home .app-card-main { display: flex; flex-wrap: wrap; padding-inline: min(1.6rem, 4vw); }
+.apps-home .app-card-icon { flex-shrink: 0; }
+.apps-home .app-card-body { flex: 1 1 12rem; min-width: 0; }
+.apps-home .app-card-stores { padding-inline: min(1.6rem, 4vw); }
+.apps-home .app-card-store { max-width: 100%; }
+.apps-home .app-version-part,
+.apps-home .app-release-date { white-space: normal; }
+
+.footer-prefs { padding-inline: var(--page-gutter); }
+.pref-group { flex-wrap: wrap; max-width: 100%; }
+.pref-row { flex-wrap: wrap; max-width: 100%; }
+.pref-btn { flex: 0 0 auto; }
+
+html[lang^="ko"] .eyebrow,
+html[lang^="ko"] .currently-text,
+html[lang^="ko"] .slot-desc,
+html[lang^="ko"] .fleet-name { word-break: keep-all; text-wrap: pretty; }
+
+/* Locale reading boundaries for reflowed supporting information.
+   KO spaces delimit words; JA prose uses kinsoku, not emergency keep-all splitting. */
+html[lang^="ko"] .annotation-strip > span,
+html[lang^="ko"] .decoder p,
+html[lang^="ko"] .fleet-cat,
+html[lang^="ko"] .app-card-cat,
+html[lang^="ko"] .app-card-tag { word-break: keep-all; text-wrap: pretty; }
+html[lang^="ja"] .logbook-entry,
+html[lang^="ja"] .section-sub,
+html[lang^="ja"] .annotation-strip,
+html[lang^="ja"] .decoder p,
+html[lang^="ja"] .app-hero-lede,
+html[lang^="ja"] .app-card-tag,
+html[lang^="ja"] .app-id-name,
+html[lang^="ja"] .app-card-name,
+html[lang^="ja"] .eyebrow { word-break: normal; line-break: strict; overflow-wrap: normal; }
+/* Only explicit short nouns, never an entire paragraph; no dictionary dependency. */
+html[lang^="ja"] .ja-reading-unit { display: inline-block; white-space: nowrap; }
+html[lang^="ja"] .eyebrow > span { min-width: 0; }
+
+/* Supporting copy shares the same reading rules, including contact and fleet. */
+html[lang^="ko"] .kicker,
+html[lang^="ko"] .join-cta .hint { word-break: keep-all; text-wrap: pretty; }
+html[lang^="ja"] .currently-text,
+html[lang^="ja"] .slot-desc,
+html[lang^="ja"] .fleet-name,
+html[lang^="ja"] .fleet-cat,
+html[lang^="ja"] .app-card-cat,
+html[lang^="ja"] .app-id-cat { word-break: normal; line-break: strict; overflow-wrap: normal; }
+
 /* ========== entrance animations ========== */
 @media (prefers-reduced-motion: no-preference) {
   .reveal { opacity: 0; transform: translateY(20px); animation: reveal .9s var(--ease) forwards; }
@@ -956,6 +1061,39 @@ button:focus-visible {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* R9: font-relative content capacity applies above 960px too.
+   Decorations occupy normal flow; no text, image, or font-size is removed. */
+.currently-inner { display: flex; flex-wrap: wrap; padding-inline: min(2rem, 4vw); }
+.currently-inner > :nth-child(2) { flex: 1 1 12rem; min-width: 0; }
+.currently-pipi {
+  display: flex; flex-direction: column; align-items: center; gap: .6rem;
+  flex: 0 1 12rem; width: auto; max-width: 100%; height: auto; margin: 0;
+}
+.currently-pipi img { width: 120px; height: 120px; max-width: 100%; }
+.currently-bubble {
+  position: relative; bottom: auto; left: auto; order: -1;
+  max-width: 100%; white-space: normal;
+}
+.currently-badge { flex-shrink: 0; white-space: nowrap; }
+.dispatch-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.dispatch {
+  display: flex; flex-direction: row; flex-wrap: wrap;
+  padding-inline: min(1.2rem, 4vw); min-height: 0;
+}
+.dispatch-head { flex-basis: 100%; min-width: 0; flex-wrap: wrap; }
+.dispatch-body { order: 1; flex: 1 1 10rem; min-width: 0; }
+.dispatch-art { order: 2; position: relative; top: auto; right: auto; flex-shrink: 0; }
+.slot-tag { flex-shrink: 0; white-space: nowrap; }
+html[lang^="ko"] .slot-role { word-break: keep-all; }
+@media (max-width: 960px) {
+  .currently-pipi { flex-basis: 80px; }
+  .currently-pipi img { width: 80px; height: 80px; }
+}
+/* Finite store text column: brand/action units may move to another line,
+   while the icon and all text remain part of the same clickable badge. */
+.app-page .store-badge { max-width: 100%; flex-wrap: wrap; }
+.app-page .store-badge-txt { min-width: 0; flex: 1 1 min-content; }
 
 /* Respect reduced-motion — 선택자 열거는 새 애니메이션을 계속 놓친다(eyebrow 점멸·dispatch bob 등).
    장식용 모션만 있는 사이트라 전역 가드가 안전하다. */
