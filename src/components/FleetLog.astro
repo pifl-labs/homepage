@@ -1,4 +1,5 @@
 ---
+import { appIconSrc } from "../data/app-icons.mjs";
 // 함대 정비 기록 — 홈 #log 아래에 붙는 "실제로 지금 스토어에 올라간 버전" 섹션.
 // 모든 숫자·날짜는 src/data/apps.ts 의 실측 release 데이터에서 파생한다(하드코딩 금지).
 import {
@@ -73,7 +74,7 @@ const copy = {
         return (
           <li class="fleet-row">
             <a class="fleet-link" href={`/${lang}/apps/${app.slug}/`}>
-              <img class="fleet-icon" src={`/assets/apps/${app.slug}/icon.webp`} alt="" width="44" height="44" loading="lazy" />
+              <img class="fleet-icon" src={appIconSrc(app.slug)} alt="" width="44" height="44" loading="lazy" />
               <span class="fleet-main">
                 <span class="fleet-name">{lang === 'ja' ? japaneseAppNameParts(appName(app, lang)).map(part => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : appName(app, lang)}</span>
                 <span class="fleet-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>

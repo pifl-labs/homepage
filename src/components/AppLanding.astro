@@ -1,4 +1,5 @@
 ---
+import { appIconSrc } from "../data/app-icons.mjs";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
@@ -20,7 +21,7 @@ const base = localeBase(lang);
 // 경로 — 영어 앱 페이지도 물리적으로 /en/apps/ 에 빌드되므로 항상 /{lang} prefix.
 const path = `/apps/${app.slug}/`;
 const shotBase = `/assets/apps/${app.slug}/${lang}`;
-const iconSrc = `/assets/apps/${app.slug}/icon.webp`;
+const iconSrc = appIconSrc(app.slug);
 // OG 이미지 — 스크린샷이 없는 '출시 예정' 앱은 기본 카드(BaseLayout DEFAULT_OG)로 넘긴다.
 const heroSrc = app.heroShot ? `${shotBase}/${app.heroShot}.webp` : null;
 

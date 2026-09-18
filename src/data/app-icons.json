@@ -1,0 +1,32 @@
+{
+  "pipi-focus": {
+    "file": "icon-7f2a0ee387d4.webp",
+    "sourceSha256": "7f2a0ee387d47295730cf5570a2be174a59007ffdb32d39d16b0bd85a94e7dba",
+    "webpSha256": "8f103dc3c3f1af3e884deb617158f7085860a27342f4e6dbfe33a316542d27ae"
+  },
+  "pipi-words": {
+    "file": "icon-89b2d0e16083.webp",
+    "sourceSha256": "89b2d0e16083c5f07fe3c850ebb2d92455f61b71b31406d739540b27e2681291",
+    "webpSha256": "c23c3722b4ca5239f028689e2f3ac044cc329bf6ca63486f3ee4867db26970a3"
+  },
+  "pipi-dday": {
+    "file": "icon-29a51e68818b.webp",
+    "sourceSha256": "29a51e68818b5d231cc364a039f23079ad9f7373742febeb3ae24bebae5ce4e0",
+    "webpSha256": "eaae6665c839068ce8bec264e97a63c226860083ea5417356afa494b1fd14141"
+  },
+  "pipi-log": {
+    "file": "icon-62e28eb5e981.webp",
+    "sourceSha256": "62e28eb5e9816dea797b2e06f044e781c6b573294426b15b17d3df7be7130c79",
+    "webpSha256": "86954446737d707d8c7a666bdb713e82337da1f77e17ae334cbfa152cf6380da"
+  },
+  "pipi-draw": {
+    "file": "icon-d8291a9dec75.webp",
+    "sourceSha256": "d8291a9dec757af9e5e88b4de72b43752a2e7052d98357cadcdac1175d674207",
+    "webpSha256": "d26abd1fb784642518f437338c19dd194e063db416419a71c9fbf02914bb06ef"
+  },
+  "pipi-word-voyage": {
+    "file": "icon-54881c731423.webp",
+    "sourceSha256": "54881c731423fa1ccfc512b438fe194b8714b1354e4adfc3187174f3fb479764",
+    "webpSha256": "f7d037dd1ff7c8b481e10c9ebd78d08c2f6191bd11adc0f651c450ca0b87b8d8"
+  }
+}
