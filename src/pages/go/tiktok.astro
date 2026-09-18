@@ -1,4 +1,5 @@
 ---
+import { appIconSrc } from "../../data/app-icons.mjs";
 // /go/tiktok — TikTok 프로필 바이오 전용 link-in-bio 허브 (noindex).
 // 스토어 링크는 src/data/apps.ts(SSOT)에서 파생, 캠페인 태깅만 여기서 부여:
 //   iOS  → App Store campaign token(ct=tiktok_bio_*), pt는 ASC provider ID 확보 시 추가
@@ -74,7 +75,7 @@ const cards = ORDER.map((slug) => {
           <li class="hub-card">
             <div class="hub-card-head">
               <img
-                src={`/assets/apps/${c.slug}/icon.webp`}
+                src={appIconSrc(c.slug)}
                 alt=""
                 width="52"
                 height="52"

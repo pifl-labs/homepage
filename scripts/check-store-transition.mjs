@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { appIconSrc } from "../src/data/app-icons.mjs";
 /** Assert built store-transition copy and cross-platform release/identity contracts. No network. */
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -56,7 +57,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.ok(match[0].includes(name), `${lang}: accessible destination name`);
   }
   assert.ok(detail.includes(`href="https://pifl-labs.com/${lang}/apps/pipi-focus/"`), `${lang}: canonical retained`);
-  assert.ok(detail.includes('src="/assets/apps/pipi-focus/icon.webp"'), `${lang}: existing icon path retained`);
+  assert.ok(detail.includes(`src="${appIconSrc("pipi-focus")}"`), `${lang}: approved versioned icon path used`);
   for (const [slug, expectedNames] of Object.entries(unchanged)) {
     const html = read(lang, `apps/${slug}`);
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
