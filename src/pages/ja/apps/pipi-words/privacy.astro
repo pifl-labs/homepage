@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
 ---
 <BaseLayout
   lang="ja"
@@ -7,13 +8,13 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
   description={"PiFl Labs Co., Ltd. PiPi Words アプリプライバシーポリシー"}
   canonical="https://pifl-labs.com/ja/apps/pipi-words/privacy/"
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-words/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-words/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-words/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-words/privacy/"}]}
-  extraCss={["/styles.css"]}
+  extraCss={["/styles.css", "/styles-words-policy.css?v=832f7e25f493"]}
 >
 <section class="legal-hero">
         <div class="container">
             <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
-            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Words プライバシーポリシー</span></h1>
-            <p class="legal-date">施行日: 2026年4月17日</p>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Words プライバシー<wbr />ポリシー</span></h1>
+            <p class="legal-date"><span class="legal-date-part">施行日: <time datetime="2026-04-17">2026-04-17</time></span><span class="legal-date-part">最終更新: <time datetime="2026-09-24">2026-09-24</time></span></p>
         </div>
     </section>
 
@@ -32,7 +33,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>第2条 (収集する個人情報の項目)</h2>
-                <p>本アプリはアカウント登録を必要としません。当社は次の情報を収集します。</p>
+                <p>本アプリはアカウント登録を必要としません。端末、地域、同意の選択に応じて、本アプリと組み込まれたサービスは次の情報を処理する場合があります。</p>
+                <ScrollableLegalTable label="収集情報：横スクロール">
                 <table>
                     <thead>
                         <tr>
@@ -43,9 +45,9 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     </thead>
                     <tbody>
                         <tr>
-                            <td>広告識別子</td>
-                            <td>広告ID(IDFA/AAID)、おおよその位置(国単位)、デバイス情報(OS、モデル、言語)</td>
-                            <td>Google AdMob SDK による自動収集(非パーソナライズ広告)</td>
+                            <td>広告・SDK データ</td>
+                            <td>デバイス識別子(利用可能な場合は広告 ID を含む)、IP アドレスから推定されるおおよその位置、デバイス情報(OS・モデル・言語)、広告の操作情報、診断情報</td>
+                            <td>広告機能で Google AdMob SDK が処理する場合があります。本アプリは非パーソナライズ広告のみをリクエストします</td>
                         </tr>
                         <tr>
                             <td>アプリ内課金</td>
@@ -64,6 +66,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>第3条 (保有期間)</h2>
                 <ul>
@@ -74,9 +77,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>第4条 (第三者提供)</h2>
-                <p>当社は、お客様の同意がある場合または法令に基づく場合を除き、個人情報を第三者に提供しません。</p>
+                <p>第5条に記載する事業者は、広告配信と購入処理のために関連情報を処理する場合があります。その他の第三者への提供は、お客様の同意または法的根拠がある場合に限ります。</p>
 
                 <h2>第5条 (個人情報処理の委託)</h2>
+                <ScrollableLegalTable label="委託先：横スクロール">
                 <table>
                     <thead>
                         <tr>
@@ -88,8 +92,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <tbody>
                         <tr>
                             <td>Google LLC (AdMob)</td>
-                            <td>モバイル広告配信および広告識別子の処理</td>
-                            <td>委託契約終了時</td>
+                            <td>モバイル広告配信および第2条の広告・SDK データ処理</td>
+                            <td>Google AdMob ポリシーに準拠</td>
                         </tr>
                         <tr>
                             <td>Apple Inc.</td>
@@ -103,12 +107,13 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>第6条 (広告)</h2>
-                <p>本アプリは Google AdMob を通じて広告を表示し、その過程で広告識別子(IDFA/AAID)を収集することがあります。</p>
+                <p>本アプリは Google AdMob に非パーソナライズ広告のみをリクエストします。非パーソナライズ広告でも配信頻度の制御や集計レポートにデバイス識別子が使用される場合があり、SDK は第2条に記載する広告・端末データを処理する場合があります。</p>
                 <ul>
-                    <li><strong>iOS ユーザー</strong>: 本アプリは非パーソナライズ広告のみを表示し、トラッキング許可を要求しません(ATT ダイアログなし)。広告識別子をアプリやWebサイトをまたいだトラッキング目的で使用しません。</li>
-                    <li><strong>Android ユーザー</strong>: デバイス設定 → Google → 広告 → 「広告 ID を削除」または「広告のカスタマイズをオプトアウト」から制御できます。</li>
+                    <li><strong>iOS ユーザー</strong>: 本アプリは App Tracking Transparency（ATT）の許可を求めません。Google によると、ATT の許可がない場合、広告リクエストに IDFA は送信されません。ただし、他のデバイス識別子や SDK データが処理される場合があるため、ATT ダイアログがないことだけをもって、SDK のすべてのデータ処理がアプリや Web サイトをまたぐトラッキングに該当しないとは断定しません。</li>
+                    <li><strong>Android ユーザー</strong>: 端末の設定にあるプライバシー・広告の項目から広告 ID をリセットまたは削除できます。項目名は Android のバージョンによって異なります。</li>
                 </ul>
                 <p>Google AdMob のデータ処理についての詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご参照ください。</p>
 
@@ -148,6 +153,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>本アプリは満14歳未満の子どもを主な対象としていません。当社は満14歳未満の子どもの個人情報を意図的に収集することはなく、収集が確認された場合は直ちに削除します。保護者は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> に削除をリクエストできます。</p>
 
                 <h2>第12条 (国外移転)</h2>
+                <ScrollableLegalTable label="国外移転：横スクロール">
                 <table>
                     <thead>
                         <tr>
@@ -162,7 +168,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC</td>
                             <td>米国</td>
                             <td>モバイル広告配信</td>
-                            <td>広告識別子、デバイス情報</td>
+                            <td>デバイス識別子、IP から推定したおおよその位置、端末・広告の利用情報、診断情報</td>
                         </tr>
                         <tr>
                             <td>Apple Inc.</td>
@@ -178,6 +184,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>第13条 (個人情報保護責任者)</h2>
                 <ul>
