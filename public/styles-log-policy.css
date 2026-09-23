@@ -1,0 +1,61 @@
+/* Limited to the Log policy routes: preserve full text at large text sizes. */
+.log-policy-heading {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    column-gap: 0.45rem;
+}
+
+.log-policy-heading i {
+    margin-right: 0;
+}
+
+.log-policy-heading .text-gradient {
+    min-width: 0;
+    background: none;
+    color: var(--accent-cta);
+    -webkit-text-fill-color: currentColor;
+}
+
+.log-policy-name,
+.log-policy-type {
+    display: block;
+}
+
+.log-policy-term {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.legal-card {
+    overflow-wrap: anywhere;
+}
+
+html[lang="ko"] .legal-card p,
+html[lang="ko"] .legal-card li {
+    word-break: keep-all;
+}
+
+.legal-revised {
+    display: block;
+    margin-top: 0.35rem;
+}
+
+@media (max-width: 480px) {
+    .log-policy-heading {
+        display: block;
+    }
+
+    .log-policy-heading i {
+        display: none;
+    }
+
+    .legal-hero .container,
+    .legal-page .container {
+        padding-inline: 16px;
+    }
+
+    .legal-card {
+        padding: 16px;
+    }
+}

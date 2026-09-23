@@ -1,26 +1,27 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro';
 ---
 <BaseLayout
   lang="en"
-  title={"PiPi Log Privacy Policy - PiFl Labs"}
-  description={"PiFl Labs Co., Ltd. PiPi Log app privacy policy"}
+  title={"Mood Tile Privacy Policy - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. Mood Tile app privacy policy"}
   canonical="https://pifl-labs.com/en/apps/pipi-log/privacy/"
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-log/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-log/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-log/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-log/privacy/"}]}
-  extraCss={["/styles.css"]}
+  extraCss={["/styles.css", "/styles-log-policy.css"]}
 >
 <section class="legal-hero">
         <div class="container">
             <a href="/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Log Privacy Policy</span></h1>
-            <p class="legal-date">Effective Date: May 17, 2026</p>
+            <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name">Mood Tile</span> <span class="log-policy-type">Privacy Policy</span></span></h1>
+            <p class="legal-date">Effective Date: May 17, 2026 <span class="legal-revised">Last updated: September 23, 2026</span></p>
         </div>
     </section>
 
     <main class="legal-page">
         <div class="container">
             <div class="legal-card">
-                <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and disclose information when you use the mobile application <strong>PiPi Log</strong> ("App"). For matters not covered here, our <a href="/privacy">general Privacy Policy</a> applies.</p>
+                <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and disclose information when you use the mobile application <strong>Mood Tile</strong> (formerly PiPi Log) ("App"). For matters not covered here, our <a href="/privacy">general Privacy Policy</a> applies.</p>
 
                 <h2>1. Purpose of Processing</h2>
                 <ul>
@@ -32,6 +33,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
                 <h2>2. Information We Collect</h2>
                 <p>The App does not require account registration. We collect the following:</p>
+                <ScrollableLegalTable label="Privacy information table 1; scroll horizontally">
                 <table>
                     <thead>
                         <tr>
@@ -63,6 +65,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>3. Retention Period</h2>
                 <ul>
@@ -76,6 +79,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <p>We do not sell, trade, or transfer your personal information to third parties except as required by law or with your explicit consent.</p>
 
                 <h2>5. Processing Entrustment</h2>
+                <ScrollableLegalTable label="Privacy information table 2; scroll horizontally">
                 <table>
                     <thead>
                         <tr>
@@ -102,6 +106,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>6. Advertising Identifier and Tracking Consent</h2>
                 <p>The App displays advertisements via Google AdMob and may collect advertising identifiers (IDFA/AAID) for this purpose.</p>
@@ -116,7 +121,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>Notifications</strong>: Daily journaling reminders and flashback (memory) notifications</li>
                     <li><strong>App Tracking Transparency (iOS)</strong>: Tracking consent for ad relevance</li>
-                    <li><strong>Photos &amp; Camera, Biometrics</strong>: Used only to attach photos to entries and to protect locked entries (local_auth, processed on-device; PiPi Log never accesses biometric data)</li>
+                    <li><strong>Photos &amp; Camera, Biometrics</strong>: Used only to attach photos to entries and to protect locked entries (local_auth, processed on-device; Mood Tile never accesses biometric data)</li>
                 </ul>
 
                 <h2>8. Data Destruction</h2>
@@ -139,7 +144,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <ul>
                     <li>Access control and permission management</li>
                     <li>SSL/TLS encryption for data in transit</li>
-                    <li>Sensitive data stored in secure storage (Keychain/Keystore)</li>
+                    <li>Journal entries and attached photos are kept in the App's on-device storage without separate app-level encryption. Purchase entitlement status is stored in platform secure storage (Keychain/Keystore).</li>
                     <li>Apple Privacy Manifest (PrivacyInfo.xcprivacy) compliance</li>
                 </ul>
 
@@ -147,6 +152,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <p>The App is not directed at children under 14. We do not knowingly collect personal data from children under 14. If we become aware of such collection, we will delete it immediately. Parents may request deletion at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
                 <h2>12. International Data Transfers</h2>
+                <ScrollableLegalTable label="Privacy information table 3; scroll horizontally">
                 <table>
                     <thead>
                         <tr>
@@ -177,6 +183,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>13. Data Protection Officer</h2>
                 <ul>
@@ -188,7 +195,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
                 <h2>15. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective as of May 17, 2026. Any changes will be announced on this page.</p>
+                <p>This Privacy Policy is effective as of May 17, 2026. On September 23, 2026, we corrected the App name and the description of on-device storage. Future changes will be announced on this page.</p>
             </div>
         </div>
     </main>
