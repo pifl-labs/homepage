@@ -118,7 +118,7 @@ const jsonLd = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <main class="app-page">
+  <main class:list={['app-page', { 'app-page--word-voyage': app.slug === 'pipi-word-voyage' }]}>
     <!-- HERO — 슬로건 강조형 (스크린샷은 아래 쇼케이스가 담당) -->
     <section class="app-hero">
       <div class="app-hero-halo" aria-hidden="true"></div>

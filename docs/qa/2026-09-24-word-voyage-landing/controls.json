@@ -1,0 +1,16 @@
+{
+  "dark": {
+    "theme": "dark",
+    "pressed": "true"
+  },
+  "xlarge": {
+    "scale": "xlarge",
+    "pressed": "true",
+    "scrollWidth": 320
+  },
+  "languageSwitch": {
+    "href": "/ja/apps/pipi-word-voyage/",
+    "url": "http://127.0.0.1:4327/ja/apps/pipi-word-voyage/",
+    "name": "ハングル航海：韓国語の単語パズル"
+  }
+}

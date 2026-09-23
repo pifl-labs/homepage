@@ -1,0 +1,5807 @@
+[
+  {
+    "lang": "ko",
+    "width": 320,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 16,
+        "right": 29,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 16,
+        "right": 42,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 16,
+        "right": 29,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 16,
+        "right": 69,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 16,
+        "right": 120,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 16,
+        "right": 112,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 16,
+        "right": 172,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 16,
+        "right": 81,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 16,
+        "right": 163,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 16,
+        "right": 79,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 16,
+        "right": 88,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 16,
+        "right": 88,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 16,
+        "right": 70,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 16,
+        "right": 150,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 16,
+        "right": 167,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 16,
+        "right": 68,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 92,
+        "right": 145,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-320-light.png"
+  },
+  {
+    "lang": "ko",
+    "width": 320,
+    "theme": "light",
+    "text200": true,
+    "http": 200,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 4,
+        "right": 30,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 4,
+        "right": 57,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 4,
+        "right": 30,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 4,
+        "right": 109,
+        "width": 105
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 4,
+        "right": 212,
+        "width": 208
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 4,
+        "right": 195,
+        "width": 191
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 4,
+        "right": 133,
+        "width": 129
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 4,
+        "right": 297,
+        "width": 293
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 4,
+        "right": 130,
+        "width": 126
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 4,
+        "right": 148,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 4,
+        "right": 148,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 4,
+        "right": 113,
+        "width": 109
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 4,
+        "right": 272,
+        "width": 268
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 4,
+        "right": 306,
+        "width": 302
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 4,
+        "right": 109,
+        "width": 105
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 156,
+        "right": 261,
+        "width": 105
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-320-light-text200.png"
+  },
+  {
+    "lang": "ko",
+    "width": 375,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 22,
+        "right": 35,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 22,
+        "right": 48,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 22,
+        "right": 35,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 22,
+        "right": 74,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 22,
+        "right": 126,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 22,
+        "right": 117,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 22,
+        "right": 178,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 22,
+        "right": 86,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 22,
+        "right": 168,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 22,
+        "right": 85,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 22,
+        "right": 76,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 22,
+        "right": 155,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 22,
+        "right": 173,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 22,
+        "right": 74,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 98,
+        "right": 150,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-375-light.png"
+  },
+  {
+    "lang": "ko",
+    "width": 375,
+    "theme": "light",
+    "text200": true,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 6,
+        "right": 32,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 6,
+        "right": 58,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 6,
+        "right": 32,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 6,
+        "right": 111,
+        "width": 105
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 6,
+        "right": 214,
+        "width": 208
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 6,
+        "right": 197,
+        "width": 191
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 6,
+        "right": 318,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 6,
+        "right": 134,
+        "width": 129
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 6,
+        "right": 299,
+        "width": 293
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 6,
+        "right": 132,
+        "width": 126
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 6,
+        "right": 150,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 6,
+        "right": 150,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 6,
+        "right": 114,
+        "width": 109
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 6,
+        "right": 273,
+        "width": 268
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 6,
+        "right": 308,
+        "width": 302
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 6,
+        "right": 110,
+        "width": 105
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 158,
+        "right": 263,
+        "width": 105
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-375-light-text200.png"
+  },
+  {
+    "lang": "ko",
+    "width": 768,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 768,
+    "scrollWidth": 768,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 32,
+        "right": 45,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 32,
+        "right": 58,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 32,
+        "right": 45,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 32,
+        "right": 85,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 32,
+        "right": 136,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 32,
+        "right": 128,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 32,
+        "right": 188,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 32,
+        "right": 97,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 32,
+        "right": 179,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 32,
+        "right": 95,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 32,
+        "right": 104,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 32,
+        "right": 104,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 32,
+        "right": 86,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 32,
+        "right": 166,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 32,
+        "right": 183,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 499,
+        "right": 551,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 575,
+        "right": 627,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-768-light.png"
+  },
+  {
+    "lang": "ko",
+    "width": 1280,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 511,
+        "right": 731,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 511,
+        "right": 524,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 511,
+        "right": 537,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 511,
+        "right": 524,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 511,
+        "right": 563,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 511,
+        "right": 615,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 769,
+        "right": 989,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 769,
+        "right": 865,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 769,
+        "right": 925,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 769,
+        "right": 834,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 769,
+        "right": 916,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 769,
+        "right": 832,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 769,
+        "right": 824,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1248,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1028,
+        "right": 1162,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1179,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 1011,
+        "right": 1063,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 1087,
+        "right": 1139,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-1280-light.png"
+  },
+  {
+    "lang": "ko",
+    "width": 1920,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 1920,
+    "scrollWidth": 1920,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 352,
+        "right": 1568,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 831,
+        "right": 1051,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 831,
+        "right": 844,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 831,
+        "right": 857,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 831,
+        "right": 844,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 831,
+        "right": 883,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 831,
+        "right": 935,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 1089,
+        "right": 1309,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 1089,
+        "right": 1185,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 1089,
+        "right": 1245,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 1089,
+        "right": 1154,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 1089,
+        "right": 1236,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 1089,
+        "right": 1152,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 1089,
+        "right": 1161,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 1089,
+        "right": 1161,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 1089,
+        "right": 1144,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1348,
+        "right": 1568,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1348,
+        "right": 1482,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1348,
+        "right": 1499,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 352,
+        "right": 1568,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 1331,
+        "right": 1383,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 1407,
+        "right": 1459,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-1920-light.png"
+  },
+  {
+    "lang": "ko",
+    "width": 375,
+    "theme": "dark",
+    "text200": false,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 22,
+        "right": 35,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 22,
+        "right": 48,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 22,
+        "right": 35,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 22,
+        "right": 74,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 22,
+        "right": 126,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 22,
+        "right": 117,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 22,
+        "right": 178,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 22,
+        "right": 86,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 22,
+        "right": 168,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 22,
+        "right": 85,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 22,
+        "right": 76,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 22,
+        "right": 155,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 22,
+        "right": 173,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 22,
+        "right": 74,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 98,
+        "right": 150,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-375-dark.png"
+  },
+  {
+    "lang": "ko",
+    "width": 1280,
+    "theme": "dark",
+    "text200": false,
+    "http": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "name": "낱말항해: 한글 단어 퍼즐",
+    "release": "v1.0.7 · 2026.09.23 업데이트 ·첫 출항 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ko/game.webp",
+      "/assets/apps/pipi-word-voyage/ko/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ko/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — App Store에서 받기",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "낱말항해: 한글 단어 퍼즐 — Google Play에서 받기",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs주식회사  해적처럼 코딩, Flutter처럼 비상. Flutter 기반 크로스플랫폼 스튜디오. 아주 ",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "해적처럼 코딩, Flutter처럼 비상.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "둘러보기  홈 크루 배 항해일지 무료 생활 도구 ↗",
+        "left": 511,
+        "right": 731,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "홈",
+        "left": 511,
+        "right": 524,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "크루",
+        "left": 511,
+        "right": 537,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "배",
+        "left": 511,
+        "right": 524,
+        "width": 13
+      },
+      {
+        "selector": "A",
+        "text": "항해일지",
+        "left": 511,
+        "right": 563,
+        "width": 53
+      },
+      {
+        "selector": "A",
+        "text": "무료 생활 도구 ↗",
+        "left": 511,
+        "right": 615,
+        "width": 104
+      },
+      {
+        "selector": "footer-col",
+        "text": "앱  Korean Bridge집중항해: 포모도로 타이머PiPi Draw낱말항해: 한글 단어 퍼즐PiPi HelloPi",
+        "left": 769,
+        "right": 989,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 769,
+        "right": 865,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "집중항해: 포모도로 타이머",
+        "left": 769,
+        "right": 925,
+        "width": 156
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 769,
+        "right": 834,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "낱말항해: 한글 단어 퍼즐",
+        "left": 769,
+        "right": 916,
+        "width": 147
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 769,
+        "right": 832,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 769,
+        "right": 824,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "연락처  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1248,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1028,
+        "right": 1162,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1179,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.) 이용약관 · 개인정보 · Made with ⚓",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "이용약관",
+        "left": 1011,
+        "right": 1063,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "개인정보",
+        "left": 1087,
+        "right": 1139,
+        "width": 52
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ko-1280-dark.png"
+  },
+  {
+    "lang": "ja",
+    "width": 320,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 16,
+        "right": 59,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 16,
+        "right": 59,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 16,
+        "right": 30,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 16,
+        "right": 73,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 16,
+        "right": 105,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 16,
+        "right": 112,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 16,
+        "right": 216,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 16,
+        "right": 81,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 16,
+        "right": 244,
+        "width": 228
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 16,
+        "right": 79,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 16,
+        "right": 88,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 16,
+        "right": 88,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 16,
+        "right": 70,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 16,
+        "right": 150,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 16,
+        "right": 167,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 16,
+        "right": 68,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 92,
+        "right": 171,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-320-light.png"
+  },
+  {
+    "lang": "ja",
+    "width": 320,
+    "theme": "light",
+    "text200": true,
+    "http": 200,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 4,
+        "right": 90,
+        "width": 86
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 4,
+        "right": 90,
+        "width": 86
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 4,
+        "right": 33,
+        "width": 29
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 4,
+        "right": 118,
+        "width": 114
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 4,
+        "right": 182,
+        "width": 178
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 4,
+        "right": 195,
+        "width": 191
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 4,
+        "right": 261,
+        "width": 257
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 4,
+        "right": 133,
+        "width": 129
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 4,
+        "right": 261,
+        "width": 257
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 4,
+        "right": 130,
+        "width": 126
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 4,
+        "right": 148,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 4,
+        "right": 148,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 4,
+        "right": 113,
+        "width": 109
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 4,
+        "right": 272,
+        "width": 268
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 4,
+        "right": 306,
+        "width": 302
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 4,
+        "right": 109,
+        "width": 105
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 156,
+        "right": 314,
+        "width": 157
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-320-light-text200.png"
+  },
+  {
+    "lang": "ja",
+    "width": 375,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 22,
+        "right": 64,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 22,
+        "right": 64,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 22,
+        "right": 36,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 22,
+        "right": 79,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 22,
+        "right": 110,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 22,
+        "right": 117,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 22,
+        "right": 221,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 22,
+        "right": 86,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 22,
+        "right": 250,
+        "width": 228
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 22,
+        "right": 85,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 22,
+        "right": 76,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 22,
+        "right": 155,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 22,
+        "right": 173,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 22,
+        "right": 74,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 98,
+        "right": 176,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-375-light.png"
+  },
+  {
+    "lang": "ja",
+    "width": 375,
+    "theme": "light",
+    "text200": true,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 6,
+        "right": 91,
+        "width": 86
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 6,
+        "right": 91,
+        "width": 86
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 6,
+        "right": 34,
+        "width": 29
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 6,
+        "right": 120,
+        "width": 114
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 6,
+        "right": 183,
+        "width": 178
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 6,
+        "right": 197,
+        "width": 191
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 6,
+        "right": 262,
+        "width": 257
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 6,
+        "right": 134,
+        "width": 129
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 6,
+        "right": 319,
+        "width": 314
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 6,
+        "right": 132,
+        "width": 126
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 6,
+        "right": 150,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 6,
+        "right": 150,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 6,
+        "right": 114,
+        "width": 109
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 6,
+        "right": 273,
+        "width": 268
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 6,
+        "right": 308,
+        "width": 302
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 6,
+        "right": 110,
+        "width": 105
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 158,
+        "right": 315,
+        "width": 157
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-375-light-text200.png"
+  },
+  {
+    "lang": "ja",
+    "width": 768,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 768,
+    "scrollWidth": 768,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 32,
+        "right": 75,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 32,
+        "right": 75,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 32,
+        "right": 46,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 32,
+        "right": 89,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 32,
+        "right": 121,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 32,
+        "right": 128,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 32,
+        "right": 232,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 32,
+        "right": 97,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 32,
+        "right": 260,
+        "width": 228
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 32,
+        "right": 95,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 32,
+        "right": 104,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 32,
+        "right": 104,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 32,
+        "right": 86,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 32,
+        "right": 166,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 32,
+        "right": 183,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 472,
+        "right": 525,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 548,
+        "right": 627,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-768-light.png"
+  },
+  {
+    "lang": "ja",
+    "width": 1280,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 511,
+        "right": 731,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 511,
+        "right": 553,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 511,
+        "right": 553,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 511,
+        "right": 525,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 511,
+        "right": 568,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 511,
+        "right": 600,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 769,
+        "right": 989,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 769,
+        "right": 865,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 769,
+        "right": 969,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 769,
+        "right": 834,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 769,
+        "right": 926,
+        "width": 157
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 769,
+        "right": 832,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 769,
+        "right": 824,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1248,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1028,
+        "right": 1162,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1179,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 984,
+        "right": 1037,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 1060,
+        "right": 1139,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-1280-light.png"
+  },
+  {
+    "lang": "ja",
+    "width": 1920,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 1920,
+    "scrollWidth": 1920,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 352,
+        "right": 1568,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 831,
+        "right": 1051,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 831,
+        "right": 873,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 831,
+        "right": 873,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 831,
+        "right": 845,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 831,
+        "right": 888,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 831,
+        "right": 920,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 1089,
+        "right": 1309,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 1089,
+        "right": 1185,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 1089,
+        "right": 1289,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 1089,
+        "right": 1154,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 1089,
+        "right": 1246,
+        "width": 157
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 1089,
+        "right": 1152,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 1089,
+        "right": 1161,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 1089,
+        "right": 1161,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 1089,
+        "right": 1144,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1348,
+        "right": 1568,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1348,
+        "right": 1482,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1348,
+        "right": 1499,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 352,
+        "right": 1568,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 1304,
+        "right": 1357,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 1380,
+        "right": 1459,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-1920-light.png"
+  },
+  {
+    "lang": "ja",
+    "width": 375,
+    "theme": "dark",
+    "text200": false,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 22,
+        "right": 64,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 22,
+        "right": 64,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 22,
+        "right": 36,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 22,
+        "right": 79,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 22,
+        "right": 110,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 22,
+        "right": 117,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 22,
+        "right": 221,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 22,
+        "right": 86,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 22,
+        "right": 250,
+        "width": 228
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 22,
+        "right": 85,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 22,
+        "right": 76,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 22,
+        "right": 155,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 22,
+        "right": 173,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 22,
+        "right": 74,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 98,
+        "right": 176,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-375-dark.png"
+  },
+  {
+    "lang": "ja",
+    "width": 1280,
+    "theme": "dark",
+    "text200": false,
+    "http": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "name": "ハングル航海：韓国語の単語パズル",
+    "release": "v1.0.7 · 2026.09.23 更新 ·初就航 2026.07.13",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/ja/game.webp",
+      "/assets/apps/pipi-word-voyage/ja/voyage.webp",
+      "/assets/apps/pipi-word-voyage/ja/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — App Storeで入手",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "ハングル航海：韓国語の単語パズル — Google Playで入手",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl Labs株式会社  海賊のようにコード、Flutterのように飛ぶ。 Flutterベースのクロスプラットフォームスタジ",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "海賊のようにコード、Flutterのように飛ぶ。",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "案内  ホーム クルー 船 航海日誌 無料ツール ↗",
+        "left": 511,
+        "right": 731,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "ホーム",
+        "left": 511,
+        "right": 553,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "クルー",
+        "left": 511,
+        "right": 553,
+        "width": 43
+      },
+      {
+        "selector": "A",
+        "text": "船",
+        "left": 511,
+        "right": 525,
+        "width": 14
+      },
+      {
+        "selector": "A",
+        "text": "航海日誌",
+        "left": 511,
+        "right": 568,
+        "width": 57
+      },
+      {
+        "selector": "A",
+        "text": "無料ツール ↗",
+        "left": 511,
+        "right": 600,
+        "width": 89
+      },
+      {
+        "selector": "footer-col",
+        "text": "アプリ  Korean Bridge集中航海：ポモドーロタイマーPiPi Drawハングル航海：韓国語の単語パズルPiPi Hel",
+        "left": 769,
+        "right": 989,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 769,
+        "right": 865,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "集中航海：ポモドーロタイマー",
+        "left": 769,
+        "right": 969,
+        "width": 200
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 769,
+        "right": 834,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "ハングル航海：韓国語の単語パズル",
+        "left": 769,
+        "right": 926,
+        "width": 157
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 769,
+        "right": 832,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 769,
+        "right": 824,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "連絡先  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1248,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1028,
+        "right": 1162,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1179,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.) 利用規約 · プライバシー · Made wit",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "利用規約",
+        "left": 984,
+        "right": 1037,
+        "width": 52
+      },
+      {
+        "selector": "A",
+        "text": "プライバシー",
+        "left": 1060,
+        "right": 1139,
+        "width": 79
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/ja-1280-dark.png"
+  },
+  {
+    "lang": "en",
+    "width": 320,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 16,
+        "right": 56,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 16,
+        "right": 52,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 16,
+        "right": 46,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 16,
+        "right": 42,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 16,
+        "right": 104,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 16,
+        "right": 112,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 16,
+        "right": 224,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 16,
+        "right": 81,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 16,
+        "right": 222,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 16,
+        "right": 79,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 16,
+        "right": 88,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 16,
+        "right": 88,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 16,
+        "right": 70,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 16,
+        "right": 150,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 16,
+        "right": 167,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 16,
+        "right": 55,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 79,
+        "right": 134,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-320-light.png"
+  },
+  {
+    "lang": "en",
+    "width": 320,
+    "theme": "light",
+    "text200": true,
+    "http": 200,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 4,
+        "right": 85,
+        "width": 81
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 4,
+        "right": 76,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 4,
+        "right": 64,
+        "width": 60
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 4,
+        "right": 55,
+        "width": 51
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 4,
+        "right": 180,
+        "width": 176
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 4,
+        "right": 195,
+        "width": 191
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 4,
+        "right": 246,
+        "width": 242
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 4,
+        "right": 133,
+        "width": 129
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 4,
+        "right": 216,
+        "width": 212
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 4,
+        "right": 130,
+        "width": 126
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 4,
+        "right": 148,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 4,
+        "right": 148,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 4,
+        "right": 113,
+        "width": 109
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 4,
+        "right": 272,
+        "width": 268
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 4,
+        "right": 306,
+        "width": 302
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 4,
+        "right": 316,
+        "width": 312
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 4,
+        "right": 83,
+        "width": 79
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 130,
+        "right": 240,
+        "width": 110
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-320-light-text200.png"
+  },
+  {
+    "lang": "en",
+    "width": 375,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 22,
+        "right": 62,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 22,
+        "right": 57,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 22,
+        "right": 51,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 22,
+        "right": 47,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 22,
+        "right": 109,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 22,
+        "right": 117,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 22,
+        "right": 229,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 22,
+        "right": 86,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 22,
+        "right": 228,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 22,
+        "right": 85,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 22,
+        "right": 76,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 22,
+        "right": 155,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 22,
+        "right": 173,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 22,
+        "right": 61,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 85,
+        "right": 140,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-375-light.png"
+  },
+  {
+    "lang": "en",
+    "width": 375,
+    "theme": "light",
+    "text200": true,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 6,
+        "right": 86,
+        "width": 81
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 6,
+        "right": 77,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 6,
+        "right": 65,
+        "width": 60
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 6,
+        "right": 57,
+        "width": 51
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 6,
+        "right": 181,
+        "width": 176
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 6,
+        "right": 197,
+        "width": 191
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 6,
+        "right": 336,
+        "width": 330
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 6,
+        "right": 134,
+        "width": 129
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 6,
+        "right": 320,
+        "width": 315
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 6,
+        "right": 132,
+        "width": 126
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 6,
+        "right": 150,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 6,
+        "right": 150,
+        "width": 144
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 6,
+        "right": 114,
+        "width": 109
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 6,
+        "right": 273,
+        "width": 268
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 6,
+        "right": 308,
+        "width": 302
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 6,
+        "right": 370,
+        "width": 364
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 6,
+        "right": 84,
+        "width": 79
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 131,
+        "right": 242,
+        "width": 110
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-375-light-text200.png"
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 768,
+    "scrollWidth": 768,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 32,
+        "right": 72,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 32,
+        "right": 68,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 32,
+        "right": 62,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 32,
+        "right": 58,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 32,
+        "right": 120,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 32,
+        "right": 128,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 32,
+        "right": 240,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 32,
+        "right": 97,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 32,
+        "right": 238,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 32,
+        "right": 95,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 32,
+        "right": 104,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 32,
+        "right": 104,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 32,
+        "right": 86,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 32,
+        "right": 166,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 32,
+        "right": 183,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 32,
+        "right": 736,
+        "width": 704
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 509,
+        "right": 548,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 572,
+        "right": 627,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-768-light.png"
+  },
+  {
+    "lang": "en",
+    "width": 1280,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 511,
+        "right": 731,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 511,
+        "right": 551,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 511,
+        "right": 547,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 511,
+        "right": 541,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 511,
+        "right": 536,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 511,
+        "right": 599,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 769,
+        "right": 989,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 769,
+        "right": 865,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 769,
+        "right": 977,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 769,
+        "right": 834,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 769,
+        "right": 975,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 769,
+        "right": 832,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 769,
+        "right": 824,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1248,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1028,
+        "right": 1162,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1179,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 1021,
+        "right": 1060,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 1084,
+        "right": 1139,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-1280-light.png"
+  },
+  {
+    "lang": "en",
+    "width": 1920,
+    "theme": "light",
+    "text200": false,
+    "http": 200,
+    "viewport": 1920,
+    "scrollWidth": 1920,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 352,
+        "right": 1568,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 352,
+        "right": 732,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 831,
+        "right": 1051,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 831,
+        "right": 871,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 831,
+        "right": 867,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 831,
+        "right": 861,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 831,
+        "right": 856,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 831,
+        "right": 919,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 1089,
+        "right": 1309,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 1089,
+        "right": 1185,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 1089,
+        "right": 1297,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 1089,
+        "right": 1154,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 1089,
+        "right": 1295,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 1089,
+        "right": 1152,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 1089,
+        "right": 1161,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 1089,
+        "right": 1161,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 1089,
+        "right": 1144,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1348,
+        "right": 1568,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1348,
+        "right": 1482,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1348,
+        "right": 1499,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 352,
+        "right": 1568,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 1341,
+        "right": 1380,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 1404,
+        "right": 1459,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-1920-light.png"
+  },
+  {
+    "lang": "en",
+    "width": 375,
+    "theme": "dark",
+    "text200": false,
+    "http": 200,
+    "viewport": 375,
+    "scrollWidth": 375,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 22,
+        "right": 62,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 22,
+        "right": 57,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 22,
+        "right": 51,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 22,
+        "right": 47,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 22,
+        "right": 109,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 22,
+        "right": 117,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 22,
+        "right": 229,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 22,
+        "right": 86,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 22,
+        "right": 228,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 22,
+        "right": 85,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 22,
+        "right": 94,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 22,
+        "right": 76,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 22,
+        "right": 155,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 22,
+        "right": 173,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 22,
+        "right": 354,
+        "width": 332
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 22,
+        "right": 61,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 85,
+        "right": 140,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-375-dark.png"
+  },
+  {
+    "lang": "en",
+    "width": 1280,
+    "theme": "dark",
+    "text200": false,
+    "http": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "name": "Hangul Voyage: Korean Puzzle",
+    "release": "v1.0.7 · Sep 23, 2026 updated ·first launch Jul 13, 2026",
+    "shots": [
+      "/assets/apps/pipi-word-voyage/en/game.webp",
+      "/assets/apps/pipi-word-voyage/en/voyage.webp",
+      "/assets/apps/pipi-word-voyage/en/daily.webp"
+    ],
+    "brokenImages": [],
+    "links": [
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Download on the App Store",
+        "href": "https://apps.apple.com/app/id6788949612"
+      },
+      {
+        "name": "Hangul Voyage: Korean Puzzle — Get it on Google Play",
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en"
+      }
+    ],
+    "footerClipping": [],
+    "footerBounds": [
+      {
+        "selector": "footer-grid",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "footer-brand",
+        "text": "PiFl LabsCO., LTD.  Code like a pirate. Fly like Flutter. A Flutt",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-tagline",
+        "text": "Code like a pirate. Fly like Flutter.",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-desc",
+        "text": "A Flutter-based cross-platform studio. Sailing the digital seas w",
+        "left": 32,
+        "right": 412,
+        "width": 380
+      },
+      {
+        "selector": "footer-col",
+        "text": "Navigate  Home Crew Ship Log Free Tools ↗",
+        "left": 511,
+        "right": 731,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Home",
+        "left": 511,
+        "right": 551,
+        "width": 40
+      },
+      {
+        "selector": "A",
+        "text": "Crew",
+        "left": 511,
+        "right": 547,
+        "width": 36
+      },
+      {
+        "selector": "A",
+        "text": "Ship",
+        "left": 511,
+        "right": 541,
+        "width": 30
+      },
+      {
+        "selector": "A",
+        "text": "Log",
+        "left": 511,
+        "right": 536,
+        "width": 26
+      },
+      {
+        "selector": "A",
+        "text": "Free Tools ↗",
+        "left": 511,
+        "right": 599,
+        "width": 88
+      },
+      {
+        "selector": "footer-col",
+        "text": "Apps  Korean BridgePomodoro at Sea: Focus TimerPiPi DrawHangul Vo",
+        "left": 769,
+        "right": 989,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "Korean Bridge",
+        "left": 769,
+        "right": 865,
+        "width": 96
+      },
+      {
+        "selector": "A",
+        "text": "Pomodoro at Sea: Focus Timer",
+        "left": 769,
+        "right": 977,
+        "width": 208
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Draw",
+        "left": 769,
+        "right": 834,
+        "width": 65
+      },
+      {
+        "selector": "A",
+        "text": "Hangul Voyage: Korean Puzzle",
+        "left": 769,
+        "right": 975,
+        "width": 206
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Hello",
+        "left": 769,
+        "right": 832,
+        "width": 63
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Words",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi D-Day",
+        "left": 769,
+        "right": 841,
+        "width": 72
+      },
+      {
+        "selector": "A",
+        "text": "PiPi Log",
+        "left": 769,
+        "right": 824,
+        "width": 54
+      },
+      {
+        "selector": "footer-col",
+        "text": "Contact  hello@pifl-labs.com privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1248,
+        "width": 220
+      },
+      {
+        "selector": "A",
+        "text": "hello@pifl-labs.com",
+        "left": 1028,
+        "right": 1162,
+        "width": 134
+      },
+      {
+        "selector": "A",
+        "text": "privacy@pifl-labs.com",
+        "left": 1028,
+        "right": 1179,
+        "width": 151
+      },
+      {
+        "selector": "footer-bottom",
+        "text": "© 2026 PiFl Labs Co., Ltd. Terms · Privacy · Made with ⚓",
+        "left": 32,
+        "right": 1248,
+        "width": 1216
+      },
+      {
+        "selector": "A",
+        "text": "Terms",
+        "left": 1021,
+        "right": 1060,
+        "width": 39
+      },
+      {
+        "selector": "A",
+        "text": "Privacy",
+        "left": 1084,
+        "right": 1139,
+        "width": 55
+      }
+    ],
+    "errors": [],
+    "screenshot": "/private/tmp/wordvoyage-landing-qa-20260924/final5/en-1280-dark.png"
+  }
+]
