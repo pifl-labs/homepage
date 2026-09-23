@@ -680,12 +680,19 @@ const draw: AppMeta = {
   },
 };
 
-// PiPi Word Voyage(피피 낱말항해) — 콘텐츠 SSOT = games/pipi_word_voyage/docs/release/_app-facts.md.
-// 2026-07-22 양 스토어 출시. ko 단독 소프트런치(ja/en UI 뼈대) — 랜딩 3언어는 유지.
+// 낱말항해 — 콘텐츠 SSOT = games/pipi_word_voyage/docs/release/_app-facts.md.
+// 한국어 퍼즐, ko/ja/en UI. 양 스토어의 로케일별 공개 표시명은 2026-09-24 확인.
+// home.webp는 개명 전 앱 제목, logbook.webp는 '모든 낱말 영구 저장' 주장 포함:
+// 새 실물 캡처가 준비되기 전까지 두 장 모두 랜딩 캐러셀에서 비노출(원본 보존).
 const wordVoyage: AppMeta = {
   slug: 'pipi-word-voyage',
-  name: 'PiPi Word Voyage',
-  nameByLang: { ko: '피피 낱말항해', ja: 'ピピ ことばの航海' }, // 실제 스토어 등재명
+  name: 'Hangul Voyage: Korean Puzzle',
+  nameByLang: { ko: '낱말항해: 한글 단어 퍼즐', ja: 'ハングル航海：韓国語の単語パズル' },
+  previousName: 'PiPi Word Voyage',
+  storeNames: {
+    ios: { ko: '낱말항해: 한글 단어 퍼즐', ja: 'ハングル航海：韓国語の単語パズル', en: 'Hangul Voyage: Korean Puzzle' },
+    android: { ko: '낱말항해: 한글 단어 퍼즐', ja: 'ハングル航海：韓国語の単語パズル', en: 'Hangul Voyage: Korean Puzzle' },
+  },
   status: 'live',
   category: { ko: '게임 · 낱말 퍼즐', ja: 'ゲーム · 単語パズル', en: 'Games · Word Puzzle' },
   schemaCategory: 'GameApplication',
@@ -694,10 +701,10 @@ const wordVoyage: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage',
   },
   release: {
-    ios: { version: '1.0.3', updated: '2026-08-21' },
-    android: { version: '1.0.3', updated: '2026-08-20' },
+    ios: { version: '1.0.7', updated: '2026-09-23' },
+    android: { version: '1.0.7', updated: '2026-09-23' },
     since: '2026-07-13',
-    checkedAt: '2026-08-23',
+    checkedAt: '2026-09-24',
   },
   heroShot: 'game',
   content: {
@@ -706,21 +713,19 @@ const wordVoyage: AppMeta = {
       lede: '원형으로 놓인 글자를 드래그로 이어 낱말을 완성하고, 12개 해역 120개 섬의 바다 지도를 개척하는 한글 워드 퍼즐. 계정 없이 바로 시작하고, 진행도는 기기 안에만 조용히 쌓입니다.',
       metaDesc: '글자를 드래그로 이어 낱말을 완성하는 한글 워드 퍼즐. 12개 해역 120개 섬, 오늘의 퍼즐과 항해일지까지. 계정 없이 iOS · Android.',
       shotsTitle: '낱말로 그리는 바다 지도',
-      featuresTitle: '왜 피피 낱말항해인가',
+      featuresTitle: '왜 낱말항해인가',
       ctaTitle: '낱말 항해를 시작하세요',
       ctaSub: 'iOS · Android에서 무료로.',
       shots: [
-        { file: 'home',    label: '항해 준비',             desc: '항해사 PiPi와 함께 낱말 항해를 시작합니다.' },
         { file: 'game',    label: '드래그 한 번에 낱말 완성', desc: '원형 글자를 이어 목표 낱말을 채웁니다.' },
         { file: 'voyage',  label: '12개 해역, 120개 섬',    desc: '섬을 하나씩 개척하며 바다 지도를 완성해요.' },
         { file: 'daily',   label: '오늘의 퍼즐',            desc: '하루 한 판으로 연속 항해 기록을 쌓아요.' },
-        { file: 'logbook', label: '항해일지',               desc: '발견한 낱말이 도감에 차곡차곡 남습니다.' },
       ],
       features: [
-        { icon: 'fa-spell-check',  title: '검증된 낱말만',      desc: '표준국어대사전을 바탕으로 검증한 낱말만 담았습니다.' },
+        { icon: 'fa-spell-check',  title: '한글 낱말 퍼즐',      desc: '글자를 이어 목표 낱말을 완성하고, 목표 밖의 보너스 낱말도 찾아보세요.' },
         { icon: 'fa-calendar-day', title: '오늘의 퍼즐 · 스트릭', desc: '하루 한 판, 연속 항해 기록이 매일의 동기를 만듭니다.' },
-        { icon: 'fa-book-open',    title: '항해일지(낱말 도감)', desc: '발견한 모든 낱말이 항해일지에 영구히 남습니다.' },
-        { icon: 'fa-wifi',         title: '계정 없이 바로 시작',  desc: '로그인 없이 시작하고, 진행도는 기기 안에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
+        { icon: 'fa-book-open',    title: '보너스 낱말 도감', desc: '새로 발견한 보너스 낱말을 항해일지에서 다시 볼 수 있습니다.' },
+        { icon: 'fa-wifi',         title: '계정 없이 바로 시작',  desc: '로그인 없이 시작하고 진행도는 기기에 저장됩니다. 광고와 앱 개선용 사용 통계에 네트워크가 사용될 수 있습니다.' },
       ],
     },
     ja: {
@@ -728,21 +733,19 @@ const wordVoyage: AppMeta = {
       lede: '円形に並んだ文字をドラッグでつないで単語を完成し、12海域120の島の海図を開拓する韓国語単語パズル。アカウント不要ですぐ始められ、進捗は端末の中だけに静かに積み上がります。',
       metaDesc: '文字をドラッグでつないで単語を完成する韓国語単語パズル。12海域120の島、今日のパズルと航海日誌も。アカウント不要、iOS · Android。',
       shotsTitle: '単語で描く海図',
-      featuresTitle: 'ピピ ことばの航海を選ぶ理由',
+      featuresTitle: 'ハングル航海を選ぶ理由',
       ctaTitle: '言葉の航海を始めよう',
       ctaSub: 'iOS · Android で無料。',
       shots: [
-        { file: 'home',    label: '出航の準備',           desc: '航海士ピピと一緒に言葉の航海を始めます。' },
         { file: 'game',    label: 'ドラッグ一回で単語完成', desc: '円形の文字をつないで目標の単語を埋めます。' },
         { file: 'voyage',  label: '12海域、120の島',      desc: '島を一つずつ開拓して海図を完成させましょう。' },
         { file: 'daily',   label: '今日のパズル',          desc: '一日一回のパズルで連続航海記録を積み上げます。' },
-        { file: 'logbook', label: '航海日誌',              desc: '見つけた単語がコレクションに残ります。' },
       ],
       features: [
-        { icon: 'fa-spell-check',  title: '検証済みの単語だけ',   desc: '標準国語大辞典で検証した単語だけを収録しています。' },
-        { icon: 'fa-calendar-day', title: '今日のパズル · 連続記録', desc: '一日一回、連続航海記録が毎日のモチベーションに。' },
-        { icon: 'fa-book-open',    title: '航海日誌(単語図鑑)',   desc: '発見したすべての単語が航海日誌に永久に残ります。' },
-        { icon: 'fa-wifi',         title: 'アカウント不要ですぐ開始', desc: 'ログインなしで始められ、進捗は端末内にのみ保存(通信は広告表示にのみ使用)。' },
+        { icon: 'fa-spell-check',  title: '韓国語の単語パズル',   desc: '文字をつないで目標の単語を完成。目標以外のボーナス単語も探せます。' },
+        { icon: 'fa-calendar-day', title: '今日のパズル · 連続記録', desc: '一日一回のパズルで、連続記録を伸ばせます。' },
+        { icon: 'fa-book-open',    title: 'ボーナス単語の図鑑',   desc: '新しく見つけたボーナス単語を航海日誌で見返せます。' },
+        { icon: 'fa-wifi',         title: 'アカウント不要ですぐ開始', desc: 'ログインなしで始められ、進捗は端末に保存されます。広告表示とアプリ改善のための利用統計に通信を使用する場合があります。' },
       ],
     },
     en: {
@@ -750,21 +753,19 @@ const wordVoyage: AppMeta = {
       lede: 'Drag across a ring of letters to form words and chart 120 islands across 12 seas in this Korean word puzzle. No account needed — start instantly, and your progress stays on your device.',
       metaDesc: 'Korean word puzzle: link letters to form words, clear 120 islands across 12 seas, keep a daily streak and a word logbook. No account, iOS & Android.',
       shotsTitle: 'A sea chart drawn with words',
-      featuresTitle: 'Why PiPi Word Voyage',
+      featuresTitle: 'Why Hangul Voyage',
       ctaTitle: 'Start your word voyage',
       ctaSub: 'Free on iOS & Android.',
       shots: [
-        { file: 'home',    label: 'Ready to sail',        desc: 'Begin your word voyage with navigator PiPi.' },
         { file: 'game',    label: 'One drag, one word',   desc: 'Link the ring of letters to fill the target words.' },
         { file: 'voyage',  label: '120 islands, 12 seas', desc: 'Clear islands one by one and complete the chart.' },
         { file: 'daily',   label: 'Daily puzzle',         desc: 'One puzzle a day keeps your voyage streak alive.' },
-        { file: 'logbook', label: 'Word logbook',         desc: 'Every word you discover is logged forever.' },
       ],
       features: [
-        { icon: 'fa-spell-check',  title: 'Dictionary-verified words', desc: 'Every word is validated against the Standard Korean Dictionary.' },
+        { icon: 'fa-spell-check',  title: 'Korean word puzzles', desc: 'Link letters to complete target words, and find bonus words beyond the board.' },
         { icon: 'fa-calendar-day', title: 'Daily puzzle & streak',     desc: 'One puzzle a day builds a voyage streak that keeps you coming back.' },
-        { icon: 'fa-book-open',    title: 'Voyage logbook',            desc: 'Every word you discover is recorded permanently.' },
-        { icon: 'fa-wifi',         title: 'No account needed',         desc: 'Start instantly with no login — progress stays on your device (the network is only used to show ads).' },
+        { icon: 'fa-book-open',    title: 'Bonus-word logbook',            desc: 'Revisit the bonus words you discover in the voyage logbook.' },
+        { icon: 'fa-wifi',         title: 'No account needed',         desc: 'Start without a login; progress stays on your device. Network access may be used for ads and usage analytics that help improve the app.' },
       ],
     },
   },

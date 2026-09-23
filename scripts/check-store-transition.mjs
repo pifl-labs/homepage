@@ -18,8 +18,8 @@ const unchanged = {
   'pipi-log': ['PiPi Log', 'PiPi Log', 'PiPi Log'],
   'pipi-dday': ['PiPi D-Day', 'PiPi D-Day', 'PiPi D-Day'],
   'pipi-hello': ['PiPi Hello', 'PiPi Hello', 'PiPi Hello'],
-  'pipi-word-voyage': ['피피 낱말항해', 'ピピ ことばの航海', 'PiPi Word Voyage'],
 };
+const voyageNames = ['낱말항해: 한글 단어 퍼즐', 'ハングル航海：韓国語の単語パズル', 'Hangul Voyage: Korean Puzzle'];
 function read(lang, page = '') { return readFileSync(join(dist, lang, page, 'index.html'), 'utf8'); }
 function schemas(html) {
   return [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
@@ -81,6 +81,29 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
     assert.equal(notices(html).length, 0, `${lang}/${slug}: transition must not leak`);
   }
+  const voyage = read(lang, 'apps/pipi-word-voyage');
+  const voyageSchema = appSchema(voyage);
+  const voyageItem = homeItems.find(a => a.url.endsWith('/pipi-word-voyage/'));
+  for (const item of [voyageSchema, voyageItem]) {
+    assert.equal(item.name, voyageNames[index], `${lang}: public Voyage listing name`);
+    assert.equal(item.alternateName, 'PiPi Word Voyage', `${lang}: old name remains searchable`);
+    assert.equal(item.softwareVersion, '1.0.7', `${lang}: both publicly verified store versions`);
+    assert.equal(item.dateModified, '2026-09-23', `${lang}: both public store update dates`);
+  }
+  assert.ok(voyage.includes('v1.0.7'), `${lang}: visible release version`);
+  assert.equal(notices(voyage).length, 0, `${lang}: stores have the same localized listing name`);
+  assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/home.webp`), `${lang}: stale old-name home shot hidden`);
+  assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/logbook.webp`), `${lang}: misleading all-words shot hidden`);
+  for (const shot of ['game', 'voyage', 'daily']) {
+    assert.ok(voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/${shot}.webp`), `${lang}: factual ${shot} shot retained`);
+  }
+  for (const oldClaim of [
+    '표준국어대사전을 바탕으로 검증한 낱말만', '발견한 모든 낱말', '통신은 광고 표시에만',
+    '標準国語大辞典で検証した単語だけ', '発見したすべての単語', '通信は広告表示にのみ使用',
+    'Every word is validated', 'Every word you discover', 'network is only used to show ads',
+  ]) assert.ok(!voyage.includes(oldClaim), `${lang}: no unverified claim: ${oldClaim}`);
+  assert.ok(voyage.includes('com.pifl.pipi.wordvoyage'), `${lang}: Google Play destination retained`);
+  assert.ok(voyage.includes('id6788949612'), `${lang}: App Store destination retained`);
   // Existing split-version app: preserve the source snapshot without collapsing it to one version.
   const hello = read(lang, 'apps/pipi-hello');
   assert.ok(hello.includes('iOS v1.0.4 · Android v1.0.5'));
@@ -90,4 +113,4 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(appSchema(read(lang, 'apps/pipi-draw')).softwareVersion, '1.0.8');
   checked++;
 }
-console.log(`PASS: ${checked} locales — Focus public rename complete, old alias retained, no stale notices, common version, immutable IDs/routes/icons; 6 other names preserved.`);
+console.log(`PASS: ${checked} locales — Focus and Word Voyage public names/versions, Voyage factual claims, old aliases, store destinations; 5 other names preserved.`);

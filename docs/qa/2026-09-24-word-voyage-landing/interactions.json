@@ -1,0 +1,65 @@
+[
+  {
+    "lang": "ko",
+    "carousel": {
+      "before": 4,
+      "after": 617,
+      "works": true
+    },
+    "badgeCount": 4,
+    "stores": [
+      {
+        "href": "https://apps.apple.com/app/id6788949612",
+        "popupUrl": "https://apps.apple.com/us/app/hangul-voyage-korean-puzzle/id6788949612",
+        "popupTitle": "‎Hangul Voyage: Korean Puzzle App - App Store"
+      },
+      {
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko",
+        "popupUrl": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ko",
+        "popupTitle": "낱말항해: 한글 단어 퍼즐 - Google Play 앱"
+      }
+    ]
+  },
+  {
+    "lang": "ja",
+    "carousel": {
+      "before": 4,
+      "after": 617,
+      "works": true
+    },
+    "badgeCount": 4,
+    "stores": [
+      {
+        "href": "https://apps.apple.com/app/id6788949612",
+        "popupUrl": "https://apps.apple.com/us/app/hangul-voyage-korean-puzzle/id6788949612",
+        "popupTitle": "‎Hangul Voyage: Korean Puzzle App - App Store"
+      },
+      {
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja",
+        "popupUrl": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ja&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_ja",
+        "popupTitle": "낱말항해: 한글 단어 퍼즐 - Google Play 앱"
+      }
+    ]
+  },
+  {
+    "lang": "en",
+    "carousel": {
+      "before": 4,
+      "after": 617,
+      "works": true
+    },
+    "badgeCount": 4,
+    "stores": [
+      {
+        "href": "https://apps.apple.com/app/id6788949612",
+        "popupUrl": "https://apps.apple.com/us/app/hangul-voyage-korean-puzzle/id6788949612",
+        "popupTitle": "‎Hangul Voyage: Korean Puzzle App - App Store"
+      },
+      {
+        "href": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en",
+        "popupUrl": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&utm_source=pifl-labs&utm_medium=website&utm_campaign=website_en&referrer=utm_source%3Dpifl-labs%26utm_medium%3Dwebsite%26utm_campaign%3Dwebsite_en",
+        "popupTitle": "낱말항해: 한글 단어 퍼즐 - Google Play 앱"
+      }
+    ]
+  }
+]
