@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 test('policy table region preserves content and supports keyboard scrolling',()=>{
  const s=read('src/components/ScrollableLegalTable.astro');
@@ -48,6 +49,14 @@ test('Japanese local-data label stays readable at enlarged phone width',()=>{
  assert.match(s,/<td>アプリ使用<wbr\s*\/>データ<\/td>/);
  assert.match(s,/<td>メール<wbr\s*\/>お問い合わせ<\/td>/);
  assert.doesNotMatch(s,/アプリ使用データ\(ローカル\)/);
+});
+
+test('all Log policy routes pin the deployed CSS URL to its content hash',()=>{
+ const cssHash=createHash('sha256').update(read('public/styles-log-policy.css')).digest('hex').slice(0,12);
+ for(const loc of ['ko/','ja/','en/','']){
+  const s=read(`src/pages/${loc}apps/pipi-log/privacy.astro`);
+  assert.ok(s.includes(`/styles-log-policy.css?v=${cssHash}`),`${loc||'default'} CSS cache key`);
+ }
 });
 
 test('all locales retain original effective date, disclose revision and distinguish journal from secure entitlement',()=>{
