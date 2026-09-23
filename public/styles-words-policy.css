@@ -1,0 +1,55 @@
+/* Only the Words privacy routes: keep enlarged policy text readable. */
+.legal-card {
+    overflow-wrap: break-word;
+}
+
+html[lang="ko"] .legal-card,
+html[lang="ko"] .legal-hero h1 {
+    word-break: keep-all;
+}
+
+html[lang="ja"] .legal-card {
+    line-break: strict;
+}
+
+html[lang="ja"] .legal-hero h1 {
+    word-break: keep-all;
+}
+
+html[lang="ko"] .legal-table-scroll th:first-child,
+html[lang="ko"] .legal-table-scroll td:first-child {
+    white-space: nowrap;
+}
+
+html[lang="en"] .legal-table-scroll th:first-child,
+html[lang="en"] .legal-table-scroll td:first-child {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.legal-date {
+    line-height: 1.6;
+}
+
+.legal-date-part {
+    display: block;
+}
+
+.legal-date time {
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .legal-hero .container,
+    .legal-page .container {
+        padding-inline: 16px;
+    }
+
+    .legal-card {
+        padding: 16px;
+    }
+
+    .legal-hero h1 i {
+        display: none;
+    }
+}
