@@ -32,6 +32,7 @@ test('large text preserves table column reading width and wraps long prose',()=>
  assert.match(css,/html\[lang="ja"\] \.legal-card\s*\{\s*line-break:\s*strict/);
  assert.match(css,/html\[lang="ko"\] \.legal-table-scroll td:first-child\s*\{\s*white-space:\s*nowrap/);
  assert.match(css,/html\[lang="en"\] \.legal-table-scroll td:first-child\s*\{\s*overflow-wrap:\s*normal;\s*word-break:\s*normal/);
+ assert.match(css,/html\[lang="ja"\] \.legal-table-scroll td:first-child\s*\{\s*overflow-wrap:\s*normal;\s*word-break:\s*keep-all/);
  assert.doesNotMatch(css,/overflow(?:-x)?:\s*(?:hidden|clip)/);
 });
 
@@ -44,6 +45,8 @@ test('Korean app rename uses the correct topic particle',()=>{
 test('Japanese local-data label stays readable at enlarged phone width',()=>{
  const s=read('src/pages/ja/apps/pipi-log/privacy.astro');
  assert.match(s,/<strong>アプリ内データ<\/strong>/);
+ assert.match(s,/<td>アプリ使用<wbr\s*\/>データ<\/td>/);
+ assert.match(s,/<td>メール<wbr\s*\/>お問い合わせ<\/td>/);
  assert.doesNotMatch(s,/アプリ使用データ\(ローカル\)/);
 });
 

@@ -53,6 +53,13 @@ html[lang="en"] .legal-table-scroll td:first-child {
     word-break: normal;
 }
 
+/* Japanese table categories break only at editorial word boundaries. */
+html[lang="ja"] .legal-table-scroll th:first-child,
+html[lang="ja"] .legal-table-scroll td:first-child {
+    overflow-wrap: normal;
+    word-break: keep-all;
+}
+
 .legal-revised {
     display: block;
     margin-top: 0.35rem;
