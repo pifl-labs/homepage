@@ -28,12 +28,15 @@
 }
 
 .legal-card {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
 }
 
-html[lang="ko"] .legal-card p,
-html[lang="ko"] .legal-card li {
+html[lang="ko"] .legal-card {
     word-break: keep-all;
+}
+
+html[lang="ja"] .legal-card {
+    line-break: strict;
 }
 
 /* Keep short Korean table labels intact even at 200% text size. The table
@@ -41,6 +44,20 @@ html[lang="ko"] .legal-card li {
 html[lang="ko"] .legal-table-scroll th:first-child,
 html[lang="ko"] .legal-table-scroll td:first-child {
     white-space: nowrap;
+}
+
+/* English category names may wrap at spaces, never inside a word. */
+html[lang="en"] .legal-table-scroll th:first-child,
+html[lang="en"] .legal-table-scroll td:first-child {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+/* Japanese table categories break only at editorial word boundaries. */
+html[lang="ja"] .legal-table-scroll th:first-child,
+html[lang="ja"] .legal-table-scroll td:first-child {
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .legal-revised {
