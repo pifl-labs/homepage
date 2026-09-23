@@ -31,9 +31,27 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   const home = read(lang);
   const detail = read(lang, 'apps/pipi-focus');
   const fleetNote = home.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
-  assert.ok(fleetNote.includes(lang === 'en' ? 'Aug 23, 2026 – Sep 10, 2026' : '2026.08.23 – 2026.09.10'), `${lang}: mixed observation dates must not look all freshly verified`);
+  // A newly published app can advance the latest check without re-verifying old apps.
+  const observationRange = lang === 'en'
+    ? fleetNote.match(/Aug 23, 2026 – ([A-Z][a-z]+ \d{1,2}, 2026)/)
+    : fleetNote.match(/2026\.08\.23 – (2026\.\d{2}\.\d{2})/);
+  assert.ok(observationRange, `${lang}: mixed observation dates must not look all freshly verified`);
+  assert.notEqual(observationRange[1], lang === 'en' ? 'Aug 23, 2026' : '2026.08.23');
   const detailSchema = appSchema(detail);
   const homeItems = schemas(home).find(s => s['@type'] === 'ItemList').itemListElement.map(e => e.item);
+  const bridge = read(lang, 'apps/pipi-bridge');
+  const bridgeSchema = appSchema(bridge);
+  const bridgeItem = homeItems.find(a => a.url.endsWith('/pipi-bridge/'));
+  assert.ok(bridgeItem && bridgeSchema, `${lang}: Bridge is in public catalog`);
+  assert.ok(home.includes(`href="/${lang}/apps/pipi-bridge/"`), `${lang}: Bridge is linked from homepage`);
+  assert.ok(bridge.includes('https://apps.apple.com/app/id6801205183'), `${lang}: Bridge Apple destination`);
+  assert.ok(bridge.includes('com.pifl.pipi.bridge'), `${lang}: Bridge Play destination`);
+  assert.equal(bridgeSchema.softwareVersion, undefined, `${lang}: unverified Android version must not become a shared version`);
+  assert.equal(bridgeItem.softwareVersion, undefined, `${lang}: homepage schema must not claim shared version`);
+  const bridgeFleetRow = home.match(/<li class="fleet-row">(?:(?!<\/li>).)*Korean Bridge(?:(?!<\/li>).)*<\/li>/s)?.[0];
+  assert.ok(bridgeFleetRow, `${lang}: Bridge maintenance row`);
+  assert.ok(bridgeFleetRow.includes('v1.0.0'), `${lang}: verified iOS version is visible`);
+  assert.ok(!bridgeFleetRow.includes('fleet-both'), `${lang}: no unverified both-store equality claim`);
   const focusItem = homeItems.find(a => a.url.endsWith('/pipi-focus/'));
   for (const item of [detailSchema, focusItem]) {
     assert.equal(item.name, name);

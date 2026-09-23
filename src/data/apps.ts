@@ -32,7 +32,7 @@ export interface AppRelease {
   ios?: StoreRelease;
   android?: StoreRelease;
   /** 최초 공개일(양 스토어 중 빠른 쪽) */
-  since: string;
+  since?: string;
   /** 실측 확인 시각 — 이 값이 오래되면 카피가 낡았다는 신호 */
   checkedAt: string;
 }
@@ -771,23 +771,31 @@ const wordVoyage: AppMeta = {
 };
 
 
-// Korean Bridge — 스토어 미등재(출시 예정). 콘텐츠 근거 = code/pipi_bridge/README.md +
+// Korean Bridge — 양스토어 공개 확인 2026-09-21. 콘텐츠 근거 = code/pipi_bridge/README.md +
 // 사이트 내 개인정보처리방침(ko/en/zh/vi 병기). 스크린샷 자산이 아직 없어 shots 는 비운다.
 const bridge: AppMeta = {
   slug: 'pipi-bridge',
   name: 'Korean Bridge',
-  status: 'soon',
-  category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean & school prep' },
-  stores: {},
+  status: 'live',
+  category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean' },
+  stores: {
+    ios: 'https://apps.apple.com/app/id6801205183',
+    android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge',
+  },
+  release: {
+    ios: { version: '1.0.0', updated: '2026-09-16' },
+    // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
+    checkedAt: '2026-09-21',
+  },
   content: {
     ko: {
-      tagline: '한국어가 낯선 아이의\n첫 학교 준비',
+      tagline: '아이의 첫 한국어\n첫 학교 준비',
       lede: '한국어가 낯선 4~8세 아이와 부모를 위한 배움 앱. 한국어와 기초 수학, 학교생활 표현, 감정·자연 활동을 네 개의 배움 세계에 80개 활동으로 담았습니다. 광고도 계정도 없고, 부모 안내는 다섯 개 언어로 제공합니다.',
       metaDesc: '한국어가 낯선 4~8세 아이의 한국어·학교 준비 앱. 네 개 배움 세계 80개 활동, 하루 10분 루틴, 광고·계정 없음. 부모 안내 5개 언어.',
       shotsTitle: '',
       featuresTitle: '왜 Korean Bridge 인가',
-      ctaTitle: '출항 준비 중입니다',
-      ctaSub: '준비가 끝나면 iOS · Android에 조용히 올립니다.',
+      ctaTitle: '첫 배움을 시작해 보세요',
+      ctaSub: '무료로 시작하세요.',
       shots: [],
       features: [
         { icon: 'fa-clock',        title: '하루 10분 루틴',      desc: '활동 10개, 다섯 개마다 놀이 쉼, 그리고 간격 복습 — 아이 호흡에 맞춰 진행합니다.' },
@@ -797,13 +805,13 @@ const bridge: AppMeta = {
       ],
     },
     ja: {
-      tagline: '韓国語がはじめての子の\n学校準備',
+      tagline: '韓国語の第一歩\n学校への準備',
       lede: '韓国語がはじめての4〜8歳の子どもと保護者のための学習アプリ。韓国語と基礎の算数、学校生活の表現、気持ち・自然の活動を、四つの学びの世界に80のアクティビティで収めました。広告もアカウントもなく、保護者向けの案内は五つの言語で提供します。',
       metaDesc: '韓国語がはじめての4〜8歳向け、韓国語と学校準備のアプリ。四つの学びの世界に80のアクティビティ、1日10分、広告・アカウントなし。保護者案内は5言語。',
       shotsTitle: '',
       featuresTitle: 'Korean Bridge を選ぶ理由',
-      ctaTitle: '出航の準備中です',
-      ctaSub: '仕上がったら iOS · Android に静かに公開します。',
+      ctaTitle: '学びをはじめよう',
+      ctaSub: '無料でダウンロード。',
       shots: [],
       features: [
         { icon: 'fa-clock',        title: '1日10分の習慣',        desc: 'アクティビティ10個、5個ごとに遊びの休憩、そして間隔をあけた復習 — 子どもの呼吸に合わせて進みます。' },
@@ -813,13 +821,13 @@ const bridge: AppMeta = {
       ],
     },
     en: {
-      tagline: 'First Korean,\nfirst school days',
+      tagline: 'Korean basics.\nSchool-ready.',
       lede: 'A learning app for children aged 4–8 who are new to Korean, and for their parents. Korean, early math, classroom phrases and feelings-and-nature activities across four learning worlds and 80 activities. No ads, no account, and a parent guide in five languages.',
       metaDesc: 'Korean and school-readiness for children aged 4–8 who are new to Korean. Four learning worlds, 80 activities, a 10-minute daily routine, no ads or account. Parent guide in 5 languages.',
       shotsTitle: '',
       featuresTitle: 'Why Korean Bridge',
-      ctaTitle: 'Still fitting out',
-      ctaSub: 'When it is ready, it goes quietly to iOS and Android.',
+      ctaTitle: 'Start learning together',
+      ctaSub: 'Free to download.',
       shots: [],
       features: [
         { icon: 'fa-clock',        title: 'Ten minutes a day',    desc: 'Ten activities, a play break every five, and spaced review — paced to a small child.' },
@@ -894,8 +902,8 @@ const legion: AppMeta = {
 };
 
 export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion };
-// 순서 = 출시 앱 먼저(최근 출시 순), 그 뒤 '출시 예정' 3척.
-export const appList: AppMeta[] = [focus, draw, wordVoyage, hello, words, dday, log, dialogos, bridge, legion];
+// 출시 앱을 먼저, 출시 예정 앱을 뒤에 둔다. Bridge는 공개 앱이다.
+export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */
@@ -907,14 +915,11 @@ export function latestUpdate(app: AppMeta): string {
   return d.length ? d.sort().slice(-1)[0] : '';
 }
 
-/** 공통 버전만 반환한다. 다른 플랫폼 버전을 하나로 대표하거나 JSON-LD에 단정하지 않는다. */
+/** 양 플랫폼의 공개 버전이 모두 확인되고 같을 때만 공통 버전으로 표시한다. */
 export function displayVersion(app: AppMeta): string {
   const r = app.release;
-  if (!r) return '';
-  if (r.ios && r.android) {
-    return r.ios.version === r.android.version ? r.ios.version : '';
-  }
-  return (r.ios ?? r.android)?.version ?? '';
+  if (!r?.ios || !r.android) return '';
+  return r.ios.version === r.android.version ? r.ios.version : '';
 }
 
 /** 화면용 버전 — 서로 다르면 플랫폼 이름과 함께 둘 다 표시한다. */
