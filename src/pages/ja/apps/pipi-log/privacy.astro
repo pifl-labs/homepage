@@ -1,26 +1,27 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
 ---
 <BaseLayout
   lang="ja"
-  title={"PiPi Log プライバシーポリシー - PiFl Labs"}
-  description={"PiFl Labs Co., Ltd. PiPi Log アプリプライバシーポリシー"}
+  title={"気分のひとこま プライバシーポリシー - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. 気分のひとこま アプリプライバシーポリシー"}
   canonical="https://pifl-labs.com/ja/apps/pipi-log/privacy/"
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-log/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-log/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-log/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-log/privacy/"}]}
-  extraCss={["/styles.css"]}
+  extraCss={["/styles.css", "/styles-log-policy.css"]}
 >
 <section class="legal-hero">
         <div class="container">
             <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
-            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Log プライバシーポリシー</span></h1>
-            <p class="legal-date">施行日: 2026年5月17日</p>
+            <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name"><span class="log-policy-term">気分の</span><wbr /><span class="log-policy-term">ひとこま</span></span> <span class="log-policy-type"><span class="log-policy-term">プライバシー</span><wbr /><span class="log-policy-term">ポリシー</span></span></span></h1>
+            <p class="legal-date">施行日: 2026年5月17日 <span class="legal-revised">最終更新日: 2026年9月23日</span></p>
         </div>
     </section>
 
     <main class="legal-page">
         <div class="container">
             <div class="legal-card">
-                <p>株式会社ピープルラブズ(以下「当社」)は、お客様の個人情報を保護することを重要な責務と認識しております。本プライバシーポリシーは、モバイルアプリケーション <strong>PiPi Log</strong>(以下「本アプリ」)における個人情報の収集、利用、保管、開示について説明します。本ポリシーに記載のない事項については、当社の <a href="/ja/privacy">一般プライバシーポリシー</a> が適用されます。</p>
+                <p>株式会社ピープルラブズ(以下「当社」)は、お客様の個人情報を保護することを重要な責務と認識しております。本プライバシーポリシーは、モバイルアプリケーション <strong>気分のひとこま</strong> (旧 PiPi Log)(以下「本アプリ」)における個人情報の収集、利用、保管、開示について説明します。本ポリシーに記載のない事項については、当社の <a href="/ja/privacy">一般プライバシーポリシー</a> が適用されます。</p>
 
                 <h2>第1条 (利用目的)</h2>
                 <ul>
@@ -32,6 +33,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
                 <h2>第2条 (収集する個人情報の項目)</h2>
                 <p>本アプリはアカウント登録を必要としません。当社は次の情報を収集します。</p>
+                <ScrollableLegalTable label="個人情報の表 1、横にスクロールできます">
                 <table>
                     <thead>
                         <tr>
@@ -63,6 +65,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>第3条 (保有期間)</h2>
                 <ul>
@@ -76,6 +79,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>当社は、お客様の同意がある場合または法令に基づく場合を除き、個人情報を第三者に提供しません。</p>
 
                 <h2>第5条 (個人情報処理の委託)</h2>
+                <ScrollableLegalTable label="個人情報の表 2、横にスクロールできます">
                 <table>
                     <thead>
                         <tr>
@@ -102,6 +106,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>第6条 (広告識別子およびトラッキング同意)</h2>
                 <p>本アプリは Google AdMob を通じて広告を表示し、その過程で広告識別子(IDFA/AAID)を収集することがあります。</p>
@@ -116,7 +121,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>通知</strong>: 毎日の航海日誌リマインダー、過去の振り返り通知</li>
                     <li><strong>App Tracking Transparency (iOS)</strong>: 広告関連性向上のためのトラッキング同意</li>
-                    <li><strong>写真・カメラ、生体認証</strong>: 日記への写真添付、ロックされた日記の保護にのみ使用 (local_auth — デバイス内処理、PiPi Log は生体情報に直接アクセスしません)</li>
+                    <li><strong>写真・カメラ、生体認証</strong>: 日記への写真添付、ロックされた日記の保護にのみ使用 (local_auth — デバイス内処理、気分のひとこま は生体情報に直接アクセスしません)</li>
                 </ul>
 
                 <h2>第8条 (個人情報の破棄手続および方法)</h2>
@@ -139,7 +144,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <ul>
                     <li>個人情報へのアクセス権限管理</li>
                     <li>SSL/TLS による送信データの暗号化</li>
-                    <li>機密情報の安全な保存領域(Keychain/Keystore)の活用</li>
+                    <li>日記の本文と添付写真は端末内のアプリ保存領域に保管し、アプリ独自の暗号化は行いません。購入権限の状態は Keychain/Keystore に基づく安全な保存領域に保管します。</li>
                     <li>Apple Privacy Manifest (PrivacyInfo.xcprivacy) の適用</li>
                 </ul>
 
@@ -147,6 +152,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>本アプリは満14歳未満の子どもを主な対象としていません。当社は満14歳未満の子どもの個人情報を意図的に収集することはなく、収集が確認された場合は直ちに削除します。保護者は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> に削除をリクエストできます。</p>
 
                 <h2>第12条 (国外移転)</h2>
+                <ScrollableLegalTable label="個人情報の表 3、横にスクロールできます">
                 <table>
                     <thead>
                         <tr>
@@ -177,6 +183,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
 
                 <h2>第13条 (個人情報保護責任者)</h2>
                 <ul>
@@ -188,7 +195,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
                 <h2>第15条 (改定)</h2>
-                <p>本プライバシーポリシーは、2026年5月17日から施行します。変更がある場合は、本ページを通じて告知いたします。</p>
+                <p>本プライバシーポリシーは、2026年5月17日から施行します。2026年9月23日にアプリの名称と端末内の保存方法に関する説明を訂正しました。今後の変更も本ページで告知します。</p>
             </div>
         </div>
     </main>

@@ -1,0 +1,28 @@
+---
+interface Props { label: string }
+const { label } = Astro.props;
+---
+<p class="legal-table-hint" aria-hidden="true">↔ {label}</p>
+<div class="legal-table-scroll" role="region" aria-label={label} tabindex="0">
+  <slot />
+</div>
+<style>
+  .legal-table-hint {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .legal-table-scroll {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    margin-block: 0.75rem;
+  }
+  .legal-table-scroll:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+  .legal-table-scroll :global(table) {
+    min-width: 36em;
+  }
+</style>
