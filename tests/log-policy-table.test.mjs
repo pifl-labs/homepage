@@ -28,6 +28,7 @@ test('large text preserves table column reading width and wraps long prose',()=>
  assert.match(table,/class="legal-table-hint"/);
  const css=read('public/styles-log-policy.css');
  assert.match(css,/overflow-wrap:\s*anywhere/);
+ assert.match(css,/html\[lang="ko"\] \.legal-table-scroll td:first-child\s*\{\s*white-space:\s*nowrap/);
  assert.doesNotMatch(css,/overflow(?:-x)?:\s*(?:hidden|clip)/);
 });
 

@@ -36,6 +36,13 @@ html[lang="ko"] .legal-card li {
     word-break: keep-all;
 }
 
+/* Keep short Korean table labels intact even at 200% text size. The table
+   region itself remains horizontally scrollable for the remaining columns. */
+html[lang="ko"] .legal-table-scroll th:first-child,
+html[lang="ko"] .legal-table-scroll td:first-child {
+    white-space: nowrap;
+}
+
 .legal-revised {
     display: block;
     margin-top: 0.35rem;
