@@ -431,7 +431,14 @@ const dday: AppMeta = {
 
 const log: AppMeta = {
   slug: 'pipi-log',
-  name: 'PiPi Log',
+  name: 'Mood Tile: Daily Journal',
+  nameByLang: { ko: '기분 한 칸: 날씨 감정일기', ja: '気分のひとこま：感情日記' },
+  previousName: 'PiPi Log',
+  // 2026-09-27 KR/JP/US public listings: both stores use the localized name.
+  storeNames: {
+    ios: { ko: '기분 한 칸: 날씨 감정일기', ja: '気分のひとこま：感情日記', en: 'Mood Tile: Daily Journal' },
+    android: { ko: '기분 한 칸: 날씨 감정일기', ja: '気分のひとこま：感情日記', en: 'Mood Tile: Daily Journal' },
+  },
   status: 'live',
   category: { ko: '라이프스타일 · 감정 일기', ja: 'ライフスタイル · 気分日記', en: 'Lifestyle · Mood journal' },
   stores: {
@@ -439,19 +446,19 @@ const log: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.log',
   },
   release: {
-    ios: { version: '1.0.7', updated: '2026-08-20' },
-    android: { version: '1.0.7', updated: '2026-08-20' },
+    ios: { version: '1.0.10', updated: '2026-09-23' },
+    android: { version: '1.0.10', updated: '2026-09-23' },
     since: '2026-06-09',
-    checkedAt: '2026-08-23',
+    checkedAt: '2026-09-27',
   },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '하루의 마음을\n바다 날씨로 남기다',
-      lede: '매일의 기분을 9단계 바다 날씨로 기록하면 PiPi가 그 마음에 반응합니다. 선장의 질문으로 하루를 돌아보고, 한 달의 항해를 지도 한 장으로. 계정도 서버도 없이, 모든 기록은 기기 안에.',
-      metaDesc: '하루의 기분을 아홉 가지 바다 날씨로 남기는 항해일지형 감정 일기. 추이 차트와 한 달 항해 지도, 생체인증 잠금까지. iOS · Android 무료.',
+      lede: '매일의 기분을 9단계 바다 날씨로 기록하면 PiPi가 그 마음에 반응합니다. 선장의 질문으로 하루를 돌아보고, 한 달의 항해를 지도 한 장으로. 계정 없이 시작하며 일지와 사진은 기기에 저장됩니다.',
+      metaDesc: '하루의 기분을 아홉 가지 바다 날씨로 남기는 항해일지형 감정 일기. 추이 차트와 한 달 항해 지도, 프리미엄 생체인증 잠금. iOS · Android에서 무료로 시작.',
       shotsTitle: '마음을 적는 항해일지',
-      featuresTitle: '왜 PiPi Log 인가',
+      featuresTitle: '왜 기분 한 칸인가',
       ctaTitle: '지금 항해를 시작하세요',
       ctaSub: 'iOS · Android에서 무료로 시작.',
       shots: [
@@ -465,15 +472,15 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9단계 바다 날씨',   desc: '무지개 바다부터 태풍까지, 기분을 날씨로 기록.' },
         { icon: 'fa-feather',   title: 'PiPi가 마음에 반응', desc: '기록한 기분에 PiPi가 항해 메시지로 답합니다.' },
         { icon: 'fa-pen-nib',   title: '선장의 질문',       desc: '매일 다른 질문으로 하루를 가볍게 돌아봐요.' },
-        { icon: 'fa-lock',      title: '잠금 + 기기 저장',      desc: '생체인증 잠금, 계정·서버 없이 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
+        { icon: 'fa-lock',      title: '잠금 + 기기 저장',      desc: '프리미엄에서는 생체인증으로 일지를 잠글 수 있습니다. 일지·사진은 기기에 저장되며, 광고와 인앱 결제에는 통신을 사용합니다.' },
       ],
     },
     ja: {
       tagline: '今日の心を、\n海の天気で残す',
-      lede: '毎日の気分を9段階の海の天気で記録すると、PiPiがその心に反応します。船長の質問で一日を振り返り、ひと月の航海を一枚の地図に。アカウントもサーバーもなく、すべて端末の中に。',
-      metaDesc: '一日の気分を九つの海の天気で残す航海日誌型の気分日記。推移チャートとひと月の航海マップ、生体認証ロックも。iOS · Android 無料。',
+      lede: '毎日の気分を9段階の海の天気で記録すると、PiPiがその心に反応します。船長の質問で一日を振り返り、ひと月の航海を地図に。登録不要。日記と写真は端末に保存。',
+      metaDesc: '一日の気分を九つの海の天気で残す航海日誌型の気分日記。推移チャートとひと月の航海マップ、プレミアムの生体認証ロック。iOS・Androidで無料から。',
       shotsTitle: '心を綴る航海日誌',
-      featuresTitle: 'PiPi Log を選ぶ理由',
+      featuresTitle: '気分のひとこまを選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
       ctaSub: 'iOS · Android で無料ではじめる。',
       shots: [
@@ -487,15 +494,15 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9段階の海の天気',   desc: '虹の海から台風まで、気分を天気で記録。' },
         { icon: 'fa-feather',   title: 'PiPiが心に反応',    desc: '記録した気分にPiPiが航海メッセージで応える。' },
         { icon: 'fa-pen-nib',   title: '船長の質問',        desc: '毎日違う質問で一日を軽く振り返る。' },
-        { icon: 'fa-lock',      title: 'ロック + 端末内保存',      desc: '生体認証ロック、アカウント・サーバーなしで端末内に保存(通信は広告表示にのみ使用)。' },
+        { icon: 'fa-lock',      title: 'ロック + 端末内保存',      desc: 'プレミアム購入後は生体認証で日記をロック。日記・写真は端末内に保存し、広告とアプリ内購入には通信を使用します。' },
       ],
     },
     en: {
       tagline: 'Log your heart\nas sea weather.',
-      lede: "Record each day's mood as one of 9 sea-weathers and PiPi reacts to how you feel. Reflect with the captain's prompt, then turn a month's voyage into a single map. No account, no server — everything stays on your device.",
-      metaDesc: "A voyage-log mood journal: record each day's mood as one of 9 sea-weathers and PiPi reacts. Charts, a shareable monthly map, biometric lock — all on your device. Free on iOS & Android.",
+      lede: "Pick one of nine sea-weather moods and PiPi responds. Reflect with the captain's prompt, then turn a month's voyage into a map. No account needed. Entries and photos stay on your device.",
+      metaDesc: 'A sea-weather mood journal with charts, a monthly map and premium biometric lock. Entries and photos stay on your device. Free to start on iOS & Android.',
       shotsTitle: 'A logbook for your heart',
-      featuresTitle: 'Why PiPi Log',
+      featuresTitle: 'Why Mood Tile',
       ctaTitle: 'Start your voyage now',
       ctaSub: 'Free to start on iOS & Android.',
       shots: [
@@ -509,7 +516,7 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9 sea-weathers',    desc: 'From rainbow seas to typhoons — log your mood as weather.' },
         { icon: 'fa-feather',   title: 'PiPi reacts',        desc: 'PiPi answers your logged mood with a pirate message.' },
         { icon: 'fa-pen-nib',   title: "The captain's prompt", desc: 'A fresh question each day to reflect, lightly.' },
-        { icon: 'fa-lock',      title: 'Locked & on-device',    desc: 'Biometric lock, no account or server — stored on your device (the network is only used to show ads).' },
+        { icon: 'fa-lock',      title: 'Locked & on-device',    desc: 'Premium adds biometric lock for entries. Journal entries and photos stay on your device; ads and in-app purchases use network services.' },
       ],
     },
   },

@@ -118,7 +118,7 @@ const jsonLd = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <main class:list={['app-page', { 'app-page--word-voyage': app.slug === 'pipi-word-voyage' }]}>
+  <main class:list={['app-page', { 'app-page--word-voyage': app.slug === 'pipi-word-voyage', 'app-page--log': app.slug === 'pipi-log' }]}>
     <!-- HERO — 슬로건 강조형 (스크린샷은 아래 쇼케이스가 담당) -->
     <section class="app-hero">
       <div class="app-hero-halo" aria-hidden="true"></div>
@@ -136,7 +136,7 @@ const jsonLd = {
           {app.status === 'soon' && <div class="app-soon-pill">{sl.soon}</div>}
 
           <h1 class="app-hero-title"><span class="gradient">{c.tagline.split('\n').map((line, i) => (<>{i > 0 && <br />}{lang === 'ja' ? japaneseReadingParts(line, 'title').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : line}</>))}</span></h1>
-          <p class="app-hero-lede">{lang === 'ja' ? japaneseReadingParts(c.lede, 'lede').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : c.lede}</p>
+          <p class="app-hero-lede">{lang === 'ja' ? japaneseReadingParts(c.lede, app.slug === 'pipi-log' ? 'logLede' : 'lede').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : c.lede}</p>
 
           <div class="app-stores">
             {app.status === 'live' ? (

@@ -8,6 +8,7 @@ const readingUnits = {
   tagline: ['向き合う'],
   title: ['しよう'],
   lede: ['確認できます。', 'アプリで。', '端末の中で。'],
+  logLede: ['登録不要。', '日記と写真'],
   storeLabel: ['Google Play', 'App Store', 'で入手'],
 };
 
