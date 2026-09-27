@@ -28,7 +28,10 @@ for (const [lang, checks] of Object.entries(expected)) {
   for (const entry of readdirSync(join(dist, lang, 'apps'), {withFileTypes: true})) {
     if (!entry.isDirectory() || entry.name === 'pipi-draw') continue;
     const other = readFileSync(join(dist, lang, 'apps', entry.name, 'index.html'), 'utf8');
-    assert.doesNotMatch(other, /class="app-download-note"/, `${lang}/${entry.name}: Draw disclosure leaked`);
+    const otherNotes = [...other.matchAll(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/gs)];
+    for (const note of otherNotes) {
+      assert.ok(!note[1].includes(checks.note[0]), `${lang}/${entry.name}: Draw disclosure leaked`);
+    }
   }
   checked++;
 }

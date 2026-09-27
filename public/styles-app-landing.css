@@ -88,6 +88,7 @@
   text-wrap: pretty;
 }
 :lang(ko) .app-download-note { word-break: keep-all; }
+:lang(ja) .app-download-note { word-break: auto-phrase; }
 
 /* ─── STORE BADGES ─────────────────────────────────────── */
 .app-stores { display: flex; gap: .9rem; flex-wrap: wrap; }

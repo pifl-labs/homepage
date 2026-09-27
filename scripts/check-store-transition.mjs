@@ -20,6 +20,11 @@ const unchanged = {
 };
 const voyageNames = ['낱말항해: 한글 단어 퍼즐', 'ハングル航海：韓国語の単語パズル', 'Hangul Voyage: Korean Puzzle'];
 const logNames = ['기분 한 칸: 날씨 감정일기', '気分のひとこま：感情日記', 'Mood Tile: Daily Journal'];
+const ddayFreeNotes = [
+  ['D-Day 5개와 기본 위젯 스킨 1종은 무료', 'PiPi Pro를 한 번 구매하면', '무료 버전에는 광고'],
+  ['D-Dayは5件、基本ウィジェットスキン1種まで無料', 'PiPi Proを一度購入すると', '無料版には広告'],
+  ['Five D-Days and one widget skin are free', 'A one-time PiPi Pro purchase', 'removes ads'],
+];
 function read(lang, page = '') { return readFileSync(join(dist, lang, page, 'index.html'), 'utf8'); }
 function schemas(html) {
   return [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
@@ -80,6 +85,12 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     const html = read(lang, `apps/${slug}`);
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
     assert.equal(notices(html).length, 0, `${lang}/${slug}: transition must not leak`);
+  }
+  const dday = read(lang, 'apps/pipi-dday');
+  const ddayNotes = [...dday.matchAll(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/gs)];
+  assert.equal(ddayNotes.length, 1, `${lang}: D-Day free/paid disclosure near store links`);
+  for (const claim of ddayFreeNotes[index]) {
+    assert.ok(ddayNotes[0][1].includes(claim), `${lang}: D-Day disclosure missing ${claim}`);
   }
   const log = read(lang, 'apps/pipi-log');
   const logSchema = appSchema(log);
