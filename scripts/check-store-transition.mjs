@@ -15,11 +15,11 @@ const names = {
 const unchanged = {
   'pipi-draw': ['PiPi Draw', 'PiPi Draw', 'PiPi Draw'],
   'pipi-words': ['PiPi Words', 'PiPi Words', 'PiPi Words'],
-  'pipi-log': ['PiPi Log', 'PiPi Log', 'PiPi Log'],
   'pipi-dday': ['PiPi D-Day', 'PiPi D-Day', 'PiPi D-Day'],
   'pipi-hello': ['PiPi Hello', 'PiPi Hello', 'PiPi Hello'],
 };
 const voyageNames = ['낱말항해: 한글 단어 퍼즐', 'ハングル航海：韓国語の単語パズル', 'Hangul Voyage: Korean Puzzle'];
+const logNames = ['기분 한 칸: 날씨 감정일기', '気分のひとこま：感情日記', 'Mood Tile: Daily Journal'];
 function read(lang, page = '') { return readFileSync(join(dist, lang, page, 'index.html'), 'utf8'); }
 function schemas(html) {
   return [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
@@ -81,6 +81,27 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
     assert.equal(notices(html).length, 0, `${lang}/${slug}: transition must not leak`);
   }
+  const log = read(lang, 'apps/pipi-log');
+  const logSchema = appSchema(log);
+  const logItem = homeItems.find(a => a.url.endsWith('/pipi-log/'));
+  for (const item of [logSchema, logItem]) {
+    assert.equal(item.name, logNames[index], `${lang}: Log public store name`);
+    assert.equal(item.alternateName, 'PiPi Log', `${lang}: searchable former name`);
+    assert.equal(item.softwareVersion, '1.0.10', `${lang}: both public stores at v1.0.10`);
+    assert.equal(item.dateModified, '2026-09-23', `${lang}: public store update date`);
+  }
+  assert.ok(log.includes(`class="app-id-name"`), `${lang}: Log landing identity`);
+  assert.ok(log.includes(logNames[index]), `${lang}: Log landing visible name`);
+  assert.ok(log.includes('v1.0.10'), `${lang}: Log landing visible version`);
+  if (lang === 'ja') {
+    assert.match(log, /<span class="ja-reading-unit"[^>]*>登録不要。<\/span><span class="ja-reading-unit"[^>]*>日記と写真<\/span>/, 'ja: Log lede keeps short reading units intact');
+  }
+  assert.equal(notices(log).length, 0, `${lang}: same name on both stores`);
+  for (const staleClaim of ['통신은 광고 표시에만', '通信は広告表示にのみ', 'network is only used to show ads', 'everything stays on your device']) {
+    assert.ok(!log.includes(staleClaim), `${lang}: no misleading Log network/storage claim: ${staleClaim}`);
+  }
+  assert.ok(log.includes(['인앱 결제', 'アプリ内購入', 'in-app purchases'][index]), `${lang}: Log purchase network use disclosed`);
+  assert.ok(log.includes(['프리미엄에서는 생체인증', 'プレミアム購入後は生体認証', 'Premium adds biometric lock'][index]), `${lang}: Log biometric lock disclosed as paid`);
   const voyage = read(lang, 'apps/pipi-word-voyage');
   const voyageSchema = appSchema(voyage);
   const voyageItem = homeItems.find(a => a.url.endsWith('/pipi-word-voyage/'));
@@ -113,4 +134,4 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(appSchema(read(lang, 'apps/pipi-draw')).softwareVersion, '1.0.8');
   checked++;
 }
-console.log(`PASS: ${checked} locales — Focus and Word Voyage public names/versions, Voyage factual claims, old aliases, store destinations; 5 other names preserved.`);
+console.log(`PASS: ${checked} locales — Focus, Word Voyage, and Log public names/versions; aliases, store destinations; 4 other names preserved.`);

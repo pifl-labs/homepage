@@ -80,6 +80,7 @@
   font-size: clamp(1rem, 2.2vw, 1.15rem); line-height: 1.7;
   color: var(--text-secondary); max-width: 56ch; margin-bottom: 2.25rem;
 }
+.app-page--log .app-hero-lede { text-wrap: pretty; }
 .app-hero-lede em { font-style: normal; color: var(--accent-highlight); font-weight: 600; }
 .app-download-note {
   max-width: 65ch; margin: 1rem auto 0;
@@ -104,6 +105,7 @@
 .store-badge i { font-size: 1.6rem; color: var(--text-primary); }
 .store-badge-txt { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
 .store-badge-sm { font-size: .68rem; color: var(--text-muted); font-family: var(--font-code); }
+:lang(ko) .app-page--log .store-badge-sm { word-break: keep-all; overflow-wrap: normal; }
 .store-badge-lg { font-size: 1rem; font-weight: 700; color: var(--text-primary); }
 .store-badge--soon { opacity: .6; cursor: default; pointer-events: none; }
 .store-badge--soon:hover { transform: none; box-shadow: none; border-color: var(--border-default); }
@@ -141,6 +143,7 @@
   color: var(--text-primary); margin-bottom: .35rem;
 }
 .app-shot-desc { font-size: .88rem; line-height: 1.55; color: var(--text-muted); }
+:lang(en) .app-page--log .section-title { font-family: var(--font-display); font-variation-settings: normal; }
 :lang(ko) .app-page--word-voyage .app-shot-desc,
 :lang(ko) .app-page--word-voyage .app-shot-label,
 :lang(ko) .app-page--word-voyage .app-cta-title,
