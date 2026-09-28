@@ -114,7 +114,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css']}
+  extraCss={['/styles-app-landing.css?v=df87ef66657a']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -231,6 +231,23 @@ const jsonLd = {
             <p class="app-srclib-desc">{sourceLib.desc}</p>
             <a class="app-srclib-link" href={`/${lang}/apps/dialogos/sources/`}>
               <i class="fas fa-book-open" aria-hidden="true"></i> {sourceLib.cta} <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
+
+    {app.slug === 'pipi-bridge' && lang === 'en' && (
+      <section class="app-section app-section--bridge-resource" aria-labelledby="bridge-resource-title">
+        <div class="container">
+          <div class="app-bridge-resource">
+            <div>
+              <p class="app-bridge-resource-eyebrow">For parents</p>
+              <h2 id="bridge-resource-title">Try <span class="app-bridge-resource-phrase">“help me”</span> in Korean</h2>
+              <p>A two-minute family activity with free printables. No app or sign-up needed.</p>
+            </div>
+            <a class="app-bridge-resource-link" href="https://pipi-worlds.com/en/learn/korean-school-help-phrase/" hreflang="en">
+              <span>Open activity</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
