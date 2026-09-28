@@ -40,8 +40,8 @@ const lang = 'ko' as const;
         <div class="hero-meta reveal d4">
           <span><b>{liveAppCount}</b> 앱 출항</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
-          <span><b>무료</b> · 계정 없이</span>
-          <span><b>{formatDate(fleetLastUpdated, lang)}</b> 마지막 정비</span>
+          <span class="hero-pricing"><b>무료 설치</b> · <span class="pricing-paid-phrase">일부 앱에서 인앱 결제</span></span>
+          <span><b>{formatDate(fleetLastUpdated, lang)}</b> <span class="hero-maintained-label">마지막 정비</span></span>
         </div>
       </div>
 
