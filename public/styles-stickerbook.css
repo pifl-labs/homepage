@@ -162,6 +162,9 @@ h1.hero-title .strike { text-decoration: line-through; text-decoration-thickness
   padding-top: 1.5rem; border-top: 1px dashed var(--border-default);
 }
 .hero-meta b { color: var(--text-primary); font-weight:700; }
+.hero-meta .hero-pricing { color: var(--text-secondary); }
+.hero-meta .pricing-paid-phrase { white-space: nowrap; }
+.hero-meta .hero-maintained-label { white-space: nowrap; }
 
 /* === Global PiPi sticker effect ===
    Every PiPi on the site gets the same crisp white outline + ambient purple
