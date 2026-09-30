@@ -127,7 +127,7 @@ const jsonLd = {
           <div class="app-id">
             <img class="app-id-icon" src={iconSrc} alt={iconAlt} width="72" height="72" fetchpriority="high" />
             <div class="app-id-meta">
-              <span class="app-id-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
+              <span class="app-id-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
               {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
               <span class="app-id-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
             </div>
@@ -156,8 +156,8 @@ const jsonLd = {
               </>
             ) : (
               <>
-                <span class="store-badge store-badge--soon" role="text" aria-label={`${sl.ios} — ${sl.soon}`}><i class="fab fa-apple" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.ios}</span></span></span>
-                <span class="store-badge store-badge--soon" role="text" aria-label={`${sl.android} — ${sl.soon}`}><i class="fab fa-google-play" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.android}</span></span></span>
+                <span class="store-badge store-badge--soon"><i class="fab fa-apple" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.ios}</span></span></span>
+                <span class="store-badge store-badge--soon"><i class="fab fa-google-play" aria-hidden="true"></i><span class="store-badge-txt"><span class="store-badge-sm">{sl.soon}</span><span class="store-badge-lg">{sl.android}</span></span></span>
               </>
             )}
           </div>
