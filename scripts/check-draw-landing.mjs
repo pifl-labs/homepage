@@ -22,8 +22,10 @@ for (const [lang, checks] of Object.entries(expected)) {
   assert.equal([...html.matchAll(/class="app-shot"/g)].length, 4);
   const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)]
     .map((match) => JSON.parse(match[1])).find((value) => value['@type'] === 'SoftwareApplication');
-  assert.equal(jsonLd.softwareVersion, '1.0.8');
-  assert.equal(jsonLd.dateModified, '2026-08-31');
+  assert.equal(jsonLd.softwareVersion, undefined);
+  assert.ok(html.includes('iOS v1.0.12'));
+  assert.ok(!html.includes('Android v'));
+  assert.equal(jsonLd.dateModified, '2026-09-29');
   assert.equal(jsonLd.datePublished, '2026-07-14');
   for (const entry of readdirSync(join(dist, lang, 'apps'), {withFileTypes: true})) {
     if (!entry.isDirectory() || entry.name === 'pipi-draw') continue;
