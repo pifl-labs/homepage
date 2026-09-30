@@ -11,6 +11,6 @@ Validation:
 - npm run build: 133 pages PASS.
 - npm run test:built: PASS (33 pages, 144 store links, disclosures, platform identity/version contracts).
 - npm run check: FAIL with five errors in unchanged AppCatalog.astro, AppLanding.astro and FleetLog.astro (implicit-any callbacks and invalid role="text"); not suppressed or reported as passing. No standalone lint script exists.
-- Browser matrix and visual review: IN PROGRESS. Target: KO/JA/EN home + five app details, 320/375/768/1280/1920, light/dark; text 200% at 320. This is a draft, not release approval.
+- Initial browser matrix: 216 cells, no horizontal overflow. Three preview locale home-to-Hello clicks and store destinations PASS. Visual review found Japanese 韓国語 split; fixed only that reading unit and rechecking affected JA pages. Target: KO/JA/EN home + five app details, 320/375/768/1280/1920, light/dark; text 200% at 320. This is a draft, not release approval.
 
-Visual: UNVERIFIED (review in progress). Functional: UNVERIFIED (browser interaction pending). Release: HOLD. No merge/production deployment authorized for this turn. Old screenshot assets may retain former names; asset refresh is outside this correction.
+Visual: partial review only; remaining cells UNVERIFIED. Functional: three preview home-to-Hello flows PASS; other external store clicks not exercised. Release: HOLD. No merge/production deployment authorized for this turn. Old screenshot assets may retain former names; asset refresh is outside this correction.
