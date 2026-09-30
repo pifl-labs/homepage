@@ -3,7 +3,7 @@
  * ICU segmentation is deliberately not used as a linguistic authority.
  */
 const readingUnits = {
-  name: ['ポモドーロ', 'タイマー', 'ことばの航海'],
+  name: ['ポモドーロ', 'タイマー', 'ことばの航海', '韓国語'],
   category: ['気分日記', '学校の準備', 'クリエイティブ', 'カウントダウン', 'ライフスタイル'],
   tagline: ['向き合う'],
   title: ['しよう'],

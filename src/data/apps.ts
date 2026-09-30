@@ -79,7 +79,6 @@ const focus: AppMeta = {
   name: 'Pomodoro at Sea: Focus Timer',
   nameByLang: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー' },
   previousName: 'PiPi Focus',
-  // 2026-09-10 공개 KR/JP/US 6페이지와 Apple Lookup 관측: 양스토어 개명 완료.
   // 이름/버전 확인이며 다음 승인 아이콘의 공개 배포를 뜻하지 않는다.
   storeNames: {
     ios: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー', en: 'Pomodoro at Sea: Focus Timer' },
@@ -92,10 +91,9 @@ const focus: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
   release: {
-    ios: { version: '1.0.14', updated: '2026-09-09' },
-    android: { version: '1.0.14', updated: '2026-09-09' },
+    ios: { version: '1.0.15', updated: '2026-09-23' },
     since: '2026-05-15',
-    checkedAt: '2026-09-10',
+    checkedAt: '2026-09-30',
   },
   heroShot: 'sail',
   content: {
@@ -173,7 +171,13 @@ const focus: AppMeta = {
 
 const hello: AppMeta = {
   slug: 'pipi-hello',
-  name: 'PiPi Hello',
+  name: 'KanaSprout: Japanese for Kids',
+  nameByLang: { ko: '말놀이 새싹: 어린이 일본어', ja: 'ハングルの芽：子どもの韓国語' },
+  previousName: 'PiPi Hello',
+  storeNames: {
+    ios: { ko: '말놀이 새싹: 어린이 일본어', ja: 'ハングルの芽：子どもの韓国語', en: 'KanaSprout: Japanese for Kids' },
+    android: { ko: '말놀이 새싹: 어린이 일본어', ja: 'ハングルの芽：子どもの韓国語', en: 'KanaSprout: Japanese for Kids' },
+  },
   status: 'live',
   category: { ko: '교육 · 어린이 일본어', ja: '教育 · こども韓国語', en: 'Education · Kids Japanese' },
   stores: {
@@ -181,10 +185,9 @@ const hello: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.hello',
   },
   release: {
-    ios: { version: '1.0.4', updated: '2026-08-10' },
-    android: { version: '1.0.5', updated: '2026-08-20' },
+    ios: { version: '1.0.8', updated: '2026-09-29' },
     since: '2026-06-24',
-    checkedAt: '2026-08-23',
+    checkedAt: '2026-09-30',
   },
   heroShot: 'home',
   content: {
@@ -195,7 +198,7 @@ const hello: AppMeta = {
       shotsTitle: '글자에서 첫 한마디까지',
       featuresTitle: '부모가 안심하는 이유',
       ctaTitle: '첫 일본어, 오늘 시작해요',
-      ctaSub: 'iOS · Android에서. 광고 없이, 무료체험으로.',
+      ctaSub: '무료 설치 · 앱 내 구매가 있습니다.',
       shots: [
         { file: 'home',  label: '오늘의 학습',      desc: '지도를 따라 글자와 단어를 차례로 만나요.' },
         { file: 'cards', label: '글자카드',         desc: '히라가나·가타카나를 그림·소리와 함께.' },
@@ -217,7 +220,7 @@ const hello: AppMeta = {
       shotsTitle: '文字から最初のひとことまで',
       featuresTitle: '保護者が安心できる理由',
       ctaTitle: 'はじめての韓国語を、今日から。',
-      ctaSub: 'iOS · Android で。広告なし、無料体験から。',
+      ctaSub: '無料でダウンロードできます。アプリ内課金があります。',
       shots: [
         { file: 'home',  label: '今日の学習',        desc: 'マップに沿って文字や単語を順番に。' },
         { file: 'cards', label: '文字カード',        desc: 'ハングルを絵と音といっしょに。' },
@@ -239,7 +242,7 @@ const hello: AppMeta = {
       shotsTitle: 'From letters to a first hello',
       featuresTitle: 'Why PiPi Hello',
       ctaTitle: 'Start their first Japanese today',
-      ctaSub: 'On iOS & Android. No ads, free trial.',
+      ctaSub: 'Free to download. Offers in-app purchases.',
       shots: [
         { file: 'home',  label: "Today's lesson",  desc: 'Follow the map through letters and words, one at a time.' },
         { file: 'cards', label: 'Letter cards',    desc: 'Hiragana and katakana paired with picture and sound.' },
@@ -259,7 +262,13 @@ const hello: AppMeta = {
 
 const words: AppMeta = {
   slug: 'pipi-words',
-  name: 'PiPi Words',
+  name: 'Vocab Routine: JLPT & TOPIK',
+  nameByLang: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳' },
+  previousName: 'PiPi Words',
+  storeNames: {
+    ios: { ko: 'PiPi Words: JLPT·TOPIK 단어', ja: 'PiPi Words: 韓国語・JLPT単語', en: 'PiPi Words: JLPT & TOPIK Vocab' },
+    android: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
+  },
   status: 'live',
   category: { ko: '교육 · 어휘', ja: '教育 · 語彙', en: 'Education · Vocabulary' },
   stores: {
@@ -267,21 +276,20 @@ const words: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
   release: {
-    ios: { version: '1.0.9', updated: '2026-08-19' },
-    android: { version: '1.0.9', updated: '2026-08-19' },
+    ios: { version: '1.0.11', updated: '2026-09-08' },
     since: '2026-05-29',
-    checkedAt: '2026-08-23',
+    checkedAt: '2026-09-30',
   },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '바다를 건너, 말을 잇다',
       lede: 'JLPT N5~N1과 TOPIK 1~6급 어휘를 시험 출제 유형 그대로. SM-2 간격 반복으로 외운 단어는 오래 남고, 학습은 인터넷 없이도 어디서나. 한국인은 일본어를, 일본인은 한국어를 — 한 앱에서.',
-      metaDesc: 'JLPT N5~N1 · TOPIK 1~6급 어휘를 시험이 묻는 방식 그대로. SM-2 간격 반복으로 오래 기억하고, 한↔일 양방향 학습을 한 앱에서. iOS · Android 무료.',
+      metaDesc: 'JLPT N5~N1 · TOPIK 1~6급 어휘를 시험이 묻는 방식 그대로. SM-2 간격 반복으로 오래 기억하고, 한↔일 양방향 학습을 한 앱에서. 무료 설치 · 앱 내 구매.',
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
       featuresTitle: '왜 PiPi Words 인가',
       ctaTitle: '오늘 단어 학습을 시작하세요',
-      ctaSub: 'iOS · Android에서 무료로 시작.',
+      ctaSub: '무료 설치 · 앱 내 구매가 있습니다.',
       shots: [
         { file: 'home',         label: '오늘의 학습 한눈에', desc: '오늘 외울 단어와 연속 학습일을 홈에서 바로.' },
         { file: 'study',        label: '레벨별 덱 선택',     desc: 'JLPT·TOPIK 레벨을 골라 단어 항해를 시작.' },
@@ -299,11 +307,11 @@ const words: AppMeta = {
     ja: {
       tagline: '海を越えて、言葉をつなぐ',
       lede: 'TOPIK 1~6級とJLPT N5~N1の語彙を、出題形式そのままで。SM-2間隔反復で覚えた単語は長く記憶に残り、学習はネットなしでもどこでも。日本人は韓国語を、韓国人は日本語を — 一つのアプリで。',
-      metaDesc: 'JLPT N5〜N1・TOPIK 1〜6級の語彙を出題形式そのままで。SM-2の間隔反復で長く記憶し、韓⇄日の双方向学習をひとつのアプリで。iOS · Android 無料。',
+      metaDesc: 'JLPT N5〜N1・TOPIK 1〜6級の語彙を出題形式そのままで。SM-2の間隔反復で長く記憶し、韓⇄日の双方向学習をひとつのアプリで。無料ダウンロード・アプリ内課金あり。',
       shotsTitle: '航海のように積み上がる語彙学習',
       featuresTitle: 'PiPi Words を選ぶ理由',
       ctaTitle: '今日から単語学習を始めよう',
-      ctaSub: 'iOS · Android で無料ではじめる。',
+      ctaSub: '無料でダウンロードできます。アプリ内課金があります。',
       shots: [
         { file: 'home',         label: '今日の学習をひと目で', desc: '今日覚える単語と連続学習日をホームですぐに。' },
         { file: 'study',        label: 'レベル別デッキ選択',   desc: 'JLPT·TOPIKのレベルを選んで単語の航海へ。' },
@@ -325,7 +333,7 @@ const words: AppMeta = {
       shotsTitle: 'Vocabulary that builds like a voyage',
       featuresTitle: 'Why PiPi Words',
       ctaTitle: 'Start studying today',
-      ctaSub: 'Free to start on iOS & Android.',
+      ctaSub: 'Free to download. Offers in-app purchases.',
       shots: [
         { file: 'home',         label: "Today's study at a glance", desc: "See today's words and your streak right on the home." },
         { file: 'study',        label: 'Pick a level deck',         desc: 'Choose a JLPT or TOPIK level and start the voyage.' },
@@ -345,7 +353,13 @@ const words: AppMeta = {
 
 const dday: AppMeta = {
   slug: 'pipi-dday',
-  name: 'PiPi D-Day',
+  name: 'D-Day Widget - Until That Day',
+  nameByLang: { ko: '디데이 카운트다운 위젯 - 그날까지', ja: 'Dデイ カウントダウン ウィジェット - その日まで' },
+  previousName: 'PiPi D-Day',
+  storeNames: {
+    ios: { ko: 'PiPi D-Day - 해적의 항해 디데이', ja: 'PiPi D-Day（ピピディーデイ）', en: 'PiPi D-Day' },
+    android: { ko: '디데이 카운트다운 위젯 - 그날까지', ja: 'Dデイ カウントダウン ウィジェット - その日まで', en: 'D-Day Widget - Until That Day' },
+  },
   status: 'live',
   category: { ko: '생산성 · 디데이', ja: '生産性 · カウントダウン', en: 'Productivity · Countdown' },
   stores: {
@@ -353,21 +367,20 @@ const dday: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday',
   },
   release: {
-    ios: { version: '1.0.4', updated: '2026-08-14' },
-    android: { version: '1.0.4', updated: '2026-08-11' },
+    ios: { version: '1.1.3', updated: '2026-08-31' },
     since: '2026-06-02',
-    checkedAt: '2026-08-23',
+    checkedAt: '2026-09-30',
   },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '모든 순간이\n목적지로 향하는 항해',
       lede: '수능·결혼기념일·전역·생일까지, 소중한 날을 해적 항해처럼 카운트다운. D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀌고, 홈 화면 위젯으로 매일 확인합니다.',
-      metaDesc: '앵무새 PiPi가 D-100부터 당일까지 6단계로 반응하는 디데이 위젯. 수능·결혼기념일·생일 무엇이든 계정 없이 홈 화면에서. iOS · Android 무료.',
+      metaDesc: '앵무새 PiPi가 D-100부터 당일까지 6단계로 반응하는 디데이 위젯. 수능·결혼기념일·생일 무엇이든 계정 없이 홈 화면에서. 무료 설치 · 앱 내 구매.',
       shotsTitle: '남은 날이 항해가 되는 순간',
       featuresTitle: '왜 PiPi D-Day 인가',
       ctaTitle: '지금 항해를 시작하세요',
-      ctaSub: 'iOS · Android에서 무료로 시작.',
+      ctaSub: '무료 설치 · 앱 내 구매가 있습니다.',
       shots: [
         { file: 'home',        label: '모든 D-Day를 한눈에',  desc: '수능·기념일·전역까지, 소중한 날을 홈에서 바로 확인.' },
         { file: 'detail',      label: 'PiPi가 6단계로 반응',   desc: '남은 날에 따라 표정이 바뀌는 항해형 카운트다운 상세.' },
@@ -385,11 +398,11 @@ const dday: AppMeta = {
     ja: {
       tagline: 'すべての瞬間は、\n目的地へ向かう航海',
       lede: '受験・結婚記念日・誕生日まで、大切な日を海賊の航海としてカウントダウン。D-100からD-DayまでPiPiの表情が6段階で変化し、ホーム画面ウィジェットで毎日確認できます。',
-      metaDesc: 'オウムのPiPiがD-100から当日まで6段階で反応するカウントダウンウィジェット。受験・記念日・誕生日をアカウントなしでホーム画面に。iOS · Android 無料。',
+      metaDesc: 'オウムのPiPiがD-100から当日まで6段階で反応するカウントダウンウィジェット。受験・記念日・誕生日をアカウントなしでホーム画面に。無料ダウンロード・アプリ内課金あり。',
       shotsTitle: '残り日数が航海になる瞬間',
       featuresTitle: 'PiPi D-Day を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
-      ctaSub: 'iOS · Android で無料ではじめる。',
+      ctaSub: '無料でダウンロードできます。アプリ内課金があります。',
       shots: [
         { file: 'home',        label: 'すべてのDデイをひと目で', desc: '受験・記念日・誕生日まで、大切な日をホームですぐ。' },
         { file: 'detail',      label: 'PiPiが6段階でリアクション', desc: '残り日数で表情が変わる、航海型カウントダウンの詳細。' },
@@ -407,11 +420,11 @@ const dday: AppMeta = {
     en: {
       tagline: 'Every moment is a voyage toward your destination.',
       lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
-      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free on iOS & Android.',
+      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free to download. Offers in-app purchases.',
       shotsTitle: 'The moment days become a voyage',
       featuresTitle: 'Why PiPi D-Day',
       ctaTitle: 'Start your voyage now',
-      ctaSub: 'Free to start on iOS & Android.',
+      ctaSub: 'Free to download. Offers in-app purchases.',
       shots: [
         { file: 'home',        label: 'Every D-Day at a glance',  desc: 'Exams, anniversaries, birthdays — see your big days on the home.' },
         { file: 'detail',      label: 'PiPi reacts in 6 stages',  desc: 'A voyage-style countdown that changes as your day nears.' },
@@ -602,7 +615,13 @@ const dialogos: AppMeta = {
 // 콘텐츠 SSOT = pipi_draw/ios/fastlane/metadata + .arb. 2026-07-22 양 스토어 출시.
 const draw: AppMeta = {
   slug: 'pipi-draw',
-  name: 'PiPi Draw',
+  name: 'Photo Outlines: Coloring Book',
+  nameByLang: { ko: '밑그림: 사진으로 만드는 색칠공부', ja: '下絵づくり：写真をぬりえに変換' },
+  previousName: 'PiPi Draw',
+  storeNames: {
+    ios: { ko: '밑그림: 사진으로 만드는 색칠공부', ja: '下絵づくり：写真をぬりえに変換', en: 'Photo Outlines: Coloring Book' },
+    android: { ko: '밑그림: 사진으로 만드는 색칠공부', ja: '下絵づくり：写真がぬりえに！お絵かきも楽しい', en: 'Photo Outlines: Coloring Book' },
+  },
   status: 'live',
   category: { ko: '크리에이티브 · 색칠', ja: 'クリエイティブ · ぬりえ', en: 'Creative · Coloring' },
   stores: {
@@ -610,11 +629,9 @@ const draw: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
   },
   release: {
-    // 2026-09-08: Apple JP Lookup + Google Play JA 공개 앱 정보에서 확인.
-    ios: { version: '1.0.8', updated: '2026-08-31' },
-    android: { version: '1.0.8', updated: '2026-08-31' },
+      ios: { version: '1.0.12', updated: '2026-09-29' },
     since: '2026-07-14',
-    checkedAt: '2026-09-08',
+    checkedAt: '2026-09-30',
   },
   heroShot: 'ai_result',
   content: {
