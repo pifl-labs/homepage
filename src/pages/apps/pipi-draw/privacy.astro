@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { drawPrivacyEffectiveDate } from '../../../data/pipi-draw-privacy.mjs';
+
+// 시행일은 src/data/pipi-draw-privacy.mjs 한 곳에서 바꾼다(머리말·17조가 함께 쓴다).
+const effectiveDate = drawPrivacyEffectiveDate('en');
 ---
 <BaseLayout
   lang="en"
@@ -13,7 +17,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Draw Privacy Policy</span></h1>
-            <p class="legal-date">Effective Date: October 1, 2026</p>
+            <p class="legal-date">Effective Date: {effectiveDate}</p>
         </div>
     </section>
 
@@ -47,7 +51,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                     <tbody>
                         <tr>
                             <td>Photos &amp; Images</td>
-                            <td>Photo you take or select from the gallery (downscaled to a 1024px JPEG for conversion); resulting AI image (line art as PNG, art styles as JPEG)</td>
+                            <td>Photo you take or select from the gallery (downscaled to a 1024px JPEG for conversion); resulting AI image (line art as PNG; art styles and photo looks as JPEG)</td>
                             <td>Transmitted to Cloud Functions (server) for AI conversion, then temporarily stored in Cloud Storage</td>
                         </tr>
                         <tr>
@@ -91,7 +95,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <h2>3. AI Sketch Conversion</h2>
                 <p>The App's core feature, AI sketch conversion, works as follows:</p>
                 <ul>
-                    <li><strong>Transmission</strong>: Your selected photo is downscaled to a JPEG of up to 1024px and sent, via our Cloud Functions (server), to a generative AI provider: Google's generative AI (Gemini / Vertex AI) or OpenAI's image generation AI, depending on the type of conversion. A photo is sent to OpenAI only if you have agreed to the in-app AI photo transfer notice that names OpenAI.</li>
+                    <li><strong>Transmission</strong>: Your selected photo is downscaled to a JPEG of up to 1024px and sent, via our Cloud Functions (server), to a generative AI provider: Google's generative AI (Gemini API) or OpenAI's image generation AI, depending on the type of conversion. A photo is sent to OpenAI only if you have agreed to the in-app AI photo transfer notice that names OpenAI.</li>
                     <li><strong>AI processing</strong>: The AI converts the photo into a line-art sketch or into the art style or photo look you selected. We do not use your photos to retrain models.</li>
                     <li><strong>Storage</strong>: The original used for conversion (originals/) and the resulting sketch (sketches/) are stored in Firebase Cloud Storage. See Section 4 for retention.</li>
                     <li><strong>Local caching</strong>: Sketches you choose to keep are cached in on-device storage (Drift), so you can continue to use them even after the cloud copy is automatically deleted.</li>
@@ -128,7 +132,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                             <td>Until contract termination</td>
                         </tr>
                         <tr>
-                            <td>Google LLC (Gemini / Vertex AI)</td>
+                            <td>Google LLC (Gemini API)</td>
                             <td>AI image conversion (line art, art styles, photo looks)</td>
                             <td>Up to 55 days for abuse monitoring, then deleted (provider policy)</td>
                         </tr>
@@ -219,7 +223,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                             <td>Photos, sketches, user identifier, metadata</td>
                         </tr>
                         <tr>
-                            <td>Google LLC (Gemini / Vertex AI)</td>
+                            <td>Google LLC (Gemini API)</td>
                             <td>United States</td>
                             <td>AI image conversion</td>
                             <td>Photo for conversion</td>
@@ -240,16 +244,37 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                             <td>Apple Inc.</td>
                             <td>United States</td>
                             <td>iOS in-app purchases</td>
-                            <td>Purchase receipt, transaction ID</td>
+                            <td>Product being purchased, buyer-check token</td>
                         </tr>
                         <tr>
                             <td>Google LLC (Google Play)</td>
                             <td>United States</td>
                             <td>Android in-app purchases</td>
-                            <td>Purchase receipt, transaction ID</td>
+                            <td>Product ID, purchase token</td>
                         </tr>
                     </tbody>
                 </table>
+                <p>Contact details and further information for each recipient are set out below.</p>
+
+                <h3>Transfer details: Google LLC (Firebase)</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: the anonymous user identifier; the photo for conversion (a JPEG of up to 1024px) and the resulting AI image; sketch metadata (style and options, creation time, hash of the original photo) and usage and point records; app usage events, device and app version info, and error logs; connection IP addresses.</li>
+                    <li><strong>When and how</strong>: on first launch (anonymous sign-in), while you use the App (usage analytics and error reports), and each time you request an AI conversion, over an encrypted connection (HTTPS/TLS). Photos, results, and metadata are stored in Google Cloud's Seoul region; anonymous sign-in is processed only in Google's US data centers.</li>
+                    <li><strong>Purpose</strong>: anonymous sign-in, running the AI conversion server (Cloud Functions), storing photos and results (Cloud Storage), managing metadata and usage (Firestore), and usage analytics and crash reporting (Analytics, Crashlytics).</li>
+                    <li><strong>Retention</strong>: as in Section 4 (originals for conversion are deleted automatically after 7 days and AI results after 90 days; account data and metadata are kept until the account is deleted). Under the provider's policy, IP addresses logged by the sign-in service are kept for a few weeks, and crash reports (Crashlytics) are kept for 90 days before their deletion begins.</li>
+                    <li><strong>How to refuse and its effect</strong>: if you do not use AI conversion, your photos and results are not sent. The anonymous user identifier and usage and error information are sent when the App runs and cannot be turned off separately in the App; if you do not want this, stop using (delete) the App and request deletion of your data as described in Section 11. You will then not be able to use the App.</li>
+                </ul>
+
+                <h3>Transfer details: Google LLC (Gemini API)</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: the photo for conversion (a JPEG of up to 1024px, with location and other photo metadata removed) and the conversion instructions. No user identifier is sent.</li>
+                    <li><strong>When and how</strong>: each time you request a conversion processed by Gemini, sent through our server (Cloud Functions) to the Gemini API over an encrypted connection (HTTPS/TLS).</li>
+                    <li><strong>Purpose</strong>: AI image conversion (line art, art styles, photo looks).</li>
+                    <li><strong>Retention</strong>: up to 55 days for abuse monitoring, then deleted (provider policy). This data may be stored transiently or cached in any country where Google or its agents maintain facilities, and Google does not use photos and results received through the paid API to improve its products (provider terms).</li>
+                    <li><strong>How to refuse and its effect</strong>: if you do not agree to the in-app notice about sending photos to AI, or withdraw it at any time in Settings ("Send photos to AI"), your photos are not sent to any AI provider (Google or OpenAI). AI conversion is then unavailable; features that do not send photos, such as coloring and photo filters, remain available.</li>
+                </ul>
 
                 <h3>Transfer details: OpenAI OpCo, LLC</h3>
                 <p>United States · 1455 3rd Street, San Francisco, CA 94158 · privacy contact: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a></p>
@@ -259,6 +284,36 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                     <li><strong>Purpose</strong>: AI image conversion (line art, art styles, photo looks).</li>
                     <li><strong>Retention</strong>: up to 30 days for abuse monitoring, then deleted, unless longer retention is required by law or reasonably necessary to protect the provider's services or third parties (provider policy).</li>
                     <li><strong>How to refuse and its effect</strong>: if you do not agree to the in-app notice about sending photos to AI, or withdraw it at any time in Settings ("Send photos to AI"), your photos are not sent to any AI provider (Google or OpenAI). AI conversion is then unavailable; features that do not send photos, such as coloring and photo filters, remain available.</li>
+                </ul>
+
+                <h3>Transfer details: Google LLC (AdMob)</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: device identifiers such as the advertising ID (IDFA/AAID); IP address (which may be used to estimate approximate location); app and ad interaction information (app launches, taps, video views, ads seen); performance and diagnostic information. When you watch a rewarded ad to get a free conversion, the anonymous user identifier is also passed on so that the reward can be confirmed.</li>
+                    <li><strong>When and how</strong>: each time the App loads or shows an ad, the Google Mobile Ads SDK in the App sends it directly to Google's servers (not through our server). On iOS we first ask whether you allow tracking (ATT), and in regions where ad consent is required, ads are requested only after the consent screen.</li>
+                    <li><strong>Purpose</strong>: serving and measuring ads; confirming that a rewarded ad was watched (one free conversion).</li>
+                    <li><strong>Retention</strong>: under Google's Privacy Policy. Google states that it anonymizes advertising data in server logs by removing part of the IP address after 9 months and cookie information after 18 months (provider policy).</li>
+                    <li><strong>How to refuse and its effect</strong>: if you deny tracking on iOS or delete your advertising ID on Android, the advertising ID is not passed on (see Section 8). In regions where ad consent is requested, you can change your choice at any time in Settings ("Ad privacy choices"). If you do not watch rewarded ads, the anonymous user identifier is not passed on. The App's features remain available; if ads cannot be loaded because you have not consented, only the free conversion earned by watching a rewarded ad is unavailable.</li>
+                </ul>
+
+                <h3>Transfer details: Apple Inc.</h3>
+                <p>United States · One Apple Park Way, Cupertino, CA 95014 · privacy contact: <a href="https://www.apple.com/legal/privacy/contact/" target="_blank" rel="noopener">Apple privacy contact form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: the product being purchased and, when you buy conversion packs, a buyer-check token (a UUID derived from the anonymous user identifier).</li>
+                    <li><strong>When and how</strong>: when you buy conversion packs on iOS, the App passes them to Apple's payment system (StoreKit). Our server checks the transaction signed by Apple against Apple's certificates and does not send transaction information back to Apple.</li>
+                    <li><strong>Purpose</strong>: processing in-app purchases and confirming the buyer so that conversion packs go only to the user who bought them.</li>
+                    <li><strong>Retention</strong>: under the privacy policy of Apple as the payment processor (kept only as long as necessary for the purposes for which it was collected, or as required by law; provider policy).</li>
+                    <li><strong>How to refuse and its effect</strong>: nothing is sent if you do not buy conversion packs. Paid conversion packs are then unavailable; other features remain available.</li>
+                </ul>
+
+                <h3>Transfer details: Google LLC (Google Play)</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: what is needed to check a conversion pack purchase — the product ID and the purchase token.</li>
+                    <li><strong>When and how</strong>: when you buy conversion packs on Android and the App asks for them to be credited (a purchase not yet credited is sent again when the App restarts), our server (Cloud Functions) sends it to the Google Play Developer API over an encrypted connection (HTTPS/TLS).</li>
+                    <li><strong>Purpose</strong>: confirming that the purchase is valid and completing its delivery.</li>
+                    <li><strong>Retention</strong>: under the privacy policy of Google as the payment processor.</li>
+                    <li><strong>How to refuse and its effect</strong>: nothing is sent if you do not buy conversion packs. Paid conversion packs are then unavailable; other features remain available.</li>
                 </ul>
 
                 <h2>15. Data Protection Officer</h2>
@@ -271,7 +326,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
                 <h2>17. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective as of October 1, 2026 (changes: OpenAI added as an AI photo conversion provider, Google Gemini retention corrected, overseas transfer details added; previous version effective June 4, 2026). Any changes will be announced on this page.</p>
+                <p>This Privacy Policy is effective as of {effectiveDate} (changes: OpenAI added as an AI photo conversion provider; Google Gemini retention and connection method (Gemini API) corrected; overseas transfer details — contact, items, timing and method, purpose, retention, and how to refuse — added for every recipient; previous version effective June 4, 2026). Any changes will be announced on this page.</p>
             </div>
         </div>
     </main>
