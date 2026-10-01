@@ -30,8 +30,19 @@ const english = {
   purchaseReceipt: 'the same receipt can never be credited twice',
   purchaseLaw: 'Act on Consumer Protection in Electronic Commerce',
   transferRetention: 'purchase-verification records: 5 years from the transaction date',
+  reportBullet: 'a one-way hash of the anonymous device identifier (never the identifier itself) for 90 days, solely to review the report and keep the app safe',
+  reportTextCap: 'the message you sent right before it (each up to 2,000 characters)',
+  reportNoteCap: 'any note you add (up to 500 characters)',
+  storageException: 'except a reply you report and the message right before it',
+  reportPurpose: '(d) review reports of AI replies and keep the app safe',
+  reportRetention: '<strong>Report records:</strong> kept for 90 days, then deleted automatically.',
+  reportTransferItems: 'report content if you report a reply',
+  reportTransferPurpose: 'verifying purchases, receiving reports',
+  reportTransferRetention: 'report records: 90 days',
+  consentOnDevice: 'the version and date of your AI conversation consent',
+  refusalConsent: 'withdraw it at any time in Settings',
   refusal: 'If you do not want these transfers',
-  noOldRetention: '90 days',
+  supersededRetention: 'deleted 90 days after it ends',
 };
 
 const cases = [
@@ -49,8 +60,19 @@ const cases = [
     purchaseReceipt: '같은 영수증이 두 번 적립되는 것을 막고',
     purchaseLaw: '전자상거래 등에서의 소비자보호에 관한 법률',
     transferRetention: '구매 확인 기록은 거래일로부터 5년',
+    reportBullet: '익명 기기 식별자의 단방향 해시(식별자 자체는 저장하지 않음)를 신고 검토와 앱 안전 관리에만 쓰기 위해 90일간 보관하고',
+    reportTextCap: '바로 앞에 보내신 메시지(각 최대 2,000자)',
+    reportNoteCap: '덧붙인 설명(최대 500자)',
+    storageException: '단, 신고하신 답변과 바로 앞 메시지는 아래 "AI 답변 신고"에 따라 보관합니다',
+    reportPurpose: '(d) 신고를 검토하고 앱을 안전하게 관리',
+    reportRetention: '<strong>신고 기록</strong>: 90일 보관 후 자동 삭제됩니다.',
+    reportTransferItems: '신고하신 경우의 신고 내용',
+    reportTransferPurpose: '구매 확인, 신고 접수',
+    reportTransferRetention: '신고 기록은 90일',
+    consentOnDevice: 'AI 대화 동의의 버전·날짜는 기기에만 저장됩니다',
+    refusalConsent: '설정에서 언제든 철회하시면 메시지가 전송되지 않습니다',
     refusal: '이전을 거부하는 방법·절차와 효과',
-    noOldRetention: '90일',
+    supersededRetention: '권리가 끝난 날',
   },
   {
     locale: 'ja',
@@ -64,15 +86,26 @@ const cases = [
     purchaseReceipt: '同じレシートが二重に付与されるのを防ぐため',
     purchaseLaw: '電子商取引等における消費者保護に関する法律',
     transferRetention: '購入確認記録は取引日から5年間',
+    reportBullet: '匿名デバイス識別子の一方向ハッシュ(識別子そのものは保存しません)を、報告の確認とアプリの安全管理のためだけに90日間保管し',
+    reportTextCap: 'その直前に送ったメッセージ(各最大2,000字)',
+    reportNoteCap: '追記(最大500字)',
+    storageException: 'ただし、報告した回答とその直前のメッセージは、下記「AIの回答の報告」のとおり保管します',
+    reportPurpose: '(d) 報告の確認とアプリの安全管理',
+    reportRetention: '<strong>報告記録</strong>: 90日間保持した後、自動的に削除されます。',
+    reportTransferItems: '報告した場合の報告内容',
+    reportTransferPurpose: '購入確認、報告の受付',
+    reportTransferRetention: '報告記録は90日間',
+    consentOnDevice: 'AI対話への同意のバージョン・日付は端末内のみに保存されます',
+    refusalConsent: '設定からいつでも撤回してください',
     refusal: '移転を拒否する方法と影響',
-    noOldRetention: '90日',
+    supersededRetention: '権利が終了した日',
   },
 ];
 
-for (const { locale, noOldRetention, ...expected } of cases) {
+for (const { locale, supersededRetention, ...expected } of cases) {
   const name = locale || 'root';
 
-  test(`Dialogos ${name} privacy policy names OpenAI OpCo, LLC as the AI processor`, () => {
+  test(`Dialogos ${name} privacy policy names OpenAI OpCo, LLC and discloses reports`, () => {
     const page = read(locale);
     for (const text of [...Object.values(expected), ...shared]) {
       assert.ok(page.includes(text), `${name}: missing ${text}`);
@@ -82,11 +115,13 @@ for (const { locale, noOldRetention, ...expected } of cases) {
     assert.ok(!page.includes('<strong>Anthropic</strong>'), `${name}: Anthropic still listed as a processor`);
     // The processor and transfer recipient carry the legal entity name.
     assert.ok(!page.includes('<strong>OpenAI</strong>'), `${name}: OpenAI listed without its legal entity name`);
+    // The reserved spot for the report sentence has been filled.
+    assert.ok(!page.includes('TODO'), `${name}: a placeholder is left in the page`);
   });
 
   test(`Dialogos ${name} privacy policy keeps purchase records for 5 years`, () => {
     const page = read(locale);
-    assert.ok(!page.includes(noOldRetention), `${name}: the superseded ${noOldRetention} retention remains`);
+    assert.ok(!page.includes(supersededRetention), `${name}: the superseded purchase retention remains`);
   });
 
   test(`Dialogos ${name} privacy policy keeps its lists balanced`, () => {
