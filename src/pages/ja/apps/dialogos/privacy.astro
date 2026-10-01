@@ -25,10 +25,11 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>1. 取り扱う情報</h2>
                 <ul>
                     <li><strong>匿名デバイス識別子</strong>: 初回起動時に生成されるランダムなトークンで、端末に保存され、<strong>1日の利用上限を公平に適用し、購入内容を適用するためだけに</strong>サーバーへのリクエストに付与されます。氏名・メール・電話番号・広告識別子ではなく、本人と紐づかず、OpenAI には送信しません。</li>
-                    <li><strong>対話内容</strong>: 入力したメッセージと進行中の対話(直近の部分、最大24件・12,000字)は、暗号化された通信でバックエンド(Cloudflare Worker)へ送信され、バックエンドが賢者への指示文とともに AI 提供者(<strong>OpenAI</strong>)へ渡し、<strong>賢者の返答生成のためだけ</strong>に使用されます。<strong>対話内容は当社サーバーに保存しません。</strong>当社は保存機能をオフにした状態(store: false)で OpenAI を呼び出すため、OpenAI は対話を応答記録(アプリケーション状態)として保持しません。OpenAI は初期設定で API データをモデルの学習に使用せず、当社は学習用データの提供に同意(オプトイン)しません。ただし OpenAI は不正利用監視ログ(メッセージと返答を含む場合があります)を最大30日間保持し、暗号化されたプロンプトキャッシュを最大24時間保持する場合があります(5項・9項参照)。</li>
-                    <li><strong>購入と購入確認</strong>: 決済は Apple または Google が処理します。購入または購入の復元を行うと、本アプリがストアのレシートを当社サーバーへ送信し、サーバーが Apple または Google に有効性を確認します。その後サーバーは購入内容を適用するため、取引ID・商品・サブスクリプションの有効期限(深い対話パックは残数)を匿名デバイス識別子とともに保持します。また本アプリはリクエストごとに無料/Pro の区分をサーバーへ伝えます。<strong>カード・請求情報は受け取りません。</strong></li>
+                    <li><strong>対話内容</strong>: 入力したメッセージと進行中の対話(直近の部分、最大24件・12,000字)は、暗号化された通信でバックエンド(Cloudflare Worker)へ送信され、バックエンドが賢者への指示文とともに AI 提供者 <strong>OpenAI OpCo, LLC</strong>(米国、以下「OpenAI」)へ渡し、<strong>賢者の返答生成のためだけ</strong>に使用されます。<strong>対話内容は当社サーバーに保存しません。</strong>当社は保存機能をオフにした状態(store: false)で OpenAI を呼び出すため、OpenAI は対話を応答記録(アプリケーション状態)として保持しません。OpenAI は初期設定で API データをモデルの学習に使用せず、当社は学習用データの提供に同意(オプトイン)しません。ただし OpenAI は不正利用監視ログ(メッセージと返答を含む場合があります)を最大30日間保持し、暗号化されたプロンプトキャッシュを最大24時間保持する場合があります(5項・9項参照)。</li>
+                    <li><strong>購入と購入確認</strong>: 決済は Apple または Google が処理します。購入または購入の復元を行うと、本アプリがストアのレシートを当社サーバーへ送信し、サーバーが Apple または Google に有効性を確認します。その後サーバーは購入内容を適用し、同じレシートが二重に付与されないよう、購入確認記録(取引ID、商品、購入日時と有効期限または深い対話パックの残数、確認結果、匿名デバイス識別子のハッシュ値)を保持します。また本アプリはリクエストごとに無料/Pro の区分をサーバーへ伝えます。<strong>カード・請求情報は受け取りません。</strong></li>
                     <li><strong>サーバーの利用記録</strong>: サーバーは匿名デバイス識別子ごと・日ごとにカウンター(対話数、深い回答の利用数、危機的状況と判断して上限から除外した対話数)と AI トークン使用量の合計を保持します。運用ログには識別子の先頭8文字と利用情報(プラン、回答方式、トークン数、返答の終了理由、危機対応として扱ったかどうかなど)のみを記録し、対話内容は記録しません。サーバーの Cloudflare リクエストログには IP アドレスなどの接続情報が含まれる場合があります。</li>
                     <li><strong>端末内設定</strong>: 言語・テーマ・オンボーディング状態・日次カウンターは端末内のみに保存されます。</li>
+                    {/* TODO(AI 답변 신고 기능 — 별도 PR): 확정 문장 자리(일본어, 문구는 미리 만들지 않음). 위 「対話内容」 항목의 서버 미저장 문장(신고분 예외), 3·5·9항도 함께 고칠 것. */}
                 </ul>
 
                 <h2>2. 収集しないもの</h2>
@@ -39,7 +40,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
                 <h2>4. 共有 / 処理者</h2>
                 <ul>
-                    <li><strong>OpenAI</strong>(返答生成のためのメッセージ AI 処理)— 処理者</li>
+                    <li><strong>OpenAI OpCo, LLC</strong>(返答生成のためのメッセージ AI 処理)— 処理者</li>
                     <li><strong>Cloudflare</strong>(バックエンドのホスティング、日次カウンター・購入確認記録の保管を含む)— 処理者</li>
                     <li><strong>Apple / Google</strong>(購入の決済処理と有効性の確認)— 決済に関する独立した管理者</li>
                 </ul>
@@ -50,7 +51,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li><strong>対話内容</strong>: 当社サーバーには保持しません。OpenAI は応答記録として保持せず(store: false)、不正利用監視ログは最大30日間(法令上より長い保持が必要な場合や、OpenAI のサービス・第三者を害から守るために合理的に必要な場合を除く)、暗号化されたプロンプトキャッシュは24時間を超えて保持しません。</li>
                     <li><strong>日次カウンター・トークン合計</strong>: 約2日で自動失効します。</li>
                     <li><strong>運用ログ</strong>: 7日以内に自動削除されます。</li>
-                    <li><strong>購入確認記録</strong>: 購入が有効な間保持し、権利が終了した日(サブスクリプション失効、パック使い切り、返金・取消)から90日後に削除します。</li>
+                    <li><strong>購入確認記録</strong>: 取引日から5年間保持した後に削除します。同じレシートが二重に付与されるのを防ぐため、また韓国の「電子商取引等における消費者保護に関する法律」が代金決済および財貨等の供給に関する記録を5年間保存するよう定めているためです。</li>
                     <li><strong>端末内設定</strong>: アプリを削除するまで保持され、削除時にすべてのローカルデータが消去されます。</li>
                 </ul>
 
@@ -66,7 +67,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>9. 国外移転</h2>
                 <p>当社はサービス提供のため、次のとおり情報を国外へ移転(取扱いの委託・保管)します。</p>
                 <ul>
-                    <li><strong>OpenAI</strong>(米国 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a>)
+                    <li><strong>OpenAI OpCo, LLC</strong>(米国 · 1455 3rd Street, San Francisco, CA 94158 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a>)
                         <ul>
                             <li>移転する項目: 入力したメッセージと進行中の対話(直近最大24件・12,000字)、賢者への指示文。デバイス識別子は送信しません。</li>
                             <li>時期・方法: メッセージを送るたびに、当社サーバーを経由して暗号化された通信(HTTPS/TLS)で送信</li>
@@ -79,7 +80,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <li>移転する項目: 匿名デバイス識別子、対話内容(中継のみで保存しない)、無料/Pro の区分、日次カウンター・トークン合計、購入確認記録、運用ログ</li>
                             <li>時期・方法: 本アプリがサーバーにリクエストするたび(対話、購入確認)、HTTPS/TLS で送信</li>
                             <li>利用目的: バックエンドのホスティング(対話の中継、1日の上限の適用、購入確認)</li>
-                            <li>保持期間: 5項のとおり</li>
+                            <li>保持期間: 5項のとおり(購入確認記録は取引日から5年間)</li>
                         </ul>
                     </li>
                     <li><strong>Apple Inc. / Google LLC</strong>(米国 · プライバシー窓口: <a href="https://www.apple.com/legal/privacy/contact/" target="_blank" rel="noopener">Apple</a>、<a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google</a>)
