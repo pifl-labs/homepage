@@ -26,7 +26,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
                 <h2>第1条 (利用目的)</h2>
                 <ul>
-                    <li><strong>AI スケッチ変換</strong>: お客様が撮影またはデバイスのギャラリーから選択した写真を線画スケッチに変換</li>
+                    <li><strong>AI スケッチ変換</strong>: お客様が撮影またはデバイスのギャラリーから選択した写真を線画スケッチ、またはお客様が選んだ絵柄・写真の雰囲気の画像に変換</li>
                     <li><strong>アプリ機能の提供</strong>: 変換したスケッチの塗り絵・お絵描き、作業セッションのデバイス内保存、利用量管理</li>
                     <li><strong>ユーザー識別</strong>: アプリ初回起動時に自動生成される匿名識別子(Firebase 匿名認証)によるユーザー識別、利用量・ポイント管理 — 会員登録・ログイン手続きはありません</li>
                     <li><strong>広告配信</strong>: Google AdMobによる広告表示および広告関連性の向上</li>
@@ -48,7 +48,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <tbody>
                         <tr>
                             <td>写真・画像</td>
-                            <td>お客様が撮影またはギャラリーから選択した写真(変換用に1024px JPEGへ縮小)、AI変換結果のスケッチ(PNG)</td>
+                            <td>お客様が撮影またはギャラリーから選択した写真(変換用に1024px JPEGへ縮小)、AI変換結果の画像(線画はPNG・絵柄はJPEG)</td>
                             <td>AI変換のため Cloud Functions(サーバー)へ送信後、Cloud Storage に一時保存</td>
                         </tr>
                         <tr>
@@ -130,13 +130,13 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>
-                            <td>AI 線画スケッチ変換処理</td>
-                            <td>処理直後(別途保管しない)</td>
+                            <td>AI 画像変換処理(線画・絵柄・写真の雰囲気)</td>
+                            <td>不正利用監視のため最大55日保管後に削除(提供元のポリシー)</td>
                         </tr>
                         <tr>
-                            <td>OpenAI, L.L.C.</td>
+                            <td>OpenAI OpCo, LLC</td>
                             <td>AI 画像変換処理(線画・絵柄・写真の雰囲気)</td>
-                            <td>不正利用監視のため最大30日保管後に削除(提供元のポリシー)</td>
+                            <td>不正利用監視のため最大30日保管後に削除(法令上より長い保管が必要な場合、またはサービス・第三者の保護に合理的に必要な場合を除く。提供元のポリシー)</td>
                         </tr>
                         <tr>
                             <td>Google LLC (AdMob)</td>
@@ -222,11 +222,11 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>米国</td>
-                            <td>AI スケッチ変換</td>
+                            <td>AI 画像変換</td>
                             <td>変換用の写真</td>
                         </tr>
                         <tr>
-                            <td>OpenAI, L.L.C.</td>
+                            <td>OpenAI OpCo, LLC</td>
                             <td>米国</td>
                             <td>AI 画像変換</td>
                             <td>変換用の写真</td>
@@ -252,6 +252,16 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     </tbody>
                 </table>
 
+                <h3>OpenAI OpCo, LLC への移転の詳細</h3>
+                <p>米国 · 1455 3rd Street, San Francisco, CA 94158 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a></p>
+                <ul>
+                    <li><strong>移転する項目</strong>: 変換用の写真(最大1024pxのJPEG、位置情報などの写真メタデータは削除)と変換の指示文。ユーザー識別子は送信しません。</li>
+                    <li><strong>時期・方法</strong>: OpenAIが処理する変換をリクエストするたびに、当社サーバー(Cloud Functions)を経由して暗号化された通信(HTTPS/TLS)で送信</li>
+                    <li><strong>利用目的</strong>: AI画像変換(線画・絵柄・写真の雰囲気)</li>
+                    <li><strong>保持期間</strong>: 不正利用監視のため最大30日保管後に削除(法令上より長い保管が必要な場合、またはサービス・第三者の保護に合理的に必要な場合を除く。提供元のポリシー)</li>
+                    <li><strong>移転を拒否する方法・手続と効果</strong>: アプリのAI写真送信の案内に同意しない、または設定の「AIへの写真送信に同意」からいつでも取り消すと、写真はAI提供元(Google・OpenAI)に送信されません。この場合AI変換は利用できませんが、塗り絵や写真フィルターなど写真を送らない機能は引き続き利用できます。</li>
+                </ul>
+
                 <h2>第15条 (個人情報保護責任者)</h2>
                 <ul>
                     <li><strong>会社名</strong>: 株式会社ピープルラブズ (PiFl Labs Co., Ltd.)</li>
@@ -262,7 +272,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
                 <h2>第17条 (改定)</h2>
-                <p>本プライバシーポリシーは、2026年10月1日から施行します（変更内容：AI写真変換の提供者にOpenAIを追加。旧ポリシーの施行日：2026年6月4日）。変更がある場合は、本ページを通じて告知いたします。</p>
+                <p>本プライバシーポリシーは、2026年10月1日から施行します(変更内容: AI写真変換の提供者にOpenAIを追加、Google Geminiの保管期間を訂正、国外移転の詳細を追加。旧ポリシーの施行日: 2026年6月4日)。変更がある場合は、本ページを通じて告知いたします。</p>
             </div>
         </div>
     </main>
