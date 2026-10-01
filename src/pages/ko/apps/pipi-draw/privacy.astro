@@ -95,8 +95,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>제3조 (AI 스케치 변환 처리)</h2>
                 <p>본 앱의 핵심 기능인 AI 스케치 변환은 다음과 같이 동작합니다.</p>
                 <ul>
-                    <li><strong>전송</strong>: 사용자가 선택한 사진은 변환용으로 최대 1024px JPEG로 축소된 뒤, 회사의 Cloud Functions(서버)를 거쳐 Google의 생성형 AI(Gemini / Vertex AI)로 전달됩니다.</li>
-                    <li><strong>AI 처리</strong>: AI는 전달받은 사진을 라인아트 스케치로 변환하며, 회사는 변환 정확도 향상을 위한 별도의 모델 재학습에 사용자의 사진을 사용하지 않습니다.</li>
+                    <li><strong>전송</strong>: 사용자가 선택한 사진은 변환용으로 최대 1024px JPEG로 축소된 뒤, 회사의 Cloud Functions(서버)를 거쳐 생성형 AI 제공자에게 전달됩니다. 변환 종류에 따라 Google의 생성형 AI(Gemini / Vertex AI) 또는 OpenAI의 이미지 생성 AI가 처리하며, OpenAI로는 앱의 AI 사진 전송 동의 화면에서 OpenAI가 적힌 안내에 동의한 경우에만 전달됩니다.</li>
+                    <li><strong>AI 처리</strong>: AI는 전달받은 사진을 라인아트 스케치나 사용자가 고른 그림체·사진 느낌의 이미지로 변환하며, 회사는 변환 정확도 향상을 위한 별도의 모델 재학습에 사용자의 사진을 사용하지 않습니다.</li>
                     <li><strong>저장</strong>: 변환에 사용된 원본(originals/)과 결과 스케치(sketches/)는 Firebase Cloud Storage에 저장됩니다. 자세한 보유기간은 제4조를 참고하십시오.</li>
                     <li><strong>로컬 보관</strong>: 사용자가 보관을 선택한 스케치는 기기 로컬 저장소(Drift)에 캐시되어, 클라우드에서 자동 삭제된 이후에도 사용자가 계속 이용할 수 있습니다.</li>
                 </ul>
@@ -136,6 +136,11 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>AI 라인아트 스케치 변환 처리</td>
                             <td>처리 즉시(별도 보관하지 않음)</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI, L.L.C.</td>
+                            <td>AI 이미지 변환 처리(라인아트·그림체·사진 느낌)</td>
+                            <td>남용 감시 목적으로 최대 30일 보관 후 삭제(제공자 정책)</td>
                         </tr>
                         <tr>
                             <td>Google LLC (AdMob)</td>
@@ -224,6 +229,12 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>미국</td>
                             <td>AI 스케치 변환</td>
+                            <td>변환용 사진</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI, L.L.C.</td>
+                            <td>미국</td>
+                            <td>AI 이미지 변환</td>
                             <td>변환용 사진</td>
                         </tr>
                         <tr>

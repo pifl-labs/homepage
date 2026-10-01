@@ -91,8 +91,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                 <h2>3. AI Sketch Conversion</h2>
                 <p>The App's core feature, AI sketch conversion, works as follows:</p>
                 <ul>
-                    <li><strong>Transmission</strong>: Your selected photo is downscaled to a JPEG of up to 1024px and sent, via our Cloud Functions (server), to Google's generative AI (Gemini / Vertex AI).</li>
-                    <li><strong>AI processing</strong>: The AI converts the photo into a line-art sketch. We do not use your photos to retrain models.</li>
+                    <li><strong>Transmission</strong>: Your selected photo is downscaled to a JPEG of up to 1024px and sent, via our Cloud Functions (server), to a generative AI provider: Google's generative AI (Gemini / Vertex AI) or OpenAI's image generation AI, depending on the type of conversion. A photo is sent to OpenAI only if you have agreed to the in-app AI photo transfer notice that names OpenAI.</li>
+                    <li><strong>AI processing</strong>: The AI converts the photo into a line-art sketch or into the art style or photo look you selected. We do not use your photos to retrain models.</li>
                     <li><strong>Storage</strong>: The original used for conversion (originals/) and the resulting sketch (sketches/) are stored in Firebase Cloud Storage. See Section 4 for retention.</li>
                     <li><strong>Local caching</strong>: Sketches you choose to keep are cached in on-device storage (Drift), so you can continue to use them even after the cloud copy is automatically deleted.</li>
                 </ul>
@@ -131,6 +131,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>AI line-art sketch conversion</td>
                             <td>Processed in real time (not separately retained)</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI, L.L.C.</td>
+                            <td>AI image conversion (line art, art styles, photo looks)</td>
+                            <td>Up to 30 days for abuse monitoring, then deleted (provider policy)</td>
                         </tr>
                         <tr>
                             <td>Google LLC (AdMob)</td>
@@ -217,6 +222,12 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>United States</td>
                             <td>AI sketch conversion</td>
+                            <td>Photo for conversion</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI, L.L.C.</td>
+                            <td>United States</td>
+                            <td>AI image conversion</td>
                             <td>Photo for conversion</td>
                         </tr>
                         <tr>

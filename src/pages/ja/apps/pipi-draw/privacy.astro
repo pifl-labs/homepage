@@ -92,8 +92,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>第3条 (AI スケッチ変換の処理)</h2>
                 <p>本アプリの中核機能である AI スケッチ変換は次のように動作します。</p>
                 <ul>
-                    <li><strong>送信</strong>: 選択された写真は変換用に最大1024px JPEGへ縮小された後、当社の Cloud Functions(サーバー)を経由して Google の生成AI(Gemini / Vertex AI)へ送信されます。</li>
-                    <li><strong>AI 処理</strong>: AIは受け取った写真を線画スケッチに変換します。当社はモデルの再学習にお客様の写真を使用しません。</li>
+                    <li><strong>送信</strong>: 選択された写真は変換用に最大1024px JPEGへ縮小された後、当社の Cloud Functions(サーバー)を経由して生成AIの提供元へ送信されます。変換の種類に応じて Google の生成AI(Gemini / Vertex AI)または OpenAI の画像生成AIが処理し、OpenAI へはアプリのAI写真送信の同意画面で OpenAI が記載された案内に同意した場合にのみ送信されます。</li>
+                    <li><strong>AI 処理</strong>: AIは受け取った写真を線画スケッチ、またはお客様が選んだ絵柄・写真の雰囲気の画像に変換します。当社はモデルの再学習にお客様の写真を使用しません。</li>
                     <li><strong>保存</strong>: 変換に使用した元写真(originals/)と結果スケッチ(sketches/)は Firebase Cloud Storage に保存されます。保有期間は第4条をご参照ください。</li>
                     <li><strong>ローカル保存</strong>: お客様が保存を選択したスケッチはデバイスのローカルストレージ(Drift)にキャッシュされ、クラウドから自動削除された後も引き続きご利用いただけます。</li>
                 </ul>
@@ -132,6 +132,11 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>AI 線画スケッチ変換処理</td>
                             <td>処理直後(別途保管しない)</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI, L.L.C.</td>
+                            <td>AI 画像変換処理(線画・絵柄・写真の雰囲気)</td>
+                            <td>不正利用監視のため最大30日保管後に削除(提供元のポリシー)</td>
                         </tr>
                         <tr>
                             <td>Google LLC (AdMob)</td>
@@ -218,6 +223,12 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>米国</td>
                             <td>AI スケッチ変換</td>
+                            <td>変換用の写真</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI, L.L.C.</td>
+                            <td>米国</td>
+                            <td>AI 画像変換</td>
                             <td>変換用の写真</td>
                         </tr>
                         <tr>
