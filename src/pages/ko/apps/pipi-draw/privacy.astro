@@ -14,7 +14,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/ko/" class="legal-back"><i class="fas fa-arrow-left"></i> 홈으로 돌아가기</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Draw 개인정보처리방침</span></h1>
-            <p class="legal-date">시행일: 2026년 6월 4일</p>
+            <p class="legal-date">시행일: 2026년 10월 1일</p>
         </div>
     </section>
 
@@ -29,7 +29,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>제1조 (개인정보의 처리 목적)</h2>
                 <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
                 <ul>
-                    <li><strong>AI 스케치 변환</strong>: 사용자가 촬영하거나 기기 갤러리에서 선택한 사진을 라인아트 스케치로 변환</li>
+                    <li><strong>AI 스케치 변환</strong>: 사용자가 촬영하거나 기기 갤러리에서 선택한 사진을 라인아트 스케치나 사용자가 고른 그림체·사진 느낌의 이미지로 변환</li>
                     <li><strong>앱 기능 제공</strong>: 변환된 스케치의 색칠·드로잉, 작업 세션의 기기 내 저장, 사용량 관리</li>
                     <li><strong>사용자 식별</strong>: 앱 최초 실행 시 자동 생성되는 익명 식별자(Firebase 익명 인증)를 통한 사용자 구분 및 사용량·포인트 관리 — 별도의 회원가입·로그인 절차는 없습니다</li>
                     <li><strong>광고 게재</strong>: Google AdMob을 통한 광고 노출 및 광고 관련성 향상</li>
@@ -51,7 +51,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <tbody>
                         <tr>
                             <td>사진·이미지</td>
-                            <td>사용자가 촬영하거나 갤러리에서 선택한 사진(변환용 1024px JPEG로 축소), AI 변환 결과 스케치(PNG)</td>
+                            <td>사용자가 촬영하거나 갤러리에서 선택한 사진(변환용 1024px JPEG로 축소), AI 변환 결과 이미지(라인아트 PNG·그림체 JPEG)</td>
                             <td>AI 변환을 위해 Cloud Functions(서버)로 전송 후 Cloud Storage에 일시 저장</td>
                         </tr>
                         <tr>
@@ -95,8 +95,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>제3조 (AI 스케치 변환 처리)</h2>
                 <p>본 앱의 핵심 기능인 AI 스케치 변환은 다음과 같이 동작합니다.</p>
                 <ul>
-                    <li><strong>전송</strong>: 사용자가 선택한 사진은 변환용으로 최대 1024px JPEG로 축소된 뒤, 회사의 Cloud Functions(서버)를 거쳐 Google의 생성형 AI(Gemini / Vertex AI)로 전달됩니다.</li>
-                    <li><strong>AI 처리</strong>: AI는 전달받은 사진을 라인아트 스케치로 변환하며, 회사는 변환 정확도 향상을 위한 별도의 모델 재학습에 사용자의 사진을 사용하지 않습니다.</li>
+                    <li><strong>전송</strong>: 사용자가 선택한 사진은 변환용으로 최대 1024px JPEG로 축소된 뒤, 회사의 Cloud Functions(서버)를 거쳐 생성형 AI 제공자에게 전달됩니다. 변환 종류에 따라 Google의 생성형 AI(Gemini / Vertex AI) 또는 OpenAI의 이미지 생성 AI가 처리하며, OpenAI로는 앱의 AI 사진 전송 동의 화면에서 OpenAI가 적힌 안내에 동의한 경우에만 전달됩니다.</li>
+                    <li><strong>AI 처리</strong>: AI는 전달받은 사진을 라인아트 스케치나 사용자가 고른 그림체·사진 느낌의 이미지로 변환하며, 회사는 변환 정확도 향상을 위한 별도의 모델 재학습에 사용자의 사진을 사용하지 않습니다.</li>
                     <li><strong>저장</strong>: 변환에 사용된 원본(originals/)과 결과 스케치(sketches/)는 Firebase Cloud Storage에 저장됩니다. 자세한 보유기간은 제4조를 참고하십시오.</li>
                     <li><strong>로컬 보관</strong>: 사용자가 보관을 선택한 스케치는 기기 로컬 저장소(Drift)에 캐시되어, 클라우드에서 자동 삭제된 이후에도 사용자가 계속 이용할 수 있습니다.</li>
                 </ul>
@@ -134,8 +134,13 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         </tr>
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>
-                            <td>AI 라인아트 스케치 변환 처리</td>
-                            <td>처리 즉시(별도 보관하지 않음)</td>
+                            <td>AI 이미지 변환 처리(라인아트·그림체·사진 느낌)</td>
+                            <td>남용 감시 목적으로 최대 55일 보관 후 삭제(제공자 정책)</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI OpCo, LLC</td>
+                            <td>AI 이미지 변환 처리(라인아트·그림체·사진 느낌)</td>
+                            <td>남용 감시 목적으로 최대 30일 보관 후 삭제(법령상 더 긴 보관이 필요하거나 서비스·제3자 보호에 합리적으로 필요한 경우 제외, 제공자 정책)</td>
                         </tr>
                         <tr>
                             <td>Google LLC (AdMob)</td>
@@ -223,7 +228,13 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                         <tr>
                             <td>Google LLC (Gemini / Vertex AI)</td>
                             <td>미국</td>
-                            <td>AI 스케치 변환</td>
+                            <td>AI 이미지 변환</td>
+                            <td>변환용 사진</td>
+                        </tr>
+                        <tr>
+                            <td>OpenAI OpCo, LLC</td>
+                            <td>미국</td>
+                            <td>AI 이미지 변환</td>
                             <td>변환용 사진</td>
                         </tr>
                         <tr>
@@ -247,6 +258,16 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     </tbody>
                 </table>
 
+                <h3>OpenAI OpCo, LLC 이전 세부</h3>
+                <p>미국 · 1455 3rd Street, San Francisco, CA 94158 · 개인정보 문의: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a></p>
+                <ul>
+                    <li><strong>이전 항목</strong>: 변환용 사진(최대 1024px JPEG, 위치 정보 등 사진 메타데이터 제거)과 변환 지시문. 사용자 식별자는 보내지 않습니다.</li>
+                    <li><strong>이전 시기·방법</strong>: OpenAI가 처리하는 변환을 요청할 때마다 회사 서버(Cloud Functions)를 거쳐 암호화된 통신(HTTPS/TLS)으로 전송</li>
+                    <li><strong>이용 목적</strong>: AI 이미지 변환(라인아트·그림체·사진 느낌)</li>
+                    <li><strong>보유·이용 기간</strong>: 남용 감시 목적으로 최대 30일 보관 후 삭제(법령상 더 긴 보관이 필요하거나 서비스·제3자 보호에 합리적으로 필요한 경우 제외, 제공자 정책)</li>
+                    <li><strong>이전 거부 방법·절차와 효과</strong>: 앱의 AI 사진 전송 안내에 동의하지 않거나, 설정의 'AI 사진 전송 동의'에서 언제든 철회하면 사진이 AI 제공자(Google·OpenAI)에게 전송되지 않습니다. 이 경우 AI 변환은 이용할 수 없으며, 직접 색칠·사진 필터처럼 사진을 보내지 않는 기능은 그대로 이용할 수 있습니다.</li>
+                </ul>
+
                 <h2>제15조 (개인정보 보호책임자)</h2>
                 <ul>
                     <li><strong>개인정보 보호책임자</strong></li>
@@ -264,7 +285,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>제17조 (개인정보 처리방침 변경)</h2>
-                <p>이 개인정보 처리방침은 2026년 6월 4일부터 적용됩니다. 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
+                <p>이 개인정보 처리방침은 2026년 10월 1일부터 적용됩니다(변경 내용: AI 사진 변환 제공자에 OpenAI 추가, Google Gemini 보관 기간 정정, 국외 이전 세부 추가 — 이전 방침 시행일: 2026년 6월 4일). 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
 
                 <h2>For International Users</h2>
                 <h3>GDPR (European Economic Area)</h3>
