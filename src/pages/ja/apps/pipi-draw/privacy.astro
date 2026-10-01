@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { drawPrivacyRevision } from '../../../../data/pipi-draw-privacy.mjs';
+
+// 시행일·이전 방침 시행일·변경 내용 문단은 게시일(src/data/pipi-draw-privacy.mjs)로 함께 정해진다.
+const { effectiveDate, previousDate, sameDay } = drawPrivacyRevision('ja');
 ---
 <BaseLayout
   lang="ja"
@@ -13,7 +17,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">PiPi Draw プライバシーポリシー</span></h1>
-            <p class="legal-date">施行日: 2026年10月1日</p>
+            <p class="legal-date">施行日: {effectiveDate}</p>
         </div>
     </section>
 
@@ -30,8 +34,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li><strong>アプリ機能の提供</strong>: 変換したスケッチの塗り絵・お絵描き、作業セッションのデバイス内保存、利用量管理</li>
                     <li><strong>ユーザー識別</strong>: アプリ初回起動時に自動生成される匿名識別子(Firebase 匿名認証)によるユーザー識別、利用量・ポイント管理 — 会員登録・ログイン手続きはありません</li>
                     <li><strong>広告配信</strong>: Google AdMobによる広告表示および広告関連性の向上</li>
-                    <li><strong>アプリ内課金</strong>: ポイントパックの購入およびプレミアムサブスクリプションの処理、領収書検証</li>
-                    <li><strong>分析と安定性</strong>: Firebase Analytics・Crashlytics による利用分析およびエラー追跡(任意)</li>
+                    <li><strong>アプリ内課金</strong>: AI変換チケットの購入処理と購入の確認</li>
+                    <li><strong>分析と安定性</strong>: Firebase Analytics・Crashlytics による利用分析およびエラー追跡(アプリの利用中に自動で収集)</li>
                     <li><strong>カスタマーサポート</strong>: メールによるお問い合わせの受付および対応</li>
                 </ul>
 
@@ -48,7 +52,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <tbody>
                         <tr>
                             <td>写真・画像</td>
-                            <td>お客様が撮影またはギャラリーから選択した写真(変換用に1024px JPEGへ縮小)、AI変換結果の画像(線画はPNG・絵柄はJPEG)</td>
+                            <td>お客様が撮影またはギャラリーから選択した写真(アプリが最大1280pxに縮小してサーバーへ送信し、サーバーが変換用に最大1024pxのJPEGへさらに縮小)、AI変換結果の画像(線画はPNG・絵柄・写真の雰囲気はJPEG)</td>
                             <td>AI変換のため Cloud Functions(サーバー)へ送信後、Cloud Storage に一時保存</td>
                         </tr>
                         <tr>
@@ -62,14 +66,24 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Cloud Functions が Firestore に記録</td>
                         </tr>
                         <tr>
+                            <td>変換ジョブの記録</td>
+                            <td>変換リクエストID、処理状態(処理中・完了・失敗)、変換方式(線画、または絵柄・写真の雰囲気とその種類)、差し引いた内容(無料回数・変換チケット)、完了時の結果情報(結果画像の場所・サイズ、残りのチケット数など)、失敗時のエラーコード・返金の有無、処理日時、ユーザー識別子</td>
+                            <td>変換をリクエストしたときに Cloud Functions が Firestore に記録(接続が切れても結果を受け取り直し、二重に差し引かれないようにするため)</td>
+                        </tr>
+                        <tr>
+                            <td>AI結果の報告記録</td>
+                            <td>報告した結果のID、選んだ理由(不快・不適切な内容、人や動物の姿がおかしい、写真とぜんぜん違う、その他)、報告した結果の情報(変換方式・スタイル・AIモデル・結果画像の場所)、アプリのバージョン・ビルド・プラットフォーム(iOS/Android)、報告回数・日時、ユーザー識別子。自由記述のメモは受け取りません</td>
+                            <td>結果画面から報告したときに Cloud Functions が Firestore に記録(この結果の確認とAI変換の改善のためだけに使用)</td>
+                        </tr>
+                        <tr>
                             <td>広告識別子</td>
                             <td>広告ID(IDFA/AAID)、おおよその位置(国単位)、デバイス情報(OS、モデル、言語)</td>
-                            <td>Google AdMob SDK による自動収集(同意時)</td>
+                            <td>広告の読み込み時に Google AdMob SDK が自動で収集(iOS の広告IDはトラッキング許可時のみ、広告の同意を求める地域では同意画面を経た後)</td>
                         </tr>
                         <tr>
                             <td>アプリ内課金</td>
-                            <td>購入領収書、取引ID</td>
-                            <td>Apple App Store / Google Play 課金システム</td>
+                            <td>購入領収書、取引ID、購入した商品・プラットフォーム、変換チケットの残高</td>
+                            <td>Apple App Store / Google Play 課金システム(購入の確認後、当社サーバーが購入記録とチケット残高を Firestore に記録)</td>
                         </tr>
                         <tr>
                             <td>アプリ使用データ(ローカル)</td>
@@ -77,9 +91,9 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>デバイス内ローカル保存(Drift/SQLite)。保存したスケッチはデバイスにキャッシュ</td>
                         </tr>
                         <tr>
-                            <td>分析・安定性(任意)</td>
+                            <td>分析・安定性</td>
                             <td>利用イベント、デバイス・アプリバージョン情報、非識別のエラーログ</td>
-                            <td>Firebase Analytics / Crashlytics(任意)</td>
+                            <td>Firebase Analytics / Crashlytics がアプリの利用中に自動で収集</td>
                         </tr>
                         <tr>
                             <td>メールお問い合わせ</td>
@@ -92,7 +106,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <h2>第3条 (AI スケッチ変換の処理)</h2>
                 <p>本アプリの中核機能である AI スケッチ変換は次のように動作します。</p>
                 <ul>
-                    <li><strong>送信</strong>: 選択された写真は変換用に最大1024px JPEGへ縮小された後、当社の Cloud Functions(サーバー)を経由して生成AIの提供元へ送信されます。変換の種類に応じて Google の生成AI(Gemini / Vertex AI)または OpenAI の画像生成AIが処理し、OpenAI へはアプリのAI写真送信の同意画面で OpenAI が記載された案内に同意した場合にのみ送信されます。</li>
+                    <li><strong>送信</strong>: 選択された写真はアプリで最大1280pxに縮小して当社の Cloud Functions(サーバー)へ送られ、サーバーが最大1024pxのJPEGへさらに縮小した後、生成AIの提供元へ送信されます。変換の種類に応じて Google の生成AI(Gemini API)または OpenAI の画像生成AIが処理し、OpenAI へはアプリのAI写真送信の同意画面で OpenAI が記載された案内に同意した場合にのみ送信されます。</li>
                     <li><strong>AI 処理</strong>: AIは受け取った写真を線画スケッチ、またはお客様が選んだ絵柄・写真の雰囲気の画像に変換します。当社はモデルの再学習にお客様の写真を使用しません。</li>
                     <li><strong>保存</strong>: 変換に使用した元写真(originals/)と結果スケッチ(sketches/)は Firebase Cloud Storage に保存されます。保有期間は第4条をご参照ください。</li>
                     <li><strong>ローカル保存</strong>: お客様が保存を選択したスケッチはデバイスのローカルストレージ(Drift)にキャッシュされ、クラウドから自動削除された後も引き続きご利用いただけます。</li>
@@ -103,6 +117,8 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li><strong>変換用の元写真(originals/)</strong>: Cloud Storage のライフサイクルポリシーにより、アップロードから <strong>7日</strong> 経過後に自動削除</li>
                     <li><strong>AI 変換スケッチ(sketches/)</strong>: Cloud Storage のライフサイクルポリシーにより、生成から <strong>90日</strong> 経過後に自動削除(保存したスケッチはデバイスのローカルに保持)</li>
                     <li><strong>アカウント情報およびスケッチメタデータ</strong>: アカウント保有期間中は保存、アカウント削除時に全削除</li>
+                    <li><strong>変換ジョブの記録</strong>: 作成から <strong>7日</strong> 経過後に自動削除(Firestore の TTL)。それより前にアカウントが削除された場合は併せて削除</li>
+                    <li><strong>AI結果の報告記録</strong>: アカウント保有期間中は保存、アカウント削除時に併せて削除</li>
                     <li><strong>匿名アカウント</strong>: 最終利用日から <strong>30日</strong> 利用がない場合、アカウントおよび関連データ(スケッチ、保存画像)を自動整理</li>
                     <li><strong>広告識別子および広告関連データ</strong>: Google AdMob ポリシーに準拠</li>
                     <li><strong>アプリ内課金領収書</strong>: 関連法令(電子商取引法)により <strong>5年</strong></li>
@@ -129,14 +145,14 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>委託契約終了時</td>
                         </tr>
                         <tr>
-                            <td>Google LLC (Gemini / Vertex AI)</td>
+                            <td>Google LLC (Gemini API)</td>
                             <td>AI 画像変換処理(線画・絵柄・写真の雰囲気)</td>
                             <td>不正利用監視のため最大55日保管後に削除(提供元のポリシー)</td>
                         </tr>
                         <tr>
                             <td>OpenAI OpCo, LLC</td>
                             <td>AI 画像変換処理(線画・絵柄・写真の雰囲気)</td>
-                            <td>不正利用監視のため最大30日保管後に削除(法令上より長い保管が必要な場合、またはサービス・第三者の保護に合理的に必要な場合を除く。提供元のポリシー)</td>
+                            <td>不正利用監視のため最大30日保管後に削除(法令上より長い保管が必要な場合、またはOpenAIのサービス・第三者の保護に合理的に必要な場合を除く。提供元のポリシー)</td>
                         </tr>
                         <tr>
                             <td>Google LLC (AdMob)</td>
@@ -220,7 +236,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>写真、スケッチ、ユーザー識別子、メタデータ</td>
                         </tr>
                         <tr>
-                            <td>Google LLC (Gemini / Vertex AI)</td>
+                            <td>Google LLC (Gemini API)</td>
                             <td>米国</td>
                             <td>AI 画像変換</td>
                             <td>変換用の写真</td>
@@ -235,22 +251,43 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                             <td>Google LLC (AdMob)</td>
                             <td>米国</td>
                             <td>モバイル広告配信</td>
-                            <td>広告識別子、デバイス情報</td>
+                            <td>広告識別子、デバイス情報、匿名のユーザー識別子(リワード広告の場合)</td>
                         </tr>
                         <tr>
                             <td>Apple Inc.</td>
                             <td>米国</td>
                             <td>iOS アプリ内課金</td>
-                            <td>購入領収書、取引ID</td>
+                            <td>購入する商品の情報、購入者確認用トークン</td>
                         </tr>
                         <tr>
                             <td>Google LLC (Google Play)</td>
                             <td>米国</td>
                             <td>Android アプリ内課金</td>
-                            <td>購入領収書、取引ID</td>
+                            <td>商品ID、購入トークン</td>
                         </tr>
                     </tbody>
                 </table>
+                <p>移転先ごとの連絡先と詳細は次のとおりです。</p>
+
+                <h3>Google LLC (Firebase) への移転の詳細</h3>
+                <p>米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></p>
+                <ul>
+                    <li><strong>移転する項目</strong>: 匿名のユーザー識別子、変換用の写真(アプリが最大1280pxで送った写真を、サーバーが最大1024pxのJPEGに縮小して保存)とAI変換結果の画像、スケッチメタデータ(スタイル・オプション、生成日時、元写真のハッシュ値)と利用量・ポイントの記録、変換チケットの購入記録(取引ID・商品・プラットフォーム)とチケット残高、変換ジョブの記録とAI結果の報告記録、アプリの利用イベント・デバイス・アプリバージョン情報とエラー記録、接続元のIPアドレス</li>
+                    <li><strong>時期・方法</strong>: アプリの初回起動時(匿名認証)、アプリの利用中(利用分析・エラー記録)、およびAI変換のリクエスト、購入の確認、結果の報告のたびに、暗号化された通信(HTTPS/TLS)で送信。写真・結果画像と Firestore の記録は Google Cloud のソウルリージョンに保存され、匿名認証は Google の米国のデータセンターでのみ処理されます。</li>
+                    <li><strong>利用目的</strong>: 匿名認証、AI変換サーバーの運用(Cloud Functions)、写真・結果の保存(Cloud Storage)、メタデータ・利用量・変換チケット・報告記録の管理(Firestore)、利用分析・エラー追跡(Analytics・Crashlytics)</li>
+                    <li><strong>保持期間</strong>: 第4条のとおり(変換用の元写真と変換ジョブの記録は7日、AI変換結果は90日で自動削除、アカウント情報・メタデータ・報告記録はアカウント削除までなど)。提供元のポリシーにより、認証サービスのIPアドレス記録は数週間保持され、エラー記録(Crashlytics)は90日間保持された後に削除の手続きが始まります。</li>
+                    <li><strong>移転を拒否する方法・手続と効果</strong>: AI変換・変換チケットの購入・結果の報告をしなければ、それに伴う写真と記録は送信されません。匿名のユーザー識別子と利用・エラー情報はアプリの利用中に自動で送信され、アプリ内で個別にオフにすることはできません。望まない場合はアプリの利用を中止(削除)し、第11条の方法でデータの削除を請求できます。この場合、本アプリは利用できません。</li>
+                </ul>
+
+                <h3>Google LLC (Gemini API) への移転の詳細</h3>
+                <p>米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></p>
+                <ul>
+                    <li><strong>移転する項目</strong>: 変換用の写真(最大1024pxのJPEG、位置情報などの写真メタデータは削除)と変換の指示文。ユーザー識別子は送信しません。</li>
+                    <li><strong>時期・方法</strong>: Geminiが処理する変換をリクエストするたびに、当社サーバー(Cloud Functions)を経由して暗号化された通信(HTTPS/TLS)で Gemini API へ送信</li>
+                    <li><strong>利用目的</strong>: AI画像変換(線画・絵柄・写真の雰囲気)</li>
+                    <li><strong>保持期間</strong>: 不正利用監視のため最大55日保管後に削除(提供元のポリシー)。この記録は Google またはその代理人が施設を置く国で一時的に保存・キャッシュされることがあり、Google は有料APIで受け取った写真と結果を自社製品の改善に使用しません(提供元の規約)。</li>
+                    <li><strong>移転を拒否する方法・手続と効果</strong>: アプリのAI写真送信の案内に同意しない、または設定の「AIへの写真送信に同意」からいつでも取り消すと、写真はAI提供元(Google・OpenAI)に送信されません。この場合AI変換は利用できませんが、塗り絵や写真フィルターなど写真を送らない機能は引き続き利用できます。</li>
+                </ul>
 
                 <h3>OpenAI OpCo, LLC への移転の詳細</h3>
                 <p>米国 · 1455 3rd Street, San Francisco, CA 94158 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a></p>
@@ -258,8 +295,38 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     <li><strong>移転する項目</strong>: 変換用の写真(最大1024pxのJPEG、位置情報などの写真メタデータは削除)と変換の指示文。ユーザー識別子は送信しません。</li>
                     <li><strong>時期・方法</strong>: OpenAIが処理する変換をリクエストするたびに、当社サーバー(Cloud Functions)を経由して暗号化された通信(HTTPS/TLS)で送信</li>
                     <li><strong>利用目的</strong>: AI画像変換(線画・絵柄・写真の雰囲気)</li>
-                    <li><strong>保持期間</strong>: 不正利用監視のため最大30日保管後に削除(法令上より長い保管が必要な場合、またはサービス・第三者の保護に合理的に必要な場合を除く。提供元のポリシー)</li>
+                    <li><strong>保持期間</strong>: 不正利用監視のため最大30日保管後に削除(法令上より長い保管が必要な場合、またはOpenAIのサービス・第三者の保護に合理的に必要な場合を除く。提供元のポリシー)</li>
                     <li><strong>移転を拒否する方法・手続と効果</strong>: アプリのAI写真送信の案内に同意しない、または設定の「AIへの写真送信に同意」からいつでも取り消すと、写真はAI提供元(Google・OpenAI)に送信されません。この場合AI変換は利用できませんが、塗り絵や写真フィルターなど写真を送らない機能は引き続き利用できます。</li>
+                </ul>
+
+                <h3>Google LLC (AdMob) への移転の詳細</h3>
+                <p>米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></p>
+                <ul>
+                    <li><strong>移転する項目</strong>: 広告ID(IDFA/AAID)などのデバイス識別子、IPアドレス(おおよその位置の推定に使われることがあります)、アプリ・広告の利用情報(アプリの起動、タップ、動画の視聴、表示された広告など)、パフォーマンス・診断情報。リワード広告で無料変換を受け取るときは、報酬を確認するため匿名のユーザー識別子も渡されます。</li>
+                    <li><strong>時期・方法</strong>: アプリが広告を読み込み・表示するたびに、アプリに組み込まれた Google Mobile Ads SDK が Google のサーバーへ直接送信(当社サーバーは経由しません)。iOS ではまずトラッキングの許可(ATT)を確認し、広告の同意が必要な地域では同意画面を経てから広告をリクエストします。</li>
+                    <li><strong>利用目的</strong>: 広告の配信・効果測定、リワード広告の視聴確認(無料変換1回の付与)</li>
+                    <li><strong>保持期間</strong>: Google のプライバシーポリシーに従う。Google は、広告のサーバーログから IP アドレスの一部を9か月後に、Cookie 情報を18か月後に削除して匿名化するとしています(提供元のポリシー)。</li>
+                    <li><strong>移転を拒否する方法・手続と効果</strong>: iOS でトラッキングを許可しない、または Android で広告IDを削除すると、広告IDは渡されません(第8条)。広告の同意を求められる地域では、設定の「広告のプライバシー設定」からいつでも変更できます。広告の同意を求めない地域(韓国など)では、広告を読み込むときにIPアドレスや利用情報などが送信され、アプリ内で個別にオフにすることはできません。リワード広告を見なければ、匿名のユーザー識別子は渡されません。いずれの場合もアプリの機能はそのまま利用でき、同意しないために広告を読み込めない場合は、リワード広告で受け取る無料変換だけが利用できなくなります。</li>
+                </ul>
+
+                <h3>Apple Inc. への移転の詳細</h3>
+                <p>米国 · One Apple Park Way, Cupertino, CA 95014 · プライバシー窓口: <a href="https://www.apple.com/legal/privacy/contact/" target="_blank" rel="noopener">Apple のプライバシーお問い合わせフォーム</a></p>
+                <ul>
+                    <li><strong>移転する項目</strong>: 購入する商品の情報と、変換チケットを購入するときに渡す購入者確認用トークン(匿名のユーザー識別子から作ったUUID)</li>
+                    <li><strong>時期・方法</strong>: iOS で変換チケットを購入するときに、アプリが Apple の決済システム(StoreKit)へ送信。当社サーバーは Apple が署名した取引情報を Apple の証明書で直接確認し、取引情報を Apple へ送り返すことはありません。</li>
+                    <li><strong>利用目的</strong>: アプリ内課金の処理、購入したユーザーにだけ変換チケットを付与するための購入者確認</li>
+                    <li><strong>保持期間</strong>: 決済処理者である Apple のプライバシーポリシーに従う(収集目的に必要な期間、または法令が求める期間だけ保持。提供元のポリシー)</li>
+                    <li><strong>移転を拒否する方法・手続と効果</strong>: 変換チケットを購入しなければ送信されません。この場合、有料の変換チケットは利用できませんが、その他の機能は引き続き利用できます。</li>
+                </ul>
+
+                <h3>Google LLC (Google Play) への移転の詳細</h3>
+                <p>米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></p>
+                <ul>
+                    <li><strong>移転する項目</strong>: 変換チケットの購入確認に必要な情報(商品ID、購入トークン)</li>
+                    <li><strong>時期・方法</strong>: Android で変換チケットを購入して付与を求めるとき(付与が終わっていない購入はアプリの再起動時)、当社サーバー(Cloud Functions)が Google Play Developer API へ暗号化された通信(HTTPS/TLS)で送信</li>
+                    <li><strong>利用目的</strong>: 購入の有効性の確認、付与完了の処理</li>
+                    <li><strong>保持期間</strong>: 決済処理者である Google のプライバシーポリシーに従う</li>
+                    <li><strong>移転を拒否する方法・手続と効果</strong>: 変換チケットを購入しなければ送信されません。この場合、有料の変換チケットは利用できませんが、その他の機能は引き続き利用できます。</li>
                 </ul>
 
                 <h2>第15条 (個人情報保護責任者)</h2>
@@ -272,7 +339,11 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
                 <h2>第17条 (改定)</h2>
-                <p>本プライバシーポリシーは、2026年10月1日から施行します(変更内容: AI写真変換の提供者にOpenAIを追加、Google Geminiの保管期間を訂正、国外移転の詳細を追加。旧ポリシーの施行日: 2026年6月4日)。変更がある場合は、本ページを通じて告知いたします。</p>
+                {sameDay ? (
+                <p>本プライバシーポリシーは、{effectiveDate}から施行します(変更内容: AI写真変換の提供者にOpenAIを追加、Google Geminiの保管期間と接続方式(Gemini API)を訂正、すべての移転先について国外移転の詳細(連絡先・移転する項目・時期・方法・利用目的・保持期間・拒否の方法)を追加、変換ジョブの記録とAI結果の報告記録の項目・保有期間を追加、分析・エラー・広告情報の自動収集を明記し写真の送信サイズを訂正、本アプリで提供していないポイントパック・プレミアムサブスクリプションの課金の記載を削除。旧ポリシーの施行日: {previousDate})。変更がある場合は、本ページを通じて告知いたします。</p>
+                ) : (
+                <p>本プライバシーポリシーは、{effectiveDate}から施行します(変更内容: Google Geminiの接続方式(Gemini API)を訂正、Google(Firebase・Gemini API・AdMob・Google Play)とAppleへの国外移転の詳細(連絡先・移転する項目・時期・方法・利用目的・保持期間・拒否の方法)を追加、変換ジョブの記録とAI結果の報告記録の項目・保有期間を追加、分析・エラー・広告情報の自動収集を明記し写真の送信サイズを訂正、本アプリで提供していないポイントパック・プレミアムサブスクリプションの課金の記載を削除。旧ポリシーの施行日: {previousDate})。変更がある場合は、本ページを通じて告知いたします。</p>
+                )}
             </div>
         </div>
     </main>
