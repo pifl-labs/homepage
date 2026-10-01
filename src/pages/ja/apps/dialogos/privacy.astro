@@ -13,7 +13,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/ja/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Dialogos の紹介に戻る</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Dialogos プライバシーポリシー</span></h1>
-            <p class="legal-date">施行日: 2026年6月14日 · 提供者: PiFl Labs</p>
+            <p class="legal-date">施行日: 2026年10月1日 · 初版施行: 2026年6月14日 · 提供者: PiFl Labs</p>
         </div>
     </section>
 
@@ -24,9 +24,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
                 <h2>1. 取り扱う情報</h2>
                 <ul>
-                    <li><strong>匿名デバイス識別子</strong>: 初回起動時に生成されるランダムなトークンで、端末に保存され、<strong>1日の無料メッセージ上限</strong>を公平に適用するためだけにリクエストへ付与されます。氏名・メール・電話番号・広告識別子ではなく、本人と紐づきません。</li>
-                    <li><strong>対話内容</strong>: 入力したメッセージと進行中の対話は、暗号化された通信でバックエンド(Cloudflare Worker)および AI 提供者(<strong>Anthropic</strong>)へ送信され、<strong>賢者の返答生成のためだけ</strong>に使用されます。<strong>対話内容は当社サーバーに保存しません。</strong> サーバーには匿名の日次カウンターのみ残ります。Anthropic は商用規約に基づき処理し、API入力をモデル学習に<strong>使用しません。</strong></li>
-                    <li><strong>サブスクリプション状態</strong>: Dialogos Pro 購入時、決済は Apple または Google が処理し、当社は有効/失効の状態のみを受け取ります。<strong>カード・請求情報は受け取りません。</strong></li>
+                    <li><strong>匿名デバイス識別子</strong>: 初回起動時に生成されるランダムなトークンで、端末に保存され、<strong>1日の利用上限を公平に適用し、購入内容を適用するためだけに</strong>サーバーへのリクエストに付与されます。氏名・メール・電話番号・広告識別子ではなく、本人と紐づかず、OpenAI には送信しません。</li>
+                    <li><strong>対話内容</strong>: 入力したメッセージと進行中の対話(直近の部分、最大24件・12,000字)は、暗号化された通信でバックエンド(Cloudflare Worker)へ送信され、バックエンドが賢者への指示文とともに AI 提供者(<strong>OpenAI</strong>)へ渡し、<strong>賢者の返答生成のためだけ</strong>に使用されます。<strong>対話内容は当社サーバーに保存しません。</strong>当社は保存機能をオフにした状態(store: false)で OpenAI を呼び出すため、OpenAI は対話を応答記録(アプリケーション状態)として保持しません。OpenAI は初期設定で API データをモデルの学習に使用せず、当社は学習用データの提供に同意(オプトイン)しません。ただし OpenAI は不正利用監視ログ(メッセージと返答を含む場合があります)を最大30日間保持し、暗号化されたプロンプトキャッシュを最大24時間保持する場合があります(5項・9項参照)。</li>
+                    <li><strong>購入と購入確認</strong>: 決済は Apple または Google が処理します。購入または購入の復元を行うと、本アプリがストアのレシートを当社サーバーへ送信し、サーバーが Apple または Google に有効性を確認します。その後サーバーは購入内容を適用するため、取引ID・商品・サブスクリプションの有効期限(深い対話パックは残数)を匿名デバイス識別子とともに保持します。また本アプリはリクエストごとに無料/Pro の区分をサーバーへ伝えます。<strong>カード・請求情報は受け取りません。</strong></li>
+                    <li><strong>サーバーの利用記録</strong>: サーバーは匿名デバイス識別子ごと・日ごとにカウンター(対話数、深い回答の利用数、危機的状況と判断して上限から除外した対話数)と AI トークン使用量の合計を保持します。運用ログには識別子の先頭8文字と利用情報(プラン、回答方式、トークン数、返答の終了理由、危機対応として扱ったかどうかなど)のみを記録し、対話内容は記録しません。サーバーの Cloudflare リクエストログには IP アドレスなどの接続情報が含まれる場合があります。</li>
                     <li><strong>端末内設定</strong>: 言語・テーマ・オンボーディング状態・日次カウンターは端末内のみに保存されます。</li>
                 </ul>
 
@@ -34,18 +35,24 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>氏名・メール・アカウント・位置・連絡先・写真・健康/生体情報なし。分析/広告SDKなし。広告識別子(IDFA/GAID)なし。他のアプリ・ウェブサイトをまたぐトラッキングなし。<strong>本アプリは広告を表示せず、トラッキングを行わないため App Tracking Transparency(ATT)同意ダイアログも表示しません。</strong></p>
 
                 <h2>3. 利用目的</h2>
-                <p>(a) 要求された対話の生成、(b) 公平な1日の利用制限の適用、のためだけに使用します。いかなるデータも販売・貸与せず、広告には利用しません。</p>
+                <p>(a) 要求された対話の生成、(b) 公平な1日の利用制限の適用、(c) 購入の確認と適用、のためだけに使用します。いかなるデータも販売・貸与せず、広告には利用しません。</p>
 
                 <h2>4. 共有 / 処理者</h2>
                 <ul>
-                    <li><strong>Anthropic</strong>(返答生成のためのメッセージ AI 処理)— 処理者</li>
-                    <li><strong>Cloudflare</strong>(プロキシ/バックエンドのホスティング)— 処理者</li>
-                    <li><strong>Apple / Google</strong>(サブスクリプション購入処理)— 決済に関する独立した管理者</li>
+                    <li><strong>OpenAI</strong>(返答生成のためのメッセージ AI 処理)— 処理者</li>
+                    <li><strong>Cloudflare</strong>(バックエンドのホスティング、日次カウンター・購入確認記録の保管を含む)— 処理者</li>
+                    <li><strong>Apple / Google</strong>(購入の決済処理と有効性の確認)— 決済に関する独立した管理者</li>
                 </ul>
                 <p>アプリ運営に必要な範囲でのみ上記提供者とデータを共有し、広告業者・データブローカーとは共有しません。</p>
 
                 <h2>5. 保持</h2>
-                <p>対話内容は当社サーバーに保持しません。匿名の日次カウンターは約2日で自動失効します。端末内設定はアプリを削除するまで保持され、削除時にすべてのローカルデータが消去されます。</p>
+                <ul>
+                    <li><strong>対話内容</strong>: 当社サーバーには保持しません。OpenAI は応答記録として保持せず(store: false)、不正利用監視ログは最大30日間(法令上より長い保持が必要な場合や、OpenAI のサービス・第三者を害から守るために合理的に必要な場合を除く)、暗号化されたプロンプトキャッシュは24時間を超えて保持しません。</li>
+                    <li><strong>日次カウンター・トークン合計</strong>: 約2日で自動失効します。</li>
+                    <li><strong>運用ログ</strong>: 7日以内に自動削除されます。</li>
+                    <li><strong>購入確認記録</strong>: 購入が有効な間保持し、権利が終了した日(サブスクリプション失効、パック使い切り、返金・取消)から90日後に削除します。</li>
+                    <li><strong>端末内設定</strong>: アプリを削除するまで保持され、削除時にすべてのローカルデータが消去されます。</li>
+                </ul>
 
                 <h2>6. セキュリティ</h2>
                 <p>すべての通信は転送時に暗号化(HTTPS/TLS)されます。AI 提供者の API キーはサーバーのみで保管し、アプリには含めません。</p>
@@ -54,13 +61,40 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>Dialogos は13歳(または居住国で求められる最低年齢)未満の子どもを対象とせず、子どもの個人情報を故意に収集しません。</p>
 
                 <h2>8. 利用者の選択と権利</h2>
-                <p>当社は利用者を識別する情報を保持しないため、ご請求に際して「あなたの」データを特定することは困難です。アプリを削除すれば、いつでもすべてのローカルデータを消去できます。プライバシーに関するお問い合わせ: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
+                <p>当社は利用者を識別する情報を保持しないため、ご請求に際して「あなたの」データを特定することは困難です。サーバーの記録は5項の期間が過ぎると自動的に削除され、アプリを削除すれば、いつでもすべてのローカルデータを消去できます。プライバシーに関するお問い合わせ: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
 
                 <h2>9. 国外移転</h2>
-                <p>メッセージは提供者が運用するサーバー(例:米国)で処理される場合があります。本アプリの利用により、送信する内容が上記のとおり処理されることをご理解いただいたものとみなします。</p>
+                <p>当社はサービス提供のため、次のとおり情報を国外へ移転(取扱いの委託・保管)します。</p>
+                <ul>
+                    <li><strong>OpenAI</strong>(米国 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a>)
+                        <ul>
+                            <li>移転する項目: 入力したメッセージと進行中の対話(直近最大24件・12,000字)、賢者への指示文。デバイス識別子は送信しません。</li>
+                            <li>時期・方法: メッセージを送るたびに、当社サーバーを経由して暗号化された通信(HTTPS/TLS)で送信</li>
+                            <li>利用目的: 賢者の返答生成</li>
+                            <li>保持期間: 応答記録として保持しない(store: false)。不正利用監視ログ最大30日間(5項の例外を含む)、暗号化されたプロンプトキャッシュ24時間以内。モデルの学習に使用しない</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cloudflare, Inc.</strong>(米国ほか Cloudflare のデータセンター所在国 · プライバシー窓口: <a href="#" data-email-user="privacyquestions" data-email-domain="cloudflare.com"><span class="email-text">privacyquestions (at) cloudflare.com</span></a>)
+                        <ul>
+                            <li>移転する項目: 匿名デバイス識別子、対話内容(中継のみで保存しない)、無料/Pro の区分、日次カウンター・トークン合計、購入確認記録、運用ログ</li>
+                            <li>時期・方法: 本アプリがサーバーにリクエストするたび(対話、購入確認)、HTTPS/TLS で送信</li>
+                            <li>利用目的: バックエンドのホスティング(対話の中継、1日の上限の適用、購入確認)</li>
+                            <li>保持期間: 5項のとおり</li>
+                        </ul>
+                    </li>
+                    <li><strong>Apple Inc. / Google LLC</strong>(米国 · プライバシー窓口: <a href="https://www.apple.com/legal/privacy/contact/" target="_blank" rel="noopener">Apple</a>、<a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google</a>)
+                        <ul>
+                            <li>移転する項目: 購入レシート(取引ID、商品などの購入情報)</li>
+                            <li>時期・方法: 購入・復元時に当社サーバーが各ストアのサーバーAPIへ HTTPS/TLS で送信</li>
+                            <li>利用目的: 購入の有効性の確認</li>
+                            <li>保持期間: 決済処理者である各社のプライバシーポリシーに従う</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>移転を拒否する方法と影響</strong>: 国外移転を望まない場合は、対話・購入機能を利用しないか、アプリを削除してください。拒否した場合、返答の生成と購入の適用はご利用いただけません。お問い合わせ: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
 
                 <h2>10. 変更</h2>
-                <p>本ポリシーは更新される場合があり、更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します。</p>
+                <p>本ポリシーは更新される場合があり、更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します。2026年10月1日改定: AI 提供者を Anthropic から OpenAI に変更し、購入確認の情報と国外移転の詳細を追加しました。</p>
             </div>
         </div>
     </main>

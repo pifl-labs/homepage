@@ -13,7 +13,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/ko/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Dialogos 소개로 돌아가기</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Dialogos 개인정보처리방침</span></h1>
-            <p class="legal-date">시행일: 2026년 6월 14일 · 제공자: PiFl Labs</p>
+            <p class="legal-date">시행일: 2026년 10월 1일 · 최초 시행: 2026년 6월 14일 · 제공자: PiFl Labs</p>
         </div>
     </section>
 
@@ -24,9 +24,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
                 <h2>1. 처리하는 정보</h2>
                 <ul>
-                    <li><strong>익명 기기 식별자</strong>: 첫 실행 시 생성되는 임의 토큰으로, 기기에 저장되며 <strong>일일 무료 대화 한도</strong>를 공정하게 적용하기 위해서만 요청에 함께 전송됩니다. 이름·이메일·전화번호·광고식별자가 아니며 신원과 연결되지 않습니다.</li>
-                    <li><strong>대화 내용</strong>: 입력하신 메시지와 진행 중인 대화는 암호화된 연결로 백엔드(Cloudflare Worker)와 AI 제공자(<strong>Anthropic</strong>)에 전송되어 <strong>철학자의 답변 생성에만</strong> 사용됩니다. <strong>대화 내용은 당사 서버에 저장하지 않으며</strong>, 서버에는 익명 일일 카운터만 남습니다. Anthropic은 상용 약관에 따라 처리하며 API 입력을 모델 학습에 <strong>사용하지 않습니다.</strong></li>
-                    <li><strong>구독 상태</strong>: Dialogos Pro 구매 시 결제는 Apple 또는 Google이 처리하며, 당사는 구독 활성/만료 여부만 전달받습니다. <strong>결제카드·청구정보는 받지 않습니다.</strong></li>
+                    <li><strong>익명 기기 식별자</strong>: 첫 실행 시 생성되는 임의 토큰으로, 기기에 저장되며 <strong>일일 사용 한도를 공정하게 적용하고 구매하신 내용을 적용하기 위해서만</strong> 서버 요청에 함께 전송됩니다. 이름·이메일·전화번호·광고식별자가 아니며 신원과 연결되지 않고, OpenAI에는 보내지 않습니다.</li>
+                    <li><strong>대화 내용</strong>: 입력하신 메시지와 진행 중인 대화(최근 부분, 최대 24개 메시지·12,000자)는 암호화된 연결로 백엔드(Cloudflare Worker)에 전송되고, 백엔드가 멘토 지시문과 함께 AI 제공자(<strong>OpenAI</strong>)에 전달해 <strong>철학자의 답변 생성에만</strong> 사용됩니다. <strong>대화 내용은 당사 서버에 저장하지 않습니다.</strong> 당사는 저장 기능을 끈 상태(store: false)로 OpenAI를 호출하므로 OpenAI는 대화를 응답 기록(애플리케이션 상태)으로 보관하지 않습니다. OpenAI는 기본적으로 API 데이터를 모델 학습에 사용하지 않으며, 당사는 학습용 데이터 제공에 동의(옵트인)하지 않습니다. 다만 OpenAI는 남용 감시 로그(메시지와 답변이 포함될 수 있음)를 최대 30일 보관하고, 암호화된 프롬프트 캐시를 최대 24시간 보관할 수 있습니다(5항·9항 참조).</li>
+                    <li><strong>구매 및 구매 확인</strong>: 결제는 Apple 또는 Google이 처리합니다. 구매하거나 구매를 복원하시면 앱이 스토어 영수증을 당사 서버로 보내고, 서버가 Apple 또는 Google에 유효한지 확인합니다. 이후 서버는 구매 내용을 적용하기 위해 거래 ID, 상품, 구독 만료일(깊은 대화 묶음은 남은 수량)을 익명 기기 식별자와 함께 보관합니다. 또한 앱은 요청마다 무료/Pro 여부를 서버에 알립니다. <strong>결제카드·청구정보는 받지 않습니다.</strong></li>
+                    <li><strong>서버의 사용 기록</strong>: 서버는 익명 기기 식별자별·날짜별로 카운터(대화 수, 깊은 답 사용 수, 위기 상황으로 판단돼 한도에서 제외한 대화 수)와 AI 토큰 사용량 합계를 보관합니다. 운영 로그에는 기기 식별자 앞 8자리와 사용 정보(요금제, 답변 방식, 토큰 수, 답변 종료 사유, 위기 대응 여부 등)만 남기며 대화 내용은 남기지 않습니다. 서버의 Cloudflare 요청 로그에는 IP 주소 등 접속 정보가 포함될 수 있습니다.</li>
                     <li><strong>기기 내 설정</strong>: 언어·테마·온보딩 상태·일일 카운터는 기기에만 저장됩니다.</li>
                 </ul>
 
@@ -34,18 +35,24 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>이름·이메일·계정·위치·연락처·사진·건강/생체 정보 없음. 분석/광고 SDK 없음. 광고식별자(IDFA/GAID) 없음. 다른 앱·웹사이트에 걸친 추적 없음. <strong>앱은 광고를 표시하지 않으며, 추적하지 않으므로 App Tracking Transparency(ATT) 동의창도 표시하지 않습니다.</strong></p>
 
                 <h2>3. 이용 목적</h2>
-                <p>오직 (a) 요청하신 대화를 생성하고 (b) 공정한 일일 사용량 제한을 적용하기 위해서만 사용합니다. 어떠한 데이터도 판매·임대하지 않으며 광고에 이용하지 않습니다.</p>
+                <p>오직 (a) 요청하신 대화를 생성하고, (b) 공정한 일일 사용량 제한을 적용하고, (c) 구매를 확인해 적용하기 위해서만 사용합니다. 어떠한 데이터도 판매·임대하지 않으며 광고에 이용하지 않습니다.</p>
 
                 <h2>4. 처리위탁 / 공유</h2>
                 <ul>
-                    <li><strong>Anthropic</strong> (답변 생성을 위한 메시지 AI 처리) — 수탁자</li>
-                    <li><strong>Cloudflare</strong> (프록시/백엔드 호스팅) — 수탁자</li>
-                    <li><strong>Apple / Google</strong> (구독 구매 처리) — 결제에 관한 독립 관리자</li>
+                    <li><strong>OpenAI</strong> (답변 생성을 위한 메시지 AI 처리) — 수탁자</li>
+                    <li><strong>Cloudflare</strong> (백엔드 호스팅, 일일 카운터·구매 확인 기록 보관 포함) — 수탁자</li>
+                    <li><strong>Apple / Google</strong> (구매 결제 처리 및 구매 유효성 확인) — 결제에 관한 독립 관리자</li>
                 </ul>
                 <p>앱 운영에 필요한 범위에서만 위 제공자와 데이터를 공유하며, 광고업체·데이터 브로커와는 공유하지 않습니다.</p>
 
                 <h2>5. 보관</h2>
-                <p>대화 내용은 당사 서버에 보관하지 않습니다. 익명 일일 카운터는 약 2일 내 자동 만료됩니다. 기기 내 설정은 앱을 삭제할 때까지 유지되며, 삭제 시 모든 로컬 데이터가 함께 제거됩니다.</p>
+                <ul>
+                    <li><strong>대화 내용</strong>: 당사 서버에 보관하지 않습니다. OpenAI는 응답 기록으로 보관하지 않으며(store: false), 남용 감시 로그는 최대 30일(법령상 더 긴 보관이 필요하거나 OpenAI 서비스·제3자를 해악으로부터 보호하는 데 합리적으로 필요한 경우 제외), 암호화된 프롬프트 캐시는 24시간을 넘기지 않습니다.</li>
+                    <li><strong>일일 카운터·토큰 합계</strong>: 약 2일 내 자동 만료됩니다.</li>
+                    <li><strong>운영 로그</strong>: 7일 내 자동 삭제됩니다.</li>
+                    <li><strong>구매 확인 기록</strong>: 구매가 유효한 동안 보관하고, 권리가 끝난 날(구독 만료, 묶음 소진, 환불·취소)부터 90일 뒤 삭제합니다.</li>
+                    <li><strong>기기 내 설정</strong>: 앱을 삭제할 때까지 유지되며, 삭제 시 모든 로컬 데이터가 함께 제거됩니다.</li>
+                </ul>
 
                 <h2>6. 보안</h2>
                 <p>모든 통신은 전송 구간 암호화(HTTPS/TLS)를 사용합니다. AI 제공자의 API 키는 서버에만 보관하며 앱에 포함하지 않습니다.</p>
@@ -54,13 +61,40 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>Dialogos는 만 13세(또는 거주국에서 요구하는 최소 연령) 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
 
                 <h2>8. 정보주체의 선택과 권리</h2>
-                <p>당사는 이용자를 식별하는 정보를 보유하지 않으므로, 요청 시 "당신의" 데이터를 특정하기 어렵습니다. 앱을 삭제하면 언제든 모든 로컬 데이터를 지울 수 있습니다. 개인정보 관련 문의: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
+                <p>당사는 이용자를 식별하는 정보를 보유하지 않으므로, 요청 시 "당신의" 데이터를 특정하기 어렵습니다. 서버 기록은 5항의 기간이 지나면 자동 삭제되며, 앱을 삭제하면 언제든 모든 로컬 데이터를 지울 수 있습니다. 개인정보 관련 문의: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
 
                 <h2>9. 국외 이전</h2>
-                <p>메시지는 제공자가 운영하는 서버(예: 미국)에서 처리될 수 있습니다. 앱을 사용함으로써 전송하시는 내용이 위와 같이 처리됨을 이해하시는 것으로 봅니다.</p>
+                <p>당사는 서비스 제공을 위해 다음과 같이 개인정보를 국외로 이전(처리위탁·보관)합니다.</p>
+                <ul>
+                    <li><strong>OpenAI</strong> (미국 · 개인정보 문의: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a>)
+                        <ul>
+                            <li>이전 항목: 입력하신 메시지와 진행 중인 대화(최근 최대 24개·12,000자), 멘토 지시문. 기기 식별자는 보내지 않습니다.</li>
+                            <li>이전 시기·방법: 메시지를 보낼 때마다 당사 서버를 거쳐 암호화된 통신(HTTPS/TLS)으로 전송</li>
+                            <li>이용 목적: 멘토 답변 생성</li>
+                            <li>보유·이용 기간: 응답 기록으로 보관하지 않음(store: false). 남용 감시 로그 최대 30일(5항의 예외 포함), 암호화된 프롬프트 캐시 24시간 이내. 모델 학습에 사용하지 않음</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cloudflare, Inc.</strong> (미국 등 Cloudflare 데이터센터 소재국 · 개인정보 문의: <a href="#" data-email-user="privacyquestions" data-email-domain="cloudflare.com"><span class="email-text">privacyquestions (at) cloudflare.com</span></a>)
+                        <ul>
+                            <li>이전 항목: 익명 기기 식별자, 대화 내용(중계만 하고 저장하지 않음), 무료/Pro 여부, 일일 카운터·토큰 합계, 구매 확인 기록, 운영 로그</li>
+                            <li>이전 시기·방법: 앱이 서버에 요청할 때마다(대화, 구매 확인) HTTPS/TLS로 전송</li>
+                            <li>이용 목적: 백엔드 호스팅(대화 중계, 일일 한도 적용, 구매 확인)</li>
+                            <li>보유·이용 기간: 5항과 같음</li>
+                        </ul>
+                    </li>
+                    <li><strong>Apple Inc. / Google LLC</strong> (미국 · 개인정보 문의: <a href="https://www.apple.com/legal/privacy/contact/" target="_blank" rel="noopener">Apple</a>, <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google</a>)
+                        <ul>
+                            <li>이전 항목: 구매 영수증(거래 ID, 상품 등 구매 정보)</li>
+                            <li>이전 시기·방법: 구매·복원 시 당사 서버가 각 스토어의 서버 API로 HTTPS/TLS 전송</li>
+                            <li>이용 목적: 구매 유효성 확인</li>
+                            <li>보유·이용 기간: 결제 처리자인 각 사의 개인정보 처리방침에 따름</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>이전을 거부하는 방법·절차와 효과</strong>: 국외 이전을 원하지 않으시면 대화·구매 기능을 이용하지 않거나 앱을 삭제하시면 됩니다. 이전을 거부하시면 답변 생성과 구매 적용을 이용할 수 없습니다. 문의: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
 
                 <h2>10. 변경</h2>
-                <p>본 방침은 변경될 수 있으며, 변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다.</p>
+                <p>본 방침은 변경될 수 있으며, 변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다. 2026년 10월 1일 개정: AI 제공자를 Anthropic에서 OpenAI로 변경하고, 구매 확인 정보와 국외 이전 세부 사항을 추가했습니다.</p>
             </div>
         </div>
     </main>

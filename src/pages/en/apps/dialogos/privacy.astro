@@ -13,7 +13,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
         <div class="container">
             <a href="/en/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Dialogos</a>
             <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Dialogos Privacy Policy</span></h1>
-            <p class="legal-date">Effective date: June 14, 2026 · Provider: PiFl Labs</p>
+            <p class="legal-date">Effective date: October 1, 2026 · First effective: June 14, 2026 · Provider: PiFl Labs</p>
         </div>
     </section>
 
@@ -24,9 +24,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
                 <h2>1. Information we process</h2>
                 <ul>
-                    <li><strong>Anonymous device identifier.</strong> On first launch the app generates a random token stored on your device. It is sent with each dialogue request <strong>only</strong> to enforce the daily free-message limit fairly. It is not your name, email, phone number, or an advertising identifier, and it is not linked to your identity.</li>
-                    <li><strong>Conversation content.</strong> The messages you write and the running conversation are sent over an encrypted connection to our backend (a Cloudflare Worker) and to our AI provider (<strong>Anthropic</strong>) for the sole purpose of generating the philosopher's reply. <strong>We do not store your conversation content on our servers</strong> — our server keeps only an anonymous per-day message counter. Anthropic processes the content to produce a response under its commercial terms and does <strong>not</strong> use API inputs to train its models.</li>
-                    <li><strong>Subscription status.</strong> If you buy Dialogos Pro, the purchase is handled by Apple or Google. We receive only whether your subscription is active or expired. <strong>We never receive your payment card or billing details.</strong></li>
+                    <li><strong>Anonymous device identifier.</strong> On first launch the app generates a random token stored on your device. It is sent with each request to our server <strong>only</strong> to apply the daily limits fairly and, if you buy something, to apply your purchase. It is not your name, email, phone number, or an advertising identifier, it is not linked to your identity, and it is not sent to OpenAI.</li>
+                    <li><strong>Conversation content.</strong> The messages you write and the ongoing conversation (the most recent part, up to 24 messages and 12,000 characters) are sent over an encrypted connection to our backend (a Cloudflare Worker), which passes them, together with our instructions for the mentor, to our AI provider (<strong>OpenAI</strong>) for the sole purpose of generating the philosopher's reply. <strong>We do not store your conversation content on our servers.</strong> We call OpenAI with storage turned off (store: false), so OpenAI does not keep the conversation as application state. By default OpenAI does not use API data to train its models, and we do not opt in to sharing data for training. OpenAI does keep abuse-monitoring logs, which may include your messages and the replies, for up to 30 days, and may keep an encrypted prompt cache for up to 24 hours (see sections 5 and 9).</li>
+                    <li><strong>Purchases and purchase verification.</strong> Purchases are processed by Apple or Google. When you buy or restore a purchase, the app sends the store's receipt to our server, which checks it with Apple or Google. Our server then keeps the transaction ID, the product, and the subscription's expiry date (or, for a pack of deep conversations, how many remain), together with the anonymous device identifier, so that your purchase can be applied. With each request the app also tells our server whether you are on the free tier or Pro. <strong>We never receive your payment card or billing details.</strong></li>
+                    <li><strong>Usage records on our server.</strong> For each anonymous device identifier and day, our server keeps counters (messages, deep answers used, and conversations treated as a crisis and therefore not counted against the limit) and a total of the AI tokens used. Our operational logs record the first 8 characters of the device identifier and usage details (such as plan, type of answer, token counts, how the reply ended, and whether it was handled as a crisis) — never message content. Cloudflare's request logs for our server may also include connection information such as IP addresses.</li>
                     <li><strong>On-device settings.</strong> Your language, theme, onboarding state, and daily counter are stored locally on your device only.</li>
                 </ul>
 
@@ -34,18 +35,24 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>No name, email, account, location, contacts, photos, health data, or biometric data. No analytics or advertising SDKs. No advertising identifier (IDFA/GAID). No tracking across other apps or websites. <strong>The app does not show ads, and shows no App Tracking Transparency prompt because it does not track you.</strong></p>
 
                 <h2>3. How we use information</h2>
-                <p>Solely to (a) generate the dialogue you request and (b) enforce fair daily-usage limits. We do not sell or rent any data, and we do not use it for advertising.</p>
+                <p>Solely to (a) generate the dialogue you request, (b) enforce fair daily-usage limits, and (c) verify and apply your purchases. We do not sell or rent any data, and we do not use it for advertising.</p>
 
                 <h2>4. Sharing / processors</h2>
                 <ul>
-                    <li><strong>Anthropic</strong> (AI processing of your messages to generate replies) — processor.</li>
-                    <li><strong>Cloudflare</strong> (hosting of our proxy/backend) — processor.</li>
-                    <li><strong>Apple / Google</strong> (processing your subscription purchase) — independent controllers for payment.</li>
+                    <li><strong>OpenAI</strong> (AI processing of your messages to generate replies) — processor.</li>
+                    <li><strong>Cloudflare</strong> (hosting of our backend, including the daily counters and purchase-verification records) — processor.</li>
+                    <li><strong>Apple / Google</strong> (processing your purchase and confirming that it is valid) — independent controllers for payment.</li>
                 </ul>
                 <p>We share data with these providers only as needed to run the app. We do not share data with advertisers or data brokers.</p>
 
                 <h2>5. Retention</h2>
-                <p>Conversation content is not retained on our servers. The anonymous daily counter automatically expires within about two days. On-device settings remain until you delete the app, which removes all local data.</p>
+                <ul>
+                    <li><strong>Conversation content:</strong> not retained on our servers. OpenAI does not keep it as application state (store: false); its abuse-monitoring logs are kept for up to 30 days (longer only where required by law or reasonably necessary to protect OpenAI's services or others from harm), and its encrypted prompt cache for no more than 24 hours.</li>
+                    <li><strong>Daily counters and token totals:</strong> expire automatically within about two days.</li>
+                    <li><strong>Operational logs:</strong> deleted automatically within 7 days.</li>
+                    <li><strong>Purchase-verification records:</strong> kept while the purchase is in effect and deleted 90 days after it ends (the subscription expires, the pack is used up, or the purchase is refunded or cancelled).</li>
+                    <li><strong>On-device settings:</strong> remain until you delete the app, which removes all local data.</li>
+                </ul>
 
                 <h2>6. Security</h2>
                 <p>All network traffic uses encryption in transit (HTTPS/TLS). Our AI provider's API key is stored only on the server and is never shipped inside the app.</p>
@@ -54,13 +61,40 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                 <p>Dialogos is not directed at children under 13 (or the minimum age required in your country) and we do not knowingly collect personal information from children.</p>
 
                 <h2>8. Your choices and rights</h2>
-                <p>Because we do not hold any information that identifies you, we generally cannot locate "your" data on request. You can clear all local data at any time by deleting the app. For any privacy question, contact <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
+                <p>Because we do not hold any information that identifies you, we generally cannot locate "your" data on request. Server-side records are deleted automatically on the schedule in section 5, and you can clear all local data at any time by deleting the app. For any privacy question, contact <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
 
                 <h2>9. International transfers</h2>
-                <p>Your messages may be processed on servers operated by our providers (e.g. in the United States). By using the app you understand the content you send is processed as described above.</p>
+                <p>To provide the app, we transfer information outside your country (entrusting its processing or storage) as follows.</p>
+                <ul>
+                    <li><strong>OpenAI</strong> (United States · privacy contact: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a>)
+                        <ul>
+                            <li>Items: your messages and the ongoing conversation (up to the 24 most recent messages / 12,000 characters) and our instructions for the mentor. The device identifier is not sent.</li>
+                            <li>When and how: each time you send a message, through our server over an encrypted connection (HTTPS/TLS).</li>
+                            <li>Purpose: generating the mentor's reply.</li>
+                            <li>Retention: not kept as application state (store: false); abuse-monitoring logs for up to 30 days (with the exceptions in section 5); encrypted prompt cache for no more than 24 hours; not used for model training.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cloudflare, Inc.</strong> (United States and other countries where Cloudflare operates data centers · privacy contact: <a href="#" data-email-user="privacyquestions" data-email-domain="cloudflare.com"><span class="email-text">privacyquestions (at) cloudflare.com</span></a>)
+                        <ul>
+                            <li>Items: anonymous device identifier, conversation content (relayed only, not stored), free/Pro tier, daily counters and token totals, purchase-verification records, operational logs.</li>
+                            <li>When and how: each time the app contacts our server (messages, purchase checks), over HTTPS/TLS.</li>
+                            <li>Purpose: hosting our backend (relaying the conversation, applying daily limits, verifying purchases).</li>
+                            <li>Retention: as in section 5.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Apple Inc. / Google LLC</strong> (United States · privacy contact: <a href="https://www.apple.com/legal/privacy/contact/" target="_blank" rel="noopener">Apple</a>, <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google</a>)
+                        <ul>
+                            <li>Items: the store receipt for your purchase (transaction ID, product, and similar purchase details).</li>
+                            <li>When and how: when you buy or restore a purchase, our server sends it to the store's server API over HTTPS/TLS.</li>
+                            <li>Purpose: confirming that the purchase is valid.</li>
+                            <li>Retention: under each company's own privacy policy, as the payment processor.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>If you do not want these transfers, do not use the conversation or purchase features, or delete the app. Without them we cannot generate replies or apply purchases. Questions: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
 
                 <h2>10. Changes</h2>
-                <p>We may update this policy; we will revise the effective date above and, for material changes, surface a notice in the app.</p>
+                <p>We may update this policy; we will revise the effective date above and, for material changes, surface a notice in the app. Revised October 1, 2026: our AI provider changed from Anthropic to OpenAI, and purchase verification and the details of international transfers were added.</p>
             </div>
         </div>
     </main>
