@@ -34,7 +34,7 @@ const effectiveDate = drawPrivacyEffectiveDate('ja');
                     <li><strong>アプリ機能の提供</strong>: 変換したスケッチの塗り絵・お絵描き、作業セッションのデバイス内保存、利用量管理</li>
                     <li><strong>ユーザー識別</strong>: アプリ初回起動時に自動生成される匿名識別子(Firebase 匿名認証)によるユーザー識別、利用量・ポイント管理 — 会員登録・ログイン手続きはありません</li>
                     <li><strong>広告配信</strong>: Google AdMobによる広告表示および広告関連性の向上</li>
-                    <li><strong>アプリ内課金</strong>: ポイントパックの購入およびプレミアムサブスクリプションの処理、領収書検証</li>
+                    <li><strong>アプリ内課金</strong>: AI変換チケットの購入処理と購入の確認</li>
                     <li><strong>分析と安定性</strong>: Firebase Analytics・Crashlytics による利用分析およびエラー追跡(任意)</li>
                     <li><strong>カスタマーサポート</strong>: メールによるお問い合わせの受付および対応</li>
                 </ul>
@@ -64,6 +64,16 @@ const effectiveDate = drawPrivacyEffectiveDate('ja');
                             <td>スケッチメタデータ</td>
                             <td>スケッチのスタイル・オプション、生成日時、画像サイズ、元写真のハッシュ値、日次・月次の利用量カウンター、ポイント残高・履歴</td>
                             <td>Cloud Functions が Firestore に記録</td>
+                        </tr>
+                        <tr>
+                            <td>変換ジョブの記録</td>
+                            <td>変換リクエストID、処理状態(処理中・完了・失敗)、変換方式(線画、または絵柄・写真の雰囲気とその種類)、差し引いた内容(無料回数・変換チケット)、完了時の結果情報(結果画像の場所・サイズ、残りのチケット数など)、失敗時のエラーコード・返金の有無、処理日時、ユーザー識別子</td>
+                            <td>変換をリクエストしたときに Cloud Functions が Firestore に記録(接続が切れても結果を受け取り直し、二重に差し引かれないようにするため)</td>
+                        </tr>
+                        <tr>
+                            <td>AI結果の報告記録</td>
+                            <td>報告した結果のID、選んだ理由(不快・不適切な内容、人や動物の姿がおかしい、写真とぜんぜん違う、その他)、報告した結果の情報(変換方式・スタイル・AIモデル・結果画像の場所)、アプリのバージョン・ビルド・プラットフォーム(iOS/Android)、報告回数・日時、ユーザー識別子。自由記述のメモは受け取りません</td>
+                            <td>結果画面から報告したときに Cloud Functions が Firestore に記録(この結果の確認とAI変換の改善のためだけに使用)</td>
                         </tr>
                         <tr>
                             <td>広告識別子</td>
@@ -107,6 +117,8 @@ const effectiveDate = drawPrivacyEffectiveDate('ja');
                     <li><strong>変換用の元写真(originals/)</strong>: Cloud Storage のライフサイクルポリシーにより、アップロードから <strong>7日</strong> 経過後に自動削除</li>
                     <li><strong>AI 変換スケッチ(sketches/)</strong>: Cloud Storage のライフサイクルポリシーにより、生成から <strong>90日</strong> 経過後に自動削除(保存したスケッチはデバイスのローカルに保持)</li>
                     <li><strong>アカウント情報およびスケッチメタデータ</strong>: アカウント保有期間中は保存、アカウント削除時に全削除</li>
+                    <li><strong>変換ジョブの記録</strong>: 作成から <strong>7日</strong> 経過後に自動削除(Firestore の TTL)。それより前にアカウントが削除された場合は併せて削除</li>
+                    <li><strong>AI結果の報告記録</strong>: アカウント保有期間中は保存、アカウント削除時に併せて削除</li>
                     <li><strong>匿名アカウント</strong>: 最終利用日から <strong>30日</strong> 利用がない場合、アカウントおよび関連データ(スケッチ、保存画像)を自動整理</li>
                     <li><strong>広告識別子および広告関連データ</strong>: Google AdMob ポリシーに準拠</li>
                     <li><strong>アプリ内課金領収書</strong>: 関連法令(電子商取引法)により <strong>5年</strong></li>
@@ -260,7 +272,7 @@ const effectiveDate = drawPrivacyEffectiveDate('ja');
                 <h3>Google LLC (Firebase) への移転の詳細</h3>
                 <p>米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></p>
                 <ul>
-                    <li><strong>移転する項目</strong>: 匿名のユーザー識別子、変換用の写真(最大1024pxのJPEG)とAI変換結果の画像、スケッチメタデータ(スタイル・オプション、生成日時、元写真のハッシュ値)と利用量・ポイントの記録、アプリの利用イベント・デバイス・アプリバージョン情報とエラー記録、接続元のIPアドレス</li>
+                    <li><strong>移転する項目</strong>: 匿名のユーザー識別子、変換用の写真(最大1024pxのJPEG)とAI変換結果の画像、スケッチメタデータ(スタイル・オプション、生成日時、元写真のハッシュ値)と利用量・ポイントの記録、変換ジョブの記録とAI結果の報告記録、アプリの利用イベント・デバイス・アプリバージョン情報とエラー記録、接続元のIPアドレス</li>
                     <li><strong>時期・方法</strong>: アプリの初回起動時(匿名認証)、アプリの利用中(利用分析・エラー記録)、およびAI変換をリクエストするたびに、暗号化された通信(HTTPS/TLS)で送信。写真・結果画像とメタデータは Google Cloud のソウルリージョンに保存され、匿名認証は Google の米国のデータセンターでのみ処理されます。</li>
                     <li><strong>利用目的</strong>: 匿名認証、AI変換サーバーの運用(Cloud Functions)、写真・結果の保存(Cloud Storage)、メタデータ・利用量の管理(Firestore)、利用分析・エラー追跡(Analytics・Crashlytics)</li>
                     <li><strong>保持期間</strong>: 第4条のとおり(変換用の元写真は7日、AI変換結果は90日で自動削除、アカウント情報・メタデータはアカウント削除まで)。提供元のポリシーにより、認証サービスのIPアドレス記録は数週間保持され、エラー記録(Crashlytics)は90日間保持された後に削除の手続きが始まります。</li>
@@ -327,7 +339,7 @@ const effectiveDate = drawPrivacyEffectiveDate('ja');
                 <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
                 <h2>第17条 (改定)</h2>
-                <p>本プライバシーポリシーは、{effectiveDate}から施行します(変更内容: AI写真変換の提供者にOpenAIを追加、Google Geminiの保管期間と接続方式(Gemini API)を訂正、すべての移転先について国外移転の詳細(連絡先・移転する項目・時期・方法・利用目的・保持期間・拒否の方法)を追加。旧ポリシーの施行日: 2026年6月4日)。変更がある場合は、本ページを通じて告知いたします。</p>
+                <p>本プライバシーポリシーは、{effectiveDate}から施行します(変更内容: AI写真変換の提供者にOpenAIを追加、Google Geminiの保管期間と接続方式(Gemini API)を訂正、すべての移転先について国外移転の詳細(連絡先・移転する項目・時期・方法・利用目的・保持期間・拒否の方法)を追加、変換ジョブの記録とAI結果の報告記録の項目・保有期間を追加、本アプリで提供していないポイントパック・プレミアムサブスクリプションの課金の記載を削除。旧ポリシーの施行日: 2026年6月4日)。変更がある場合は、本ページを通じて告知いたします。</p>
             </div>
         </div>
     </main>

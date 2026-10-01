@@ -34,7 +34,7 @@ const effectiveDate = drawPrivacyEffectiveDate('en');
                     <li><strong>App functionality</strong>: Coloring and drawing on converted sketches, on-device saving of work sessions, and usage management</li>
                     <li><strong>User identification</strong>: Distinguishing users via an anonymous identifier created automatically on first launch (Firebase anonymous authentication) and managing usage and points — no sign-up or login is required</li>
                     <li><strong>Advertising</strong>: Ad serving and personalization via Google AdMob</li>
-                    <li><strong>In-app purchases</strong>: Point pack purchases, premium subscription processing, and receipt validation</li>
+                    <li><strong>In-app purchases</strong>: Processing and verifying purchases of AI conversion packs</li>
                     <li><strong>Analytics and stability</strong>: Usage analytics and crash reporting via Firebase Analytics / Crashlytics (optional)</li>
                     <li><strong>Customer support</strong>: Receiving and responding to email inquiries</li>
                 </ul>
@@ -63,6 +63,16 @@ const effectiveDate = drawPrivacyEffectiveDate('en');
                             <td>Sketch Metadata</td>
                             <td>Sketch style/options, creation time, image dimensions, hash of the original photo, daily/monthly usage counters, point balance and history</td>
                             <td>Written to Firestore by Cloud Functions</td>
+                        </tr>
+                        <tr>
+                            <td>Conversion Job Records</td>
+                            <td>Conversion request ID; status (in progress, completed, failed); conversion type (line art, or an art style or photo look and which one); what was used (a free conversion or a conversion pack); on completion, result details (location and size of the result image, conversions left, etc.); on failure, an error code and whether it was refunded; timestamps; user identifier</td>
+                            <td>Written to Firestore by Cloud Functions when you request a conversion, so that you can get the result again if the connection drops and are not charged twice</td>
+                        </tr>
+                        <tr>
+                            <td>AI Result Reports</td>
+                            <td>ID of the reported result; the reason you chose (offensive or inappropriate, people or animals look distorted, too different from the photo, other); details of the reported result (conversion type, style, AI model, location of the result image); app version, build and platform (iOS/Android); number and time of reports; user identifier. No free-text note is collected</td>
+                            <td>Written to Firestore by Cloud Functions when you report a result on the result screen; used only to review that result and improve AI conversion</td>
                         </tr>
                         <tr>
                             <td>Advertising Identifier</td>
@@ -106,6 +116,8 @@ const effectiveDate = drawPrivacyEffectiveDate('en');
                     <li><strong>Original photo for conversion (originals/)</strong>: Automatically deleted <strong>7 days</strong> after upload, per the Cloud Storage lifecycle policy</li>
                     <li><strong>AI sketch (sketches/)</strong>: Automatically deleted <strong>90 days</strong> after creation, per the Cloud Storage lifecycle policy (sketches you keep remain in on-device storage)</li>
                     <li><strong>Account info and sketch metadata</strong>: Retained while the account exists; fully deleted when the account is deleted</li>
+                    <li><strong>Conversion job records</strong>: Automatically deleted <strong>7 days</strong> after creation (Firestore TTL), or earlier together with the account if it is deleted</li>
+                    <li><strong>AI result reports</strong>: Retained while the account exists; deleted together with the account</li>
                     <li><strong>Anonymous accounts</strong>: Automatically cleaned up — together with related data (sketches, stored images) — after <strong>30 days</strong> of inactivity</li>
                     <li><strong>Advertising identifier and ad data</strong>: As per Google AdMob policy</li>
                     <li><strong>In-app purchase receipts</strong>: <strong>5 years</strong> (Korean Act on Consumer Protection in Electronic Commerce)</li>
@@ -259,7 +271,7 @@ const effectiveDate = drawPrivacyEffectiveDate('en');
                 <h3>Transfer details: Google LLC (Firebase)</h3>
                 <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></p>
                 <ul>
-                    <li><strong>Items</strong>: the anonymous user identifier; the photo for conversion (a JPEG of up to 1024px) and the resulting AI image; sketch metadata (style and options, creation time, hash of the original photo) and usage and point records; app usage events, device and app version info, and error logs; connection IP addresses.</li>
+                    <li><strong>Items</strong>: the anonymous user identifier; the photo for conversion (a JPEG of up to 1024px) and the resulting AI image; sketch metadata (style and options, creation time, hash of the original photo) and usage and point records; conversion job records and AI result reports; app usage events, device and app version info, and error logs; connection IP addresses.</li>
                     <li><strong>When and how</strong>: on first launch (anonymous sign-in), while you use the App (usage analytics and error reports), and each time you request an AI conversion, over an encrypted connection (HTTPS/TLS). Photos, results, and metadata are stored in Google Cloud's Seoul region; anonymous sign-in is processed only in Google's US data centers.</li>
                     <li><strong>Purpose</strong>: anonymous sign-in, running the AI conversion server (Cloud Functions), storing photos and results (Cloud Storage), managing metadata and usage (Firestore), and usage analytics and crash reporting (Analytics, Crashlytics).</li>
                     <li><strong>Retention</strong>: as in Section 4 (originals for conversion are deleted automatically after 7 days and AI results after 90 days; account data and metadata are kept until the account is deleted). Under the provider's policy, IP addresses logged by the sign-in service are kept for a few weeks, and crash reports (Crashlytics) are kept for 90 days before their deletion begins.</li>
@@ -326,7 +338,7 @@ const effectiveDate = drawPrivacyEffectiveDate('en');
                 <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
                 <h2>17. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective as of {effectiveDate} (changes: OpenAI added as an AI photo conversion provider; Google Gemini retention and connection method (Gemini API) corrected; overseas transfer details — contact, items, timing and method, purpose, retention, and how to refuse — added for every recipient; previous version effective June 4, 2026). Any changes will be announced on this page.</p>
+                <p>This Privacy Policy is effective as of {effectiveDate} (changes: OpenAI added as an AI photo conversion provider; Google Gemini retention and connection method (Gemini API) corrected; overseas transfer details — contact, items, timing and method, purpose, retention, and how to refuse — added for every recipient; conversion job records and AI result reports added with their retention; point pack and premium subscription purchases, which the App does not offer, removed; previous version effective June 4, 2026). Any changes will be announced on this page.</p>
             </div>
         </div>
     </main>

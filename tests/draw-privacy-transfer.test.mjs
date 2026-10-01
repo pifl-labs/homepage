@@ -165,6 +165,70 @@ for (const [locale, lang] of PAGES) {
     const note = { ko: '모든 이전받는 자의 국외 이전 세부', ja: 'すべての移転先について国外移転の詳細', en: 'added for every recipient' }[lang];
     assert.ok(closing.includes(note), 'change note mentions the transfer details');
   });
+
+  // 서버가 Firestore 에 남기는 기록 두 가지(pipi_draw functions/src):
+  //  - sketch_jobs: sketch_job.ts buildProcessingJob·SketchJobResult, expireAt = 생성 + 7일(sketch_job_store.ts)
+  //    + Firestore TTL 정책(sketch_jobs.expireAt, ACTIVE). 계정 삭제 시 deleteUserArtifacts 가 함께 지운다.
+  //  - ai_reports: ai_report.ts buildAiReportDoc(사유만, 자유 메모 없음). TTL 없음 — 계정 삭제 시 함께 지운다.
+  // 포인트팩·프리미엄 구독은 앱에 구매 경로가 없다(AppConfig.premiumEnabled·galleryEnabled = false,
+  // 구매 시트는 호출처 없음) — 제1조 인앱 결제는 AI 변환권만.
+  test(`Draw ${name} policy: server-side job and report records, and only conversion packs on sale`, () => {
+    const page = read(locale);
+    const plain = html => entities(html.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+    const R = {
+      ko: {
+        jobRow: '변환 작업 기록', reportRow: 'AI 결과 신고 기록',
+        jobItems: ['변환 요청 id', '처리 상태(처리 중·완료·실패)', '차감 내역(무료 횟수·변환권)', '실패 시 오류 코드·환불 여부', '사용자 식별자'],
+        reportItems: ['고른 신고 사유', '앱 버전·빌드·플랫폼', '사용자 식별자', '자유 입력 메모는 받지 않습니다'],
+        jobRetention: '변환 작업 기록: 생성 후 7일이 지나면 자동 삭제(Firestore TTL), 그 전에 계정이 삭제되면 함께 삭제',
+        reportRetention: 'AI 결과 신고 기록: 계정 유지 기간 동안 보관, 계정 삭제 시 함께 삭제',
+        purchases: 'AI 변환권 구매 처리와 구매 검증', offOffers: /포인트팩|프리미엄/,
+        firebase: '변환 작업 기록과 AI 결과 신고 기록',
+        notes: ['변환 작업 기록과 AI 결과 신고 기록의 처리 항목·보유 기간 추가', '포인트팩·프리미엄 구독 결제 서술 삭제'],
+      },
+      ja: {
+        jobRow: '変換ジョブの記録', reportRow: 'AI結果の報告記録',
+        jobItems: ['変換リクエストID', '処理状態(処理中・完了・失敗)', '差し引いた内容(無料回数・変換チケット)', '失敗時のエラーコード・返金の有無', 'ユーザー識別子'],
+        reportItems: ['選んだ理由', 'アプリのバージョン・ビルド・プラットフォーム', 'ユーザー識別子', '自由記述のメモは受け取りません'],
+        jobRetention: '変換ジョブの記録: 作成から 7日 経過後に自動削除(Firestore の TTL)。それより前にアカウントが削除された場合は併せて削除',
+        reportRetention: 'AI結果の報告記録: アカウント保有期間中は保存、アカウント削除時に併せて削除',
+        purchases: 'AI変換チケットの購入処理と購入の確認', offOffers: /ポイントパック|プレミアム/,
+        firebase: '変換ジョブの記録とAI結果の報告記録',
+        notes: ['変換ジョブの記録とAI結果の報告記録の項目・保有期間を追加', 'ポイントパック・プレミアムサブスクリプションの課金の記載を削除'],
+      },
+      en: {
+        jobRow: 'Conversion Job Records', reportRow: 'AI Result Reports',
+        jobItems: ['Conversion request ID', 'status (in progress, completed, failed)', 'a free conversion or a conversion pack', 'an error code and whether it was refunded', 'user identifier'],
+        reportItems: ['the reason you chose', 'app version, build and platform', 'user identifier', 'No free-text note is collected'],
+        jobRetention: 'Conversion job records: Automatically deleted 7 days after creation (Firestore TTL), or earlier together with the account if it is deleted',
+        reportRetention: 'AI result reports: Retained while the account exists; deleted together with the account',
+        purchases: 'Processing and verifying purchases of AI conversion packs', offOffers: /point pack|premium/i,
+        firebase: 'conversion job records and AI result reports',
+        notes: ['conversion job records and AI result reports added with their retention', 'point pack and premium subscription purchases, which the App does not offer, removed'],
+      },
+    }[lang];
+
+    const collected = article(page, page.match(/<h2>((?:제2조|第2条|2\.)[^<]*)<\/h2>/)[1]);
+    const row = label => {
+      const m = collected.match(new RegExp(`<tr>\\s*<td>${label}</td>\\s*<td>([^<]*)</td>`));
+      assert.ok(m, `section 2 row: ${label}`);
+      return m[1];
+    };
+    for (const item of R.jobItems) assert.ok(row(R.jobRow).includes(item), `job record item: ${item}`);
+    for (const item of R.reportItems) assert.ok(row(R.reportRow).includes(item), `report record item: ${item}`);
+
+    const retention = plain(article(page, page.match(/<h2>((?:제4조|第4条|4\.)[^<]*)<\/h2>/)[1]));
+    assert.ok(retention.includes(R.jobRetention), 'job records: 7-day automatic deletion');
+    assert.ok(retention.includes(R.reportRetention), 'reports: kept with the account, deleted with it');
+
+    const purposes = plain(article(page, page.match(/<h2>((?:제1조|第1条|1\.)[^<]*)<\/h2>/)[1]));
+    assert.ok(purposes.includes(R.purchases), 'in-app purchases: conversion packs');
+    assert.doesNotMatch(purposes, R.offOffers, 'no point packs or premium subscription in the purposes');
+
+    assert.ok(blockOf(page, lang, 'Google LLC (Firebase)').text.includes(R.firebase), 'Firebase transfer items');
+    const closing = article(page, page.match(/<h2>((?:제17조|第17条|17\.)[^<]*)<\/h2>/)[1]);
+    for (const note of R.notes) assert.ok(closing.includes(note), `change note: ${note}`);
+  });
 }
 
 test('Draw privacy effective date renders per language and rejects bad dates', async () => {

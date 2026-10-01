@@ -37,7 +37,7 @@ const effectiveDate = drawPrivacyEffectiveDate('ko');
                     <li><strong>앱 기능 제공</strong>: 변환된 스케치의 색칠·드로잉, 작업 세션의 기기 내 저장, 사용량 관리</li>
                     <li><strong>사용자 식별</strong>: 앱 최초 실행 시 자동 생성되는 익명 식별자(Firebase 익명 인증)를 통한 사용자 구분 및 사용량·포인트 관리 — 별도의 회원가입·로그인 절차는 없습니다</li>
                     <li><strong>광고 게재</strong>: Google AdMob을 통한 광고 노출 및 광고 관련성 향상</li>
-                    <li><strong>인앱 결제</strong>: 포인트팩 구매 및 프리미엄 구독 처리, 영수증 검증</li>
+                    <li><strong>인앱 결제</strong>: AI 변환권 구매 처리와 구매 검증</li>
                     <li><strong>분석 및 안정성</strong>: Firebase Analytics·Crashlytics를 통한 사용 분석 및 오류 추적(선택)</li>
                     <li><strong>고객 문의 응대</strong>: 이메일을 통한 문의 접수 및 처리 결과 통보</li>
                 </ul>
@@ -67,6 +67,16 @@ const effectiveDate = drawPrivacyEffectiveDate('ko');
                             <td>스케치 메타데이터</td>
                             <td>스케치 스타일·옵션, 생성 시각, 이미지 크기, 원본 사진 해시값, 일일·월간 사용량 카운터, 포인트 잔액·이력</td>
                             <td>Cloud Functions가 Firestore에 기록</td>
+                        </tr>
+                        <tr>
+                            <td>변환 작업 기록</td>
+                            <td>변환 요청 id, 처리 상태(처리 중·완료·실패), 변환 방식(라인아트 또는 그림체·사진 느낌과 그 종류), 차감 내역(무료 횟수·변환권), 완료 시 결과 정보(결과 이미지 위치·크기, 남은 변환권 수 등), 실패 시 오류 코드·환불 여부, 처리 시각, 사용자 식별자</td>
+                            <td>변환을 요청할 때 Cloud Functions가 Firestore에 기록(연결이 끊겨도 결과를 다시 받고 두 번 차감되지 않게 하는 용도)</td>
+                        </tr>
+                        <tr>
+                            <td>AI 결과 신고 기록</td>
+                            <td>신고한 결과의 id, 고른 신고 사유(불쾌하거나 부적절함·사람·동물 모습이 이상함·사진과 너무 다름·기타), 신고한 결과의 정보(변환 방식·스타일·AI 모델·결과 이미지 위치), 앱 버전·빌드·플랫폼(iOS/Android), 신고 횟수·시각, 사용자 식별자. 자유 입력 메모는 받지 않습니다</td>
+                            <td>결과 화면에서 신고할 때 Cloud Functions가 Firestore에 기록(신고한 결과 확인과 AI 변환 개선에만 사용)</td>
                         </tr>
                         <tr>
                             <td>광고 식별자</td>
@@ -110,6 +120,8 @@ const effectiveDate = drawPrivacyEffectiveDate('ko');
                     <li><strong>변환용 원본 사진(originals/)</strong>: Cloud Storage 수명주기 정책에 따라 업로드 후 <strong>7일</strong>이 지나면 자동 삭제</li>
                     <li><strong>AI 변환 스케치(sketches/)</strong>: Cloud Storage 수명주기 정책에 따라 생성 후 <strong>90일</strong>이 지나면 자동 삭제(사용자가 보관한 스케치는 기기 로컬에 유지)</li>
                     <li><strong>계정 정보 및 스케치 메타데이터</strong>: 계정 유지 기간 동안 보관, 계정 삭제 시 전체 삭제</li>
+                    <li><strong>변환 작업 기록</strong>: 생성 후 <strong>7일</strong>이 지나면 자동 삭제(Firestore TTL), 그 전에 계정이 삭제되면 함께 삭제</li>
+                    <li><strong>AI 결과 신고 기록</strong>: 계정 유지 기간 동안 보관, 계정 삭제 시 함께 삭제</li>
                     <li><strong>익명 계정</strong>: 마지막 활동일로부터 <strong>30일</strong> 동안 활동이 없으면 계정 및 관련 데이터(스케치, 저장 이미지) 자동 정리</li>
                     <li><strong>광고 식별자 및 광고 관련 데이터</strong>: Google AdMob 정책에 따름</li>
                     <li><strong>인앱 결제 영수증</strong>: 관련 법령(전자상거래법)에 따라 <strong>5년</strong></li>
@@ -266,7 +278,7 @@ const effectiveDate = drawPrivacyEffectiveDate('ko');
                 <h3>Google LLC (Firebase) 이전 세부</h3>
                 <p>미국 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · 개인정보 문의: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google 개인정보 문의 양식</a></p>
                 <ul>
-                    <li><strong>이전 항목</strong>: 익명 사용자 식별자, 변환용 사진(최대 1024px JPEG)과 AI 변환 결과 이미지, 스케치 메타데이터(스타일·옵션, 생성 시각, 원본 사진 해시값)와 사용량·포인트 기록, 앱 사용 이벤트·기기·앱 버전 정보와 오류 기록, 접속 IP 주소</li>
+                    <li><strong>이전 항목</strong>: 익명 사용자 식별자, 변환용 사진(최대 1024px JPEG)과 AI 변환 결과 이미지, 스케치 메타데이터(스타일·옵션, 생성 시각, 원본 사진 해시값)와 사용량·포인트 기록, 변환 작업 기록과 AI 결과 신고 기록, 앱 사용 이벤트·기기·앱 버전 정보와 오류 기록, 접속 IP 주소</li>
                     <li><strong>이전 시기·방법</strong>: 앱을 처음 실행할 때(익명 인증)와 앱을 쓰는 동안(사용 분석·오류 기록), 그리고 AI 변환을 요청할 때마다 암호화된 통신(HTTPS/TLS)으로 전송. 사진·결과 이미지와 메타데이터는 Google Cloud 서울 리전에 저장되며, 익명 인증은 Google의 미국 데이터센터에서만 처리됩니다.</li>
                     <li><strong>이용 목적</strong>: 익명 인증, AI 변환 서버 운영(Cloud Functions), 사진·결과 저장(Cloud Storage), 메타데이터·사용량 관리(Firestore), 사용 분석·오류 추적(Analytics·Crashlytics)</li>
                     <li><strong>보유·이용 기간</strong>: 제4조와 같습니다(변환용 원본 사진 7일, AI 변환 결과 90일 뒤 자동 삭제, 계정·메타데이터는 계정 삭제 시까지). 제공자 정책상 인증 서비스의 IP 주소 기록은 수 주간 보관되고, 오류 기록(Crashlytics)은 90일 보관 후 삭제 절차에 들어갑니다.</li>
@@ -340,7 +352,7 @@ const effectiveDate = drawPrivacyEffectiveDate('ko');
                 </ul>
 
                 <h2>제17조 (개인정보 처리방침 변경)</h2>
-                <p>이 개인정보 처리방침은 {effectiveDate}부터 적용됩니다(변경 내용: AI 사진 변환 제공자에 OpenAI 추가, Google Gemini 보관 기간과 연결 방식(Gemini API) 정정, 모든 이전받는 자의 국외 이전 세부(연락처·이전 항목·시기·방법·이용 목적·보유 기간·거부 방법) 추가 — 이전 방침 시행일: 2026년 6월 4일). 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
+                <p>이 개인정보 처리방침은 {effectiveDate}부터 적용됩니다(변경 내용: AI 사진 변환 제공자에 OpenAI 추가, Google Gemini 보관 기간과 연결 방식(Gemini API) 정정, 모든 이전받는 자의 국외 이전 세부(연락처·이전 항목·시기·방법·이용 목적·보유 기간·거부 방법) 추가, 변환 작업 기록과 AI 결과 신고 기록의 처리 항목·보유 기간 추가, 앱에서 제공하지 않는 포인트팩·프리미엄 구독 결제 서술 삭제 — 이전 방침 시행일: 2026년 6월 4일). 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
 
                 <h2>For International Users</h2>
                 <h3>GDPR (European Economic Area)</h3>
