@@ -115,6 +115,14 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h3>기기 내 설정</h3>
                 <p>언어·테마·온보딩 상태·일일 카운터·구매 상태(Pro 여부, 남은 깊은 대화 수)와 AI 대화 동의의 버전·날짜는 기기에만 저장됩니다.</p>
 
+                <h3>기기 내 대화 기록</h3>
+                <ul>
+                    <li>다시 보실 수 있도록 멘토와 나눈 대화(내 메시지와 멘토의 답)를 멘토별 최근 200개까지 기기에만 저장합니다.</li>
+                    <li>당사는 이 기록을 받거나 보관하지 않습니다. 답을 만들 때는 위와 같이 진행 중인 대화만 보냅니다.</li>
+                    <li>설정의 "대화 기록 지우기"로 언제든 지우실 수 있고, 앱을 삭제하면 함께 지워집니다.</li>
+                    <li>다른 앱 데이터처럼 기기 자체의 백업(iCloud·Google 백업 등)에는 포함될 수 있습니다.</li>
+                </ul>
+
                 <h2>제3조 (개인정보의 처리 및 보유기간)</h2>
                 <ul>
                     <li><strong>대화 내용</strong>: 신고 기록(아래)을 제외하고 당사 서버에 보관하지 않습니다.
@@ -136,6 +144,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>신고 기록</strong>: 90일 보관 후 자동 삭제됩니다.</li>
                     <li><strong>문의 메일</strong>: 문의 처리를 마친 뒤 3년간 보관하고 삭제합니다.</li>
                     <li><strong>기기 내 설정</strong>: 앱을 삭제할 때까지 유지되며, 삭제 시 모든 로컬 데이터가 함께 제거됩니다.</li>
+                    <li><strong>기기 내 대화 기록</strong>: 멘토별 최근 200개까지, 설정에서 지우거나 앱을 삭제할 때까지 남습니다.</li>
                 </ul>
 
                 <h2>제4조 (개인정보의 제3자 제공)</h2>
@@ -189,7 +198,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <p>당사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다.</p>
                 <ul>
                     <li><strong>파기절차</strong>: 제3조의 보유기간이 끝난 서버 기록은 별도의 수작업 없이 기간이 끝나는 때 자동으로 삭제됩니다. 그 밖에 불필요해진 개인정보(문의 메일 등)는 개인정보 보호책임자의 승인을 거쳐 파기합니다.</li>
-                    <li><strong>파기방법</strong>: 전자적 파일은 복원이 불가능한 방법으로 영구 삭제합니다. 기기 내 데이터는 이용자가 앱을 삭제하면 기기에서 함께 삭제됩니다.</li>
+                    <li><strong>파기방법</strong>: 전자적 파일은 복원이 불가능한 방법으로 영구 삭제합니다. 기기 내 데이터는 이용자가 앱을 삭제하면 기기에서 함께 삭제되며, 대화 기록은 설정에서 지울 때에도 삭제됩니다.</li>
                 </ul>
 
                 <h2>제9조 (정보주체의 권리·의무 및 행사방법)</h2>
@@ -206,6 +215,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <p>직접 하실 수 있는 방법도 있습니다.</p>
                 <ul>
                     <li>설정에서 AI 대화 동의를 언제든 철회할 수 있습니다.</li>
+                    <li>설정의 "대화 기록 지우기"로 대화 기록을 지울 수 있습니다.</li>
                     <li>앱을 삭제하면 모든 로컬 데이터가 지워집니다.</li>
                 </ul>
                 <p>서버 기록은 제3조의 기간이 지나면 자동 삭제됩니다. 일반 문의는 <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>로 하실 수 있습니다.</p>
@@ -220,7 +230,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li>Google Play 구매 토큰은 단방향 해시로만 저장합니다.</li>
                     <li>서버 기록은 보관 기간이 끝나면 자동으로 삭제됩니다(제3조).</li>
                     <li>개인정보 접근 권한 관리</li>
-                    <li>기기 내 설정은 기기의 앱 전용 저장 공간에 보관하며, 앱 자체에서 별도로 암호화하지는 않습니다.</li>
+                    <li>기기 내 설정과 대화 기록은 기기의 앱 전용 저장 공간에 보관하며, 앱 자체에서 별도로 암호화하지는 않습니다.</li>
                 </ul>
 
                 <h2>제11조 (아동의 개인정보 보호)</h2>
@@ -310,6 +320,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <ul>
                     <li>AI 제공자를 Anthropic에서 OpenAI로 변경했습니다.</li>
                     <li>구매 확인 정보, AI 답변 신고, 국외 이전 세부 사항, 문의 메일, 남용을 막기 위한 카운터, 앱 권한 안내, 개인정보 파기절차 및 방법, 정보주체의 권리 행사방법, 안전성 확보조치, 개인정보 보호책임자, 권익침해 구제방법을 추가했습니다.</li>
+                    <li>기기 내 대화 기록을 추가했습니다.</li>
                 </ul>
 
                 <h2>For International Users</h2>
