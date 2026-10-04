@@ -1,0 +1,62 @@
+---
+// Reuse the exact published English checklist. This is not an app conversion demo.
+const checklistUrl = 'https://pipi-worlds.com/assets/marketing/outline-photo-en-20260922/poster.png?utm_source=pifl-labs&utm_medium=referral&utm_campaign=draw_photo_choice_20261004&utm_content=en_resource_panel';
+---
+<section class="app-section draw-resource-section" aria-labelledby="draw-resource-title">
+  <div class="container">
+    <div class="draw-resource">
+      <div class="draw-resource-copy">
+        <p class="draw-resource-eyebrow">Before you start</p>
+        <h2 id="draw-resource-title">Which photo should you choose?</h2>
+        <p>Try one clear subject, a simple background, and room around the edges.</p>
+        <p class="draw-resource-note">Free tips for any photo-to-outline tool. The checklist uses AI-made illustrations, not app conversion results.</p>
+      </div>
+      <a class="draw-resource-link" href={checklistUrl}>
+        <span>Open checklist <span class="draw-resource-format">(PNG)</span></span>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+  .draw-resource-section { padding-top: 0; }
+  .draw-resource {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center; gap: 1.5rem 2.5rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background: var(--bg-card); border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+  }
+  .draw-resource-copy { min-width: 0; }
+  .draw-resource-eyebrow {
+    margin-bottom: .55rem; color: var(--text-muted);
+    font-family: var(--font-code); font-size: .76rem; font-weight: 600;
+    letter-spacing: .08em; text-transform: uppercase;
+  }
+  .draw-resource h2 {
+    margin-bottom: .7rem; color: var(--text-primary);
+    font-family: var(--font-display); font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.2; text-wrap: balance;
+  }
+  .draw-resource p:not(.draw-resource-eyebrow) {
+    color: var(--text-secondary); line-height: 1.65; text-wrap: pretty;
+  }
+  .draw-resource-note { margin-top: .65rem; font-size: .88rem; }
+  .draw-resource-link {
+    display: inline-flex; align-items: center; gap: .55rem;
+    max-width: 100%; min-height: 44px; padding: .35rem 0;
+    border-bottom: 1px solid var(--accent-warm);
+    color: var(--text-primary); font-weight: 700; text-decoration: none;
+  }
+  .draw-resource-format { white-space: nowrap; }
+  .draw-resource-link:hover { color: var(--accent-warm); }
+  .draw-resource-link:focus-visible {
+    outline: 2px solid var(--accent-warm); outline-offset: 4px;
+  }
+  .draw-resource-link i { flex: none; font-size: .8em; }
+  @media (max-width: 1000px) {
+    .draw-resource { grid-template-columns: minmax(0, 1fr); }
+    .draw-resource-link { justify-self: start; }
+  }
+  @media (max-width: 360px) { .draw-resource { padding: 1rem; } }
+</style>
