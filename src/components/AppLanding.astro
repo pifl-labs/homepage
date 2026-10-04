@@ -2,6 +2,7 @@
 import { appIconSrc } from "../data/app-icons.mjs";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
+import DrawPhotoChecklist from './DrawPhotoChecklist.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
@@ -253,6 +254,8 @@ const jsonLd = {
         </div>
       </section>
     )}
+
+    {app.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist />}
 
     <!-- FINAL CTA -->
     <section class="app-cta">
