@@ -1,0 +1,81 @@
+---
+// A separate website sample: not the app, an audio lesson, or an app screenshot.
+---
+<section class="app-section hello-match-section" aria-labelledby="hello-match-title">
+  <div class="container">
+    <div class="hello-match" data-hello-match>
+      <div class="hello-match-copy">
+        <p class="hello-match-eyebrow">A small first step</p>
+        <h2 id="hello-match-title">Two letters. One little match.</h2>
+        <p>Look at the letter, then choose its match. Try it together before downloading.</p>
+        <p class="hello-match-note">This website sample has no audio. In KanaSprout, children can hear letters and trace their strokes.</p>
+        <p class="hello-match-note">The app includes free content and an optional annual subscription.</p>
+      </div>
+      <div class="hello-match-play" aria-label="Website letter-matching sample">
+        <p class="hello-match-step" data-match-step>Letter 1 of 2</p>
+        <p class="hello-match-prompt">Find <span lang="ja" data-match-target>あ</span></p>
+        <div class="hello-match-choices" role="group" aria-label="Choose the matching letter">
+          <button type="button" data-match-choice="あ" aria-label="Choose あ" disabled><span lang="ja">あ</span></button>
+          <button type="button" data-match-choice="い" aria-label="Choose い" disabled><span lang="ja">い</span></button>
+        </div>
+        <p class="hello-match-feedback" data-match-feedback role="status" aria-live="polite" aria-atomic="true">Choose the same shape.</p>
+        <div class="hello-match-actions">
+          <button type="button" class="hello-match-next" data-match-next disabled>Try い</button>
+          <button type="button" class="hello-match-reset" data-match-reset disabled>Start again</button>
+        </div>
+        <a class="hello-match-download" href="#hello-download">View app download options</a>
+        <p class="hello-match-loading" data-match-loading>Loading the matching buttons…</p>
+        <noscript><p class="hello-match-note">The buttons need JavaScript. You can still point to あ, then い, together.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline type="module" src="/hello-letter-match.mjs?v=1"></script>
+<style>
+  .hello-match-section { padding-top: 0; }
+  .hello-match {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+    gap: 2.5rem; align-items: center;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    background: var(--bg-card); border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+  }
+  .hello-match-copy, .hello-match-play { min-width: 0; }
+  .hello-match-eyebrow {
+    color: var(--text-secondary); font-size: .8rem; font-weight: 600;
+    margin-bottom: .65rem;
+  }
+  .hello-match h2 {
+    font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--text-primary); line-height: 1.2; margin-bottom: .8rem;
+    text-wrap: balance;
+  }
+  .hello-match-copy p:not(.hello-match-eyebrow) {
+    color: var(--text-secondary); line-height: 1.65; text-wrap: pretty;
+  }
+  .hello-match-note { font-size: .9rem; margin-top: .8rem; }
+  .hello-match-play { padding: 1.25rem; background: var(--bg-raised); border-radius: var(--radius-md); }
+  .hello-match-step { font-size: .85rem; color: var(--text-secondary); margin-bottom: .45rem; }
+  .hello-match-prompt { color: var(--text-primary); font-size: 1.25rem; font-weight: 700; margin-bottom: .85rem; }
+  .hello-match-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr)); gap: .75rem; }
+  .hello-match button { font: inherit; cursor: pointer; min-height: 44px; color: var(--text-primary); }
+  .hello-match-choices button {
+    font-size: 2.75rem; line-height: 1.25; padding: .6rem .25rem;
+    background: var(--bg-card); border: 2px solid var(--border-strong);
+    border-radius: var(--radius-sm); min-width: 0;
+  }
+  .hello-match-choices button:hover:not(:disabled) { border-color: var(--accent-warm); }
+  .hello-match-choices button[data-result="correct"] { border-color: var(--accent-warm); }
+  .hello-match button:focus-visible { outline: 2px solid var(--accent-warm); outline-offset: 4px; }
+  .hello-match button:disabled { cursor: default; }
+  .hello-match-feedback { margin: .85rem 0; min-height: 3.3em; color: var(--text-primary); line-height: 1.65; text-wrap: pretty; }
+  .hello-match-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
+  .hello-match .hello-match-next { background: var(--text-primary); color: var(--bg-base); border: 1px solid var(--text-primary); border-radius: var(--radius-sm); padding: .5rem .9rem; }
+  .hello-match .hello-match-next:disabled { background: var(--bg-card); color: var(--text-secondary); border-color: var(--border-default); }
+  .hello-match-reset { background: none; border: 0; padding: .5rem 0; text-decoration: underline; text-underline-offset: .2em; }
+  .hello-match-loading { font-size: .85rem; color: var(--text-secondary); margin-top: .8rem; }
+  .hello-match-download { display: inline-flex; align-items: center; min-height: 44px; margin-top: .7rem; color: var(--text-primary); text-underline-offset: .2em; line-height: 1.5; text-wrap: pretty; }
+  .hello-match-download:focus-visible { outline: 2px solid var(--accent-warm); outline-offset: 4px; }
+  @media (max-width: 960px) { .hello-match { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } }
+  @media (max-width: 375px) { .hello-match-play { padding: .75rem; } }
+</style>
