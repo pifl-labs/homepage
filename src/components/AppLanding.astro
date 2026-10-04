@@ -3,6 +3,7 @@ import { appIconSrc } from "../data/app-icons.mjs";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
 import DrawPhotoChecklist from './DrawPhotoChecklist.astro';
+import HelloLetterMatch from './HelloLetterMatch.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
@@ -139,7 +140,7 @@ const jsonLd = {
           <h1 class="app-hero-title"><span class="gradient">{c.tagline.split('\n').map((line, i) => (<>{i > 0 && <br />}{lang === 'ja' ? japaneseReadingParts(line, 'title').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : line}</>))}</span></h1>
           <p class="app-hero-lede">{lang === 'ja' ? japaneseReadingParts(c.lede, app.slug === 'pipi-log' ? 'logLede' : 'lede').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : c.lede}</p>
 
-          <div class="app-stores">
+          <div class="app-stores" id={app.slug === 'pipi-hello' && lang === 'en' ? 'hello-download' : undefined}>
             {app.status === 'live' ? (
               <>
                 {app.stores.ios && (
@@ -178,6 +179,8 @@ const jsonLd = {
         </div>
       </div>
     </section>
+
+    {app.slug === 'pipi-hello' && lang === 'en' && <HelloLetterMatch />}
 
     <!-- SCREENSHOT SHOWCASE — 스크린샷이 준비된 앱만 -->
     {hasShots && (
