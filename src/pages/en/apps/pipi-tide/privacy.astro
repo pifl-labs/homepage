@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="en"
+  title={"Tide Buddy Privacy Policy - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. Tide Buddy (물때친구) app privacy policy — Korean tide tables, sun/moon times and marine weather. No account, location processed on-device, AdMob ads."}
+  canonical="https://pifl-labs.com/en/apps/pipi-tide/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-tide/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-tide/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-tide/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<section class="legal-hero">
+        <div class="container">
+            <a href="/en/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">Tide Buddy Privacy Policy</span></h1>
+            <p class="legal-date">Effective Date: October 5, 2026</p>
+        </div>
+    </section>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how information is handled when you use the mobile application <strong>Tide Buddy</strong> (물때친구) — tide tables, sunrise/sunset and marine weather for tide stations along the Korean coast ("App"). For matters not covered here, our <a href="/en/privacy">general Privacy Policy</a> applies.</p>
+
+                <p>The App has <strong>no account or login</strong> and no user-generated content. The tide, astronomical and weather data it shows are public data from the Korea Hydrographic and Oceanographic Agency, the Korea Meteorological Administration and the Korea Astronomy and Space Science Institute, processed on our servers, and contain no personal data. <strong>Your location is used only on your device to pick the nearest tide station; it is never sent to or stored on our servers.</strong></p>
+
+                <h2>1. Purpose of Processing</h2>
+                <ul>
+                    <li><strong>App functionality</strong>: Showing tide, sun/moon and weather information per station, selecting the nearest station from your current location, remembering your last station, and the home screen widget</li>
+                    <li><strong>Advertising</strong>: Banner ad serving and relevance via Google AdMob</li>
+                    <li><strong>Customer support</strong>: Receiving and responding to email inquiries</li>
+                </ul>
+                <p>The App offers no in-app purchases and uses no analytics or tracking tools other than the advertising SDK.</p>
+
+                <h2>2. Information We Process</h2>
+                <ScrollableLegalTable label="Privacy information table 1; scroll horizontally">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Items</th>
+                            <th>Method · Where it lives</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Location</td>
+                            <td>Current coordinates (only if you grant location permission)</td>
+                            <td>Used on the device to compute distance to stations, then discarded. Never transmitted or stored on our servers</td>
+                        </tr>
+                        <tr>
+                            <td>Advertising identifier</td>
+                            <td>Ad ID (IDFA/AAID), coarse location (country/region, IP-based), device info (OS, model, language)</td>
+                            <td>Collected automatically by the Google AdMob SDK (on iOS only after tracking consent)</td>
+                        </tr>
+                        <tr>
+                            <td>Service access logs</td>
+                            <td>Request IP address, requested station code and date</td>
+                            <td>Processed transiently as server access logs when the App reads our public-data cache (Firebase)</td>
+                        </tr>
+                        <tr>
+                            <td>App settings</td>
+                            <td>Last selected station, cached tide data for the widget</td>
+                            <td>Stored locally on the device (no external transmission)</td>
+                        </tr>
+                        <tr>
+                            <td>Email inquiries</td>
+                            <td>Email address, name (optional), message</td>
+                            <td>Sent directly by you via email</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>3. Retention Period</h2>
+                <ul>
+                    <li><strong>Location</strong>: discarded immediately after the distance calculation (not retained)</li>
+                    <li><strong>Advertising identifier and ad data</strong>: per Google AdMob policy</li>
+                    <li><strong>Service access logs</strong>: up to <strong>30 days</strong> under the infrastructure provider's log retention</li>
+                    <li><strong>App settings (local)</strong>: until you delete the App</li>
+                    <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after the inquiry is resolved</li>
+                </ul>
+
+                <h2>4. Disclosure to Third Parties</h2>
+                <p>We process personal data only within the scope described in Section 1 and disclose it to third parties only with your consent or where required by law (Articles 17 and 18 of the Korean Personal Information Protection Act).</p>
+
+                <h2>5. Processing Entrustment</h2>
+                <ScrollableLegalTable label="Privacy information table 2; scroll horizontally">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Processor</th>
+                            <th>Entrusted task</th>
+                            <th>Retention</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>Mobile ad serving and advertising identifier processing</td>
+                            <td>Until the contract ends</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase)</td>
+                            <td>Hosting the public-data cache that serves tide and weather information</td>
+                            <td>Until the contract ends</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>6. Advertising Identifier and Tracking Consent</h2>
+                <p>The App shows banner ads through Google AdMob, which may collect the advertising identifier (IDFA/AAID).</p>
+                <ul>
+                    <li><strong>iOS</strong>: On first launch, Apple's App Tracking Transparency (ATT) prompt lets you allow or deny tracking. <strong>If you deny, only non-personalized ads are shown</strong> and every feature of the App keeps working.</li>
+                    <li><strong>Android</strong>: Control it under device Settings → Google → Ads → "Delete advertising ID" or "Opt out of Ads Personalization".</li>
+                    <li><strong>EEA/UK users</strong>: The Google User Messaging Platform consent form lets you choose whether ad data may be processed.</li>
+                </ul>
+                <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> for details on how Google AdMob processes data.</p>
+
+                <h2>7. App Permissions</h2>
+                <p>The App may request the following permissions. Both are optional; if you deny them you can still choose a station manually and use every feature.</p>
+                <ul>
+                    <li><strong>Location (While Using the App)</strong>: Picks the nearest tide station automatically and sorts the station list by distance. Background location is never requested.</li>
+                    <li><strong>App Tracking Transparency (iOS)</strong>: Consent for ad relevance.</li>
+                </ul>
+                <p>The App does not request camera, microphone, contacts, photos or notification permissions.</p>
+
+                <h2>8. Data Destruction</h2>
+                <ul>
+                    <li><strong>Procedure</strong>: Personal data that is no longer needed is destroyed with the approval of the data protection officer.</li>
+                    <li><strong>Method</strong>: Electronic files are permanently deleted so they cannot be recovered. App settings are removed from the device when you delete the App.</li>
+                </ul>
+
+                <h2>9. Your Rights</h2>
+                <ol>
+                    <li>The right to be informed about the processing of your personal data</li>
+                    <li>The right to decide whether and to what extent to consent to processing</li>
+                    <li>The right to confirm whether your data is processed and to access it</li>
+                    <li>The right to request suspension of processing, correction, deletion and destruction</li>
+                    <li>The right to prompt and fair remedy for damage caused by processing</li>
+                </ol>
+                <p>Exercise these rights by contacting <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>; we will act without undue delay.</p>
+
+                <h2>10. Security Measures</h2>
+                <ul>
+                    <li>Location coordinates never leave the device (only the station code is used for queries)</li>
+                    <li>SSL/TLS encryption of data in transit</li>
+                    <li>Our servers store only processed public data (no personal data)</li>
+                    <li>Access control for administrative systems</li>
+                    <li>Apple Privacy Manifest (PrivacyInfo.xcprivacy) included</li>
+                </ul>
+
+                <h2>11. Children's Privacy</h2>
+                <p>The App is not directed at children under 14. We do not knowingly collect personal data from children under 14 and will delete such data immediately if we learn it was collected.</p>
+
+                <h2>12. International Data Transfers</h2>
+                <ScrollableLegalTable label="Privacy information table 3; scroll horizontally">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recipient</th>
+                            <th>Country</th>
+                            <th>Purpose</th>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>United States</td>
+                            <td>Mobile ad serving</td>
+                            <td>Advertising identifier, device info</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase)</td>
+                            <td>South Korea (Seoul region) · United States (log processing)</td>
+                            <td>Serving the public-data cache</td>
+                            <td>Request IP, station code and date</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>13. Data Protection Officer</h2>
+                <ul>
+                    <li>Company: PiFl Labs Co., Ltd.</li>
+                    <li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+                </ul>
+
+                <h2>14. GDPR (European Economic Area)</h2>
+                <p>If you are in the EEA or the UK, you have the rights of access, rectification, erasure, restriction, portability and objection under the GDPR. Ad-related processing is based on your consent given through the consent form (Section 6) and can be withdrawn at any time in the ad settings of your device.</p>
+
+                <h2>15. Changes to this Policy</h2>
+                <p>This Privacy Policy is effective from October 5, 2026. Changes will be announced on this page.</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
