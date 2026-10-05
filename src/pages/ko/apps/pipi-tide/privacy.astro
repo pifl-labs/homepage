@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="ko"
+  title={"물때친구 개인정보처리방침 - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. 물때친구 앱 개인정보처리방침 — 전국 관측소 물때·일출·바다 날씨 앱. 계정 없음, 위치는 기기 내 처리, AdMob 광고."}
+  canonical="https://pifl-labs.com/ko/apps/pipi-tide/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-tide/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-tide/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-tide/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<section class="legal-hero">
+        <div class="container">
+            <a href="/ko/" class="legal-back"><i class="fas fa-arrow-left"></i> 홈으로 돌아가기</a>
+            <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">물때친구 개인정보처리방침</span></h1>
+            <p class="legal-date">시행일: 2026년 10월 5일</p>
+        </div>
+    </section>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>주식회사 피플랩스(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여, 전국 연안 관측소의 만조·간조, 일출·일몰, 바다 날씨 정보를 제공하는 모바일 애플리케이션 <strong>물때친구</strong>(이하 "앱")에 대한 개인정보 처리방침을 다음과 같이 수립·공개합니다. 본 방침은 회사 웹사이트의 <a href="/ko/privacy">통합 개인정보처리방침</a>에 우선하여 본 앱에 적용됩니다.</p>
+
+                <p>앱은 <strong>회원가입·로그인이 없으며</strong>, 사용자가 작성하는 콘텐츠도 없습니다. 앱이 표시하는 물때·천문·날씨 정보는 국립해양조사원·기상청·한국천문연구원의 공공데이터를 회사 서버가 가공해 제공하는 것으로 개인정보를 포함하지 않습니다. <strong>위치 정보는 가장 가까운 관측소를 고르기 위해 기기 안에서만 사용되며 회사 서버로 전송·저장되지 않습니다.</strong></p>
+
+                <h2>제1조 (개인정보의 처리 목적)</h2>
+                <ul>
+                    <li><strong>앱 기능 제공</strong>: 관측소별 만조·간조·일출·일몰·날씨 정보 조회, 현재 위치 기반 가까운 관측소 선택, 마지막 선택 관측소 기억, 홈 화면 위젯 표시</li>
+                    <li><strong>광고 게재</strong>: Google AdMob을 통한 배너 광고 노출 및 광고 관련성 향상</li>
+                    <li><strong>고객 문의 응대</strong>: 이메일을 통한 문의 접수 및 처리 결과 통보</li>
+                </ul>
+                <p>회사는 본 앱에서 인앱 결제를 제공하지 않으며, 광고 SDK 외의 분석·추적 도구를 사용하지 않습니다.</p>
+
+                <h2>제2조 (처리하는 개인정보의 항목)</h2>
+                <ScrollableLegalTable label="개인정보 안내 표 1, 가로로 스크롤할 수 있습니다">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>처리 항목</th>
+                            <th>수집 방법 · 보관 위치</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>위치 정보</td>
+                            <td>현재 위치 좌표(위치 권한 허용 시)</td>
+                            <td>기기 내에서 관측소까지의 거리 계산에만 사용 후 즉시 폐기. 서버 전송·저장 없음</td>
+                        </tr>
+                        <tr>
+                            <td>광고 식별자</td>
+                            <td>광고 ID(IDFA/AAID), 대략적 위치(국가·지역 단위, IP 기반), 기기 정보(OS, 모델, 언어)</td>
+                            <td>Google AdMob SDK 자동 수집 (iOS는 추적 동의 시)</td>
+                        </tr>
+                        <tr>
+                            <td>서비스 접속 기록</td>
+                            <td>요청 IP 주소, 조회한 관측소 코드·날짜</td>
+                            <td>공공데이터 캐시(Firebase) 조회 시 서버 접속 로그로 일시 처리</td>
+                        </tr>
+                        <tr>
+                            <td>앱 설정</td>
+                            <td>마지막 선택 관측소, 위젯 표시용 물때 캐시</td>
+                            <td>기기 내 로컬 저장 (외부 전송 없음)</td>
+                        </tr>
+                        <tr>
+                            <td>이메일 문의</td>
+                            <td>이메일 주소, 이름(선택), 문의 내용</td>
+                            <td>이메일 직접 발송</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>제3조 (개인정보의 처리 및 보유기간)</h2>
+                <ul>
+                    <li><strong>위치 정보</strong>: 거리 계산 직후 폐기(보관하지 않음)</li>
+                    <li><strong>광고 식별자 및 광고 관련 데이터</strong>: Google AdMob 정책에 따름</li>
+                    <li><strong>서비스 접속 기록</strong>: 인프라 제공자의 로그 보존 정책에 따라 최대 <strong>30일</strong></li>
+                    <li><strong>앱 설정(로컬)</strong>: 사용자가 앱을 삭제할 때까지</li>
+                    <li><strong>이메일 문의 기록</strong>: 문의 처리 완료 후 <strong>3년</strong></li>
+                </ul>
+
+                <h2>제4조 (개인정보의 제3자 제공)</h2>
+                <p>회사는 정보주체의 개인정보를 제1조에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
+
+                <h2>제5조 (개인정보처리의 위탁)</h2>
+                <ScrollableLegalTable label="개인정보 안내 표 2, 가로로 스크롤할 수 있습니다">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>수탁업체</th>
+                            <th>위탁 업무</th>
+                            <th>보유기간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>모바일 광고 게재 및 광고 식별자 처리</td>
+                            <td>위탁 계약 종료 시</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase)</td>
+                            <td>공공데이터 캐시 서버 운영(물때·날씨 정보 제공 인프라)</td>
+                            <td>위탁 계약 종료 시</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>제6조 (광고 식별자 및 추적 동의)</h2>
+                <p>본 앱은 Google AdMob을 통해 배너 광고를 게재하며, 이 과정에서 광고 식별자(IDFA/AAID)를 수집할 수 있습니다.</p>
+                <ul>
+                    <li><strong>iOS 사용자</strong>: 앱 최초 실행 시 Apple의 App Tracking Transparency(ATT) 동의 창을 통해 추적 허용 여부를 선택할 수 있습니다. <strong>거부 시 비개인화 광고만 노출</strong>되며 앱의 모든 기능을 그대로 이용할 수 있습니다.</li>
+                    <li><strong>Android 사용자</strong>: 기기 설정 → Google → 광고 → "광고 ID 삭제" 또는 "광고 맞춤설정 선택 해제"를 통해 제어할 수 있습니다.</li>
+                    <li><strong>유럽경제지역(EEA)·영국 사용자</strong>: Google User Messaging Platform 동의 창으로 광고 데이터 처리 동의 여부를 선택합니다.</li>
+                </ul>
+                <p>Google AdMob의 데이터 처리에 관한 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하시기 바랍니다.</p>
+
+                <h2>제7조 (앱 권한 안내)</h2>
+                <p>본 앱은 다음 권한을 요청할 수 있습니다. 모두 선택 사항이며, 거부해도 기본 관측소를 직접 선택해 모든 정보를 이용할 수 있습니다.</p>
+                <ul>
+                    <li><strong>위치(앱 사용 중)</strong>: 현재 위치에서 가장 가까운 관측소를 자동 선택하고 관측소 목록을 거리순으로 정렬합니다. 백그라운드 위치 권한은 요청하지 않습니다.</li>
+                    <li><strong>App Tracking Transparency (iOS)</strong>: 광고 관련성 향상을 위한 추적 동의</li>
+                </ul>
+                <p>본 앱은 카메라·마이크·연락처·사진·알림 권한을 요청하지 않습니다.</p>
+
+                <h2>제8조 (개인정보의 파기절차 및 방법)</h2>
+                <ul>
+                    <li><strong>파기절차</strong>: 불필요한 개인정보는 개인정보 보호책임자의 승인을 거쳐 파기합니다.</li>
+                    <li><strong>파기방법</strong>: 전자적 파일은 복원이 불가능한 방법으로 영구 삭제합니다. 앱 설정은 사용자가 앱을 삭제하면 기기에서 함께 삭제됩니다.</li>
+                </ul>
+
+                <h2>제9조 (정보주체의 권리·의무 및 행사방법)</h2>
+                <ol>
+                    <li>개인정보 처리에 관한 정보를 제공받을 권리</li>
+                    <li>개인정보의 처리에 관한 동의 여부, 동의 범위 등을 선택하고 결정할 권리</li>
+                    <li>개인정보의 처리 여부를 확인하고 개인정보에 대하여 열람을 요구할 권리</li>
+                    <li>개인정보의 처리 정지, 정정·삭제 및 파기를 요구할 권리</li>
+                    <li>개인정보의 처리로 인하여 발생한 피해를 신속하고 공정한 절차에 따라 구제받을 권리</li>
+                </ol>
+                <p>위 권리 행사는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 요청하실 수 있으며, 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
+
+                <h2>제10조 (개인정보의 안전성 확보조치)</h2>
+                <ul>
+                    <li>위치 좌표를 기기 밖으로 전송하지 않는 설계(관측소 코드만 조회에 사용)</li>
+                    <li>SSL/TLS를 통한 전송 데이터 암호화</li>
+                    <li>서버 데이터는 공공데이터 가공본만 보관(개인정보 미보관)</li>
+                    <li>개인정보 접근 권한 관리</li>
+                </ul>
+
+                <h2>제11조 (아동의 개인정보 보호)</h2>
+                <p>본 앱은 만 14세 미만 아동을 주요 대상으로 하지 않습니다. 회사는 만 14세 미만 아동의 개인정보를 알면서 수집하지 않으며, 만약 수집된 사실이 확인될 경우 즉시 해당 정보를 삭제합니다.</p>
+
+                <h2>제12조 (국외 이전)</h2>
+                <ScrollableLegalTable label="개인정보 안내 표 3, 가로로 스크롤할 수 있습니다">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>이전받는 자</th>
+                            <th>이전 국가</th>
+                            <th>이전 목적</th>
+                            <th>이전 항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>미국</td>
+                            <td>모바일 광고 게재</td>
+                            <td>광고 식별자, 기기 정보</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase)</td>
+                            <td>대한민국(서울 리전) · 미국(로그 처리)</td>
+                            <td>공공데이터 캐시 제공</td>
+                            <td>접속 IP, 관측소 코드·날짜</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>제13조 (개인정보 보호책임자)</h2>
+                <ul>
+                    <li>회사명: 주식회사 피플랩스 (PiFl Labs Co., Ltd.)</li>
+                    <li>이메일: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+                </ul>
+
+                <h2>제14조 (권익침해 구제방법)</h2>
+                <ul>
+                    <li>개인정보분쟁조정위원회: (국번없이) 1833-6972 (www.kopico.go.kr)</li>
+                    <li>개인정보침해신고센터: (국번없이) 118 (privacy.kisa.or.kr)</li>
+                    <li>대검찰청: (국번없이) 1301 (www.spo.go.kr)</li>
+                    <li>경찰청: (국번없이) 182 (ecrm.cyber.go.kr)</li>
+                </ul>
+
+                <h2>제15조 (개인정보 처리방침 변경)</h2>
+                <p>이 개인정보 처리방침은 2026년 10월 5일부터 적용됩니다. 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
