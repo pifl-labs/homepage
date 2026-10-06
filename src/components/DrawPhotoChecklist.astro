@@ -1,6 +1,7 @@
 ---
 // Reuse the exact published English checklist. This is not an app conversion demo.
 const checklistUrl = 'https://pipi-worlds.com/assets/marketing/outline-photo-en-20260922/poster.png?utm_source=pifl-labs&utm_medium=referral&utm_campaign=draw_photo_choice_20261004&utm_content=en_resource_panel';
+const guideUrl = 'https://pipi-worlds.com/en/guides/photo-to-coloring-outline/';
 ---
 <section class="app-section draw-resource-section" aria-labelledby="draw-resource-title">
   <div class="container">
@@ -9,12 +10,19 @@ const checklistUrl = 'https://pipi-worlds.com/assets/marketing/outline-photo-en-
         <p class="draw-resource-eyebrow">Before you start</p>
         <h2 id="draw-resource-title">Which photo should you choose?</h2>
         <p>Try one clear subject, a simple background, and room around the edges.</p>
+        <p>The full guide includes a printable A4 sheet for comparing two photos.</p>
         <p class="draw-resource-note">Free tips for any photo-to-outline tool. The checklist uses AI-made illustrations, not app conversion results.</p>
       </div>
-      <a class="draw-resource-link" href={checklistUrl}>
-        <span>Open checklist <span class="draw-resource-format">(PNG)</span></span>
-        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
+      <div class="draw-resource-actions" role="group" aria-label="Free photo-selection resources">
+        <a class="draw-resource-link draw-resource-link--guide" href={guideUrl} hreflang="en">
+          <span>Read photo guide</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="draw-resource-link" href={checklistUrl}>
+          <span>Open checklist <span class="draw-resource-format">(PNG)</span></span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -42,6 +50,8 @@ const checklistUrl = 'https://pipi-worlds.com/assets/marketing/outline-photo-en-
     color: var(--text-secondary); line-height: 1.65; text-wrap: pretty;
   }
   .draw-resource-note { margin-top: .65rem; font-size: .88rem; }
+  .draw-resource-copy p + p { margin-top: .65rem; }
+  .draw-resource-actions { display: grid; justify-items: start; gap: .75rem; min-width: 0; }
   .draw-resource-link {
     display: inline-flex; align-items: center; gap: .55rem;
     max-width: 100%; min-height: 44px; padding: .35rem 0;
@@ -50,6 +60,11 @@ const checklistUrl = 'https://pipi-worlds.com/assets/marketing/outline-photo-en-
   }
   .draw-resource-format { white-space: nowrap; }
   .draw-resource-link:hover { color: var(--accent-warm); }
+  .draw-resource-link--guide {
+    padding: .7rem 1rem; border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md); text-wrap: balance;
+  }
+  .draw-resource-link--guide:hover { background: var(--bg-raised); }
   .draw-resource-link:focus-visible {
     outline: 2px solid var(--accent-warm); outline-offset: 4px;
   }
