@@ -116,7 +116,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=df87ef66657a']}
+  extraCss={['/styles-app-landing.css?v=b1ef4394566e']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -214,7 +214,7 @@ const jsonLd = {
         </div>
         <div class="app-features">
           {c.features.map((f) => (
-            <article class="app-feature">
+            <article class:list={['app-feature', { 'app-feature--ko-sound': app.slug === 'pipi-focus' && lang === 'ko' && f.icon === 'fa-volume-high', 'app-feature--ja-sound': app.slug === 'pipi-focus' && lang === 'ja' && f.icon === 'fa-volume-high' }]}>
               <div class="app-feature-icon"><i class={`fas ${f.icon}`} aria-hidden="true"></i></div>
               <h3>{f.title}</h3>
               <p>{f.desc}</p>

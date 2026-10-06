@@ -118,7 +118,7 @@ const focus: AppMeta = {
         { icon: 'fa-ban',          title: '집중 중 광고 없음', desc: '집중을 깨는 광고는 항해 중 절대 띄우지 않습니다.' },
         { icon: 'fa-wifi',         title: '기록은 전부 기기 안에', desc: '계정 없이 바로 시작. 기록은 서버가 아니라 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
         { icon: 'fa-gem',          title: '게임처럼 쌓이는 동기', desc: '보물·섬·업적이 매일의 집중에 보상을 줍니다.' },
-        { icon: 'fa-mobile-screen', title: 'iOS · Android',     desc: 'Flutter 단일 코드베이스로 두 스토어 모두 지원.' },
+        { icon: 'fa-volume-high', title: '소리 전환', desc: 'iOS 1.0.16에서 브라운, 핑크, 화이트 노이즈, 선박 시계, 심해 바이노럴을 선택할 수 있어요. 항해 중에도 전환되며, 바이노럴은 이어폰을 권장해요.' },
       ],
     },
     ja: {
@@ -141,7 +141,7 @@ const focus: AppMeta = {
         { icon: 'fa-ban',          title: '集中中は広告なし',   desc: '集中を妨げる広告は航海中に一切表示しません。' },
         { icon: 'fa-wifi',         title: '記録はすべて端末内',  desc: 'アカウント不要ですぐ開始。記録はサーバーではなく端末にのみ保存されます(通信は広告表示にのみ使用)。' },
         { icon: 'fa-gem',          title: 'ゲームのように続く動機', desc: '宝物・島・実績が毎日の集中にごほうびを。' },
-        { icon: 'fa-mobile-screen', title: 'iOS · Android',     desc: 'Flutter単一コードベースで両ストアに対応。' },
+        { icon: 'fa-volume-high', title: '音の切替', desc: 'iOS 1.0.16では、ブラウン・ピンク・ホワイトノイズ、船の時計、深海バイノーラルを選べます。航海中も切替でき、バイノーラルはイヤホン推奨。' },
       ],
     },
     en: {

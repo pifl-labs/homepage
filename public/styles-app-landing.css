@@ -226,6 +226,22 @@
   color: var(--text-primary); margin-bottom: .5rem;
 }
 .app-feature p { font-size: .9rem; line-height: 1.6; color: var(--text-secondary); }
+/* 일본어 소리 안내만: 장음・구두점의 행두 금칙을 지킨다. */
+.app-feature--ja-sound h3,
+.app-feature--ja-sound p {
+  word-break: normal;
+  overflow-wrap: normal;
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+/* 현재 공개된 집중항해 KO 소리 안내만: 노이즈 등 어절을 중간에 자르지 않는다. */
+.app-feature--ko-sound h3,
+.app-feature--ko-sound p {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+}
 
 /* ─── FINAL CTA ────────────────────────────────────────── */
 .app-cta {
