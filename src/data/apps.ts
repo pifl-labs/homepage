@@ -91,7 +91,8 @@ const focus: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
   release: {
-    ios: { version: '1.0.15', updated: '2026-09-23' },
+    // App Store KR/JP/US 공개 확인 2026-10-07. updated는 공식 release timestamp의 UTC 날짜.
+    ios: { version: '1.0.16', updated: '2026-10-05' },
     since: '2026-05-15',
     checkedAt: '2026-09-30',
   },
@@ -163,7 +164,7 @@ const focus: AppMeta = {
         { icon: 'fa-ban',          title: 'No ads while focusing', desc: 'We never interrupt a voyage with a focus-breaking ad.' },
         { icon: 'fa-wifi',         title: 'Your data stays on device', desc: 'No account needed — records live on your device, not our servers (the network is only used to show ads).' },
         { icon: 'fa-gem',          title: 'Motivation that builds', desc: 'Treasure, islands and achievements reward daily focus.' },
-        { icon: 'fa-mobile-screen', title: 'iOS & Android',         desc: 'One Flutter codebase, shipped to both stores.' },
+        { icon: 'fa-volume-high', title: 'Switch sound mid-voyage', desc: "On iOS 1.0.16: brown, pink or white noise, a ship's clock, or deep-sea binaural. Earphones recommended for binaural." },
       ],
     },
   },
