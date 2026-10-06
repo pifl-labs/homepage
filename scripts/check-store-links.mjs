@@ -1,19 +1,17 @@
 #!/usr/bin/env node
 /** Verify built HTML, including no-JS defaults, on every localized home/app page. */
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { APPLE_PROVIDER_TOKEN, storeUrl, websiteCampaign } from '../public/store-attribution.mjs';
+import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const decode = (value) => value.replaceAll('&amp;', '&').replaceAll('&#38;', '&').replaceAll('&quot;', '"');
 let pages = 0, links = 0;
 for (const lang of ['ko', 'ja', 'en']) {
-  const files = [join(dist, lang, 'index.html')];
-  for (const app of readdirSync(join(dist, lang, 'apps'), {withFileTypes: true})) {
-    if (app.isDirectory()) files.push(join(dist, lang, 'apps', app.name, 'index.html'));
-  }
+  const files = [join(dist, lang, 'index.html'), ...builtAppLandingFiles(dist, lang, appSlugs)];
   for (const file of files) {
     const html = readFileSync(file, 'utf8');
     assert.match(html, /<script[^>]*type="module"[^>]*src="\/store-links.js"/, file);

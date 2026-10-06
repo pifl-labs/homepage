@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /** Validate rendered Draw disclosures and keep them scoped to Draw. */
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const expected = {
@@ -27,10 +28,10 @@ for (const [lang, checks] of Object.entries(expected)) {
   assert.ok(!html.includes('Android v'));
   assert.equal(jsonLd.dateModified, '2026-09-29');
   assert.equal(jsonLd.datePublished, '2026-07-14');
-  for (const entry of readdirSync(join(dist, lang, 'apps'), {withFileTypes: true})) {
-    if (!entry.isDirectory() || entry.name === 'pipi-draw') continue;
-    const other = readFileSync(join(dist, lang, 'apps', entry.name, 'index.html'), 'utf8');
-    assert.doesNotMatch(other, /class="app-download-note"/, `${lang}/${entry.name}: Draw disclosure leaked`);
+  for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
+    if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;
+    const other = readFileSync(file, 'utf8');
+    assert.doesNotMatch(other, /class="app-download-note"/, `${file}: Draw disclosure leaked`);
   }
   checked++;
 }
