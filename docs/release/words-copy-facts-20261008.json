@@ -1,0 +1,16 @@
+{
+  "id": "G123",
+  "observedKST": "2026-10-08",
+  "iosVersion": "1.0.12",
+  "scope": "iOS release notes support learned-word writing/self-comparison; no automatic grading. Android handwriting/public runtime and learning efficacy not verified",
+  "sources": {
+    "kr": "https://apps.apple.com/kr/app/id6770267735",
+    "jp": "https://apps.apple.com/jp/app/id6770267735",
+    "us": "https://apps.apple.com/us/app/id6770267735"
+  },
+  "claims": {
+    "handwriting": "meaning → write → compare yourself",
+    "schedule": "SM-2 schedules the next review from study responses, not measured forgetting prediction",
+    "network": "ad/platform stores/purchase restoration use network; study records stored locally"
+  }
+}
