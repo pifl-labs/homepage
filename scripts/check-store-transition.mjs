@@ -82,7 +82,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.equal(notices(html).length, slug === 'pipi-hello' ? 0 : slug === 'pipi-draw' ? (lang === 'ja' ? 2 : 0) : 2, `${lang}/${slug}: exact platform name notices`);
     assert.equal(appSchema(html).softwareVersion, undefined);
     assert.ok(!html.includes('Android v'));
-    const iosVersions = { 'pipi-hello': '1.0.8', 'pipi-words': '1.0.11', 'pipi-dday': '1.1.3', 'pipi-draw': '1.0.12' };
+    const iosVersions = { 'pipi-hello': '1.0.8', 'pipi-words': '1.0.11', 'pipi-dday': '1.1.3', 'pipi-draw': '1.1.0' };
     assert.ok(html.includes(`iOS v${iosVersions[slug]}`), `${lang}/${slug}: verified iOS version is labelled`);
   }
   const log = read(lang, 'apps/pipi-log');
