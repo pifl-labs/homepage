@@ -9,6 +9,8 @@ const readingUnits = {
   title: ['しよう'],
   lede: ['確認できます。', 'アプリで。', '端末の中で。'],
   logLede: ['登録不要。', '日記と写真'],
+  drawLede: ['ぬりえ図案', '仕上がり', '主役', '始めましょう。'],
+  drawDownloadNote: ['インターネット'],
   storeLabel: ['Google Play', 'App Store', 'で入手'],
 };
 
