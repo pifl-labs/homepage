@@ -24,9 +24,9 @@ for (const [lang, checks] of Object.entries(expected)) {
   const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)]
     .map((match) => JSON.parse(match[1])).find((value) => value['@type'] === 'SoftwareApplication');
   assert.equal(jsonLd.softwareVersion, undefined);
-  assert.ok(html.includes('iOS v1.0.12'));
+  assert.ok(html.includes('iOS v1.1.0'));
   assert.ok(!html.includes('Android v'));
-  assert.equal(jsonLd.dateModified, '2026-09-29');
+  assert.equal(jsonLd.dateModified, '2026-10-01');
   assert.equal(jsonLd.datePublished, '2026-07-14');
   for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
     if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;

@@ -630,7 +630,8 @@ const draw: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
   },
   release: {
-      ios: { version: '1.0.12', updated: '2026-09-29' },
+    // KR/JP/US App Store 공개 확인 2026-10-07. updated는 공식 출시 시각의 UTC 날짜.
+    ios: { version: '1.1.0', updated: '2026-10-01' },
     since: '2026-07-14',
     checkedAt: '2026-09-30',
   },
@@ -682,7 +683,7 @@ const draw: AppMeta = {
     },
     en: {
       tagline: 'Make your photo\na coloring page',
-      lede: 'Snap a photo and AI turns it into clean line art. Color the sketch by hand and make it your own — no drawing skill required, just the joy of coloring.',
+      lede: 'Use AI to turn a photo into a coloring outline, then color it by hand. Results vary with the photo; start with one clear subject and a simple background.',
       metaDesc: 'Turn your photos into coloring pages. Get 2 free AI conversions daily, 10 brushes and a fill tool. No sign-up; AI conversion needs internet. iOS & Android.',
       shotsTitle: 'From one photo to artwork',
       featuresTitle: 'Why PiPi Draw',
