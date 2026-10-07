@@ -116,11 +116,11 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=b1ef4394566e']}
+  extraCss={['/styles-app-landing.css?v=0b8f28919a83']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <main class:list={['app-page', { 'app-page--word-voyage': app.slug === 'pipi-word-voyage', 'app-page--log': app.slug === 'pipi-log' }]}>
+  <main class:list={['app-page', { 'app-page--words': app.slug === 'pipi-words', 'app-page--word-voyage': app.slug === 'pipi-word-voyage', 'app-page--log': app.slug === 'pipi-log' }]}>
     <!-- HERO — 슬로건 강조형 (스크린샷은 아래 쇼케이스가 담당) -->
     <section class="app-hero">
       <div class="app-hero-halo" aria-hidden="true"></div>

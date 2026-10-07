@@ -417,3 +417,11 @@
 }
 .app-trust a { color: var(--text-muted); text-decoration: none; }
 .app-trust a:hover { color: var(--accent-warm); text-decoration: underline; }
+
+/* Words KO reading units: keep words intact at 200% text, without shrinking. */
+:lang(ko) .app-page--words .app-feature h3,
+:lang(ko) .app-page--words .app-feature p {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+}
