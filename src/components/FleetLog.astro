@@ -4,7 +4,7 @@ import { appIconSrc } from "../data/app-icons.mjs";
 // 모든 숫자·날짜는 src/data/apps.ts 의 실측 release 데이터에서 파생한다(하드코딩 금지).
 import {
   appName, displayVersion, formatDate, fleetSince,
-  latestUpdate, liveApps, liveAppCount,
+  latestUpdate, liveApps, liveAppCount, releaseObservationDates,
 } from '../data/apps';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import type { Lang } from '../i18n/ui';
@@ -16,10 +16,10 @@ const { lang } = Astro.props;
 const rows = [...liveApps].sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
 
 // 서로 다른 앱의 관측일을 모두 오늘 확인한 것처럼 보이지 않게 범위로 표시한다.
-const checkedDates = [...new Set(liveApps.map((a) => a.release?.checkedAt).filter(Boolean) as string[])].sort();
-const checkedRange = checkedDates.length
-  ? [checkedDates[0], checkedDates.at(-1)!].filter((date, i, dates) => i === 0 || date !== dates[0]).map(date => formatDate(date, lang)).join(' – ')
-  : '';
+const checkedDates = [...new Set(liveApps.flatMap(releaseObservationDates))].sort();
+const rangeDates = checkedDates.length
+  ? [checkedDates[0], checkedDates.at(-1)!].filter((date, i, dates) => i === 0 || date !== dates[0])
+  : [];
 
 const copy = {
   ko: {
@@ -29,7 +29,7 @@ const copy = {
     sub: `첫 배가 바다에 나간 건 ${formatDate(fleetSince, 'ko')}. 지금은 ${liveAppCount}개 앱을 서비스합니다. 아래는 마지막으로 확인한 플랫폼별 버전과 업데이트 기록입니다.`,
     updated: '업데이트',
     both: '양 스토어 동일',
-    note: `스토어 실측 · ${checkedRange} 확인`,
+    noteBefore: '스토어 실측 · ', noteAfter: ' 확인',
   },
   ja: {
     kicker: '01 / 整備記録',
@@ -38,7 +38,7 @@ const copy = {
     sub: `最初のアプリを公開したのは ${formatDate(fleetSince, 'ja')}。現在は${liveAppCount}本を配信中です。以下は最後に確認したストア別のバージョンと更新記録です。`,
     updated: '更新',
     both: '両ストア同一',
-    note: `ストア実測 · ${checkedRange} 確認`,
+    noteBefore: 'ストア実測 · ', noteAfter: ' 確認',
   },
   en: {
     kicker: '01 / Maintenance log',
@@ -47,7 +47,7 @@ const copy = {
     sub: `The first app launched on ${formatDate(fleetSince, 'en')}. We now offer ${liveAppCount} apps. Below are the last verified versions and update dates by store.`,
     updated: 'updated',
     both: 'same on both stores',
-    note: `Checked against the stores on ${checkedRange}`,
+    noteBefore: 'Checked against the stores on ', noteAfter: '',
   },
 }[lang];
 ---
@@ -91,6 +91,6 @@ const copy = {
       })}
     </ol>
 
-    <p class="fleet-note">{copy.note}</p>
+    <p class="fleet-note">{copy.noteBefore}{rangeDates.map((date, i) => <>{i > 0 && ' – '}<time datetime={date} style="white-space: nowrap">{formatDate(date, lang)}</time></>)}{copy.noteAfter}</p>
   </div>
 </section>

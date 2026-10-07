@@ -27,13 +27,13 @@ export interface AppContent {
 }
 export interface StoreLinks { ios?: string; android?: string }
 /** 스토어 실측 릴리스 사실 — 출처: iTunes Lookup API + Play 스토어 페이지 (수기 추정 금지). */
-export interface StoreRelease { version: string; updated: string } // updated = ISO yyyy-mm-dd
+export interface StoreRelease { version: string; updated: string; checkedAt?: string } // updated = ISO yyyy-mm-dd
 export interface AppRelease {
   ios?: StoreRelease;
   android?: StoreRelease;
   /** 최초 공개일(양 스토어 중 빠른 쪽) */
   since?: string;
-  /** 실측 확인 시각 — 이 값이 오래되면 카피가 낡았다는 신호 */
+  /** 기존 공통 스냅샷의 확인일. 재관측한 플랫폼은 StoreRelease.checkedAt을 별도로 남긴다. */
   checkedAt: string;
 }
 export interface AppMeta {
@@ -43,7 +43,7 @@ export interface AppMeta {
   nameByLang?: Partial<Record<Lang, string>>;
   /** 제품명이 바뀌어도 기존 이름으로 찾을 수 있게 병기한다. */
   previousName?: string;
-  /** 스토어별 공개 표시명 스냅샷. release.checkedAt 시점의 관측값. */
+  /** 스토어별 공개 표시명 스냅샷. 변경 출처는 docs/release의 날짜별 공개 근거, 이전 관측일은 release.checkedAt. */
   storeNames?: Record<'ios' | 'android', Record<Lang, string>>;
   status: 'live' | 'soon';
   category: Record<Lang, string>;
@@ -185,8 +185,9 @@ const hello: AppMeta = {
     ios: 'https://apps.apple.com/app/id6777299814',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.hello',
   },
+  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
   release: {
-    ios: { version: '1.0.8', updated: '2026-09-29' },
+    ios: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-08' },
     since: '2026-06-24',
     checkedAt: '2026-09-30',
   },
@@ -267,7 +268,7 @@ const words: AppMeta = {
   nameByLang: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳' },
   previousName: 'PiPi Words',
   storeNames: {
-    ios: { ko: 'PiPi Words: JLPT·TOPIK 단어', ja: 'PiPi Words: 韓国語・JLPT単語', en: 'PiPi Words: JLPT & TOPIK Vocab' },
+    ios: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
     android: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
   },
   status: 'live',
@@ -276,8 +277,9 @@ const words: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-words-jlpt-topik-vocab/id6770267735',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
+  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
   release: {
-    ios: { version: '1.0.11', updated: '2026-09-08' },
+    ios: { version: '1.0.12', updated: '2026-10-05', checkedAt: '2026-10-08' },
     since: '2026-05-29',
     checkedAt: '2026-09-30',
   },
@@ -331,7 +333,7 @@ const words: AppMeta = {
       tagline: 'Cross the sea, connect words.',
       lede: 'Learn JLPT N5–N1 and TOPIK level 1–6 vocabulary the way exams actually test it. SM-2 spaced repetition keeps words in memory, and studying works offline, anywhere. Korean speakers learn Japanese, Japanese speakers learn Korean — in one app.',
       metaDesc: 'Learn JLPT N5–N1 and TOPIK 1–6 vocabulary the way exams test it. SM-2 spaced repetition, two-way Korean–Japanese, studying works offline.',
-      shotsTitle: 'Vocabulary that builds like a voyage',
+      shotsTitle: 'Words, card by card',
       featuresTitle: 'Why PiPi Words',
       ctaTitle: 'Start studying today',
       ctaSub: 'Free to download. Offers in-app purchases.',
@@ -459,9 +461,10 @@ const log: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-log/id6770272665',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.log',
   },
+  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
   release: {
-    ios: { version: '1.0.10', updated: '2026-09-23' },
-    android: { version: '1.0.10', updated: '2026-09-23' },
+    ios: { version: '1.0.11', updated: '2026-10-05', checkedAt: '2026-10-08' },
+    android: { version: '1.0.11', updated: '2026-10-04', checkedAt: '2026-10-08' },
     since: '2026-06-09',
     checkedAt: '2026-09-27',
   },
@@ -726,9 +729,10 @@ const wordVoyage: AppMeta = {
     ios: 'https://apps.apple.com/app/id6788949612',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage',
   },
+  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
   release: {
-    ios: { version: '1.0.7', updated: '2026-09-23' },
-    android: { version: '1.0.7', updated: '2026-09-23' },
+    ios: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-08' },
+    android: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-07' },
     since: '2026-07-13',
     checkedAt: '2026-09-24',
   },
@@ -964,6 +968,11 @@ export function storeAppName(app: AppMeta, platform: 'ios' | 'android', lang: La
 }
 
 export const previousNameLabels: Record<Lang, string> = { ko: '기존', ja: '旧名', en: 'Previously' };
+
+/** 공통 스냅샷과 플랫폼 재관측일을 함께 보존한다. 한 플랫폼 확인으로 다른 플랫폼을 오늘 확인했다고 하지 않는다. */
+export function releaseObservationDates(app: AppMeta): string[] {
+  return [...new Set([app.release?.checkedAt, app.release?.ios?.checkedAt, app.release?.android?.checkedAt].filter(Boolean) as string[])].sort();
+}
 
 /** 함대 최신 업데이트일 / 첫 출항일 — 수동 숫자·날짜 하드코딩을 없애기 위한 파생값. */
 export const fleetLastUpdated: string = liveApps.map(latestUpdate).filter(Boolean).sort().slice(-1)[0] ?? '';

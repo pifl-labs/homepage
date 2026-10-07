@@ -30,7 +30,9 @@ let checked = 0;
 for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   const home = read(lang);
   const detail = read(lang, 'apps/pipi-focus');
-  const fleetNote = home.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
+  const fleetNoteHTML = home.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
+  const fleetNote = fleetNoteHTML?.replace(/<[^>]*>/g, '');
+  assert.equal((fleetNoteHTML?.match(/<time datetime="2026-[^"]+" style="white-space: nowrap">/g) ?? []).length, 2, `${lang}: each full observation date remains a short semantic unit`);
   // A newly published app can advance the latest check without re-verifying old apps.
   const observationRange = lang === 'en'
     ? fleetNote.match(/Sep 21, 2026 – ([A-Z][a-z]+ \d{1,2}, 2026)/)
@@ -62,7 +64,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   }
   assert.ok(detail.includes(`<title>${name} —`), `${lang}: title`);
   assert.ok(detail.includes(alias) && home.includes(alias), `${lang}: discoverable old name`);
-  assert.equal(notices(home).length, lang === 'ja' ? 3 : 2, `${lang}: no stale home transition notice after both stores match`);
+  assert.equal(notices(home).length, lang === 'ja' ? 2 : 1, `${lang}: no stale home transition notice after both stores match`);
   assert.equal(notices(detail).length, 0, `${lang}: no stale hero/final CTA transition notice`);
   assert.doesNotMatch(detail, /PiPi Focus: (?:해적 포모도로|海賊ポモドーロ|Pirate Pomodoro)/);
   const release = detail.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
@@ -79,10 +81,10 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const [slug, expectedNames] of Object.entries(unchanged)) {
     const html = read(lang, `apps/${slug}`);
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
-    assert.equal(notices(html).length, slug === 'pipi-hello' ? 0 : slug === 'pipi-draw' ? (lang === 'ja' ? 2 : 0) : 2, `${lang}/${slug}: exact platform name notices`);
+    assert.equal(notices(html).length, ['pipi-hello', 'pipi-words'].includes(slug) ? 0 : slug === 'pipi-draw' ? (lang === 'ja' ? 2 : 0) : 2, `${lang}/${slug}: exact platform name notices`);
     assert.equal(appSchema(html).softwareVersion, undefined);
     assert.ok(!html.includes('Android v'));
-    const iosVersions = { 'pipi-hello': '1.0.8', 'pipi-words': '1.0.11', 'pipi-dday': '1.1.3', 'pipi-draw': '1.1.0' };
+    const iosVersions = { 'pipi-hello': '1.0.9', 'pipi-words': '1.0.12', 'pipi-dday': '1.1.3', 'pipi-draw': '1.1.0' };
     assert.ok(html.includes(`iOS v${iosVersions[slug]}`), `${lang}/${slug}: verified iOS version is labelled`);
   }
   const log = read(lang, 'apps/pipi-log');
@@ -91,12 +93,12 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const item of [logSchema, logItem]) {
     assert.equal(item.name, logNames[index], `${lang}: Log public store name`);
     assert.equal(item.alternateName, 'PiPi Log', `${lang}: searchable former name`);
-    assert.equal(item.softwareVersion, '1.0.10', `${lang}: both public stores at v1.0.10`);
-    assert.equal(item.dateModified, '2026-09-23', `${lang}: public store update date`);
+    assert.equal(item.softwareVersion, '1.0.11', `${lang}: both publicly observed stores at v1.0.11`);
+    assert.equal(item.dateModified, '2026-10-05', `${lang}: public store update date`);
   }
   assert.ok(log.includes(`class="app-id-name"`), `${lang}: Log landing identity`);
   assert.ok(log.includes(logNames[index]), `${lang}: Log landing visible name`);
-  assert.ok(log.includes('v1.0.10'), `${lang}: Log landing visible version`);
+  assert.ok(log.includes('v1.0.11'), `${lang}: Log landing visible version`);
   if (lang === 'ja') {
     assert.match(log, /<span class="ja-reading-unit"[^>]*>登録不要。<\/span><span class="ja-reading-unit"[^>]*>日記と写真<\/span>/, 'ja: Log lede keeps short reading units intact');
   }
@@ -112,10 +114,10 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const item of [voyageSchema, voyageItem]) {
     assert.equal(item.name, voyageNames[index], `${lang}: public Voyage listing name`);
     assert.equal(item.alternateName, 'PiPi Word Voyage', `${lang}: old name remains searchable`);
-    assert.equal(item.softwareVersion, '1.0.7', `${lang}: both publicly verified store versions`);
-    assert.equal(item.dateModified, '2026-09-23', `${lang}: both public store update dates`);
+    assert.equal(item.softwareVersion, '1.0.9', `${lang}: both publicly verified store versions`);
+    assert.equal(item.dateModified, '2026-10-05', `${lang}: both public store update dates`);
   }
-  assert.ok(voyage.includes('v1.0.7'), `${lang}: visible release version`);
+  assert.ok(voyage.includes('v1.0.9'), `${lang}: visible release version`);
   assert.equal(notices(voyage).length, 0, `${lang}: stores have the same localized listing name`);
   assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/home.webp`), `${lang}: stale old-name home shot hidden`);
   assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/logbook.webp`), `${lang}: misleading all-words shot hidden`);
@@ -131,7 +133,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.ok(voyage.includes('id6788949612'), `${lang}: App Store destination retained`);
   // Existing split-version app: preserve the source snapshot without collapsing it to one version.
   const hello = read(lang, 'apps/pipi-hello');
-  assert.ok(hello.includes('iOS v1.0.8'));
+  assert.ok(hello.includes('iOS v1.0.9'));
   assert.ok(!hello.includes('Android v'));
   assert.ok(!Object.hasOwn(appSchema(hello), 'softwareVersion'));
   assert.ok(!Object.hasOwn(homeItems.find(a => a.url.endsWith('/pipi-hello/')), 'softwareVersion'));
