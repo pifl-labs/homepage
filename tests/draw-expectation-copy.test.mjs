@@ -76,5 +76,5 @@ test('Draw-only short Japanese reading units keep all source text and never nowr
 
 test('Korean Draw store labels retain whole words at enlarged narrow widths, without changing labels or URLs', () => {
   const component = readFileSync(new URL('../src/components/AppLanding.astro', import.meta.url), 'utf8');
-  assert.equal((component.match(/\(app.slug === 'pipi-bridge' \|\| app.slug === 'pipi-draw'\) && lang === 'ko' \? 'word-break: keep-all; overflow-wrap: normal' : undefined/g) || []).length, 4);
+  assert.equal((component.match(/\(app.slug === 'pipi-bridge' \|\| app.slug === 'pipi-draw' \|\| app.slug === 'pipi-words' \|\| app.slug === 'pipi-hello'\) && lang === 'ko' \? 'word-break: keep-all; overflow-wrap: normal' : undefined/g) || []).length, 4);
 });

@@ -9,8 +9,8 @@ test('Word Voyage landing is present and names match both public stores in all l
   assert.ok(wordVoyage, 'Word Voyage app metadata must exist');
   assert.match(wordVoyage, /name: 'Hangul Voyage: Korean Puzzle'/);
   assert.match(wordVoyage, /nameByLang: \{ ko: '낱말항해: 한글 단어 퍼즐', ja: 'ハングル航海：韓国語の単語パズル' \}/);
-  assert.match(wordVoyage, /ios: \{ version: '1\.0\.7', updated: '2026-09-23' \}/);
-  assert.match(wordVoyage, /android: \{ version: '1\.0\.7', updated: '2026-09-23' \}/);
+  assert.match(wordVoyage, /ios: \{ version: '1\.0\.9', updated: '2026-10-05', checkedAt: '2026-10-08' \}/);
+  assert.match(wordVoyage, /android: \{ version: '1\.0\.9', updated: '2026-10-05', checkedAt: '2026-10-07' \}/);
   assert.match(wordVoyage, /checkedAt: '2026-09-24'/);
 });
 
