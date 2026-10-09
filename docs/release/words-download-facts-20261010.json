@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-10",
+  "publicIosVersion": "1.0.12",
+  "sources": [
+    "https://apps.apple.com/us/app/vocab-routine-jlpt-topik/id6770267735",
+    "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=en&gl=US",
+    "https://pifl-labs.com/en/apps/pipi-words/"
+  ],
+  "scope": "Actual public Chrome product copy: free download, ads, free-study limits, optional word packs/subscription. No numerical/regional prices or limits inferred. Existing iOS-only manual-comparison qualification stays; Android handwriting not independently verified. Legacy store efficacy/full-offline/exam-equivalence copy is not repeated.",
+  "nativeAppQA": false,
+  "appStoreSubmission": false,
+  "downloadLiftVerified": false
+}

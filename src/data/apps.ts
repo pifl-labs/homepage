@@ -334,9 +334,9 @@ const words: AppMeta = {
       lede: 'Review JLPT N5–N1 and TOPIK 1–6 vocabulary with cards and quizzes. On iOS, recall learned words by writing, then compare your answer. No automatic grading.',
       metaDesc: 'JLPT/TOPIK Korean–Japanese cards, quizzes and SM-2 review dates. On iOS, write learned words and compare; no automatic grading. Free download; in-app purchases.',
       shotsTitle: 'Words, card by card',
-      featuresTitle: 'Why PiPi Words',
+      featuresTitle: 'Why Vocab Routine',
       ctaTitle: 'Start studying today',
-      ctaSub: 'Free to download. Offers in-app purchases.',
+      ctaSub: 'Free download with ads and study limits. Optional word packs or a subscription.',
       shots: [
         { file: 'home',         label: "Today's study at a glance", desc: "See today's words and your streak right on the home." },
         { file: 'study',        label: 'Pick a level deck',         desc: 'Choose a JLPT or TOPIK level and start the voyage.' },
