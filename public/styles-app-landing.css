@@ -81,6 +81,9 @@
   color: var(--text-secondary); max-width: 56ch; margin-bottom: 2.25rem;
 }
 .app-page--log .app-hero-lede { text-wrap: pretty; }
+/* Keep English Mood copy from leaving a lone final word in cards or pricing. */
+:lang(en) .app-page--log .app-feature p,
+:lang(en) .app-page--log .app-cta-sub { text-wrap: pretty; }
 .app-hero-lede em { font-style: normal; color: var(--accent-highlight); font-weight: 600; }
 .app-download-note {
   max-width: 65ch; margin: 1rem auto 0;
