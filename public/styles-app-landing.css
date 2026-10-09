@@ -428,3 +428,6 @@
   overflow-wrap: normal;
   text-wrap: pretty;
 }
+
+/* Keep EN Words payment boundaries in readable units without shrinking text. */
+:lang(en) .app-page--words .app-cta-sub { color: var(--text-secondary); text-wrap: pretty; }
