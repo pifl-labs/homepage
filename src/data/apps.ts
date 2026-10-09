@@ -516,12 +516,12 @@ const log: AppMeta = {
     },
     en: {
       tagline: 'Log your heart\nas sea weather.',
-      lede: "Pick one of nine sea-weather moods and PiPi responds. Reflect with the captain's prompt, then turn a month's voyage into a map. No account needed. Entries and photos stay on your device.",
-      metaDesc: 'A sea-weather mood journal with charts, a monthly map and premium biometric lock. Entries and photos stay on your device. Free to start on iOS & Android.',
+      lede: 'Pick one of nine sea-weather moods; PiPi responds. Add a note, photo or tag if you want more context, then revisit entries in the calendar. No account needed. Entries and photos stay on your device.',
+      metaDesc: 'Choose a sea-weather mood, add optional notes, photos or tags, and revisit entries in the calendar. Free download with ads and optional one-time purchase.',
       shotsTitle: 'A logbook for your heart',
       featuresTitle: 'Why Mood Tile',
       ctaTitle: 'Start your voyage now',
-      ctaSub: 'Free to start on iOS & Android.',
+      ctaSub: 'Free download on iOS & Android. Ads + optional one-time purchase; no subscription.',
       shots: [
         { file: 'home',        label: "Log today's sea weather",   desc: 'Pick your mood from 9 sea-weathers and write the day with PiPi.' },
         { file: 'calendar',    label: 'A month as a weather calendar', desc: "Each day's weather lands on the calendar at a glance." },
@@ -531,7 +531,7 @@ const log: AppMeta = {
       ],
       features: [
         { icon: 'fa-cloud-sun', title: '9 sea-weathers',    desc: 'From rainbow seas to typhoons — log your mood as weather.' },
-        { icon: 'fa-feather',   title: 'PiPi reacts',        desc: 'PiPi answers your logged mood with a pirate message.' },
+        { icon: 'fa-tags',      title: 'Optional context',   desc: 'Keep a mood-only entry, or add a note, photo or tag. Revisit past entries in the calendar.' },
         { icon: 'fa-pen-nib',   title: "The captain's prompt", desc: 'A fresh question each day to reflect, lightly.' },
         { icon: 'fa-lock',      title: 'Locked & on-device',    desc: 'Premium adds biometric lock for entries. Journal entries and photos stay on your device; ads and in-app purchases use network services.' },
       ],
