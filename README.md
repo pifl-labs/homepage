@@ -3,6 +3,14 @@
 PiFl Labs 마케팅 웹사이트 ([pifl-labs.com](https://pifl-labs.com)) 소스.
 Flutter 기반 크로스플랫폼 스튜디오 PiFl Labs의 회사 소개 사이트.
 
+## Visit the official website
+
+[English](https://pifl-labs.com/en/) · [한국어](https://pifl-labs.com/ko/) · [日本語](https://pifl-labs.com/ja/)
+
+The website contains product details and official store links. Some apps include
+ads or optional purchases; availability and pricing vary by app and store.
+This repository contains the company marketing website, not the Flutter app source.
+
 ## 스택
 
 - **Astro 5** static site
