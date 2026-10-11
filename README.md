@@ -22,6 +22,13 @@ Prepared by PiFl Labs, not an independent review. US App Store snapshot: 11 Octo
 Seven undated spaces for a word and a moment. No app or sign-up required. Original PiFl Labs template, prepared with AI assistance; not a health assessment.
 The optional Mood Tile iOS link is separate: the app includes ads and an optional one-time upgrade, with no subscription.
 
+### Free focus-start resource
+
+[One small start (A4 PDF)](https://pifl-labs.com/assets/printables/one-small-start-en.pdf) | [Plaintext companion](https://pifl-labs.com/assets/printables/one-small-start-en.txt).
+Choose one task, a visible first step and your own time box; park other thoughts and write the next step. No app or sign-up required.
+Original PiFl Labs template, prepared with AI assistance; no productivity or health outcome is promised.
+The optional Pomodoro at Sea iOS link is separate: free download with ads and optional one-time ad removal.
+
 ## 스택
 
 - **Astro 5** static site
