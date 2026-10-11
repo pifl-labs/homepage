@@ -16,6 +16,12 @@ This repository contains the company marketing website, not the Flutter app sour
 [Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).
 Prepared by PiFl Labs, not an independent review. US App Store snapshot: 11 October 2026.
 
+### Free writing resource
+
+[Your week, one line at a time (A4 PDF)](https://pifl-labs.com/assets/printables/one-line-journal-en.pdf) | [Plaintext companion](https://pifl-labs.com/assets/printables/one-line-journal-en.txt).
+Seven undated spaces for a word and a moment. No app or sign-up required. Original PiFl Labs template, prepared with AI assistance; not a health assessment.
+The optional Mood Tile iOS link is separate: the app includes ads and an optional one-time upgrade, with no subscription.
+
 ## 스택
 
 - **Astro 5** static site
