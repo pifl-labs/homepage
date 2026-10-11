@@ -3,6 +3,7 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://pifl-labs.com/sitemap-index.xml
+Sitemap: https://pifl-labs.com/sitemap-resources.xml
 
 # Crawl-delay
 Crawl-delay: 1
