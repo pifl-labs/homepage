@@ -11,6 +11,11 @@ The website contains product details and official store links. Some apps include
 ads or optional purchases; availability and pricing vary by app and store.
 This repository contains the company marketing website, not the Flutter app source.
 
+### App portfolio (PDF)
+
+[Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).
+Prepared by PiFl Labs, not an independent review. US App Store snapshot: 11 October 2026.
+
 ## 스택
 
 - **Astro 5** static site
