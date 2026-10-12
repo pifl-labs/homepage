@@ -10,9 +10,11 @@ const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 const expected = [
   'https://pifl-labs.com/assets/printables/one-line-journal-en.pdf',
   'https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf',
+  'https://pifl-labs.com/assets/printables/one-small-start-en.pdf',
+  'https://pifl-labs.com/assets/printables/one-word-recall-card-en.pdf',
 ];
 
-test('only the two already-public canonical PDFs, once each', () => {
+test('only the four already-public canonical PDFs, once each', () => {
   assert.deepEqual(urls, expected);
   assert.equal(new Set(urls).size, urls.length);
   for (const url of urls) {
@@ -26,8 +28,8 @@ test('only the two already-public canonical PDFs, once each', () => {
 test('standard UTF-8 root urlset, accurate fixed publication date; no SEO promises', () => {
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'));
-  assert.equal((xml.match(/<url>/g) || []).length, 2);
-  assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), ['2026-10-11', '2026-10-11']);
+  assert.equal((xml.match(/<url>/g) || []).length, 4);
+  assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12']);
   assert.doesNotMatch(xml, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>|pipi-worlds|\.txt<\/loc>/);
 });
 
@@ -56,6 +58,17 @@ test('the portfolio PDF is byte-identical to the accepted public overview', () =
   const pdf = read('public/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf');
   assert.equal(createHash('sha256').update(pdf).digest('hex'), '8e6e1e53590f2216f5f2d5ee7f02d45ac8575bfff95b1bff69a55ba3fc9b2cb5');
 });
+
+for (const [path, sha, bytes] of [
+  ['public/assets/printables/one-small-start-en.pdf', '074a394c292a52162dc5c62f132fe5e7bb1e22d40e36b0380a555aa7f846b5cb', 3159],
+  ['public/assets/printables/one-word-recall-card-en.pdf', '3797398d187a4d01f203e4562f80c28018fb198ee36aa31f1acf7462177d7b81', 3154],
+]) {
+  test(`${path} retains exact already-public bytes`, () => {
+    const pdf = read(path);
+    assert.equal(pdf.length, bytes);
+    assert.equal(createHash('sha256').update(pdf).digest('hex'), sha);
+  });
+}
 
 for (const language of ['ko-KR', 'en-US', 'ja-JP']) {
   test(`XML static route preserves exact response without locale redirect (${language})`, async () => {
