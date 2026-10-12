@@ -36,6 +36,17 @@ export interface AppRelease {
   /** 기존 공통 스냅샷의 확인일. 재관측한 플랫폼은 StoreRelease.checkedAt을 별도로 남긴다. */
   checkedAt: string;
 }
+/** https://developers.google.com/search/docs/appearance/structured-data/software-app */
+export type GoogleApplicationCategory =
+  | 'GameApplication' | 'SocialNetworkingApplication' | 'TravelApplication'
+  | 'ShoppingApplication' | 'SportsApplication' | 'LifestyleApplication'
+  | 'BusinessApplication' | 'DesignApplication' | 'DeveloperApplication'
+  | 'DriverApplication' | 'EducationalApplication' | 'HealthApplication'
+  | 'FinanceApplication' | 'SecurityApplication' | 'BrowserApplication'
+  | 'CommunicationApplication' | 'DesktopEnhancementApplication'
+  | 'EntertainmentApplication' | 'MultimediaApplication' | 'HomeApplication'
+  | 'UtilitiesApplication' | 'ReferenceApplication';
+
 export interface AppMeta {
   slug: string;
   name: string;
@@ -48,8 +59,8 @@ export interface AppMeta {
   status: 'live' | 'soon';
   category: Record<Lang, string>;
   stores: StoreLinks;
-  /** schema.org applicationCategory (미지정 시 MobileApplication). 게임은 GameApplication. */
-  schemaCategory?: string;
+  /** Google 지원 applicationCategory. 알려진 분류만 출력하며 미지정은 생략한다. */
+  schemaCategory?: GoogleApplicationCategory;
   /** 출시 앱만 — 스토어 실측 버전·업데이트일. 카드/랜딩/구조화 데이터가 공유하는 SSOT. */
   release?: AppRelease;
   /** hero 대표 스크린샷 file 명. 스크린샷이 아직 없는 '출시 예정' 앱은 생략한다. */
@@ -76,6 +87,7 @@ export const storeLabels: Record<Lang, { ios: string; android: string; soon: str
 
 const focus: AppMeta = {
   slug: 'pipi-focus',
+  schemaCategory: 'BusinessApplication',
   name: 'Pomodoro at Sea: Focus Timer',
   nameByLang: { ko: '집중항해: 포모도로 타이머', ja: '集中航海：ポモドーロタイマー' },
   previousName: 'PiPi Focus',
@@ -172,6 +184,7 @@ const focus: AppMeta = {
 
 const hello: AppMeta = {
   slug: 'pipi-hello',
+  schemaCategory: 'EducationalApplication',
   name: 'KanaSprout: Japanese for Kids',
   nameByLang: { ko: '말놀이 새싹: 어린이 일본어', ja: 'ハングルの芽：子どもの韓国語' },
   previousName: 'PiPi Hello',
@@ -264,6 +277,7 @@ const hello: AppMeta = {
 
 const words: AppMeta = {
   slug: 'pipi-words',
+  schemaCategory: 'EducationalApplication',
   name: 'Vocab Routine: JLPT & TOPIK',
   nameByLang: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳' },
   previousName: 'PiPi Words',
@@ -356,6 +370,7 @@ const words: AppMeta = {
 
 const dday: AppMeta = {
   slug: 'pipi-dday',
+  schemaCategory: 'LifestyleApplication',
   name: 'D-Day Widget - Until That Day',
   nameByLang: { ko: '디데이 카운트다운 위젯 - 그날까지', ja: 'Dデイ カウントダウン ウィジェット - その日まで' },
   previousName: 'PiPi D-Day',
@@ -447,6 +462,7 @@ const dday: AppMeta = {
 
 const log: AppMeta = {
   slug: 'pipi-log',
+  schemaCategory: 'LifestyleApplication',
   name: 'Mood Tile: Daily Journal',
   nameByLang: { ko: '기분 한 칸: 날씨 감정일기', ja: '気分のひとこま：感情日記' },
   previousName: 'PiPi Log',
@@ -619,6 +635,7 @@ const dialogos: AppMeta = {
 // 콘텐츠 SSOT = pipi_draw/ios/fastlane/metadata + .arb. 2026-07-22 양 스토어 출시.
 const draw: AppMeta = {
   slug: 'pipi-draw',
+  schemaCategory: 'DesignApplication',
   name: 'Photo Outlines: Coloring Book',
   nameByLang: { ko: '밑그림: 사진으로 만드는 색칠공부', ja: '下絵づくり：写真をぬりえに変換' },
   previousName: 'PiPi Draw',
@@ -806,6 +823,7 @@ const wordVoyage: AppMeta = {
 // 사이트 내 개인정보처리방침(ko/en/zh/vi 병기). 스크린샷 자산이 아직 없어 shots 는 비운다.
 const bridge: AppMeta = {
   slug: 'pipi-bridge',
+  schemaCategory: 'EducationalApplication',
   name: 'Korean Bridge',
   status: 'live',
   category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean' },
