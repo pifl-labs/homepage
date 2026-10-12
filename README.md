@@ -36,6 +36,14 @@ Use one word you have already studied: write from its meaning without hints, the
 No app or sign-up required. Original PiFl Labs blank template, prepared with AI assistance; no automatic grading, exam score or learning outcome is promised.
 The optional Vocab Routine iOS link is separate: free basic decks with daily limits, ads and optional word packs/subscription.
 
+### 한국어 무료 첫 행동 기록지
+
+[하나만, 먼저 시작 (A4 PDF)](https://pifl-labs.com/assets/printables/one-small-start-ko.pdf) | [텍스트 원문](https://pifl-labs.com/assets/printables/one-small-start-ko.txt).
+할 일 하나, 눈에 보이는 첫 행동, 스스로 정한 시간과 다음 행동을 적는 종이 양식입니다. 앱 설치나 가입 없이 사용합니다.
+피플랩스 원본 양식이며 작성에 AI를 사용했습니다. 집중·학습·건강 효과를 입증하거나 보장하는 자료는 아닙니다.
+선택인 집중항해 iOS 타이머는 광고 포함 무료 다운로드, 광고 제거는 선택 1회 구매입니다.
+문서에 사용한 Jua 폰트: Copyright 2018 The Jua Project Authors, [SIL Open Font License 1.1](https://pifl-labs.com/assets/printables/jua-OFL.txt). 폰트 출처 표기는 양식이나 앱에 대한 추천·보증을 의미하지 않습니다.
+
 ## 스택
 
 - **Astro 5** static site
