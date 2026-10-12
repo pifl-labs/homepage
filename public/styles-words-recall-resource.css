@@ -1,0 +1,7 @@
+/* English Words secondary paper resource only; app downloads remain primary. */
+.app-page .words-recall-resource .container { padding-inline: clamp(16px, 4vw, 32px); }
+.app-page .words-recall-resource .section-head { max-width: 680px; margin-bottom: var(--s-md); }
+.app-page .words-recall-resource .section-title { font-size: clamp(1.6rem, 3.5vw, 2.6rem); line-height: 1.2; letter-spacing: -0.025em; }
+.app-page .words-recall-resource .app-srclib { text-align: left; margin-inline: 0; }
+.app-page .words-recall-resource .app-stores { margin-block: var(--s-md); }
+.app-page .words-recall-resource .app-srclib-desc:last-child { margin-bottom: 0; }
