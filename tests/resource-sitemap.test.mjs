@@ -12,9 +12,10 @@ const expected = [
   'https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf',
   'https://pifl-labs.com/assets/printables/one-small-start-en.pdf',
   'https://pifl-labs.com/assets/printables/one-word-recall-card-en.pdf',
+  'https://pifl-labs.com/assets/printables/one-small-start-ko.pdf',
 ];
 
-test('only the four already-public canonical PDFs, once each', () => {
+test('only the five already-public canonical PDFs, once each', () => {
   assert.deepEqual(urls, expected);
   assert.equal(new Set(urls).size, urls.length);
   for (const url of urls) {
@@ -28,8 +29,8 @@ test('only the four already-public canonical PDFs, once each', () => {
 test('standard UTF-8 root urlset, accurate fixed publication date; no SEO promises', () => {
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'));
-  assert.equal((xml.match(/<url>/g) || []).length, 4);
-  assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12']);
+  assert.equal((xml.match(/<url>/g) || []).length, 5);
+  assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12', '2026-10-12T21:30:29Z']);
   assert.doesNotMatch(xml, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>|pipi-worlds|\.txt<\/loc>/);
 });
 
@@ -84,3 +85,15 @@ for (const language of ['ko-KR', 'en-US', 'ja-JP']) {
     assert.equal(response.headers.get('set-cookie'), null);
   });
 }
+
+// G379 was published by normal PR97 at this UTC instant; do not invent a fresh date.
+test('Korean focus paper keeps exact actual reviewed public bytes', () => {
+  const pdf = read('public/assets/printables/one-small-start-ko.pdf');
+  assert.equal(pdf.length, 71865);
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '06882ed91bd27bf7b23783cc8bdd5f20b42427f0b488e7348bc8f5ec79df8db8');
+});
+test('new Korean resource lastmod is the actual G379 publication, not build time', () => {
+  assert.ok(xml.includes('<loc>https://pifl-labs.com/assets/printables/one-small-start-ko.pdf</loc>\n    <lastmod>2026-10-12T21:30:29Z</lastmod>'));
+  assert.ok(Date.parse('2026-10-12T21:30:29Z') < Date.now());
+  assert.equal((xml.match(/one-small-start-ko\.pdf/g) || []).length, 1);
+});
