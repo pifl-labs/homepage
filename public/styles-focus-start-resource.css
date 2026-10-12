@@ -1,0 +1,7 @@
+/* English Focus supplementary paper resource only; app downloads remain primary. */
+.app-page .focus-start-resource .container { padding-inline: clamp(16px, 4vw, 32px); }
+.app-page .focus-start-resource .section-head { max-width: 680px; margin-bottom: var(--s-md); }
+.app-page .focus-start-resource .section-title { font-size: clamp(1.6rem, 3.5vw, 2.6rem); line-height: 1.2; letter-spacing: -0.025em; }
+.app-page .focus-start-resource .app-srclib { text-align: left; margin-inline: 0; }
+.app-page .focus-start-resource .app-stores { margin-block: var(--s-md); }
+.app-page .focus-start-resource .app-srclib-desc:last-child { margin-bottom: 0; }

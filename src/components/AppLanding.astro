@@ -116,7 +116,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=7acd80c20278', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : [])]}
+  extraCss={['/styles-app-landing.css?v=7acd80c20278', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-focus' && lang === 'en' ? ['/styles-focus-start-resource.css?v=2c81d55ff8b5'] : [])]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -258,7 +258,25 @@ const jsonLd = {
       </section>
     )}
 
-    {app.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist />}
+    {app.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist />}{app.slug === 'pipi-focus' && lang === 'en' && (
+      <section class="app-section focus-start-resource" id="focus-start-resource" aria-labelledby="focus-start-resource-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker">Free paper companion</p>
+            <h2 class="section-title" id="focus-start-resource-title">One small start, on paper.</h2>
+          </div>
+          <div class="app-srclib">
+            <p class="app-srclib-desc">Choose one task, write the first visible step and set your own time box. Use any timer.</p>
+            <p class="app-srclib-desc">Free A4 sheet. No app or sign-up needed. This is a planning prompt, not a productivity promise.</p>
+            <div class="app-stores">
+              <a class="btn btn-primary" href="/assets/printables/one-small-start-en.pdf" hreflang="en">Open PDF</a>
+              <a class="btn btn-ghost" href="/assets/printables/one-small-start-en.txt" hreflang="en">Read text</a>
+            </div>
+            <p class="app-srclib-desc">Original PiFl Labs resource. Copy prepared with AI assistance.</p>
+          </div>
+        </div>
+      </section>
+    )}
 
     {app.slug === 'pipi-words' && lang === 'en' && (
       <section class="app-section words-recall-resource" id="words-recall-resource" aria-labelledby="words-recall-resource-title">
