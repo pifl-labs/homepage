@@ -19,7 +19,7 @@ const itemList = {
       '@type': 'SoftwareApplication',
       name: appName(app, lang),
       ...(app.previousName ? { alternateName: app.previousName } : {}),
-      applicationCategory: app.schemaCategory ?? 'MobileApplication',
+      ...(app.schemaCategory ? { applicationCategory: app.schemaCategory } : {}),
       url: `https://pifl-labs.com/${lang}/apps/${app.slug}/`,
       description: app.content[lang].tagline.replace(/\n/g, ' '),
       ...(app.status === 'live'

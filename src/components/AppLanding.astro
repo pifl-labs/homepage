@@ -89,7 +89,7 @@ const jsonLd = {
   '@type': 'SoftwareApplication',
   name,
   ...(app.previousName ? { alternateName: app.previousName } : {}),
-  applicationCategory: app.schemaCategory ?? 'MobileApplication',
+  ...(app.schemaCategory ? { applicationCategory: app.schemaCategory } : {}),
   description: c.lede,
   url: canonical,
   image: `https://pifl-labs.com${iconSrc}`,
