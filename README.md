@@ -29,6 +29,13 @@ Choose one task, a visible first step and your own time box; park other thoughts
 Original PiFl Labs template, prepared with AI assistance; no productivity or health outcome is promised.
 The optional Pomodoro at Sea iOS link is separate: free download with ads and optional one-time ad removal.
 
+### Free vocabulary-recall resource
+
+[One word. No peeking. (A5 PDF)](https://pifl-labs.com/assets/printables/one-word-recall-card-en.pdf) | [Plaintext companion](https://pifl-labs.com/assets/printables/one-word-recall-card-en.txt).
+Use one word you have already studied: write from its meaning without hints, then reveal your reference and compare for yourself. A blank attempt is OK.
+No app or sign-up required. Original PiFl Labs blank template, prepared with AI assistance; no automatic grading, exam score or learning outcome is promised.
+The optional Vocab Routine iOS link is separate: free basic decks with daily limits, ads and optional word packs/subscription.
+
 ## 스택
 
 - **Astro 5** static site
