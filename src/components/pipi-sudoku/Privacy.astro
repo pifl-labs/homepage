@@ -4,31 +4,65 @@ import ScrollableLegalTable from '../ScrollableLegalTable.astro';
 import type { Lang } from '../../i18n/ui';
 
 interface Props { lang?: Lang; homeHref?: string }
-// 앱이 한국어 전용이라 본문은 한국어 단일 페이지다. 3언어 경로에서 모두 렌더하되
-// canonical 은 ko 한 곳으로 모아 중복 색인을 막는다(언어 전환 404 방지가 목적).
-// en/ja 경로에서는 크롬(nav·footer)만 해당 언어이므로 본문 영역에 lang="ko" 를 단다.
-const { lang = 'ko', homeHref = '/ko/' } = Astro.props;
+// 한칸씩 스도쿠는 한국어·영어·일본어로 출시한다. 형제 앱처럼 로케일 경로마다 그 언어 본문 하나만
+// 서빙한다(자기 canonical + ko/en/ja alternate, x-default 는 사이트 규칙대로 /ko/).
+// 무prefix 레거시 경로는 영어 본문을 렌더한다(canonical /en/).
+// 일본어판은 니콜리 등록상표인 「数独」「SUDOKU」를 쓰지 않고 「ナンプレ」로 표기한다.
+const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
 
-const canonical = 'https://pifl-labs.com/ko/apps/pipi-sudoku/privacy/';
+const BASE = 'https://pifl-labs.com';
+const PATH = '/apps/pipi-sudoku/privacy/';
+const canonical = `${BASE}/${lang}${PATH}`;
+const alternates = [
+  { hreflang: 'en', href: `${BASE}/en${PATH}` },
+  { hreflang: 'ko', href: `${BASE}/ko${PATH}` },
+  { hreflang: 'ja', href: `${BASE}/ja${PATH}` },
+  { hreflang: 'x-default', href: `${BASE}/ko${PATH}` },
+];
+
+const chrome = {
+  ko: {
+    docTitle: '한칸씩 스도쿠 개인정보처리방침 - PiFl Labs',
+    docDesc: '계정, 광고, 인앱 결제, 분석·추적 도구 없이 오프라인으로 동작하는 한칸씩 스도쿠의 개인정보처리방침입니다.',
+    back: '홈으로 돌아가기',
+    title: '한칸씩 스도쿠 개인정보처리방침',
+    date: '시행일: 2026년 10월 13일',
+  },
+  en: {
+    docTitle: 'Cell by Cell Sudoku Privacy Policy - PiFl Labs',
+    docDesc: 'Privacy policy for Cell by Cell Sudoku, which works offline with no account, ads, in-app purchases, or analytics and tracking tools.',
+    back: 'Back to Home',
+    title: 'Cell by Cell Sudoku Privacy Policy',
+    date: 'Effective Date: October 13, 2026',
+  },
+  ja: {
+    docTitle: 'ひとマスずつナンプレ プライバシーポリシー - PiFl Labs',
+    docDesc: 'アカウント、広告、アプリ内課金、分析・トラッキングツールなしでオフラインで動作する「ひとマスずつナンプレ」のプライバシーポリシーです。',
+    back: 'ホームに戻る',
+    title: 'ひとマスずつナンプレ プライバシーポリシー',
+    date: '施行日: 2026年10月13日',
+  },
+}[lang];
 ---
 <BaseLayout
   lang={lang}
-  title="한칸씩 스도쿠 개인정보처리방침 - PiFl Labs"
-  description="계정, 광고, 인앱 결제, 분석·추적 도구 없이 오프라인으로 동작하는 한칸씩 스도쿠의 개인정보처리방침입니다."
+  title={chrome.docTitle}
+  description={chrome.docDesc}
   canonical={canonical}
-  alternates={[{ hreflang: 'ko', href: canonical }, { hreflang: 'x-default', href: canonical }]}
+  alternates={alternates}
   extraCss={["/styles.css"]}
 >
-  <section class="legal-hero" lang="ko">
+  <section class="legal-hero">
     <div class="container">
-      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> 홈으로 돌아가기</a>
-      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">한칸씩 스도쿠 개인정보처리방침</span></h1>
-      <p class="legal-date">시행일: 2026년 10월 13일</p>
+      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {chrome.back}</a>
+      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">{chrome.title}</span></h1>
+      <p class="legal-date">{chrome.date}</p>
     </div>
   </section>
 
-  <main id="main" class="legal-page" lang="ko">
+  <main id="main" class="legal-page">
     <div class="container">
+      {lang === 'ko' && (
       <div class="legal-card">
         <p>주식회사 피플랩스(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여, 오프라인으로 9×9 스도쿠를 푸는 모바일 애플리케이션 <strong>한칸씩 스도쿠</strong>(이하 "앱")에 대한 개인정보 처리방침을 다음과 같이 수립·공개합니다. 본 방침은 회사 웹사이트의 <a href="/ko/privacy/">통합 개인정보처리방침</a>에 우선하여 본 앱에 적용됩니다.</p>
 
@@ -144,11 +178,248 @@ const canonical = 'https://pifl-labs.com/ko/apps/pipi-sudoku/privacy/';
         <h2>제15조 (개인정보 처리방침 변경)</h2>
         <p>이 개인정보 처리방침은 2026년 10월 13일부터 적용됩니다. 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
       </div>
+      )}
+
+      {lang === 'en' && (
+      <div class="legal-card">
+        <p>PiFl Labs Co., Ltd. ("Company", "we", "us") has established and publishes this Privacy Policy under Article 30 of the Korean Personal Information Protection Act to protect your personal data and to handle related concerns promptly and smoothly. It covers <strong>Cell by Cell Sudoku</strong> ("App"), a mobile app for solving 9×9 sudoku puzzles offline, and applies to the App in preference to our <a href="/en/privacy/">general Privacy Policy</a>.</p>
+
+        <p>The App has <strong>no sign-up or login</strong> and uses no ads, in-app purchases, or analytics or tracking tools (SDKs). It makes no network requests of its own and does not connect to our servers. <strong>Your puzzle progress, My Puzzles and settings are stored only in the App's private storage on your device, and we cannot see them.</strong></p>
+
+        <h2>1. Purpose of Processing</h2>
+        <ul>
+          <li><strong>App functionality</strong>: Restoring the puzzle you were solving (entered digits and notes, undo and redo history, selected cell), keeping puzzle-pack progress and My Puzzles, and remembering your settings — all handled only on the device and never sent to us.</li>
+          <li><strong>Customer support</strong>: Receiving and answering inquiries you send by email and letting you know the outcome</li>
+        </ul>
+
+        <h2>2. Information We Process</h2>
+        <p>The App does not require sign-up. The information the App stores on your device, and the information we receive to answer inquiries, is as follows.</p>
+        <ScrollableLegalTable label="Privacy information table; scroll horizontally">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Items</th>
+              <th>Method · Where it lives</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Game records</td>
+              <td>The puzzle in progress, entered digits and notes (candidates), undo and redo history, selected cell, puzzle-pack progress</td>
+              <td>Stored only in the App's private storage on the device. Never sent to us, and we cannot see it</td>
+            </tr>
+            <tr>
+              <td>My Puzzles</td>
+              <td>The given digits of puzzles you enter yourself and an optional title (up to 40 characters); up to 100 puzzles</td>
+              <td>Stored only in the App's private storage on the device. Never sent to us, and we cannot see it</td>
+            </tr>
+            <tr>
+              <td>App settings</td>
+              <td>Auto-Clear Related Notes, Haptic Feedback, Background Theme (Paper, Garden, Night), Appearance</td>
+              <td>Stored only in the App's private storage on the device. Never sent to us, and we cannot see it</td>
+            </tr>
+            <tr>
+              <td>Email inquiries</td>
+              <td>Email address, name (optional), message</td>
+              <td>Collected only when you email our support or privacy address directly</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+
+        <h2>3. Retention Period</h2>
+        <ul>
+          <li><strong>Game records, My Puzzles and app settings (on the device)</strong>: Kept on the device until you delete the App, and deleted along with it. Whether they are included in device backups depends on your iOS backup settings.</li>
+          <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after the inquiry is resolved</li>
+        </ul>
+
+        <h2>4. Disclosure to Third Parties</h2>
+        <p>We do not provide your personal data to third parties, except with your consent or where required by law (Articles 17 and 18 of the Korean Personal Information Protection Act).</p>
+
+        <h2>5. Processing Entrustment</h2>
+        <p>We do not entrust the processing of personal data related to the App to any other party.</p>
+
+        <h2>6. International Data Transfers</h2>
+        <p>We do not transfer personal data related to the App to other countries. The App does not send the information it stores off your device.</p>
+
+        <h2>7. Information Handled by Apple</h2>
+        <p>App Store downloads of the App, crash and diagnostic reports you choose to share with app developers, and TestFlight feedback are handled by Apple under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+
+        <h2>8. App Permissions</h2>
+        <p>The App requests no device permissions. It does not ask for location, camera, microphone, contacts, photos or notifications access, and it does not show the App Tracking Transparency prompt.</p>
+
+        <h2>9. Data Destruction</h2>
+        <ul>
+          <li><strong>Procedure</strong>: Personal data that is no longer needed, for example because its retention period has ended, is destroyed without delay with the approval of the data protection officer.</li>
+          <li><strong>Method</strong>: Electronic files are permanently deleted so they cannot be recovered. Game records, My Puzzles and app settings are removed from the device when you delete the App.</li>
+        </ul>
+
+        <h2>10. Your Rights</h2>
+        <p>You (including a legal guardian) may exercise the following rights with us at any time.</p>
+        <ol>
+          <li>The right to be informed about the processing of your personal data</li>
+          <li>The right to decide whether and to what extent to consent to processing</li>
+          <li>The right to confirm whether your data is processed and to access it</li>
+          <li>The right to request suspension of processing, correction, deletion and destruction</li>
+          <li>The right to prompt and fair remedy for damage caused by processing</li>
+        </ol>
+        <p>Exercise these rights by contacting <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>; we will act without undue delay. Game records, My Puzzles and app settings stored only on your device are not held by us, so we cannot access or delete them for you; they are erased from the device when you delete the App.</p>
+
+        <h2>11. Security Measures</h2>
+        <p>We take the following measures to keep personal data secure.</p>
+        <ul>
+          <li>A design in which the App sends no information off the device (no network requests of its own, no connection to our servers)</li>
+          <li>Game records, My Puzzles and app settings kept in the App's private storage on the device</li>
+          <li>Access control for inquiry emails</li>
+        </ul>
+
+        <h2>12. Children's Privacy</h2>
+        <p>The App does not collect personal data from anyone, whatever their age. If a child under 14 contacts us by email, however, the consent of a legal guardian may be required. If we learn that personal data of a child under 14 was collected without a legal guardian's consent, we will delete it without delay. Parents and guardians may contact us or request deletion at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+
+        <h2>13. Data Protection Officer</h2>
+        <ul>
+          <li>Company: PiFl Labs Co., Ltd.</li>
+          <li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+        </ul>
+        <p>For help using the App, see the <a href="/en/apps/pipi-sudoku/support/">support page</a> or email <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
+
+        <h2>14. Remedies</h2>
+        <p>To seek remedies for a privacy infringement, you may apply for dispute resolution or consultation to the following Korean authorities.</p>
+        <ul>
+          <li>Personal Information Dispute Mediation Committee: 1833-6972 (www.kopico.go.kr)</li>
+          <li>KISA Privacy Center: 118 (privacy.kisa.or.kr)</li>
+          <li>Supreme Prosecutors' Office: 1301 (www.spo.go.kr)</li>
+          <li>National Police Agency: 182 (ecrm.cyber.go.kr)</li>
+        </ul>
+
+        <h2>15. Changes to this Policy</h2>
+        <p>This Privacy Policy is effective from October 13, 2026. Any changes will be announced on this page.</p>
+      </div>
+      )}
+
+      {lang === 'ja' && (
+      <div class="legal-card">
+        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、韓国の「個人情報保護法」第30条に基づき、お客様の個人情報を保護し、これに関するご相談を迅速かつ円滑に処理するため、オフラインで9×9のナンプレを解くモバイルアプリケーション<strong>ひとマスずつナンプレ</strong>（以下「本アプリ」）のプライバシーポリシーを次のとおり定めて公開します。本ポリシーは、当社ウェブサイトの<a href="/ja/privacy/">総合プライバシーポリシー</a>に優先して本アプリに適用されます。</p>
+
+        <p>本アプリには<strong>会員登録・ログインがなく</strong>、広告・アプリ内課金・分析およびトラッキングのツール（SDK）を使用していません。本アプリは自らネットワーク通信を行わず、当社のサーバーにも接続しません。<strong>パズルの進行状況、マイパズル、設定は端末内のアプリ専用の保存領域にのみ保存され、当社がこれらを見ることはできません。</strong></p>
+
+        <h2>第1条 (利用目的)</h2>
+        <ul>
+          <li><strong>アプリ機能の提供</strong>: 解いていたパズルの状態の復元（入力した数字とメモ、取り消し・やり直しの履歴、選んでいたマス）、パズルパックの進行状況とマイパズルの保存、設定の保持 — いずれも端末内でのみ処理され、当社には送信されません。</li>
+          <li><strong>お問い合わせへの対応</strong>: メールでいただいたお問い合わせの受付、回答および対応結果のご連絡</li>
+        </ul>
+
+        <h2>第2条 (取り扱う個人情報の項目)</h2>
+        <p>本アプリは会員登録を必要としません。本アプリが端末に保存する情報と、当社がお問い合わせへの対応のために受け取る情報は次のとおりです。</p>
+        <ScrollableLegalTable label="個人情報の案内表。横にスクロールできます">
+        <table>
+          <thead>
+            <tr>
+              <th>区分</th>
+              <th>項目</th>
+              <th>収集方法・保存場所</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ゲームの記録</td>
+              <td>解いている途中のパズル、入力した数字とメモ（候補）、取り消し・やり直しの履歴、選んでいたマス、パズルパックの進行状況</td>
+              <td>端末内のアプリ専用の保存領域にのみ保存。当社には送信されず、当社が見ることはできません</td>
+            </tr>
+            <tr>
+              <td>マイパズル</td>
+              <td>お客様がご自身で入力した問題の数字とタイトル（任意、40文字以内）、最大100問</td>
+              <td>端末内のアプリ専用の保存領域にのみ保存。当社には送信されず、当社が見ることはできません</td>
+            </tr>
+            <tr>
+              <td>アプリの設定</td>
+              <td>関連する候補を自動で消す、振動フィードバック、背景テーマ（ペーパー・ガーデン・ナイト）、表示モード</td>
+              <td>端末内のアプリ専用の保存領域にのみ保存。当社には送信されず、当社が見ることはできません</td>
+            </tr>
+            <tr>
+              <td>メールでのお問い合わせ</td>
+              <td>メールアドレス、お名前（任意）、お問い合わせ内容</td>
+              <td>当社のサポート用または個人情報用のメールアドレスにお客様が直接送信された場合に限り収集</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+
+        <h2>第3条 (保有期間)</h2>
+        <ul>
+          <li><strong>ゲームの記録・マイパズル・アプリの設定（端末内）</strong>: 本アプリを削除するまで端末に保存され、削除すると一緒に削除されます。端末のバックアップに含まれるかどうかは、お客様のiOSのバックアップ設定によります。</li>
+          <li><strong>メールでのお問い合わせ記録</strong>: 対応完了後 <strong>3年</strong></li>
+        </ul>
+
+        <h2>第4条 (第三者提供)</h2>
+        <p>当社は、お客様の同意がある場合、または韓国の「個人情報保護法」第17条および第18条に該当する場合など法令に基づく場合を除き、個人情報を第三者に提供しません。</p>
+
+        <h2>第5条 (個人情報処理の委託)</h2>
+        <p>当社は、本アプリに関する個人情報の処理業務を外部に委託していません。</p>
+
+        <h2>第6条 (国外移転)</h2>
+        <p>当社は、本アプリに関する個人情報を国外に移転しません。本アプリは、端末に保存した情報を端末の外へ送信しません。</p>
+
+        <h2>第7条 (Appleが取り扱う情報)</h2>
+        <p>App Storeからの本アプリのダウンロード、お客様がAppデベロッパと共有することを選んだクラッシュ・診断レポート、TestFlightのフィードバックは、Appleが<a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>に従って取り扱います。</p>
+
+        <h2>第8条 (アプリ権限)</h2>
+        <p>本アプリは端末の権限を要求しません。位置情報・カメラ・マイク・連絡先・写真・通知の権限を求めず、トラッキングの許可を求める画面（App Tracking Transparency）も表示しません。</p>
+
+        <h2>第9条 (個人情報の破棄手続および方法)</h2>
+        <ul>
+          <li><strong>手続</strong>: 保有期間が過ぎるなどして不要となった個人情報は、個人情報保護責任者の承認を経て遅滞なく破棄します。</li>
+          <li><strong>方法</strong>: 電子ファイルは復元不可能な方法で完全に削除します。端末に保存されたゲームの記録・マイパズル・アプリの設定は、本アプリを削除すると端末から一緒に削除されます。</li>
+        </ul>
+
+        <h2>第10条 (お客様の権利と行使方法)</h2>
+        <p>お客様（法定代理人を含みます）は、当社に対していつでも次の権利を行使できます。</p>
+        <ol>
+          <li>個人情報の処理に関する情報の提供を受ける権利</li>
+          <li>個人情報の処理への同意およびその範囲を選択する権利</li>
+          <li>個人情報の処理状況の確認および閲覧を要求する権利</li>
+          <li>個人情報の訂正、削除、処理停止、破棄を要求する権利</li>
+          <li>処理によって生じた損害に対する救済を求める権利</li>
+        </ol>
+        <p>権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。当社は遅滞なく対応します。端末にのみ保存されるゲームの記録・マイパズル・アプリの設定は当社が保有していないため、当社が閲覧したり削除したりすることはできません。これらは本アプリを削除すると端末から消去されます。</p>
+
+        <h2>第11条 (安全管理措置)</h2>
+        <p>当社は、個人情報の安全を確保するため、次の措置を講じています。</p>
+        <ul>
+          <li>本アプリが情報を端末の外へ送信しない設計（アプリ自体のネットワーク通信なし、当社サーバーへの接続なし）</li>
+          <li>ゲームの記録・マイパズル・アプリの設定を端末内のアプリ専用の保存領域に保存</li>
+          <li>お問い合わせメールへのアクセス権限の管理</li>
+        </ul>
+
+        <h2>第12条 (子どものプライバシー)</h2>
+        <p>本アプリは、年齢にかかわらず、どなたの個人情報も収集しません。ただし、満14歳未満のお子様がメールでお問い合わせをする場合は、法定代理人の同意が必要になることがあります。当社は、法定代理人の同意なく満14歳未満のお子様の個人情報を収集したことを確認した場合、遅滞なく削除します。保護者の方は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までお問い合わせや削除のご依頼をいただけます。</p>
+
+        <h2>第13条 (個人情報保護責任者)</h2>
+        <ul>
+          <li>会社名: 株式会社ピープルラブズ（PiFl Labs Co., Ltd.）</li>
+          <li>メール: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+        </ul>
+        <p>アプリの使い方に関するお問い合わせは、<a href="/ja/apps/pipi-sudoku/support/">サポートページ</a>または <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> までお送りください。</p>
+
+        <h2>第14条 (権利侵害の救済方法)</h2>
+        <p>個人情報の侵害について救済を受けるため、次の韓国の機関に紛争解決や相談を申し立てることができます。</p>
+        <ul>
+          <li>個人情報紛争調停委員会: 1833-6972 (www.kopico.go.kr)</li>
+          <li>個人情報侵害申告センター（KISA）: 118 (privacy.kisa.or.kr)</li>
+          <li>大検察庁: 1301 (www.spo.go.kr)</li>
+          <li>警察庁: 182 (ecrm.cyber.go.kr)</li>
+        </ul>
+
+        <h2>第15条 (改定)</h2>
+        <p>本プライバシーポリシーは、2026年10月13日から施行します。変更がある場合は、本ページを通じてお知らせします。</p>
+      </div>
+      )}
     </div>
   </main>
 
   <style>
-    /* 본문은 경로 언어와 무관하게 한국어 — 어절 단위로 줄바꿈한다. */
-    .legal-hero h1, .legal-card { overflow-wrap: break-word; word-break: keep-all; }
+    /* 한국어 본문만 어절 단위로 줄바꿈한다(영어·일본어는 기본 규칙). */
+    .legal-hero h1:lang(ko), .legal-card:lang(ko) { overflow-wrap: break-word; word-break: keep-all; }
   </style>
 </BaseLayout>
