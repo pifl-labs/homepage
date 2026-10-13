@@ -114,3 +114,12 @@ A standalone A5 card with Japanese instructions for Korean vocabulary learners: 
 - [Japanese PDF](https://pifl-labs.com/assets/printables/one-word-recall-card-ja.pdf) · [Japanese text version](https://pifl-labs.com/assets/printables/one-word-recall-card-ja.txt)
 - No app, registration or purchase is needed for the sheet. The optional iOS app, [ことば習慣](https://apps.apple.com/jp/app/id6770267735), contains ads and paid word packs/subscription. Paper instructions are not an app language or feature update.
 - Created by PiFl Labs with AI writing assistance; Noto Sans JP is embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/one-word-recall-card-ja-OFL.txt). Actual printing, native app QA and learning outcomes are not claimed.
+
+
+## 한국어 안내 한 단어 복습지
+
+이미 배운 단어 하나를 뜻에서 떠올려 쓰고, 자기 교재의 정답과 직접 비교하는 A5 빈 복습지입니다. 기억나지 않으면 빈칸으로 두어도 됩니다. 단어·정답을 제공하거나 자동으로 채점하지 않습니다.
+
+- [한국어 PDF](https://pifl-labs.com/assets/printables/one-word-recall-card-ko.pdf) · [같은 안내 텍스트](https://pifl-labs.com/assets/printables/one-word-recall-card-ko.txt)
+- 자료는 앱 설치·가입·구매 없이 사용할 수 있습니다. 선택 앱 [단어루틴 iOS](https://apps.apple.com/kr/app/id6770267735)는 광고 포함 무료 다운로드이며 추가 단어팩/구독은 선택 유료입니다.
+- 피플랩스 원본 / AI 작성 보조. Jua 글꼴은 기존 [SIL Open Font License](https://pifl-labs.com/assets/printables/jua-OFL.txt)를 따릅니다. 학습 효과·인쇄·앱 실물 검증을 이 자료로 입증하지 않습니다. 새로운 앱 기능이나 SNS 게시가 아닙니다.
