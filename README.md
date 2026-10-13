@@ -106,3 +106,11 @@ npm run test:built # build 후 3언어 홈·앱 링크 회귀 검사
 - `STRATEGY-2026.md` — 사업 전략
 - `HANDOFF.md` — 세션별 변경 이력
 - [캠페인 연결·측정 규약](docs/campaign-attribution.md) — 콘텐츠→웹→스토어, Apple 활성화 게이트·검증 현황
+
+## Free Japanese one-word self-check card
+
+A standalone A5 card with Japanese instructions for Korean vocabulary learners: write a meaning hint, try one word without looking, then compare with your own study source. A blank answer is OK; this is manual self-comparison, not automatic grading, test evaluation or evidence of learning effectiveness.
+
+- [Japanese PDF](https://pifl-labs.com/assets/printables/one-word-recall-card-ja.pdf) · [Japanese text version](https://pifl-labs.com/assets/printables/one-word-recall-card-ja.txt)
+- No app, registration or purchase is needed for the sheet. The optional iOS app, [ことば習慣](https://apps.apple.com/jp/app/id6770267735), contains ads and paid word packs/subscription. Paper instructions are not an app language or feature update.
+- Created by PiFl Labs with AI writing assistance; Noto Sans JP is embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/one-word-recall-card-ja-OFL.txt). Actual printing, native app QA and learning outcomes are not claimed.
