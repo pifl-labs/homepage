@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { Lang } from '../../i18n/ui';
+
+interface Props { lang?: Lang; homeHref?: string }
+// 앱이 한국어 전용이라 본문은 한국어 단일 페이지다. 3언어 경로에서 모두 렌더하되
+// canonical 은 ko 한 곳으로 모아 중복 색인을 막는다(언어 전환 404 방지가 목적).
+// en/ja 경로에서는 크롬(nav·footer)만 해당 언어이므로 본문 영역에 lang="ko" 를 단다.
+const { lang = 'ko', homeHref = '/ko/' } = Astro.props;
+
+const canonical = 'https://pifl-labs.com/ko/apps/pipi-sudoku/support/';
+---
+<BaseLayout
+  lang={lang}
+  title="한칸씩 스도쿠 지원 - PiFl Labs"
+  description="한칸씩 스도쿠 사용 방법, 자주 묻는 질문과 지원 문의 안내입니다."
+  canonical={canonical}
+  alternates={[{ hreflang: 'ko', href: canonical }, { hreflang: 'x-default', href: canonical }]}
+  extraCss={["/styles.css"]}
+>
+  <section class="legal-hero" lang="ko">
+    <div class="container">
+      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> 홈으로 돌아가기</a>
+      <h1><i class="fas fa-life-ring" aria-hidden="true"></i> <span class="text-gradient">한칸씩 스도쿠 지원</span></h1>
+      <p class="legal-date">사용 방법 · 자주 묻는 질문 · 문의</p>
+    </div>
+  </section>
+
+  <main id="main" class="legal-page" lang="ko">
+    <div class="container support-grid">
+      <article class="legal-card support-card">
+        <p class="section-label">사용 방법</p>
+        <h2>빠른 안내</h2>
+        <ol>
+          <li><strong>숫자 입력:</strong> 칸을 고른 뒤 숫자를 누르면 그 칸에 숫자가 들어갑니다.</li>
+          <li><strong>메모 모드:</strong> 메모 모드를 켜고 숫자를 누르면 칸에 후보를 적거나 지울 수 있습니다.</li>
+          <li><strong>되돌리기·다시 실행:</strong> 되돌리기로 방금 한 변경을 취소하고, 다시 실행으로 되돌린 변경을 다시 적용합니다.</li>
+          <li><strong>범위를 정한 힌트:</strong> 칸·행·열·박스 가운데 도움받을 범위를 정해 힌트를 요청하면, 그 범위에서 <strong>위치 → 이유 → 숫자</strong> 순서로 한 단계씩 확인할 수 있습니다. 보드는 <strong>적용</strong>을 눌러야 바뀝니다.</li>
+          <li><strong>내 퍼즐:</strong> 풀고 싶은 문제를 보드에 직접 입력하거나 81자리 텍스트로 입력하면 앱이 검증합니다. 해답이 하나인 문제만 저장됩니다.</li>
+        </ol>
+      </article>
+
+      <article class="legal-card support-card">
+        <p class="section-label">빠른 해결</p>
+        <h2>자주 묻는 질문</h2>
+
+        <h3>힌트가 "지원 기법이 없다"고 해요.</h3>
+        <p>힌트가 지원하는 기법은 <strong>단일 후보</strong>와 <strong>숨은 단일 후보</strong> 두 가지뿐입니다. 정한 범위에서 이 기법으로 설명할 수 있는 칸이 없으면 없다고 안내합니다. 범위를 바꿔 다시 요청하거나 직접 추론해 보세요. 보드 전체에 없다는 안내가 나오면 범위를 바꿔도 같으니 직접 추론해 주세요.</p>
+
+        <h3>힌트를 요청하면 숫자를 확인하라고 해요.</h3>
+        <p>보드에 틀린 숫자가 있으면 힌트를 줄 수 없습니다. 같은 행·열·박스에 겹치는 숫자가 있거나, 지금 입력한 숫자로는 퍼즐을 완성할 수 없는 경우입니다. 표시된 칸을 고치거나 최근 입력을 되돌린 뒤 다시 요청해 주세요.</p>
+
+        <h3>메모가 저절로 지워져요.</h3>
+        <p>숫자를 넣으면 같은 행·열·박스에 있는 같은 숫자의 메모가 자동으로 정리됩니다. 원하지 않으면 <strong>설정 › 메모 › 관련 후보 자동 정리</strong>를 끄세요.</p>
+
+        <h3>진동을 끄고 싶어요.</h3>
+        <p><strong>설정 › 햅틱</strong>에서 <strong>진동 피드백</strong>을 <strong>끄기</strong>로 바꾸세요.</p>
+
+        <h3>기록을 다른 기기로 옮길 수 있나요?</h3>
+        <p>계정과 동기화 기능이 없어 앱에서 옮길 수는 없습니다. 기록은 기기에만 저장되며, iOS 백업·복원에 포함되는 범위에서만 함께 옮겨집니다. 백업 포함 여부는 iOS 설정을 따릅니다.</p>
+
+        <h3>내 퍼즐이 저장되지 않아요.</h3>
+        <p>아래 조건을 확인해 주세요.</p>
+        <ul>
+          <li>주어진 숫자를 <strong>17개 이상</strong> 입력해야 합니다.</li>
+          <li><strong>해답이 하나</strong>인 문제만 저장됩니다.</li>
+          <li>검증이 끝나지 않은 문제는 저장하지 않습니다. 숫자를 다시 확인하거나 다른 문제를 입력해 주세요.</li>
+          <li>내 퍼즐은 <strong>최대 100개</strong>까지 저장할 수 있습니다.</li>
+        </ul>
+
+        <h3>앱을 지우면 기록은 어떻게 되나요?</h3>
+        <p>앱을 삭제하면 게임 기록, 내 퍼즐, 설정이 기기에서 함께 삭제됩니다. 회사 서버에는 사본이 없으므로 iOS 백업에 포함된 경우가 아니면 되살릴 수 없습니다.</p>
+      </article>
+
+      <article class="legal-card support-card contact-card">
+        <p class="section-label">지원 연락처</p>
+        <h2>문의</h2>
+        <p>문제가 계속되면 아래 정보를 함께 보내 주세요. 원인을 더 빠르게 확인할 수 있습니다.</p>
+        <ul>
+          <li>기기 모델과 iOS 버전</li>
+          <li>앱 버전(<strong>설정 › 앱 정보</strong>에서 확인)</li>
+          <li>문제를 재현한 순서</li>
+          <li>가능한 경우 개인정보를 가린 화면 캡처</li>
+        </ul>
+        <p class="contact-link"><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a></p>
+        <p>개인정보 관련 문의는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 보내 주세요.</p>
+        <p><a href="/ko/apps/pipi-sudoku/privacy/">개인정보처리방침 보기 <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+      </article>
+    </div>
+  </main>
+
+  <style>
+    /* 본문은 경로 언어와 무관하게 한국어 — 어절 단위로 줄바꿈한다. */
+    .legal-hero h1, .legal-card { overflow-wrap: break-word; word-break: keep-all; }
+    .support-grid { display: grid; gap: 1.25rem; }
+    .support-card h2 { margin-top: 0; }
+    .support-card h3 { font-size: 1.08rem; margin-top: 1.6rem; }
+    .support-card li + li { margin-top: .55rem; }
+    /* 첫 문단 리드 스타일(.legal-card > p:first-child)을 눈썹 라벨에서 걷어낸다. */
+    .support-card > .section-label { border-bottom: 0; color: var(--accent-highlight); font-size: .85rem; font-weight: 900; letter-spacing: .08em; line-height: 1.4; margin-bottom: .35rem; padding-bottom: 0; }
+    .contact-card { border-color: var(--border-strong); }
+    .contact-link a { align-items: center; background: var(--navy); border: 1px solid var(--border-strong); border-radius: var(--radius-pill); color: var(--text-primary); display: inline-flex; font-weight: 800; gap: .55rem; padding: .75rem 1.1rem; text-decoration: none; }
+    .contact-link a:hover { border-color: var(--accent-warm); transform: translateY(-1px); }
+  </style>
+</BaseLayout>
