@@ -44,6 +44,13 @@ The optional Vocab Routine iOS link is separate: free basic decks with daily lim
 선택인 집중항해 iOS 타이머는 광고 포함 무료 다운로드, 광고 제거는 선택 1회 구매입니다.
 문서에 사용한 Jua 폰트: Copyright 2018 The Jua Project Authors, [SIL Open Font License 1.1](https://pifl-labs.com/assets/printables/jua-OFL.txt). 폰트 출처 표기는 양식이나 앱에 대한 추천·보증을 의미하지 않습니다.
 
+### Free Korean help-request resource
+
+[Please help me (one-page Korean–English PDF)](https://pipi-worlds.com/assets/marketing/bridge-free-activity-20260922/help-me-ko-en.pdf).
+For grown-ups and children aged 4–8 who are new to Korean: model a missing-pencil situation, take turns asking for help, then draw another situation. English instructions accompany Korean phrases. No app or sign-up required.
+Prepared by PiFl Labs with AI assistance; not independently educator-reviewed or classroom-tested, and no learning outcome is promised.
+The optional Korean Bridge iOS app is free and ad-free, with no purchases or subscriptions.
+
 ## 스택
 
 - **Astro 5** static site
