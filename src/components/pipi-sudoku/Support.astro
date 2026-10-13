@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { Lang } from '../../i18n/ui';
+
+interface Props { lang?: Lang; homeHref?: string }
+// 한칸씩 스도쿠는 한국어·영어·일본어로 출시한다. 형제 앱처럼 로케일 경로마다 그 언어 본문 하나만
+// 서빙한다(자기 canonical + ko/en/ja alternate, x-default 는 사이트 규칙대로 /ko/).
+// 무prefix 레거시 경로는 영어 본문을 렌더한다(canonical /en/).
+// 버튼·설정 이름은 앱 화면 문구(Localizable.xcstrings)와 글자 그대로 맞춘다.
+// 일본어판은 니콜리 등록상표인 「数独」「SUDOKU」를 쓰지 않고 「ナンプレ」로 표기한다.
+const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
+
+const BASE = 'https://pifl-labs.com';
+const PATH = '/apps/pipi-sudoku/support/';
+const canonical = `${BASE}/${lang}${PATH}`;
+const alternates = [
+  { hreflang: 'en', href: `${BASE}/en${PATH}` },
+  { hreflang: 'ko', href: `${BASE}/ko${PATH}` },
+  { hreflang: 'ja', href: `${BASE}/ja${PATH}` },
+  { hreflang: 'x-default', href: `${BASE}/ko${PATH}` },
+];
+
+const chrome = {
+  ko: {
+    docTitle: '한칸씩 스도쿠 지원 - PiFl Labs',
+    docDesc: '한칸씩 스도쿠 사용 방법, 자주 묻는 질문과 지원 문의 안내입니다.',
+    back: '홈으로 돌아가기',
+    title: '한칸씩 스도쿠 지원',
+    sub: '사용 방법 · 자주 묻는 질문 · 문의',
+  },
+  en: {
+    docTitle: 'Cell by Cell Sudoku Support - PiFl Labs',
+    docDesc: 'How to play Cell by Cell Sudoku, frequently asked questions, and how to contact support.',
+    back: 'Back to Home',
+    title: 'Cell by Cell Sudoku Support',
+    sub: 'How to play · FAQ · Contact',
+  },
+  ja: {
+    docTitle: 'ひとマスずつナンプレ サポート - PiFl Labs',
+    docDesc: 'ひとマスずつナンプレの遊び方、よくある質問、サポートへのお問い合わせ方法のご案内です。',
+    back: 'ホームに戻る',
+    title: 'ひとマスずつナンプレ サポート',
+    sub: '遊び方 · よくある質問 · お問い合わせ',
+  },
+}[lang];
+---
+<BaseLayout
+  lang={lang}
+  title={chrome.docTitle}
+  description={chrome.docDesc}
+  canonical={canonical}
+  alternates={alternates}
+  extraCss={["/styles.css"]}
+>
+  <section class="legal-hero">
+    <div class="container">
+      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {chrome.back}</a>
+      <h1><i class="fas fa-life-ring" aria-hidden="true"></i> <span class="text-gradient">{chrome.title}</span></h1>
+      <p class="legal-date">{chrome.sub}</p>
+    </div>
+  </section>
+
+  <main id="main" class="legal-page">
+    <div class="container support-grid">
+      {lang === 'ko' && (
+      <>
+      <article class="legal-card support-card">
+        <p class="section-label">사용 방법</p>
+        <h2>빠른 안내</h2>
+        <ol>
+          <li><strong>숫자 입력:</strong> 칸을 고른 뒤 숫자를 누르면 그 칸에 숫자가 들어갑니다.</li>
+          <li><strong>메모 모드:</strong> 메모 모드를 켜고 숫자를 누르면 칸에 후보를 적거나 지울 수 있습니다.</li>
+          <li><strong>되돌리기·다시 실행:</strong> 되돌리기로 방금 한 변경을 취소하고, 다시 실행으로 되돌린 변경을 다시 적용합니다.</li>
+          <li><strong>범위를 정한 힌트:</strong> 칸·행·열·박스 가운데 도움받을 범위를 정해 힌트를 요청하면, 그 범위에서 <strong>위치 → 근거 → 숫자</strong> 순서로 한 단계씩 확인할 수 있습니다. 보드는 <strong>채우기</strong>를 눌러야 바뀝니다.</li>
+          <li><strong>내 퍼즐:</strong> 내 퍼즐에서 <strong>새 문제 입력</strong>을 누르고 보드에 주어진 숫자를 입력하거나 <strong>81자리 텍스트로 입력</strong>을 쓴 뒤 <strong>문제 검증하기</strong>를 누릅니다. 해답이 하나인 문제만 <strong>저장하고 플레이</strong>로 저장할 수 있습니다.</li>
+        </ol>
+      </article>
+
+      <article class="legal-card support-card">
+        <p class="section-label">빠른 해결</p>
+        <h2>자주 묻는 질문</h2>
+
+        <h3>힌트가 “이 범위에는 지금 설명할 수 있는 힌트가 없어요”라고 해요.</h3>
+        <p>힌트가 지원하는 기법은 <strong>단일 후보</strong>와 <strong>숨은 단일 후보</strong> 두 가지뿐입니다. 정한 범위에서 이 기법으로 설명할 수 있는 칸이 없으면 이 안내가 나옵니다. 범위를 바꿔 다시 요청하거나 직접 추론해 보세요. “지금 보드 전체에 지원 기법으로 설명할 수 있는 칸이 없어요”라는 안내가 나오면 범위를 바꿔도 같으니 직접 추론해 주세요.</p>
+
+        <h3>힌트를 요청하면 숫자를 확인하라고 해요.</h3>
+        <p>보드에 틀린 숫자가 있으면 힌트를 줄 수 없습니다. 같은 행·열·박스에 겹치는 숫자가 있거나, 지금 입력한 숫자로는 퍼즐을 완성할 수 없는 경우입니다. 표시된 칸을 고치거나 최근 입력을 되돌린 뒤 다시 요청해 주세요.</p>
+
+        <h3>메모가 저절로 지워져요.</h3>
+        <p>숫자를 넣으면 같은 행·열·박스에 있는 같은 숫자의 메모가 자동으로 정리됩니다. 원하지 않으면 <strong>설정 › 메모 › 관련 후보 자동 정리</strong>를 끄세요.</p>
+
+        <h3>진동을 끄고 싶어요.</h3>
+        <p><strong>설정 › 햅틱</strong>에서 <strong>진동 피드백</strong>을 <strong>끄기</strong>로 바꾸세요.</p>
+
+        <h3>앱 언어는 어떻게 정해지나요?</h3>
+        <p>앱은 iPhone·iPad의 언어 설정을 따릅니다(한국어·영어·일본어). 그 밖의 언어로 설정된 기기에서는 영어로 표시됩니다.</p>
+
+        <h3>기록을 다른 기기로 옮길 수 있나요?</h3>
+        <p>계정과 동기화 기능이 없어 앱에서 옮길 수는 없습니다. 기록은 기기에만 저장되며, iOS 백업·복원에 포함되는 범위에서만 함께 옮겨집니다. 백업 포함 여부는 iOS 설정을 따릅니다.</p>
+
+        <h3>내 퍼즐이 저장되지 않아요.</h3>
+        <p>아래 조건을 확인해 주세요.</p>
+        <ul>
+          <li>주어진 숫자를 <strong>17개 이상</strong> 입력해야 합니다.</li>
+          <li><strong>해답이 하나</strong>인 문제만 저장됩니다.</li>
+          <li>검증이 끝나지 않은 문제는 저장하지 않습니다. 숫자를 다시 확인하거나 다른 문제를 입력해 주세요.</li>
+          <li>이미 저장한 문제는 다시 저장되지 않습니다. “이미 저장한 내 퍼즐입니다…”라는 안내가 나오면 내 퍼즐 목록에서 이어서 풀어 주세요.</li>
+          <li>문제 이름은 <strong>40자까지</strong> 쓸 수 있습니다. 40자를 넘으면 “문제 이름은 40자까지 사용할 수 있어요.”라는 안내가 나오고, 이름을 줄일 때까지 검증하거나 저장할 수 없습니다.</li>
+          <li>내 퍼즐은 <strong>최대 100개</strong>까지 저장할 수 있습니다.</li>
+        </ul>
+
+        <h3>앱을 지우면 기록은 어떻게 되나요?</h3>
+        <p>앱을 삭제하면 게임 기록, 내 퍼즐, 설정이 기기에서 함께 삭제됩니다. 회사 서버에는 사본이 없으므로 iOS 백업에 포함된 경우가 아니면 되살릴 수 없습니다.</p>
+      </article>
+
+      <article class="legal-card support-card contact-card">
+        <p class="section-label">지원 연락처</p>
+        <h2>문의</h2>
+        <p>문제가 계속되면 아래 정보를 함께 보내 주세요. 원인을 더 빠르게 확인할 수 있습니다.</p>
+        <ul>
+          <li>기기 모델과 iOS 버전</li>
+          <li>앱 버전(<strong>설정 › 앱 정보</strong>에서 확인)</li>
+          <li>문제를 재현한 순서</li>
+          <li>가능한 경우 개인정보를 가린 화면 캡처</li>
+        </ul>
+        <p class="contact-link"><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a></p>
+        <p>개인정보 관련 문의는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 보내 주세요.</p>
+        <p><a href="/ko/apps/pipi-sudoku/privacy/">개인정보처리방침 보기 <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+      </article>
+      </>
+      )}
+
+      {lang === 'en' && (
+      <>
+      <article class="legal-card support-card">
+        <p class="section-label">How to play</p>
+        <h2>Quick Guide</h2>
+        <ol>
+          <li><strong>Enter a digit:</strong> Pick a cell, then tap a digit to place it in that cell.</li>
+          <li><strong>Notes mode:</strong> In Notes mode, tapping a digit writes or removes a candidate in the cell.</li>
+          <li><strong>Undo and Redo:</strong> Undo cancels your last change, and Redo reapplies a change you undid.</li>
+          <li><strong>Hints in an area you choose:</strong> Choose a hint area (<strong>Cell</strong>, <strong>Row</strong>, <strong>Column</strong> or <strong>Box</strong>) and ask for a hint to see <strong>Where → Why → Digit</strong> one step at a time within that area. The board changes only when you tap <strong>Fill In</strong>.</li>
+          <li><strong>My Puzzles:</strong> In My Puzzles, tap <strong>Enter a New Puzzle</strong>, type the puzzle's given digits on the board or use <strong>Enter as 81-Digit Text</strong>, then tap <strong>Check Puzzle</strong>. Only a puzzle with exactly one solution can be saved, with <strong>Save and Play</strong>.</li>
+        </ol>
+      </article>
+
+      <article class="legal-card support-card">
+        <p class="section-label">Quick fixes</p>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>The hint says “There’s no hint to explain in this area right now.”</h3>
+        <p>Hints support only two techniques: <strong>single candidate</strong> and <strong>hidden single</strong>. If no cell in the area you chose can be explained with them, you'll see this message. Change the area and ask again, or reason it out yourself. If you see “No cell on the whole board can be explained with the supported techniques right now.”, changing the area won't help, so reason it out yourself.</p>
+
+        <h3>The hint asks me to check my digits.</h3>
+        <p>Hints can't be given while the board has a wrong digit: when the same digit repeats in a row, column or box, or when the puzzle can't be finished from the digits entered so far. Fix the marked cells or undo your recent entries, then ask again.</p>
+
+        <h3>My notes disappear on their own.</h3>
+        <p>When you enter a digit, that digit's notes in the same row, column and box are cleared automatically. If you don't want this, turn off <strong>Settings › Notes › Auto-Clear Related Notes</strong>.</p>
+
+        <h3>How do I turn off vibration?</h3>
+        <p>In <strong>Settings › Haptics</strong>, set <strong>Haptic Feedback</strong> to <strong>Off</strong>.</p>
+
+        <h3>Which language does the app use?</h3>
+        <p>The app follows your iPhone or iPad language setting (Korean, English or Japanese). On devices set to any other language, it appears in English.</p>
+
+        <h3>Can I move my records to another device?</h3>
+        <p>There's no account or sync, so you can't move them from within the app. Records are stored only on the device and move only as part of an iOS backup and restore. Whether they're included in backups depends on your iOS settings.</p>
+
+        <h3>My puzzle won't save.</h3>
+        <p>Please check the following.</p>
+        <ul>
+          <li>Enter at least <strong>17 given digits</strong>.</li>
+          <li>Only puzzles with <strong>exactly one solution</strong> are saved.</li>
+          <li>A puzzle isn't saved if its check doesn't finish. Check the digits or enter another puzzle.</li>
+          <li>A puzzle you've already saved isn't saved again. If you see “This puzzle is already in My Puzzles…”, continue it from My Puzzles.</li>
+          <li>Puzzle names can be up to <strong>40 characters</strong>. With a longer name you'll see “Puzzle names can be up to 40 characters.” and can't check or save the puzzle until you shorten it.</li>
+          <li>My Puzzles holds up to <strong>100 puzzles</strong>.</li>
+        </ul>
+
+        <h3>What happens to my records if I delete the app?</h3>
+        <p>Deleting the app also deletes your game records, My Puzzles and settings from the device. There's no copy on our servers, so they can't be restored unless they're in an iOS backup.</p>
+      </article>
+
+      <article class="legal-card support-card contact-card">
+        <p class="section-label">Get in touch</p>
+        <h2>Contact</h2>
+        <p>If the problem continues, please send us the following. It helps us find the cause faster.</p>
+        <ul>
+          <li>Device model and iOS version</li>
+          <li>App version (in <strong>Settings › About</strong>)</li>
+          <li>The steps that reproduce the problem</li>
+          <li>A screenshot with personal information hidden, if possible</li>
+        </ul>
+        <p class="contact-link"><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a></p>
+        <p>For privacy questions, email <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+        <p><a href="/en/apps/pipi-sudoku/privacy/">View the Privacy Policy <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+      </article>
+      </>
+      )}
+
+      {lang === 'ja' && (
+      <>
+      <article class="legal-card support-card">
+        <p class="section-label">遊び方</p>
+        <h2>クイックガイド</h2>
+        <ol>
+          <li><strong>数字の入力:</strong> マスを選んでから数字を押すと、そのマスに数字が入ります。</li>
+          <li><strong>メモモード:</strong> メモモードで数字を押すと、マスに候補を書いたり消したりできます。</li>
+          <li><strong>取り消し・やり直し:</strong> 「取り消す」で直前の変更を取り消し、「やり直す」で取り消した変更をもう一度反映します。</li>
+          <li><strong>範囲を決めて使うヒント:</strong> ヒントの範囲（<strong>マス</strong>・<strong>行</strong>・<strong>列</strong>・<strong>ブロック</strong>）を選んでヒントを求めると、その範囲の中で<strong>場所 → 理由 → 数字</strong>の順に一段階ずつ確認できます。盤面は<strong>「入れる」</strong>を押したときだけ変わります。</li>
+          <li><strong>マイパズル:</strong> マイパズルで<strong>「新しい問題を入力」</strong>を押し、問題の数字を盤面に入力するか<strong>「81桁のテキストで入力」</strong>を使ってから、<strong>「問題を検証」</strong>を押します。解が1つだけの問題に限り、<strong>「保存して遊ぶ」</strong>で保存できます。</li>
+        </ol>
+      </article>
+
+      <article class="legal-card support-card">
+        <p class="section-label">すぐに解決</p>
+        <h2>よくある質問</h2>
+
+        <h3>ヒントで「この範囲には今説明できるヒントがありません」と表示されます。</h3>
+        <p>ヒントが対応している手筋は<strong>唯一候補</strong>と<strong>隠れた唯一候補</strong>の2つだけです。選んだ範囲にこれらの手筋で説明できるマスがないときに、この表示が出ます。範囲を変えてもう一度求めるか、ご自身で推理してください。「今は盤面全体に、対応する手筋で説明できるマスがありません」と表示された場合は、範囲を変えても同じなので、ご自身で推理してください。</p>
+
+        <h3>ヒントを求めると、数字を確認するよう表示されます。</h3>
+        <p>盤面に間違った数字があると、ヒントは出せません。同じ行・列・ブロックに重複する数字がある場合や、今の数字ではパズルを完成できない場合です。印の付いたマスを直すか最近の入力を取り消してから、もう一度求めてください。</p>
+
+        <h3>メモが勝手に消えます。</h3>
+        <p>数字を入れると、同じ行・列・ブロックにある同じ数字のメモが自動で消えます。消したくない場合は、<strong>設定 › メモ › 「関連するメモを自動で消す」</strong>をオフにしてください。</p>
+
+        <h3>振動をオフにしたいです。</h3>
+        <p><strong>設定 › 触覚</strong>で<strong>「振動フィードバック」</strong>を<strong>「オフ」</strong>にしてください。</p>
+
+        <h3>アプリの言語はどう決まりますか？</h3>
+        <p>アプリはiPhone・iPadの言語設定に従います（韓国語・英語・日本語）。それ以外の言語に設定された端末では英語で表示されます。</p>
+
+        <h3>記録を別の端末に移せますか？</h3>
+        <p>アカウントや同期の機能がないため、アプリで移すことはできません。記録は端末にのみ保存され、iOSのバックアップと復元に含まれる範囲でのみ一緒に移ります。バックアップに含まれるかどうかはiOSの設定によります。</p>
+
+        <h3>マイパズルが保存できません。</h3>
+        <p>次の点をご確認ください。</p>
+        <ul>
+          <li>問題の数字を<strong>17個以上</strong>入力してください。</li>
+          <li><strong>解が1つだけ</strong>の問題に限り保存できます。</li>
+          <li>検証が終わらなかった問題は保存されません。数字を確認するか、別の問題を入力してください。</li>
+          <li>すでに保存した問題は、もう一度保存されません。「このパズルはすでにマイパズルにあります…」と表示されたら、マイパズルの一覧から続けてください。</li>
+          <li>問題の名前は<strong>40文字まで</strong>です。40文字を超えると「問題の名前は40文字までです。」と表示され、名前を短くするまで検証や保存はできません。</li>
+          <li>マイパズルは<strong>最大100問</strong>まで保存できます。</li>
+        </ul>
+
+        <h3>アプリを削除すると記録はどうなりますか？</h3>
+        <p>アプリを削除すると、ゲームの記録・マイパズル・設定も端末から削除されます。当社のサーバーにコピーはないため、iOSのバックアップに含まれている場合を除き、元に戻すことはできません。</p>
+      </article>
+
+      <article class="legal-card support-card contact-card">
+        <p class="section-label">お問い合わせ先</p>
+        <h2>お問い合わせ</h2>
+        <p>問題が解決しない場合は、次の情報を添えてご連絡ください。原因をより早く確認できます。</p>
+        <ul>
+          <li>端末のモデルとiOSのバージョン</li>
+          <li>アプリのバージョン（<strong>設定 › アプリ情報</strong>で確認できます）</li>
+          <li>問題が起きるまでの操作手順</li>
+          <li>可能であれば、個人情報を隠した画面のスクリーンショット</li>
+        </ul>
+        <p class="contact-link"><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a></p>
+        <p>個人情報に関するお問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までお送りください。</p>
+        <p><a href="/ja/apps/pipi-sudoku/privacy/">プライバシーポリシーを見る <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+      </article>
+      </>
+      )}
+    </div>
+  </main>
+
+  <style>
+    /* 한국어 본문만 어절 단위로 줄바꿈한다(영어·일본어는 기본 규칙). */
+    .legal-hero h1:lang(ko), .legal-card:lang(ko) { overflow-wrap: break-word; word-break: keep-all; }
+    .support-grid { display: grid; gap: 1.25rem; }
+    .support-card h2 { margin-top: 0; }
+    .support-card h3 { font-size: 1.08rem; margin-top: 1.6rem; }
+    .support-card li + li { margin-top: .55rem; }
+    /* 첫 문단 리드 스타일(.legal-card > p:first-child)을 눈썹 라벨에서 걷어낸다. */
+    .support-card > .section-label { border-bottom: 0; color: var(--accent-highlight); font-size: .85rem; font-weight: 900; letter-spacing: .08em; line-height: 1.4; margin-bottom: .35rem; padding-bottom: 0; }
+    .contact-card { border-color: var(--border-strong); }
+    .contact-link a { align-items: center; background: var(--navy); border: 1px solid var(--border-strong); border-radius: var(--radius-pill); color: var(--text-primary); display: inline-flex; font-weight: 800; gap: .55rem; padding: .75rem 1.1rem; text-decoration: none; }
+    .contact-link a:hover { border-color: var(--accent-warm); transform: translateY(-1px); }
+  </style>
+</BaseLayout>

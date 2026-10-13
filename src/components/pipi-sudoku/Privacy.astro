@@ -1,0 +1,616 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../ScrollableLegalTable.astro';
+import type { Lang } from '../../i18n/ui';
+
+interface Props { lang?: Lang; homeHref?: string }
+// 한칸씩 스도쿠는 한국어·영어·일본어로 출시한다. 형제 앱처럼 로케일 경로마다 그 언어 본문 하나만
+// 서빙한다(자기 canonical + ko/en/ja alternate, x-default 는 사이트 규칙대로 /ko/).
+// 무prefix 레거시 경로는 영어 본문을 렌더한다(canonical /en/).
+// 일본어판은 니콜리 등록상표인 「数独」「SUDOKU」를 쓰지 않고 「ナンプレ」로 표기한다.
+// 문의 메일은 Google Workspace 로 수신·보관하므로 위탁·국외 이전에 Google LLC 를 밝힌다.
+// 문의 관리 도구는 회사 통합 방침 제5조·제10조를 참조만 한다.
+const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
+
+const BASE = 'https://pifl-labs.com';
+const PATH = '/apps/pipi-sudoku/privacy/';
+const canonical = `${BASE}/${lang}${PATH}`;
+const alternates = [
+  { hreflang: 'en', href: `${BASE}/en${PATH}` },
+  { hreflang: 'ko', href: `${BASE}/ko${PATH}` },
+  { hreflang: 'ja', href: `${BASE}/ja${PATH}` },
+  { hreflang: 'x-default', href: `${BASE}/ko${PATH}` },
+];
+
+const chrome = {
+  ko: {
+    docTitle: '한칸씩 스도쿠 개인정보처리방침 - PiFl Labs',
+    docDesc: '계정, 광고, 인앱 결제, 분석·추적 도구 없이 오프라인으로 동작하는 한칸씩 스도쿠의 개인정보처리방침입니다.',
+    back: '홈으로 돌아가기',
+    title: '한칸씩 스도쿠 개인정보처리방침',
+    date: '시행일: 2026년 10월 13일',
+  },
+  en: {
+    docTitle: 'Cell by Cell Sudoku Privacy Policy - PiFl Labs',
+    docDesc: 'Privacy policy for Cell by Cell Sudoku, which works offline with no account, ads, in-app purchases, or analytics and tracking tools.',
+    back: 'Back to Home',
+    title: 'Cell by Cell Sudoku Privacy Policy',
+    date: 'Effective Date: October 13, 2026',
+  },
+  ja: {
+    docTitle: 'ひとマスずつナンプレ プライバシーポリシー - PiFl Labs',
+    docDesc: 'アカウント、広告、アプリ内課金、分析・トラッキングツールなしでオフラインで動作する「ひとマスずつナンプレ」のプライバシーポリシーです。',
+    back: 'ホームに戻る',
+    title: 'ひとマスずつナンプレ プライバシーポリシー',
+    date: '施行日: 2026年10月13日',
+  },
+}[lang];
+---
+<BaseLayout
+  lang={lang}
+  title={chrome.docTitle}
+  description={chrome.docDesc}
+  canonical={canonical}
+  alternates={alternates}
+  extraCss={["/styles.css"]}
+>
+  <section class="legal-hero">
+    <div class="container">
+      <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {chrome.back}</a>
+      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">{chrome.title}</span></h1>
+      <p class="legal-date">{chrome.date}</p>
+    </div>
+  </section>
+
+  <main id="main" class="legal-page">
+    <div class="container">
+      {lang === 'ko' && (
+      <div class="legal-card">
+        <p>주식회사 피플랩스(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여, 오프라인으로 9×9 스도쿠를 푸는 모바일 애플리케이션 <strong>한칸씩 스도쿠</strong>(이하 "앱")에 대한 개인정보 처리방침을 다음과 같이 수립·공개합니다. 본 방침은 회사 웹사이트의 <a href="/ko/privacy/">통합 개인정보처리방침</a>에 우선하여 본 앱에 적용됩니다.</p>
+
+        <p>앱은 <strong>회원가입·로그인이 없고</strong>, 광고·인앱 결제·분석 및 추적 도구(SDK)를 사용하지 않습니다. 앱은 스스로 네트워크 요청을 보내지 않으며 회사 서버에 연결하지 않습니다. <strong>퍼즐 진행 상황, 내 퍼즐, 설정은 기기 안의 앱 전용 저장 공간에만 저장되며, 회사는 이 정보를 볼 수 없습니다.</strong></p>
+
+        <h2>제1조 (개인정보의 처리 목적)</h2>
+        <ul>
+          <li><strong>앱 기능 제공</strong>: 풀던 퍼즐의 진행 상태 복원(입력한 숫자와 메모, 되돌리기·다시 실행 기록, 선택한 칸, 풀이 시간과 사용한 힌트 수), 퍼즐 팩 진행 상황과 내 퍼즐 보관, 설정 유지 — 모두 기기 안에서만 처리되며 회사로 전송되지 않습니다.</li>
+          <li><strong>고객 문의 응대</strong>: 이용자가 이메일로 보낸 문의의 접수, 답변 및 처리 결과 통보</li>
+        </ul>
+
+        <h2>제2조 (처리하는 개인정보의 항목)</h2>
+        <p>앱은 회원가입을 요구하지 않습니다. 앱이 기기에 저장하는 정보와 회사가 문의 응대를 위해 받는 정보는 다음과 같습니다.</p>
+        <ScrollableLegalTable label="개인정보 안내 표 1, 가로로 스크롤할 수 있습니다">
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>처리 항목</th>
+              <th>수집 방법 · 보관 위치</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>게임 기록</td>
+              <td>진행 중인 퍼즐, 입력한 숫자와 메모(후보), 되돌리기·다시 실행 기록, 선택한 칸, 풀이 시간, 사용한 힌트 수, 시작 시각, 힌트 범위, 퍼즐 팩 진행 상황</td>
+              <td>기기 안의 앱 전용 저장 공간에만 저장. 회사로 전송되지 않으며 회사는 볼 수 없음</td>
+            </tr>
+            <tr>
+              <td>내 퍼즐</td>
+              <td>이용자가 직접 입력한 퍼즐의 주어진 숫자와 문제 이름(선택, 40자 이내), 최대 100개</td>
+              <td>기기 안의 앱 전용 저장 공간에만 저장. 회사로 전송되지 않으며 회사는 볼 수 없음</td>
+            </tr>
+            <tr>
+              <td>앱 설정</td>
+              <td>관련 후보 자동 정리, 진동 피드백, 배경 테마(종이·정원·밤), 화면 모드</td>
+              <td>기기 안의 앱 전용 저장 공간에만 저장. 회사로 전송되지 않으며 회사는 볼 수 없음</td>
+            </tr>
+            <tr>
+              <td>이메일 문의</td>
+              <td>이메일 주소, 이름(선택), 문의 내용</td>
+              <td>이용자가 회사의 지원·개인정보 문의 메일로 직접 보내는 경우에 한해 수집</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>퍼즐을 완성한 뒤 <strong>완료 기록 공유</strong>를 고르면 iOS 공유 시트로 앱 이름·난이도·풀이 시간·사용한 힌트 수를 보낼 수 있습니다. 공유하기로 고른 내용은 이용자가 고른 앱으로만 전달되며 회사로는 전송되지 않습니다.</p>
+
+        <h2>제3조 (개인정보의 처리 및 보유기간)</h2>
+        <ul>
+          <li><strong>게임 기록·내 퍼즐·앱 설정(기기 내)</strong>: 이용자가 앱을 삭제할 때까지 기기에 보관되며, 앱을 삭제하면 함께 삭제됩니다. 기기 백업에 포함되는지는 이용자의 iOS 백업 설정을 따릅니다.</li>
+          <li><strong>이메일 문의 기록</strong>: 문의 처리 완료 후 <strong>3년</strong></li>
+        </ul>
+
+        <h2>제4조 (개인정보의 제3자 제공)</h2>
+        <p>회사는 정보주체의 개인정보를 제3자에게 제공하지 않습니다. 다만 정보주체의 동의가 있거나 법률에 특별한 규정이 있는 경우 등 「개인정보 보호법」 제17조·제18조에 해당하는 경우에는 예외로 합니다.</p>
+
+        <h2>제5조 (개인정보처리의 위탁)</h2>
+        <p>앱을 이용하는 과정에서는 개인정보 처리업무를 위탁하지 않습니다. 이메일 문의를 처리하기 위해 다음과 같이 위탁합니다.</p>
+        <ScrollableLegalTable label="개인정보 안내 표 2, 가로로 스크롤할 수 있습니다">
+        <table>
+          <thead>
+            <tr>
+              <th>수탁업체</th>
+              <th>위탁 업무</th>
+              <th>보유기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google LLC (Google Workspace)</td>
+              <td>회사 이메일(문의 메일) 수신·보관</td>
+              <td>문의 처리 완료 후 3년</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>문의를 관리하는 데 쓰는 도구의 위탁은 회사 <a href="/ko/privacy/">통합 개인정보처리방침</a> 제5조를 따릅니다.</p>
+
+        <h2>제6조 (국외 이전)</h2>
+        <p>앱을 이용하는 과정에서는 개인정보를 국외로 이전하지 않습니다. 회사 이메일은 Google Workspace로 수신·보관되므로, 이메일 문의는 다음과 같이 국외로 이전됩니다.</p>
+        <ScrollableLegalTable label="개인정보 안내 표 3, 가로로 스크롤할 수 있습니다">
+        <table>
+          <thead>
+            <tr>
+              <th>이전받는 자</th>
+              <th>이전 국가</th>
+              <th>이전 목적</th>
+              <th>이전 항목</th>
+              <th>이전 시기</th>
+              <th>보유기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google LLC (Google Workspace)</td>
+              <td>미국</td>
+              <td>회사 이메일(문의 메일) 수신·보관</td>
+              <td>이메일 주소, 이름(선택), 문의 내용</td>
+              <td>이메일을 받을 때</td>
+              <td>문의 처리 완료 후 3년</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>이전받는 자의 연락처와 세부 사항은 다음과 같습니다.</p>
+
+        <h3>Google LLC (Google Workspace) 이전 세부</h3>
+        <p>미국 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · 개인정보 문의: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google 개인정보 문의 양식</a></p>
+        <ul>
+          <li><strong>이전 항목</strong>: 이메일 주소, 이름(선택), 문의 내용</li>
+          <li><strong>이전 시기·방법</strong>: 이용자가 보낸 문의 메일이 회사 메일함(Google Workspace)에 전달될 때 암호화된 연결로 전송</li>
+          <li><strong>이용 목적</strong>: 회사 이메일(문의 메일) 수신·보관</li>
+          <li><strong>보유·이용 기간</strong>: 문의 처리 완료 후 3년</li>
+          <li><strong>이전 거부 방법·절차와 효과</strong>: 이메일로 문의하지 않으면 아무 정보도 이전되지 않습니다. 이 경우 이메일로 답변을 받을 수 없을 뿐, 앱은 그대로 이용할 수 있습니다.</li>
+        </ul>
+        <p>문의를 관리하는 데 쓰는 도구의 국외 이전은 회사 <a href="/ko/privacy/">통합 개인정보처리방침</a> 제10조를 따릅니다.</p>
+
+        <h2>제7조 (Apple이 처리하는 정보)</h2>
+        <p>App Store에서 앱을 내려받는 과정, 이용자가 앱 개발자와 공유하도록 선택한 충돌·진단 보고서, TestFlight 피드백은 Apple이 <a href="https://www.apple.com/kr/legal/privacy/" target="_blank" rel="noopener">Apple의 개인정보 처리방침</a>에 따라 처리합니다. 회사는 App Store Connect에서 익명 충돌 보고서와 TestFlight 피드백을 앱 개선 목적으로만 확인합니다.</p>
+        <p>TestFlight 피드백에는 테스터의 이메일 주소가 포함되며, 이는 TestFlight로 출시 전 빌드를 시험하는 사람에게만 해당하고 App Store 이용자와는 관계가 없습니다.</p>
+
+        <h2>제8조 (앱 권한 안내)</h2>
+        <p>본 앱은 기기 권한을 요청하지 않습니다. 위치·카메라·마이크·연락처·사진·알림 권한을 요청하지 않으며, 추적 허용 요청(App Tracking Transparency)도 표시하지 않습니다.</p>
+
+        <h2>제9조 (개인정보의 파기절차 및 방법)</h2>
+        <ul>
+          <li><strong>파기절차</strong>: 보유기간이 지나는 등 불필요해진 개인정보는 개인정보 보호책임자의 승인을 거쳐 지체 없이 파기합니다.</li>
+          <li><strong>파기방법</strong>: 전자적 파일은 복원이 불가능한 방법으로 영구 삭제합니다. 기기에 저장된 게임 기록·내 퍼즐·앱 설정은 이용자가 앱을 삭제하면 기기에서 함께 삭제됩니다.</li>
+        </ul>
+
+        <h2>제10조 (정보주체의 권리·의무 및 행사방법)</h2>
+        <p>정보주체(법정대리인 포함)는 회사에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
+        <ol>
+          <li>개인정보 처리에 관한 정보를 제공받을 권리</li>
+          <li>개인정보의 처리에 관한 동의 여부, 동의 범위 등을 선택하고 결정할 권리</li>
+          <li>개인정보의 처리 여부를 확인하고 개인정보에 대하여 열람을 요구할 권리</li>
+          <li>개인정보의 처리 정지, 정정·삭제 및 파기를 요구할 권리</li>
+          <li>개인정보의 처리로 인하여 발생한 피해를 신속하고 공정한 절차에 따라 구제받을 권리</li>
+        </ol>
+        <p>위 권리 행사는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 요청하실 수 있으며, 회사는 이에 대해 지체 없이 조치하겠습니다. 기기에만 저장되는 게임 기록·내 퍼즐·앱 설정은 회사가 보관하지 않아 열람하거나 삭제해 드릴 수 없으며, 앱을 삭제하면 기기에서 지워집니다.</p>
+
+        <h2>제11조 (개인정보의 안전성 확보조치)</h2>
+        <p>회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+        <ul>
+          <li>앱이 정보를 회사로 전송하지 않는 설계(앱 자체의 네트워크 요청 없음, 회사 서버 연결 없음)</li>
+          <li>게임 기록·내 퍼즐·앱 설정을 기기의 앱 전용 저장 공간에 보관</li>
+          <li>문의 메일에 대한 접근 권한 관리</li>
+        </ul>
+
+        <h2>제12조 (아동의 개인정보 보호)</h2>
+        <p>앱은 이용자의 나이와 관계없이 개인정보를 수집하지 않습니다. 다만 만 14세 미만 아동이 이메일로 문의하는 경우에는 법정대리인의 동의가 필요할 수 있습니다. 회사는 법정대리인의 동의 없이 만 14세 미만 아동의 개인정보가 수집된 사실을 확인하면 지체 없이 해당 정보를 삭제합니다. 보호자는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 문의 또는 삭제를 요청하실 수 있습니다.</p>
+
+        <h2>제13조 (개인정보 보호책임자)</h2>
+        <ul>
+          <li>회사명: 주식회사 피플랩스 (PiFl Labs Co., Ltd.)</li>
+          <li>이메일: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+        </ul>
+        <p>앱 이용 문의는 <a href="/ko/apps/pipi-sudoku/support/">지원 페이지</a> 또는 <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>로 보내 주세요.</p>
+
+        <h2>제14조 (GDPR - 유럽경제지역)</h2>
+        <p>유럽경제지역(EEA)에 계신 이용자는 EU 일반 개인정보 보호규정(GDPR)에 따라 열람, 정정, 삭제, 처리 제한, 데이터 이동, 처리 반대에 관한 권리를 추가로 가집니다. App Store에서 앱을 이용하는 경우 회사가 처리하는 개인정보는 이용자가 보낸 이메일 문의 정보(제2조)뿐이며(TestFlight 테스터는 제7조 참조), 게임 기록·내 퍼즐·앱 설정은 기기에 보관되고 회사로 전송되지 않습니다. 이 권리를 행사하려면 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 연락해 주세요.</p>
+
+        <h2>제15조 (APPI - 일본 개인정보 보호법)</h2>
+        <p>일본 개인정보 보호법(APPI)에 따라 일본의 이용자는 개인정보의 공개, 정정, 이용 정지를 청구할 권리를 가집니다. App Store에서 앱을 이용하는 경우 회사가 처리하는 개인정보는 이용자가 보낸 이메일 문의 정보(제2조)뿐입니다(TestFlight 테스터는 제7조 참조). 문의는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 보내 주세요.</p>
+
+        <h2>제16조 (권익침해 구제방법)</h2>
+        <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 다음 기관에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+        <ul>
+          <li>개인정보분쟁조정위원회: (국번없이) 1833-6972 (www.kopico.go.kr)</li>
+          <li>개인정보침해신고센터: (국번없이) 118 (privacy.kisa.or.kr)</li>
+          <li>대검찰청: (국번없이) 1301 (www.spo.go.kr)</li>
+          <li>경찰청: (국번없이) 182 (ecrm.cyber.go.kr)</li>
+        </ul>
+
+        <h2>제17조 (개인정보 처리방침 변경)</h2>
+        <p>이 개인정보 처리방침은 2026년 10월 13일부터 적용됩니다. 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
+      </div>
+      )}
+
+      {lang === 'en' && (
+      <div class="legal-card">
+        <p>PiFl Labs Co., Ltd. ("Company", "we", "us") has established and publishes this Privacy Policy under Article 30 of the Korean Personal Information Protection Act to protect your personal data and to handle related concerns promptly and smoothly. It covers <strong>Cell by Cell Sudoku</strong> ("App"), a mobile app for solving 9×9 sudoku puzzles offline, and applies to the App in preference to our <a href="/en/privacy/">general Privacy Policy</a>.</p>
+
+        <p>The App has <strong>no sign-up or login</strong> and uses no ads, in-app purchases, or analytics or tracking tools (SDKs). It makes no network requests of its own and does not connect to our servers. <strong>Your puzzle progress, My Puzzles and settings are stored only in the App's private storage on your device, and we cannot see them.</strong></p>
+
+        <h2>1. Purpose of Processing</h2>
+        <ul>
+          <li><strong>App functionality</strong>: Restoring the puzzle you were solving (entered digits and notes, undo and redo history, selected cell, solve time and hints used), keeping puzzle-pack progress and My Puzzles, and remembering your settings — all handled only on the device and never sent to us.</li>
+          <li><strong>Customer support</strong>: Receiving and answering inquiries you send by email and letting you know the outcome</li>
+        </ul>
+
+        <h2>2. Information We Process</h2>
+        <p>The App does not require sign-up. The information the App stores on your device, and the information we receive to answer inquiries, is as follows.</p>
+        <ScrollableLegalTable label="Privacy information table 1; scroll horizontally">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Items</th>
+              <th>Method · Where it lives</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Game records</td>
+              <td>The puzzle in progress, entered digits and notes (candidates), undo and redo history, selected cell, solve time, hints used, start time, hint area, puzzle-pack progress</td>
+              <td>Stored only in the App's private storage on the device. Never sent to us, and we cannot see it</td>
+            </tr>
+            <tr>
+              <td>My Puzzles</td>
+              <td>The given digits of puzzles you enter yourself and an optional puzzle name (up to 40 characters); up to 100 puzzles</td>
+              <td>Stored only in the App's private storage on the device. Never sent to us, and we cannot see it</td>
+            </tr>
+            <tr>
+              <td>App settings</td>
+              <td>Auto-Clear Related Notes, Haptic Feedback, Background Theme (Paper, Garden, Night), Appearance</td>
+              <td>Stored only in the App's private storage on the device. Never sent to us, and we cannot see it</td>
+            </tr>
+            <tr>
+              <td>Email inquiries</td>
+              <td>Email address, name (optional), message</td>
+              <td>Collected only when you email our support or privacy address directly</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>After you finish a puzzle, <strong>Share Result</strong> opens the iOS share sheet with the app name, level, solve time and hints used. What you choose to share goes only to the app you pick, never to us.</p>
+
+        <h2>3. Retention Period</h2>
+        <ul>
+          <li><strong>Game records, My Puzzles and app settings (on the device)</strong>: Kept on the device until you delete the App, and deleted along with it. Whether they are included in device backups depends on your iOS backup settings.</li>
+          <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after the inquiry is resolved</li>
+        </ul>
+
+        <h2>4. Disclosure to Third Parties</h2>
+        <p>We do not provide your personal data to third parties, except with your consent or where required by law (Articles 17 and 18 of the Korean Personal Information Protection Act).</p>
+
+        <h2>5. Processing Entrustment</h2>
+        <p>Using the App involves no entrustment of personal data processing. To handle email inquiries, we entrust processing as follows.</p>
+        <ScrollableLegalTable label="Privacy information table 2; scroll horizontally">
+        <table>
+          <thead>
+            <tr>
+              <th>Processor</th>
+              <th>Entrusted task</th>
+              <th>Retention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google LLC (Google Workspace)</td>
+              <td>Receiving and storing company email (inquiry emails)</td>
+              <td>3 years after the inquiry is resolved</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>Entrustment for the tools we use to manage inquiries is covered by section 5 of our <a href="/en/privacy/">general Privacy Policy</a>.</p>
+
+        <h2>6. International Data Transfers</h2>
+        <p>Using the App involves no transfer of personal data to other countries. Because company email is received and stored with Google Workspace, email inquiries are transferred as follows.</p>
+        <ScrollableLegalTable label="Privacy information table 3; scroll horizontally">
+        <table>
+          <thead>
+            <tr>
+              <th>Recipient</th>
+              <th>Country</th>
+              <th>Purpose</th>
+              <th>Items</th>
+              <th>When</th>
+              <th>Retention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google LLC (Google Workspace)</td>
+              <td>United States</td>
+              <td>Receiving and storing company email (inquiry emails)</td>
+              <td>Email address, name (optional), message</td>
+              <td>When an email is received</td>
+              <td>3 years after the inquiry is resolved</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>Contact details and further information for the recipient are set out below.</p>
+
+        <h3>Transfer details: Google LLC (Google Workspace)</h3>
+        <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></p>
+        <ul>
+          <li><strong>Items</strong>: email address, name (optional), message.</li>
+          <li><strong>When and how</strong>: when your inquiry email is delivered to our mailbox (Google Workspace), sent over an encrypted connection.</li>
+          <li><strong>Purpose</strong>: receiving and storing company email (inquiry emails).</li>
+          <li><strong>Retention</strong>: 3 years after the inquiry is resolved.</li>
+          <li><strong>How to refuse and its effect</strong>: if you do not send us an email inquiry, nothing is transferred. You just can't get a reply by email; the App works the same.</li>
+        </ul>
+        <p>International transfers for the tools we use to manage inquiries are covered by section 10 of our <a href="/en/privacy/">general Privacy Policy</a>.</p>
+
+        <h2>7. Information Handled by Apple</h2>
+        <p>App Store downloads of the App, crash and diagnostic reports you choose to share with app developers, and TestFlight feedback are handled by Apple under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. We view anonymous crash reports and TestFlight feedback in App Store Connect only to improve the App.</p>
+        <p>TestFlight feedback, which includes the tester's email address, applies only to people testing pre-release builds through TestFlight, not to App Store users.</p>
+
+        <h2>8. App Permissions</h2>
+        <p>The App requests no device permissions. It does not ask for location, camera, microphone, contacts, photos or notifications access, and it does not show the App Tracking Transparency prompt.</p>
+
+        <h2>9. Data Destruction</h2>
+        <ul>
+          <li><strong>Procedure</strong>: Personal data that is no longer needed, for example because its retention period has ended, is destroyed without delay with the approval of the data protection officer.</li>
+          <li><strong>Method</strong>: Electronic files are permanently deleted so they cannot be recovered. Game records, My Puzzles and app settings are removed from the device when you delete the App.</li>
+        </ul>
+
+        <h2>10. Your Rights</h2>
+        <p>You (including a legal guardian) may exercise the following rights with us at any time.</p>
+        <ol>
+          <li>The right to be informed about the processing of your personal data</li>
+          <li>The right to decide whether and to what extent to consent to processing</li>
+          <li>The right to confirm whether your data is processed and to access it</li>
+          <li>The right to request suspension of processing, correction, deletion and destruction</li>
+          <li>The right to prompt and fair remedy for damage caused by processing</li>
+        </ol>
+        <p>Exercise these rights by contacting <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>; we will act without undue delay. Game records, My Puzzles and app settings stored only on your device are not held by us, so we cannot access or delete them for you; they are erased from the device when you delete the App.</p>
+
+        <h2>11. Security Measures</h2>
+        <p>We take the following measures to keep personal data secure.</p>
+        <ul>
+          <li>A design in which the App sends no information to us (no network requests of its own, no connection to our servers)</li>
+          <li>Game records, My Puzzles and app settings kept in the App's private storage on the device</li>
+          <li>Access control for inquiry emails</li>
+        </ul>
+
+        <h2>12. Children's Privacy</h2>
+        <p>The App does not collect personal data from anyone, whatever their age. If a child under 14 contacts us by email, however, the consent of a legal guardian may be required. If we learn that personal data of a child under 14 was collected without a legal guardian's consent, we will delete it without delay. Parents and guardians may contact us or request deletion at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+
+        <h2>13. Data Protection Officer</h2>
+        <ul>
+          <li>Company: PiFl Labs Co., Ltd.</li>
+          <li>Email: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+        </ul>
+        <p>For help using the App, see the <a href="/en/apps/pipi-sudoku/support/">support page</a> or email <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
+
+        <h2>14. GDPR (European Economic Area)</h2>
+        <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. For App Store users of the App, the only personal data we process is the information in email inquiries you send us (Section 2; for TestFlight testers, see Section 7); game records, My Puzzles and settings are kept on your device and are never sent to us. To exercise these rights, contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+
+        <h2>15. APPI (Japan)</h2>
+        <p>Under Japan's Act on the Protection of Personal Information (APPI), users in Japan have the right to request disclosure, correction and suspension of use of their personal information. For App Store users of the App, the only personal data we process is the information in email inquiries you send us (Section 2; for TestFlight testers, see Section 7). Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+
+        <h2>16. Remedies</h2>
+        <p>To seek remedies for a privacy infringement, you may apply for dispute resolution or consultation to the following Korean authorities.</p>
+        <ul>
+          <li>Personal Information Dispute Mediation Committee: 1833-6972 (www.kopico.go.kr)</li>
+          <li>KISA Privacy Center: 118 (privacy.kisa.or.kr)</li>
+          <li>Supreme Prosecutors' Office: 1301 (www.spo.go.kr)</li>
+          <li>National Police Agency: 182 (ecrm.cyber.go.kr)</li>
+        </ul>
+
+        <h2>17. Changes to this Policy</h2>
+        <p>This Privacy Policy is effective from October 13, 2026. Any changes will be announced on this page.</p>
+      </div>
+      )}
+
+      {lang === 'ja' && (
+      <div class="legal-card">
+        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、韓国の「個人情報保護法」第30条に基づき、お客様の個人情報を保護し、これに関するご相談を迅速かつ円滑に処理するため、オフラインで9×9のナンプレを解くモバイルアプリケーション<strong>ひとマスずつナンプレ</strong>（以下「本アプリ」）のプライバシーポリシーを次のとおり定めて公開します。本ポリシーは、当社ウェブサイトの<a href="/ja/privacy/">総合プライバシーポリシー</a>に優先して本アプリに適用されます。</p>
+
+        <p>本アプリには<strong>会員登録・ログインがなく</strong>、広告・アプリ内課金・分析およびトラッキングのツール（SDK）を使用していません。本アプリは自らネットワーク通信を行わず、当社のサーバーにも接続しません。<strong>パズルの進行状況、マイパズル、設定は端末内のアプリ専用の保存領域にのみ保存され、当社がこれらを見ることはできません。</strong></p>
+
+        <h2>第1条 (利用目的)</h2>
+        <ul>
+          <li><strong>アプリ機能の提供</strong>: 解いていたパズルの状態の復元（入力した数字とメモ、取り消し・やり直しの履歴、選んでいたマス、解答時間と使ったヒントの数）、パズルパックの進行状況とマイパズルの保存、設定の保持 — いずれも端末内でのみ処理され、当社には送信されません。</li>
+          <li><strong>お問い合わせへの対応</strong>: メールでいただいたお問い合わせの受付、回答および対応結果のご連絡</li>
+        </ul>
+
+        <h2>第2条 (取り扱う個人情報の項目)</h2>
+        <p>本アプリは会員登録を必要としません。本アプリが端末に保存する情報と、当社がお問い合わせへの対応のために受け取る情報は次のとおりです。</p>
+        <ScrollableLegalTable label="個人情報の案内表1。横にスクロールできます">
+        <table>
+          <thead>
+            <tr>
+              <th>区分</th>
+              <th>項目</th>
+              <th>収集方法・保存場所</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ゲームの記録</td>
+              <td>解いている途中のパズル、入力した数字とメモ（候補）、取り消し・やり直しの履歴、選んでいたマス、解答時間、使ったヒントの数、開始時刻、ヒントの範囲、パズルパックの進行状況</td>
+              <td>端末内のアプリ専用の保存領域にのみ保存。当社には送信されず、当社が見ることはできません</td>
+            </tr>
+            <tr>
+              <td>マイパズル</td>
+              <td>お客様がご自身で入力した問題の数字と問題の名前（任意、40文字以内）、最大100問</td>
+              <td>端末内のアプリ専用の保存領域にのみ保存。当社には送信されず、当社が見ることはできません</td>
+            </tr>
+            <tr>
+              <td>アプリの設定</td>
+              <td>関連するメモを自動で消す、振動フィードバック、背景テーマ（ペーパー・ガーデン・ナイト）、外観モード</td>
+              <td>端末内のアプリ専用の保存領域にのみ保存。当社には送信されず、当社が見ることはできません</td>
+            </tr>
+            <tr>
+              <td>メールでのお問い合わせ</td>
+              <td>メールアドレス、お名前（任意）、お問い合わせ内容</td>
+              <td>当社のサポート用または個人情報用のメールアドレスにお客様が直接送信された場合に限り収集</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>パズルを完成させたあと<strong>「記録を共有」</strong>を選ぶと、iOSの共有シートでアプリ名・難易度・解答時間・使ったヒントの数を送れます。共有すると決めた内容はお客様が選んだアプリにだけ届き、当社には送信されません。</p>
+
+        <h2>第3条 (保有期間)</h2>
+        <ul>
+          <li><strong>ゲームの記録・マイパズル・アプリの設定（端末内）</strong>: 本アプリを削除するまで端末に保存され、削除すると一緒に削除されます。端末のバックアップに含まれるかどうかは、お客様のiOSのバックアップ設定によります。</li>
+          <li><strong>メールでのお問い合わせ記録</strong>: 対応完了後 <strong>3年</strong></li>
+        </ul>
+
+        <h2>第4条 (第三者提供)</h2>
+        <p>当社は、お客様の同意がある場合、または韓国の「個人情報保護法」第17条および第18条に該当する場合など法令に基づく場合を除き、個人情報を第三者に提供しません。</p>
+
+        <h2>第5条 (個人情報処理の委託)</h2>
+        <p>本アプリの利用に伴う個人情報の処理の委託はありません。メールでのお問い合わせに対応するため、次のとおり委託しています。</p>
+        <ScrollableLegalTable label="個人情報の案内表2。横にスクロールできます">
+        <table>
+          <thead>
+            <tr>
+              <th>委託先</th>
+              <th>委託業務</th>
+              <th>保有期間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google LLC（Google Workspace）</td>
+              <td>当社メール（お問い合わせメール）の受信・保管</td>
+              <td>対応完了後3年</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>お問い合わせの管理に使うツールの委託については、当社の<a href="/ja/privacy/">総合プライバシーポリシー</a>第5条に従います。</p>
+
+        <h2>第6条 (国外移転)</h2>
+        <p>本アプリの利用に伴う個人情報の国外移転はありません。当社のメールはGoogle Workspaceで受信・保管しているため、メールでのお問い合わせは次のとおり国外に移転されます。</p>
+        <ScrollableLegalTable label="個人情報の案内表3。横にスクロールできます">
+        <table>
+          <thead>
+            <tr>
+              <th>移転先</th>
+              <th>移転先国</th>
+              <th>移転目的</th>
+              <th>移転項目</th>
+              <th>移転の時期</th>
+              <th>保有期間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google LLC（Google Workspace）</td>
+              <td>米国</td>
+              <td>当社メール（お問い合わせメール）の受信・保管</td>
+              <td>メールアドレス、お名前（任意）、お問い合わせ内容</td>
+              <td>メールを受信したとき</td>
+              <td>対応完了後3年</td>
+            </tr>
+          </tbody>
+        </table>
+        </ScrollableLegalTable>
+        <p>移転先の連絡先と詳細は次のとおりです。</p>
+
+        <h3>Google LLC（Google Workspace）への移転の詳細</h3>
+        <p>米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></p>
+        <ul>
+          <li><strong>移転する項目</strong>: メールアドレス、お名前（任意）、お問い合わせ内容</li>
+          <li><strong>時期・方法</strong>: お客様のお問い合わせメールが当社のメールボックス（Google Workspace）に届くときに、暗号化された接続で送信</li>
+          <li><strong>利用目的</strong>: 当社メール（お問い合わせメール）の受信・保管</li>
+          <li><strong>保持期間</strong>: 対応完了後3年</li>
+          <li><strong>移転を拒否する方法・手続と効果</strong>: メールでお問い合わせをしなければ、何も移転されません。その場合はメールでの返信を受け取れないだけで、本アプリはそのままご利用いただけます。</li>
+        </ul>
+        <p>お問い合わせの管理に使うツールの国外移転については、当社の<a href="/ja/privacy/">総合プライバシーポリシー</a>第10条に従います。</p>
+
+        <h2>第7条 (Appleが取り扱う情報)</h2>
+        <p>App Storeからの本アプリのダウンロード、お客様がAppデベロッパと共有することを選んだクラッシュ・診断レポート、TestFlightのフィードバックは、Appleが<a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>に従って取り扱います。当社は、App Store Connectで匿名のクラッシュレポートとTestFlightのフィードバックを、本アプリの改善のためにのみ確認します。</p>
+        <p>TestFlightのフィードバックにはテスターのメールアドレスが含まれますが、これはTestFlightでリリース前のビルドを試す方にのみ関係し、App Storeの利用者には関係ありません。</p>
+
+        <h2>第8条 (アプリ権限)</h2>
+        <p>本アプリは端末の権限を要求しません。位置情報・カメラ・マイク・連絡先・写真・通知の権限を求めず、トラッキングの許可を求める画面（App Tracking Transparency）も表示しません。</p>
+
+        <h2>第9条 (個人情報の破棄手続および方法)</h2>
+        <ul>
+          <li><strong>手続</strong>: 保有期間が過ぎるなどして不要となった個人情報は、個人情報保護責任者の承認を経て遅滞なく破棄します。</li>
+          <li><strong>方法</strong>: 電子ファイルは復元不可能な方法で完全に削除します。端末に保存されたゲームの記録・マイパズル・アプリの設定は、本アプリを削除すると端末から一緒に削除されます。</li>
+        </ul>
+
+        <h2>第10条 (お客様の権利と行使方法)</h2>
+        <p>お客様（法定代理人を含みます）は、当社に対していつでも次の権利を行使できます。</p>
+        <ol>
+          <li>個人情報の処理に関する情報の提供を受ける権利</li>
+          <li>個人情報の処理への同意およびその範囲を選択する権利</li>
+          <li>個人情報の処理状況の確認および閲覧を要求する権利</li>
+          <li>個人情報の訂正、削除、処理停止、破棄を要求する権利</li>
+          <li>処理によって生じた損害に対する救済を求める権利</li>
+        </ol>
+        <p>権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。当社は遅滞なく対応します。端末にのみ保存されるゲームの記録・マイパズル・アプリの設定は当社が保有していないため、当社が閲覧したり削除したりすることはできません。これらは本アプリを削除すると端末から消去されます。</p>
+
+        <h2>第11条 (安全管理措置)</h2>
+        <p>当社は、個人情報の安全を確保するため、次の措置を講じています。</p>
+        <ul>
+          <li>本アプリが情報を当社に送信しない設計（アプリ自体のネットワーク通信なし、当社サーバーへの接続なし）</li>
+          <li>ゲームの記録・マイパズル・アプリの設定を端末内のアプリ専用の保存領域に保存</li>
+          <li>お問い合わせメールへのアクセス権限の管理</li>
+        </ul>
+
+        <h2>第12条 (子どものプライバシー)</h2>
+        <p>本アプリは、年齢にかかわらず、どなたの個人情報も収集しません。ただし、満14歳未満のお子様がメールでお問い合わせをする場合は、法定代理人の同意が必要になることがあります。当社は、法定代理人の同意なく満14歳未満のお子様の個人情報を収集したことを確認した場合、遅滞なく削除します。保護者の方は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までお問い合わせや削除のご依頼をいただけます。</p>
+
+        <h2>第13条 (個人情報保護責任者)</h2>
+        <ul>
+          <li>会社名: 株式会社ピープルラブズ（PiFl Labs Co., Ltd.）</li>
+          <li>メール: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+        </ul>
+        <p>アプリの使い方に関するお問い合わせは、<a href="/ja/apps/pipi-sudoku/support/">サポートページ</a>または <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> までお送りください。</p>
+
+        <h2>第14条 (GDPR - 欧州経済領域)</h2>
+        <p>欧州経済領域(EEA)にお住まいの方は、一般データ保護規則(GDPR)に基づき、アクセス、訂正、消去、処理の制限、データポータビリティ、処理への異議申し立てなどの追加の権利を有します。App Storeから本アプリをご利用の場合、当社が取り扱う個人情報は、お客様がメールでお送りいただいたお問い合わせの情報（第2条）だけで（TestFlightのテスターについては第7条をご覧ください）、ゲームの記録・マイパズル・アプリの設定は端末内に保存され、当社には送信されません。これらの権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
+
+        <h2>第15条 (APPI - 日本の個人情報保護法)</h2>
+        <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。App Storeから本アプリをご利用の場合、当社が取り扱う個人情報は、お客様がメールでお送りいただいたお問い合わせの情報（第2条）だけです（TestFlightのテスターについては第7条をご覧ください）。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
+
+        <h2>第16条 (権利侵害の救済方法)</h2>
+        <p>個人情報の侵害について救済を受けるため、次の韓国の機関に紛争解決や相談を申し立てることができます。</p>
+        <ul>
+          <li>個人情報紛争調停委員会: 1833-6972 (www.kopico.go.kr)</li>
+          <li>個人情報侵害申告センター（KISA）: 118 (privacy.kisa.or.kr)</li>
+          <li>大検察庁: 1301 (www.spo.go.kr)</li>
+          <li>警察庁: 182 (ecrm.cyber.go.kr)</li>
+        </ul>
+
+        <h2>第17条 (改定)</h2>
+        <p>本プライバシーポリシーは、2026年10月13日から施行します。変更がある場合は、本ページを通じてお知らせします。</p>
+      </div>
+      )}
+    </div>
+  </main>
+
+  <style>
+    /* 한국어 본문만 어절 단위로 줄바꿈한다(영어·일본어는 기본 규칙). */
+    .legal-hero h1:lang(ko), .legal-card:lang(ko) { overflow-wrap: break-word; word-break: keep-all; }
+  </style>
+</BaseLayout>
