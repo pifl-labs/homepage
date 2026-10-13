@@ -14,7 +14,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
         <div class="container">
             <a href="/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">Tide Buddy Privacy Policy</span></h1>
-            <p class="legal-date">Effective Date: October 5, 2026</p>
+            <p class="legal-date">Effective Date: October 13, 2026</p>
         </div>
     </section>
 
@@ -23,11 +23,11 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
             <div class="legal-card">
                 <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how information is handled when you use the mobile application <strong>Tide Buddy</strong> (물때친구) — tide tables, sunrise/sunset and marine weather for tide stations along the Korean coast ("App"). For matters not covered here, our <a href="/privacy">general Privacy Policy</a> applies.</p>
 
-                <p>The App has <strong>no account or login</strong> and no user-generated content. The tide, astronomical and weather data it shows are public data from the Korea Hydrographic and Oceanographic Agency, the Korea Meteorological Administration and the Korea Astronomy and Space Science Institute, processed on our servers, and contain no personal data. <strong>Your location is used only on your device to pick the nearest tide station; it is never sent to or stored on our servers.</strong></p>
+                <p>The App has <strong>no account or login</strong> and no user-generated content. The tide, astronomical and weather data it shows are public data from the Korea Hydrographic and Oceanographic Agency, the Korea Meteorological Administration and the Korea Astronomy and Space Science Institute, processed on our servers, and contain no personal data. <strong>Your location is used only on your device to pick the nearest tide station and to calculate tide heights at your position; it is never sent to or stored on our servers.</strong></p>
 
                 <h2>1. Purpose of Processing</h2>
                 <ul>
-                    <li><strong>App functionality</strong>: Showing tide, sun/moon and weather information per station, selecting the nearest station from your current location, remembering your last station, and the home screen widget</li>
+                    <li><strong>App functionality</strong>: Showing tide, sun/moon, weather and marine activity index information per station, selecting the nearest station and calculating tide heights at your position, remembering your last and favorite stations, scheduling tide alarms, and the home screen widget</li>
                     <li><strong>Advertising</strong>: Banner ad serving and relevance via Google AdMob</li>
                     <li><strong>Customer support</strong>: Receiving and responding to email inquiries</li>
                 </ul>
@@ -47,7 +47,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                         <tr>
                             <td>Location</td>
                             <td>Current coordinates (only if you grant location permission)</td>
-                            <td>Used on the device to compute distance to stations, then discarded. Never transmitted or stored on our servers</td>
+                            <td>Used on the device only to compute distance to stations and to adjust tide heights to your position (with the KHOA TideBED correction values bundled in the App). Kept in memory while the App is in use and never saved. Never transmitted to our servers</td>
                         </tr>
                         <tr>
                             <td>Advertising identifier</td>
@@ -61,7 +61,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                         </tr>
                         <tr>
                             <td>App settings</td>
-                            <td>Last selected station, cached tide data for the widget</td>
+                            <td>Last selected station, favorite stations, chosen sea activities, tide alarm, tide-day counting and location-based tide settings, cached tide data for the widget</td>
                             <td>Stored locally on the device (no external transmission)</td>
                         </tr>
                         <tr>
@@ -75,7 +75,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
 
                 <h2>3. Retention Period</h2>
                 <ul>
-                    <li><strong>Location</strong>: discarded immediately after the distance calculation (not retained)</li>
+                    <li><strong>Location</strong>: used only in device memory while the App is in use and never saved (gone when the App is closed)</li>
                     <li><strong>Advertising identifier and ad data</strong>: per Google AdMob policy</li>
                     <li><strong>Service access logs</strong>: up to <strong>30 days</strong> under the infrastructure provider's log retention</li>
                     <li><strong>App settings (local)</strong>: until you delete the App</li>
@@ -120,12 +120,13 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                 <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> for details on how Google AdMob processes data.</p>
 
                 <h2>7. App Permissions</h2>
-                <p>The App may request the following permissions. Both are optional; if you deny them you can still choose a station manually and use every feature.</p>
+                <p>The App may request the following permissions. All are optional; if you deny them you can still choose a station manually and see all information (without notification permission, only tide alarms are unavailable).</p>
                 <ul>
-                    <li><strong>Location (While Using the App)</strong>: Picks the nearest tide station automatically and sorts the station list by distance. Background location is never requested.</li>
+                    <li><strong>Location (While Using the App)</strong>: Picks the nearest tide station automatically, sorts the station list by distance and calculates tide heights at your position on the device (for reference). Background location is never requested.</li>
+                    <li><strong>Notifications</strong>: Requested only when you turn on a tide alarm (before low tide, when the tide starts coming in, weekend tide summary) in Settings. Alarms are scheduled on the device; no push server is used and no information is sent to our servers for them.</li>
                     <li><strong>App Tracking Transparency (iOS)</strong>: Consent for ad relevance.</li>
                 </ul>
-                <p>The App does not request camera, microphone, contacts, photos or notification permissions.</p>
+                <p>The App does not request camera, microphone, contacts or photo library permissions.</p>
 
                 <h2>8. Data Destruction</h2>
                 <ul>
@@ -193,7 +194,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                 <p>If you are in the EEA or the UK, you have the rights of access, rectification, erasure, restriction, portability and objection under the GDPR. Ad-related processing is based on your consent given through the consent form (Section 6) and can be withdrawn at any time in the ad settings of your device.</p>
 
                 <h2>15. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective from October 5, 2026. Changes will be announced on this page.</p>
+                <p>This Privacy Policy is effective from October 13, 2026. Compared with the previous version (effective October 5, 2026), it adds the notification permission, location-based tide heights and the settings stored on the device. Changes will be announced on this page.</p>
             </div>
         </div>
     </main>
