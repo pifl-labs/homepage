@@ -51,6 +51,13 @@ For grown-ups and children aged 4–8 who are new to Korean: model a missing-pen
 Prepared by PiFl Labs with AI assistance; not independently educator-reviewed or classroom-tested, and no learning outcome is promised.
 The optional Korean Bridge iOS app is free and ad-free, with no purchases or subscriptions.
 
+### Free Hangul word-puzzle resource
+
+[Three Hangul puzzles (two-page PDF)](https://pipi-worlds.com/assets/marketing/voyage-chosung-en-20261011/chosung-three-puzzles-en.pdf) | [Plaintext companion](https://pipi-worlds.com/assets/marketing/voyage-chosung-en-20261011/chosung-three-puzzles-en.txt).
+For people who already read Hangul: Food, Pets and Travel puzzles with syllable banks, English rules and short word meanings; answers on page 2. No app or sign-up required.
+Prepared by PiFl Labs from its own puzzle data, with AI assistance; not curriculum-reviewed or physically print-tested, and no learning outcome is promised.
+English meanings belong to this paper resource only. The optional Hangul Voyage iOS app is an ad-supported Korean word puzzle, not an English translation or handwriting app.
+
 ## 스택
 
 - **Astro 5** static site
