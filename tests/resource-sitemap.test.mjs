@@ -13,9 +13,17 @@ const expected = [
   'https://pifl-labs.com/assets/printables/one-small-start-en.pdf',
   'https://pifl-labs.com/assets/printables/one-word-recall-card-en.pdf',
   'https://pifl-labs.com/assets/printables/one-small-start-ko.pdf',
+  'https://pifl-labs.com/assets/printables/one-word-recall-card-ja.pdf',
 ];
+const publicationDates = ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12', '2026-10-12T21:30:29Z', '2026-10-13T04:58:57Z'];
+const validateResourceXML = input => {
+  assert.deepEqual([...input.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]), expected);
+  assert.deepEqual([...input.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), publicationDates);
+  assert.doesNotMatch(input, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>/);
+};
 
-test('only the five already-public canonical PDFs, once each', () => {
+test('only the six already-public canonical PDFs, once each', () => {
+  validateResourceXML(xml);
   assert.deepEqual(urls, expected);
   assert.equal(new Set(urls).size, urls.length);
   for (const url of urls) {
@@ -29,8 +37,8 @@ test('only the five already-public canonical PDFs, once each', () => {
 test('standard UTF-8 root urlset, accurate fixed publication date; no SEO promises', () => {
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'));
-  assert.equal((xml.match(/<url>/g) || []).length, 5);
-  assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12', '2026-10-12T21:30:29Z']);
+  assert.equal((xml.match(/<url>/g) || []).length, 6);
+  assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), publicationDates);
   assert.doesNotMatch(xml, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>|pipi-worlds|\.txt<\/loc>/);
 });
 
@@ -97,3 +105,30 @@ test('new Korean resource lastmod is the actual G379 publication, not build time
   assert.ok(Date.parse('2026-10-12T21:30:29Z') < Date.now());
   assert.equal((xml.match(/one-small-start-ko\.pdf/g) || []).length, 1);
 });
+
+test('Japanese card remains the exact already-reviewed public PDF; discovery does not regenerate it', () => {
+  const pdf = read('public/assets/printables/one-word-recall-card-ja.pdf');
+  assert.equal(pdf.length, 47264);
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), 'fdd5d46a8738de1cd88c725d057929b229ce3dcff4575483e860c15baac3e4d6');
+});
+
+test('Japanese lastmod preserves original PR103 publication, not this sitemap update time', () => {
+  assert.ok(xml.includes('<loc>https://pifl-labs.com/assets/printables/one-word-recall-card-ja.pdf</loc>\n    <lastmod>2026-10-13T04:58:57Z</lastmod>'));
+  assert.ok(Date.parse('2026-10-13T04:58:57Z') < Date.now());
+});
+
+for (const [name, mutate] of [
+  ['missing Japanese resource', x => x.replace(/  <url>\n    <loc>https:\/\/pifl-labs.com\/assets\/printables\/one-word-recall-card-ja.pdf<\/loc>[\s\S]*?<\/url>\n/, '')],
+  ['duplicate PDF', x => x.replace('</urlset>', '<url><loc>' + expected[5] + '</loc><lastmod>2026-10-13T04:58:57Z</lastmod></url></urlset>')],
+  ['wrong origin', x => x.replace('one-word-recall-card-ja.pdf', 'one-word-recall-card-ja.pdf').replace(expected[5], expected[5].replace('pifl-labs.com', 'example.org'))],
+  ['tracking query', x => x.replace(expected[5], expected[5] + '?utm_source=unreviewed')],
+  ['unverified TXT alternative', x => x.replace(expected[5], expected[5].replace('.pdf', '.txt'))],
+  ['invented publication date', x => x.replace('2026-10-13T04:58:57Z', '2026-10-14T00:00:00Z')],
+  ['entity declaration', x => x.replace('<urlset ', '<!ENTITY private SYSTEM "file:///private">\n<urlset ')],
+]) {
+  test(`invalid resource metadata is rejected: ${name}`, () => {
+    const invalid = mutate(xml);
+    assert.notEqual(invalid, xml);
+    assert.throws(() => validateResourceXML(invalid));
+  });
+}
