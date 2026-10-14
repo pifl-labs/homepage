@@ -16,6 +16,28 @@ for (const [bundle, v] of Object.entries(variables)) {
   });
 }
 
+test('iTunes Lookup cross-check confirms version, UTC release day, page-derived bounds and names in kr, jp and us', () => {
+  const lookup = receipt.lookupCrossCheck;
+  assert.equal(lookup.status, 'MATCH');
+  assert.doesNotMatch(JSON.stringify(lookup), /PENDING/);
+  const lang = { kr: 'ko', jp: 'ja', us: 'en' };
+  for (const [country, results] of Object.entries(lookup.results)) {
+    assert.ok(lang[country], `${country}: storefront maps to a site language`);
+    for (const bundle of Object.keys(variables)) {
+      const r = receipt.ios[bundle];
+      const l = results[bundle];
+      assert.ok(l, `${country}/${bundle}: lookup result recorded`);
+      assert.equal(l.trackId, r.trackId);
+      assert.equal(l.version, r.version);
+      assert.equal(l.currentVersionReleaseDate.slice(0, 10), r.updatedUTC);
+      const released = Date.parse(l.currentVersionReleaseDate);
+      assert.ok(Date.parse(r.releaseBoundsUTC[0]) <= released && released <= Date.parse(r.releaseBoundsUTC[1]), `${country}/${bundle}: release falls inside the page-derived bounds`);
+      assert.equal(l.trackName, r.iosNames[lang[country]]);
+    }
+  }
+  assert.deepEqual(Object.keys(lookup.results).sort(), [...receipt.countries].sort());
+});
+
 test('Until That Day: site names and both store names match the renamed public listings', () => {
   const b = block('dday');
   const ios = receipt.ios['com.pifl.pipi.dday'].iosNames;
