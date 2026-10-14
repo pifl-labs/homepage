@@ -15,7 +15,7 @@ const names = {
 const unchanged = {
   'pipi-draw': ['밑그림: 사진으로 만드는 색칠공부', '下絵づくり：写真をぬりえに変換', 'Photo Outlines: Coloring Book'],
   'pipi-words': ['단어루틴: JLPT·TOPIK 단어장', 'ことば習慣：韓国語・TOPIK単語帳', 'Vocab Routine: JLPT & TOPIK'],
-  'pipi-dday': ['디데이 카운트다운 위젯 - 그날까지', 'Dデイ カウントダウン ウィジェット - その日まで', 'D-Day Widget - Until That Day'],
+  'pipi-dday': ['그날까지: 디데이·기념일 위젯', 'その日まで：カウントダウン', 'Until That Day: Countdown'],
   'pipi-hello': ['말놀이 새싹: 어린이 일본어', 'ハングルの芽：子どもの韓国語', 'KanaSprout: Japanese for Kids'],
 };
 const voyageNames = ['낱말항해: 한글 단어 퍼즐', 'ハングル航海：韓国語の単語パズル', 'Hangul Voyage: Korean Puzzle'];
@@ -52,7 +52,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(bridgeItem.softwareVersion, undefined, `${lang}: homepage schema must not claim shared version`);
   const bridgeFleetRow = home.match(/<li class="fleet-row">(?:(?!<\/li>).)*Korean Bridge(?:(?!<\/li>).)*<\/li>/s)?.[0];
   assert.ok(bridgeFleetRow, `${lang}: Bridge maintenance row`);
-  assert.ok(bridgeFleetRow.includes('v1.0.0'), `${lang}: verified iOS version is visible`);
+  assert.ok(bridgeFleetRow.includes('v1.0.1'), `${lang}: verified iOS version is visible`);
   assert.ok(!bridgeFleetRow.includes('fleet-both'), `${lang}: no unverified both-store equality claim`);
   const focusItem = homeItems.find(a => a.url.endsWith('/pipi-focus/'));
   for (const item of [detailSchema, focusItem]) {
@@ -64,7 +64,8 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   }
   assert.ok(detail.includes(`<title>${name} —`), `${lang}: title`);
   assert.ok(detail.includes(alias) && home.includes(alias), `${lang}: discoverable old name`);
-  assert.equal(notices(home).length, lang === 'ja' ? 2 : 1, `${lang}: no stale home transition notice after both stores match`);
+  // Only Draw's Japanese listing still differs by store; Until That Day now matches on both stores.
+  assert.equal(notices(home).length, lang === 'ja' ? 1 : 0, `${lang}: no stale home transition notice after both stores match`);
   assert.equal(notices(detail).length, 0, `${lang}: no stale hero/final CTA transition notice`);
   assert.doesNotMatch(detail, /PiPi Focus: (?:해적 포모도로|海賊ポモドーロ|Pirate Pomodoro)/);
   const release = detail.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
@@ -81,10 +82,10 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const [slug, expectedNames] of Object.entries(unchanged)) {
     const html = read(lang, `apps/${slug}`);
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
-    assert.equal(notices(html).length, ['pipi-hello', 'pipi-words'].includes(slug) ? 0 : slug === 'pipi-draw' ? (lang === 'ja' ? 2 : 0) : 2, `${lang}/${slug}: exact platform name notices`);
+    assert.equal(notices(html).length, ['pipi-hello', 'pipi-words', 'pipi-dday'].includes(slug) ? 0 : slug === 'pipi-draw' ? (lang === 'ja' ? 2 : 0) : 2, `${lang}/${slug}: exact platform name notices`);
     assert.equal(appSchema(html).softwareVersion, undefined);
     assert.ok(!html.includes('Android v'));
-    const iosVersions = { 'pipi-hello': '1.0.9', 'pipi-words': '1.0.12', 'pipi-dday': '1.1.3', 'pipi-draw': '1.1.0' };
+    const iosVersions = { 'pipi-hello': '1.0.9', 'pipi-words': '1.0.12', 'pipi-dday': '1.1.5', 'pipi-draw': '1.1.2' };
     assert.ok(html.includes(`iOS v${iosVersions[slug]}`), `${lang}/${slug}: verified iOS version is labelled`);
   }
   const log = read(lang, 'apps/pipi-log');

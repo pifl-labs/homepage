@@ -1,0 +1,62 @@
+{
+  "source": "App Store product pages https://apps.apple.com/{kr,jp,us}/app/id<trackId> and Google Play listing pages (hl=ko, ja, en), read through a page-reading tool",
+  "observedUTCWindow": ["2026-10-14T06:33:55Z", "2026-10-14T06:57:04Z"],
+  "countries": ["kr", "jp", "us"],
+  "purpose": "Dated public facts, not native app QA or new release action",
+  "lookupCrossCheck": "PENDING: the iTunes Lookup API was not reachable from the authoring environment. Before merge, run the curl printed by scripts/check-site-facts.mjs and confirm version + currentVersionReleaseDate (UTC day 2026-10-13) for the three trackIds below.",
+  "updatedUTCMethod": "Each product page showed a relative release age. Release = observation time minus that age; with a one-hour rounding margin every bound still falls on 2026-10-13 UTC.",
+  "ios": {
+    "com.pifl.pipi.dday": {
+      "trackId": 6770268950,
+      "version": "1.1.5",
+      "updatedUTC": "2026-10-13",
+      "relativeAge": { "kr": "12시간 전", "jp": "12時間前", "us": "12h ago" },
+      "releaseBoundsUTC": ["2026-10-13T16:33Z", "2026-10-13T19:57Z"],
+      "iosNames": {
+        "ko": "그날까지: 디데이·기념일 위젯",
+        "ja": "その日まで：カウントダウン",
+        "en": "Until That Day: Countdown"
+      },
+      "observedKSTDay": "2026-10-14"
+    },
+    "com.pifl.pipi.draw": {
+      "trackId": 6779071131,
+      "version": "1.1.2",
+      "updatedUTC": "2026-10-13",
+      "relativeAge": { "kr": "13시간 전", "jp": "13時間前", "us": "13h ago" },
+      "releaseBoundsUTC": ["2026-10-13T15:33Z", "2026-10-13T18:57Z"],
+      "iosNames": {
+        "ko": "밑그림: 사진으로 만드는 색칠공부",
+        "ja": "下絵づくり：写真をぬりえに変換",
+        "en": "Photo Outlines: Coloring Book"
+      },
+      "observedKSTDay": "2026-10-14"
+    },
+    "com.pifl.pipi.bridge": {
+      "trackId": 6801205183,
+      "version": "1.0.1",
+      "updatedUTC": "2026-10-13",
+      "relativeAge": { "kr": "13시간 전", "jp": "13時間前", "us": "13h ago" },
+      "releaseBoundsUTC": ["2026-10-13T15:33Z", "2026-10-13T18:57Z"],
+      "iosNames": {
+        "ko": "Korean Bridge - 어린이 한국어·한글·수학",
+        "ja": "Korean Bridge - 子どもハングル・算数",
+        "en": "Korean Bridge: Hangul for Kids"
+      },
+      "observedKSTDay": "2026-10-14"
+    }
+  },
+  "android": {
+    "com.pifl.pipi.dday": {
+      "androidNames": {
+        "ko": "그날까지: 디데이·기념일 위젯",
+        "ja": "その日まで：カウントダウン",
+        "en": "Until That Day: Countdown"
+      },
+      "updatedCalendar": "2026-10-13",
+      "version": "UNVERIFIED",
+      "source": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "checkedKSTDay": "2026-10-14"
+    }
+  }
+}
