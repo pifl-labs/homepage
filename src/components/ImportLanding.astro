@@ -44,13 +44,14 @@ type Copy = {
   howBody: string;
 };
 
+// sub 문장의 D‑Day는 줄바꿈 방지 하이픈(U+2011)을 쓴다: 좁은 화면에서 'D-' / 'Day'로 갈리지 않게.
 const COPY: Record<Lang, Copy> = {
   ko: {
     title: '선원 초대장 — 그날까지',
     desc: '친구가 그날까지 앱의 항해에 당신을 초대했어요. 앱에서 열면 같은 D-Day가 추가됩니다.',
     eyebrow: '🏴‍☠️ 선원 초대장',
     heading: '함께 항해할래요?',
-    sub: '친구가 공유한 카운트다운이에요. 그날까지 앱에서 열면 같은 D-Day가 추가돼요.',
+    sub: '친구가 공유한 카운트다운이에요. 그날까지 앱에서 열면 같은 D‑Day가 추가돼요.',
     cardLoading: '초대장을 펼치는 중…',
     cardInvalidTitle: '초대장 정보가 올바르지 않아요',
     cardInvalidBody: '링크가 손상됐거나 만료됐을 수 있어요. 친구에게 다시 공유해 달라고 해보세요.',
@@ -69,7 +70,7 @@ const COPY: Record<Lang, Copy> = {
     desc: 'A friend invited you to a voyage in Until That Day. Open it in the app to add the same countdown.',
     eyebrow: '🏴‍☠️ Crew Invitation',
     heading: 'Join the voyage?',
-    sub: 'A friend shared this countdown. Open it in the Until That Day app to add the same D-Day.',
+    sub: 'A friend shared this countdown. Open it in the Until That Day app to add the same D‑Day.',
     cardLoading: 'Unrolling the invitation…',
     cardInvalidTitle: 'This invitation looks invalid',
     cardInvalidBody: 'The link may be broken or expired. Ask your friend to share it again.',
@@ -88,7 +89,7 @@ const COPY: Record<Lang, Copy> = {
     desc: '友だちが「その日まで」の航海に招待しました。アプリで開くと同じカウントダウンが追加されます。',
     eyebrow: '🏴‍☠️ クルー招待状',
     heading: '一緒に航海しませんか？',
-    sub: '友だちが共有したカウントダウンです。「その日まで」アプリで開くと同じD-Dayが追加されます。',
+    sub: '友だちが共有したカウントダウンです。「その日まで」アプリで開くと同じD‑Dayが追加されます。',
     cardLoading: '招待状を開いています…',
     cardInvalidTitle: '招待状の情報が正しくありません',
     cardInvalidBody: 'リンクが壊れているか期限切れの可能性があります。友だちにもう一度共有してもらってください。',
