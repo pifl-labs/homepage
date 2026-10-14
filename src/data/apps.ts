@@ -371,12 +371,13 @@ const words: AppMeta = {
 const dday: AppMeta = {
   slug: 'pipi-dday',
   schemaCategory: 'LifestyleApplication',
-  name: 'D-Day Widget - Until That Day',
-  nameByLang: { ko: '디데이 카운트다운 위젯 - 그날까지', ja: 'Dデイ カウントダウン ウィジェット - その日まで' },
+  name: 'Until That Day: Countdown',
+  nameByLang: { ko: '그날까지: 디데이·기념일 위젯', ja: 'その日まで：カウントダウン' },
   previousName: 'PiPi D-Day',
+  // 양 스토어 표시명 공개 확인 2026-10-14 (docs/release/public-facts-20261014.json).
   storeNames: {
-    ios: { ko: 'PiPi D-Day - 해적의 항해 디데이', ja: 'PiPi D-Day（ピピディーデイ）', en: 'PiPi D-Day' },
-    android: { ko: '디데이 카운트다운 위젯 - 그날까지', ja: 'Dデイ カウントダウン ウィジェット - その日まで', en: 'D-Day Widget - Until That Day' },
+    ios: { ko: '그날까지: 디데이·기념일 위젯', ja: 'その日まで：カウントダウン', en: 'Until That Day: Countdown' },
+    android: { ko: '그날까지: 디데이·기념일 위젯', ja: 'その日まで：カウントダウン', en: 'Until That Day: Countdown' },
   },
   status: 'live',
   category: { ko: '생산성 · 디데이', ja: '生産性 · カウントダウン', en: 'Productivity · Countdown' },
@@ -385,7 +386,7 @@ const dday: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday',
   },
   release: {
-    ios: { version: '1.1.3', updated: '2026-08-31' },
+    ios: { version: '1.1.5', updated: '2026-10-13', checkedAt: '2026-10-14' },
     since: '2026-06-02',
     checkedAt: '2026-09-30',
   },
@@ -396,7 +397,7 @@ const dday: AppMeta = {
       lede: '수능·결혼기념일·전역·생일까지, 소중한 날을 해적 항해처럼 카운트다운. D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀌고, 홈 화면 위젯으로 매일 확인합니다.',
       metaDesc: '앵무새 PiPi가 D-100부터 당일까지 6단계로 반응하는 디데이 위젯. 수능·결혼기념일·생일 무엇이든 계정 없이 홈 화면에서. 무료 설치 · 앱 내 구매.',
       shotsTitle: '남은 날이 항해가 되는 순간',
-      featuresTitle: '왜 PiPi D-Day 인가',
+      featuresTitle: '왜 그날까지인가',
       ctaTitle: '지금 항해를 시작하세요',
       ctaSub: '무료 설치 · 앱 내 구매가 있습니다.',
       shots: [
@@ -418,7 +419,7 @@ const dday: AppMeta = {
       lede: '受験・結婚記念日・誕生日まで、大切な日を海賊の航海としてカウントダウン。D-100からD-DayまでPiPiの表情が6段階で変化し、ホーム画面ウィジェットで毎日確認できます。',
       metaDesc: 'オウムのPiPiがD-100から当日まで6段階で反応するカウントダウンウィジェット。受験・記念日・誕生日をアカウントなしでホーム画面に。無料ダウンロード・アプリ内課金あり。',
       shotsTitle: '残り日数が航海になる瞬間',
-      featuresTitle: 'PiPi D-Day を選ぶ理由',
+      featuresTitle: '「その日まで」を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
       ctaSub: '無料でダウンロードできます。アプリ内課金があります。',
       shots: [
@@ -440,7 +441,7 @@ const dday: AppMeta = {
       lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
       metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free to download. Offers in-app purchases.',
       shotsTitle: 'The moment days become a voyage',
-      featuresTitle: 'Why PiPi D-Day',
+      featuresTitle: 'Why Until That Day',
       ctaTitle: 'Start your voyage now',
       ctaSub: 'Free to download. Offers in-app purchases.',
       shots: [
@@ -650,8 +651,8 @@ const draw: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
   },
   release: {
-    // KR/JP/US App Store 공개 확인 2026-10-07. updated는 공식 출시 시각의 UTC 날짜.
-    ios: { version: '1.1.0', updated: '2026-10-01' },
+    // KR/JP/US App Store 공개 확인 2026-10-14. updated는 공식 출시 시각의 UTC 날짜.
+    ios: { version: '1.1.2', updated: '2026-10-13', checkedAt: '2026-10-14' },
     since: '2026-07-14',
     checkedAt: '2026-09-30',
   },
@@ -832,7 +833,7 @@ const bridge: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge',
   },
   release: {
-    ios: { version: '1.0.0', updated: '2026-09-16' },
+    ios: { version: '1.0.1', updated: '2026-10-13', checkedAt: '2026-10-14' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
     checkedAt: '2026-09-21',
   },

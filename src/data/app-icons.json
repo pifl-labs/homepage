@@ -28,5 +28,10 @@
     "file": "icon-54881c731423.webp",
     "sourceSha256": "54881c731423fa1ccfc512b438fe194b8714b1354e4adfc3187174f3fb479764",
     "webpSha256": "f7d037dd1ff7c8b481e10c9ebd78d08c2f6191bd11adc0f651c450ca0b87b8d8"
+  },
+  "pipi-bridge": {
+    "file": "icon-049149375a2e.webp",
+    "sourceSha256": "049149375a2e992d888a018aa4c8e338569e584fa019070df94ec87cb6999038",
+    "webpSha256": "f262047216eb842cd12a466bdf204b92b8c478376608020402c78c95f7d1c82d"
   }
 }

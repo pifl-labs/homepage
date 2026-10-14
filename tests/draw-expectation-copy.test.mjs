@@ -12,9 +12,9 @@ test('English Draw lead explains the actual task and qualifies AI results', () =
   assert.doesNotMatch(draw.content.en.lede, /clean line art|perfect|guarantee|fixed|no drawing skill/i);
 });
 
-test('Draw iOS follows current KR/JP/US public 1.1.0, without inferring Android or changing limits', () => {
-  assert.equal(draw.release.ios.version, '1.1.0');
-  assert.equal(draw.release.ios.updated, '2026-10-01');
+test('Draw iOS follows current KR/JP/US public 1.1.2, without inferring Android or changing limits', () => {
+  assert.equal(draw.release.ios.version, '1.1.2');
+  assert.equal(draw.release.ios.updated, '2026-10-13');
   assert.equal(draw.release.since, '2026-07-14');
   assert.equal(draw.release.checkedAt, '2026-09-30');
   assert.equal(draw.release.android, undefined);
