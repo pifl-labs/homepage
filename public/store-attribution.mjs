@@ -5,7 +5,11 @@
 // A provider token is public link metadata, not an API credential.
 export const APPLE_PROVIDER_TOKEN = '';
 
-const SOURCES = new Set(['pifl-labs', 'pipi-worlds', 'instagram', 'youtube', 'threads', 'tiktok', 'naver', 'medium', 'brunch']);
+const SOURCES = new Set([
+  'pifl-labs', 'pipi-worlds', 'instagram', 'youtube', 'threads', 'tiktok', 'naver', 'medium', 'brunch',
+  // Launch-post channels (2026-10); medium per channel is documented in docs/campaign-attribution.md.
+  'x', 'reddit', 'producthunt', 'geeknews', 'disquiet', 'note',
+]);
 const MEDIUMS = new Set(['website', 'social', 'video', 'referral', 'blog']);
 const CAMPAIGN = /^[a-z0-9][a-z0-9_-]{0,29}$/;
 const KEYS = ['utm_source', 'utm_medium', 'utm_campaign'];
