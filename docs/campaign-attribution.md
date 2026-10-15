@@ -22,9 +22,20 @@
 
 | 항목 | 허용값 |
 |---|---|
-| source | `pifl-labs`, `pipi-worlds`, `instagram`, `youtube`, `threads`, `tiktok`, `naver`, `medium`, `brunch` |
+| source | `pifl-labs`, `pipi-worlds`, `instagram`, `youtube`, `threads`, `tiktok`, `naver`, `medium`, `brunch`, `x`, `reddit`, `producthunt`, `geeknews`, `disquiet`, `note` |
 | medium | `website`, `social`, `video`, `referral`, `blog` |
 | campaign | 1–30자, 소문자 영문·숫자로 시작, 나머지는 영문·숫자·`_`·`-` |
+
+런칭 글 채널(2026-10 추가)은 아래 medium을 쓴다. medium 허용값은 늘리지 않았다.
+
+| 채널 | source | medium |
+|---|---|---|
+| GeekNews | `geeknews` | `referral` |
+| 디스콰이엇 | `disquiet` | `referral` |
+| Product Hunt | `producthunt` | `referral` |
+| Reddit | `reddit` | `referral` |
+| X | `x` | `social` |
+| note | `note` | `blog` |
 
 중복 query, 부분 지정, 공백·이메일·허용되지 않은 source/medium 등은 입력 전체를 무시하고 기존 기본 링크를 유지한다. 라벨에 개인정보를 넣지 않는다. 정규식은 개인정보 판별기가 아니다.
 
@@ -35,6 +46,7 @@
 ```text
 https://pifl-labs.com/ko/apps/pipi-focus/?utm_source=instagram&utm_medium=social&utm_campaign=ig_focus_ko_2609
 https://pifl-labs.com/ja/apps/pipi-words/?utm_source=youtube&utm_medium=video&utm_campaign=yt_words_ja_2609
+https://pifl-labs.com/ko/?utm_source=geeknews&utm_medium=referral&utm_campaign=gn_studio_ko_2610
 ```
 
 태그 없는 직접 방문은 `pifl-labs / website / website_ko`(또는 `website_ja`, `website_en`)로 묶인다. 원래 검색엔진이나 이전 방문 채널을 추정하지 않는다. 언어를 전환해도 처음 콘텐츠의 캠페인 이름을 유지한다.
@@ -44,7 +56,7 @@ https://pifl-labs.com/ja/apps/pipi-words/?utm_source=youtube&utm_medium=video&ut
 | 단계 | 현재 상태 |
 |---|---|
 | 링크 생성·내부 전달 | 단위 테스트와 실제 로컬 브라우저로 확인 |
-| 프로덕션에 동일 코드가 배포됨 | 미확인·미배포 |
+| 프로덕션에 동일 코드가 배포됨 | 기본 캠페인은 확인: 2026-10-14T23:14:22Z 운영 `/ko/` 홈의 Google Play 링크 8/8에 `utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko`와 같은 값의 `referrer`. 런칭 글 채널 허용값은 머지·배포 후 같은 방법으로 다시 확인 |
 | 사이트 방문자 / 사이트 버튼 클릭 수 | 이 코드에서는 수집하지 않음 |
 | Play에서 해당 UTM 행이 실제 집계됨 | 미확인. 배포 후 콘솔/리포트 readback 필요 |
 | Apple provider token | 미설정. 계정에서 생성된 캠페인 링크로 검증 후 설정 |

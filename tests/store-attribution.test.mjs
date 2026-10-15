@@ -46,6 +46,36 @@ for (const [label, query] of [
   test(`rejects ${label} without inventing another source`, () => assert.equal(readCampaign(query), null));
 }
 
+for (const [source, medium, campaign] of [
+  ['geeknews', 'referral', 'gn_studio_ko_2610'], ['disquiet', 'referral', 'dq_studio_ko_2610'],
+  ['producthunt', 'referral', 'ph_draw_en_2610'], ['reddit', 'referral', 'rd_flutter_en_2610'],
+  ['x', 'social', 'x_hello_ja_2610'], ['note', 'blog', 'note_kids_ja_2610'],
+]) {
+  test(`launch channel ${source} is accepted and reaches the Play listing and install referrer`, () => {
+    const parsed = readCampaign(`?utm_source=${source}&utm_medium=${medium}&utm_campaign=${campaign}`);
+    assert.deepEqual(parsed, { source, medium, campaign });
+    const result = new URL(storeUrl(PLAY, parsed));
+    assert.equal(result.searchParams.get('utm_source'), source);
+    assert.equal(new URLSearchParams(result.searchParams.get('referrer')).get('utm_source'), source);
+  });
+}
+
+test('every documented source and launch-channel medium is accepted; near-miss spellings stay unlisted', () => {
+  const doc = readFileSync(new URL('../docs/campaign-attribution.md', import.meta.url), 'utf8');
+  const sources = [...doc.match(/^\| source \| (.+) \|$/m)[1].matchAll(/`([a-z0-9-]+)`/g)].map((m) => m[1]);
+  assert.equal(sources.length, 15);
+  for (const source of sources) assert.ok(readCampaign(`?utm_source=${source}&utm_campaign=doc_check`), `${source} is accepted`);
+  const channels = [...doc.matchAll(/^\| [^|]+ \| `([a-z0-9-]+)` \| `([a-z]+)` \|$/gm)];
+  assert.equal(channels.length, 6);
+  for (const [, source, medium] of channels) {
+    assert.ok(sources.includes(source), `${source} is in the source row`);
+    assert.ok(readCampaign(`?utm_source=${source}&utm_medium=${medium}&utm_campaign=doc_check`), `${source}/${medium} is accepted`);
+  }
+  for (const near of ['twitter', 'product-hunt', 'hada', 'X']) {
+    assert.equal(readCampaign(`?utm_source=${near}&utm_campaign=doc_check`), null, `${near} stays unlisted`);
+  }
+});
+
 test('Play has matching listing UTM and exactly-once encoded install referrer', () => {
   const result = new URL(storeUrl(PLAY + '&hl=ko&gl=KR', CAMPAIGN));
   assert.equal(result.searchParams.get('id'), 'com.pifl.pipi.focus');
