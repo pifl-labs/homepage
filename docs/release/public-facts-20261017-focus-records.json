@@ -1,0 +1,123 @@
+{
+  "scope": "Only public current iOS focus-record storage vs ad/purchase internet; not all telemetry on-device or SDK/legal/privacy audit. Android parity not verified.",
+  "copy": {
+    "ko": {
+      "title": "집중 기록 보관",
+      "desc": "iOS: 계정 없이 시작해요. 집중 기록은 기기에 저장해요. 광고·구매에는 인터넷이 필요해요."
+    },
+    "ja": {
+      "title": "集中記録の保存",
+      "desc": "iOS：登録不要。集中記録は端末に保存。広告・購入には通信が必要です。"
+    },
+    "en": {
+      "title": "Local focus records",
+      "desc": "iOS: no account needed. Focus records stay on-device. Ads and purchases need internet."
+    }
+  },
+  "sources": {
+    "ko": {
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=kr",
+      "observedAt": "2026-10-16T16:34:42.090523+00:00",
+      "HTTP": 200,
+      "rawSHA256": "11865fb401e6ea144b8e6766e09456a1f6f8a68f72fcc72385597b2cff727679",
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "artistName": "PiFl Labs Co., Ltd.",
+      "version": "1.1.0",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z",
+      "recordAndAdIdentifierBoundary": [
+        "집중·항해 기록은 기기의 로컬 데이터베이스에 저장됩니다. 계정 가입 없이, 인터넷이 없어도 타이머를 사용할 수 있습니다. 광고 서비스는 기기 또는 기타 식별자를 수집·공유할 수 있으며, 자세한 내용은 App Store의 앱 개인정보 보호 항목과 개인정보처리방침에서 확인할 수 있습니다. 집중(항해) 중에는 광고가 절대 노출되지 않습니다. 무료 버전은 광고로 운영되며, '평생 선장 라이선스'로 광고를 영구히 없앨 수 있어요.",
+        "A. 집중·항해 기록은 기기의 로컬 데이터베이스에 저장됩니다. 기기 또는 기타 식별자 등 광고 관련 데이터 처리는 App Store의 앱 개인정보 보호 항목과 개인정보처리방침에 별도로 안내되어 있습니다."
+      ],
+      "livePromotionalText": "선실 라디오가 열렸어요. 직접 만든 로파이에 빗소리나 파도를 겹쳐 틀고 25분 출항해 보세요. 항해 중에도 바로 바꿀 수 있어요. 계정은 필요 없고, 광고·구매에는 인터넷이 필요해요."
+    },
+    "ja": {
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=jp",
+      "observedAt": "2026-10-16T16:34:42.195121+00:00",
+      "HTTP": 200,
+      "rawSHA256": "2fb50b53823c0afc3b60ef68b2741ece2691ce6256faa0b376394fc418349246",
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "artistName": "PiFl Labs Co., Ltd.",
+      "version": "1.1.0",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z",
+      "recordAndAdIdentifierBoundary": [
+        "集中・航海の記録は端末内のローカルデータベースに保存されます。アカウント登録は不要で、タイマーはオフラインでも使えます。広告サービスでは、デバイスまたはその他の識別子が収集・共有される場合があります。詳しくはApp Storeの「Appのプライバシー」欄とプライバシーポリシーをご確認ください。集中（航海）中に広告が表示されることは一切ありません。無料版は広告で運営されており、「永久船長ライセンス」で広告を完全に非表示にできます。",
+        "A. 集中・航海の記録は端末内のローカルデータベースに保存されます。デバイスなどの識別子を含む広告関連データの取り扱いは、App Storeの「Appのプライバシー」欄とプライバシーポリシーに別途記載しています。"
+      ],
+      "livePromotionalText": "船室ラジオが開きました。オリジナルのローファイに雨音や波の音を重ねて、25分の航海へ。航海中もすぐに切り替えられます。アカウント不要、広告・購入にはインターネットが必要です。"
+    },
+    "en": {
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=us",
+      "observedAt": "2026-10-16T16:34:42.286256+00:00",
+      "HTTP": 200,
+      "rawSHA256": "5aaf2e4660aa789f2ee9ffef73db8c9de67b55c4f3f9a4803878abdf8433345a",
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "artistName": "PiFl Labs Co., Ltd.",
+      "version": "1.1.0",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z",
+      "recordAndAdIdentifierBoundary": [
+        "Your focus and voyage records are stored in a local database on your device. No account is required, and the timer works offline. Advertising services may collect and share device or other identifiers; see App Privacy on the App Store and our privacy policy for details. Ads never appear during a focus session. The free version is ad-supported, and the Lifetime Captain License removes ads for good.",
+        "A: Focus and voyage records are stored in a local database on your device. Advertising-related data, including device or other identifiers, is handled separately as described in App Privacy on the App Store and our privacy policy."
+      ],
+      "livePromotionalText": "Cabin Radio is here: layer our own lo-fi with rain or waves and set sail for 25 minutes. Switch sounds mid-voyage. No account needed; ads and purchases need internet."
+    }
+  },
+  "livePromoMetadataSHA256": "1cfb33ae9a07d8af104c0ec4f92419ccb616d4883ada651679006d627defb549",
+  "sourceBase": "929a3b2566dbeb43165d65ebd27e0f426d728b88",
+  "baseOtherCards": {
+    "ko": [
+      {
+        "icon": "fa-ban",
+        "title": "집중 중 광고 없음",
+        "desc": "집중을 깨는 광고는 항해 중 절대 띄우지 않습니다."
+      },
+      {
+        "icon": "fa-gem",
+        "title": "게임처럼 쌓이는 동기",
+        "desc": "보물·섬·업적이 매일의 집중에 보상을 줍니다."
+      },
+      {
+        "icon": "fa-volume-high",
+        "title": "선실 라디오",
+        "desc": "iOS 1.1.0: 로파이와 빗소리를 겹쳐요. 각각의 음량 조절과 항해 중 소리 변경도 가능해요."
+      }
+    ],
+    "ja": [
+      {
+        "icon": "fa-ban",
+        "title": "集中中は広告なし",
+        "desc": "集中を妨げる広告は航海中に一切表示しません。"
+      },
+      {
+        "icon": "fa-gem",
+        "title": "ゲームのように続く動機",
+        "desc": "宝物・島・実績が毎日の集中にごほうびを。"
+      },
+      {
+        "icon": "fa-volume-high",
+        "title": "船室ラジオ",
+        "desc": "iOS 1.1.0：ローファイと雨音を重ねて再生。音量は別々に調整。航海中も音を選べます。"
+      }
+    ],
+    "en": [
+      {
+        "icon": "fa-ban",
+        "title": "No ads while focusing",
+        "desc": "We never interrupt a voyage with a focus-breaking ad."
+      },
+      {
+        "icon": "fa-gem",
+        "title": "Motivation that builds",
+        "desc": "Treasure, islands and achievements reward daily focus."
+      },
+      {
+        "icon": "fa-volume-high",
+        "title": "Cabin Radio",
+        "desc": "On iOS 1.1.0, layer lo-fi with rain, adjust each volume and switch sounds mid-voyage."
+      }
+    ]
+  },
+  "nativeRadioOtherHoldsUnchanged": true
+}
