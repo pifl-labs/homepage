@@ -103,8 +103,8 @@ const focus: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
   release: {
-    // App Store KR/JP/US 공개 확인 2026-10-07. updated는 공식 release timestamp의 UTC 날짜.
-    ios: { version: '1.0.16', updated: '2026-10-05' },
+    // App Store KR/JP/US 공개 확인 2026-10-16. updated는 공식 release timestamp의 UTC 날짜.
+    ios: { version: '1.1.0', updated: '2026-10-15', checkedAt: '2026-10-16' },
     since: '2026-05-15',
     checkedAt: '2026-09-30',
   },

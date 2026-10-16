@@ -173,7 +173,9 @@ const jsonLd = {
               <span class="app-rel-ver">{relVersion}</span>
               <span class="app-rel-sep" aria-hidden="true">·</span>
               <time datetime={latestUpdate(app)}>{relUpdated} {ul.updated}</time>
-              {relSince && (<><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} {relSince}</span></>)}
+              {relSince && (app.slug === 'pipi-focus'
+                ? <span class="app-rel-since-group"><span class="app-rel-sep" aria-hidden="true">·</span> <span>{ul.since} <span class="app-rel-since-date" style="white-space: nowrap">{relSince}</span></span></span>
+                : <><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} {relSince}</span></>)}
             </p>
           )}
         </div>

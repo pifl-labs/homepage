@@ -59,7 +59,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.equal(item.name, name);
     assert.equal(item.alternateName, 'PiPi Focus');
     assert.equal(item.softwareVersion, undefined, `${lang}: do not generalize iOS version`);
-    assert.equal(item.dateModified, '2026-10-05');
+    assert.equal(item.dateModified, '2026-10-15');
     assert.equal(item.datePublished, '2026-05-15');
   }
   assert.ok(detail.includes(`<title>${name} —`), `${lang}: title`);
@@ -69,7 +69,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(notices(detail).length, 0, `${lang}: no stale hero/final CTA transition notice`);
   assert.doesNotMatch(detail, /PiPi Focus: (?:해적 포모도로|海賊ポモドーロ|Pirate Pomodoro)/);
   const release = detail.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
-  assert.ok(release.includes('iOS v1.0.16'), `${lang}: visible verified iOS-only version`);
+  assert.ok(release.includes('iOS v1.1.0'), `${lang}: visible verified iOS-only version`);
   assert.doesNotMatch(detail, /v1\.0\.11|iOS v1\.0\.13/);
   const links = [...detail.matchAll(/<a\b[^>]*data-store-link="([^"]+)"[^>]*>/gs)];
   assert.equal(links.length, 4);

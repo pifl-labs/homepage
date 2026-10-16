@@ -1,0 +1,43 @@
+{
+  "scope": "Focus iOS public release only; Android version not observed",
+  "countries": [
+    "kr",
+    "jp",
+    "us"
+  ],
+  "observedKSTDay": "2026-10-16",
+  "updatedUTC": "2026-10-15",
+  "previousCommonObservationPreserved": "2026-09-30",
+  "lookup": {
+    "kr": {
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=kr",
+      "observedAt": "2026-10-16T13:26:35.422391+00:00",
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "sellerName": "PiFl Labs Co., Ltd.",
+      "trackName": "집중항해: 포모도로 타이머",
+      "version": "1.1.0",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z"
+    },
+    "jp": {
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=jp",
+      "observedAt": "2026-10-16T13:26:35.726021+00:00",
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "sellerName": "PiFl Labs Co., Ltd.",
+      "trackName": "集中航海：ポモドーロタイマー",
+      "version": "1.1.0",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z"
+    },
+    "us": {
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=us",
+      "observedAt": "2026-10-16T13:26:36.107484+00:00",
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "sellerName": "PiFl Labs Co., Ltd.",
+      "trackName": "Pomodoro at Sea: Focus Timer",
+      "version": "1.1.0",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z"
+    }
+  }
+}
