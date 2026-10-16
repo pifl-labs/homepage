@@ -431,3 +431,12 @@
 
 /* Keep EN Words payment boundaries in readable units without shrinking text. */
 :lang(en) .app-page--words .app-cta-sub { color: var(--text-secondary); text-wrap: pretty; }
+
+/* Focus sound card only: text enlargement must not double away its readable width. */
+.app-feature--focus-sound { padding-inline: 24px; }
+.app-feature--focus-sound h3 { text-wrap: balance; }
+
+/* Progressive Japanese phrase segmentation; normal/strict remain the fallback. */
+@supports (word-break: auto-phrase) {
+  .app-feature--ja-sound p { word-break: auto-phrase; }
+}
