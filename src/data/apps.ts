@@ -128,7 +128,7 @@ const focus: AppMeta = {
       ],
       features: [
         { icon: 'fa-ban',          title: '집중 중 광고 없음', desc: '집중을 깨는 광고는 항해 중 절대 띄우지 않습니다.' },
-        { icon: 'fa-wifi',         title: '기록은 전부 기기 안에', desc: '계정 없이 바로 시작. 기록은 서버가 아니라 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
+        { icon: 'fa-wifi',         title: '집중 기록 보관', desc: 'iOS: 계정 없이 시작해요. 집중 기록은 기기에 저장해요. 광고·구매에는 인터넷이 필요해요.' },
         { icon: 'fa-gem',          title: '게임처럼 쌓이는 동기', desc: '보물·섬·업적이 매일의 집중에 보상을 줍니다.' },
         { icon: 'fa-volume-high', title: '선실 라디오', desc: 'iOS 1.1.0: 로파이와 빗소리를 겹쳐요. 각각의 음량 조절과 항해 중 소리 변경도 가능해요.' },
       ],
@@ -151,7 +151,7 @@ const focus: AppMeta = {
       ],
       features: [
         { icon: 'fa-ban',          title: '集中中は広告なし',   desc: '集中を妨げる広告は航海中に一切表示しません。' },
-        { icon: 'fa-wifi',         title: '記録はすべて端末内',  desc: 'アカウント不要ですぐ開始。記録はサーバーではなく端末にのみ保存されます(通信は広告表示にのみ使用)。' },
+        { icon: 'fa-wifi',         title: '集中記録の保存',  desc: 'iOS：登録不要。集中記録は端末に保存。広告・購入には通信が必要です。' },
         { icon: 'fa-gem',          title: 'ゲームのように続く動機', desc: '宝物・島・実績が毎日の集中にごほうびを。' },
         { icon: 'fa-volume-high', title: '船室ラジオ', desc: 'iOS 1.1.0：ローファイと雨音を重ねて再生。音量は別々に調整。航海中も音を選べます。' },
       ],
@@ -174,7 +174,7 @@ const focus: AppMeta = {
       ],
       features: [
         { icon: 'fa-ban',          title: 'No ads while focusing', desc: 'We never interrupt a voyage with a focus-breaking ad.' },
-        { icon: 'fa-wifi',         title: 'Your data stays on device', desc: 'No account needed — records live on your device, not our servers (the network is only used to show ads).' },
+        { icon: 'fa-wifi',         title: 'Local focus records', desc: 'iOS: no account needed. Focus records stay on-device. Ads and purchases need internet.' },
         { icon: 'fa-gem',          title: 'Motivation that builds', desc: 'Treasure, islands and achievements reward daily focus.' },
         { icon: 'fa-volume-high', title: 'Cabin Radio', desc: "On iOS 1.1.0, layer lo-fi with rain, adjust each volume and switch sounds mid-voyage." },
       ],

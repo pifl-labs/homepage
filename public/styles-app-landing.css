@@ -440,3 +440,23 @@
 @supports (word-break: auto-phrase) {
   .app-feature--ja-sound p { word-break: auto-phrase; }
 }
+
+/* Focus records card only: preserve reading units when text is enlarged. */
+.app-feature--focus-records { padding-inline: 24px; }
+.app-feature--ko-records h3,
+.app-feature--ko-records p {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+}
+.app-feature--ja-records h3,
+.app-feature--ja-records p {
+  word-break: normal;
+  overflow-wrap: normal;
+  line-break: strict;
+  text-wrap: pretty;
+}
+@supports (word-break: auto-phrase) {
+  .app-feature--ja-records h3,
+  .app-feature--ja-records p { word-break: auto-phrase; }
+}
