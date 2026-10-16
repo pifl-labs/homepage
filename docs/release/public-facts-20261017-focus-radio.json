@@ -1,0 +1,66 @@
+{
+  "scope": "public iOS1.1.0 sound feature copy only; no Android availability/native QA or effect claim",
+  "lookup": {
+    "kr": {
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "artistName": "PiFl Labs Co., Ltd.",
+      "version": "1.1.0",
+      "trackName": "집중항해: 포모도로 타이머",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z",
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=kr",
+      "observedAt": "2026-10-16T16:34:42.090523+00:00",
+      "HTTP": 200,
+      "rawSHA256": "11865fb401e6ea144b8e6766e09456a1f6f8a68f72fcc72385597b2cff727679"
+    },
+    "jp": {
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "artistName": "PiFl Labs Co., Ltd.",
+      "version": "1.1.0",
+      "trackName": "集中航海：ポモドーロタイマー",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z",
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=jp",
+      "observedAt": "2026-10-16T16:34:42.195121+00:00",
+      "HTTP": 200,
+      "rawSHA256": "2fb50b53823c0afc3b60ef68b2741ece2691ce6256faa0b376394fc418349246"
+    },
+    "us": {
+      "trackId": 6762258878,
+      "bundleId": "com.pifl.pipi.focus",
+      "artistName": "PiFl Labs Co., Ltd.",
+      "version": "1.1.0",
+      "trackName": "Pomodoro at Sea: Focus Timer",
+      "currentVersionReleaseDate": "2026-10-15T19:05:28Z",
+      "source": "https://itunes.apple.com/lookup?id=6762258878&country=us",
+      "observedAt": "2026-10-16T16:34:42.286256+00:00",
+      "HTTP": 200,
+      "rawSHA256": "5aaf2e4660aa789f2ee9ffef73db8c9de67b55c4f3f9a4803878abdf8433345a"
+    }
+  },
+  "copy": {
+    "ko": {
+      "title": "선실 라디오",
+      "desc": "iOS 1.1.0: 로파이와 빗소리를 겹쳐요. 각각의 음량 조절과 항해 중 소리 변경도 가능해요."
+    },
+    "ja": {
+      "title": "船室ラジオ",
+      "desc": "iOS 1.1.0：ローファイと雨音を重ねて再生。音量は別々に調整。航海中も音を選べます。"
+    },
+    "en": {
+      "title": "Cabin Radio",
+      "desc": "On iOS 1.1.0, layer lo-fi with rain, adjust each volume and switch sounds mid-voyage."
+    }
+  },
+  "sourceSnippets": {
+    "ko": "로파이에 빗소리를 겹치고, 소리 크기는 따로 맞춰요",
+    "ja": "ローファイに雨音を重ねて、音量は別々に調整できます",
+    "en": "Layer lo-fi with rain and set each volume separately"
+  },
+  "midVoyageSource": [
+    "항해 중에도 화면 아래 라디오 바에서 바로 소리를 바꿀 수 있어요.",
+    "航海中も画面下のラジオバーからすぐに音を切り替えられます。",
+    "Change sounds mid-voyage right from the radio bar at the bottom of the screen."
+  ],
+  "nativeRadioAndStoreImageHoldUnchanged": true
+}

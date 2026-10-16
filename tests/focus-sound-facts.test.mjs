@@ -12,13 +12,13 @@ test('Focus release label follows KR/JP/US public iOS1.1.0 and UTC release date'
  assert.equal(focus.release.checkedAt,'2026-09-30');
  assert.equal(focus.release.android,undefined,'do not infer an Android release');
 });
-test('English differentiated feature is iOS-scoped and names all five actual choices',()=>{
+test('English differentiated feature describes current public iOS1.1.0 Cabin Radio',()=>{
  const cards=focus.content.en.features;
  assert.equal(cards.length,4);
  const card=cards[3];
  assert.equal(card.icon,'fa-volume-high');
- assert.equal(card.title,'Switch sound mid-voyage');
- for(const text of ['On iOS 1.0.16:', 'brown, pink or white noise', "a ship's clock", 'deep-sea binaural', 'Earphones recommended for binaural.']) assert.ok(card.desc.includes(text),text);
+ assert.equal(card.title,'Cabin Radio');
+ for(const text of ['On iOS 1.1.0,', 'lo-fi with rain', 'adjust each volume', 'switch sounds mid-voyage.']) assert.ok(card.desc.includes(text),text);
  assert.doesNotMatch(card.desc,/guarantee|improve focus|boost|Android|proven|free of ads/i);
 });
 test('platform availability remains in existing EN CTA and exact store routes',()=>{
@@ -26,8 +26,8 @@ test('platform availability remains in existing EN CTA and exact store routes',(
  assert.equal(new URL(focus.stores.ios).pathname,'/app/pipi-focus-pirate-pomodoro/id6762258878');
  assert.equal(new URL(focus.stores.android).searchParams.get('id'),'com.pifl.pipi.focus');
 });
-test('KO/JA sound cards name the public iOS scope without Android parity or benefit claims',()=>{
- const specs={ko:{title:'소리 전환',terms:['iOS 1.0.16','브라운, 핑크, 화이트 노이즈','선박 시계','심해 바이노럴','항해 중에도','이어폰']},ja:{title:'音の切替',terms:['iOS 1.0.16','ブラウン・ピンク・ホワイトノイズ','船の時計','深海バイノーラル','航海中も','イヤホン推奨']}};
+test('KO/JA sound cards explain public iOS1.1.0 layering without Android parity or benefit claims',()=>{
+ const specs={ko:{title:'선실 라디오',terms:['iOS 1.1.0','로파이','빗소리','각각의 음량','항해 중']},ja:{title:'船室ラジオ',terms:['iOS 1.1.0','ローファイ','雨音','別々','航海中も']}};
  for(const [lang,spec] of Object.entries(specs)){
   assert.equal(focus.content[lang].features.length,4);
   const card=focus.content[lang].features[3];
