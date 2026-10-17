@@ -88,6 +88,10 @@ This is visual matching, not a pronunciation, handwriting or stroke-order guide.
 The separate [KanaSprout: Japanese for Kids iOS app](https://apps.apple.com/us/app/id6777299814) has free content and an optional auto-renewing annual plan (US listing checked 17 October 2026).
 Noto Sans JP is embedded under the [SIL Open Font License 1.1](https://pifl-labs.com/assets/printables/first-kana-shape-match-OFL.txt).
 
+**한국어 보호자 안내:** [같은 모양 찾기 A4](https://pifl-labs.com/assets/printables/first-kana-shape-match-ko-a4.pdf) · [텍스트 안내](https://pifl-labs.com/assets/printables/first-kana-shape-match-ko.txt).
+같은 세 모양을 한국어 설명으로 함께 찾아보세요. 앱·가입·구매가 필요 없고, 발음·획순·쓰기 채점이나 학습 효과를 약속하는 자료는 아닙니다.
+별도 선택 앱 [말놀이 새싹: 어린이 일본어](https://apps.apple.com/kr/app/id6777299814)에는 무료 콘텐츠와 연간 자동갱신 구독이 있습니다. AI 작성·배치 보조, 교사·실제 인쇄 검수 전 자료이며 나눔고딕·Noto Sans JP의 [OFL 원문](https://pifl-labs.com/assets/printables/first-kana-shape-match-ko-OFL.txt)을 동봉했습니다.
+
 ## 스택
 
 - **Astro 5** static site
