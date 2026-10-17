@@ -1,0 +1,30 @@
+Find the same kana
+Original PiFl Labs paper play, 17 October 2026.
+
+Try together. No app or sign-up needed.
+1. Point to the large shape on the left.
+2. Find the same shape on the right. Point or circle it.
+3. Swap turns, or stop whenever you like.
+
+LOOK     FIND THE SAME SHAPE
+あ       い    あ    う
+い       う    あ    い
+う       う    い    あ
+
+Cover the other rows and try just one. You do not need to read Japanese.
+This is a visual shape game, not a sound, handwriting or stroke-order guide.
+Printed glyphs can look different from handwriting. This is not a test.
+For an adult helper: the matching choices are middle, right, left.
+
+The separate KanaSprout: Japanese for Kids app has free content and an
+optional auto-renewing annual plan. No app or subscription is needed for this sheet.
+Optional US iOS listing: https://apps.apple.com/us/app/id6777299814
+App details are from its US public listing checked 17 October 2026, not new runtime QA.
+
+Free original resource for home/classroom printing with attribution to PiFl Labs.
+AI-assisted writing and layout; not educator-reviewed or physically print-tested.
+No learning result is promised. Noto Sans JP: SIL Open Font License 1.1.
+Font license: https://pifl-labs.com/assets/printables/first-kana-shape-match-OFL.txt
+Character identity checked with the official Unicode Hiragana chart:
+https://www.unicode.org/charts/PDF/U3040.pdf
+No chart images or font data were copied from that chart; no endorsement is implied.
