@@ -14,7 +14,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
         <div class="container">
             <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
             <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name"><span class="log-policy-term">気分の</span><wbr /><span class="log-policy-term">ひとこま</span></span> <span class="log-policy-type"><span class="log-policy-term">プライバシー</span><wbr /><span class="log-policy-term">ポリシー</span></span></span></h1>
-            <p class="legal-date">施行日: 2026年5月17日 <span class="legal-revised">最終更新日: 2026年9月23日</span></p>
+            <p class="legal-date">施行日: 2026年5月17日 <span class="legal-revised">最終更新日: 2026年10月17日</span></p>
         </div>
     </section>
 
@@ -26,8 +26,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h2>第1条 (利用目的)</h2>
                 <ul>
                     <li><strong>アプリ機能の提供</strong>: 感情日記の作成、9段階ムード記録、写真添付、統計分析、通知、ユーザー環境設定の保存</li>
-                    <li><strong>広告配信</strong>: Google AdMobによる広告表示および広告関連性の向上</li>
-                    <li><strong>アプリ内課金</strong>: プレミアム機能の購入処理および領収書検証</li>
+                    <li><strong>アプリ内課金</strong>: 任意の「生涯サポーター」購入の処理および領収書検証</li>
                     <li><strong>カスタマーサポート</strong>: メールによるお問い合わせの受付および対応</li>
                 </ul>
 
@@ -44,11 +43,6 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     </thead>
                     <tbody>
                         <tr>
-                            <td>広告識別子</td>
-                            <td>広告ID(IDFA/AAID)、おおよその位置(国単位)、デバイス情報(OS、モデル、言語)</td>
-                            <td>Google AdMob SDK による自動収集(同意時)</td>
-                        </tr>
-                        <tr>
                             <td>アプリ内課金</td>
                             <td>購入領収書、取引ID</td>
                             <td>Apple App Store / Google Play 課金システム</td>
@@ -56,7 +50,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                         <tr>
                             <td>アプリ使用<wbr />データ</td>
                             <td>感情日記、ムード記録、添付写真、統計、環境設定</td>
-                            <td>デバイス内ローカル保存(外部送信なし)</td>
+                            <td>デバイス内ローカル保存(外部送信なし。「記録を書き出す」を選んだ場合のみ、ユーザーが選んだ場所にファイルを保存)</td>
                         </tr>
                         <tr>
                             <td>メール<wbr />お問い合わせ</td>
@@ -69,7 +63,6 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h2>第3条 (保有期間)</h2>
                 <ul>
-                    <li><strong>広告識別子および広告関連データ</strong>: Google AdMob ポリシーに準拠</li>
                     <li><strong>アプリ内課金領収書</strong>: 関連法令(電子商取引法)により <strong>5年</strong></li>
                     <li><strong>アプリ内データ</strong>: ユーザーがアプリを削除またはデータを初期化するまで</li>
                     <li><strong>メールお問い合わせ記録</strong>: 対応完了後 <strong>3年</strong></li>
@@ -90,11 +83,6 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Google LLC (AdMob)</td>
-                            <td>モバイル広告配信および広告識別子の処理</td>
-                            <td>委託契約終了時</td>
-                        </tr>
-                        <tr>
                             <td>Apple Inc.</td>
                             <td>iOS アプリ内課金処理</td>
                             <td>委託契約終了時</td>
@@ -108,19 +96,14 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 </table>
                 </ScrollableLegalTable>
 
-                <h2>第6条 (広告識別子およびトラッキング同意)</h2>
-                <p>本アプリは Google AdMob を通じて広告を表示し、その過程で広告識別子(IDFA/AAID)を収集することがあります。</p>
-                <ul>
-                    <li><strong>iOS ユーザー</strong>: アプリの初回起動時に Apple の App Tracking Transparency (ATT) 同意ダイアログでトラッキング許可を選択できます。<strong>拒否した場合は非パーソナライズ広告のみ</strong>表示されます。</li>
-                    <li><strong>Android ユーザー</strong>: デバイス設定 → Google → 広告 → 「広告 ID を削除」または「広告のカスタマイズをオプトアウト」から制御できます。</li>
-                </ul>
-                <p>Google AdMob のデータ処理についての詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご参照ください。</p>
+                <h2>第6条 (広告およびトラッキング)</h2>
+                <p>本アプリは広告を表示せず、広告識別子(IDFA/AAID)を収集せず、他社のアプリやウェブサイトをまたいでユーザーをトラッキングしません。バージョン 1.0.12 から、広告 SDK(Google AdMob)とトラッキング許可の要求(App Tracking Transparency)をアプリから削除しました。</p>
+                <p>1.0.11 以前のバージョンを引き続きお使いの場合、Google AdMob が広告識別子とデバイス情報を処理することがあり、その処理は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> に従います。アプリを最新バージョンに更新すると、広告表示と広告識別子の処理は停止します。</p>
 
                 <h2>第7条 (アプリ権限)</h2>
                 <p>本アプリはサービス提供のため、以下の権限を要求することがあります。各権限は拒否可能ですが、関連機能の利用が制限される場合があります。</p>
                 <ul>
-                    <li><strong>通知</strong>: 毎日の航海日誌リマインダー、過去の振り返り通知</li>
-                    <li><strong>App Tracking Transparency (iOS)</strong>: 広告関連性向上のためのトラッキング同意</li>
+                    <li><strong>通知</strong>: 毎日の日記リマインダー、過去の振り返り通知</li>
                     <li><strong>写真・カメラ、生体認証</strong>: 日記への写真添付、ロックされた日記の保護にのみ使用 (local_auth — デバイス内処理、気分のひとこま は生体情報に直接アクセスしません)</li>
                 </ul>
 
@@ -164,12 +147,6 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Google LLC</td>
-                            <td>米国</td>
-                            <td>モバイル広告配信</td>
-                            <td>広告識別子、デバイス情報</td>
-                        </tr>
-                        <tr>
                             <td>Apple Inc.</td>
                             <td>米国</td>
                             <td>iOS アプリ内課金</td>
@@ -195,7 +172,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
                 <h2>第15条 (改定)</h2>
-                <p>本プライバシーポリシーは、2026年5月17日から施行します。2026年9月23日にアプリの名称と端末内の保存方法に関する説明を訂正しました。今後の変更も本ページで告知します。</p>
+                <p>本プライバシーポリシーは、2026年5月17日から施行します。2026年9月23日にアプリの名称と端末内の保存方法に関する説明を訂正しました。2026年10月17日、バージョン 1.0.12 で広告・広告識別子の収集・トラッキング許可の要求をなくしたことと、記録の書き出し機能を反映しました。今後の変更も本ページで告知します。</p>
             </div>
         </div>
     </main>

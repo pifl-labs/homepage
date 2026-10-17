@@ -14,7 +14,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
         <div class="container">
             <a href="/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name">Mood Tile</span> <span class="log-policy-type">Privacy Policy</span></span></h1>
-            <p class="legal-date">Effective Date: May 17, 2026 <span class="legal-revised">Last updated: September 23, 2026</span></p>
+            <p class="legal-date">Effective Date: May 17, 2026 <span class="legal-revised">Last updated: October 17, 2026</span></p>
         </div>
     </section>
 
@@ -26,8 +26,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                 <h2>1. Purpose of Processing</h2>
                 <ul>
                     <li><strong>App functionality</strong>: Mood diary, 9-level mood tracking, photo attachments, statistics, notifications, and user preferences</li>
-                    <li><strong>Advertising</strong>: Ad serving and personalization via Google AdMob</li>
-                    <li><strong>In-app purchases</strong>: Premium feature purchases and receipt validation</li>
+                    <li><strong>In-app purchases</strong>: Processing the optional Lifetime Supporter purchase and receipt validation</li>
                     <li><strong>Customer support</strong>: Receiving and responding to email inquiries</li>
                 </ul>
 
@@ -44,11 +43,6 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Advertising Identifier</td>
-                            <td>Ad ID (IDFA/AAID), coarse location (country level), device info (OS, model, language)</td>
-                            <td>Automatic via Google AdMob SDK (with consent)</td>
-                        </tr>
-                        <tr>
                             <td>In-App Purchases</td>
                             <td>Purchase receipt, transaction ID</td>
                             <td>Apple App Store / Google Play billing</td>
@@ -56,7 +50,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                         <tr>
                             <td>App Usage Data</td>
                             <td>Mood diary entries, mood records, attached photos, statistics, preferences</td>
-                            <td>Stored locally on device (no external transmission)</td>
+                            <td>Stored locally on device (no external transmission; saved as a file to a location you choose only when you use "Export entries")</td>
                         </tr>
                         <tr>
                             <td>Email Inquiries</td>
@@ -69,7 +63,6 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
 
                 <h2>3. Retention Period</h2>
                 <ul>
-                    <li><strong>Advertising identifier and ad data</strong>: As per Google AdMob policy</li>
                     <li><strong>In-app purchase receipts</strong>: <strong>5 years</strong> (Korean Act on Consumer Protection in Electronic Commerce)</li>
                     <li><strong>Local app data</strong>: Until the user deletes the App or resets the data</li>
                     <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after resolution</li>
@@ -90,11 +83,6 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Google LLC (AdMob)</td>
-                            <td>Mobile ad serving and ad identifier processing</td>
-                            <td>Until contract termination</td>
-                        </tr>
-                        <tr>
                             <td>Apple Inc.</td>
                             <td>iOS in-app purchase processing</td>
                             <td>Until contract termination</td>
@@ -108,19 +96,14 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                 </table>
                 </ScrollableLegalTable>
 
-                <h2>6. Advertising Identifier and Tracking Consent</h2>
-                <p>The App displays advertisements via Google AdMob and may collect advertising identifiers (IDFA/AAID) for this purpose.</p>
-                <ul>
-                    <li><strong>iOS users</strong>: On first launch, you will see Apple's App Tracking Transparency (ATT) prompt to choose whether to allow tracking. <strong>If denied, only non-personalized ads will be shown.</strong></li>
-                    <li><strong>Android users</strong>: You can opt out via Settings → Google → Ads → "Delete advertising ID" or "Opt out of ad personalization".</li>
-                </ul>
-                <p>For details on Google AdMob's data processing, see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+                <h2>6. Advertising and Tracking</h2>
+                <p>The App does not show advertisements, does not collect advertising identifiers (IDFA/AAID), and does not track you across other companies' apps or websites. Starting with version 1.0.12, the advertising SDK (Google AdMob) and the tracking permission request (App Tracking Transparency) were removed from the App.</p>
+                <p>If you keep using version 1.0.11 or earlier, Google AdMob may process advertising identifiers and device information under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. Updating the App to the latest version stops ad display and advertising-identifier processing.</p>
 
                 <h2>7. App Permissions</h2>
                 <p>The App may request the following permissions. Each can be denied, though doing so may limit related functionality.</p>
                 <ul>
                     <li><strong>Notifications</strong>: Daily journaling reminders and flashback (memory) notifications</li>
-                    <li><strong>App Tracking Transparency (iOS)</strong>: Tracking consent for ad relevance</li>
                     <li><strong>Photos &amp; Camera, Biometrics</strong>: Used only to attach photos to entries and to protect locked entries (local_auth, processed on-device; Mood Tile never accesses biometric data)</li>
                 </ul>
 
@@ -164,12 +147,6 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Google LLC</td>
-                            <td>United States</td>
-                            <td>Mobile ad serving</td>
-                            <td>Ad identifier, device info</td>
-                        </tr>
-                        <tr>
                             <td>Apple Inc.</td>
                             <td>United States</td>
                             <td>iOS in-app purchases</td>
@@ -195,7 +172,7 @@ import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro
                 <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
                 <h2>15. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective as of May 17, 2026. On September 23, 2026, we corrected the App name and the description of on-device storage. Future changes will be announced on this page.</p>
+                <p>This Privacy Policy is effective as of May 17, 2026. On September 23, 2026, we corrected the App name and the description of on-device storage. On October 17, 2026, we reflected the removal of ads, advertising-identifier collection and the tracking request in version 1.0.12, and the new entry export feature. Future changes will be announced on this page.</p>
             </div>
         </div>
     </main>
