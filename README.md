@@ -11,6 +11,26 @@ The website contains product details and official store links. Some apps include
 ads or optional purchases; availability and pricing vary by app and store.
 This repository contains the company marketing website, not the Flutter app source.
 
+### Ten apps: official store links
+
+Ten product listings checked on 17 October 2026. These links use the Korean
+storefront: eight App Store listings and two Google Play listings. They are not
+a complete list of each app's supported platforms. Check the linked store for
+current availability, device requirements, ads and purchases.
+
+| App (Korean storefront name) | Verified public listing |
+| --- | --- |
+| Korean Bridge - 어린이 한국어·한글·수학 | [App Store (Korea)](https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4) |
+| 집중항해: 포모도로 타이머 | [App Store (Korea)](https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878?uo=4) |
+| 밑그림: 사진으로 만드는 색칠공부 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131?uo=4) |
+| 낱말항해: 한글 단어 퍼즐 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612?uo=4) |
+| 말놀이 새싹: 어린이 일본어 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814?uo=4) |
+| 단어루틴: JLPT·TOPIK 단어장 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-topik-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4) |
+| 그날까지: 디데이·기념일 위젯 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4) |
+| 기분 한 칸: 날씨 감정일기 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4) |
+| 물때친구 - 만조 간조 물때표 위젯 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
+| Dialogos: 철학자와의 대화 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
+
 ### App portfolio (PDF)
 
 [Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).
