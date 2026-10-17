@@ -153,3 +153,13 @@ A standalone A5 card with Japanese instructions for Korean vocabulary learners: 
 - [한국어 PDF](https://pifl-labs.com/assets/printables/one-word-recall-card-ko.pdf) · [같은 안내 텍스트](https://pifl-labs.com/assets/printables/one-word-recall-card-ko.txt)
 - 자료는 앱 설치·가입·구매 없이 사용할 수 있습니다. 선택 앱 [단어루틴 iOS](https://apps.apple.com/kr/app/id6770267735)는 광고 포함 무료 다운로드이며 추가 단어팩/구독은 선택 유료입니다.
 - 피플랩스 원본 / AI 작성 보조. Jua 글꼴은 기존 [SIL Open Font License](https://pifl-labs.com/assets/printables/jua-OFL.txt)를 따릅니다. 학습 효과·인쇄·앱 실물 검증을 이 자료로 입증하지 않습니다. 새로운 앱 기능이나 SNS 게시가 아닙니다.
+
+
+## Free Vietnamese/Korean family role-play
+
+**Cùng bé nhờ giúp đỡ**: một câu tiếng Hàn, một lượt đóng vai cùng người lớn. Không cần ứng dụng hay đăng ký.
+
+- [PDF A4 - tiếng Việt + 한국어](https://pifl-labs.com/assets/printables/help-me-ko-vi-a4.pdf) · [Bản văn / text version](https://pifl-labs.com/assets/printables/help-me-ko-vi.txt)
+- Original one-page family role-play for asking for help with `도와주세요.` Use an empty, light box and only pretend its lid is hard to open. A child may point, speak together with a grown-up, or stop. No scoring, audio or pronunciation instruction.
+- No app, registration, purchase or submission of child information is needed for the sheet. The separate iPhone/iPad app [Korean Bridge](https://apps.apple.com/app/id6801205183) offers Vietnamese grown-up guidance; its US 1.0.1 listing checked 17 October 2026 says no ads or in-app purchases. Availability is not guaranteed in every region. This paper is not a new app feature or Vietnamese puzzle interface.
+- PiFl Labs original, with AI translation/layout assistance. Not independently educator/native-speaker reviewed or physically print-tested; learning outcomes are not established. Free home/classroom printing with attribution. Existing Noto Sans JP and NanumGothic are embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/help-me-ko-vi-OFL.txt). The Korean-Vietnamese dictionary is a word-meaning reference, not an endorsement.
