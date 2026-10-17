@@ -15,15 +15,17 @@ const expected = [
   'https://pifl-labs.com/assets/printables/one-small-start-ko.pdf',
   'https://pifl-labs.com/assets/printables/one-word-recall-card-ja.pdf',
   'https://pifl-labs.com/assets/printables/one-word-recall-card-ko.pdf',
+  'https://pifl-labs.com/assets/printables/first-kana-shape-match-en-a4.pdf',
+  'https://pifl-labs.com/assets/printables/help-me-ko-vi-a4.pdf',
 ];
-const publicationDates = ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12', '2026-10-12T21:30:29Z', '2026-10-13T04:58:57Z', '2026-10-13T12:30:42Z'];
+const publicationDates = ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12', '2026-10-12T21:30:29Z', '2026-10-13T04:58:57Z', '2026-10-13T12:30:42Z', '2026-10-17T03:21:17Z', '2026-10-17T06:17:08Z'];
 const validateResourceXML = input => {
   assert.deepEqual([...input.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]), expected);
   assert.deepEqual([...input.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), publicationDates);
   assert.doesNotMatch(input, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>/);
 };
 
-test('only the seven already-public canonical PDFs, once each', () => {
+test('only the nine already-public canonical PDFs, once each', () => {
   validateResourceXML(xml);
   assert.deepEqual(urls, expected);
   assert.equal(new Set(urls).size, urls.length);
@@ -38,7 +40,7 @@ test('only the seven already-public canonical PDFs, once each', () => {
 test('standard UTF-8 root urlset, accurate fixed publication date; no SEO promises', () => {
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'));
-  assert.equal((xml.match(/<url>/g) || []).length, 7);
+  assert.equal((xml.match(/<url>/g) || []).length, 9);
   assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), publicationDates);
   assert.doesNotMatch(xml, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>|pipi-worlds|\.txt<\/loc>/);
 });
@@ -147,3 +149,33 @@ for(const [name,mutate] of [
  ['Korean tracking URL',v=>v.replace(expected[6],expected[6]+'?utm_source=unverified')],
  ['duplicate Korean PDF',v=>v.replace('</urlset>','<url><loc>'+expected[6]+'</loc><lastmod>2026-10-13T12:30:42Z</lastmod></url></urlset>')]
 ])test('Korean metadata mutation rejected: '+name,()=>{const bad=mutate(xml);assert.notEqual(bad,xml);assert.throws(()=>validateResourceXML(bad));});
+
+for (const [name, path, bytes, sha, sourceDate] of [
+  ['first kana paper game', 'first-kana-shape-match-en-a4.pdf', 13577, 'e33ed3c430ade6bf8a97c815e9bcc731dc0da7e2966b0cd76dd320ba44b8b961', '2026-10-17T03:21:17Z'],
+  ['Vietnamese Korean help card', 'help-me-ko-vi-a4.pdf', 48059, '67a5accfdb55ff385069f0a515d85386aecf03483691f0f333e84ff0afbb1b5a', '2026-10-17T06:17:08Z'],
+]) {
+  test(`${name} stays byte-identical to the reviewed public PDF`, () => {
+    const pdf = read('public/assets/printables/' + path);
+    assert.equal(pdf.length, bytes);
+    assert.equal(createHash('sha256').update(pdf).digest('hex'), sha);
+  });
+  test(`${name} lastmod uses original content commit, not sitemap build time`, () => {
+    assert.ok(xml.includes(`<loc>https://pifl-labs.com/assets/printables/${path}</loc>\n    <lastmod>${sourceDate}</lastmod>`));
+    assert.ok(Date.parse(sourceDate) < Date.now());
+  });
+}
+
+for (const [name, mutate] of [
+  ['missing kana card', x => x.replace(/  <url>\n    <loc>https:\/\/pifl-labs.com\/assets\/printables\/first-kana-shape-match-en-a4.pdf<\/loc>[\s\S]*?<\/url>\n/, '')],
+  ['missing Vietnamese card', x => x.replace(/  <url>\n    <loc>https:\/\/pifl-labs.com\/assets\/printables\/help-me-ko-vi-a4.pdf<\/loc>[\s\S]*?<\/url>\n/, '')],
+  ['duplicate paper-size alternative', x => x.replace('</urlset>', '<url><loc>https://pifl-labs.com/assets/printables/first-kana-shape-match-en-letter.pdf</loc><lastmod>2026-10-17T03:21:17Z</lastmod></url></urlset>')],
+  ['kana tracking query', x => x.replace(expected[7], expected[7] + '?utm_source=unreviewed')],
+  ['changed Vietnamese content date', x => x.replace('2026-10-17T06:17:08Z', '2026-10-18T00:00:00Z')],
+  ['new-resource wrong origin', x => x.replace(expected[8], expected[8].replace('pifl-labs.com', 'example.org'))],
+]) {
+  test(`new resource metadata mutation rejected: ${name}`, () => {
+    const bad = mutate(xml);
+    assert.notEqual(bad, xml);
+    assert.throws(() => validateResourceXML(bad));
+  });
+}
