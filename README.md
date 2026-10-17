@@ -78,6 +78,14 @@ For people who already read Hangul: Food, Pets and Travel puzzles with syllable 
 Prepared by PiFl Labs from its own puzzle data, with AI assistance; not curriculum-reviewed or physically print-tested, and no learning outcome is promised.
 English meanings belong to this paper resource only. The optional Hangul Voyage iOS app is an ad-supported Korean word puzzle, not an English translation or handwriting app.
 
+### Free first-kana paper game
+
+[Find the same kana (A4 PDF)](https://pifl-labs.com/assets/printables/first-kana-shape-match-en-a4.pdf) | [US Letter PDF](https://pifl-labs.com/assets/printables/first-kana-shape-match-en-letter.pdf) | [Plaintext companion](https://pifl-labs.com/assets/printables/first-kana-shape-match-en.txt).
+Point to a Japanese letter shape, find its match and take turns together. Three rows with English instructions; no app, sign-up or purchase is needed.
+This is visual matching, not a pronunciation, handwriting or stroke-order guide. Original PiFl Labs activity, prepared with AI assistance; not educator-reviewed or physically print-tested, and no learning result is promised.
+The separate [KanaSprout: Japanese for Kids iOS app](https://apps.apple.com/us/app/id6777299814) has free content and an optional auto-renewing annual plan (US listing checked 17 October 2026).
+Noto Sans JP is embedded under the [SIL Open Font License 1.1](https://pifl-labs.com/assets/printables/first-kana-shape-match-OFL.txt).
+
 ## 스택
 
 - **Astro 5** static site
