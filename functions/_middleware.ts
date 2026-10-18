@@ -9,6 +9,14 @@
 // 정적 사이트 + Cloudflare Pages 전용. 미들웨어가 안 도는 환경(로컬 dev 등)에서는
 // src/pages/index.astro 의 클라이언트 redirect 가 폴백.
 
+// Copyable links for the existing English first-kana paper, independent of locale.
+const KANA_PAPER_RESOURCES = new Map([
+  ['/kana/en/a4', '/assets/printables/first-kana-shape-match-en-a4.pdf'],
+  ['/kana/en/a4/', '/assets/printables/first-kana-shape-match-en-a4.pdf'],
+  ['/kana/en/letter', '/assets/printables/first-kana-shape-match-en-letter.pdf'],
+  ['/kana/en/letter/', '/assets/printables/first-kana-shape-match-en-letter.pdf'],
+]);
+
 const SUPPORTED = ['ko', 'en', 'ja'] as const;
 type Locale = (typeof SUPPORTED)[number];
 const DEFAULT_LOCALE: Locale = 'ko';
@@ -69,6 +77,21 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
   const { request, next } = context;
   const url = new URL(request.url);
   const path = url.pathname;
+
+  const paper = KANA_PAPER_RESOURCES.get(path);
+  if (paper) {
+    if (request.method !== 'GET' && request.method !== 'HEAD') {
+      return new Response(null, { status: 405, headers: { Allow: 'GET, HEAD' } });
+    }
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: new URL(paper, url.origin).href,
+        'Cache-Control': 'no-store',
+        'X-Robots-Tag': 'noindex, follow',
+      },
+    });
+  }
 
   // 1) 이미 언어 prefix가 있으면 통과
   for (const loc of SUPPORTED) {
