@@ -83,12 +83,12 @@ const ko = {
   statute: /「개인정보 보호법」 제30조|제17조 및 제18조/g,
   maxBlock: 320,
   hero: {
-    effective: '시행일: 2026년 10월 1일',
+    effective: '시행일: 2026년 10월 18일',
     firstEffective: '최초 시행: 2026년 6월 14일',
     provider: '제공자: PiFl Labs',
     name: 'Dialogos',
   },
-  roles: ['수탁자', '수탁자', '결제에 관한 독립 관리자'],
+  roles: ['수탁자', '수탁자', '수탁자', '결제에 관한 독립 관리자'],
   refs: [
     ['(제3조·제12조 참조)', ['retention', 'transfers']],
     ['(보관 기간은 제3조)', ['retention']],
@@ -102,24 +102,37 @@ const ko = {
     ['서버 기록은 보관 기간이 끝나면 자동으로 삭제됩니다(제3조)', ['retention']],
     ['남용 감시 로그 최대 30일(제3조의 예외 포함)', ['retention']],
     ['보유·이용 기간: 제3조와 같음', ['retention']],
+    ['제2조의 가명 통계를 이용해', ['items']],
+    ['분석/광고 SDK 없음(제2조의 서비스 개선 통계는 앱의 SDK가 아니라 당사 서버가 기록합니다)', ['items']],
+    ['모든 답변을 신고할 수 있게 합니다(제2조)', ['items']],
+    ['답하게 할 때마다(제2조 — Anthropic이 답하지 못해 OpenAI가 대신 답하는 경우 포함)', ['items']],
+    ['메시지를 OpenAI에 답하게 할 때마다(제2조)', ['items']],
+    ['서비스 개선 통계(가명 실험 키와 제2조의 답변 정보, 대화 내용 제외)', ['items']],
   ],
   superseded: ['권리가 끝난 날', '거래일로부터 5년 보관한 뒤 삭제합니다', '신고 횟수)와'],
   facts: {
     [A.purpose]: [
       '오직 다음의 목적으로만 사용합니다', '요청하신 대화를 생성', '공정한 일일 사용량 제한을 적용', '구매를 확인해 적용',
       '신고를 검토하고 앱을 안전하게 관리', '보내 주신 문의 메일에 답',
+      '제2조의 가명 통계를 이용해 두 AI 제공자의 답변을 비교하고 개선합니다',
       '어떠한 데이터도 판매·임대하지 않으며 광고에 이용하지 않습니다',
     ],
     [A.items]: [
-      '첫 실행 시 생성되는 임의 토큰', 'OpenAI에는 보내지 않습니다',
+      '첫 실행 시 생성되는 임의 토큰', 'AI 제공자에게는 보내지 않습니다',
+      '두 AI 제공자를 비교하는 동안 어느 제공자가 그 기기에 답할지 정하고 아래 서비스 개선 통계의 가명 키를 만드는 데에만',
       '앱은 최근 메시지 최대 40개, 약 22,000자까지 보냅니다',
       '그중 최근 부분(최대 24개 메시지·12,000자)만',
       '대화 내용은 당사 서버에 저장하지 않습니다',
       '신고하신 답변과 바로 앞 메시지는 아래 "AI 답변 신고"에 따라 보관합니다',
-      '저장 기능을 끈 상태(store: false)로 OpenAI를 호출',
-      '학습용 데이터 제공에 동의(옵트인)하지 않습니다',
-      '남용 감시 로그(메시지와 답변이 포함될 수 있음)를 최대 30일 보관',
+      'Anthropic, PBC 또는 OpenAI OpCo, LLC(모두 미국, 이하 "Anthropic"·"OpenAI") 중 한 곳에 전달하며',
+      ['어느 쪽이 답할지는 당사 서버가 정합니다', '현재 AI 대화 동의를 한 기기는 둘 중 한 곳에 배정되고, 그곳이 답하지 못하면 다른 곳이 그 메시지에 대신 답할 수 있습니다'],
+      'OpenAI만 적힌 이전 동의만 한 기기와, Anthropic이 서비스하지 않는 국가·지역에서 보낸 메시지에는 OpenAI만 답합니다',
+      '두 제공자 모두 기본적으로 당사가 보낸 대화를 모델 학습에 사용하지 않으며, 당사는 학습용 데이터 제공에 옵트인하지 않습니다',
+      'OpenAI는 저장 기능을 끈 호출(store: false)이라 대화를 응답 기록(애플리케이션 상태)으로 보관하지 않습니다',
+      '남용 감시 로그(메시지와 답변이 포함될 수 있음)를 최대 30일',
       '암호화된 프롬프트 캐시를 최대 24시간 보관할 수 있습니다',
+      ['Anthropic은 받은 대화를 30일 안에 삭제하되', '최대 2년(분류 점수는 최대 7년) 보관할 수 있습니다'],
+      '마지막 사용 후 최대 5분간 프롬프트 캐시에 둡니다',
       '앱을 시작할 때나 스토어가 갱신 같은 변경을 알릴 때 자동으로',
       'Google Play는 구매 토큰의 단방향 해시',
       ['확인 결과', '그 구매를 쓰는 기기의 익명 기기 식별자 단방향 해시값(구독은 최대 5대의 기기에서 쓸 수 있습니다)'],
@@ -127,10 +140,18 @@ const ko = {
       '스토어 구매 확인 요청 수',
       '이 카운터들은 해시하지 않은 식별자 그대로 저장되며 약 2일 내 자동 만료됩니다',
       '하루 신고 횟수만은 식별자의 단방향 해시로 셉니다',
-      '서비스 전체의 하루 AI 사용 금액 합계 카운터',
+      'AI 제공자별로 서비스 전체의 하루 AI 사용 금액 합계 카운터',
       '특정 기기나 사람과 연결되지 않고 개인정보를 담지 않으며 약 2일 내 자동 만료됩니다',
       'Cloudflare는 IP 주소를 이 카운터의 키로 일시적으로만 사용하며 당사는 IP 주소를 당사 기록에 저장하지 않습니다',
-      '기기 식별자 앞 8자리', '대화 내용은 남기지 않습니다',
+      '기기 식별자 앞 8자리', '답한 AI 제공자와 그 이유', '대화 내용은 남기지 않습니다',
+      ['두 AI 제공자를 비교하는 동안(2026년 10월부터) 서버는 현재 AI 대화 동의를 한 기기의 메시지마다 다음을 기록합니다', '시각',
+        '가명 실험 키(기기 식별자를 단방향 해시로 바꾼 값으로, 식별자를 드러내지 않고 구매 기록과 대조할 수 없습니다)', '기기의 비교 집단',
+        '답한 제공자·모델과 (답하기로 한 제공자가 답하지 못했다면) 그 이유', '요금제(무료/Pro), 답변 방식(빠른 답/깊은 답), 언어·멘토',
+        '답변 종료 사유(거절·위기 대응·실패, 일일 한도나 서비스 하루 예산에 따른 거절 여부 포함)', '답이 끝나기 전 앱을 닫았는지, 대화 속 메시지 순서',
+        '토큰 수, 비용, 응답 시간, 답변 길이'],
+      '메시지와 답변의 내용은 기록하지 않고, 구매에 관해서는 요금제 말고는 기록하지 않습니다',
+      '두 제공자의 답변을 비교하고 개선하는 데에만 씁니다',
+      'Cloudflare 분석 서비스에 보관하고 3개월 뒤 자동 삭제하며, 비교가 끝나면 기록을 멈춥니다',
       '바로 앞에 보내신 메시지(각 최대 2,000자)', '덧붙인 설명(최대 500자)', '신고 시각, 멘토',
       '익명 기기 식별자의 단방향 해시(식별자 자체는 저장하지 않음)', '90일간 보관하고, 그 뒤 자동 삭제합니다',
       "설정의 '문제 신고'를 누르면", '이용자가 직접 써서 보내는 메일',
@@ -139,6 +160,9 @@ const ko = {
     [A.retention]: [
       '암호화된 프롬프트 캐시는 24시간을 넘기지 않습니다',
       '남용 감시 로그는 최대 30일 보관합니다(법령상 더 긴 보관이 필요하거나 OpenAI 서비스·제3자를 해악으로부터 보호하는 데 합리적으로 필요한 경우 제외)',
+      'Anthropic은 30일 안에 삭제합니다', '최대 2년, 분류 점수는 최대 7년 보관할 수 있습니다(법령상 필요한 경우 더 길 수 있음)',
+      'Anthropic의 프롬프트 캐시는 마지막 사용 후 5분 이내입니다',
+      '서비스 개선 통계: 기록 후 3개월이 지나면 자동 삭제됩니다',
       '약 2일 내 자동 만료됩니다', '운영 로그: 7일 내 자동 삭제됩니다',
       '거래일로부터 5년(1,830일)이 지나면 자동 삭제합니다',
       '구독은 마지막 구독 기간이 끝난 날부터 5년입니다',
@@ -153,7 +177,7 @@ const ko = {
     [A.processors]: ['앱 운영에 필요한 범위에서만', '광고업체·데이터 브로커와는 공유하지 않습니다'],
     [A.notCollected]: [
       '앱 자체는 이름·이메일·계정·위치·연락처·사진·건강/생체 정보를 수집하지 않습니다',
-      '분석/광고 SDK 없음', '광고식별자(IDFA/GAID) 없음', '다른 앱·웹사이트에 걸친 추적 없음',
+      '분석/광고 SDK 없음(제2조의 서비스 개선 통계는 앱의 SDK가 아니라 당사 서버가 기록합니다)', '광고식별자(IDFA/GAID) 없음', '다른 앱·웹사이트에 걸친 추적 없음',
       'App Tracking Transparency(ATT) 동의창도 표시하지 않습니다',
     ],
     [A.permissions]: ['카메라·사진·마이크·위치·연락처·알림·추적 등)을 요청하지 않습니다', '네트워크 연결과, 구매를 위한 각 스토어의 결제 기능만 사용합니다'],
@@ -166,11 +190,19 @@ const ko = {
     [A.security]: [
       '전송 구간 암호화(HTTPS/TLS)', 'API 키와 스토어 확인용 인증 정보는 서버에만 보관하며 앱에 포함하지 않습니다',
       '익명 기기 식별자를 단방향 해시로만 저장합니다', '식별자 앞 8자리만 남기고, 대화 내용·영수증 원문·API 키는 기록하지 않습니다',
-      'Google Play 구매 토큰은 단방향 해시로만 저장합니다', '앱 자체에서 별도로 암호화하지는 않습니다',
+      'Google Play 구매 토큰은 단방향 해시로만 저장합니다', '서비스 개선 통계에는 가명 실험 키만 남기고, 기기 식별자와 대화 내용은 남기지 않습니다',
+      '앱 자체에서 별도로 암호화하지는 않습니다',
     ],
-    [A.children]: ['대한민국은 만 14세', '식별할 수 있는 범위에서 즉시 삭제합니다'],
+    [A.children]: [
+      '대한민국은 만 14세', '식별할 수 있는 범위에서 즉시 삭제합니다',
+      '청소년도 앱을 이용할 수 있습니다', '멘토의 답을 AI가 쓴다는 것을 늘 알립니다',
+      '거주 지역의 위기 상담 연락처를 보여 줍니다', '모든 답변을 신고할 수 있게 합니다(제2조)',
+    ],
     [A.transfers]: [
-      '1455 3rd Street, San Francisco, CA 94158',
+      ['548 Market St, PMB 90375, San Francisco, CA 94104', '1455 3rd Street, San Francisco, CA 94158'],
+      'Anthropic이 답하지 못해 OpenAI가 대신 답하는 경우 포함',
+      '30일 안에 삭제(이용 정책 위반 가능성으로 탐지된 대화는 최대 2년, 분류 점수는 최대 7년)', '프롬프트 캐시는 마지막 사용 후 5분 이내',
+      '서비스 개선 통계(가명 실험 키와 제2조의 답변 정보, 대화 내용 제외)', '서비스 개선 통계 보관', '서비스 개선 통계는 3개월',
       '최근 최대 24개·12,000자', '기기 식별자는 보내지 않습니다',
       '암호화된 프롬프트 캐시 24시간 이내', '모델 학습에 사용하지 않음',
       '대화 내용(중계만 하고 저장하지 않음)',
@@ -184,7 +216,11 @@ const ko = {
       '이전을 거부하시면 답변 생성과 구매 적용을 이용할 수 없습니다',
     ],
     [A.officer]: ['회사명: 주식회사 피플랩스 (PiFl Labs Co., Ltd.)'],
-    [A.changes]: ['변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다', '2026년 10월 1일 개정', 'AI 제공자를 Anthropic에서 OpenAI로 변경했습니다'],
+    [A.changes]: [
+      '변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다',
+      ['2026년 10월 18일 개정', '두 번째 AI 제공자로 Anthropic을 추가했습니다', '서비스 개선 통계와 청소년 안전 조치를 추가했습니다',
+        '두 제공자를 모두 적은 AI 대화 동의를 다시 받도록 했습니다', '2026년 10월 1일 개정', 'AI 제공자를 Anthropic에서 OpenAI로 변경했습니다'],
+    ],
   },
 };
 
@@ -202,12 +238,12 @@ const ja = {
   statute: /(?!)/g,
   maxBlock: 220,
   hero: {
-    effective: '施行日: 2026年10月1日',
+    effective: '施行日: 2026年10月18日',
     firstEffective: '初版施行: 2026年6月14日',
     provider: '提供者: PiFl Labs',
     name: 'Dialogos',
   },
-  roles: ['処理者', '処理者', '決済に関する独立した管理者'],
+  roles: ['処理者', '処理者', '処理者', '決済に関する独立した管理者'],
   refs: [
     ['(第3条・第12条参照)', ['retention', 'transfers']],
     ['(保持期間は第3条)', ['retention']],
@@ -221,24 +257,37 @@ const ja = {
     ['サーバーの記録は保持期間が終わると自動的に削除されます(第3条)', ['retention']],
     ['不正利用監視ログ最大30日間(第3条の例外を含む)', ['retention']],
     ['保持期間: 第3条のとおり', ['retention']],
+    ['第2条の仮名の統計による', ['items']],
+    ['分析/広告SDKなし(第2条のサービス改善のための統計は、アプリのSDKではなく当社サーバーが記録します)', ['items']],
+    ['すべての回答を報告できるようにしています(第2条)', ['items']],
+    ['答えさせるたびに(第2条 — Anthropic が答えられず OpenAI が代わりに答える場合を含む)', ['items']],
+    ['メッセージに OpenAI を答えさせるたびに(第2条)', ['items']],
+    ['サービス改善のための統計(仮名の実験キーと第2条の返答の情報。対話内容は含まない)', ['items']],
   ],
   superseded: ['権利が終了した日', '取引日から5年間保持した後に削除します', '報告の回数)と'],
   facts: {
     [A.purpose]: [
       '次の目的のためだけに使用します', '要求された対話の生成', '公平な1日の利用制限の適用', '購入の確認と適用',
       '報告の確認とアプリの安全管理', 'お寄せいただいたメールへの返信',
+      '第2条の仮名の統計による2つの AI 提供者の返答の比較と改善',
       'いかなるデータも販売・貸与せず、広告には利用しません',
     ],
     [A.items]: [
-      '初回起動時に生成されるランダムなトークン', 'OpenAI には送信しません',
+      '初回起動時に生成されるランダムなトークン', 'AI 提供者には送信しません',
+      '2つの AI 提供者を比較する間にどちらの提供者がその端末に答えるかを決め、下記のサービス改善のための統計の仮名キーを作るためだけに',
       'アプリが送るのは直近の最大40件・約22,000字までです',
       'そのうち直近の部分(最大24件・12,000字)だけを',
       '対話内容は当社サーバーに保存しません',
       '報告した回答とその直前のメッセージは、下記「AIの回答の報告」のとおり保管します',
-      '保存機能をオフにした状態(store: false)で OpenAI を呼び出す',
-      '学習用データの提供に同意(オプトイン)しません',
-      '不正利用監視ログ(メッセージと返答を含む場合があります)を最大30日間保持し',
+      'Anthropic, PBC または OpenAI OpCo, LLC(いずれも米国、以下「Anthropic」「OpenAI」)のどちらかへ渡し',
+      ['どちらが答えるかは当社サーバーが決めます', '現在のAI対話への同意をした端末はどちらか一方に割り当てられ、その提供者が答えられないときは、もう一方がそのメッセージに代わりに答えることがあります'],
+      'OpenAI のみを記載した以前の同意だけをした端末と、Anthropic がサービスを提供していない国・地域から送られたメッセージには、OpenAI のみが答えます',
+      'どちらの提供者も、初期設定で当社が送った対話をモデルの学習に使用しません(当社は学習用データの提供にオプトインしません)',
+      '保存機能をオフにした呼び出し(store: false)のため OpenAI は対話を応答記録(アプリケーション状態)として保持しません',
+      '不正利用監視ログ(メッセージと返答を含む場合があります)を最大30日間',
       '暗号化されたプロンプトキャッシュを最大24時間保持する場合があります',
+      ['Anthropic は受け取った対話を30日以内に削除しますが', '最大2年間(分類スコアは最大7年間)保持する場合があります'],
+      '最後の利用から最大5分間プロンプトキャッシュに保持します',
       '本アプリの起動時やストアが更新などの変更を通知したときに自動的に',
       'Google Play は購入トークンの一方向ハッシュ',
       ['確認結果', 'その購入を使う端末の匿名デバイス識別子の一方向ハッシュ値(サブスクリプションは最大5台の端末で使えます)'],
@@ -246,10 +295,18 @@ const ja = {
       'ストアへの購入確認の回数',
       'これらはハッシュ化していない識別子のまま保存され、約2日で自動的に失効します',
       '1日の報告の回数だけは識別子の一方向ハッシュで数えます',
-      'サービス全体の1日分の AI 利用金額の合計カウンター',
+      'AI 提供者ごとにサービス全体の1日分の AI 利用金額の合計カウンター',
       '特定の端末や個人と紐づかず、個人情報を含まず、約2日で自動的に失効します',
       'Cloudflare は IP アドレスをこのカウンターのキーとして一時的に使うだけで、当社は IP アドレスを当社の記録に保存しません',
-      '識別子の先頭8文字', '対話内容は記録しません',
+      '識別子の先頭8文字', '答えた AI 提供者とその理由', '対話内容は記録しません',
+      ['2つの AI 提供者を比較する間(2026年10月から)、サーバーは現在のAI対話への同意をした端末のメッセージごとに次を記録します', '時刻',
+        '仮名の実験キー(デバイス識別子を一方向ハッシュで変換した値で、識別子を明かさず、購入記録と照合できません)', '端末の比較グループ',
+        '答えた提供者・モデルと(答える予定の提供者が答えられなかった場合の)その理由', 'プラン(無料/Pro)、回答方式(速い回答/深い回答)、言語・賢者',
+        '返答の終了理由(拒否・危機対応・失敗、1日の上限やサービス全体の1日の予算による拒否かどうかを含む)', '返答の終了前にアプリを閉じたかどうか、対話内でのメッセージの順番',
+        'トークン数、費用、応答時間、返答の長さ'],
+      'メッセージと返答の内容は記録せず、購入についてはプラン以外を記録しません',
+      '2つの提供者の返答を比較し改善するためだけに使います',
+      'Cloudflare の分析サービスに保管して3か月後に自動的に削除し、比較が終われば記録をやめます',
       'その直前に送ったメッセージ(各最大2,000字)', '追記(最大500字)', '報告日時、賢者',
       '匿名デバイス識別子の一方向ハッシュ(識別子そのものは保存しません)', '90日間保管し、その後自動的に削除します',
       '設定の「問題を報告」を押すと', '利用者が自分で書いて送るメール',
@@ -258,6 +315,9 @@ const ja = {
     [A.retention]: [
       '暗号化されたプロンプトキャッシュは24時間を超えて保持しません',
       '不正利用監視ログは最大30日間保持します(法令上より長い保持が必要な場合や、OpenAI のサービス・第三者を害から守るために合理的に必要な場合を除く)',
+      'Anthropic は30日以内に削除します', '最大2年間、分類スコアは最大7年間保持する場合があります(法令上必要な場合はより長くなることがあります)',
+      'Anthropic のプロンプトキャッシュは最後の利用から5分以内です',
+      'サービス改善のための統計: 記録から3か月が過ぎると自動削除されます',
       '約2日で自動失効します', '運用ログ: 7日以内に自動削除されます',
       '取引日から5年(1,830日)が過ぎると自動的に削除します',
       'サブスクリプションは最後の契約期間が終了した日から5年です',
@@ -272,7 +332,7 @@ const ja = {
     [A.processors]: ['アプリ運営に必要な範囲でのみ', '広告業者・データブローカーとは共有しません'],
     [A.notCollected]: [
       '本アプリ自体は氏名・メール・アカウント・位置・連絡先・写真・健康/生体情報を収集しません',
-      '分析/広告SDKなし', '広告識別子(IDFA/GAID)なし', '他のアプリ・ウェブサイトをまたぐトラッキングなし',
+      '分析/広告SDKなし(第2条のサービス改善のための統計は、アプリのSDKではなく当社サーバーが記録します)', '広告識別子(IDFA/GAID)なし', '他のアプリ・ウェブサイトをまたぐトラッキングなし',
       'App Tracking Transparency(ATT)同意ダイアログも表示しません',
     ],
     [A.permissions]: ['カメラ・写真・マイク・位置情報・連絡先・通知・トラッキングなど)を要求しません', 'ネットワーク接続と、購入のための各ストアの決済機能のみを使用します'],
@@ -285,11 +345,19 @@ const ja = {
     [A.security]: [
       '転送時に暗号化(HTTPS/TLS)', 'API キーとストア確認用の認証情報はサーバーのみで保管し、アプリには含めません',
       '匿名デバイス識別子を一方向ハッシュでのみ保存します', '識別子の先頭8文字のみを残し、対話内容・レシートの原文・API キーは記録しません',
-      'Google Play の購入トークンは一方向ハッシュでのみ保存します', 'アプリ独自の暗号化は行いません',
+      'Google Play の購入トークンは一方向ハッシュでのみ保存します', 'サービス改善のための統計には仮名の実験キーのみを残し、デバイス識別子と対話内容は残しません',
+      'アプリ独自の暗号化は行いません',
     ],
-    [A.children]: ['韓国では14歳', '特定できる範囲で直ちに削除します'],
+    [A.children]: [
+      '韓国では14歳', '特定できる範囲で直ちに削除します',
+      '10代の方も本アプリを利用できます', '賢者の答えを AI が書いていることを常に示します',
+      'お住まいの地域の相談窓口を表示します', 'すべての回答を報告できるようにしています(第2条)',
+    ],
     [A.transfers]: [
-      '1455 3rd Street, San Francisco, CA 94158',
+      ['548 Market St, PMB 90375, San Francisco, CA 94104', '1455 3rd Street, San Francisco, CA 94158'],
+      'Anthropic が答えられず OpenAI が代わりに答える場合を含む',
+      '30日以内に削除(利用ポリシー違反の可能性として検出された対話は最大2年、分類スコアは最大7年)', 'プロンプトキャッシュは最後の利用から5分以内',
+      'サービス改善のための統計(仮名の実験キーと第2条の返答の情報。対話内容は含まない)', 'サービス改善のための統計の保管', 'サービス改善のための統計は3か月',
       '直近最大24件・12,000字', 'デバイス識別子は送信しません',
       '暗号化されたプロンプトキャッシュ24時間以内', 'モデルの学習に使用しない',
       '対話内容(中継のみで保存しない)',
@@ -304,7 +372,11 @@ const ja = {
     ],
     [A.officer]: ['会社名: 株式会社ピープルラブズ (PiFl Labs Co., Ltd.)'],
     [A.regional]: ['日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します'],
-    [A.changes]: ['更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します', '2026年10月1日改定', 'AI 提供者を Anthropic から OpenAI に変更しました'],
+    [A.changes]: [
+      '更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します',
+      ['2026年10月18日改定', '2つ目の AI 提供者として Anthropic を追加しました', 'サービス改善のための統計と10代の利用者の安全措置を追加しました',
+        '両方の提供者を記載したAI対話への同意をあらためていただくようにしました', '2026年10月1日改定', 'AI 提供者を Anthropic から OpenAI に変更しました'],
+    ],
   },
 };
 
@@ -322,12 +394,12 @@ const en = {
   statute: /(?!)/g,
   maxBlock: 380,
   hero: {
-    effective: 'Effective date: October 1, 2026',
+    effective: 'Effective date: October 18, 2026',
     firstEffective: 'First effective: June 14, 2026',
     provider: 'Provider: PiFl Labs',
     name: 'Dialogos',
   },
-  roles: ['Processor', 'Processor', 'Independent controllers for payment'],
+  roles: ['Processor', 'Processor', 'Processor', 'Independent controllers for payment'],
   refs: [
     ['(see sections 3 and 12)', ['retention', 'transfers']],
     ['(how long it is kept: section 3)', ['retention']],
@@ -341,24 +413,37 @@ const en = {
     ['when their retention period ends (section 3)', ['retention']],
     ['(with the exceptions in section 3)', ['retention']],
     ['Retention: as in section 3', ['retention']],
+    ['using the pseudonymous statistics in section 2', ['items']],
+    ['(the service-improvement statistics in section 2 are recorded by our own server, not by an SDK in the app)', ['items']],
+    ['you can report any reply (section 2)', ['items']],
+    ['each time our server sends your message to Anthropic to answer (section 2)', ['items']],
+    ['each time our server has OpenAI answer your message (section 2)', ['items']],
+    ['service-improvement statistics (pseudonymous experiment key and the reply details in section 2, never message content)', ['items']],
   ],
   superseded: ['deleted 90 days after it ends', 'kept for 5 years from the transaction date, then deleted', 'and reports filed)'],
   facts: {
     [A.purpose]: [
       'We use information solely to', 'generate the dialogue you request', 'enforce fair daily-usage limits',
       'verify and apply your purchases', 'review reports of AI replies and keep the app safe', 'answer the messages you send us',
+      'compare and improve the replies of our two AI providers',
       'We do not sell or rent any data, and we do not use it for advertising',
     ],
     [A.items]: [
-      'On first launch the app generates a random token stored on your device', 'It is not sent to OpenAI',
+      'On first launch the app generates a random token stored on your device', 'It is not sent to our AI providers',
+      'to decide which of them answers the device and to derive the pseudonymous key of the service-improvement statistics',
       'The app sends at most the most recent 40 messages, about 22,000 characters',
       'passes on only the most recent part, up to 24 messages and 12,000 characters',
       'We do not store your conversation content on our servers',
       'except a reply you report and the message right before it (see "Reports of AI replies" below)',
+      'to one of our AI providers — Anthropic, PBC or OpenAI OpCo, LLC (both in the United States; "Anthropic" and "OpenAI" below)',
+      ['Our server decides which provider answers', 'each device that has agreed to the current AI conversation consent is assigned to one of them, and if that provider cannot answer, the other may answer that message instead'],
+      'A device that agreed only to the earlier consent, which named OpenAI alone, is answered by OpenAI only, and so are messages sent from countries or regions where Anthropic does not offer its service',
+      'By default neither provider uses the conversations we send to train its models', 'we do not opt in to sharing data for training',
       'We call OpenAI with storage turned off (store: false)',
-      'we do not opt in to sharing data for training',
       'abuse-monitoring logs, which may include your messages and the replies, for up to 30 days',
       'encrypted prompt cache for up to 24 hours',
+      ['Anthropic deletes the conversations it receives within 30 days', 'may be kept for up to 2 years (its classification scores for up to 7 years)'],
+      'in a prompt cache for up to 5 minutes after it was last used',
       'automatically when the app starts or the store reports a change such as a renewal',
       'for Google Play, a one-way hash of the purchase token',
       ['verification result', 'one-way hashes of the anonymous device identifiers of the devices that use the purchase (a subscription works on up to five devices)'],
@@ -366,10 +451,19 @@ const en = {
       'purchase checks sent to the stores',
       'These are stored under the identifier itself, not a hash, and expire automatically within about two days',
       'Only the daily number of reports filed is counted by a one-way hash of the identifier',
-      'one service-wide counter per day of the total AI spend',
-      'It is not tied to any device or person, contains no personal data, and expires automatically within about two days',
+      'a service-wide counter per day of the total AI spend with each AI provider',
+      'These are not tied to any device or person, contain no personal data, and expire automatically within about two days',
       'Cloudflare uses the IP address only transiently, as the key of that counter, and we do not store it in our own records',
-      'first 8 characters of the device identifier', 'never message content',
+      'first 8 characters of the device identifier', 'which AI provider answered and why', 'never message content',
+      ['for each message from a device that has agreed to the current AI conversation consent our server records', 'the time',
+        'a pseudonymous experiment key (derived from the device identifier by a one-way hash, so it does not reveal the identifier and cannot be matched with our purchase records)',
+        "the device's comparison group", 'the provider and model that answered and, when the provider meant to answer did not, the reason',
+        'the plan (free or Pro), the type of answer (fast or deep), the language and mentor',
+        "how the reply ended (including whether it was declined, flagged as a crisis, failed, or turned away by a daily limit or the service's daily budget)",
+        'whether the app was closed before the reply ended, the position of the message in the conversation', 'token counts, cost, response times, and the length of the reply'],
+      'never include the content of messages or replies, and nothing about purchases beyond the plan',
+      "We use them only to compare and improve the two providers' replies",
+      "They are kept in Cloudflare's analytics service and deleted automatically after 3 months, and we stop recording them when the comparison ends",
       'the message you sent right before it (each up to 2,000 characters)', 'any note you add (up to 500 characters)',
       'the time of the report, the mentor',
       'a one-way hash of the anonymous device identifier (never the identifier itself)',
@@ -380,6 +474,9 @@ const en = {
     [A.retention]: [
       "encrypted prompt cache is kept for no more than 24 hours",
       "abuse-monitoring logs are kept for up to 30 days (longer only where required by law or reasonably necessary to protect OpenAI's services or others from harm)",
+      'Anthropic deletes it within 30 days (a conversation flagged as a possible Usage Policy violation: up to 2 years, classification scores up to 7 years; longer where required by law)',
+      "Anthropic's prompt cache is deleted within 5 minutes of last use",
+      'Service-improvement statistics: deleted automatically 3 months after they are recorded',
       'expire automatically within about two days', 'Operational logs: deleted automatically within 7 days',
       'deleted automatically 5 years (1,830 days) after the transaction date',
       'For a subscription, the 5 years run from the end of its latest subscription period',
@@ -394,7 +491,8 @@ const en = {
     [A.processors]: ['only as needed to run the app', 'We do not share data with advertisers or data brokers'],
     [A.notCollected]: [
       'The app itself collects no name, email, account, location, contacts, photos, health data, or biometric data',
-      'No analytics or advertising SDKs', 'No advertising identifier (IDFA/GAID)', 'No tracking across other apps or websites',
+      'No analytics or advertising SDKs (the service-improvement statistics in section 2 are recorded by our own server, not by an SDK in the app)',
+      'No advertising identifier (IDFA/GAID)', 'No tracking across other apps or websites',
       'shows no App Tracking Transparency prompt because it does not track you',
     ],
     [A.permissions]: ['(such as camera, photos, microphone, location, contacts, notifications, or tracking)', "only uses the network connection to reach our server and each store's payment system for purchases"],
@@ -405,13 +503,21 @@ const en = {
       'Withdraw your AI conversation consent at any time in Settings', 'Clear all local data by deleting the app',
     ],
     [A.security]: [
-      'encryption in transit (HTTPS/TLS)', "API key and our store-verification credentials are stored only on the server and are never shipped inside the app",
+      'encryption in transit (HTTPS/TLS)', "API keys and our store-verification credentials are stored only on the server and are never shipped inside the app",
       'keep the anonymous device identifier only as a one-way hash', 'keep only the first 8 characters of the identifier and never contain message content, receipts, or API keys',
-      'A Google Play purchase token is stored only as a one-way hash', 'without separate app-level encryption',
+      'A Google Play purchase token is stored only as a one-way hash', 'Service-improvement statistics keep only a pseudonymous experiment key, never the device identifier or message content',
+      'without separate app-level encryption',
     ],
-    [A.children]: ['14 in the Republic of Korea', 'as far as we can identify it'],
+    [A.children]: [
+      '14 in the Republic of Korea', 'as far as we can identify it',
+      'Teenagers may use the app', "the app always tells you that the mentors' replies are written by AI",
+      'the app shows crisis-support contacts for your region when a message suggests a crisis', 'you can report any reply (section 2)',
+    ],
     [A.transfers]: [
-      '1455 3rd Street, San Francisco, CA 94158',
+      ['548 Market St, PMB 90375, San Francisco, CA 94104', '1455 3rd Street, San Francisco, CA 94158'],
+      'including when Anthropic then cannot answer and OpenAI answers instead',
+      'deleted within 30 days (a conversation flagged as a possible Usage Policy violation: up to 2 years, classification scores up to 7 years)', 'prompt cache within 5 minutes of last use',
+      'service-improvement statistics (pseudonymous experiment key and the reply details in section 2, never message content)', 'keeping the service-improvement statistics', 'service-improvement statistics: 3 months',
       'up to the 24 most recent messages / 12,000 characters', 'The device identifier is not sent',
       'encrypted prompt cache for no more than 24 hours', 'not used for model training',
       'conversation content (relayed only, not stored)',
@@ -426,7 +532,11 @@ const en = {
     ],
     [A.officer]: ['Company: PiFl Labs Co., Ltd.'],
     [A.regional]: ['If you are located in the EEA, you have additional rights under the General Data Protection Regulation'],
-    [A.changes]: ['we will revise the effective date above and, for material changes, surface a notice in the app', 'Revised October 1, 2026', 'Our AI provider changed from Anthropic to OpenAI'],
+    [A.changes]: [
+      'we will revise the effective date above and, for material changes, surface a notice in the app',
+      ['Revised October 18, 2026', 'Anthropic was added as a second AI provider', 'The service-improvement statistics and the safety measures for teenagers were added',
+        'The AI conversation consent was renewed to name both providers', 'Revised October 1, 2026', 'Our AI provider changed from Anthropic to OpenAI'],
+    ],
   },
 };
 
@@ -437,6 +547,9 @@ const name = c => c.locale || 'root';
 // Facts that must hold on every locale: entities, contact points (data attributes) and store links.
 const shared = [
   'store: false',
+  'Anthropic, PBC',
+  '548 Market St, PMB 90375, San Francisco, CA 94104',
+  'data-email-user="privacy" data-email-domain="anthropic.com"',
   'OpenAI OpCo, LLC',
   '1455 3rd Street, San Francisco, CA 94158',
   'data-email-user="privacy" data-email-domain="openai.com"',
@@ -464,15 +577,22 @@ for (const c of cases) {
     }
   });
 
-  test(`Dialogos ${n} privacy policy names OpenAI OpCo, LLC and its contact points`, () => {
+  test(`Dialogos ${n} privacy policy names both AI processors (Anthropic, PBC and OpenAI OpCo, LLC) and their contact points`, () => {
     const page = read(c.locale);
     for (const text of shared) assert.ok(page.includes(text), `${n}: missing ${text}`);
-    // Anthropic remains only in the revision note (article 15).
-    assert.equal((page.match(/Anthropic/g) || []).length, 1, `${n}: Anthropic outside the revision note`);
-    assert.ok(parse(page).articles[A.changes - 1].text.includes('Anthropic'), `${n}: Anthropic is not in the revision note`);
+    // Since the 2026-10-18 revision both providers answer (the Worker assigns each consent-v2 device to one of
+    // them), so both must appear wherever a processor is described, not only in the revision note.
+    const { articles } = parse(page);
+    for (const topic of ['items', 'retention', 'processors', 'transfers', 'changes']) {
+      for (const provider of ['Anthropic', 'OpenAI']) {
+        assert.ok(articles[A[topic] - 1].text.includes(provider), `${n}: ${provider} missing from article ${A[topic]} (${topic})`);
+      }
+    }
     // The processor and the transfer recipient carry the legal entity name, never the bare brand.
-    for (const bare of ['<strong>OpenAI</strong>', '<td>OpenAI</td>', '<h3>OpenAI</h3>']) {
-      assert.ok(!page.includes(bare), `${n}: OpenAI listed without its legal entity name (${bare})`);
+    for (const brand of ['Anthropic', 'OpenAI']) {
+      for (const bare of [`<strong>${brand}</strong>`, `<td>${brand}</td>`, `<h3>${brand}</h3>`]) {
+        assert.ok(!page.includes(bare), `${n}: ${brand} listed without its legal entity name (${bare})`);
+      }
     }
     assert.ok(!page.includes('TODO'), `${n}: a placeholder is left in the page`);
   });
@@ -554,7 +674,7 @@ for (const c of cases) {
     assert.match(body.trim(), /^<table>[\s\S]*<\/table>$/);
     assert.equal((body.match(/<th>/g) || []).length, 3, `${n}: three column headers`);
     const rows = [...body.matchAll(/<tr>\s*<td>(.*?)<\/td>\s*<td>(.*?)<\/td>\s*<td>(.*?)<\/td>\s*<\/tr>/gs)].map(m => m.slice(1, 4).map(text));
-    assert.deepEqual(rows.map(r => r[0]), ['OpenAI OpCo, LLC', 'Cloudflare', 'Apple / Google']);
+    assert.deepEqual(rows.map(r => r[0]), ['Anthropic, PBC', 'OpenAI OpCo, LLC', 'Cloudflare', 'Apple / Google']);
     assert.deepEqual(rows.map(r => r[2]), c.roles);
     // the same table sits in article 5
     assert.ok(parse(page).articles[A.processors - 1].html.includes('<ScrollableLegalTable'));
