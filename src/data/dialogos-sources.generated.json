@@ -81,9 +81,9 @@
         "context": "<p>《루킬리우스에게 보내는 편지》(라틴어 <em>Epistulae Morales ad Lucilium</em>)는 세네카가 정계에서 물러난 만년(서기 62~65년경)에 시칠리아 총독을 지낸 친구 루킬리우스에게 라틴어로 써 보낸 124통의 편지 모음이다. 실제 서신 형식을 빌렸지만 처음부터 출판을 염두에 둔 철학 산문으로, 한 통이 하나의 주제를 다루는 짧은 에세이처럼 읽힌다. 추상적 교리보다 시간·죽음·우정·두려움 같은 일상의 문제에 스토아 윤리를 적용하는 데 집중해, 후대 유럽 자기성찰 문학의 원천이 되었다.</p>",
         "quotes": [
           {
-            "text": "우리 것이라 할 수 있는 것은 시간뿐이다. 다른 무엇도 우리 손에서 빠져나가지만, 시간만은 자연이 우리에게 맡긴 유일한 소유물이다.",
-            "cite": "I.1",
-            "gloss": "돈·자리·평판은 빌린 것이지만 시간만은 진짜 내 것 — 번아웃으로 흘려보내는 하루를 의식적으로 되찾으라는 첫 문장."
+            "text": "시간 말고는 우리 것이 없다. 자연이 맡긴 이 하나뿐인 소유물은 너무 덧없고 미끄러워, 누구든 마음먹으면 빼앗아 간다.",
+            "cite": "I.3",
+            "gloss": "돈·자리·평판이 아니라 시간만이 진짜 내 것 — 그런데도 쉽게 빼앗기니, 흘려보내는 하루를 의식적으로 지키라는 말."
           },
           {
             "text": "어떤 시간은 우리에게서 강제로 뜯겨 나가고, 어떤 시간은 슬그머니 빼앗기며, 또 어떤 시간은 손가락 사이로 흘러나간다.",
@@ -91,19 +91,94 @@
             "gloss": "시간 도둑은 회의·알림·미루기처럼 대개 조용하다. 무엇이 내 하루를 새게 하는지부터 적어 보라는 권유."
           },
           {
-            "text": "나는 고쳐지는 것이 아니라 통째로 바뀌고 있다고 느낀다. 자기 결함을 알아차린다는 것 자체가 정신이 더 나아지고 있다는 증거다.",
+            "text": "나는 고쳐지고 있을 뿐 아니라 바뀌고 있다고 느낀다. 자기 결함을 알아차린다는 것 자체가 정신이 더 나아지고 있다는 증거다.",
             "cite": "VI.1",
             "gloss": "결함이 보인다고 자책할 일이 아니라, 그것을 보는 눈이 생겼다는 게 성장의 신호 — 자기계발의 출발점."
           },
           {
-            "text": "군중과 어울리는 것은 해롭다. 그들은 우리 모르게 어떤 악덕을 매력적으로 보이게 하거나 우리에게 그것을 새겨 넣는다.",
-            "cite": "VII.8",
+            "text": "군중과 어울리는 것은 해롭다. 누구든 우리에게 어떤 악덕을 매력적으로 보이게 하거나, 새겨 넣거나, 모르는 새 물들인다.",
+            "cite": "VII.2",
             "gloss": "검투 경기를 보고 돌아온 자신이 더 탐욕스럽고 잔인해졌다는 고백. SNS 타임라인도 같은 방식으로 나를 물들인다."
           },
           {
             "text": "우리는 현실에서보다 상상 속에서 더 자주 괴로워한다. 우리를 짓누르는 일보다 우리를 겁주는 일이 더 많다.",
             "cite": "XIII.4",
             "gloss": "아직 오지 않은 일에 대한 불안이 진짜 위험보다 큰 고통을 준다 — 두려움과 사실을 분리해 따져보라는 처방."
+          },
+          {
+            "text": "어디에나 있으면 어디에도 없다. 몇몇 스승 곁에 머물며 그들을 소화해야 생각이 마음에 단단히 자리 잡는다.",
+            "cite": "II.2",
+            "gloss": "탭 열 개, 강의 다섯 개를 오가도 남는 게 없는 날 — 몇 가지를 골라 끝까지 붙드는 편이 낫다는 처방."
+          },
+          {
+            "text": "현자가 벗을 원하는 건 아플 때 곁에 앉아 줄 이를 얻으려는 게 아니라, 자신이 그 머리맡에 앉아 줄 이를 갖기 위해서다.",
+            "cite": "IX.8",
+            "gloss": "‘내 곁엔 아무도 없다’는 외로움이 들 때 — 받아 줄 사람을 찾기 전에 먼저 곁을 지켜 주는 사람이 되라는 우정의 방향 전환."
+          },
+          {
+            "text": "사람들이 네가 불행하다고 설득하려 들거든, 들리는 말보다 네가 느끼는 바를 따져라. 네 사정은 네가 누구보다 잘 안다.",
+            "cite": "XIII.6",
+            "gloss": "‘그 나이에 아직?’ 같은 걱정 섞인 말에 흔들릴 때 — 남의 동정이 아니라 내 실제 느낌으로 판단하라는 권유."
+          },
+          {
+            "text": "며칠을 정해 가장 값싸고 보잘것없는 음식과 거친 옷으로 지내며 스스로 물어라. ‘내가 두려워하던 처지가 이것인가?’",
+            "cite": "XVIII.5",
+            "gloss": "실직이나 감봉이 두려울 때 — 머릿속 공포 대신 며칠 실제로 아껴 살아 보면, 두려움을 현실과 견주어 잴 수 있다."
+          },
+          {
+            "text": "화는 자극의 크기가 아니라 그것이 떨어지는 마음에 달렸다. 단단한 재목은 큰불도 버티지만, 마른 섶은 작은 불씨에도 타오른다.",
+            "cite": "XVIII.15",
+            "gloss": "같은 말에 어떤 날은 웃고 어떤 날은 폭발한다면 — 상대의 말보다 그날 내 마음이 얼마나 메말랐는지 먼저 살피라는 뜻."
+          },
+          {
+            "text": "근심을 벗고 싶다면 두려운 일이 꼭 일어난다고 가정하고 그 크기를 마음속으로 재어 보라. 하찮거나 오래가지 않음을 알게 된다.",
+            "cite": "XXIV.2",
+            "gloss": "면접 결과나 소송의 결말을 기다리며 불안할 때 — 막연히 떨기보다 최악이 실제로 닥쳤을 때의 크기를 끝까지 재 보라는 처방."
+          },
+          {
+            "text": "도망쳐도 소용없는 건 너 자신과 함께 달아나기 때문이다. 마음의 짐을 내려놓기 전에는 어떤 곳도 너를 만족시키지 못한다.",
+            "cite": "XXVIII.2",
+            "gloss": "이직·이사·여행으로 기분을 바꾸려다 같은 자리로 돌아올 때 — 바꿔야 할 것은 장소가 아니라 지고 다니는 짐."
+          },
+          {
+            "text": "끈질기고 세심한 손길에 굴복하지 않는 것은 없다. 휜 재목도 곧게 펴지니, 어떤 액체보다 유연한 마음은 더 쉽게 빚어진다.",
+            "cite": "L.6",
+            "gloss": "몇 년째 못 고친 버릇 앞에서 ‘난 원래 이래’ 싶을 때 — 단번이 아니라 꾸준한 손질이 휜 것을 편다는 말."
+          },
+          {
+            "text": "밖이 아무리 소란해도 안이 고요하면 그만이다. 가슴속에서 두려움과 욕망이 다투고 있다면, 조용한 동네가 무슨 소용인가.",
+            "cite": "LVI.5",
+            "gloss": "시끄러운 사무실이나 옆집 공사 탓을 하기 전에 — 집중을 깨는 건 대개 바깥 소음보다 안에서 다투는 마음이다."
+          },
+          {
+            "text": "먼저 간 벗들을 떠올리면 내게는 달고 정겹다. 언젠가 잃을 것처럼 그들을 가졌고, 여전히 곁에 있는 것처럼 그들을 잃었다.",
+            "cite": "LXIII.7",
+            "gloss": "떠난 사람을 떠올릴 때마다 아프기만 하다면 — 함께한 시간을 빼앗긴 것이 아니라 여전히 지닌 것으로 품어 보라는 위로."
+          },
+          {
+            "text": "병이 붙드는 것은 몸이지 마음이 아니다. 병중에도 자신을 다스린다면, 병을 견딜 수 있음을 보여 주는 일을 하고 있는 것이다.",
+            "cite": "LXXVIII.20",
+            "gloss": "몸이 아파 일을 쉬며 ‘쓸모없어졌다’는 자책이 들 때 — 아픈 시간을 견디는 태도 자체가 하나의 일이라는 시선."
+          },
+          {
+            "text": "더 낫게 다시 세우려고 무너졌는지도 모른다. 역경은 종종 더 큰 행운에 자리를 내주었고, 많은 것이 더 높이 오르려 무너졌다.",
+            "cite": "XCI.13",
+            "gloss": "프로젝트가 엎어지고 계획이 무너졌을 때 — 끝이 아니라 더 낫게 다시 지을 빈터일 수 있다는 시선."
+          },
+          {
+            "text": "넉넉해도 이웃이 더 부유하면 그 차이만큼 가난하다고 여긴다. 야심이 들끓으면 앞에 한 사람만 있어도 자신을 꼴찌로 여긴다.",
+            "cite": "CIV.9",
+            "gloss": "동기의 승진 소식, 친구의 집 장만 — 비교는 내가 가진 것을 지우고 남과의 차이만 가난으로 남긴다."
+          },
+          {
+            "text": "어려워서 자신이 없는 게 아니라 자신이 없어서 어려운 것이다. 해 본 이에게 그 일이 하면서 쉬워지지 않은 적이 있던가.",
+            "cite": "CIV.26",
+            "gloss": "새 일, 운동, 첫 발표처럼 시작 전이 가장 무거울 때 — 막상 해 보면 가벼워진다며 첫걸음을 미는 문장."
+          },
+          {
+            "text": "추위, 더위, 병, 재난이 오는 이 질서는 바꿀 수 없다. 할 수 있는 건 굳센 마음으로 닥치는 일을 의연히 견디는 것이다.",
+            "cite": "CVII.7",
+            "gloss": "경기·날씨·병처럼 내 손 밖의 일에 하루를 다 쓰고 있다면 — 바꿀 수 있는 쪽인 내 마음가짐에 힘을 모으라는 정리."
           }
         ],
         "concepts": [
@@ -225,9 +300,9 @@
         "context": "<p>『ルキリウスへの手紙』（ラテン語 <em>Epistulae Morales ad Lucilium</em>）は、政界を退いた晩年（西暦62~65年頃）のセネカが、シチリア属州の長官を務めた友人ルキリウスにラテン語で書き送った124通の書簡集である。手紙の形を借りているが、当初から公刊を念頭に置いた哲学エッセイで、一通ごとに時間・死・友情・恐れといった日常の主題へストア倫理を当てはめていく。日本では岩波書店『セネカ哲学全集』第5・6巻に『倫理書簡集』全124書簡が収められ、まとまった邦訳で読める。</p>",
         "quotes": [
           {
-            "text": "我々のものと言えるのは時間だけだ。他のすべては手から滑り落ちるが、時間こそ自然が我々に託した唯一の所有物だ。",
-            "cite": "I.1",
-            "gloss": "残業や会議で消えていく一日も、本当は自分の唯一の財産。まず「何に時間を奪われているか」を意識せよという冒頭の一文。"
+            "text": "時間のほかに我々のものは何もない。自然が託したこの唯一の所有物は、はかなく滑りやすく、誰でもその気になれば奪っていく。",
+            "cite": "I.3",
+            "gloss": "お金や地位ではなく、時間だけが本当に自分のもの。それなのにたやすく奪われるから、流れていく一日を意識して守れという一節。"
           },
           {
             "text": "ある時間は無理やり奪われ、ある時間はこっそり取られ、ある時間は指の間から流れ去る。",
@@ -235,19 +310,94 @@
             "gloss": "時間泥棒は割り込み・通知・先延ばしのように静かに来る。仕事の段取りを見直す出発点。"
           },
           {
-            "text": "私は直されているのではなく、まるごと造り変えられていると感じる。自分の欠点に気づくこと自体が、精神がより良くなっている証だ。",
+            "text": "私は直されているだけでなく、造り変えられていると感じる。自分の欠点に気づくこと自体が、精神がより良くなっている証だ。",
             "cite": "VI.1",
             "gloss": "上司や同僚に指摘される前に自分の至らなさが見える——それは落ち込む材料ではなく成長の合図。"
           },
           {
-            "text": "群衆と交わるのは害になる。彼らは知らぬ間に、ある悪徳を魅力的に見せたり、我々に刻みつけたりする。",
-            "cite": "VII.8",
+            "text": "群衆と交わるのは害になる。誰もが我々に何かの悪徳を魅力的に見せるか、刻みつけるか、知らぬ間に染みこませる。",
+            "cite": "VII.2",
             "gloss": "残酷な見世物から帰った自分が貪欲で残酷になっていたという告白。職場の悪口や同調圧力にも同じ作用がある。"
           },
           {
             "text": "我々は現実よりも想像の中でより多く苦しむ。我々を打ちのめすものより、我々を怖がらせるものの方が多い。",
             "cite": "XIII.4",
             "gloss": "上司の一言、来週の評価——まだ来ていない出来事への不安が、目の前の現実より大きな苦しみを生む。"
+          },
+          {
+            "text": "どこにでもいる者は、どこにもいない。少数の師のもとにとどまり、よく消化してこそ、考えは心にしっかり定着する。",
+            "cite": "II.2",
+            "gloss": "積読が増え、動画や講座を渡り歩いても何も残らない——少数を選び、身につくまで付き合えという処方。"
+          },
+          {
+            "text": "賢者が友を求めるのは、病のとき枕元にいてもらうためではない。自分がその枕元に座ってやれる相手をもつためだ。",
+            "cite": "IX.8",
+            "gloss": "「誰もそばにいてくれない」と感じたとき——支えてもらう相手を探す前に、自分が支える側になることから友情は始まる。"
+          },
+          {
+            "text": "人々が寄ってきて君は不幸だと説くときは、聞こえる言葉より自分の実感を確かめよ。自分の事情は誰より君が知っている。",
+            "cite": "XIII.6",
+            "gloss": "「その年でまだ？」という心配まじりの言葉に揺れるとき——他人の同情ではなく、自分の実感で判断せよという勧め。"
+          },
+          {
+            "text": "数日を決め、最も粗末で安い食事と粗い衣服で過ごしながら自問せよ。「私が恐れていたのは、この状態なのか」と。",
+            "cite": "XVIII.5",
+            "gloss": "失業や減給が怖いとき——頭の中の恐怖ではなく、数日だけ実際に切り詰めて暮らせば、恐れを現実と比べて測れる。"
+          },
+          {
+            "text": "怒りは、きっかけの大きさではなく、どんな心に落ちるかで決まる。堅い材木は大火にも耐え、乾いた薪は小さな火花でも燃え上がる。",
+            "cite": "XVIII.15",
+            "gloss": "同じ一言に笑える日もあれば爆発する日もある——相手の言葉より先に、その日の自分の心の乾き具合を見よということ。"
+          },
+          {
+            "text": "心配をすべて払いたければ、恐れることが必ず起こると仮定し、その大きさを心で量ってみよ。取るに足らないか、長くは続かないと分かる。",
+            "cite": "XXIV.2",
+            "gloss": "面接の結果や訴訟の行方を待って不安なとき——漠然と怯えるより、最悪が実際に起きた場合の大きさを最後まで量ってみよという処方。"
+          },
+          {
+            "text": "逃げても助けにならないのは、君が自分自身を連れて逃げるからだ。心の荷を下ろすまでは、どんな場所も君を満たさない。",
+            "cite": "XXVIII.2",
+            "gloss": "転職・引っ越し・旅行で気分を変えようとしても同じ所に戻ってしまう——変えるべきは場所ではなく、背負っている荷だ。"
+          },
+          {
+            "text": "粘り強く注意深く手をかければ、屈しないものはない。曲がった材木もまっすぐにできる。どんな液体よりしなやかな心は、なおさら形づくりやすい。",
+            "cite": "L.6",
+            "gloss": "何年も直らない癖に「自分はこういう人間だ」と言いたくなるとき——一度ではなく、根気強い手入れが曲がったものを正す。"
+          },
+          {
+            "text": "外がどれほど騒がしくても、内が静かならかまわない。胸の中で恐れと欲望が争っているなら、静かな界隈に何の益があろう。",
+            "cite": "LVI.5",
+            "gloss": "騒がしいオフィスや隣の工事のせいにする前に——集中を乱すのは、たいてい外の音より内で争う心だ。"
+          },
+          {
+            "text": "亡き友を思うことは、私には甘く懐かしい。いつか失うものとして彼らと共にあり、今も共にいるかのように彼らを失った。",
+            "cite": "LXIII.7",
+            "gloss": "亡くした人を思い出すたびに痛むなら——奪われたものではなく、今も手元にあるものとして抱いてみよという慰め。"
+          },
+          {
+            "text": "病が縛るのは体であって心ではない。病の中で自分を律するのは、何もしないことではない。病は耐えられると示しているのだ。",
+            "cite": "LXXVIII.20",
+            "gloss": "体を壊して仕事を休み、「役立たずになった」と責めてしまうとき——病の時間をどう耐えるか、それ自体が一つの仕事だという見方。"
+          },
+          {
+            "text": "崩れたのは、より良く建て直されるためかもしれない。逆境はしばしばより大きな幸運に場所を空け、多くのものがより高く立つために倒れた。",
+            "cite": "XCI.13",
+            "gloss": "企画が頓挫し、計画が崩れたとき——終わりではなく、より良く建て直すための更地かもしれないという見方。"
+          },
+          {
+            "text": "豊かであっても、隣人がもっと豊かなら、その差の分だけ自分を貧しいと思う。野心に狂えば、前に一人でもいれば自分を最下位と見なす。",
+            "cite": "CIV.9",
+            "gloss": "同期の昇進、友人のマイホーム——比較は手元にあるものを消し、他人との差だけを「貧しさ」として残す。"
+          },
+          {
+            "text": "難しいから自信がないのではない。自信がないから難しいのだ。実際にやってみた者に、やるうちに易しくならなかったことがあったか。",
+            "cite": "CIV.26",
+            "gloss": "新しい仕事、運動、初めての発表のように始める前がいちばん重いとき——やってみれば軽くなると、最初の一歩を押す一文。"
+          },
+          {
+            "text": "寒さも暑さも、病も災いも巡ってくる。この秩序は変えられない。できるのは、たくましい心を養い、巡り合わせに勇敢に耐えることだ。",
+            "cite": "CVII.7",
+            "gloss": "景気・天気・病気のように手の届かないことに一日を費やしているなら——変えられる側である自分の心構えに力を注げという整理。"
           }
         ],
         "concepts": [
@@ -374,9 +524,9 @@
         "context": "<p><em>Letters to Lucilius</em> (Latin <em>Epistulae Morales ad Lucilium</em>) is a collection of 124 letters Seneca wrote in Latin during his final years (c. 62–65 CE), after withdrawing from public life, to his friend Lucilius, a governor of Sicily. Though cast as real correspondence, they were conceived from the start as philosophical essays for publication, each letter reading as a short piece on a single theme. Rather than abstract doctrine, they apply Stoic ethics to everyday concerns — time, death, friendship, fear — and became a foundational source for later European literature of self-examination.</p>",
         "quotes": [
           {
-            "text": "Nothing is truly ours except time. Everything else can be taken from our hands, but time alone is the one possession nature entrusted to us.",
-            "cite": "I.1",
-            "gloss": "The hours lost to back-to-back meetings are your only real asset. The opening move: notice what is draining your day before you can reclaim it."
+            "text": "Nothing is ours except time. Nature entrusted us with this one possession, yet it is so fleeting and slippery that anyone who will can take it from us.",
+            "cite": "I.3",
+            "gloss": "Not money or status: time is the one thing truly yours, and anyone can take it. Notice what is draining your day before you can reclaim it."
           },
           {
             "text": "Some of our time is wrenched away by force, some is quietly stolen, and some simply slips through our fingers.",
@@ -389,14 +539,89 @@
             "gloss": "Seeing your shortcomings isn't cause for self-reproach — the very fact that you can see them is the signal of growth."
           },
           {
-            "text": "To mix with the crowd is harmful; without your noticing, it makes some vice attractive or stamps it onto you.",
-            "cite": "VII.8",
+            "text": "To mix with the crowd is harmful: everyone makes some vice attractive to us, or stamps it on us, or taints us with it unawares.",
+            "cite": "VII.2",
             "gloss": "Seneca confesses he came home from the games more greedy and more cruel. A scrolling feed stains you the same quiet way."
           },
           {
             "text": "We suffer more often in imagination than in reality; there are more things to frighten us than there are to crush us.",
             "cite": "XIII.4",
             "gloss": "Dread of what hasn't happened yet inflicts more pain than the real danger in front of you — so weigh the fear against the fact."
+          },
+          {
+            "text": "Everywhere means nowhere. Linger with a few great thinkers and digest them, if you want ideas that take firm hold in your mind.",
+            "cite": "II.2",
+            "gloss": "Ten open tabs, five half-finished courses, nothing sticks — pick a few sources and stay with them until they’re truly yours."
+          },
+          {
+            "text": "The wise want friends not so that someone will sit by them when they are ill, but so that they have someone at whose sick-bed they can sit.",
+            "cite": "IX.8",
+            "gloss": "When it feels as if no one shows up for you, turn the question around — friendship begins with being the one who sits at the bedside."
+          },
+          {
+            "text": "When people crowd round to persuade you that you are unhappy, weigh what you feel, not what you hear; you know your own affairs better than anyone.",
+            "cite": "XIII.6",
+            "gloss": "When well-meant pity about your job, your age or your single life starts to sink in — check your own experience before adopting their verdict."
+          },
+          {
+            "text": "Set aside a few days to live on the scantiest, cheapest food and rough clothes, asking yourself all the while: “Is this the condition I feared?”",
+            "cite": "XVIII.5",
+            "gloss": "If you're afraid of losing your income, live on less on purpose for a few days — then you can measure the fear against reality."
+          },
+          {
+            "text": "With anger, what matters is not how great the provocation is but what kind of mind it falls on: solid timber resists a great fire, dry kindling flares at a spark.",
+            "cite": "XVIII.15",
+            "gloss": "If the same remark slides off you one day and sets you off the next, the difference lies in your own mind — look first at how dry your tinder is that day."
+          },
+          {
+            "text": "To be rid of worry, assume the thing you fear will surely happen, then measure it in your mind; you will find it either small or short-lived.",
+            "cite": "XXIV.2",
+            "gloss": "When you're anxious about an interview result or a court ruling, don't just dread it — picture the worst actually happening and take its full measure."
+          },
+          {
+            "text": "Running away doesn’t help because you take yourself along. Until you set down the burdens of your mind, no place will satisfy you.",
+            "cite": "XXVIII.2",
+            "gloss": "New job, new city, another trip, and the same gloom arrives with you — what needs changing is the load you carry, not the scenery."
+          },
+          {
+            "text": "Nothing fails to yield to persistent, careful attention. Bent timber can be made straight again; the mind, more yielding than any liquid, is shaped more easily still.",
+            "cite": "L.6",
+            "gloss": "When you’re tempted to say “I’ve always been like this” about a habit — steady, patient attention straightens even what seems set."
+          },
+          {
+            "text": "Let the world outside be bedlam, so long as there is no uproar within. What good is a quiet neighbourhood if fear and desire are wrangling in your breast?",
+            "cite": "LVI.5",
+            "gloss": "Before blaming the open-plan office or the neighbour’s drill, check the inner noise — the quarrel inside is usually what breaks focus."
+          },
+          {
+            "text": "To me the thought of friends I have lost is sweet. I had them as though I would one day lose them; I have lost them as though I have them still.",
+            "cite": "LXIII.7",
+            "gloss": "When remembering someone you lost only hurts, this offers another way to hold them — not as something taken, but as something still kept."
+          },
+          {
+            "text": "Illness hampers your body, not your mind. Keeping self-control while sick is not doing nothing; it shows that a disease can be endured.",
+            "cite": "LXXVIII.20",
+            "gloss": "When your body is laid up and you feel useless, how you carry yourself through the illness is itself a kind of work — not a blank in your life."
+          },
+          {
+            "text": "Perhaps a ruin happens so that something better can be raised. A setback has often made room for greater fortune; many things fell only to rise higher.",
+            "cite": "XCI.13",
+            "gloss": "When a project collapses or a plan falls apart, this asks you to see cleared ground — a site to build again, perhaps better."
+          },
+          {
+            "text": "You may be rich, yet feel poor by exactly the amount your neighbour has more. Ambition can grow so frantic that you count yourself last in the race if anyone is ahead.",
+            "cite": "CIV.9",
+            "gloss": "A colleague’s promotion, a friend’s new house — comparison erases what you have and leaves only the gap, which you then call poverty."
+          },
+          {
+            "text": "We don’t lack confidence because things are hard; they are hard because we lack confidence. To whoever tried, the task seemed easier in the doing.",
+            "cite": "CIV.26",
+            "gloss": "The new role, the first workout, the first talk feel heaviest before you start — the weight usually lifts once you’re actually doing it."
+          },
+          {
+            "text": "Cold, heat, illness and loss come in their turn, and we cannot change that order; what we can do is grow a stout heart and bravely bear what chance brings.",
+            "cite": "CVII.7",
+            "gloss": "If your days go into fretting over the economy, the weather or an illness — you can't reorder events, but you can put your strength into how you meet them."
           }
         ],
         "concepts": [
@@ -544,7 +769,7 @@
             "gloss": "돈 관리는 깐깐하면서 시간 관리는 무방비인 모순 — 시간을 가계부에 올려야 할 이유."
           },
           {
-            "text": "분주한 사람만큼 사는 법을 모르는 이도 없다. 사는 법을 배우는 데도, 죽는 법을 배우는 데도 평생이 걸린다.",
+            "text": "분주한 사람이 가장 소홀히 하는 일이 바로 사는 것이다. 사는 법을 배우는 데도, 죽는 법을 배우는 데도 평생이 걸린다.",
             "cite": "7",
             "gloss": "바쁨은 유능함의 증거가 아니다 — 멈춰서 '잘 사는 법'을 배울 시간을 비워야 한다."
           },
@@ -557,6 +782,31 @@
             "text": "철학에 자신을 바친 이들만이 참으로 한가하고, 참으로 산다. 그들은 자기 생애에 모든 시대를 더한다.",
             "cite": "14",
             "gloss": "배움에 쓴 시간은 인생을 늘린다 — 좋은 책 한 권이 수백 년의 지혜를 오늘로 끌어온다."
+          },
+          {
+            "text": "남이 오만해 너를 거들떠보지 않는다고 불평하면서, 정작 너는 자신을 돌아보지도 자기 말에 귀 기울이지도 않는다.",
+            "cite": "2",
+            "gloss": "읽씹이나 무시에 서운함이 쌓일 때 — 남의 관심을 기다리기 전에 나는 나에게 시간을 내고 있는지 묻게 하는 문장."
+          },
+          {
+            "text": "삶은 지난날, 지금, 앞날로 나뉜다. 지금은 짧고 앞날은 불확실하며 지난날은 확실하다. 운명도 지난날만은 어쩌지 못한다.",
+            "cite": "10",
+            "gloss": "앞날이 불안해 잠 못 드는 밤 — 이미 살아 낸 날들은 어떤 운명도 빼앗지 못하는 내 몫임을 떠올리게 하는 문장."
+          },
+          {
+            "text": "어떤 이들은 쉬는 시간마저 분주하다. 홀로 침상에 누워 있어도 스스로를 들볶으니, 그것은 한가함이 아니라 게으른 분주함이다.",
+            "cite": "12",
+            "gloss": "쉬는 날 침대에서 몇 시간 화면을 넘기고도 더 지쳤다면 — 몸이 멈춘다고 쉬는 게 아니라는 진단."
+          },
+          {
+            "text": "애써 얻고 불안하게 지킨다. 새 일이 옛일을, 새 야망이 옛 야망을 잇는다. 괴로움을 끝내려 하지 않고 까닭만 바꿀 뿐이다.",
+            "cite": "17",
+            "gloss": "승진하면 다음 승진, 목표를 이루면 다음 목표 — 갈증이 끝나지 않는다면 목표가 아니라 달리는 방식을 의심해 보라는 경고."
+          },
+          {
+            "text": "가장 비참한 이는 남의 잠과 걸음에 맞춰 자고 걸으며 사랑과 미움마저 명령받는 자다. 삶 중 얼마가 제 것인지 헤아려 보라.",
+            "cite": "19",
+            "gloss": "상사 일정에 하루를, 남의 기대에 마음을 맞추다 지쳤다면 — 내 삶에서 정말 ‘내 것’인 시간이 얼마인지 세어 보라는 권유."
           }
         ],
         "concepts": [
@@ -689,7 +939,7 @@
             "gloss": "お金には細かいのに、つき合いや雑務に時間を安売りする矛盾 — 時間こそ最大の資産と気づかせる。"
           },
           {
-            "text": "多忙な者ほど生きる術を知らない。生きる術も死ぬ術も、学ぶには一生かかる。",
+            "text": "多忙な者がもっともおろそかにするのは、生きることそのものだ。生きる術も死ぬ術も、学ぶには一生かかる。",
             "cite": "7",
             "gloss": "忙しさは有能さの証ではない — 仕事に追われるほど「よく生きる」学びの時間が削られていく。"
           },
@@ -702,6 +952,31 @@
             "text": "哲学に身を捧げた者だけが真に閑暇をもち、真に生きる。彼らは自らの生涯にあらゆる時代を加える。",
             "cite": "14",
             "gloss": "学びに使った時間は人生を延ばす — 良書一冊が数百年の知恵を今日の自分に連れてくる。"
+          },
+          {
+            "text": "人が高慢で自分を顧みてくれないと不平を言いながら、君は自分を見つめることも、自分の声に耳を傾けることもしない。",
+            "cite": "2",
+            "gloss": "既読無視や後回しに寂しさが募るとき — 他人の関心を待つ前に、自分は自分に時間を割いているかと問う一文。"
+          },
+          {
+            "text": "人生は、過ぎた時、今、これからの時に分かれる。今は短く、未来は不確かで、過去は確かだ。過去だけは運命の手が届かない。",
+            "cite": "10",
+            "gloss": "将来が不安で眠れない夜 — すでに生きた日々は、どんな運命にも奪えない自分の持ち分だと思い出させる一文。"
+          },
+          {
+            "text": "ある人々は、暇さえ忙しい。独り寝椅子にいても自分で自分を煩わせる。それは閑暇ではなく、怠惰な多忙だ。",
+            "cite": "12",
+            "gloss": "休日にベッドで何時間も画面を眺め、かえって疲れたなら — 体が止まっても休んだことにはならないという診断。"
+          },
+          {
+            "text": "苦労して望みを得て、不安のうちに守る。新しい仕事が古い仕事に、新しい野心が古い野心に代わる。不幸の終わりを求めず、原因を替えるだけだ。",
+            "cite": "17",
+            "gloss": "昇進すれば次の昇進、目標を達すれば次の目標 — 渇きが終わらないなら、疑うべきは目標ではなく走り方だという警告。"
+          },
+          {
+            "text": "最も惨めなのは、他人の眠りに合わせて眠り、他人の歩みに合わせて歩き、愛憎まで命じられる者だ。人生のどれほどが自分のものか数えてみよ。",
+            "cite": "19",
+            "gloss": "上司の予定に一日を、他人の期待に心を合わせて疲れたなら — 自分の人生で本当に「自分のもの」の時間がどれだけあるか数えてみる。"
           }
         ],
         "concepts": [
@@ -822,7 +1097,7 @@
         "context": "<p><em>On the Shortness of Life</em> (De Brevitate Vitae) is a moral essay written in Latin in the first century AD by the Roman Stoic philosopher Seneca, framed as a letter to his friend Paulinus, then overseer of Rome's grain supply. Its exact date is uncertain, but it is usually placed around AD 49–55. Written as a short prose dialogue (dialogus), it rejects the common complaint that \"life is short,\" arguing that the real issue is not length but how we spend our time. Its core counsel: do not let busyness rob you of life — live properly now.</p>",
         "quotes": [
           {
-            "text": "We are not given a short life; we make it short, and we are not ill-supplied with time but wasteful of it.",
+            "text": "The life we receive is not short, but we make it so; we have no lack of it, but are wasteful of it.",
             "cite": "1",
             "gloss": "Reframes \"I have no time\" as \"I waste my time\" — the real starting point for anyone feeling overstretched."
           },
@@ -832,7 +1107,7 @@
             "gloss": "We budget cash to the cent but give time away for free — the case for tracking hours like a bank balance."
           },
           {
-            "text": "No one knows less about living than the busy person; learning how to live, and how to die, takes a whole lifetime.",
+            "text": "Nothing occupies the busy man less than living; it takes a whole lifetime to learn how to live, and how to die.",
             "cite": "7",
             "gloss": "Busy is not the same as capable — the more we're swamped, the less time we keep for learning to live well."
           },
@@ -845,6 +1120,31 @@
             "text": "Only those devoted to philosophy are truly at leisure and truly alive; they annex every age to their own.",
             "cite": "14",
             "gloss": "Time spent learning lengthens life — a good book pulls centuries of thought into your single day."
+          },
+          {
+            "text": "You complain that others are too proud to notice you, yet you never make time for yourself: you never look at yourself or listen to yourself.",
+            "cite": "2",
+            "gloss": "If it stings that your messages go unanswered or the boss never has time for you — first ask whether you ever give yourself that attention."
+          },
+          {
+            "text": "Life has three parts: what was, what is, and what will be. The present is brief, the future uncertain, the past certain — the one part Fortune can no longer touch.",
+            "cite": "10",
+            "gloss": "When the future keeps you up at night, remember the part already lived — no turn of fortune can take those days back."
+          },
+          {
+            "text": "Some people’s leisure is busy: alone on their couch, away from everyone, they are their own source of worry. That is not leisure but busy idleness.",
+            "cite": "12",
+            "gloss": "If a day off spent scrolling in bed leaves you more drained — stopping the body is not the same as resting."
+          },
+          {
+            "text": "They toil to get what they want and hold it anxiously; new tasks replace old ones, ambition breeds ambition. They seek no end to their misery, only a new cause for it.",
+            "cite": "17",
+            "gloss": "Promotion, then the next promotion; one goal met, the next one set — if the restlessness never ends, question the way you're running, not the goal."
+          },
+          {
+            "text": "Most wretched are those who sleep and walk at another’s pace and even love and hate on command. Let them reckon how small a part of their life is their own.",
+            "cite": "19",
+            "gloss": "If your days run on a boss’s calendar and your feelings on other people’s expectations — count how many hours are actually yours."
           }
         ],
         "concepts": [
@@ -1020,6 +1320,71 @@
             "text": "너를 모욕하는 것은 욕하는 상대가 아니라, 그것이 모욕이라고 여기는 너의 판단이다.",
             "cite": "20",
             "gloss": "남의 한마디에 하루가 흔들릴 때, 반응 버튼을 쥔 사람이 결국 나라는 사실을 되새기는 문장."
+          },
+          {
+            "text": "거친 인상마다 말하라. ‘너는 인상이요, 결코 보이는 그대로가 아니다.’ 내게 달린 일이 아니라면 ‘나와 상관없다’고 하라.",
+            "cite": "1.5",
+            "gloss": "새벽 2시의 걱정이 판결처럼 느껴질 때 — 먼저 ‘인상’이라 이름 붙이고, 내가 손쓸 수 있는 일인지부터 가르라는 연습."
+          },
+          {
+            "text": "시작하기 전 어떤 일인지 떠올려라. 목욕탕엔 밀치고 욕하고 훔치는 이가 있다. ‘씻되 의지도 자연에 맞게 지키겠다’고 말하라.",
+            "cite": "4",
+            "gloss": "출근길 만원 지하철이나 명절 가족 모임 앞에서 — 늘 있는 마찰을 미리 예상하고, 평정 지키기까지 계획에 넣어 두라는 조언."
+          },
+          {
+            "text": "병은 몸을 막을 뿐, 의지가 스스로 원치 않는 한 의지를 막지 못한다. 어떤 일이든 다른 것을 막을 뿐 너를 막지는 못한다.",
+            "cite": "9",
+            "gloss": "진단이나 부상으로 몸이 할 수 있는 일이 줄어도 — 아픔이 내 탓이란 말이 아니라, 그날을 맞는 태도는 여전히 내 몫으로 남는다는 문장."
+          },
+          {
+            "text": "작은 일부터 시작하라. 기름이 엎질러졌는가, 포도주를 조금 도둑맞았는가? ‘이것이 평정의 값이다. 공짜는 없다’고 말하라.",
+            "cite": "12.2",
+            "gloss": "쏟은 커피, 잃어버린 충전기, 늦는 택배 — 사소한 짜증을 평정의 ‘수업료’로 치르며 큰일에 앞서 연습하라는 말."
+          },
+          {
+            "text": "삶에서는 잔치에서처럼 처신하라. 음식이 오면 점잖게 덜고, 지나가면 붙잡지 말고, 아직 안 왔으면 욕심내지 말고 기다려라.",
+            "cite": "15",
+            "gloss": "친구들의 승진·결혼 소식이 먼저 들려올 때 — 내게 온 몫은 점잖게 받고, 아직 오지 않은 것에 손 뻗지 않는 연습."
+          },
+          {
+            "text": "너는 작가가 정한 연극의 배우다. 가난한 자든 관리든, 주어진 배역을 잘 해내는 것이 네 몫이고, 고르는 것은 남의 몫이다.",
+            "cite": "17",
+            "gloss": "부모를 돌보는 자식, 막내 사원, 집안의 가장 — 고르지 않은 배역이라도 얼마나 잘 해낼지는 온전히 내 몫이라는 문장."
+          },
+          {
+            "text": "철학을 하려거든 비웃음을 각오하라. 거만한 얼굴은 짓지 말고 최선이라 여기는 것을 붙들어라. 버티면 비웃던 이들이 감탄한다.",
+            "cite": "22",
+            "gloss": "술을 끊거나 새벽 운동을 시작하자 ‘갑자기 왜 저래’ 소리를 들을 때 — 훈계로 맞서지 말고 묵묵히 계속하라는 말."
+          },
+          {
+            "text": "누가 너보다 대접받았는가? 너는 그 값인 문안 다니기와 아첨을 치르지 않았다. 그는 상추를, 너는 내지 않은 동전을 가졌다.",
+            "cite": "25",
+            "gloss": "상사 비위를 맞춘 동료만 회식에 불렸을 때 — 잃은 게 아니라, 치르지 않기로 한 값을 그대로 지킨 것이라는 셈법."
+          },
+          {
+            "text": "누가 너를 험담한다는 말을 들으면 해명하지 말고 답하라. ‘그는 내 다른 허물을 몰랐나 보다. 알았다면 이것만 말했겠는가.’",
+            "cite": "33.9",
+            "gloss": "‘누가 너 뒷담화하더라’는 말을 전해 들었을 때 — 해명에 매달리기보다 웃으며 받는 겸손한 한마디가 나를 지킨다."
+          },
+          {
+            "text": "쾌락의 인상이 오면 휩쓸리지 말고 기다리게 하라. 즐길 때와 뒤에 자책할 때를 함께 떠올리고, 참았을 때의 기쁨과 견주어라.",
+            "cite": "34",
+            "gloss": "야식, 충동구매, ‘한 편만 더’ 앞에서 — 잠깐 멈추고 내일 아침의 두 가지 모습을 나란히 그려 보라는 처방."
+          },
+          {
+            "text": "누가 헐뜯어도 그는 제 눈에 옳아 보이는 대로 했을 뿐이다. 틀렸다면 다치는 건 그다. 그때마다 ‘그에겐 그리 보였다’ 하라.",
+            "cite": "42",
+            "gloss": "가혹한 평가나 무례한 메일을 받은 뒤 — ‘어떻게 감히’를 ‘그 사람 눈엔 그렇게 보였구나’로 바꿔 주는 한 줄."
+          },
+          {
+            "text": "모든 일엔 손잡이가 둘이다. 들 수 있는 쪽과 없는 쪽. 형제가 부당하게 굴면 부당함 말고 ‘함께 자란 형제’ 쪽을 잡아라.",
+            "cite": "43",
+            "gloss": "명절에 형제와 또 부딪쳤을 때 — 서운함이라는 손잡이 대신 함께 지나온 세월이라는 손잡이를 쥐어 보라는 말."
+          },
+          {
+            "text": "‘더 부유하니 더 낫다’가 아니라 ‘재산이 더 많다’가 성립한다. 말솜씨도 같다. 그런데 너는 재산도 말솜씨도 아니다.",
+            "cite": "44",
+            "gloss": "SNS에서 더 큰 집, 더 화려한 말솜씨를 볼 때 — 비교되는 건 가진 것이지 사람의 값어치가 아니라는 사실."
           }
         ],
         "concepts": [
@@ -1187,6 +1552,71 @@
             "text": "あなたを侮辱するのは、ののしる相手ではなく、それを侮辱だと見なすあなたの判断である。",
             "cite": "20",
             "gloss": "同僚の一言で一日が揺れるとき、反応のボタンを握っているのは結局自分だと思い出させる文。"
+          },
+          {
+            "text": "荒々しい印象に出会うたびに言え。「お前は印象であって、見えるとおりのものでは決してない」。自分に依らぬことなら「私には関わりない」と言え。",
+            "cite": "1.5",
+            "gloss": "夜中の不安が判決のように迫るとき — まず「印象だ」と名づけ、自分で手を打てることかどうかを仕分ける練習。"
+          },
+          {
+            "text": "事に取りかかる前に、それがどんなことか思い起こせ。浴場には押し合い、罵り、盗む者がいる。「入浴し、意志も自然に従って保つ」と言え。",
+            "cite": "4",
+            "gloss": "満員電車の通勤や親戚の集まりの前に — いつもの摩擦をあらかじめ想定し、平静を保つことまで予定に入れておく知恵。"
+          },
+          {
+            "text": "病は身体の妨げであって、意志がみずから望まぬかぎり意志の妨げではない。何が起ころうと、妨げられるのは他の何かであってあなたではない。",
+            "cite": "9",
+            "gloss": "診断やけがで体にできることが減っても — 痛みを責める言葉ではなく、その日をどう迎えるかはなお自分で選べるという一文。"
+          },
+          {
+            "text": "小さなことから始めよ。油がこぼれたか、葡萄酒が少し盗まれたか。「これが心の平静の値段だ。ただで得られるものは何もない」と言え。",
+            "cite": "12.2",
+            "gloss": "こぼしたコーヒー、なくした充電器、遅れる宅配 — 小さな苛立ちを平静の「授業料」として払い、大事の前に練習せよという話。"
+          },
+          {
+            "text": "人生では宴席にいるように振る舞え。料理が回ってきたら慎ましく取り、通り過ぎたら引き止めず、まだ来ないなら欲を先走らせずに待て。",
+            "cite": "15",
+            "gloss": "友人の昇進や結婚の知らせが先に届くとき — 回ってきた分は慎ましく受け取り、まだ来ないものに手を伸ばさない練習。"
+          },
+          {
+            "text": "あなたは作者が決めた劇の役者だ。貧しい者でも役人でも、与えられた役をよく演じるのがあなたの務めで、役を選ぶのは別の者の仕事だ。",
+            "cite": "17",
+            "gloss": "親を介護する子、新入社員、一家の大黒柱 — 選んだ役でなくても、どれだけよく演じるかはまったく自分次第だという一文。"
+          },
+          {
+            "text": "哲学を志すなら、嘲られる覚悟をせよ。尊大な顔はせず、最善と思うことを守れ。踏みとどまれば、笑った者たちがやがて感嘆する。",
+            "cite": "22",
+            "gloss": "禁酒や早朝ランニングを始めて「急にどうした」とからかわれるとき — 説教で返さず、黙って続けよという言葉。"
+          },
+          {
+            "text": "誰かがあなたより厚遇されたか。あなたはその代価、つまりご機嫌伺いとへつらいを払わなかった。彼はレタスを得、あなたは払わなかった銅貨を持つ。",
+            "cite": "25",
+            "gloss": "上司にへつらう同僚だけが会食に呼ばれたとき — 失ったのではなく、払わないと決めた代価を手元に残したという勘定。"
+          },
+          {
+            "text": "誰かがあなたの悪口を言っていると聞いたら、弁明するな。こう答えよ。「あの人は私の他の欠点を知らないのだ。知っていればこれだけでは済まない」。",
+            "cite": "33.9",
+            "gloss": "「あの人が陰口を言っていた」と聞かされたとき — 弁明に躍起になるより、笑って受ける謙虚な一言が自分を守る。"
+          },
+          {
+            "text": "快楽の印象が来たら流されず、しばし待たせよ。楽しむ時と、その後に自分を責める時の両方を思い描き、控えたときの喜びと比べよ。",
+            "cite": "34",
+            "gloss": "夜食や衝動買い、「あと一話だけ」の前で — いったん止まり、明日の朝の二つの姿を並べて思い描けという処方。"
+          },
+          {
+            "text": "悪く言われたら、相手は自分に正しく見えることに従ったのだと思え。誤っていれば損なわれるのは彼だ。そのたび「彼にはそう見えたのだ」と言え。",
+            "cite": "42",
+            "gloss": "厳しい評価や無礼なメールの後に — 「よくも」を「あの人にはそう見えたのか」に変えてくれる一行。"
+          },
+          {
+            "text": "すべての物事には取っ手が二つある。持てる方と持てない方だ。兄弟が不正をしたら、その不正ではなく「共に育った兄弟だ」という方を持て。",
+            "cite": "43",
+            "gloss": "帰省先でまた兄弟とぶつかったとき — 恨みの取っ手ではなく、共に過ごした歳月という取っ手を握ってみよという言葉。"
+          },
+          {
+            "text": "「私の方が裕福だから優れている」は成り立たない。成り立つのはむしろ「私の財産の方が多い」だ。弁舌も同じ。だがあなたは財産でも弁舌でもない。",
+            "cite": "44",
+            "gloss": "SNSで広い家や巧みな話術を見かけたとき — 比べられているのは持ち物であって、人の値打ちではないという事実。"
           }
         ],
         "concepts": [
@@ -1343,7 +1773,7 @@
             "gloss": "The single line that swaps frustration for adaptation when a plan collapses—a tranquility switch for what you cannot control."
           },
           {
-            "text": "Never say you have lost a thing, only that you have returned it. It was lent to you, not given.",
+            "text": "Never say of anything, I have lost it, but, I have returned it. While it is yours, care for it as a thing that belongs to another, as travellers do an inn.",
             "cite": "11",
             "gloss": "Status, relationships, even good health are on loan, not owned. A reframe that lightens the weight of any loss."
           },
@@ -1351,6 +1781,71 @@
             "text": "It is not the one who reviles you that insults you, but your own opinion that what he does is insulting.",
             "cite": "20",
             "gloss": "When a stranger's comment hijacks your day, the reminder that you are the one holding the reaction button."
+          },
+          {
+            "text": "Say to every harsh appearance: ‘You are an appearance, in no way what you appear to be.’ Then ask: is it up to me? If not, say, ‘It does not concern me.’",
+            "cite": "1.5",
+            "gloss": "When a 2 a.m. worry feels like a verdict—name it an appearance first, then sort it: is this something I can act on, or not?"
+          },
+          {
+            "text": "Before any act, recall what it involves. At the baths some shove, insult and steal—so say: ‘I mean to bathe, and to keep my will in accord with nature.’",
+            "cite": "4",
+            "gloss": "Before the rush-hour commute or the family dinner—expect the usual friction, and make keeping your composure part of the plan."
+          },
+          {
+            "text": "Illness hinders the body, not the will—unless the will itself chooses. Whatever happens, it hinders something else, not you.",
+            "cite": "9",
+            "gloss": "A diagnosis or a sprained ankle can narrow what the body does—this isn’t blame for the pain, only a reminder that how you meet the day is still yours."
+          },
+          {
+            "text": "Begin with little things. Oil spilled, a little wine stolen? Say: ‘This is the price of calm, the price of tranquillity—nothing comes for nothing.’",
+            "cite": "12.2",
+            "gloss": "Spilled coffee, a lost charger, a late delivery—pay these as the small fee for calm, and practise there before the big storms."
+          },
+          {
+            "text": "Behave in life as at a banquet. If a dish reaches you, take a share with decency; if it passes, don’t hold it back; if it hasn’t come, don’t send your desire ahead—wait.",
+            "cite": "15",
+            "gloss": "When friends seem to get the promotion, the partner or the house first—take what reaches you with grace, and stop straining toward what is still on its way."
+          },
+          {
+            "text": "You are an actor in a play of the author’s choosing. Poor man or official—your task is to play the part given you well; choosing it belongs to another.",
+            "cite": "17",
+            "gloss": "Caregiver, new hire, the one who stayed home—you didn’t pick the role, but how well you play it is entirely yours."
+          },
+          {
+            "text": "If you take up philosophy, expect mockery. Don’t put on airs—hold to what seems best. Persist, and those who mocked will admire you.",
+            "cite": "22",
+            "gloss": "Quit drinking or start a new routine and the old crowd may tease you—no need to lecture back; just keep going."
+          },
+          {
+            "text": "Someone was preferred over you? You didn’t pay the price—calling at doors and flattering. He has the lettuce; you still have the coin you didn’t spend.",
+            "cite": "25",
+            "gloss": "When the colleague who flatters the boss gets the invitation—you didn’t lose; you kept the price you chose not to pay."
+          },
+          {
+            "text": "If you hear that someone speaks ill of you, don’t defend yourself. Reply: ‘He didn’t know my other faults, or he would not have mentioned only these.’",
+            "cite": "33.9",
+            "gloss": "When a coworker passes on what someone said about you—a wry, humble one-liner serves you better than a point-by-point defence."
+          },
+          {
+            "text": "When a pleasure tempts you, don’t be swept away—make it wait. Picture both moments: enjoying it, and reproaching yourself after. Then picture your joy if you abstain.",
+            "cite": "34",
+            "gloss": "Before the midnight snack, the impulse buy or one more episode—pause and picture tomorrow morning, both ways."
+          },
+          {
+            "text": "When someone speaks ill of you, remember he follows what seems right to him, not to you. If he is wrong, he is the one harmed. Each time, say: ‘It seemed so to him.’",
+            "cite": "42",
+            "gloss": "After a harsh review or a rude email—this one line turns ‘How dare they?’ into a calmer ‘That is how it looked to them.’"
+          },
+          {
+            "text": "Everything has two handles—one it can be carried by, one it cannot. If your brother wrongs you, grasp not the wrong but this: he is your brother, raised with you.",
+            "cite": "43",
+            "gloss": "When a sibling lets you down again—the grievance is the handle that won’t hold; the years you grew up together are the one that will."
+          },
+          {
+            "text": "‘I’m richer than you, so I’m better’ does not follow—rather, ‘my property is greater.’ The same goes for eloquence. But you are neither your property nor your speech.",
+            "cite": "44",
+            "gloss": "Scrolling past a bigger house or a slicker talker—the comparison is about their things, not about anyone’s worth, yours included."
           }
         ],
         "concepts": [
@@ -1493,7 +1988,7 @@
             "gloss": "외부는 나를 가둘 수 있어도 내 마음의 결정권은 빼앗지 못한다 — 통제 밖의 일에 짓눌릴 때 붙드는 한 문장."
           },
           {
-            "text": "죽어야 한다면, 신음하며 죽어야 하는가? 사슬에 묶여야 한다면, 통곡하며 묶여야 하는가? 누가 내가 웃으며 의연히 가는 것을 막을 수 있는가.",
+            "text": "죽어야 한다면 신음하며 죽어야 하나? 사슬에 묶인다면 통곡해야 하나? 추방된다면, 웃으며 떠나는 나를 누가 막겠는가.",
             "cite": "1.1",
             "gloss": "벌어질 일은 못 막아도 그것을 맞는 태도는 끝까지 내 몫이다 — 번아웃과 불안 앞에서 되새길 자유의 선언."
           },
@@ -1506,6 +2001,31 @@
             "text": "공놀이를 잘하는 사람은 공이 좋은지 나쁜지는 신경 쓰지 않고, 오직 잘 던지고 잘 받는 데에만 마음을 쏟는다.",
             "cite": "2.5",
             "gloss": "결과(공) 자체는 좋지도 나쁘지도 않다 — 통제할 수 없는 결과 대신 내 기량과 태도에 집중하라는 가르침."
+          },
+          {
+            "text": "화를 버리려면 그 습관에 먹이를 주지 마라. 잠자코 화내지 않은 날을 세어라. 매일이던 화가 이틀, 사흘에 한 번이 된다.",
+            "cite": "2.18",
+            "gloss": "습관 앱의 연속 기록처럼 — 터뜨린 날을 곱씹기보다 화내지 않은 날을 세다 보면 습관의 힘이 약해진다는 실천법."
+          },
+          {
+            "text": "자주 어울리면 그들을 닮거나 그들을 내 쪽으로 바꾼다. 꺼진 숯을 타는 숯 곁에 두면 불을 끄든 불이 옮겨붙든 둘 중 하나다.",
+            "cite": "3.16",
+            "gloss": "금연이나 시험 준비 중일 때 — 어떤 모임이 내 불씨를 살리고 어떤 모임이 꺼뜨리는지 살펴보라는 숯의 비유."
+          },
+          {
+            "text": "포기했어도 다시 겨룰 수 있고, 다음 올림피아를 4년 기다릴 필요도 없다. 추스르면 다시, 또 그만둬도 또 겨룰 수 있다.",
+            "cite": "3.25",
+            "gloss": "작심삼일로 끝난 운동이나 깨진 다짐 앞에서 — 내년 1월을 기다릴 것 없이 기운을 되찾는 대로 다시 시작하면 된다는 말."
+          },
+          {
+            "text": "홀로나 몇 사람과만 지내야 하면 고요라 부르고 잘 써라. 자신과 대화하라. 군중 속에 들면 축제라 부르고 함께 즐겨 보라.",
+            "cite": "4.4",
+            "gloss": "낯선 도시에서 혼자 맞는 주말이든 북적이는 행사장이든 — 그 시간을 뭐라 부르느냐가 그 시간을 어떻게 쓸지를 바꾼다."
+          },
+          {
+            "text": "‘내일부터 정신 차리겠다’는 ‘오늘은 함부로 굴고 화내고 시기하겠다’는 말이다. 내일 좋은 일이면 오늘은 얼마나 더 좋겠는가.",
+            "cite": "4.12",
+            "gloss": "다이어트도 논문도 어려운 대화도 ‘월요일부터’라며 미룰 때 — 그 말이 오늘을 통째로 내주는 약속임을 깨닫게 하는 문장."
           }
         ],
         "concepts": [
@@ -1636,7 +2156,7 @@
             "gloss": "外の力は人を縛れても、心の決定権までは奪えない — 理不尽な上司や状況に直面したとき支えになる一文。"
           },
           {
-            "text": "死なねばならぬのなら、嘆きながら死なねばならぬのか。鎖につながれるなら、泣きながらつながれるのか。私が笑って堂々と行くのを、誰が妨げられようか。",
+            "text": "死なねばならぬなら、嘆きながら死ぬのか。鎖につながれるなら、泣くのか。追放されるなら、笑って去る私を誰が妨げられようか。",
             "cite": "1.1",
             "gloss": "起こることは止められなくても、それを受けとめる態度は最後まで自分のもの — 職場の不安に押しつぶされそうな時の自由の宣言。"
           },
@@ -1649,6 +2169,31 @@
             "text": "球技の上手な者は、球が良いか悪いかは気にせず、ただ上手に投げ、上手に受けることだけに心を注ぐ。",
             "cite": "2.5",
             "gloss": "結果（球）それ自体は善でも悪でもない — 制御できない成果ではなく、自分の技量と態度に集中せよという教え。"
+          },
+          {
+            "text": "怒りっぽさを捨てたいなら、その習慣に餌をやるな。まず黙って、怒らなかった日を数えよ。毎日だった怒りが一日おきに、やがて三日に一度になる。",
+            "cite": "2.18",
+            "gloss": "習慣アプリの連続記録のように — 爆発した日を反芻するより、怒らなかった日を数えれば習慣の力は弱まっていくという実践法。"
+          },
+          {
+            "text": "人と頻繁に交われば、彼らに似るか、彼らを自分の流儀に変えるかだ。消えた炭を燃える炭のそばに置けば、火を消すか火がつくかのどちらかだ。",
+            "cite": "3.16",
+            "gloss": "禁煙や試験勉強の最中に — どの集まりが自分の火を灯し、どの集まりが消してしまうかを見極めよという炭のたとえ。"
+          },
+          {
+            "text": "一度諦めても、再び競うのを妨げる者はいない。次のオリンピアを四年待つ必要もない。立ち直ればまた競える。また諦めても、また競える。",
+            "cite": "3.25",
+            "gloss": "三日坊主で終わった運動や破れた誓いを前に — 来年の元日を待たず、力が戻りしだいまた始めればよいという言葉。"
+          },
+          {
+            "text": "独りか少人数で暮らさねばならぬなら、それを静けさと呼び、よく用いよ。自分と語れ。群衆の中に入ったら祭りと呼び、皆と楽しむよう努めよ。",
+            "cite": "4.4",
+            "gloss": "見知らぬ街で一人きりの週末も、人混みの催しも — その時間を何と呼ぶかが、どう過ごすかを変える。"
+          },
+          {
+            "text": "「明日から気をつける」とは「今日はいい加減に、怒りやすく妬み深く過ごす」と言うことだ。明日良いことなら、今日はなおさら良いではないか。",
+            "cite": "4.12",
+            "gloss": "ダイエットも論文も気まずい話し合いも「月曜から」と先送りするとき — その一言が今日を丸ごと手放す約束だと気づかせる一文。"
           }
         ],
         "concepts": [
@@ -1776,7 +2321,7 @@
             "gloss": "External force can confine you, but it can't seize your power to decide — a line to hold onto when circumstances feel beyond your control."
           },
           {
-            "text": "I must die. Must I then die lamenting? I must be put in chains. Must I then also lament? Does any man hinder me from going with smiles and cheerfulness and contentment?",
+            "text": "I must die: must I die lamenting? I must be put in chains: must I lament too? I must go into exile: does anyone stop me going with a smile, content?",
             "cite": "1.1",
             "gloss": "What happens may be fixed, but the attitude you meet it with stays yours — a declaration of freedom for moments of stress and dread."
           },
@@ -1789,6 +2334,31 @@
             "text": "Those who play ball skilfully do not care whether the ball is good or bad, but only about throwing and catching it well.",
             "cite": "2.5",
             "gloss": "The outcome itself (the ball) is neither good nor bad — fix your attention on your own skill and conduct, not on results you can't command."
+          },
+          {
+            "text": "If you don’t want a hot temper, don’t feed the habit. Keep quiet and count the days you weren’t angry. Anger that came daily comes every other day, then every third.",
+            "cite": "2.18",
+            "gloss": "Like a streak counter in a habit app — tally the calm days instead of replaying the outbursts, and the habit starts to loosen."
+          },
+          {
+            "text": "Keep frequent company with others and you will become like them or bring them round to you—as a dead coal set by a live one either puts it out or is lit.",
+            "cite": "3.16",
+            "gloss": "Quitting smoking or studying for an exam — notice which company rekindles you and which quietly puts you out."
+          },
+          {
+            "text": "Gave up? No one stops you from contending again, and you needn’t wait four years for the next Olympics. Once recovered you can begin again—and again, if you quit again.",
+            "cite": "3.25",
+            "gloss": "Broke the streak or skipped a month of training — the next round starts once you’ve got your strength back, not next New Year."
+          },
+          {
+            "text": "Must you live alone or with few? Call it quiet and use it well: talk with yourself. Fall into a crowd? Call it a festival and try to enjoy it with others.",
+            "cite": "4.4",
+            "gloss": "A first winter alone in a new city, or a packed event you dreaded — the name you give the situation shapes how you spend it."
+          },
+          {
+            "text": "‘I’ll pay attention tomorrow’ means ‘today I’ll be careless, short-tempered and envious.’ If attention is good tomorrow, how much better is it today?",
+            "cite": "4.12",
+            "gloss": "The diet, the thesis, the hard conversation — ‘from Monday’ quietly signs today away, and starting now is what makes tomorrow possible."
           }
         ],
         "concepts": [
@@ -1932,9 +2502,24 @@
             "gloss": "성장이 막힌 듯한 정체기의 논리 그대로다 — 메논의 역설은 \"그래서 묻기를 멈추라\"가 아니라 \"그래도 물어라\"의 출발점이다."
           },
           {
-            "text": "배움이란 새것을 집어넣는 일이 아니라, 영혼이 본래 지녔던 앎을 다시 떠올리는 일이다.",
+            "text": "영혼은 이미 모든 것을 배웠기에, 하나를 떠올리면 나머지도 끌어낼 수 있다. 모든 탐구와 배움은 결국 상기다.",
             "cite": "81d",
             "gloss": "상기설 — 답은 바깥의 정보가 아니라 좋은 질문이 끌어낸 내 안의 실마리일 수 있다."
+          },
+          {
+            "text": "부끄럽지만 고백하건대, 나는 덕에 대해 정말 아무것도 모른다. 무엇인지도 모르는 것이 어떠한지를 어찌 알겠는가?",
+            "cite": "71b",
+            "gloss": "‘어떻게 해야 행복해질까’부터 묻게 될 때 — 내가 말하는 행복이 무엇인지 모르면, 거기 이르는 길도 알 수 없다."
+          },
+          {
+            "text": "소년은 아직 답을 모르지만 앞으로 나아갔다. 전에는 안다고 여겨 거침없이 답했고, 이제는 막혀서 안다고 착각하지도 않는다.",
+            "cite": "84a–b",
+            "gloss": "자신 있게 한 말이 틀렸음을 깨닫고 머쓱할 때 — 착각에서 깨어나 ‘모르겠다’에 닿은 지금이 오히려 한 걸음 나아간 자리다."
+          },
+          {
+            "text": "다 장담하진 못한다. 다만 알 수 없다며 게으르기보다 탐구해야 한다고 믿으면 우리는 더 낫고 용감해진다. 이것만은 지키겠다.",
+            "cite": "86b–c",
+            "gloss": "진로나 건강처럼 답이 안 보일 때 ‘어차피 모른다’며 손을 놓고 싶다면 — 알아보려는 쪽이 사람을 덜 무력하게 만든다."
           }
         ],
         "concepts": [
@@ -2059,7 +2644,7 @@
         "context": "<p><em>メノン</em>は、紀元前4世紀初めのアテナイで活動したプラトンがギリシア語で書いた初期から中期の対話篇で、師ソクラテスを主たる語り手とします。テッサリア出身の貴族の青年メノンが「徳（アレテー）は教えられるか」と問うと、ソクラテスはまず「徳とはそもそも何か」を自分は知らないと応じ、問いの向きを反転させます。短いながら、メノンのパラドックス・想起説（アナムネーシス）・奴隷の少年の幾何問答という認識論の核心場面を含み、知るとは何か・学ぶとは何かを問う転回点として読まれます。日本では藤沢令夫の訳で岩波文庫に収められ、広く読まれてきました。</p>",
         "quotes": [
           {
-            "text": "ソクラテス、あなたは触れた者を痺れさせる電気うなぎ（シビレエイ）のようです。話していると私の心も舌もこわばってしまう。",
+            "text": "ソクラテス、あなたは触れた者を痺れさせるシビレエイのようです。話していると私の心も舌もこわばってしまう。",
             "cite": "80a–b",
             "gloss": "答えをすらすら出していた人が、よい問いの前で立ち止まる瞬間 — 行き詰まりは無能ではなく、考えが動き出した合図だ。"
           },
@@ -2074,9 +2659,24 @@
             "gloss": "仕事で手詰まりに感じる時の理屈そのもの — メノンのパラドックスは「だから問うのをやめよ」ではなく「それでも問え」の出発点だ。"
           },
           {
-            "text": "学びとは新しい知を詰め込むことではなく、魂がもともと宿していた知を思い出すことだ。",
+            "text": "魂はすでにすべてを学んでいるので、一つを思い出せば残りも引き出せる。探究も学びも、すべては想起にほかならない。",
             "cite": "81d",
             "gloss": "想起説 — 答えは外からの情報ではなく、よい問いが引き出した自分の中の手がかりかもしれない。"
+          },
+          {
+            "text": "恥ずかしながら、私は徳について本当に何も知らない。それが何であるかを知らずに、どのようなものかをどうして知りえようか。",
+            "cite": "71b",
+            "gloss": "「どうすれば幸せになれるか」から問いたくなる時 — 自分の言う幸せが何なのか分からなければ、そこへ至る道も分からない。"
+          },
+          {
+            "text": "少年はまだ答えを知らないが、前に進んだ。以前は知っているつもりで迷わず答えたが、今は行き詰まり、知っているとも思っていない。",
+            "cite": "84a–b",
+            "gloss": "自信を持って言ったことが間違いだと気づいてばつが悪い時 — 思い込みから覚めて「分からない」にたどり着いた今こそ、一歩進んだ場所だ。"
+          },
+          {
+            "text": "すべては言い切れない。だが、知りえないと怠けるより、探究すべきだと信じるほうが私たちはより善く勇敢になる。これだけは力の限り守る。",
+            "cite": "86b–c",
+            "gloss": "進路や健康のように答えが見えない時、「どうせ分からない」と投げ出したくなったら — 調べてみようとするほうが、人は無力にならずにすむ。"
           }
         ],
         "concepts": [
@@ -2213,9 +2813,24 @@
             "gloss": "The exact logic of feeling stuck under modern stress — Meno's paradox isn't 'so stop asking,' it's the starting line for 'ask anyway.'"
           },
           {
-            "text": "Learning is not packing in something new; it is the soul recollecting knowledge it always had.",
+            "text": "Since the soul has learned all things, one recollection can draw out all the rest; all inquiry and all learning is but recollection.",
             "cite": "81d",
             "gloss": "Recollection — the answer may not be outside information but a thread inside you that a good question pulls loose."
+          },
+          {
+            "text": "I confess with shame that I know literally nothing about virtue — and if I don’t know what a thing is, how can I know what it is like?",
+            "cite": "71b",
+            "gloss": "When you jump straight to ‘how do I become happy?’ — if you don’t know what you mean by happiness, you can’t know the way to it."
+          },
+          {
+            "text": "The boy still doesn’t know, yet he has advanced: before, he thought he knew and answered confidently; now he is stuck and no longer thinks he knows.",
+            "cite": "84a–b",
+            "gloss": "When you realize something you said confidently was wrong — waking from that mistake to an honest ‘I don’t know’ is a step forward, not back."
+          },
+          {
+            "text": "I can’t vouch for it all. But we are better and braver for believing we should inquire than for idly thinking it’s no use — this I will fight for.",
+            "cite": "86b–c",
+            "gloss": "When a career or health question feels unanswerable and you want to give up — choosing to look into it is what keeps you from feeling helpless."
           }
         ],
         "concepts": [
@@ -2345,12 +2960,12 @@
         "quotes": [
           {
             "text": "경건이란 바로 지금 내가 하는 일, 곧 살인·신성모독 같은 죄를 지은 자라면 그가 내 아버지라 해도 고발하는 것입니다.",
-            "cite": "5d",
+            "cite": "5d–e",
             "gloss": "에우티프론의 첫 답은 '정의'가 아니라 '사례'다 — 한 가지 예를 든다고 개념을 안 것은 아니라는 첫 함정."
           },
           {
             "text": "내가 알고 싶은 것은 모든 경건한 것을 경건하게 만드는 하나의 본(本)이다. 그것을 기준 삼아 행동을 견주고 싶다.",
-            "cite": "6d",
+            "cite": "6d–e",
             "gloss": "낱낱의 사례가 아니라 '척도'를 달라는 요구 — 좋은 정의란 판단의 자(尺)가 되어야 한다."
           },
           {
@@ -2360,8 +2975,13 @@
           },
           {
             "text": "자네 말은 내 조상 다이달로스의 조각상 같아서, 세워 두려 하면 자꾸 걸어 달아나 한자리에 머물지 않는군.",
-            "cite": "11b",
+            "cite": "11b–c",
             "gloss": "정의가 손에 잡힐 듯 자꾸 빠져나가는 순간 — 생각이 흔들릴 땐 도망친 게 아니라 더 캐물을 자리에 온 것이다."
+          },
+          {
+            "text": "그렇다면 처음부터 다시 묻자. 경건이란 무엇인가? 힘닿는 한, 나는 이 물음을 좇는 데 결코 지치지 않겠다.",
+            "cite": "15c",
+            "gloss": "몇 번을 해 봐도 제자리로 돌아온 것 같을 때 — 처음부터 다시 묻는 것은 실패가 아니라 탐구가 아직 살아 있다는 뜻이다."
           }
         ],
         "concepts": [
@@ -2488,12 +3108,12 @@
         "quotes": [
           {
             "text": "敬虔とは、まさに今わたしがしていること——殺人や冒涜の罪を犯した者なら、たとえ父であろうと告発することです。",
-            "cite": "5d",
+            "cite": "5d–e",
             "gloss": "最初の答えは「定義」ではなく「一例」。例を一つ挙げても、概念を理解したことにはならない——職場でも陥りやすい最初の罠。"
           },
           {
             "text": "わたしが知りたいのは、すべての敬虔なものを敬虔たらしめる一つの本（形相）だ。それを基準として行いを測りたい。",
-            "cite": "6d",
+            "cite": "6d–e",
             "gloss": "個々の事例ではなく「ものさし」を求める。良い定義とは、判断の基準として使えるものでなければならない。"
           },
           {
@@ -2503,8 +3123,13 @@
           },
           {
             "text": "君の言葉はわが祖先ダイダロスの彫像のようだ。据えようとすると歩き去り、一所にとどまらない。",
-            "cite": "11b",
+            "cite": "11b–c",
             "gloss": "定義が手からすり抜けていく瞬間。考えが揺らぐのは逃げたのではなく、もう一歩問い直すべき地点に来たということ。"
+          },
+          {
+            "text": "では、初めからもう一度問おう。敬虔とは何か。力の及ぶかぎり、私はこの探究に決して倦むことはない。",
+            "cite": "15c",
+            "gloss": "何度やっても振り出しに戻ったように感じる時 — 初めから問い直すのは失敗ではなく、探究がまだ生きているしるしだ。"
           }
         ],
         "concepts": [
@@ -2625,12 +3250,12 @@
         "quotes": [
           {
             "text": "Piety is doing what I am doing now: prosecuting anyone guilty of murder or sacrilege, even if he happens to be your own father.",
-            "cite": "5d",
+            "cite": "5d–e",
             "gloss": "Euthyphro's first answer is an example, not a definition. Naming one instance is not the same as knowing the concept — the dialogue's opening trap."
           },
           {
             "text": "What I want is the single form that makes all pious things pious — a standard I can hold actions up against and measure them by.",
-            "cite": "6d",
+            "cite": "6d–e",
             "gloss": "Socrates wants a yardstick, not a list. A good definition has to work as a measure you can actually apply."
           },
           {
@@ -2640,8 +3265,13 @@
           },
           {
             "text": "Your words, Euthyphro, are like the statues of my ancestor Daedalus: set them down and they walk away, refusing to stay put.",
-            "cite": "11b",
+            "cite": "11b–c",
             "gloss": "The moment a definition keeps slipping free. When your thinking won't hold still, you haven't lost the thread — you've reached the spot worth pressing on."
+          },
+          {
+            "text": "Then we must begin again and ask: what is piety? It is an inquiry I will never tire of pursuing, as far as I am able.",
+            "cite": "15c",
+            "gloss": "When every attempt seems to land you back at square one — beginning again isn’t failure; it means the search is still alive."
           }
         ],
         "concepts": [
@@ -2798,13 +3428,53 @@
           },
           {
             "text": "나는 신께서 이 나라에 붙여 놓은 등에다. 졸고 있는 큰 말을 쉴 새 없이 쏘아 깨운다.",
-            "cite": "30e",
+            "cite": "30e–31a",
             "gloss": "불편한 질문이 나를 깨운다 — 듣기 싫은 피드백이야말로 정체된 나를 흔드는 자극."
           },
           {
             "text": "나는 너희가 아니라 신께 복종하겠다. 숨이 붙어 있는 한 철학하기를 멈추지 않겠다.",
             "cite": "29d",
             "gloss": "남들의 눈치보다 내 양심의 명령을 따른다 — 타협하라는 압박 앞에서 지킬 한 줄."
+          },
+          {
+            "text": "말솜씨가 좋든 나쁘든 개의치 말고, 오직 내 말이 참된지만 살펴 달라. 말하는 이는 참되게, 판단하는 이는 바르게.",
+            "cite": "18a",
+            "gloss": "발표나 면접을 앞두고 말주변이 걱정될 때 — 매끄럽게 들리는 것보다 참된 말을 하는 것이 말하는 이의 몫이다."
+          },
+          {
+            "text": "장인들은 내가 모르는 것을 많이 알았다. 그러나 솜씨가 좋은 탓에 중대한 일까지 안다고 여겼고, 그 허물이 지혜를 가렸다.",
+            "cite": "22d–e",
+            "gloss": "한 분야에서 실력을 쌓을수록 — 잘 모르는 일에서까지 내 판단이 옳다고 믿기 쉽고, 그 과신이 진짜 실력마저 가린다."
+          },
+          {
+            "text": "죽음을 두려워하는 것은 참된 지혜가 아니라 지혜로운 척이다. 모르는 것을 아는 척하는 일이기 때문이다.",
+            "cite": "29a",
+            "gloss": "죽음이나 막연한 앞날이 두려울 때 — 아직 알 수 없는 일을 이미 안다는 듯 겁내고 있지는 않은지 돌아보라."
+          },
+          {
+            "text": "나는 늙은이든 젊은이든 모두를 설득하며 다닐 뿐이다. 몸이나 재산보다 먼저, 무엇보다 영혼을 가장 훌륭하게 가꾸라고.",
+            "cite": "30a–b",
+            "gloss": "연봉·외모·스펙을 남과 견주느라 지칠 때 — 먼저 가꿔야 할 것은 가진 것이 아니라 내가 어떤 사람인가다."
+          },
+          {
+            "text": "멜레토스도 아니토스도 나를 해치지 못한다. 그들이 내게서 무엇을 빼앗든, 부당한 짓을 저지르는 쪽의 해악이 훨씬 크다.",
+            "cite": "30c–d",
+            "gloss": "누군가 내 평판이나 자리를 흔들 때 — 그가 빼앗을 수 있는 것은 많아도, 더 깊은 해를 입는 쪽은 부당하게 구는 그 사람이다."
+          },
+          {
+            "text": "어릴 적부터 내게는 목소리 같은 신호가 찾아온다. 그것은 내가 하려는 일을 늘 금할 뿐, 무엇을 하라고 명하는 법은 없다.",
+            "cite": "31d",
+            "gloss": "결정을 앞두고 마음 한구석이 자꾸 ‘멈춰’라고 할 때 — 그 제동을 무시하고 밀어붙이기 전에 한 번은 귀 기울여 볼 만하다."
+          },
+          {
+            "text": "어려운 것은 죽음을 피하는 일이 아니라 불의를 피하는 일이다. 불의는 죽음보다 빨리 달리기 때문이다.",
+            "cite": "39a–b",
+            "gloss": "궁지에서 빠져나오려고 작은 거짓말이 당길 때 — 정말 피하기 어려운 건 곤란이 아니라, 그 와중에 슬며시 따라붙는 잘못이다."
+          },
+          {
+            "text": "비난에서 벗어나는 가장 쉽고 훌륭한 길은 남을 꺾는 것이 아니라, 나 자신을 더 낫게 만드는 것이다.",
+            "cite": "39d",
+            "gloss": "아픈 지적을 한 사람을 깎아내리고 싶을 때 — 그 입을 막기보다 지적받은 곳을 고치는 편이 결국 더 쉽고 떳떳하다."
           }
         ],
         "concepts": [
@@ -2949,13 +3619,53 @@
           },
           {
             "text": "私は神がこの国に付けた虻（あぶ）だ。眠りかけた大きな馬を、休まず刺して目覚めさせる。",
-            "cite": "30e",
+            "cite": "30e–31a",
             "gloss": "耳の痛い問いが人を目覚めさせる — 同僚からの率直なフィードバックは、なれ合った職場を揺さぶる刺激。"
           },
           {
             "text": "私は君たちにではなく神に従う。息のある限り、哲学することをやめはしない。",
             "cite": "29d",
             "gloss": "周囲の空気より自分の良心の声に従う — 「ここは妥協しろ」という圧力の前で守る一線。"
+          },
+          {
+            "text": "話しぶりの良し悪しは気にせず、ただ私の言葉が真実かどうかだけを見てほしい。語る者は真実を、裁く者は正しさを。",
+            "cite": "18a",
+            "gloss": "発表や面接を前に話し下手が気になる時 — なめらかに聞こえることより、本当のことを語ることこそ話し手の務めだ。"
+          },
+          {
+            "text": "職人たちは私の知らないことを多く知っていた。だが腕がいいばかりに重大なことまで分かっていると思い込み、その欠点が知恵を覆い隠した。",
+            "cite": "22d–e",
+            "gloss": "ひとつの分野で腕を上げるほど — 詳しくないことまで自分の判断が正しいと思い込みやすく、その過信が本当の実力まで曇らせる。"
+          },
+          {
+            "text": "死を恐れるのは本当の知恵ではなく、知恵があるふりだ。知らないことを知っているふりをすることなのだから。",
+            "cite": "29a",
+            "gloss": "死や先の見えない将来が怖い時 — まだ知りえないことを、もう分かっているかのように恐れていないか振り返ろう。"
+          },
+          {
+            "text": "私は老いも若きも皆を説いて回っているだけだ。体や財産より先に、何よりもまず魂をできるかぎり善くせよ、と。",
+            "cite": "30a–b",
+            "gloss": "年収や見た目、肩書きを人と比べて疲れた時 — まず手をかけるべきは、持っているものではなく自分がどんな人間かだ。"
+          },
+          {
+            "text": "メレトスもアニュトスも私を害することはできない。私から何を奪おうと、不正を働く側の害悪のほうがはるかに大きい。",
+            "cite": "30c–d",
+            "gloss": "誰かに評判や立場を揺さぶられる時 — 奪えるものは多くても、より深い害を受けるのは不正を働くその人のほうだ。"
+          },
+          {
+            "text": "子どもの頃から、私には声のような合図が訪れる。それは私がしようとすることを常に禁じるが、何かをせよと命じることは決してない。",
+            "cite": "31d",
+            "gloss": "決断を前に、心のどこかが「待て」と言い続ける時 — そのブレーキを押し切る前に、一度は耳を傾けてみる価値がある。"
+          },
+          {
+            "text": "難しいのは死を逃れることではなく、不正を逃れることだ。不正は死よりも速く走るのだから。",
+            "cite": "39a–b",
+            "gloss": "窮地を抜け出すために小さな嘘をつきたくなる時 — 本当に逃れにくいのは困難ではなく、そのすきに忍び寄る過ちのほうだ。"
+          },
+          {
+            "text": "非難から逃れる最も易しく立派な道は、他人をくじくことではなく、自分自身をよりよくすることだ。",
+            "cite": "39d",
+            "gloss": "痛いところを突いた相手をおとしめたくなる時 — 口を封じるより、指摘されたところを直すほうが結局は易しく、潔い。"
           }
         ],
         "concepts": [
@@ -3097,13 +3807,53 @@
           },
           {
             "text": "I am a gadfly the god has set upon this city, stirring a great, sluggish horse awake all day long.",
-            "cite": "30e",
+            "cite": "30e–31a",
             "gloss": "The questions that sting are the ones that wake us — uncomfortable feedback is what shakes a stalled life loose."
           },
           {
             "text": "I will obey the god rather than you, and while I have breath I will never stop practicing philosophy.",
             "cite": "29d",
             "gloss": "Answer to your own conscience before the crowd's approval — the line to hold when pressured to compromise."
+          },
+          {
+            "text": "Never mind my manner, good or bad; consider only whether my words are true. Let the speaker speak truly, and the judge decide justly.",
+            "cite": "18a",
+            "gloss": "When you’re anxious about sounding unpolished before a talk or an interview — a speaker’s job is to say what’s true, not to sound smooth."
+          },
+          {
+            "text": "The craftsmen knew much that I didn’t. But being good at their craft, they thought they knew great matters too — and that flaw hid their wisdom.",
+            "cite": "22d–e",
+            "gloss": "The better you get at one thing, the easier it is to trust your judgment where you know little — and that overconfidence can eclipse the skill you really have."
+          },
+          {
+            "text": "To fear death is not real wisdom but a pretense of it — a pretense of knowing the unknown.",
+            "cite": "29a",
+            "gloss": "When death or an uncertain future frightens you — notice whether you’re fearing it as if you already knew what can’t yet be known."
+          },
+          {
+            "text": "All I do is go about urging young and old alike to care first and chiefly for the soul’s greatest improvement, before body or property.",
+            "cite": "30a–b",
+            "gloss": "When comparing salaries, looks and résumés wears you out — what deserves your care first is not what you have but who you are."
+          },
+          {
+            "text": "Neither Meletus nor Anytus can harm me. Whatever they take from me, the evil of doing injustice is far greater.",
+            "cite": "30c–d",
+            "gloss": "When someone attacks your reputation or your position — they can take a great deal, but the deeper harm falls on the one acting unjustly."
+          },
+          {
+            "text": "Since childhood a sign has come to me — a kind of voice. It always forbids what I am about to do, but never commands me to do anything.",
+            "cite": "31d",
+            "gloss": "When something in you keeps saying ‘stop’ before a decision — that brake deserves a hearing before you push past it."
+          },
+          {
+            "text": "The hard thing is not to escape death but to escape wrongdoing, for wrongdoing runs faster than death.",
+            "cite": "39a–b",
+            "gloss": "When a small lie would get you out of trouble — the trouble is not what’s hard to escape; it’s the wrongdoing that quietly catches up with you."
+          },
+          {
+            "text": "The easiest and noblest way to escape reproach is not to cut others down, but to make yourself better.",
+            "cite": "39d",
+            "gloss": "When you want to discredit someone who criticized you — fixing what they pointed out is, in the end, easier and more honorable than silencing them."
           }
         ],
         "concepts": [
