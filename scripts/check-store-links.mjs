@@ -9,6 +9,9 @@ import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const decode = (value) => value.replaceAll('&amp;', '&').replaceAll('&#38;', '&').replaceAll('&quot;', '"');
+const verifiedAppleIds = new Set(['6762258878', '6770267735', '6777299814', '6770272665',
+  '6770268950', '6779071131', '6788949612', '6801205183']);
+const seenAppleIds = new Set();
 let pages = 0, links = 0;
 for (const lang of ['ko', 'ja', 'en']) {
   const files = [join(dist, lang, 'index.html'), ...builtAppLandingFiles(dist, lang, appSlugs)];
@@ -21,6 +24,16 @@ for (const lang of ['ko', 'ja', 'en']) {
       if (!attrs.href || !/^https:\/\/(apps\.apple\.com|play\.google\.com)\//.test(attrs.href)) continue;
       assert.ok(attrs['data-store-link'], `Missing original store destination: ${file}`);
       assert.equal(attrs.href, storeUrl(attrs['data-store-link'], websiteCampaign(lang)), file);
+      const destination = new URL(attrs.href);
+      if (destination.hostname === 'apps.apple.com') {
+        const id = /\/id(\d+)$/.exec(destination.pathname)?.[1];
+        if (verifiedAppleIds.has(id)) {
+          assert.equal(destination.searchParams.get('pt'), '128720089', file);
+          assert.equal(destination.searchParams.get('ct'), `website_${lang}`, file);
+          assert.equal(destination.searchParams.get('mt'), '8', file);
+          seenAppleIds.add(id);
+        } else assert.equal(attrs.href, attrs['data-store-link'], file);
+      }
       assert.equal(attrs.target, '_blank', file);
       assert.ok(attrs.rel.includes('noopener'), file);
       pageLinks++;
@@ -38,6 +51,7 @@ for (const lang of ['ko', 'ja', 'en']) {
   }
 }
 assert.ok(links > 0);
+assert.deepEqual([...seenAppleIds].sort(), [...verifiedAppleIds].sort(), 'All eight verified apps appear in actual built links');
 assert.equal(readFileSync(join(dist, 'store-links.js'), 'utf8'), readFileSync(new URL('../public/store-links.js', import.meta.url), 'utf8'));
 assert.ok(readFileSync(join(dist, 'store-attribution.mjs'), 'utf8').includes('decorateCampaignLinks'));
 const headers = readFileSync(join(dist, '_headers'), 'utf8');
