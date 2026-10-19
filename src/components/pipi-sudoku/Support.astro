@@ -6,7 +6,8 @@ interface Props { lang?: Lang; homeHref?: string }
 // 한칸씩 스도쿠는 한국어·영어·일본어로 출시한다. 형제 앱처럼 로케일 경로마다 그 언어 본문 하나만
 // 서빙한다(자기 canonical + ko/en/ja alternate, x-default 는 사이트 규칙대로 /ko/).
 // 무prefix 레거시 경로는 영어 본문을 렌더한다(canonical /en/).
-// 버튼·설정 이름은 앱 화면 문구(Localizable.xcstrings)와 글자 그대로 맞춘다.
+// 버튼·설정 이름은 앱 화면 문구(Localizable.xcstrings)와 글자 그대로 맞춘다. Android 앱(Flutter)은 같은 카탈로그를
+// 옮긴 lib/l10n/*.arb 를 쓰므로 이름이 같다.
 // 일본어판은 니콜리 등록상표인 「数独」「SUDOKU」를 쓰지 않고 「ナンプレ」로 표기한다.
 const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
 
@@ -93,10 +94,10 @@ const chrome = {
         <p><strong>설정 › 햅틱</strong>에서 <strong>진동 피드백</strong>을 <strong>끄기</strong>로 바꾸세요.</p>
 
         <h3>앱 언어는 어떻게 정해지나요?</h3>
-        <p>앱은 iPhone·iPad의 언어 설정을 따릅니다(한국어·영어·일본어). 그 밖의 언어로 설정된 기기에서는 영어로 표시됩니다.</p>
+        <p>앱은 iPhone·iPad에서는 기기의 언어 설정을, Android에서는 기기 언어 또는 앱별 언어 설정(Android 13 이상)을 따릅니다(한국어·영어·일본어). 그 밖의 언어로 설정된 기기에서는 영어로 표시됩니다.</p>
 
         <h3>기록을 다른 기기로 옮길 수 있나요?</h3>
-        <p>계정과 동기화 기능이 없어 앱에서 옮길 수는 없습니다. 기록은 기기에만 저장되며, iOS 백업·복원에 포함되는 범위에서만 함께 옮겨집니다. 백업 포함 여부는 iOS 설정을 따릅니다.</p>
+        <p>계정과 동기화 기능이 없어 앱에서 옮길 수는 없습니다. 기록은 기기에만 저장되며, 기기 백업·복원(iOS 백업, Android의 Google 계정 백업)이나 새 기기로 옮기기에 포함되는 범위에서만 함께 옮겨집니다. 포함 여부는 기기 설정과 선택을 따릅니다.</p>
 
         <h3>내 퍼즐이 저장되지 않아요.</h3>
         <p>아래 조건을 확인해 주세요.</p>
@@ -110,7 +111,7 @@ const chrome = {
         </ul>
 
         <h3>앱을 지우면 기록은 어떻게 되나요?</h3>
-        <p>앱을 삭제하면 게임 기록, 내 퍼즐, 설정이 기기에서 함께 삭제됩니다. 회사 서버에는 사본이 없으므로 iOS 백업에 포함된 경우가 아니면 되살릴 수 없습니다.</p>
+        <p>앱을 삭제하면 게임 기록, 내 퍼즐, 설정이 기기에서 함께 삭제됩니다. 회사 서버에는 사본이 없으므로 기기 백업(iOS 백업, Android의 Google 계정 백업)에 포함된 경우가 아니면 되살릴 수 없습니다.</p>
       </article>
 
       <article class="legal-card support-card contact-card">
@@ -118,7 +119,7 @@ const chrome = {
         <h2>문의</h2>
         <p>문제가 계속되면 아래 정보를 함께 보내 주세요. 원인을 더 빠르게 확인할 수 있습니다.</p>
         <ul>
-          <li>기기 모델과 iOS 버전</li>
+          <li>기기 모델과 iOS 또는 Android 버전</li>
           <li>앱 버전(<strong>설정 › 앱 정보</strong>에서 확인)</li>
           <li>문제를 재현한 순서</li>
           <li>가능한 경우 개인정보를 가린 화면 캡처</li>
@@ -161,10 +162,10 @@ const chrome = {
         <p>In <strong>Settings › Haptics</strong>, set <strong>Haptic Feedback</strong> to <strong>Off</strong>.</p>
 
         <h3>Which language does the app use?</h3>
-        <p>The app follows your iPhone or iPad language setting (Korean, English or Japanese). On devices set to any other language, it appears in English.</p>
+        <p>The app follows your iPhone or iPad language setting, or on Android your device language or the app's own language setting (Android 13 and later): Korean, English or Japanese. On devices set to any other language, it appears in English.</p>
 
         <h3>Can I move my records to another device?</h3>
-        <p>There's no account or sync, so you can't move them from within the app. Records are stored only on the device and move only as part of an iOS backup and restore. Whether they're included in backups depends on your iOS settings.</p>
+        <p>There's no account or sync, so you can't move them from within the app. Records are stored only on the device and move only as part of a device backup and restore (an iOS backup, or on Android a backup to your Google Account) or a transfer to a new device. Whether they're included depends on your device settings and choices.</p>
 
         <h3>My puzzle won't save.</h3>
         <p>Please check the following.</p>
@@ -178,7 +179,7 @@ const chrome = {
         </ul>
 
         <h3>What happens to my records if I delete the app?</h3>
-        <p>Deleting the app also deletes your game records, My Puzzles and settings from the device. There's no copy on our servers, so they can't be restored unless they're in an iOS backup.</p>
+        <p>Deleting the app also deletes your game records, My Puzzles and settings from the device. There's no copy on our servers, so they can't be restored unless they're in a device backup (an iOS backup, or on Android a backup to your Google Account).</p>
       </article>
 
       <article class="legal-card support-card contact-card">
@@ -186,7 +187,7 @@ const chrome = {
         <h2>Contact</h2>
         <p>If the problem continues, please send us the following. It helps us find the cause faster.</p>
         <ul>
-          <li>Device model and iOS version</li>
+          <li>Device model and iOS or Android version</li>
           <li>App version (in <strong>Settings › About</strong>)</li>
           <li>The steps that reproduce the problem</li>
           <li>A screenshot with personal information hidden, if possible</li>
@@ -229,10 +230,10 @@ const chrome = {
         <p><strong>設定 › 触覚</strong>で<strong>「振動フィードバック」</strong>を<strong>「オフ」</strong>にしてください。</p>
 
         <h3>アプリの言語はどう決まりますか？</h3>
-        <p>アプリはiPhone・iPadの言語設定に従います（韓国語・英語・日本語）。それ以外の言語に設定された端末では英語で表示されます。</p>
+        <p>アプリはiPhone・iPadでは端末の言語設定に、Androidでは端末の言語またはアプリごとの言語設定（Android 13以降）に従います（韓国語・英語・日本語）。それ以外の言語に設定された端末では英語で表示されます。</p>
 
         <h3>記録を別の端末に移せますか？</h3>
-        <p>アカウントや同期の機能がないため、アプリで移すことはできません。記録は端末にのみ保存され、iOSのバックアップと復元に含まれる範囲でのみ一緒に移ります。バックアップに含まれるかどうかはiOSの設定によります。</p>
+        <p>アカウントや同期の機能がないため、アプリで移すことはできません。記録は端末にのみ保存され、端末のバックアップと復元（iOSのバックアップ、AndroidのGoogleアカウントへのバックアップ）や新しい端末への移行に含まれる範囲でのみ一緒に移ります。含まれるかどうかは端末の設定と選択によります。</p>
 
         <h3>マイパズルが保存できません。</h3>
         <p>次の点をご確認ください。</p>
@@ -246,7 +247,7 @@ const chrome = {
         </ul>
 
         <h3>アプリを削除すると記録はどうなりますか？</h3>
-        <p>アプリを削除すると、ゲームの記録・マイパズル・設定も端末から削除されます。当社のサーバーにコピーはないため、iOSのバックアップに含まれている場合を除き、元に戻すことはできません。</p>
+        <p>アプリを削除すると、ゲームの記録・マイパズル・設定も端末から削除されます。当社のサーバーにコピーはないため、端末のバックアップ（iOSのバックアップ、AndroidのGoogleアカウントへのバックアップ）に含まれている場合を除き、元に戻すことはできません。</p>
       </article>
 
       <article class="legal-card support-card contact-card">
@@ -254,7 +255,7 @@ const chrome = {
         <h2>お問い合わせ</h2>
         <p>問題が解決しない場合は、次の情報を添えてご連絡ください。原因をより早く確認できます。</p>
         <ul>
-          <li>端末のモデルとiOSのバージョン</li>
+          <li>端末のモデルとiOSまたはAndroidのバージョン</li>
           <li>アプリのバージョン（<strong>設定 › アプリ情報</strong>で確認できます）</li>
           <li>問題が起きるまでの操作手順</li>
           <li>可能であれば、個人情報を隠した画面のスクリーンショット</li>
