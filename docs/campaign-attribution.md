@@ -1,6 +1,6 @@
 # 콘텐츠 → 웹 → 스토어 캠페인 연결
 
-로컬 검증: 2026-09-08 KST · **링크 구현과 실제 스토어 귀속은 별도로 검증한다.**
+현재 Apple 구성: 2026-10-19 KST · 이전 로컬 검증: 2026-09-08 KST · **링크 구현과 실제 스토어 귀속은 별도로 검증한다.**
 
 ## 왜 이 작업인가
 
@@ -11,7 +11,7 @@
 - `AppCatalog`와 `AppLanding`의 실제 anchor에 빌드 시 웹사이트 기본 캠페인을 부여한다.
 - 브라우저는 **URL에 명시된** 세 라벨만 읽고, 같은 사이트의 홈·앱·언어 전환 링크에 전달한다.
 - Google Play: `utm_source`, `utm_medium`, `utm_campaign`을 최상위 query와 URL 인코딩된 `referrer`에 동일하게 넣는다. 원래 앱 ID·언어 등 스토어 옵션은 유지한다.
-- Apple: `APPLE_PROVIDER_TOKEN`이 빈 값이면 원래 App Store 링크를 그대로 둔다. 기존 TikTok 코드의 `olympus providerId`는 ASC가 생성한 캠페인 링크의 `pt`와 같다는 증거가 없어 복사하지 않았다. 기존 `/go/tiktok`의 URL·캠페인명은 이번에 변경하지 않았다.
+- Apple: 실제 ASC 생성 링크의 공개 `pt=128720089`를 동일 소유 확인된8개 앱에만 적용한다. [소유 근거·허용 ID·운영 검증 한계](apple-campaign-provider-20261019.md). 다른/미확인 ID와 다른 provider 인자는 원 URL을 유지한다. 기존 TikTok 코드의 `olympus providerId`를 복사하지 않았고 `/go/tiktok`의 URL·캠페인명은 변경하지 않았다.
 - 새 쿠키·저장소·사용자 ID·클릭 수집·외부 요청·클릭 가로채기 없음. CSP 완화 없음. 기존 사이트의 테마/언어 설정 코드는 별개로 유지한다.
 - 법률·문의·외부 사이트·파일 링크로 UTM을 전파하지 않는다. 해당 경로로 이동하면 이 구현의 캠페인 전달은 종료된다.
 - JS가 꺼지거나 로딩 전 클릭하면 **웹사이트 기본 캠페인**으로 연결된다. 소셜 캠페인까지 보존한다고 주장하지 않는다.
@@ -59,8 +59,8 @@ https://pifl-labs.com/ko/?utm_source=geeknews&utm_medium=referral&utm_campaign=g
 | 프로덕션에 동일 코드가 배포됨 | 기본 캠페인은 확인: 2026-10-14T23:14:22Z 운영 `/ko/` 홈의 Google Play 링크 8/8에 `utm_source=pifl-labs&utm_medium=website&utm_campaign=website_ko`와 같은 값의 `referrer`. 런칭 글 채널 허용값은 머지·배포 후 같은 방법으로 다시 확인 |
 | 사이트 방문자 / 사이트 버튼 클릭 수 | 이 코드에서는 수집하지 않음 |
 | Play에서 해당 UTM 행이 실제 집계됨 | 미확인. 배포 후 콘솔/리포트 readback 필요 |
-| Apple provider token | 미설정. 계정에서 생성된 캠페인 링크로 검증 후 설정 |
-| Apple 다운로드 귀속 | 비활성. 계정에서 생성된 링크의 pt 확인 후 활성화 가능 |
+| Apple provider token | 실제 생성 링크·동일 소유8개 ID 근거로 소스에 설정. 운영 동일 코드/링크 확인은 별도 |
+| Apple 다운로드 귀속 | URL 연결만 구성. 실제 보고서 행·다운로드 귀속은 미검증 |
 | 설치·잔존·매출 증가 | 아직 입증하지 못함 |
 
 웹페이지의 `href` 검사만으로 실제 스토어 귀속 PASS를 주지 않는다. 행 누락·권한 부족·지연·개인정보 임계치도 **0건**으로 바꾸지 않는다.
@@ -97,4 +97,4 @@ git diff --check
 
 ### Apple 활성화 게이트
 
-권한 있는 운영자가 ASC의 생성된 캠페인 링크에서 `pt`를 직접 확인한다. API key·JWT·team ID·olympus providerId를 대신 넣지 않는다. 공개 pt 값과 검증 날짜/근거만 기록하고 `APPLE_PROVIDER_TOKEN` 및 비활성 상태 테스트를 함께 갱신한다. 계정 시크릿을 코드에 넣지 않는다. 다시 build/test/운영 URL readback 후 실제 데이터가 생겨야 귀속 확인으로 표기한다.
+기존 소유 검증은2026-10-10(6개)/10-16(2개) 기록으로 충족했다. 추가 앱은 소유 확인 전까지 허용 목록에 넣지 않는다. API key·JWT·team ID·olympus providerId를 대신 넣지 않으며 계정 시크릿을 코드에 넣지 않는다. 다시 build/test/운영 동일 코드와 URL readback을 확인하고 실제 데이터가 생겨야 귀속 확인으로 표기한다. 새 구성이 이전 비활성 기간의 데이터를 소급 복구하지 않는다.

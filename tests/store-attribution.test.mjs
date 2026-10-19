@@ -96,18 +96,19 @@ test('a new campaign replaces stale tracking labels without changing the app', (
   assert.ok(!result.searchParams.get('referrer').includes('old'));
 });
 
-test('Apple is deliberately disabled until a generated provider token is verified', () => {
-  assert.equal(APPLE_PROVIDER_TOKEN, '');
-  assert.equal(storeUrl(APPLE, CAMPAIGN), APPLE);
+test('Apple uses the owner-generated public provider token, never an arbitrary credential', () => {
+  assert.equal(APPLE_PROVIDER_TOKEN, '128720089');
+  assert.equal(new URL(storeUrl(APPLE, CAMPAIGN)).searchParams.get('pt'), '128720089');
   assert.equal(storeUrl(APPLE, CAMPAIGN, 'not-a-provider-token'), APPLE);
+  assert.equal(storeUrl(APPLE, CAMPAIGN, ''), APPLE);
+  assert.equal(storeUrl(APPLE, CAMPAIGN, '123456'), APPLE);
 });
 
 test('verified Apple configuration preserves path/product page and uses a <=30 character ct', () => {
-  // Synthetic example from Apple docs; never the production configuration.
-  const result = new URL(storeUrl(APPLE + '?ppid=example-page', CAMPAIGN, '123456'));
+  const result = new URL(storeUrl(APPLE + '?ppid=example-page', CAMPAIGN));
   assert.equal(result.pathname, new URL(APPLE).pathname);
   assert.equal(result.searchParams.get('ppid'), 'example-page');
-  assert.equal(result.searchParams.get('pt'), '123456');
+  assert.equal(result.searchParams.get('pt'), APPLE_PROVIDER_TOKEN);
   assert.equal(result.searchParams.get('ct'), CAMPAIGN.campaign);
   assert.equal(result.searchParams.get('mt'), '8');
   assert.ok(result.searchParams.get('ct').length <= 30);
@@ -166,7 +167,11 @@ test('DOM adapter decorates actual hrefs, needs no click handler, and is idempot
   const doc = {querySelectorAll: (selector) => selector === 'a[data-store-link]' ? [play, apple] : [play, apple, app, privacy]};
   decorateCampaignLinks(doc, CURRENT + QUERY + '&email=private%40example.com');
   assert.equal(new URL(play.getAttribute('href')).searchParams.get('utm_campaign'), CAMPAIGN.campaign);
-  assert.equal(apple.getAttribute('href'), APPLE);
+  const appleDestination = new URL(apple.getAttribute('href'));
+  assert.equal(appleDestination.pathname, new URL(APPLE).pathname);
+  assert.equal(appleDestination.searchParams.get('pt'), '128720089');
+  assert.equal(appleDestination.searchParams.get('ct'), CAMPAIGN.campaign);
+  assert.equal(appleDestination.searchParams.get('mt'), '8');
   assert.equal(privacy.getAttribute('href'), '/ko/privacy/');
   assert.ok(!app.getAttribute('href').includes('email'));
   const once = play.getAttribute('href');

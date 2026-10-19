@@ -1,9 +1,13 @@
 /** Store campaign labels only. No SDK, requests, cookies or user identifiers. */
 
-// Disabled until verified against an actual ASC-generated campaign link.
-// The legacy TikTok page's olympus providerId is NOT proof of a campaign pt.
-// A provider token is public link metadata, not an API credential.
-export const APPLE_PROVIDER_TOKEN = '';
+// Public metadata from the owner's ASC-generated link, not an API credential.
+// Six apps verified 2026-10-10; Bridge/Voyage verified 2026-10-16.
+// Evidence and reporting limits: docs/apple-campaign-provider-20261019.md.
+export const APPLE_PROVIDER_TOKEN = '128720089';
+const VERIFIED_APPLE_IDS = new Set([
+  '6762258878', '6770267735', '6777299814', '6770272665',
+  '6770268950', '6779071131', '6788949612', '6801205183',
+]);
 
 const SOURCES = new Set([
   'pifl-labs', 'pipi-worlds', 'instagram', 'youtube', 'threads', 'tiktok', 'naver', 'medium', 'brunch',
@@ -40,7 +44,7 @@ export function readCampaign(search) {
 
 /**
  * Preserve original ID/path and unrelated store options. Unsupported links
- * stay untouched. Apple remains a normal download link pending verification.
+ * stay untouched. Apple labels apply only to the verified owner's app IDs.
  * @param {string} href
  * @param {Campaign} campaign
  */
@@ -50,7 +54,8 @@ export function storeUrl(href, campaign, appleProviderToken = APPLE_PROVIDER_TOK
   if (url.protocol !== 'https:' || url.username || url.password || url.port) return href;
   if (!SOURCES.has(campaign?.source) || !MEDIUMS.has(campaign?.medium) || !validCampaign(campaign?.campaign)) return href;
   if (url.hostname === 'apps.apple.com' && /\/id\d+$/.test(url.pathname)) {
-    if (!/^\d+$/.test(appleProviderToken)) return href;
+    const id = /\/id(\d+)$/.exec(url.pathname)[1];
+    if (!VERIFIED_APPLE_IDS.has(id) || appleProviderToken !== APPLE_PROVIDER_TOKEN) return href;
     url.searchParams.set('pt', appleProviderToken);
     url.searchParams.set('ct', campaign.campaign);
     url.searchParams.set('mt', '8');
