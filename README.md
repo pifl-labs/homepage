@@ -167,3 +167,12 @@ A standalone A5 card with Japanese instructions for Korean vocabulary learners: 
 - Original one-page family role-play for asking for help with `도와주세요.` Use an empty, light box and only pretend its lid is hard to open. A child may point, speak together with a grown-up, or stop. No scoring, audio or pronunciation instruction.
 - No app, registration, purchase or submission of child information is needed for the sheet. The separate iPhone/iPad app [Korean Bridge](https://apps.apple.com/app/id6801205183) offers Vietnamese grown-up guidance; its US 1.0.1 listing checked 17 October 2026 says no ads or in-app purchases. Availability is not guaranteed in every region. This paper is not a new app feature or Vietnamese puzzle interface.
 - PiFl Labs original, with AI translation/layout assistance. Not independently educator/native-speaker reviewed or physically print-tested; learning outcomes are not established. Free home/classroom printing with attribution. Existing Noto Sans JP and NanumGothic are embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/help-me-ko-vi-OFL.txt). The Korean-Vietnamese dictionary is a word-meaning reference, not an endorsement.
+
+
+## 무료 공룡 색칠 도안 두 장 (한국어 안내)
+
+밑그림의 공룡 팩에서 무료로 제공하는 두 그림을 A4 두 쪽의 독립 인쇄 자료로 묶었습니다. 앱 설치·가입·구매 없이 원하는 쪽만 인쇄해 색칠할 수 있습니다.
+
+- [공룡 색칠 PDF · A4 두 쪽](https://pifl-labs.com/assets/printables/draw-dinosaur-coloring-ko-a4.pdf) · [그림 설명과 텍스트 안내](https://pifl-labs.com/assets/printables/draw-dinosaur-coloring-ko.txt)
+- 선택 사항인 [밑그림 Android 앱](https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR)은 광고·앱 내 구매가 있습니다. 공개 Google Play 1.2.0 설명에는 6테마 각10장, 테마별 처음2장 무료·나머지 일회 구매가 안내되어 있습니다(2026-10-19 확인). 기기·지역·가격은 본인 스토어에서 확인하세요. iOS 새 버전 공개를 뜻하지 않습니다.
+- PiFl Labs가 AI로 생성한 상상 그림입니다. 실제 사진의 앱 변환 결과·과학 관찰 자료·가족 사용 후기나 교육 효과의 증거가 아닙니다. 본문·편집에 AI 보조를 사용했습니다. 실제 프린터 출력과 PDF/UA 인증은 미검증이며, 텍스트는 시각 도안의 완전한 대체물이 아닙니다. NanumGothic은 [SIL Open Font License 1.1](https://pifl-labs.com/assets/printables/draw-dinosaur-coloring-OFL.txt)로 임베드했습니다.

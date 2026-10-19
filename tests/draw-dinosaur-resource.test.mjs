@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url),read=n=>readFileSync(new URL(n,root));
+const frozen={"draw-dinosaur-coloring-ko-a4.pdf": "14f79b0a0c2633b0ca43e32d92030de9f2edd54b9dd540652cf708823a8de33b", "draw-dinosaur-coloring-ko.txt": "0aaf83dfd9a76eec172497d259eaccc1bc17e828e47e5182e222fe4279dbb39c", "draw-dinosaur-coloring-OFL.txt": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f"};
+for(const [name,sha]of Object.entries(frozen))test('exact standalone dinosaur resource '+name,()=>assert.equal(createHash('sha256').update(read('public/assets/printables/'+name)).digest('hex'),sha));
+test('PDF header and terminal marker, not HTML',()=>{const b=read('public/assets/printables/draw-dinosaur-coloring-ko-a4.pdf');assert.ok(b.subarray(0,5).equals(Buffer.from('%PDF-')));assert.match(b.subarray(-100).toString(),/%%EOF/);assert.ok(b.length<300000)});
+test('text boundaries: free paper not all-free app, no iOS release claim',()=>{const t=read('public/assets/printables/draw-dinosaur-coloring-ko.txt').toString('utf8');for(const s of ['앱 설치·가입·구매가 필요 없습니다','광고·앱 내 구매','처음2장 무료','나머지 일회 구매','iOS 새 버전의 공개를 뜻하지 않습니다','AI로 생성','실제 프린터로 출력한 결과는 아직 검증하지 않았습니다','PDF/UA'])assert.ok(t.includes(s));assert.doesNotMatch(t,/모든 도안 무료|학습효과 보장/)});
+test('README exposes PDF/text/license and exact optional Android path',()=>{const t=read('README.md').toString('utf8');for(const n of Object.keys(frozen))assert.ok(t.includes('https://pifl-labs.com/assets/printables/'+n));assert.ok(t.includes('id=com.pifl.pipi.draw&hl=ko&gl=KR'))});
