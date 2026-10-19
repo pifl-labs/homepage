@@ -10,6 +10,8 @@ interface Props { lang?: Lang; homeHref?: string }
 // 일본어판은 니콜리 등록상표인 「数独」「SUDOKU」를 쓰지 않고 「ナンプレ」로 표기한다.
 // 문의 메일은 Google Workspace 로 수신·보관하므로 위탁·국외 이전에 Google LLC 를 밝힌다.
 // 문의 관리 도구는 회사 통합 방침 제5조·제10조를 참조만 한다.
+// Android 앱(Google Play, pipi_sudoku 의 Flutter 앱)은 iOS 앱과 저장 항목이 같고 인터넷 권한이 없다. 자동 백업과 새 기기
+// 이전에는 files/SudokuScope 만 들어간다(android/app/src/main/res/xml/data_extraction_rules.xml·backup_rules.xml).
 const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
 
 const BASE = 'https://pifl-labs.com';
@@ -28,21 +30,21 @@ const chrome = {
     docDesc: '계정, 광고, 인앱 결제, 분석·추적 도구 없이 오프라인으로 동작하는 한칸씩 스도쿠의 개인정보처리방침입니다.',
     back: '홈으로 돌아가기',
     title: '한칸씩 스도쿠 개인정보처리방침',
-    date: '시행일: 2026년 10월 13일',
+    date: '시행일: 2026년 10월 19일',
   },
   en: {
     docTitle: 'Cell by Cell Sudoku Privacy Policy - PiFl Labs',
     docDesc: 'Privacy policy for Cell by Cell Sudoku, which works offline with no account, ads, in-app purchases, or analytics and tracking tools.',
     back: 'Back to Home',
     title: 'Cell by Cell Sudoku Privacy Policy',
-    date: 'Effective Date: October 13, 2026',
+    date: 'Effective Date: October 19, 2026',
   },
   ja: {
     docTitle: 'ひとマスずつナンプレ プライバシーポリシー - PiFl Labs',
     docDesc: 'アカウント、広告、アプリ内課金、分析・トラッキングツールなしでオフラインで動作する「ひとマスずつナンプレ」のプライバシーポリシーです。',
     back: 'ホームに戻る',
     title: 'ひとマスずつナンプレ プライバシーポリシー',
-    date: '施行日: 2026年10月13日',
+    date: '施行日: 2026年10月19日',
   },
 }[lang];
 ---
@@ -66,7 +68,7 @@ const chrome = {
     <div class="container">
       {lang === 'ko' && (
       <div class="legal-card">
-        <p>주식회사 피플랩스(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여, 오프라인으로 9×9 스도쿠를 푸는 모바일 애플리케이션 <strong>한칸씩 스도쿠</strong>(이하 "앱")에 대한 개인정보 처리방침을 다음과 같이 수립·공개합니다. 본 방침은 회사 웹사이트의 <a href="/ko/privacy/">통합 개인정보처리방침</a>에 우선하여 본 앱에 적용됩니다.</p>
+        <p>주식회사 피플랩스(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여, 오프라인으로 9×9 스도쿠를 푸는 iPhone·iPad와 Android용 모바일 애플리케이션 <strong>한칸씩 스도쿠</strong>(이하 "앱")에 대한 개인정보 처리방침을 다음과 같이 수립·공개합니다. 본 방침은 회사 웹사이트의 <a href="/ko/privacy/">통합 개인정보처리방침</a>에 우선하여 본 앱에 적용됩니다.</p>
 
         <p>앱은 <strong>회원가입·로그인이 없고</strong>, 광고·인앱 결제·분석 및 추적 도구(SDK)를 사용하지 않습니다. 앱은 스스로 네트워크 요청을 보내지 않으며 회사 서버에 연결하지 않습니다. <strong>퍼즐 진행 상황, 내 퍼즐, 설정은 기기 안의 앱 전용 저장 공간에만 저장되며, 회사는 이 정보를 볼 수 없습니다.</strong></p>
 
@@ -111,11 +113,11 @@ const chrome = {
           </tbody>
         </table>
         </ScrollableLegalTable>
-        <p>퍼즐을 완성한 뒤 <strong>완료 기록 공유</strong>를 고르면 iOS 공유 시트로 앱 이름·난이도·풀이 시간·사용한 힌트 수를 보낼 수 있습니다. 공유하기로 고른 내용은 이용자가 고른 앱으로만 전달되며 회사로는 전송되지 않습니다.</p>
+        <p>퍼즐을 완성한 뒤 <strong>완료 기록 공유</strong>를 고르면 기기의 공유 시트로 앱 이름·난이도·풀이 시간·사용한 힌트 수를 보낼 수 있습니다. 공유하기로 고른 내용은 이용자가 고른 앱으로만 전달되며 회사로는 전송되지 않습니다.</p>
 
         <h2>제3조 (개인정보의 처리 및 보유기간)</h2>
         <ul>
-          <li><strong>게임 기록·내 퍼즐·앱 설정(기기 내)</strong>: 이용자가 앱을 삭제할 때까지 기기에 보관되며, 앱을 삭제하면 함께 삭제됩니다. 기기 백업에 포함되는지는 이용자의 iOS 백업 설정을 따릅니다.</li>
+          <li><strong>게임 기록·내 퍼즐·앱 설정(기기 내)</strong>: 이용자가 앱을 삭제할 때까지 기기에 보관되며, 앱을 삭제하면 함께 삭제됩니다. 기기 백업(iOS 백업, Android의 Google 계정 백업)이나 새 기기로 옮기기에 포함되는지는 이용자의 기기 설정과 선택을 따릅니다.</li>
           <li><strong>이메일 문의 기록</strong>: 문의 처리 완료 후 <strong>3년</strong></li>
         </ul>
 
@@ -183,12 +185,14 @@ const chrome = {
         </ul>
         <p>문의를 관리하는 데 쓰는 도구의 국외 이전은 회사 <a href="/ko/privacy/">통합 개인정보처리방침</a> 제10조를 따릅니다.</p>
 
-        <h2>제7조 (Apple이 처리하는 정보)</h2>
+        <h2>제7조 (Apple·Google이 처리하는 정보)</h2>
         <p>App Store에서 앱을 내려받는 과정, 이용자가 앱 개발자와 공유하도록 선택한 충돌·진단 보고서, TestFlight 피드백은 Apple이 <a href="https://www.apple.com/kr/legal/privacy/" target="_blank" rel="noopener">Apple의 개인정보 처리방침</a>에 따라 처리합니다. 회사는 App Store Connect에서 익명 충돌 보고서와 TestFlight 피드백을 앱 개선 목적으로만 확인합니다.</p>
         <p>TestFlight 피드백에는 테스터의 이메일 주소가 포함되며, 이는 TestFlight로 출시 전 빌드를 시험하는 사람에게만 해당하고 App Store 이용자와는 관계가 없습니다.</p>
+        <p>Google Play에서 앱을 내려받는 과정, 이용자가 기기 설정에서 사용 및 진단 정보 공유에 동의한 경우의 충돌·ANR(앱 응답 없음) 보고서, Google Play 테스트 트랙 참여 정보는 Google이 <a href="https://policies.google.com/privacy?hl=ko" target="_blank" rel="noopener">Google 개인정보처리방침</a>에 따라 처리합니다. 회사는 Google Play Console에서 집계된 충돌·ANR 정보를 앱 개선 목적으로만 확인합니다.</p>
+        <p>Google Play 테스트 트랙의 테스터는 회사가 Google Play Console의 테스터 목록에 이메일 주소로 등록한 사람이며, Google 계정으로 테스트에 참여합니다. 이는 출시 전 빌드를 시험하는 사람에게만 해당하고 Google Play 이용자와는 관계가 없습니다.</p>
 
         <h2>제8조 (앱 권한 안내)</h2>
-        <p>본 앱은 기기 권한을 요청하지 않습니다. 위치·카메라·마이크·연락처·사진·알림 권한을 요청하지 않으며, 추적 허용 요청(App Tracking Transparency)도 표시하지 않습니다.</p>
+        <p>본 앱은 기기 권한을 요청하지 않습니다. 위치·카메라·마이크·연락처·사진·알림 권한을 요청하지 않으며, iOS의 추적 허용 요청(App Tracking Transparency)도 표시하지 않습니다.</p>
 
         <h2>제9조 (개인정보의 파기절차 및 방법)</h2>
         <ul>
@@ -226,10 +230,10 @@ const chrome = {
         <p>앱 이용 문의는 <a href="/ko/apps/pipi-sudoku/support/">지원 페이지</a> 또는 <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>로 보내 주세요.</p>
 
         <h2>제14조 (GDPR - 유럽경제지역)</h2>
-        <p>유럽경제지역(EEA)에 계신 이용자는 EU 일반 개인정보 보호규정(GDPR)에 따라 열람, 정정, 삭제, 처리 제한, 데이터 이동, 처리 반대에 관한 권리를 추가로 가집니다. App Store에서 앱을 이용하는 경우 회사가 처리하는 개인정보는 이용자가 보낸 이메일 문의 정보(제2조)뿐이며(TestFlight 테스터는 제7조 참조), 게임 기록·내 퍼즐·앱 설정은 기기에 보관되고 회사로 전송되지 않습니다. 이 권리를 행사하려면 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 연락해 주세요.</p>
+        <p>유럽경제지역(EEA)에 계신 이용자는 EU 일반 개인정보 보호규정(GDPR)에 따라 열람, 정정, 삭제, 처리 제한, 데이터 이동, 처리 반대에 관한 권리를 추가로 가집니다. App Store 또는 Google Play에서 앱을 이용하는 경우 회사가 처리하는 개인정보는 이용자가 보낸 이메일 문의 정보(제2조)뿐이며(TestFlight·Google Play 테스터는 제7조 참조), 게임 기록·내 퍼즐·앱 설정은 기기에 보관되고 회사로 전송되지 않습니다. 이 권리를 행사하려면 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 연락해 주세요.</p>
 
         <h2>제15조 (APPI - 일본 개인정보 보호법)</h2>
-        <p>일본 개인정보 보호법(APPI)에 따라 일본의 이용자는 개인정보의 공개, 정정, 이용 정지를 청구할 권리를 가집니다. App Store에서 앱을 이용하는 경우 회사가 처리하는 개인정보는 이용자가 보낸 이메일 문의 정보(제2조)뿐입니다(TestFlight 테스터는 제7조 참조). 문의는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 보내 주세요.</p>
+        <p>일본 개인정보 보호법(APPI)에 따라 일본의 이용자는 개인정보의 공개, 정정, 이용 정지를 청구할 권리를 가집니다. App Store 또는 Google Play에서 앱을 이용하는 경우 회사가 처리하는 개인정보는 이용자가 보낸 이메일 문의 정보(제2조)뿐입니다(TestFlight·Google Play 테스터는 제7조 참조). 문의는 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 보내 주세요.</p>
 
         <h2>제16조 (권익침해 구제방법)</h2>
         <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 다음 기관에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
@@ -241,13 +245,13 @@ const chrome = {
         </ul>
 
         <h2>제17조 (개인정보 처리방침 변경)</h2>
-        <p>이 개인정보 처리방침은 2026년 10월 13일부터 적용됩니다. 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
+        <p>이 개인정보 처리방침은 2026년 10월 19일부터 적용됩니다. 이전 방침(2026년 10월 13일 시행)에 Android 앱(Google Play)과 Google이 처리하는 정보를 더했습니다. 변경 사항이 있을 경우 본 페이지를 통하여 공지하겠습니다.</p>
       </div>
       )}
 
       {lang === 'en' && (
       <div class="legal-card">
-        <p>PiFl Labs Co., Ltd. ("Company", "we", "us") has established and publishes this Privacy Policy under Article 30 of the Korean Personal Information Protection Act to protect your personal data and to handle related concerns promptly and smoothly. It covers <strong>Cell by Cell Sudoku</strong> ("App"), a mobile app for solving 9×9 sudoku puzzles offline, and applies to the App in preference to our <a href="/en/privacy/">general Privacy Policy</a>.</p>
+        <p>PiFl Labs Co., Ltd. ("Company", "we", "us") has established and publishes this Privacy Policy under Article 30 of the Korean Personal Information Protection Act to protect your personal data and to handle related concerns promptly and smoothly. It covers <strong>Cell by Cell Sudoku</strong> ("App"), a mobile app for iPhone, iPad and Android for solving 9×9 sudoku puzzles offline, and applies to the App in preference to our <a href="/en/privacy/">general Privacy Policy</a>.</p>
 
         <p>The App has <strong>no sign-up or login</strong> and uses no ads, in-app purchases, or analytics or tracking tools (SDKs). It makes no network requests of its own and does not connect to our servers. <strong>Your puzzle progress, My Puzzles and settings are stored only in the App's private storage on your device, and we cannot see them.</strong></p>
 
@@ -292,11 +296,11 @@ const chrome = {
           </tbody>
         </table>
         </ScrollableLegalTable>
-        <p>After you finish a puzzle, <strong>Share Result</strong> opens the iOS share sheet with the app name, level, solve time and hints used. What you choose to share goes only to the app you pick, never to us.</p>
+        <p>After you finish a puzzle, <strong>Share Result</strong> opens your device's share sheet with the app name, level, solve time and hints used. What you choose to share goes only to the app you pick, never to us.</p>
 
         <h2>3. Retention Period</h2>
         <ul>
-          <li><strong>Game records, My Puzzles and app settings (on the device)</strong>: Kept on the device until you delete the App, and deleted along with it. Whether they are included in device backups depends on your iOS backup settings.</li>
+          <li><strong>Game records, My Puzzles and app settings (on the device)</strong>: Kept on the device until you delete the App, and deleted along with it. Whether they are included in a device backup (an iOS backup, or on Android a backup to your Google Account) or a transfer to a new device depends on your device settings and choices.</li>
           <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after the inquiry is resolved</li>
         </ul>
 
@@ -364,12 +368,14 @@ const chrome = {
         </ul>
         <p>International transfers for the tools we use to manage inquiries are covered by section 10 of our <a href="/en/privacy/">general Privacy Policy</a>.</p>
 
-        <h2>7. Information Handled by Apple</h2>
+        <h2>7. Information Handled by Apple and Google</h2>
         <p>App Store downloads of the App, crash and diagnostic reports you choose to share with app developers, and TestFlight feedback are handled by Apple under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. We view anonymous crash reports and TestFlight feedback in App Store Connect only to improve the App.</p>
         <p>TestFlight feedback, which includes the tester's email address, applies only to people testing pre-release builds through TestFlight, not to App Store users.</p>
+        <p>Google Play downloads of the App, crash and ANR (App Not Responding) reports from devices whose users have opted in, in their device settings, to share usage and diagnostics data, and Google Play testing-track participation are handled by Google under <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Google's Privacy Policy</a>. We view aggregated crash and ANR data in Google Play Console only to improve the App.</p>
+        <p>Testers on a Google Play testing track are people whose email addresses we add to a tester list in Google Play Console, and they join the test with their Google Account. This applies only to people testing pre-release builds, not to Google Play users.</p>
 
         <h2>8. App Permissions</h2>
-        <p>The App requests no device permissions. It does not ask for location, camera, microphone, contacts, photos or notifications access, and it does not show the App Tracking Transparency prompt.</p>
+        <p>The App requests no device permissions. It does not ask for location, camera, microphone, contacts, photos or notifications access, and it does not show iOS's App Tracking Transparency prompt.</p>
 
         <h2>9. Data Destruction</h2>
         <ul>
@@ -407,10 +413,10 @@ const chrome = {
         <p>For help using the App, see the <a href="/en/apps/pipi-sudoku/support/">support page</a> or email <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
 
         <h2>14. GDPR (European Economic Area)</h2>
-        <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. For App Store users of the App, the only personal data we process is the information in email inquiries you send us (Section 2; for TestFlight testers, see Section 7); game records, My Puzzles and settings are kept on your device and are never sent to us. To exercise these rights, contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+        <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. For App Store and Google Play users of the App, the only personal data we process is the information in email inquiries you send us (Section 2; for TestFlight and Google Play testers, see Section 7); game records, My Puzzles and settings are kept on your device and are never sent to us. To exercise these rights, contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
         <h2>15. APPI (Japan)</h2>
-        <p>Under Japan's Act on the Protection of Personal Information (APPI), users in Japan have the right to request disclosure, correction and suspension of use of their personal information. For App Store users of the App, the only personal data we process is the information in email inquiries you send us (Section 2; for TestFlight testers, see Section 7). Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+        <p>Under Japan's Act on the Protection of Personal Information (APPI), users in Japan have the right to request disclosure, correction and suspension of use of their personal information. For App Store and Google Play users of the App, the only personal data we process is the information in email inquiries you send us (Section 2; for TestFlight and Google Play testers, see Section 7). Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
         <h2>16. Remedies</h2>
         <p>To seek remedies for a privacy infringement, you may apply for dispute resolution or consultation to the following Korean authorities.</p>
@@ -422,13 +428,13 @@ const chrome = {
         </ul>
 
         <h2>17. Changes to this Policy</h2>
-        <p>This Privacy Policy is effective from October 13, 2026. Any changes will be announced on this page.</p>
+        <p>This Privacy Policy is effective from October 19, 2026. Compared with the previous version (effective October 13, 2026), it adds the Android app (Google Play) and the information Google handles. Any changes will be announced on this page.</p>
       </div>
       )}
 
       {lang === 'ja' && (
       <div class="legal-card">
-        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、韓国の「個人情報保護法」第30条に基づき、お客様の個人情報を保護し、これに関するご相談を迅速かつ円滑に処理するため、オフラインで9×9のナンプレを解くモバイルアプリケーション<strong>ひとマスずつナンプレ</strong>（以下「本アプリ」）のプライバシーポリシーを次のとおり定めて公開します。本ポリシーは、当社ウェブサイトの<a href="/ja/privacy/">総合プライバシーポリシー</a>に優先して本アプリに適用されます。</p>
+        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、韓国の「個人情報保護法」第30条に基づき、お客様の個人情報を保護し、これに関するご相談を迅速かつ円滑に処理するため、オフラインで9×9のナンプレを解くiPhone・iPad・Android向けのモバイルアプリケーション<strong>ひとマスずつナンプレ</strong>（以下「本アプリ」）のプライバシーポリシーを次のとおり定めて公開します。本ポリシーは、当社ウェブサイトの<a href="/ja/privacy/">総合プライバシーポリシー</a>に優先して本アプリに適用されます。</p>
 
         <p>本アプリには<strong>会員登録・ログインがなく</strong>、広告・アプリ内課金・分析およびトラッキングのツール（SDK）を使用していません。本アプリは自らネットワーク通信を行わず、当社のサーバーにも接続しません。<strong>パズルの進行状況、マイパズル、設定は端末内のアプリ専用の保存領域にのみ保存され、当社がこれらを見ることはできません。</strong></p>
 
@@ -473,11 +479,11 @@ const chrome = {
           </tbody>
         </table>
         </ScrollableLegalTable>
-        <p>パズルを完成させたあと<strong>「記録を共有」</strong>を選ぶと、iOSの共有シートでアプリ名・難易度・解答時間・使ったヒントの数を送れます。共有すると決めた内容はお客様が選んだアプリにだけ届き、当社には送信されません。</p>
+        <p>パズルを完成させたあと<strong>「記録を共有」</strong>を選ぶと、端末の共有シートでアプリ名・難易度・解答時間・使ったヒントの数を送れます。共有すると決めた内容はお客様が選んだアプリにだけ届き、当社には送信されません。</p>
 
         <h2>第3条 (保有期間)</h2>
         <ul>
-          <li><strong>ゲームの記録・マイパズル・アプリの設定（端末内）</strong>: 本アプリを削除するまで端末に保存され、削除すると一緒に削除されます。端末のバックアップに含まれるかどうかは、お客様のiOSのバックアップ設定によります。</li>
+          <li><strong>ゲームの記録・マイパズル・アプリの設定（端末内）</strong>: 本アプリを削除するまで端末に保存され、削除すると一緒に削除されます。端末のバックアップ（iOSのバックアップ、AndroidのGoogleアカウントへのバックアップ）や新しい端末への移行に含まれるかどうかは、お客様の端末の設定と選択によります。</li>
           <li><strong>メールでのお問い合わせ記録</strong>: 対応完了後 <strong>3年</strong></li>
         </ul>
 
@@ -545,12 +551,14 @@ const chrome = {
         </ul>
         <p>お問い合わせの管理に使うツールの国外移転については、当社の<a href="/ja/privacy/">総合プライバシーポリシー</a>第10条に従います。</p>
 
-        <h2>第7条 (Appleが取り扱う情報)</h2>
+        <h2>第7条 (Apple・Googleが取り扱う情報)</h2>
         <p>App Storeからの本アプリのダウンロード、お客様がAppデベロッパと共有することを選んだクラッシュ・診断レポート、TestFlightのフィードバックは、Appleが<a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>に従って取り扱います。当社は、App Store Connectで匿名のクラッシュレポートとTestFlightのフィードバックを、本アプリの改善のためにのみ確認します。</p>
         <p>TestFlightのフィードバックにはテスターのメールアドレスが含まれますが、これはTestFlightでリリース前のビルドを試す方にのみ関係し、App Storeの利用者には関係ありません。</p>
+        <p>Google Playからの本アプリのダウンロード、端末の設定で使用状況と診断情報の共有に同意したお客様の端末からのクラッシュ・ANR（アプリの応答なし）レポート、Google Playのテストトラックへの参加情報は、Googleが<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>に従って取り扱います。当社は、Google Play Consoleで集計されたクラッシュ・ANRの情報を、本アプリの改善のためにのみ確認します。</p>
+        <p>Google Playのテストトラックのテスターは、当社がGoogle Play Consoleのテスターリストにメールアドレスで登録した方で、Googleアカウントでテストに参加します。これはリリース前のビルドを試す方にのみ関係し、Google Playの利用者には関係ありません。</p>
 
         <h2>第8条 (アプリ権限)</h2>
-        <p>本アプリは端末の権限を要求しません。位置情報・カメラ・マイク・連絡先・写真・通知の権限を求めず、トラッキングの許可を求める画面（App Tracking Transparency）も表示しません。</p>
+        <p>本アプリは端末の権限を要求しません。位置情報・カメラ・マイク・連絡先・写真・通知の権限を求めず、iOSのトラッキングの許可を求める画面（App Tracking Transparency）も表示しません。</p>
 
         <h2>第9条 (個人情報の破棄手続および方法)</h2>
         <ul>
@@ -588,10 +596,10 @@ const chrome = {
         <p>アプリの使い方に関するお問い合わせは、<a href="/ja/apps/pipi-sudoku/support/">サポートページ</a>または <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> までお送りください。</p>
 
         <h2>第14条 (GDPR - 欧州経済領域)</h2>
-        <p>欧州経済領域(EEA)にお住まいの方は、一般データ保護規則(GDPR)に基づき、アクセス、訂正、消去、処理の制限、データポータビリティ、処理への異議申し立てなどの追加の権利を有します。App Storeから本アプリをご利用の場合、当社が取り扱う個人情報は、お客様がメールでお送りいただいたお問い合わせの情報（第2条）だけで（TestFlightのテスターについては第7条をご覧ください）、ゲームの記録・マイパズル・アプリの設定は端末内に保存され、当社には送信されません。これらの権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
+        <p>欧州経済領域(EEA)にお住まいの方は、一般データ保護規則(GDPR)に基づき、アクセス、訂正、消去、処理の制限、データポータビリティ、処理への異議申し立てなどの追加の権利を有します。App StoreまたはGoogle Playから本アプリをご利用の場合、当社が取り扱う個人情報は、お客様がメールでお送りいただいたお問い合わせの情報（第2条）だけで（TestFlightとGoogle Playのテスターについては第7条をご覧ください）、ゲームの記録・マイパズル・アプリの設定は端末内に保存され、当社には送信されません。これらの権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
         <h2>第15条 (APPI - 日本の個人情報保護法)</h2>
-        <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。App Storeから本アプリをご利用の場合、当社が取り扱う個人情報は、お客様がメールでお送りいただいたお問い合わせの情報（第2条）だけです（TestFlightのテスターについては第7条をご覧ください）。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
+        <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。App StoreまたはGoogle Playから本アプリをご利用の場合、当社が取り扱う個人情報は、お客様がメールでお送りいただいたお問い合わせの情報（第2条）だけです（TestFlightとGoogle Playのテスターについては第7条をご覧ください）。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
 
         <h2>第16条 (権利侵害の救済方法)</h2>
         <p>個人情報の侵害について救済を受けるため、次の韓国の機関に紛争解決や相談を申し立てることができます。</p>
@@ -603,7 +611,7 @@ const chrome = {
         </ul>
 
         <h2>第17条 (改定)</h2>
-        <p>本プライバシーポリシーは、2026年10月13日から施行します。変更がある場合は、本ページを通じてお知らせします。</p>
+        <p>本プライバシーポリシーは、2026年10月19日から施行します。以前のポリシー（2026年10月13日施行）に、Androidアプリ（Google Play）とGoogleが取り扱う情報を加えました。変更がある場合は、本ページを通じてお知らせします。</p>
       </div>
       )}
     </div>
