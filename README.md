@@ -42,7 +42,7 @@ Prepared by PiFl Labs, not an independent review. US App Store snapshot: 11 Octo
 
 [Your week, one line at a time (A4 PDF)](https://pifl-labs.com/assets/printables/one-line-journal-en.pdf) | [Plaintext companion](https://pifl-labs.com/assets/printables/one-line-journal-en.txt).
 Seven undated spaces for a word and a moment. No app or sign-up required. Original PiFl Labs template, prepared with AI assistance; not a health assessment.
-The optional Mood Tile iOS link is separate: the app includes ads and an optional one-time upgrade, with no subscription.
+The optional Mood Tile iOS link is separate. Its US iOS 1.0.12 listing, checked 20 October 2026, says no ads or tracking and all journaling features are free. Lifetime Supporter is an optional one-time purchase; there is no subscription. Export and import journal backups separately: restoring a purchase is not a journal backup.
 
 ### Free focus-start resource
 
