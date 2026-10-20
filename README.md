@@ -167,3 +167,11 @@ A standalone A5 card with Japanese instructions for Korean vocabulary learners: 
 - Original one-page family role-play for asking for help with `도와주세요.` Use an empty, light box and only pretend its lid is hard to open. A child may point, speak together with a grown-up, or stop. No scoring, audio or pronunciation instruction.
 - No app, registration, purchase or submission of child information is needed for the sheet. The separate iPhone/iPad app [Korean Bridge](https://apps.apple.com/app/id6801205183) offers Vietnamese grown-up guidance; its US 1.0.1 listing checked 17 October 2026 says no ads or in-app purchases. Availability is not guaranteed in every region. This paper is not a new app feature or Vietnamese puzzle interface.
 - PiFl Labs original, with AI translation/layout assistance. Not independently educator/native-speaker reviewed or physically print-tested; learning outcomes are not established. Free home/classroom printing with attribution. Existing Noto Sans JP and NanumGothic are embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/help-me-ko-vi-OFL.txt). The Korean-Vietnamese dictionary is a word-meaning reference, not an endorsement.
+
+
+## 물때 예보의 범위 읽기 - 한국어 한 장
+
+[한국어 A4 PDF](https://pifl-labs.com/assets/printables/tide-data-coverage-guide-ko-a4.pdf) · [같은 내용의 텍스트](https://pifl-labs.com/assets/printables/tide-data-coverage-guide-ko.txt).
+공식 지점 예보, 지정 기준항 보정, 조화상수·해양 모델, 미지원의 차이와 숫자를 비교하기 전 확인할 다섯 가지를 정리했습니다. 앱 설치·가입·구매 없이 읽을 수 있습니다.
+천문조석 예측은 실제 관측·조류·파도·해양 안전 판단과 다릅니다. 이 자료는 일반 해설이며 새 국가 출시, 앱의 전 지점 지원, 정확도나 안전을 보증하지 않습니다. 별도 선택 앱 [물때친구 한국 Android 등록정보](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR)는 광고 포함 무료 앱입니다.
+NOAA·일본 기상청·AVISO·호주 BOM 원문을 참고한 PiFl Labs 원본 / AI 작성·배치 보조, 2026-10-20 확인. 정부기관의 승인·공동 제작물은 아닙니다. 실제 인쇄·현장 검증 전이며 PDF의 태그 구조 대신 텍스트 버전을 함께 제공합니다. 나눔고딕의 [SIL Open Font License](https://pifl-labs.com/assets/printables/tide-data-coverage-guide-OFL.txt)를 동봉합니다.
