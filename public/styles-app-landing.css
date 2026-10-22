@@ -578,3 +578,40 @@ main > .hero .hero-stage { min-height: 0; max-width: 420px; }
 @container (max-width: 18em) { .apps-home .app-card-head { grid-column: 1 / -1; } .apps-home .app-card-preview { grid-row: 6; } }
 
 .apps-home .app-card:hover { transform: none; }
+
+/* Detail pages use one reading edge, with natural locale-aware wrapping. */
+.app-page .app-hero { padding-block: clamp(24px, 4vw, 56px); }
+.app-page .app-hero-inner { max-width: none; align-items: flex-start; text-align: start; }
+.app-page .app-id { align-items: flex-start; }
+.app-page .app-id-name { line-height: 1.4; text-wrap: pretty; overflow-wrap: anywhere; }
+.app-page .app-hero-title { line-height: 1.2; max-width: 22ch; overflow-wrap: anywhere; }
+.app-page .app-hero-lede { max-width: 65ch; text-wrap: pretty; }
+.app-page :is(.app-download-note,.app-store-name-note,.app-rel-line) { margin-inline: 0; text-align: start; justify-content: flex-start; }
+.app-page :is(h2,h3,.app-shot-label) { text-wrap: balance; overflow-wrap: anywhere; }
+.app-page :is(p,.app-shot-desc,.app-cta-sub) { text-wrap: pretty; overflow-wrap: anywhere; }
+:lang(ko) .app-page :is(h1,h2,h3,p,.app-shot-label,.app-shot-desc,.app-id-cat) { word-break: keep-all; }
+:lang(ja) .app-page { line-break: strict; }
+.app-page .app-name-part { max-width: 100%; }
+.app-page .app-shots-scroll { padding-inline: 0; }
+.app-page .app-shot-img { object-fit: contain; }
+.app-page .app-features { grid-template-columns: repeat(auto-fit,minmax(min(100%,17rem),1fr)); align-items: start; }
+.app-page .app-feature { min-width: 0; }
+.app-page .app-feature:hover { transform: none; }
+.app-page .store-badge { min-width: 0; max-width: 100%; min-height: 44px; }
+.app-page .store-badge-txt { min-width: 0; }
+@media(max-width:600px) {
+ .app-page .app-stores { width: 100%; display: grid; grid-template-columns: minmax(0,1fr); }
+ .app-page .store-badge { width: 100%; }
+ .app-page .ja-reading-unit { white-space: normal; }
+}
+
+.app-page .app-cta { text-align: start; }
+.app-page .app-cta .app-stores { justify-content: flex-start; }
+.app-media-note { max-width: 65ch; margin-bottom: 1rem; color: var(--text-muted); }
+.app-media-note p { margin: 0 0 .5rem; }
+.app-media-footnote { margin-top: .5rem; color: var(--text-muted); line-height: 1.6; }
+.app-shots-scroll:focus-visible { outline: 2px solid var(--accent-warm); outline-offset: 4px; }
+/* A short name must not wrap its whole identity block below the icon. */
+.app-page .app-id { display: grid; grid-template-columns: 64px minmax(0,1fr); width: 100%; }
+:lang(en) .app-page .section-title { letter-spacing: -.025em; word-spacing: .06em; }
+:lang(en) .app-page .section-title { font-family: var(--font-display); }

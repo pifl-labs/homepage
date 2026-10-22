@@ -122,9 +122,10 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(notices(voyage).length, 0, `${lang}: stores have the same localized listing name`);
   assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/home.webp`), `${lang}: stale old-name home shot hidden`);
   assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/logbook.webp`), `${lang}: misleading all-words shot hidden`);
-  for (const shot of ['game', 'voyage', 'daily']) {
-    assert.ok(voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/${shot}.webp`), `${lang}: factual ${shot} shot retained`);
+  for (const shot of [1, 2, 3]) {
+    assert.ok(voyage.includes(`/assets/apps/pipi-word-voyage/submission/20261023-${shot}.webp`), `${lang}: current listing screenshot ${shot}`);
   }
+  assert.ok(voyage.includes('1.1.0 (31)'), `${lang}: attached listing build identified`);
   for (const oldClaim of [
     '표준국어대사전을 바탕으로 검증한 낱말만', '발견한 모든 낱말', '통신은 광고 표시에만',
     '標準国語大辞典で検証した単語だけ', '発見したすべての単語', '通信は広告表示にのみ使用',

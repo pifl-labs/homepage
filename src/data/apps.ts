@@ -252,7 +252,7 @@ const hello: AppMeta = {
       ],
     },
     en: {
-      tagline: "A child's first Japanese,\nlearned through play.",
+      tagline: "Learn and play,\none kana at a time.",
       lede: 'A first Japanese for kids aged 6–8. From hiragana and katakana to basic words and greetings, learned by recall with letter cards and listening games. No ads, no account, fully on device.',
       metaDesc: 'A first Japanese for kids 6–8. Hiragana, katakana, first words and greetings through play. No ads, no data collected, 100% on-device with a parental gate.',
       shotsTitle: 'From letters to a first hello',
@@ -438,7 +438,7 @@ const dday: AppMeta = {
       ],
     },
     en: {
-      tagline: 'Every moment is a voyage toward your destination.',
+      tagline: 'Count down to your next big day.',
       lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
       metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free to download. Offers in-app purchases.',
       shotsTitle: 'The moment days become a voyage',
@@ -1079,7 +1079,7 @@ const kkachi: AppMeta = {
   "stores": {},
   "content": {
     "ko": {
-      "tagline": "라이프스타일 · 사주",
+      "tagline": "나의 사주, 하루의 이야기",
       "lede": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
       "shotsTitle": "",
       "featuresTitle": "앱 소개",
@@ -1146,7 +1146,7 @@ const sky: AppMeta = {
       "features": []
     },
     "en": {
-      "tagline": "Relaxation · Sky gazing",
+      "tagline": "Watch the sky. Take a quiet moment.",
       "lede": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
       "shotsTitle": "",
       "featuresTitle": "About the app",

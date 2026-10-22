@@ -1,4 +1,5 @@
 ---
+import { submissionMedia, submissionCopy } from "../data/app-submission-media";
 import { appIconSrc } from "../data/app-icons.mjs";
 // 홈 앱 카탈로그 — 카드 그리드 + 스토어 직행 링크.
 // 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
@@ -55,6 +56,7 @@ const copy = {
     <div class="app-card-grid">
       {appList.map((app) => {
         const name = appName(app, lang);
+        const submitted = submissionMedia(app.slug);
         return (
           <article class:list={["app-card", { "app-card--soon": app.status === "soon" }]}>
             <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
@@ -70,8 +72,8 @@ const copy = {
                 <span class="app-card-detail">{({ ko: "앱 자세히 보기", ja: "アプリの詳細", en: "Explore app" })[lang]} <span aria-hidden="true">→</span></span>
               </div>
               {app.status === 'live' && <figure class="app-card-preview">
-                <img src={`/assets/apps/${app.slug}/${lang}/store-preview.webp`} alt="" width="480" height="1040" loading="lazy" />
-                <figcaption>{({ ko: '공식 스토어 화면', ja: '公式ストアの画面', en: 'Official store preview' })[lang]}</figcaption>
+                <img src={submitted ? submitted.shots[submitted.previewIndex].src : `/assets/apps/${app.slug}/${lang}/store-preview.webp`} alt="" width="480" height="1040" loading="lazy" />
+                <figcaption>{submitted ? (submitted.pending ? submissionCopy[lang].pending : submissionCopy[lang].short) : ({ ko: '공식 스토어 화면', ja: '公式ストアの画面', en: 'Official store preview' })[lang]}</figcaption>
               </figure>}
             </a>
 
@@ -94,5 +96,6 @@ const copy = {
         );
       })}
     </div>
+    <p class="app-media-footnote">{submissionCopy[lang].footnote}</p>
   </div>
 </section>
