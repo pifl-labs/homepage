@@ -88,3 +88,20 @@ Public KO/JA/EN Play listings supply the two new released apps' names, concise d
 Full normalized counts, states, public asset URLs and caveats: `homepage-account-inventory-20261023.json`. Local private console evidence is in ignored `evidence/apple-account-inventory.txt` and `evidence/play-account-inventory.txt` (Play metrics excluded). No account financial data is committed.
 
 Corrected-scope validation: `npm run build` PASS (160 pages); `npm test` PASS (515 tests, zero failures/skips); `npm run test:built` PASS (45 localized pages, 180 store links). The first expanded build caught an assumption that every live app had a recorded version; release history now includes only apps with verified version receipts. Platform validation now checks actual available platform counts. No version was invented for Tide or Sudoku. PIRATE local in-app browser: 30 layout checks (3 languages × 5 widths × normal/200% root font size), 14 cards, zero horizontal overflow/clipped cards/buttons. This is CSS font enlargement, not an OS accessibility or browser-zoom test. Desktop and mobile added-card screenshots and the Sudoku mobile landing were visually inspected. Earlier theme checks apply to unchanged styling; the expanded matrix did not repeat every theme combination. Production deployment remains unapproved.
+
+## Spacing correction after review
+
+The previous mobile card placed an icon beside a tall screenshot in the first row and moved the title below that entire row. This created empty space above the actual app information. The desktop home hero also enforced 88vh. The revision moves app identity into a shared icon/name row, keeps descriptions beside the official preview where space permits, and reflows the name/body/preview vertically for enlarged text. Type sizes and 44px minimum store targets are retained. The home hero is content-sized, its artwork stage is smaller, catalog padding and heading gaps are reduced, and cards use smaller padding/gaps. No app facts, launch states, or assets changed.
+
+Same-viewport KO measurements (CSS pixels):
+
+| Measurement | Before | After |
+|---|---:|---:|
+| Desktop 1280×900 hero | 792 | 579 |
+| Desktop first app card | 425 | 366 |
+| Desktop complete catalog | 3353 | 2790 |
+| Mobile 375×812 hero | 1024 | 816 |
+| Mobile first app card | 565 | 386 |
+| Mobile complete catalog | 7612 | 5282 |
+
+PIRATE local browser visual comparison: desktop hero and cards, mobile catalog. Final 30-case matrix: KO/JA/EN × widths 320/375/768/1280/1920 × default/200% root font, 14 cards, no document overflow or clipped card/text/button containers, all store targets at least 44px. Narrow Japanese long-name clipping discovered during review was corrected by allowing full-width identity at enlarged sizes. This is root-font enlargement, not browser zoom/OS assistive technology. Relevant tests: 18/18; build 160 pages; built checks 45 pages/180 store links. Evidence: ignored evidence/spacing-{metrics,matrix}.json and spacing-before/after-{desktop,mobile}.jpg. The comparison screenshots were saved to Library. Main and production were not changed.

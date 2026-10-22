@@ -490,3 +490,57 @@
   .app-card-preview figcaption { font-size: .65rem; }
 }
 @media (prefers-reduced-motion: reduce) { .app-card { transition: none; } .app-card:hover { transform: none; } }
+
+/* Compact comparison cards: the preview must not create an empty icon row. */
+.apps-home { padding-block: 2.5rem; }
+.apps-home .section-head { margin-bottom: 1.5rem; }
+.apps-home .app-card-grid { gap: 1.25rem; }
+.apps-home .app-card-main {
+  grid-template-columns: 52px minmax(0, 1fr) 108px;
+  gap: .6rem 1rem; padding: 1.25rem; align-content: start; flex: none;
+}
+.apps-home .app-card-body { display: block; grid-column: 1 / 3; grid-row: 2; }
+.apps-home .app-card-icon { grid-column: 1; grid-row: 1; width: 52px; height: 52px; border-radius: 13px; }
+.apps-home .app-card-head { grid-column: 2; grid-row: 1; align-self: center; margin: 0; }
+.apps-home .app-previous-name { grid-column: 1 / 3; grid-row: 2; }
+.apps-home .app-card-cat { margin: .4rem 0; }
+.apps-home .app-card-tag { margin: .4rem 0 .65rem; }
+.apps-home .app-card-detail { grid-column: 1 / 3; grid-row: 5; }
+.apps-home .app-card-preview { grid-column: 3; grid-row: 1 / 3; align-self: start; }
+.apps-home .app-card-stores { margin-top: auto; padding: .65rem 1.25rem; }
+.apps-home .app-card--soon .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
+@media (max-width: 600px) {
+  .apps-home { padding-block: 1.75rem; }
+  .apps-home .app-card-main { grid-template-columns: 52px minmax(0, 1fr) 76px; padding: 1rem; gap: .6rem .75rem; }
+  .apps-home .app-card-head { grid-column: 2 / -1; }
+  .apps-home .app-card-preview { grid-row: 2; }
+  .apps-home .app-card-stores { padding: .65rem 1rem; }
+}
+/* Home-only hero: retain typography, let content determine the section height. */
+.hero:has(+ .ticker), main > .hero { min-height: 0; padding-block: 2.5rem; }
+main > .hero .hero-stage { min-height: 0; max-width: 420px; }
+@media (max-width: 900px) {
+  main > .hero { padding-block: 2rem; }
+  main > .hero .hero-grid { gap: 1rem; }
+  main > .hero .hero-stage { max-width: 220px; margin: 0 auto; }
+}
+/* Enlarged type needs the full card width; don't squeeze text beside a phone. */
+.apps-home .app-card { container-type: inline-size; }
+@container (max-width: 18em) {
+  .apps-home .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
+  .apps-home .app-card-body { grid-column: 1 / -1; }
+  .apps-home .app-card-preview { grid-column: 1 / -1; grid-row: 3; display: flex; gap: .75rem; align-items: center; }
+  .apps-home .app-card-preview img { width: 64px; flex: none; }
+  .apps-home .app-card-preview figcaption { text-align: start; }
+  .apps-home .app-card-head, .apps-home .app-card-tag { overflow-wrap: anywhere; }
+  .apps-home .ja-reading-unit { white-space: normal; }
+}
+.apps-home .app-card-name { min-width: 0; max-width: 100%; }
+@container (max-width: 18em) {
+  .apps-home .app-name-part { max-width: 100%; overflow-wrap: anywhere; }
+}
+@container (max-width: 18em) {
+  .apps-home .app-card-head { grid-column: 1 / -1; grid-row: 2; }
+  .apps-home .app-card-body { grid-row: 3; }
+  .apps-home .app-card-preview { grid-row: 4; }
+}
