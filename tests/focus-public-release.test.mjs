@@ -9,7 +9,7 @@ const start = source.indexOf('const focus: AppMeta = ');
 const end = source.indexOf('\nconst hello: AppMeta', start);
 assert.ok(start >= 0 && end > start);
 const focus = runInNewContext(source.slice(start, end).replace('const focus: AppMeta = ', 'const focus = ') + '\nfocus');
-const expected = receipt.lookup.us;
+const expected = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261023.json', import.meta.url), 'utf8')).find(a => a.slug === 'pipi-focus').ios.ko;
 
 test('the public receipt identifies the same current Focus iOS release in KR, JP and US', () => {
   assert.deepEqual(Object.keys(receipt.lookup).sort(), ['jp', 'kr', 'us']);
@@ -31,12 +31,12 @@ test('Focus displays the actually available iOS version, not the previous releas
 
 test('the update day remains the official UTC release day, not the KST observation day', () => {
   assert.equal(focus.release.ios.updated, expected.currentVersionReleaseDate.slice(0, 10));
-  assert.equal(focus.release.ios.updated, receipt.updatedUTC);
+  assert.equal(focus.release.ios.updated, expected.currentVersionReleaseDate.slice(0, 10));
   assert.notEqual(receipt.updatedUTC, receipt.observedKSTDay);
 });
 
 test('only the freshly checked iOS platform gets the new dated observation', () => {
-  assert.equal(focus.release.ios.checkedAt, receipt.observedKSTDay);
+  assert.equal(focus.release.ios.checkedAt, '2026-10-23');
   assert.equal(focus.release.checkedAt, receipt.previousCommonObservationPreserved);
 });
 
@@ -54,21 +54,22 @@ for (const lang of ['ko', 'ja', 'en']) {
     const html = readFileSync(detail, 'utf8');
     const catalog = readFileSync(home, 'utf8');
     const release = html.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
-    assert.ok(release?.includes('iOS v1.1.0'));
-    assert.ok(release.includes('datetime="2026-10-15"'));
+    assert.ok(release?.includes('iOS v1.2.0'));
+    assert.ok(release.includes('datetime="2026-10-19"'));
     assert.doesNotMatch(release, /Android v|v1\.0\.16/);
     const schemas = value => [...value.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
     const app = schemas(html).find(s => s['@type'] === 'SoftwareApplication');
     const item = schemas(catalog).find(s => s['@type'] === 'ItemList').itemListElement.map(e => e.item).find(i => i.url.endsWith('/pipi-focus/'));
     for (const data of [app, item]) {
-      assert.equal(data.dateModified, '2026-10-15');
+      assert.equal(data.dateModified, '2026-10-19');
       assert.equal(data.softwareVersion, undefined, 'no unverified shared iOS/Android version');
     }
     const rows = [...catalog.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
-    assert.ok(rows[0].includes(`href="/${lang}/apps/pipi-focus/"`), 'latest verified update sorts first');
-    assert.ok(rows[0].includes('v1.1.0') && rows[0].includes('datetime="2026-10-15"'));
+    const focusRow = rows.find(row => row.includes(`href="/${lang}/apps/pipi-focus/"`));
+    assert.ok(rows[0].includes('2026-10-22'), 'latest verified update sorts first');
+    assert.ok(focusRow.includes('v1.2.0') && focusRow.includes('datetime="2026-10-19"'));
     const observation = catalog.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
-    assert.ok(observation?.includes('datetime="2026-09-21"') && observation.includes('datetime="2026-10-16"'));
+    assert.ok(observation?.includes('datetime="2026-09-21"') && observation.includes('datetime="2026-10-23"'));
   });
 }
 

@@ -3,10 +3,11 @@ import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
 const source=readFileSync(new URL('../src/data/apps.ts',import.meta.url),'utf8');
 const receipt=JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261008.json',import.meta.url),'utf8'));
+const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261023.json', import.meta.url), 'utf8'));
 const variables={'com.pifl.pipi.wordvoyage':'wordVoyage','com.pifl.pipi.hello':'hello','com.pifl.pipi.words':'words','com.pifl.pipi.log':'log'};
 const block=v=>source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 for(const [bundle,v] of Object.entries(variables))test(`${bundle}: observed iOS version and UTC date replace older metadata`,()=>{
- const r=receipt.ios[bundle];assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.updatedUTC}', checkedAt: '${r.observedKSTDay}' }`));
+ const r=current.find(a=>a.android.en.url.includes(bundle)).ios.ko;assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-10-23' }`));
 });
 test('Words iOS destination uses all three current public listing names and keeps aliases',()=>{
  const b=block('words');const ios=b.match(/ios: \{ ko: '([^']+)', ja: '([^']+)', en: '([^']+)' \}/);

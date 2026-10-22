@@ -32,7 +32,7 @@ test('download CTA separates free download from ads and optional one-time paymen
 });
 
 test('the factual-copy change keeps the actual release, store destinations and screenshots', () => {
-  assert.equal(log.release.ios.version, '1.0.11');
+  assert.equal(log.release.ios.version, '1.0.12');
   assert.equal(log.release.android.version, '1.0.11');
   assert.equal(log.stores.ios, 'https://apps.apple.com/app/pipi-log/id6770272665');
   assert.equal(new URL(log.stores.android).searchParams.get('id'), 'com.pifl.pipi.log');

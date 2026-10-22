@@ -1,0 +1,1183 @@
+[
+  {
+    "slug": "pipi-focus",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "집중항해: 포모도로 타이머",
+        "version": "1.2.0",
+        "currentVersionReleaseDate": "2026-10-19T13:21:10Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5e/37/43/5e374337-09cc-8191-ba16-c59a48e34f74/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/7e/7d/3f7e7d3c-9ea0-15d0-e27e-7119af49d3e3/8.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/48/4f/a7/484fa7cf-76fa-87cc-23ac-9f4e21e065ec/9.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/11/c3/e7/11c3e731-91e6-e32f-784e-272a0fd8f12d/10.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cb/c1/82/cbc182de-7678-2d43-c752-953792bbfe68/11.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/38/ee/c6/38eec61e-d5cb-5cca-67de-cfabd785b33b/12.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/87/5d/3d/875d3d7e-4e08-0106-3eb4-a1cbce872cfc/13.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "集中航海：ポモドーロタイマー",
+        "version": "1.2.1",
+        "currentVersionReleaseDate": "2026-10-22T17:04:30Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/20/c6/1520c6cf-8c00-3cfe-eb31-a2aca58842fc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E9%9B%86%E4%B8%AD%E8%88%AA%E6%B5%B7-%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/id6762258878?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a4/32/d5/a432d575-978e-e569-4e82-9aff927f4735/iphone_01_voyage.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ad/85/8f/ad858f66-3cfe-aa32-e3c4-01cb91bbf79d/iphone_02_radio.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3f/15/34/3f15343f-2aff-fc44-001d-7469b702a840/iphone_03_sailing.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/97/77/90/97779032-485f-6917-f3c8-838ea8540598/iphone_04_treasure.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/28/c5/a8/28c5a84e-1895-80b2-0aee-2d0b0d67cf82/iphone_05_wardrobe.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a3/a8/ee/a3a8eeff-1809-6cc2-63b7-d61187b90aaa/iphone_06_map.jpg/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Pomodoro at Sea: Focus Timer",
+        "version": "1.2.1",
+        "currentVersionReleaseDate": "2026-10-22T17:04:30Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/20/c6/1520c6cf-8c00-3cfe-eb31-a2aca58842fc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/pomodoro-at-sea-focus-timer/id6762258878?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7d/6e/d0/7d6ed063-83ec-c8e7-4fca-837f37e296b4/iphone_01_voyage.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f3/30/15/f330159d-8c37-204b-96fb-dcf897fc2c65/iphone_02_radio.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b9/be/e1/b9bee15f-eda1-4718-6c7d-ac94c61f8b89/iphone_03_sailing.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b4/16/2c/b4162c5e-4887-3919-890b-1ffad6cdd375/iphone_04_treasure.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/71/2c/b1/712cb1eb-8da0-5469-91a3-519e71632ba3/iphone_05_wardrobe.jpg/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/69/7f/70/697f7035-a81c-6eb0-da9e-3de1226bc99f/iphone_06_map.jpg/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "집중항해: 포모도로 타이머",
+        "url": "https://play.google.com/store/apps/details/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4_%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C_%ED%83%80%EC%9D%B4%EB%A8%B8?id=com.pifl.pipi.focus&hl=ko",
+        "description": "로파이·빗소리·백색소음과 함께 공부하는 포모도로 타이머. 25분 항해마다 보물이 쌓여요.",
+        "operatingSystem": "Android",
+        "applicationCategory": "PRODUCTIVITY",
+        "image": "https://play-lh.googleusercontent.com/WKwoDafucEOQeezvolESJFdx5eXajoDYpOJkeGUKn2VTMR8xgDNArwOlN7rOBw_JzeNePybAikIn7MCIId5bpg",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "集中航海：ポモドーロタイマー",
+        "url": "https://play.google.com/store/apps/details/%E9%9B%86%E4%B8%AD%E8%88%AA%E6%B5%B7_%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC?id=com.pifl.pipi.focus&hl=ja",
+        "description": "作業用BGM・ローファイ・雨音つきの勉強用ポモドーロタイマー。25分の航海で宝物と島を集めよう。",
+        "operatingSystem": "Android",
+        "applicationCategory": "PRODUCTIVITY",
+        "image": "https://play-lh.googleusercontent.com/WKwoDafucEOQeezvolESJFdx5eXajoDYpOJkeGUKn2VTMR8xgDNArwOlN7rOBw_JzeNePybAikIn7MCIId5bpg",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pomodoro at Sea: Focus Timer",
+        "url": "https://play.google.com/store/apps/details/Pomodoro_at_Sea_Focus_Timer?id=com.pifl.pipi.focus&hl=en",
+        "description": "Pomodoro study timer with lofi music, rain & brown noise. Sail, earn treasure.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "PRODUCTIVITY",
+        "image": "https://play-lh.googleusercontent.com/WKwoDafucEOQeezvolESJFdx5eXajoDYpOJkeGUKn2VTMR8xgDNArwOlN7rOBw_JzeNePybAikIn7MCIId5bpg",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "ee655f59b2eaca616a0d9f4c505658126b15a6e0f5117d17a481f47e7dfcddca",
+      "ja": "ef88d28df2b90c249c5888b728e3fbb672fac4282f6c7cc4e8aacdff1b78083c",
+      "en": "30c0fdab577ea5cfa6eee37dce729e6e8748be49aaa8f0835f49657a1c8deb48"
+    }
+  },
+  {
+    "slug": "pipi-hello",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "말놀이 새싹: 어린이 일본어",
+        "version": "1.0.10",
+        "currentVersionReleaseDate": "2026-10-18T17:25:15Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/3b/7b/9c3b7b6e-b307-92f8-684d-ec0fb755d19a/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/21/1a/af211aa5-c3f7-0af4-6115-3d21497e831f/iphone_0_home_kanasprout_build31_ko.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/5e/f7/66/5ef76608-3c39-6117-5346-5b356b8e9bc6/iphone_1_cards.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/98/40/2f/98402fdf-19e6-fb02-1641-a9b17b81110f/iphone_2_write.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1e/8c/d6/1e8cd648-9c41-e879-6fe0-9bed3991a8d8/iphone_3_learn.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/bb/2f/afbb2f02-e9f0-6e4c-9049-398442bdf9a2/iphone_4_words.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "ハングルの芽：子どもの韓国語",
+        "version": "1.0.10",
+        "currentVersionReleaseDate": "2026-10-18T17:25:15Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/3b/7b/9c3b7b6e-b307-92f8-684d-ec0fb755d19a/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB%E3%81%AE%E8%8A%BD-%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E9%9F%93%E5%9B%BD%E8%AA%9E/id6777299814?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7b/e0/df/7be0dfc2-92c6-a537-800c-80fbecfb3f92/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/61/fe/4b/61fe4b38-31da-4d31-2a19-8caf64ffba20/iphone_1_cards.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6d/09/74/6d0974b5-b77f-536b-dffd-e5ffe2cdd7be/iphone_2_learn.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e3/ce/29/e3ce2951-6625-48ab-3597-2bef43eecf59/iphone_3_words.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/dd/5d/73/dd5d738a-880e-6728-041e-5f6e1a5ff465/iphone_4_match.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "KanaSprout: Japanese for Kids",
+        "version": "1.0.10",
+        "currentVersionReleaseDate": "2026-10-18T17:25:15Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/3b/7b/9c3b7b6e-b307-92f8-684d-ec0fb755d19a/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/kanasprout-japanese-for-kids/id6777299814?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/68/77/7a/68777a2b-b417-641f-1c27-bb1240153629/iphone_0_home_kanasprout_build31_en-US.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/56/90/755690f1-56de-229e-a0dd-710dfda37693/iphone_1_cards.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/59/9a/53/599a5385-61a0-2d27-3985-1c7afd5306b3/iphone_2_write.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/c0/83/08c083b8-4045-af39-c5fd-28e367febe24/iphone_3_learn.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/20/50/d5/2050d5ee-02b5-ac13-26bf-5ce4eddd05e0/iphone_4_words.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "말놀이 새싹: 어린이 일본어",
+        "url": "https://play.google.com/store/apps/details/%EB%A7%90%EB%86%80%EC%9D%B4_%EC%83%88%EC%8B%B9_%EC%96%B4%EB%A6%B0%EC%9D%B4_%EC%9D%BC%EB%B3%B8%EC%96%B4?id=com.pifl.pipi.hello&hl=ko",
+        "description": "무광고·안심. 6~8세 아이의 첫 일본어 — 히라가나·가타카나부터 단어·획순 따라쓰기까지",
+        "operatingSystem": "Android",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/sZM5mL95gfkmaifv6D-8YBX54iCqj0s5dUu5L2JtGGmqTtBrrumz4841VhTwzOqJcs2FIlZnPiP94_uWdLtBywI",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/apps/pipi-hello/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ハングルの芽：子どもの韓国語",
+        "url": "https://play.google.com/store/apps/details/%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB%E3%81%AE%E8%8A%BD_%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E9%9F%93%E5%9B%BD%E8%AA%9E?id=com.pifl.pipi.hello&hl=ja",
+        "description": "広告なし・課金も安心。6〜8歳のはじめての韓国語。カナダラ表から基礎単語まで遊びながら。",
+        "operatingSystem": "Android",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/sZM5mL95gfkmaifv6D-8YBX54iCqj0s5dUu5L2JtGGmqTtBrrumz4841VhTwzOqJcs2FIlZnPiP94_uWdLtBywI",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/apps/pipi-hello/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "KanaSprout: Japanese for Kids",
+        "url": "https://play.google.com/store/apps/details/KanaSprout_Japanese_for_Kids?id=com.pifl.pipi.hello&hl=en",
+        "description": "Kid-safe & offline. First Japanese alphabet — trace hiragana, learn by play.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/sZM5mL95gfkmaifv6D-8YBX54iCqj0s5dUu5L2JtGGmqTtBrrumz4841VhTwzOqJcs2FIlZnPiP94_uWdLtBywI",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/apps/pipi-hello/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "3d6a0296974c3453f182eefa31be1a6361ba9e8cbdd78fd83e541f565ec47d1e",
+      "ja": "6ffcbeda5c388c885e111570a22c2d40176ee47d66340ca42e0b12969b40cac8",
+      "en": "3303e947348c1a95d264120140256fc35fe117d99500ff7074be077bb057a317"
+    }
+  },
+  {
+    "slug": "pipi-words",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "단어루틴: JLPT·TOPIK 단어장",
+        "version": "1.0.12",
+        "currentVersionReleaseDate": "2026-10-05T14:50:25Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/7a/49/f67a4900-2816-3df0-2444-116360eaf5d5/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-topik-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/93/56/93/9356933d-3b89-5671-bfaa-43edfd7c1913/home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2b/bd/7c/2bbd7c36-cf34-1f12-584c-5457345702ab/voyage.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/25/5a/c3/255ac32b-0cab-9890-84aa-98b50e196ef8/flashcard.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8c/fc/17/8cfc179a-b4a5-f727-75de-10a8c8b522ed/achievements.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0a/ad/cb/0aadcbb9-387c-974f-a0d7-b19b6e9707ec/study.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "ことば習慣：韓国語・TOPIK単語帳",
+        "version": "1.0.12",
+        "currentVersionReleaseDate": "2026-10-05T14:50:25Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/7a/49/f67a4900-2816-3df0-2444-116360eaf5d5/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E3%81%93%E3%81%A8%E3%81%B0%E7%BF%92%E6%85%A3-%E9%9F%93%E5%9B%BD%E8%AA%9E-topik%E5%8D%98%E8%AA%9E%E5%B8%B3/id6770267735?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/58/23/2f/58232fef-bc4e-6e41-7600-985828d334ca/home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a3/3d/3c/a33d3c10-f9c8-ea59-0fc8-1f4368607456/voyage.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/05/b1/aa/05b1aa71-47ef-d359-e4d0-b4aee320d154/flashcard.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/32/54/4c325436-a3c2-b238-cf1b-bed7f6189b72/achievements.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3a/d0/37/3ad03777-9034-03dd-e0a3-f2a6411e71fe/study.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Vocab Routine: JLPT & TOPIK",
+        "version": "1.0.12",
+        "currentVersionReleaseDate": "2026-10-05T14:50:25Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/7a/49/f67a4900-2816-3df0-2444-116360eaf5d5/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/vocab-routine-jlpt-topik/id6770267735?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cd/1a/91/cd1a914f-5361-e232-218f-98dd99fe018f/home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ad/c4/78/adc478ea-cbc9-4362-4961-67ca87b8914f/voyage.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a8/68/25/a868252f-3f7f-d73e-8c23-3ddbbc3222f4/flashcard.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a6/76/5d/a6765de0-130d-15c5-cb8a-80663cc2172c/achievements.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/db/1c/93/db1c9340-d347-7f6b-d119-df35b66f5b82/study.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "단어루틴: JLPT·TOPIK 단어장",
+        "url": "https://play.google.com/store/apps/details/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4_JLPT_TOPIK_%EB%8B%A8%EC%96%B4%EC%9E%A5?id=com.pifl.pipi.words&hl=ko",
+        "description": "JLPT N5~N1 · TOPIK 1~6급 한일 양방향 단어장. SM-2 간격반복, 오프라인, 계정 불필요.",
+        "operatingSystem": "Android",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/XL2LVe2zJXvP4HQgyfFsv1dPfovgUT9uae8_0cItR0W_Fwx7wmPcXESq1fzNQLInOW9tPUzZg1dFkAp7wDlCqw",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ことば習慣：韓国語・TOPIK単語帳",
+        "url": "https://play.google.com/store/apps/details/%E3%81%93%E3%81%A8%E3%81%B0%E7%BF%92%E6%85%A3_%E9%9F%93%E5%9B%BD%E8%AA%9E_TOPIK%E5%8D%98%E8%AA%9E%E5%B8%B3?id=com.pifl.pipi.words&hl=ja",
+        "description": "学習した単語を意味から手書きし、答えと比較。自動採点なし。TOPIK・JLPTの単語帳、間隔反復・オフライン学習、登録不要。",
+        "operatingSystem": "Android",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/XL2LVe2zJXvP4HQgyfFsv1dPfovgUT9uae8_0cItR0W_Fwx7wmPcXESq1fzNQLInOW9tPUzZg1dFkAp7wDlCqw",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Vocab Routine: JLPT & TOPIK",
+        "url": "https://play.google.com/store/apps/details/Vocab_Routine_JLPT_TOPIK?id=com.pifl.pipi.words&hl=en",
+        "description": "JLPT N5-N1 & TOPIK 1-6 vocabulary flashcards. Offline, no account needed.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/XL2LVe2zJXvP4HQgyfFsv1dPfovgUT9uae8_0cItR0W_Fwx7wmPcXESq1fzNQLInOW9tPUzZg1dFkAp7wDlCqw",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "2cb5eef8f48cc33b20433c67283d9e31816698ea333c80ed189171ecb4ebc6f4",
+      "ja": "f7ea9e38d9c16e0f0eb2beb3f0fbff00b8c9508f071ea1872b8dd310dab19b54",
+      "en": "ffbe64f55729fda1a3871eed828788acfed53e6d6ef5743bdf91fa2f5fde6cd6"
+    }
+  },
+  {
+    "slug": "pipi-dday",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "그날까지: 디데이·기념일 위젯",
+        "version": "1.1.5",
+        "currentVersionReleaseDate": "2026-10-13T18:17:45Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/5a/b1/825ab18e-a80d-be45-d5cd-729f9adc2773/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ca/06/7b/ca067b3e-c112-fac1-84ca-b03fc4f52698/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/c6/f8/76c6f8d2-c1a3-5984-1a37-451ff86e6ae6/iphone_1_detail.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7f/af/ba/7fafbac2-9d99-d61a-d806-f896305c3dfe/iphone_2_form.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a0/af/02/a0af0251-b8e1-6f50-1256-384473277c7e/iphone_3_widget_skin.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e6/64/c5/e664c54e-77fc-1f87-73f2-d857a5e9cf9a/iphone_4_onboarding.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "その日まで：カウントダウン",
+        "version": "1.1.5",
+        "currentVersionReleaseDate": "2026-10-13T18:17:45Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/5a/b1/825ab18e-a80d-be45-d5cd-729f9adc2773/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E3%81%9D%E3%81%AE%E6%97%A5%E3%81%BE%E3%81%A7-%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%83%80%E3%82%A6%E3%83%B3/id6770268950?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1a/be/b3/1abeb3b9-db60-0eb2-f840-3354e9821063/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/dc/a3/71/dca37149-e4e5-ae6d-aea8-51f9af5940d6/iphone_1_detail.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0f/d1/77/0fd177f3-2839-cd9f-874a-fa8f824b743d/iphone_2_form.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/35/f3/0f/35f30ffa-b731-5fbd-2586-a3d2be9beffc/iphone_3_widget_skin.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/6a/b3/0c6ab3af-bea6-1a82-e58f-c78932c78c2d/iphone_4_onboarding.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Until That Day: Countdown",
+        "version": "1.1.5",
+        "currentVersionReleaseDate": "2026-10-13T18:17:45Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/5a/b1/825ab18e-a80d-be45-d5cd-729f9adc2773/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/until-that-day-countdown/id6770268950?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f9/1c/bf/f91cbf95-0854-c2f6-423a-1d5dd8ced74f/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/85/61/a4/8561a48e-2255-e23e-1e39-ea3d8d1f5b4e/iphone_1_detail.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/97/86/50/97865007-6493-7cfc-607d-4ef909349b81/iphone_2_form.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/57/ba/3e/57ba3e01-bfd6-eb56-847b-cefc4e77c970/iphone_3_widget_skin.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/30/85/87/308587fd-33b9-8bb8-552f-53f005c214ba/iphone_4_onboarding.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "그날까지: 디데이·기념일 위젯",
+        "url": "https://play.google.com/store/apps/details/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80_%EB%94%94%EB%8D%B0%EC%9D%B4_%EA%B8%B0%EB%85%90%EC%9D%BC_%EC%9C%84%EC%A0%AF?id=com.pifl.pipi.dday&hl=ko",
+        "description": "음력·명절·보름달·유성우를 세는 디데이 위젯. 날짜는 기기에 저장, 계정 불필요.",
+        "operatingSystem": "Android",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/I-g3mXOkJENfBRoTDYCgedqHYG8xvvSzz0rM-91xsmGD9uHS9m8FpRIt3TsdxN7XZ1kBlhYQ6LroRv0o0xNKTA",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "その日まで：カウントダウン",
+        "url": "https://play.google.com/store/apps/details/%E3%81%9D%E3%81%AE%E6%97%A5%E3%81%BE%E3%81%A7_%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%83%80%E3%82%A6%E3%83%B3?id=com.pifl.pipi.dday&hl=ja",
+        "description": "旧暦の節句・満月・流星群も数えるカウントダウンウィジェット。日付は端末に保存、アカウント不要。",
+        "operatingSystem": "Android",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/I-g3mXOkJENfBRoTDYCgedqHYG8xvvSzz0rM-91xsmGD9uHS9m8FpRIt3TsdxN7XZ1kBlhYQ6LroRv0o0xNKTA",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Until That Day: Countdown",
+        "url": "https://play.google.com/store/apps/details/Until_That_Day_Countdown?id=com.pifl.pipi.dday&hl=en",
+        "description": "Countdown widget: lunar holidays, moon phases & more. No account needed.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/I-g3mXOkJENfBRoTDYCgedqHYG8xvvSzz0rM-91xsmGD9uHS9m8FpRIt3TsdxN7XZ1kBlhYQ6LroRv0o0xNKTA",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "feaca6946c74055baaa170f9bcde80cdce07427089a119b0a8364ad04e5e200a",
+      "ja": "473b38827c49450ca2ced91fe0f86b7fd0ea5d9394197d1673ee7ffd9ec3fbb9",
+      "en": "c57568288e68ad0e8c5f3cd4fd6357a23348dd6951517ada2f3b841a5bb3a163"
+    }
+  },
+  {
+    "slug": "pipi-log",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "기분 한 칸: 날씨 감정일기",
+        "version": "1.0.12",
+        "currentVersionReleaseDate": "2026-10-19T00:54:35Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/e9/11/28e91179-9989-a624-8032-06e66fc5e18c/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d0/84/35/d0843523-a363-4377-8218-ef93781020fb/1_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5c/19/2a/5c192a12-101e-cb7c-5d3b-5891e75b2b14/2_calendar.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/03/54/3c/03543c55-d476-8dfb-b724-76a221cf2e3b/3_analytics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fb/58/fe/fb58fefd-52cf-6241-6347-a1c735f18072/4_collection.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4e/27/52/4e27527e-a727-9a6b-1178-9cc8b4f531f9/5_monthly-map.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "気分のひとこま：感情日記",
+        "version": "1.0.12",
+        "currentVersionReleaseDate": "2026-10-19T00:54:35Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/e9/11/28e91179-9989-a624-8032-06e66fc5e18c/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E6%B0%97%E5%88%86%E3%81%AE%E3%81%B2%E3%81%A8%E3%81%93%E3%81%BE-%E6%84%9F%E6%83%85%E6%97%A5%E8%A8%98/id6770272665?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/33/82/5033824a-8fd7-75b1-f8dc-be6c84087348/1_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d0/82/b0/d082b086-2e07-17ca-b273-2649cec72850/2_calendar.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1d/85/1a/1d851ac1-80d1-5383-6fa8-2ee3095abb69/3_analytics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/41/37/7b/41377b31-19c3-4881-1cf1-4954c38f2361/4_collection.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8f/82/26/8f8226dc-8788-2c3a-bb11-8f781f8e2cab/5_monthly-map.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Mood Tile: Daily Journal",
+        "version": "1.0.12",
+        "currentVersionReleaseDate": "2026-10-19T00:54:35Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/e9/11/28e91179-9989-a624-8032-06e66fc5e18c/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/mood-tile-daily-journal/id6770272665?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/2b/92/2c2b92ec-0a44-0656-948e-0271310c4ad5/1_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c4/1d/bc/c41dbc59-55f5-e87e-6938-9e4e7aa2fe99/2_calendar.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/41/88/4f/41884fdd-c6a4-2834-dffa-9b3535f629ab/3_analytics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/17/89/d5/1789d523-8c39-4fd6-aef2-eece180ad31b/4_collection.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/52/fd/91/52fd914d-904b-428a-8b2c-fc21d78cb7df/5_monthly-map.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "기분 한 칸: 날씨 감정일기",
+        "url": "https://play.google.com/store/apps/details/%EA%B8%B0%EB%B6%84_%ED%95%9C_%EC%B9%B8_%EB%82%A0%EC%94%A8_%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0?id=com.pifl.pipi.log&hl=ko",
+        "description": "기분을 바다 날씨로 남기는 감정일기. 사진·태그·캘린더로 하루를 돌아보세요.",
+        "operatingSystem": "Android",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/hau_egtByZrSWdFJuc4IaPko8TrsusB6wlYwL0vfgl4pWF3o5LMUrBKA8M4LTVmc2z7C4yhNEvgiFC2uw5Uq",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/ko/apps/pipi-log/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "気分のひとこま：感情日記",
+        "url": "https://play.google.com/store/apps/details/%E6%B0%97%E5%88%86%E3%81%AE%E3%81%B2%E3%81%A8%E3%81%93%E3%81%BE_%E6%84%9F%E6%83%85%E6%97%A5%E8%A8%98?id=com.pifl.pipi.log&hl=ja",
+        "description": "今日の気分を海の天気で記録。写真・タグ・カレンダーで日々を振り返る日記。",
+        "operatingSystem": "Android",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/hau_egtByZrSWdFJuc4IaPko8TrsusB6wlYwL0vfgl4pWF3o5LMUrBKA8M4LTVmc2z7C4yhNEvgiFC2uw5Uq",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/ko/apps/pipi-log/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Mood Tile: Daily Journal",
+        "url": "https://play.google.com/store/apps/details/Mood_Tile_Daily_Journal?id=com.pifl.pipi.log&hl=en",
+        "description": "A sea-weather mood journal with photos, tags and a calendar for reflection.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/hau_egtByZrSWdFJuc4IaPko8TrsusB6wlYwL0vfgl4pWF3o5LMUrBKA8M4LTVmc2z7C4yhNEvgiFC2uw5Uq",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/ko/apps/pipi-log/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "36eafb8a01bdb4bd3ddbe5e6aad1b79be3d5d06f7d823f0115f3aa71def3ce0d",
+      "ja": "bd1f346bd54fda9736284e32ce58bcfe9195486edb58eeb1258143927ca3951d",
+      "en": "13457a01c3ad287790085df722495d1262ed084cbc911926f7996783da71bd7f"
+    }
+  },
+  {
+    "slug": "pipi-draw",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "밑그림: 사진으로 만드는 색칠공부",
+        "version": "1.2.1",
+        "currentVersionReleaseDate": "2026-10-21T21:33:49Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/03/4b/a5/034ba534-3d59-776e-77c2-18d688524be2/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b4/fe/93/b4fe93b3-d86b-2409-4be1-9e3d2a9aa714/20260910-ko-ios-ai_result.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ac/1e/0c/ac1e0c99-37cc-02b4-aab3-c3c5d261d096/20260910-ko-ios-canvas_coloring.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9a/ae/13/9aae13a2-2c30-e057-9695-a50c44ce0a10/20260910-ko-ios-home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/50/3f/94503f4a-362a-9f09-253d-a189cb17f896/20260910-ko-ios-brushes.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1a/90/e5/1a90e57c-3182-2c12-dd02-188482587b6f/20260910-ko-ios-ai_idle.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "下絵づくり：写真をぬりえに変換",
+        "version": "1.2.1",
+        "currentVersionReleaseDate": "2026-10-21T21:33:49Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/03/4b/a5/034ba534-3d59-776e-77c2-18d688524be2/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E4%B8%8B%E7%B5%B5%E3%81%A5%E3%81%8F%E3%82%8A-%E5%86%99%E7%9C%9F%E3%82%92%E3%81%AC%E3%82%8A%E3%81%88%E3%81%AB%E5%A4%89%E6%8F%9B/id6779071131?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ec/63/97/ec639766-1010-b56c-a20f-9c54e91ad44c/20260910-ja-ios-ai_result.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/46/bf/69/46bf693b-dda7-f6b6-3f74-2709bd5d4e32/20260910-ja-ios-canvas_coloring.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/64/7e/4d/647e4d0b-7db6-2334-3ea0-6948a7373ffe/20260910-ja-ios-home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/39/1d/f0/391df0e4-bc69-5282-c5dc-dbe6d27a9823/20260910-ja-ios-brushes.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/aa/7c/c3/aa7cc301-673d-f5ce-df98-2fbab91dff3e/20260910-ja-ios-ai_idle.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Photo Outlines: Coloring Book",
+        "version": "1.2.1",
+        "currentVersionReleaseDate": "2026-10-21T21:33:49Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/03/4b/a5/034ba534-3d59-776e-77c2-18d688524be2/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/photo-outlines-coloring-book/id6779071131?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bd/9b/0a/bd9b0ac5-d05c-2dc0-99da-5c40997fc654/20260910-en-US-ios-ai_result.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/63/24/9d6324c0-a31d-a320-adec-bd873363985f/20260910-en-US-ios-canvas_coloring.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4c/4e/c2/4c4ec20e-4216-3e8a-ed72-982004f1ba57/20260910-en-US-ios-home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/04/cb/4e/04cb4e95-48b9-d6e1-3a8f-cb147f5adcae/20260910-en-US-ios-brushes.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/95/04/9e/95049e4c-58da-3d43-0fe2-777b34d55485/20260910-en-US-ios-ai_idle.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "밑그림: 사진으로 만드는 색칠공부",
+        "url": "https://play.google.com/store/apps/details/%EB%B0%91%EA%B7%B8%EB%A6%BC_%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C_%EB%A7%8C%EB%93%9C%EB%8A%94_%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80?id=com.pifl.pipi.draw&hl=ko",
+        "description": "사진 한 장이 AI 색칠 도안이 됩니다. 브러시 10종과 페인트통으로 색칠놀이를 즐겨요. 완성작은 인쇄도 돼요.",
+        "operatingSystem": "Android",
+        "applicationCategory": "ART_AND_DESIGN",
+        "image": "https://play-lh.googleusercontent.com/XPXW18QfmDQHzPnhg6ud55N8-k3kCobeEdJF8ZGWudHUeoNNDJMnRV_dV0GNp0kAivjhl-7iejolIdcSEHey",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "下絵づくり：写真がぬりえに！お絵かきも楽しい",
+        "url": "https://play.google.com/store/apps/details/%E4%B8%8B%E7%B5%B5%E3%81%A5%E3%81%8F%E3%82%8A_%E5%86%99%E7%9C%9F%E3%81%8C%E3%81%AC%E3%82%8A%E3%81%88%E3%81%AB_%E3%81%8A%E7%B5%B5%E3%81%8B%E3%81%8D%E3%82%82%E6%A5%BD%E3%81%97%E3%81%84?id=com.pifl.pipi.draw&hl=ja",
+        "description": "写真がAIで塗り絵の図案に。10種のブラシとぬりつぶしで色塗り、AIなしで写真に直接お絵かきも。登録不要、印刷にも対応",
+        "operatingSystem": "Android",
+        "applicationCategory": "ART_AND_DESIGN",
+        "image": "https://play-lh.googleusercontent.com/XPXW18QfmDQHzPnhg6ud55N8-k3kCobeEdJF8ZGWudHUeoNNDJMnRV_dV0GNp0kAivjhl-7iejolIdcSEHey",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Photo Outlines: Coloring Book",
+        "url": "https://play.google.com/store/apps/details/Photo_Outlines_Coloring_Book?id=com.pifl.pipi.draw&hl=en",
+        "description": "Turn photos into coloring pages with AI line art, then color with 10 brushes",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "ART_AND_DESIGN",
+        "image": "https://play-lh.googleusercontent.com/XPXW18QfmDQHzPnhg6ud55N8-k3kCobeEdJF8ZGWudHUeoNNDJMnRV_dV0GNp0kAivjhl-7iejolIdcSEHey",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "b36e06c5f14a4334606c229a0565cd50486a2d11d0fabd466659c5ed25613654",
+      "ja": "369ecdfcab367d8899f612563a54d9dc21fa3d790fd96fd8c7c815d517b92406",
+      "en": "f85f7d0645ef65e497dbba2d52c13035c4db43f75fc4eda725aa95041a9aefa0"
+    }
+  },
+  {
+    "slug": "pipi-word-voyage",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "낱말항해: 한글 단어 퍼즐",
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-10-21T20:54:32Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/59/ff/4559ff95-eafc-cb90-829f-714f1e78be14/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fb/02/d4/fb02d4b8-ceec-bec1-916c-4f6cef06818f/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c1/62/4d/c1624d75-ba4d-e501-f7f6-c823ef5da664/iphone_1_wordsearch.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/e4/5b/cee45bff-efa8-2d67-17a8-59f2f1b21150/iphone_2_chosung.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0a/37/94/0a37943e-e340-626e-6cf5-e56434c6bf45/iphone_3_proverb.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3d/f4/0b/3df40bdf-c296-b942-f979-d9706064bf46/iphone_4_game.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6a/2b/57/6a2b5789-0a22-5b4b-c8f5-6ac3e1572491/iphone_5_volcano.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e6/f2/ce/e6f2cea5-df84-bd9b-4ee3-cebc23b2e76c/iphone_6_voyage.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/96/e1/6b/96e16ba2-774d-ded4-3810-5844f3d94ad4/iphone_7_daily.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/83/6b/e1/836be129-3c21-47e1-f294-e7308f8d0e13/iphone_8_nebula.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "ハングル航海：韓国語の単語パズル",
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-10-21T20:54:32Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/59/ff/4559ff95-eafc-cb90-829f-714f1e78be14/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB%E8%88%AA%E6%B5%B7-%E9%9F%93%E5%9B%BD%E8%AA%9E%E3%81%AE%E5%8D%98%E8%AA%9E%E3%83%91%E3%82%BA%E3%83%AB/id6788949612?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2d/13/df/2d13dff2-0529-1ed5-ae84-06d4f2edcf9a/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e8/92/9d/e8929d7b-974c-87e4-fef5-94a8655379de/iphone_1_wordsearch.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f8/b8/d4/f8b8d468-8021-a65d-6188-8e10d7acadcc/iphone_2_chosung.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/5f/28/ff/5f28ff38-a8da-f6a4-46c7-5af591e7aa79/iphone_3_proverb.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/23/20/ba/2320ba06-1f7e-571c-422b-382a0bddf362/iphone_4_game.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2c/2d/3e/2c2d3e79-14d3-cc46-969c-7e7baeb4fc92/iphone_5_volcano.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/de/cc/5e/decc5e27-f727-26cf-da40-04e134b0886f/iphone_6_voyage.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7e/8d/32/7e8d321b-b053-ec9f-a5ac-39c394bccc78/iphone_7_daily.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d1/d4/bc/d1d4bc35-909b-6224-e484-4580e831553e/iphone_8_nebula.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Hangul Voyage: Korean Puzzle",
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-10-21T20:54:32Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/59/ff/4559ff95-eafc-cb90-829f-714f1e78be14/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/hangul-voyage-korean-puzzle/id6788949612?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f4/a5/57/f4a5578e-f0c9-3f82-fd10-52fb8858077f/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e2/c6/27/e2c6270a-429e-9bf5-3f9f-6e4ccaf68141/iphone_1_wordsearch.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/16/34/3416342a-ee1e-5c6b-3bc1-59d421e555fe/iphone_2_chosung.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/05/f3/d3/05f3d328-29b8-f574-905c-0d6303e18db8/iphone_3_proverb.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e7/38/3c/e7383cca-d0fe-bd53-3e41-4b2846a689ec/iphone_4_game.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/90/99/96/90999628-e2f0-4ad7-9a07-849e2aa5acb6/iphone_5_volcano.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/89/6e/2a/896e2a02-afac-8627-aafc-f3475bc5c603/iphone_6_voyage.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2c/62/0f/2c620f27-6b33-10d6-2801-d09019fdeeae/iphone_7_daily.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/66/6a/99666a63-29fa-e7c7-37d0-2d549d2fba6f/iphone_8_nebula.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "낱말항해: 한글 단어 퍼즐",
+        "url": "https://play.google.com/store/apps/details/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4_%ED%95%9C%EA%B8%80_%EB%8B%A8%EC%96%B4_%ED%8D%BC%EC%A6%90?id=com.pifl.pipi.wordvoyage&hl=ko",
+        "description": "시간 제한 없는 한글 낱말퍼즐·단어 게임. 섬 개척, 숨은 낱말 찾기, 초성·속담 퀴즈, 오늘의 퍼즐까지. 계정 없이 오프라인으로.",
+        "operatingSystem": "Android",
+        "applicationCategory": "GAME_WORD",
+        "image": "https://play-lh.googleusercontent.com/qVgpBMI5Nvv2XXj70gJeGKxjVyTeqgie4t0yQGgaE7BAEuyA_bnZ63vOi4MUmRZECNDzRm7IG7jFB7C6TziNe7A",
+        "contentRating": "전체이용가",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ハングル航海：韓国語の単語パズル",
+        "url": "https://play.google.com/store/apps/details/%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB%E8%88%AA%E6%B5%B7_%E9%9F%93%E5%9B%BD%E8%AA%9E%E3%81%AE%E5%8D%98%E8%AA%9E%E3%83%91%E3%82%BA%E3%83%AB?id=com.pifl.pipi.wordvoyage&hl=ja",
+        "description": "ハングルをつないで韓国語の単語を作り、島をめぐるワードパズル。ことば探し・初声クイズ・ことわざクイズも。",
+        "operatingSystem": "Android",
+        "applicationCategory": "GAME_WORD",
+        "image": "https://play-lh.googleusercontent.com/qVgpBMI5Nvv2XXj70gJeGKxjVyTeqgie4t0yQGgaE7BAEuyA_bnZ63vOi4MUmRZECNDzRm7IG7jFB7C6TziNe7A",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Hangul Voyage: Korean Puzzle",
+        "url": "https://play.google.com/store/apps/details/Hangul_Voyage_Korean_Puzzle?id=com.pifl.pipi.wordvoyage&hl=en",
+        "description": "Korean word puzzles, word search, chosung & proverb quizzes. No timer, no login.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "GAME_WORD",
+        "image": "https://play-lh.googleusercontent.com/qVgpBMI5Nvv2XXj70gJeGKxjVyTeqgie4t0yQGgaE7BAEuyA_bnZ63vOi4MUmRZECNDzRm7IG7jFB7C6TziNe7A",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "cc102231f02cf7d8a420c3b31e08f539e339790ef3658723490e9fe1abd8ba63",
+      "ja": "5c4b799d98dc348a60cdef675768a56cb1eb7e7b4b572f5598c296aa3e918763",
+      "en": "1083b4794e8f398c1df903f2e5fa75e4032a6a4743ef4fc37e076aff28a9b864"
+    }
+  },
+  {
+    "slug": "pipi-bridge",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "Korean Bridge - 어린이 한국어·한글·수학",
+        "version": "1.0.2",
+        "currentVersionReleaseDate": "2026-10-21T23:59:22Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/39/ae/f0/39aef044-0052-250c-5226-aa4208b39239/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c5/0d/a3/c50da3cd-e17f-a91f-811f-c9be5ec60c5a/iphone_01_onboarding.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/30/c4/63/30c463ac-110e-dedb-b138-6b5116e67964/iphone_02_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/89/3f/9e/893f9e75-f6aa-7697-4a39-472cbb7a9e20/iphone_03_learn.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ae/80/e6/ae80e69b-08b1-acff-233a-219004a91b7d/iphone_04_lesson.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cb/86/07/cb86078c-d498-f848-02b6-9bdd9dd64787/iphone_05_play.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "Korean Bridge - 子どもハングル・算数",
+        "version": "1.0.2",
+        "currentVersionReleaseDate": "2026-10-21T23:59:22Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/39/ae/f0/39aef044-0052-250c-5226-aa4208b39239/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/korean-bridge-%E5%AD%90%E3%81%A9%E3%82%82%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB-%E7%AE%97%E6%95%B0/id6801205183?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/72/5c/3e/725c3e29-d397-8811-56ce-c3f77c7152ec/iphone_01_onboarding.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/10/ad/ca/10adca50-af46-cc5d-fff8-b64b0a4d6e92/iphone_02_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/17/30/b1/1730b1a7-fbda-fbda-9b21-0c9dbe45ca74/iphone_03_learn.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4a/1e/e4/4a1ee4cb-1795-962d-d450-afcd299ee0a9/iphone_04_lesson.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3f/98/c9/3f98c963-0f5f-a078-51ee-25f95e7720d6/iphone_05_play.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Korean Bridge: Hangul for Kids",
+        "version": "1.0.2",
+        "currentVersionReleaseDate": "2026-10-21T23:59:22Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/39/ae/f0/39aef044-0052-250c-5226-aa4208b39239/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/korean-bridge-hangul-for-kids/id6801205183?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0d/a7/00/0da7001b-ce18-688e-9694-2cab02f0fd48/iphone_01_onboarding.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/11/af/62/11af6299-709c-848b-016f-b960b46257c5/iphone_02_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/af/05/9daf052a-4388-1701-0750-88eb82f30cce/iphone_03_learn.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c9/59/ea/c959ea1e-47a5-b6ed-3091-55428266318f/iphone_04_lesson.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e5/72/2c/e5722c43-2ab4-6bc1-fe10-d7faf6d6d9a1/iphone_05_play.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Korean Bridge - 어린이 한국어·한글·수학",
+        "url": "https://play.google.com/store/apps/details/Korean_Bridge_%EC%96%B4%EB%A6%B0%EC%9D%B4_%ED%95%9C%EA%B5%AD%EC%96%B4_%ED%95%9C%EA%B8%80_%EC%88%98%ED%95%99?id=com.pifl.pipi.bridge&hl=ko",
+        "description": "부모 언어로 돕고 한국어·수학·학교생활을 배우는 광고 없는 아동 앱",
+        "operatingSystem": "Android",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/RwK2nu9fXhVgkgF6FVBk8cNpTjrJ8Oyzj5HXIOzkx3KOvR3DCb_Au2hhUYC0AiZH_a5usTg5n3G8cFciAHSI",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/en/apps/pipi-bridge/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Korean Bridge - 子どもハングル・算数",
+        "url": "https://play.google.com/store/apps/details/Korean_Bridge_%E5%AD%90%E3%81%A9%E3%82%82%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB_%E7%AE%97%E6%95%B0?id=com.pifl.pipi.bridge&hl=ja",
+        "description": "保護者向け日本語案内つきで、子どもが韓国語と学校生活の基礎を学べます",
+        "operatingSystem": "Android",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/RwK2nu9fXhVgkgF6FVBk8cNpTjrJ8Oyzj5HXIOzkx3KOvR3DCb_Au2hhUYC0AiZH_a5usTg5n3G8cFciAHSI",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/en/apps/pipi-bridge/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Korean Bridge: Hangul for Kids",
+        "url": "https://play.google.com/store/apps/details/Korean_Bridge_Hangul_for_Kids?id=com.pifl.pipi.bridge&hl=en",
+        "description": "Child-friendly Korean and school basics with help in a grown-up's language",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "EDUCATION",
+        "image": "https://play-lh.googleusercontent.com/RwK2nu9fXhVgkgF6FVBk8cNpTjrJ8Oyzj5HXIOzkx3KOvR3DCb_Au2hhUYC0AiZH_a5usTg5n3G8cFciAHSI",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/en/apps/pipi-bridge/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "source": "Apple iTunes Lookup KR/JP/US and Google Play public KO/JA/EN pages",
+    "previewIndex": 1,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "1ef453c44a17a9c43c40bdeead4dd2dd6d497c2ef3596e3ee0143352d1a4ffb3",
+      "ja": "224bccdb1e0f9a5a1e1f659dfcdd0c330128e338ce775acce4b7dd5a1beae3e3",
+      "en": "b77c56be8e09cc0336ba0361d8f394bf9682ca7d23ba31c0a2ff0479cbb74469"
+    }
+  },
+  {
+    "slug": "dialogos",
+    "observedAt": "2026-10-23",
+    "ios": {
+      "ko": {
+        "trackName": "Dialogos: 철학자와의 대화",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-10-22T17:12:06Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/16/8c/f5/168cf59c-3a83-407d-4559-3860377d51ce/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/76/31/48/763148a3-30b6-d511-dfea-0aca46ec4fcf/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/00/9a/f6/009af606-ab5c-c302-34da-928a1fac2e7e/iphone_1_chat_marcus.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/65/6e/2a/656e2aab-fe6d-c9db-8fb1-39d4fc91b357/iphone_2_chat_socrates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/18/44/5a/18445a6f-cfff-10e4-d8d1-e5a376d784f3/iphone_3_onboarding.png/320x480bb.jpg"
+        ]
+      },
+      "ja": {
+        "trackName": "Dialogos: 賢者との対話",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-10-22T17:12:06Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/16/8c/f5/168cf59c-3a83-407d-4559-3860377d51ce/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/jp/app/dialogos-%E8%B3%A2%E8%80%85%E3%81%A8%E3%81%AE%E5%AF%BE%E8%A9%B1/id6780508628?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/92/af/df/92afdfb2-dcec-cd23-34f1-59b58cc7a569/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/07/56/6c/07566c92-acd1-6cf8-80f3-71042114be98/iphone_1_chat_marcus.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b7/d3/af/b7d3af21-7414-b499-1a76-61dd508779e5/iphone_2_chat_socrates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/83/6f/4c/836f4cb7-e8f5-4c13-5927-8f895db1d200/iphone_3_onboarding.png/320x480bb.jpg"
+        ]
+      },
+      "en": {
+        "trackName": "Dialogos: Stoic Dialogues",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-10-22T17:12:06Z",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/16/8c/f5/168cf59c-3a83-407d-4559-3860377d51ce/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+        "trackViewUrl": "https://apps.apple.com/us/app/dialogos-stoic-dialogues/id6780508628?uo=4",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6f/63/82/6f6382a7-7cf4-ea9b-acd3-71a007ff1650/iphone_0_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/43/7e/4c/437e4c23-29d2-f5d2-d10c-1f949680b2a4/iphone_1_chat_marcus.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/98/b5/f4/98b5f443-530f-d7d1-ce85-82e090ed4945/iphone_2_chat_socrates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/ee/4b/5bee4b72-fee3-b203-7fee-24b553dd72c7/iphone_3_onboarding.png/320x480bb.jpg"
+        ]
+      }
+    },
+    "android": {
+      "ko": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Dialogos: 철학자와의 대화",
+        "url": "https://play.google.com/store/apps/details/Dialogos_%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98_%EB%8C%80%ED%99%94?id=com.pifl.pipi.thus&hl=ko",
+        "description": "스토아 현자에게 묻는 오늘의 고민",
+        "operatingSystem": "Android",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/KTdANIlGe6DbKGKlCMa8QkfK10jUMzxHEc0I4fpNQyX_zgEm_iMPExTMXKmEq71YEe9i1Bwnmh7M_eObQatb",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/apps/dialogos"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "ja": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Dialogos: 賢者との対話",
+        "url": "https://play.google.com/store/apps/details/Dialogos_%E8%B3%A2%E8%80%85%E3%81%A8%E3%81%AE%E5%AF%BE%E8%A9%B1?id=com.pifl.pipi.thus&hl=ja",
+        "description": "ストアの賢者に聞く、今日の悩み",
+        "operatingSystem": "Android",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/KTdANIlGe6DbKGKlCMa8QkfK10jUMzxHEc0I4fpNQyX_zgEm_iMPExTMXKmEq71YEe9i1Bwnmh7M_eObQatb",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/apps/dialogos"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "en": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Dialogos: Stoic Dialogues",
+        "url": "https://play.google.com/store/apps/details/Dialogos_Stoic_Dialogues?id=com.pifl.pipi.thus&hl=en",
+        "description": "Dialogues with the Stoic sages — grounded in the original texts.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "LIFESTYLE",
+        "image": "https://play-lh.googleusercontent.com/KTdANIlGe6DbKGKlCMa8QkfK10jUMzxHEc0I4fpNQyX_zgEm_iMPExTMXKmEq71YEe9i1Bwnmh7M_eObQatb",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com/apps/dialogos"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    "previewIndex": 0,
+    "iconStorefront": "us",
+    "previewSha256": {
+      "ko": "7d54d634cb7d7f3ec0ceb1a843b44c9722532247c5f707bbe9e9a259f70b68f0",
+      "ja": "eec3e2a2bb48898426d3259100419b08835f290247e115fe469871d41373cc0e",
+      "en": "f8ccd1efa8db1267dd38fcf2ecde91027ab44cab8b4582319261268b5e9ada73"
+    }
+  }
+]

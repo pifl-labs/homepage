@@ -53,11 +53,9 @@ const copy = {
 ---
 <section class="fleet-log-section" id="fleet">
   <div class="container">
-    <div class="section-head">
-      <div class="kicker">{copy.kicker}</div>
-      <h2 class="section-title">{copy.title} <span class="italic">{copy.titleEm}</span></h2>
+    <details class="fleet-disclosure">
+      <summary>{({ ko: '스토어 버전·업데이트 확인하기', ja: 'ストアのバージョン・更新記録', en: 'Store versions & update history' })[lang]}</summary>
       <p class="section-sub">{copy.sub}</p>
-    </div>
 
     <ol class="fleet-log">
       {rows.map((app) => {
@@ -92,5 +90,6 @@ const copy = {
     </ol>
 
     <p class="fleet-note">{copy.noteBefore}{rangeDates.map((date, i) => <>{i > 0 && ' – '}<time datetime={date} style="white-space: nowrap">{formatDate(date, lang)}</time></>)}{copy.noteAfter}</p>
+    </details>
   </div>
 </section>
