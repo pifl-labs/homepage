@@ -105,3 +105,13 @@ Same-viewport KO measurements (CSS pixels):
 | Mobile complete catalog | 7612 | 5282 |
 
 PIRATE local browser visual comparison: desktop hero and cards, mobile catalog. Final 30-case matrix: KO/JA/EN × widths 320/375/768/1280/1920 × default/200% root font, 14 cards, no document overflow or clipped card/text/button containers, all store targets at least 44px. Narrow Japanese long-name clipping discovered during review was corrected by allowing full-width identity at enlarged sizes. This is root-font enlargement, not browser zoom/OS assistive technology. Relevant tests: 18/18; build 160 pages; built checks 45 pages/180 store links. Evidence: ignored evidence/spacing-{metrics,matrix}.json and spacing-before/after-{desktop,mobile}.jpg. The comparison screenshots were saved to Library. Main and production were not changed.
+
+## Alignment follow-up (2026-10-23)
+
+- Shared content rows align paired card icons/names, categories, descriptions, previews and store footers. Previous names now belong to the heading. No fixed title/description height or smaller text was introduced.
+- Desktop previews share the icon top edge; mobile previews move below the full-width heading. Narrow/enlarged text stacks the preview below the copy. Store buttons share available width; Android-only and upcoming availability remain unchanged. Hover no longer translates home cards.
+- PIRATE local in-app browser: 30 DOM layout checks (KO/JA/EN × 320/375/768/1280/1920 × normal/200% root font) retained 14 cards, with no horizontal document overflow, clipped card text, or store targets below 44px. Visual inspection: KO 1280×900 and 375×812, JA 320×812 at 200%. This does not claim native mobile Safari, Firefox, screen-reader or browser zoom validation.
+- At KO 1280×900 every paired card has identical icon/name/category/description/preview/store row starts where those elements exist. First card height 365.73→296.19px; catalog 2790.22→2354.65px. At KO 375×812 first card stays 385.57px; full catalog 5281.92→5467.77px because shared content organization adds modest space on some long-name cards. Hero and font sizes unchanged.
+- Before/after evidence uses the same desktop/mobile viewport sizes; the mobile representative after image is scrolled farther into the catalog to show a complete card, so it is not a pixel-diff pair. Evidence: `evidence/alignment-{before,after}-{desktop,mobile}.jpg`, `alignment-browser-qa.json`, `alignment-rows.json`.
+- Build: 160 pages. Relevant Node tests: 18/18. Built checks: 45 localized pages / 180 store links, Draw and store transition checks passed.
+- Library desktop: `libfile_eef8da8037dc8191867b5eb8c3bac73e`; mobile: `libfile_d538170241a48191b1729aa36207343f`.

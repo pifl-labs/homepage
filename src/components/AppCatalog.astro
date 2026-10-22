@@ -62,9 +62,9 @@ const copy = {
               <div class="app-card-head">
                   <span class="app-card-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
                   <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
+                {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
                 </div>
               <div class="app-card-body">
-                {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
                 <span class="app-card-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
                 <p class="app-card-tag">{catalogCopy[app.slug][lang]}</p>
                 <span class="app-card-detail">{({ ko: "앱 자세히 보기", ja: "アプリの詳細", en: "Explore app" })[lang]} <span aria-hidden="true">→</span></span>
