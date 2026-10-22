@@ -66,7 +66,7 @@ const cases = [
 for (const { locale, revision, sdk, identifier, location, ads, att, oldAtt, otherId, transfer, noTracking } of cases) {
   test(`Words ${locale} privacy policy discloses SDK data without unsupported no-tracking promise`, () => {
     const page = read(locale);
-    for (const expected of [revision, 'datetime="2026-04-17"', 'datetime="2026-10-21"', sdk, identifier, location, ads, att, otherId, transfer, 'IDFA']) {
+    for (const expected of [revision, 'datetime="2026-04-17"', 'datetime="2026-10-22"', sdk, identifier, location, ads, att, otherId, transfer, 'IDFA']) {
       assert.ok(page.includes(expected), `${locale}: missing ${expected}`);
     }
     assert.ok(!page.includes(noTracking), `${locale}: unsupported tracking promise remains`);
