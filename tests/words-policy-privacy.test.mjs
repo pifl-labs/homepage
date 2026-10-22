@@ -16,8 +16,9 @@ const cases = [
     identifier: '기기 식별자',
     location: 'IP 주소에서 추정한 대략적 위치',
     ads: '비맞춤 광고만 요청',
-    att: 'ATT) 권한을 요청하지 않습니다',
-    otherId: '다른 기기 식별자와 SDK 데이터는 처리될 수 있으므로',
+    att: '광고를 시작하기 전에 앱 추적 투명성(ATT) 권한을 묻습니다',
+    oldAtt: 'ATT) 권한을 요청하지 않습니다',
+    otherId: '다른 기기 식별자와 SDK 데이터는 처리될 수 있습니다',
     transfer: '기기 식별자, IP 추정 대략 위치, 기기·광고 이용 및 진단 정보',
     noTracking: '광고 식별자를 앱·웹사이트 간 추적 목적으로 사용하지 않습니다',
   },
@@ -28,8 +29,9 @@ const cases = [
     identifier: 'デバイス識別子',
     location: 'IP アドレスから推定されるおおよその位置',
     ads: '非パーソナライズ広告のみをリクエスト',
-    att: 'ATT）の許可を求めません',
-    otherId: '他のデバイス識別子や SDK データが処理される場合がある',
+    att: '広告を開始する前に App Tracking Transparency（ATT）の許可を求めます',
+    oldAtt: 'ATT）の許可を求めません',
+    otherId: '他のデバイス識別子や SDK データは処理される場合があります',
     transfer: 'デバイス識別子、IP から推定したおおよその位置、端末・広告の利用情報、診断情報',
     noTracking: '広告識別子をアプリやWebサイトをまたいだトラッキング目的で使用しません',
   },
@@ -40,7 +42,8 @@ const cases = [
     identifier: 'Device identifiers',
     location: 'coarse location inferred from IP address',
     ads: 'non-personalized ads',
-    att: 'does not request App Tracking Transparency (ATT) permission',
+    att: 'asks for App Tracking Transparency (ATT) permission before ads start',
+    oldAtt: 'does not request App Tracking Transparency (ATT) permission',
     otherId: 'Other device identifiers and SDK data may still be processed',
     transfer: 'Device identifiers, coarse location inferred from IP, device and ad interaction data, diagnostics',
     noTracking: 'The advertising identifier is not used to track you across apps or websites',
@@ -52,20 +55,23 @@ const cases = [
     identifier: 'Device identifiers',
     location: 'coarse location inferred from IP address',
     ads: 'non-personalized ads',
-    att: 'does not request App Tracking Transparency (ATT) permission',
+    att: 'asks for App Tracking Transparency (ATT) permission before ads start',
+    oldAtt: 'does not request App Tracking Transparency (ATT) permission',
     otherId: 'Other device identifiers and SDK data may still be processed',
     transfer: 'Device identifiers, coarse location inferred from IP, device and ad interaction data, diagnostics',
     noTracking: 'The advertising identifier is not used to track you across apps or websites',
   },
 ];
 
-for (const { locale, revision, sdk, identifier, location, ads, att, otherId, transfer, noTracking } of cases) {
+for (const { locale, revision, sdk, identifier, location, ads, att, oldAtt, otherId, transfer, noTracking } of cases) {
   test(`Words ${locale} privacy policy discloses SDK data without unsupported no-tracking promise`, () => {
     const page = read(locale);
-    for (const expected of [revision, 'datetime="2026-04-17"', 'datetime="2026-09-24"', sdk, identifier, location, ads, att, otherId, transfer, 'IDFA']) {
+    for (const expected of [revision, 'datetime="2026-04-17"', 'datetime="2026-10-22"', sdk, identifier, location, ads, att, otherId, transfer, 'IDFA']) {
       assert.ok(page.includes(expected), `${locale}: missing ${expected}`);
     }
     assert.ok(!page.includes(noTracking), `${locale}: unsupported tracking promise remains`);
+    // 1.0.14(33)부터 iOS 는 광고 시작 전에 ATT 를 묻는다(App Store 5.1.2(i) 거절 대응).
+    assert.ok(!page.includes(oldAtt), `${locale}: outdated 'no ATT request' statement remains`);
     assert.match(page, /Google AdMob/);
     assert.match(page, /2026/);
     assert.equal((page.match(/<ScrollableLegalTable label=/g) || []).length, 3);
