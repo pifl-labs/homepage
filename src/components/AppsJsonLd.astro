@@ -24,7 +24,7 @@ const itemList = {
       description: app.content[lang].tagline.replace(/\n/g, ' '),
       ...(app.status === 'live'
         ? {
-            operatingSystem: 'iOS, Android',
+            operatingSystem: [app.stores.ios && 'iOS', app.stores.android && 'Android'].filter(Boolean).join(', '),
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
             ...(displayVersion(app) ? { softwareVersion: displayVersion(app) } : {}),
             ...(app.release?.since ? { datePublished: app.release.since } : {}),

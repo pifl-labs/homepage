@@ -64,6 +64,7 @@ export interface AppMeta {
   /** 출시 앱만 — 스토어 실측 버전·업데이트일. 카드/랜딩/구조화 데이터가 공유하는 SSOT. */
   release?: AppRelease;
   /** hero 대표 스크린샷 file 명. 스크린샷이 아직 없는 '출시 예정' 앱은 생략한다. */
+  privacyPath?: string | null;
   heroShot?: string;
   content: Record<Lang, AppContent>;
 }
@@ -959,9 +960,209 @@ const legion: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion };
+const tide: AppMeta = {
+  slug: 'pipi-tide',
+  schemaCategory: 'UtilitiesApplication',
+  "name": "Tide Friend: Korea Tide Times",
+  "nameByLang": {
+    "ko": "물때친구 - 만조 간조 물때표 위젯",
+    "ja": "Tide Friend: Korea Tide Times"
+  },
+  "status": "live",
+  "category": {
+    "ko": "날씨 · 물때",
+    "ja": "天気 · 潮汐",
+    "en": "Weather · Tides"
+  },
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide"
+  },
+  "content": {
+    "ko": {
+      "tagline": "날씨 · 물때",
+      "lede": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "Google Play에서 만나세요",
+      "ctaSub": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "天気 · 潮汐",
+      "lede": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "Google Playで入手",
+      "ctaSub": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Weather · Tides",
+      "lede": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Get it on Google Play",
+      "ctaSub": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android.",
+      "shots": [],
+      "features": []
+    }
+  },
+  "privacyPath": "/en/apps/pipi-tide/privacy/",
+  "heroShot": "store-preview"
+};
+const sudoku: AppMeta = {
+  slug: 'pipi-sudoku',
+  schemaCategory: 'GameApplication',
+  "name": "Cell by Cell Sudoku",
+  "nameByLang": {
+    "ko": "한칸씩 스도쿠",
+    "ja": "ひとマスずつナンプレ"
+  },
+  "status": "live",
+  "category": {
+    "ko": "퍼즐 · 스도쿠",
+    "ja": "パズル · ナンプレ",
+    "en": "Puzzles · Sudoku"
+  },
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku"
+  },
+  "content": {
+    "ko": {
+      "tagline": "퍼즐 · 스도쿠",
+      "lede": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "Google Play에서 만나세요",
+      "ctaSub": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "パズル · ナンプレ",
+      "lede": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "Google Playで入手",
+      "ctaSub": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Puzzles · Sudoku",
+      "lede": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Get it on Google Play",
+      "ctaSub": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android.",
+      "shots": [],
+      "features": []
+    }
+  },
+  "heroShot": "store-preview"
+};
+const kkachi: AppMeta = {
+  slug: 'kkachi',
+  "name": "Kkachi: Korean Saju",
+  "nameByLang": {
+    "ko": "까치사주",
+    "ja": "Kkachi: Korean Saju"
+  },
+  "status": "soon",
+  "category": {
+    "ko": "라이프스타일 · 사주",
+    "ja": "ライフスタイル · 四柱推命",
+    "en": "Lifestyle · Korean saju"
+  },
+  "stores": {},
+  "content": {
+    "ko": {
+      "tagline": "라이프스타일 · 사주",
+      "lede": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "공개 출시 준비 중",
+      "ctaSub": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "ライフスタイル · 四柱推命",
+      "lede": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "一般公開の準備中",
+      "ctaSub": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Lifestyle · Korean saju",
+      "lede": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Preparing for public release",
+      "ctaSub": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released.",
+      "shots": [],
+      "features": []
+    }
+  }
+};
+const sky: AppMeta = {
+  slug: 'pipi-sky',
+  "name": "Skydaze: Cloud & Star Gazing",
+  "nameByLang": {
+    "ko": "Skydaze: Cloud & Star Gazing",
+    "ja": "Skydaze: Cloud & Star Gazing"
+  },
+  "status": "soon",
+  "category": {
+    "ko": "휴식 · 하늘 관찰",
+    "ja": "リラックス · 空の観察",
+    "en": "Relaxation · Sky gazing"
+  },
+  "stores": {},
+  "content": {
+    "ko": {
+      "tagline": "휴식 · 하늘 관찰",
+      "lede": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "공개 출시 준비 중",
+      "ctaSub": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "リラックス · 空の観察",
+      "lede": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "一般公開の準備中",
+      "ctaSub": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Relaxation · Sky gazing",
+      "lede": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Preparing for public release",
+      "ctaSub": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
+      "shots": [],
+      "features": []
+    }
+  },
+  "previousName": "PiPi Sky",
+  "privacyPath": null
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky };
 // 출시 앱을 먼저, 출시 예정 앱을 뒤에 둔다. Bridge는 공개 앱이다.
-export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, legion];
+export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, sky, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */

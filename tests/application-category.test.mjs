@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {appList} from '../src/data/apps.ts';
 const supported=new Set(['GameApplication','SocialNetworkingApplication','TravelApplication','ShoppingApplication','SportsApplication','LifestyleApplication','BusinessApplication','DesignApplication','DeveloperApplication','DriverApplication','EducationalApplication','HealthApplication','FinanceApplication','SecurityApplication','BrowserApplication','CommunicationApplication','DesktopEnhancementApplication','EntertainmentApplication','MultimediaApplication','HomeApplication','UtilitiesApplication','ReferenceApplication']);
-const expected={'dialogos':'LifestyleApplication','pipi-focus':'BusinessApplication','pipi-hello':'EducationalApplication','pipi-words':'EducationalApplication','pipi-dday':'LifestyleApplication','pipi-log':'LifestyleApplication','pipi-draw':'DesignApplication','pipi-word-voyage':'GameApplication','pipi-bridge':'EducationalApplication'};
+const expected={'pipi-tide':'UtilitiesApplication','pipi-sudoku':'GameApplication','dialogos':'LifestyleApplication','pipi-focus':'BusinessApplication','pipi-hello':'EducationalApplication','pipi-words':'EducationalApplication','pipi-dday':'LifestyleApplication','pipi-log':'LifestyleApplication','pipi-draw':'DesignApplication','pipi-word-voyage':'GameApplication','pipi-bridge':'EducationalApplication'};
 // Metadata consumers only; no supported enum may be invented from an app subtype.
 test('every released app has its documented supported software category',()=>{
  const live=appList.filter(app=>app.status==='live');assert.deepEqual(new Set(live.map(app=>app.slug)),new Set(Object.keys(expected)));

@@ -97,7 +97,7 @@ const jsonLd = {
   publisher: { '@id': 'https://pifl-labs.com/#organization' },
   ...(app.status === 'live'
     ? {
-        operatingSystem: 'iOS, Android',
+        operatingSystem: [app.stores.ios && 'iOS', app.stores.android && 'Android'].filter(Boolean).join(', '),
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         ...(app.stores.ios ? { downloadUrl: app.stores.ios } : {}),
         ...(app.release ? {
@@ -208,7 +208,7 @@ const jsonLd = {
     )}
 
     <!-- FEATURE GRID -->
-    <section class="app-section">
+    {c.features.length > 0 && <section class="app-section">
       <div class="container">
         <div class="section-head">
           <div class="kicker">{nFeatures} / {c.featuresTitle}</div>
@@ -224,7 +224,7 @@ const jsonLd = {
           ))}
         </div>
       </div>
-    </section>
+    </section>}
 
     {sourceLib && (
       <section class="app-section">
@@ -309,7 +309,7 @@ const jsonLd = {
           )}
         </div>
         <div class="app-trust">
-          <a href={`/${lang}/apps/${app.slug}/privacy/`}><i class="fas fa-shield-halved" aria-hidden="true"></i> {trust.privacy}</a>
+          {app.privacyPath !== null && <a href={app.privacyPath ?? `/${lang}/apps/${app.slug}/privacy/`}><i class="fas fa-shield-halved" aria-hidden="true"></i> {trust.privacy}</a>}
           <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><i class="fas fa-envelope" aria-hidden="true"></i> <span class="email-text">support (at) pifl-labs.com</span></a>
         </div>
         {app.slug === 'pipi-bridge' && (

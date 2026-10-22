@@ -43,8 +43,9 @@ for (const lang of ['ko', 'ja', 'en']) {
     else {
       const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)]
         .map((m) => JSON.parse(m[1]));
-      const live = jsonLd.some((data) => data['@type'] === 'SoftwareApplication' && data.operatingSystem);
-      assert.equal(pageLinks, live ? 4 : 0, `${file}: ${pageLinks}`);
+      const software = jsonLd.find((data) => data['@type'] === 'SoftwareApplication');
+      const platformCount = software?.operatingSystem?.split(', ').length ?? 0;
+      assert.equal(pageLinks, platformCount * 2, `${file}: ${pageLinks}`);
     }
     pages++;
     links += pageLinks;

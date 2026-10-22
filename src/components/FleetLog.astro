@@ -13,7 +13,7 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 
 // 최신 정비 순 정렬 — "지금 무엇이 움직이고 있나"가 먼저 보이도록.
-const rows = [...liveApps].sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
+const rows = liveApps.filter(app => app.release).sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
 
 // 서로 다른 앱의 관측일을 모두 오늘 확인한 것처럼 보이지 않게 범위로 표시한다.
 const checkedDates = [...new Set(liveApps.flatMap(releaseObservationDates))].sort();

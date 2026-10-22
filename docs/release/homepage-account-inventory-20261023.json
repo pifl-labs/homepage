@@ -1,0 +1,299 @@
+{
+  "checkedAt": "2026-10-22T21:21:54.324601+00:00",
+  "scope": "All currently visible apps in the authenticated PiFl accounts; not a historical deletion ledger",
+  "apple": {
+    "access": "authenticated refreshed Apps navigation",
+    "account": "PiFl Labs Co., Ltd.",
+    "count": 14,
+    "ready": 7,
+    "waitingForReview": 5,
+    "prepareForSubmission": 2
+  },
+  "google": {
+    "access": "authenticated refreshed home, both pages and disabled final-page button",
+    "account": "PiFl Labs",
+    "developerId": "8852533891626306957",
+    "count": 13,
+    "production": 11,
+    "internalTesting": 2
+  },
+  "intersection": 13,
+  "union": 14,
+  "appleOnly": [
+    "legion"
+  ],
+  "googleOnly": [],
+  "apps": [
+    {
+      "key": "focus",
+      "appleId": "6762258878",
+      "appleLatestSubmission": "1.2.1 ready",
+      "googlePackage": "com.pifl.pipi.focus",
+      "googleStatus": "production"
+    },
+    {
+      "key": "draw",
+      "appleId": "6779071131",
+      "appleLatestSubmission": "1.2.2 waiting for review",
+      "googlePackage": "com.pifl.pipi.draw",
+      "googleStatus": "production"
+    },
+    {
+      "key": "wordvoyage",
+      "appleId": "6788949612",
+      "appleLatestSubmission": "1.1.0 ready",
+      "googlePackage": "com.pifl.pipi.wordvoyage",
+      "googleStatus": "production"
+    },
+    {
+      "key": "hello",
+      "appleId": "6777299814",
+      "appleLatestSubmission": "1.0.10 ready",
+      "googlePackage": "com.pifl.pipi.hello",
+      "googleStatus": "production"
+    },
+    {
+      "key": "words",
+      "appleId": "6770267735",
+      "appleLatestSubmission": "1.0.14 waiting for review",
+      "googlePackage": "com.pifl.pipi.words",
+      "googleStatus": "production"
+    },
+    {
+      "key": "dday",
+      "appleId": "6770268950",
+      "appleLatestSubmission": "1.1.5 ready",
+      "googlePackage": "com.pifl.pipi.dday",
+      "googleStatus": "production"
+    },
+    {
+      "key": "log",
+      "appleId": "6770272665",
+      "appleLatestSubmission": "1.0.12 ready",
+      "googlePackage": "com.pifl.pipi.log",
+      "googleStatus": "production"
+    },
+    {
+      "key": "thus",
+      "appleId": "6780508628",
+      "appleLatestSubmission": "1.0.3 ready",
+      "googlePackage": "com.pifl.pipi.thus",
+      "googleStatus": "production"
+    },
+    {
+      "key": "bridge",
+      "appleId": "6801205183",
+      "appleLatestSubmission": "1.0.2 ready",
+      "googlePackage": "com.pifl.pipi.bridge",
+      "googleStatus": "production"
+    },
+    {
+      "key": "tide",
+      "appleId": "6820126418",
+      "appleLatestSubmission": "1.1.2 waiting for review",
+      "googlePackage": "com.pifl.pipi.tide",
+      "googleStatus": "production"
+    },
+    {
+      "key": "sudoku",
+      "appleId": "6820125053",
+      "appleLatestSubmission": "1.0.0 waiting for review",
+      "googlePackage": "com.pifl.pipi.sudoku",
+      "googleStatus": "production"
+    },
+    {
+      "key": "kkachi",
+      "appleId": "6824772783",
+      "appleLatestSubmission": "1.0.0 waiting for review",
+      "googlePackage": "com.pifl.pipi.kkachi",
+      "googleStatus": "internal testing; changes in review"
+    },
+    {
+      "key": "sky",
+      "appleId": "6797726159",
+      "appleLatestSubmission": "1.0 prepare for submission",
+      "googlePackage": "com.pifl.pipi.sky",
+      "googleStatus": "internal testing"
+    },
+    {
+      "key": "legion",
+      "appleId": "6791804605",
+      "appleLatestSubmission": "1.0 prepare for submission",
+      "googlePackage": null,
+      "googleStatus": "not in account list"
+    }
+  ],
+  "publicNewApps": [
+    {
+      "slug": "pipi-tide",
+      "android": {
+        "ko": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "물때친구 - 만조 간조 물때표 위젯",
+          "url": "https://play.google.com/store/apps/details/%EB%AC%BC%EB%95%8C%EC%B9%9C%EA%B5%AC_%EB%A7%8C%EC%A1%B0_%EA%B0%84%EC%A1%B0_%EB%AC%BC%EB%95%8C%ED%91%9C_%EC%9C%84%EC%A0%AF?id=com.pifl.pipi.tide&hl=ko",
+          "description": "만조·간조와 몇 물, 낚시·갯벌 지수, 간조 전 알림, 월간 물때 달력까지 한 앱에서",
+          "operatingSystem": "Android",
+          "applicationCategory": "WEATHER",
+          "image": "https://play-lh.googleusercontent.com/NlIzDPF-kGeD6rfn94LGhZofKPy2vuKh9S88WfLnuqsO_hY72argtxJJPg-IM1wsmrrAZ2-1FwnX7vMLhHblcw",
+          "contentRating": "3세 이상",
+          "author": {
+            "@type": "Person",
+            "name": "PiFl Labs",
+            "url": "https://pifl-labs.com"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "KRW",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "screenshot": "https://play-lh.googleusercontent.com/PEcL9h2YMQfqyhfD47WyTG8TNfIKBFrnWhSKWLsyicmaf0dtVL6rt0Dazkqp8T1HmsiYHhEKD-ExcZlAgzUaJw=w480"
+        },
+        "ja": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Tide Friend: Korea Tide Times",
+          "url": "https://play.google.com/store/apps/details/Tide_Friend_Korea_Tide_Times?id=com.pifl.pipi.tide&hl=ja",
+          "description": "韓国の潮汐時刻、漁業・干潟指数、干潮警報、ウィジェット",
+          "operatingSystem": "Android",
+          "applicationCategory": "WEATHER",
+          "image": "https://play-lh.googleusercontent.com/NlIzDPF-kGeD6rfn94LGhZofKPy2vuKh9S88WfLnuqsO_hY72argtxJJPg-IM1wsmrrAZ2-1FwnX7vMLhHblcw",
+          "contentRating": "3 歳以上",
+          "author": {
+            "@type": "Person",
+            "name": "PiFl Labs",
+            "url": "https://pifl-labs.com"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "screenshot": "https://play-lh.googleusercontent.com/o-5q83v5hZV9bsTjeg02capze6uUM0DfZMjkRqO7QjNYhODxb3GUqZOoyM4hg-ePhSrDvMu6vjvqJhl5HOsHyZI=w480"
+        },
+        "en": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Tide Friend: Korea Tide Times",
+          "url": "https://play.google.com/store/apps/details/Tide_Friend_Korea_Tide_Times?id=com.pifl.pipi.tide&hl=en",
+          "description": "Korea tide times, fishing and mudflat indexes, low-tide alerts and a widget",
+          "operatingSystem": "ANDROID",
+          "applicationCategory": "WEATHER",
+          "image": "https://play-lh.googleusercontent.com/NlIzDPF-kGeD6rfn94LGhZofKPy2vuKh9S88WfLnuqsO_hY72argtxJJPg-IM1wsmrrAZ2-1FwnX7vMLhHblcw",
+          "contentRating": "Everyone",
+          "author": {
+            "@type": "Person",
+            "name": "PiFl Labs",
+            "url": "https://pifl-labs.com"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "screenshot": "https://play-lh.googleusercontent.com/o-5q83v5hZV9bsTjeg02capze6uUM0DfZMjkRqO7QjNYhODxb3GUqZOoyM4hg-ePhSrDvMu6vjvqJhl5HOsHyZI=w480"
+        }
+      }
+    },
+    {
+      "slug": "pipi-sudoku",
+      "android": {
+        "ko": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "한칸씩 스도쿠",
+          "url": "https://play.google.com/store/apps/details/%ED%95%9C%EC%B9%B8%EC%94%A9_%EC%8A%A4%EB%8F%84%EC%BF%A0?id=com.pifl.pipi.sudoku&hl=ko",
+          "description": "정답 대신 어디를·왜 볼지 알려 주는 단계 힌트. 검증된 퍼즐 300개, 광고 없는 스도쿠",
+          "operatingSystem": "Android",
+          "applicationCategory": "GAME_PUZZLE",
+          "image": "https://play-lh.googleusercontent.com/FxnY18ayWI1-ZnW98TT4_AIxi5W4-fTADqVUdT7LLnts83TwHqxv3RxVPFPv3ENedW3sswLlxiIytBjknvU1",
+          "contentRating": "전체이용가",
+          "author": {
+            "@type": "Person",
+            "name": "PiFl Labs",
+            "url": "https://pifl-labs.com/apps/pipi-sudoku/support/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "KRW",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "screenshot": "https://play-lh.googleusercontent.com/iZF2gWZXbSO0V9cd2oLpl20QJTrYZdTFy-rb7BgQeHZNBNJb-IVgcYHyK42zk8nKrtDmhg3gyzVSXJ3unOtxqQ=w480"
+        },
+        "ja": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "ひとマスずつナンプレ",
+          "url": "https://play.google.com/store/apps/details/%E3%81%B2%E3%81%A8%E3%83%9E%E3%82%B9%E3%81%9A%E3%81%A4%E3%83%8A%E3%83%B3%E3%83%97%E3%83%AC?id=com.pifl.pipi.sudoku&hl=ja",
+          "description": "行き詰まったら場所→理由→数字の順に教えるナンプレ。検証済み300問、広告なし",
+          "operatingSystem": "Android",
+          "applicationCategory": "GAME_PUZZLE",
+          "image": "https://play-lh.googleusercontent.com/FxnY18ayWI1-ZnW98TT4_AIxi5W4-fTADqVUdT7LLnts83TwHqxv3RxVPFPv3ENedW3sswLlxiIytBjknvU1",
+          "contentRating": "3 歳以上",
+          "author": {
+            "@type": "Person",
+            "name": "PiFl Labs",
+            "url": "https://pifl-labs.com/apps/pipi-sudoku/support/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "screenshot": "https://play-lh.googleusercontent.com/6LYWVTBlIW9Ghe_dVU3pKcE3vurMxgQ-GBzq1N3jPm1NOkp6N6eM2tDoSInek0JUA3ccnyvhp9nmWep79IElcg=w480"
+        },
+        "en": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Cell by Cell Sudoku",
+          "url": "https://play.google.com/store/apps/details/Cell_by_Cell_Sudoku?id=com.pifl.pipi.sudoku&hl=en",
+          "description": "Stuck? Hints show where to look and why, not the answer. 300 puzzles. No ads.",
+          "operatingSystem": "ANDROID",
+          "applicationCategory": "GAME_PUZZLE",
+          "image": "https://play-lh.googleusercontent.com/FxnY18ayWI1-ZnW98TT4_AIxi5W4-fTADqVUdT7LLnts83TwHqxv3RxVPFPv3ENedW3sswLlxiIytBjknvU1",
+          "contentRating": "Everyone",
+          "author": {
+            "@type": "Person",
+            "name": "PiFl Labs",
+            "url": "https://pifl-labs.com/apps/pipi-sudoku/support/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "screenshot": "https://play-lh.googleusercontent.com/MvX62d6A9OCBzKeAGM4MR3XkUqNunC7uscFywLF6rqZBWYg4-ptEfGscDDUVbHhE6KMGV91FYQCiDzfkAqgT=w480"
+        }
+      }
+    }
+  ],
+  "unreleasedIconSources": {
+    "kkachi": "kkachi-saju/assets/icon/app-icon-magpie-v1.png (pubspec launcher source)",
+    "pipi-sky": "pipi_sky/store_assets/icon/app_icon_day.png (ASSET_NOTES.md owner-selected default, 2026-10-20)"
+  },
+  "caveats": [
+    "Old open tabs showed stale states; refreshed inventories supersede them.",
+    "Apple lookup KR for four omitted IDs returned zero; this is not proof of global unavailability. No new iOS download links added.",
+    "Public Google developer page exposed 10 packages, while account has 13; public publisher listing alone is incomplete.",
+    "No currently listed discontinued state observed. Historical removed apps are not proven absent.",
+    "No store mutation, credentials, invitation, submission, simulator, main merge or production deploy."
+  ]
+}

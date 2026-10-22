@@ -33,7 +33,7 @@ Each new icon URL is keyed to downloaded source SHA-256; `app-icons.json` record
 * Google Play names, links, public descriptions and icons were observed; current Android version numbers were not reliably extracted. Older explicitly dated Android snapshots are preserved, never relabeled as newly verified or inferred from iOS.
 * Focus storefront version disagreement is retained in the receipt. No claim that KR had 1.2.1 is made.
 * Legion's lack of a verified store result does not prove nonexistence. No speculative URL was created.
-* The publisher's Sudoku listing is outside this homepage's ten exposed catalog products; no new product page was invented.
+* Correction: the initial ten-product scope was incomplete. The authenticated account reconciliation below supersedes that scope.
 * Detailed existing app landing feature sets were not exhaustively exercised. This work refreshes the company catalog and verified identity/release facts, plus the newly discovered Dialogos launch. Medical/legal policy pages remain unchanged.
 
 ## Verification
@@ -57,3 +57,34 @@ PIRATE local in-app browser: final build served only at `http://127.0.0.1:4326`.
 200% used a test-only copy of final generated HTML under ignored `dist/qa-200`, overriding only `html { font-size:200%!important }`; computed root size was 32px. It is not shipped source and is not claimed as a physical-device or browser-zoom test. A viewport update initially returned the previous JA width; the exact JA 320px cell was remeasured and recorded. Screenshot inspection sampled KO desktop/mobile, EN large/light, JA desktop and JA 200%; DOM measurements cover the stated matrix. Full WCAG/contrast audit, screen-reader testing, all detailed routes and real devices remain unverified, so this is a **draft for review, not production release approval**.
 
 Evidence is preserved locally under `evidence/`: `before-desktop.jpg`, `before-mobile.jpg`, `after-desktop.jpg`, `after-desktop-full.jpg`, `after-mobile.jpg`, `after-en-large-light.jpg`, `after-ja-200.jpg`, `final-built-matrix.json`, `responsive-200-built.json`, raw public responses and build/test logs. Before/after use 1280×900 desktop and 375×812 mobile; scroll positions differ to show the changed catalog. No operating-system or shared browser preferences were changed; preferences only applied to these localhost origins.
+
+## Corrected account-wide audit (supersedes initial ten-app scope)
+
+PIRATE local Chrome profile `pifl-labs.com` was selected from the enabled profile inventory. Existing signed-in App Store Connect (PiFl Labs Co., Ltd.) and Play Console (PiFl Labs, 8852533891626306957) were read without credential or permission changes. Initially open tabs were stale: refreshing changed Sudoku from internal testing to production. One Apple tab stalled at sign-in loading; the other existing Apple tab successfully navigated to a newly loaded Apps grid. These refreshed results are authoritative for this receipt.
+
+Apple: **14** current listed apps (7 latest versions ready, 5 in review, 2 preparing submission). Play: **13** current listed apps (11 production, 2 internal testing; Kkachi changes in review). **Intersection 13, union 14; Apple-only Legion, no Play-only app.** Apple latest-submission status does not establish the availability of an older release. No discontinued state is in the current lists; historical deleted apps are not proven absent.
+
+| App key | Apple ID / latest submission | Play status |
+|---|---|---|
+| focus | 6762258878: 1.2.1 ready | production |
+| draw | 6779071131: 1.2.2 waiting for review | production |
+| wordvoyage | 6788949612: 1.1.0 ready | production |
+| hello | 6777299814: 1.0.10 ready | production |
+| words | 6770267735: 1.0.14 waiting for review | production |
+| dday | 6770268950: 1.1.5 ready | production |
+| log | 6770272665: 1.0.12 ready | production |
+| thus | 6780508628: 1.0.3 ready | production |
+| bridge | 6801205183: 1.0.2 ready | production |
+| tide | 6820126418: 1.1.2 waiting for review | production |
+| sudoku | 6820125053: 1.0.0 waiting for review | production |
+| kkachi | 6824772783: 1.0.0 waiting for review | internal testing; changes in review |
+| sky | 6797726159: 1.0 prepare for submission | internal testing |
+| legion | 6791804605: 1.0 prepare for submission | not in account list |
+
+Missing from the original homepage: **Tide Friend, Cell by Cell Sudoku, Kkachi, Skydaze**. Added all four, including 12 localized landing pages. Tide and Sudoku have confirmed public Android listings and production console status; only Android download buttons are exposed. Kkachi and Skydaze remain preparing/testing with no download buttons. Skydaze's former name PiPi Sky is retained for recognition. Google Sudoku's current console name is Cell by Cell Sudoku; public names are 한칸씩 스도쿠 / ひとマスずつナンプレ / Cell by Cell Sudoku.
+
+Public KO/JA/EN Play listings supply the two new released apps' names, concise descriptions, icons and first screenshots. Unreleased icons come from the official local app repositories (read-only), with source hashes in `app-icons.json`; they are not described as released store icons. No new images were generated. Apple public lookup returned no KR matches for the four omitted IDs, so no unverified iOS link/version was added. Both public developer pages were checked as supplementary evidence: the Play developer page alone listed only 10 packages and omitted Tide despite its live direct page.
+
+Full normalized counts, states, public asset URLs and caveats: `homepage-account-inventory-20261023.json`. Local private console evidence is in ignored `evidence/apple-account-inventory.txt` and `evidence/play-account-inventory.txt` (Play metrics excluded). No account financial data is committed.
+
+Corrected-scope validation: `npm run build` PASS (160 pages); `npm test` PASS (515 tests, zero failures/skips); `npm run test:built` PASS (45 localized pages, 180 store links). The first expanded build caught an assumption that every live app had a recorded version; release history now includes only apps with verified version receipts. Platform validation now checks actual available platform counts. No version was invented for Tide or Sudoku. PIRATE local in-app browser: 30 layout checks (3 languages × 5 widths × normal/200% root font size), 14 cards, zero horizontal overflow/clipped cards/buttons. This is CSS font enlargement, not an OS accessibility or browser-zoom test. Desktop and mobile added-card screenshots and the Sudoku mobile landing were visually inspected. Earlier theme checks apply to unchanged styling; the expanded matrix did not repeat every theme combination. Production deployment remains unapproved.
