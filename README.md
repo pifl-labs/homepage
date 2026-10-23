@@ -13,10 +13,11 @@ This repository contains the company marketing website, not the Flutter app sour
 
 ### Ten apps: official store links
 
-Ten product listings checked on 17 October 2026. These links use the Korean
-storefront: eight App Store listings and two Google Play listings. They are not
-a complete list of each app's supported platforms. Check the linked store for
-current availability, device requirements, ads and purchases.
+The original ten-product Korean-storefront snapshot was checked on 17 October
+2026. Dialogos's App Store listing was additionally checked on 23 October 2026,
+bringing this table to nine App Store links and two Google Play links. This is
+not a complete list of each app's supported platforms. Check the linked store
+for current availability, device requirements, ads and purchases.
 
 The English phrases describe each app's purpose; they are not new store names.
 
@@ -31,7 +32,7 @@ The English phrases describe each app's purpose; they are not new store names.
 | D-Day and anniversary widgets — 그날까지: 디데이·기념일 위젯 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4) |
 | Weather-themed mood journal — 기분 한 칸: 날씨 감정일기 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4) |
 | High and low tide information — 물때친구 - 만조 간조 물때표 위젯 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
-| AI philosophical dialogue — Dialogos: 철학자와의 대화 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
+| AI philosophical dialogue — Dialogos: 철학자와의 대화 | [App Store (Korea)](https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
 
 ### App portfolio (PDF)
 
