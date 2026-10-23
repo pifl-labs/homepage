@@ -17,3 +17,13 @@ Downloads: earlier HTTP client returned 403; not interpreted as missing files. C
 Release gate: draft review only. No main merge or production deployment. Do not equate local build success with all matrix cells or external download availability.
 
 Follow-up local QA: KO/EN/JA at 320/375/768/1280/1920 each measured at the actual requested viewport, horizontal overflow false for all 15 cells. KO 320px built-page fixture with html font-size 32px (200%) preserved filter operation and width; EN 320px site 130% and JA desktop 130% visually inspected. KO light desktop and dark mobile cards inspected, including image proportions, line wrapping, link touch targets. Direct filtered hash link initially scrolled before hidden cards settled; client now scrolls after restoring filters. No global release PASS claimed for uninspected combinations.
+
+## Follow-up: filter arrow consistency
+
+Inspected the supplied screenshot pixels and exact c70c4bc Cloudflare preview. The control is a native select, not a summary marker. All three resource selects had appearance:auto, no background image and 9.6px right padding; their page CSS was loaded and browser console had no errors. The archive explicitly styles a 16px chevron. This is inconsistent native styling, not evidence of missing CSS/CSP blocking.
+
+Resource selects now match archive chevrons (16px, 0.8rem inset, 2.4rem reserved text space), surface, strong border and 10px radius. Native semantics remain; forced-colors retains native arrows. No new script or asset request. Home branding typography remains distinct; shared header/body fonts, palette, left-aligned content, cards and link directions were visually compared on home, Focus detail, archive and resources.
+
+Validation: build 166 pages, all 526 tests and built-link checks pass. Actual PIRATE local browser: KO 375px, EN/JA 320px, keyboard Tab with visible 3px focus ring, and 320px/200% font fixture (not OS text scaling): no horizontal overflow; select text and chevron remain separate. Fixture removed. Native OS popup rendering/forced-colors was not cross-platform tested.
+
+Download follow-up completed before this styling change: all 14 PDF/PNG downloads through the allowed browser succeeded and SHA256 matched catalog originals. 11 unique text companions matched rendered text; two activity guides opened. Earlier automated HTTP403 was not treated as missing material.
