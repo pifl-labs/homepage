@@ -3,7 +3,7 @@ import { submissionMedia, submissionCopy } from "../data/app-submission-media";
 import { appIconSrc } from "../data/app-icons.mjs";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
-import DrawPhotoChecklist from './DrawPhotoChecklist.astro';
+import RelatedResources from './RelatedResources.astro';
 import HelloLetterMatch from './HelloLetterMatch.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
@@ -253,44 +253,8 @@ const jsonLd = {
       </section>
     )}
 
-    {app.slug === 'pipi-bridge' && lang === 'en' && (
-      <section class="app-section app-section--bridge-resource" aria-labelledby="bridge-resource-title">
-        <div class="container">
-          <div class="app-bridge-resource">
-            <div>
-              <p class="app-bridge-resource-eyebrow">For parents</p>
-              <h2 id="bridge-resource-title">Try <span class="app-bridge-resource-phrase">“help me”</span> in Korean</h2>
-              <p>A two-minute family activity with free printables. No app or sign-up needed.</p>
-            </div>
-            <a class="app-bridge-resource-link" href="https://pipi-worlds.com/en/learn/korean-school-help-phrase/" hreflang="en">
-              <span>Open activity</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    )}
-
-    {app.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist />}
-
-    {app.slug === 'pipi-words' && lang === 'en' && (
-      <section class="app-section words-recall-resource" id="words-recall-resource" aria-labelledby="words-recall-resource-title">
-        <div class="container">
-          <div class="section-head">
-            <p class="kicker">Free paper practice</p>
-            <h2 class="section-title" id="words-recall-resource-title">One word. Then check.</h2>
-          </div>
-          <div class="app-srclib">
-            <p class="app-srclib-desc">Choose a word you have already studied. Write it without looking, then compare with your own reference.</p>
-            <p class="app-srclib-desc">Free A5 sheet. No app or sign-up needed. Check it yourself. No automatic grading.</p>
-            <div class="app-stores">
-              <a class="btn btn-primary" href="/assets/printables/one-word-recall-card-en.pdf" hreflang="en">Open PDF</a>
-              <a class="btn btn-ghost" href="/assets/printables/one-word-recall-card-en.txt" hreflang="en">Read text</a>
-            </div>
-            <p class="app-srclib-desc">Original PiFl Labs resource. Copy prepared with AI assistance.</p>
-          </div>
-        </div>
-      </section>
-    )}<!-- FINAL CTA -->
+    <RelatedResources lang={lang} app={app.slug} />
+    <!-- FINAL CTA -->
     <section class="app-cta">
       <div class="container">
         <h2 class="app-cta-title">{c.ctaTitle}</h2>

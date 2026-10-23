@@ -1,0 +1,5 @@
+---
+import {resources} from '../data/resources.mjs';import {resourceCopy} from '../data/resource-copy.mjs';
+const {lang,app}=Astro.props;const c=resourceCopy[lang];const items=resources.filter(r=>r.app===app);
+---
+{items.length>0&&<section class="app-section"><div class="container"><h2>{c.title}</h2><p>{c.desc}</p><ul>{items.map(r=><li><a href={`/${lang}/resources/#resource-${r.id}`} style="display:inline-flex;align-items:center;min-height:44px;color:var(--text-primary)">{r.title[lang]} →</a></li>)}</ul></div></section>}
