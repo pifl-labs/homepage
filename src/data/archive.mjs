@@ -1,6 +1,7 @@
+import {extraEvents,extraMedia,extraNames} from './archive-extra.mjs';
 // Public, manually curated archive. Never import console exports or email bodies.
 const l=(ko,ja,en)=>({ko,ja,en});
-export const archiveEvents=[
+export const archiveEvents=[...extraEvents,
  {id:'focus-first-approval',app:'pipi-focus',date:'2026-05-21',timestamp:'2026-05-21T09:41:05Z',kind:'approved',platform:'ios',version:null,observedAt:'2026-10-23',source:'notification',title:l('첫 배포 승인 알림','最初の配信承認通知','First distribution approval notice'),summary:l('당시 PiPi Focus의 승인 알림입니다. 버전은 기재되지 않았으며 실제 첫 공개일은 확인되지 않았습니다.','当時のPiPi Focusの承認通知です。バージョンは未記載で、実際の初公開日は未確認です。','Approval notification for the app then named PiPi Focus. No version was stated; its actual first public release date remains unverified.')},
  {id:'focus-web-20260529',app:'pipi-focus',date:'2026-05-29',kind:'asset',platform:'web',version:null,observedAt:'2026-10-23',source:'git',reference:'0253ac3366b0c9bdda94c417deb6d2c53d2f56bb',title:l('첫 웹 소개 자료','最初のウェブ紹介資料','Early website materials'),summary:l('웹 저장소에 아이콘과 항해 화면이 남아 있습니다. 이 날짜는 Git 기록일이며 앱 공개일이 아닙니다.','アイコンと航海画面がウェブの履歴に残っています。Gitの記録日であり、アプリの公開日ではありません。','The website history preserves an icon and voyage screen. This is a Git record date, not the app’s launch date.')},
  {id:'draw-submitted-10',app:'pipi-draw',date:'2026-07-14',timestamp:'2026-07-14T08:30:00Z',kind:'submitted',platform:'ios',version:'1.0',observedAt:'2026-10-23',source:'notification',title:l('1.0 심사 제출','1.0を審査に提出','Version 1.0 submitted'),summary:l('스토어 알림으로 심사 제출을 확인했습니다. 제출은 공개 출시가 아닙니다.','ストア通知で審査提出を確認しました。提出は公開を意味しません。','A store notification confirms review submission. Submission does not establish public availability.')},
@@ -13,8 +14,8 @@ export const archiveEvents=[
  {id:'focus-121',app:'pipi-focus',date:'2026-10-22',timestamp:'2026-10-22T17:04:30Z',kind:'released',platform:'ios',version:'1.2.1',observedAt:'2026-10-23',source:'public-store',region:'JP · US',title:l('1.2.1과 새로운 등록 화면','1.2.1と新しい掲載画像','Version 1.2.1 and listing images'),summary:l('공개 버전과 공식 스토어 이미지를 보관했습니다. 이미지가 해당 바이너리에서 직접 촬영됐는지는 별도 검증이 필요합니다.','公開バージョンと公式掲載画像を保存。画像がそのバイナリーから直接撮影されたかは別途確認が必要です。','Public version and official listing images were preserved. Direct capture from this exact binary is not independently verified.')},
  {id:'draw-android-122',app:'pipi-draw',date:'2026-10-23',kind:'observed',platform:'android',version:'1.2.2 (52)',observedAt:'2026-10-23',source:'store-check',title:l('Android 공개 배포 확인','Androidの公開配信を確認','Android public release observed'),summary:l('공개 프로덕션 배포를 확인한 날짜입니다. 현재 등록정보의 이전 화면을 새 빌드의 캡처라고 단정하지 않습니다.','公開プロダクション配信を確認した日です。掲載中の以前の画像を新ビルドのキャプチャとは断定しません。','This is the date public production availability was checked. Older listing images are not presented as captures of the new build.')},
 ].sort((a,b)=>b.date.localeCompare(a.date)||a.id.localeCompare(b.id));
-export const archiveApps=['pipi-focus','pipi-draw'];
-export const archiveMedia={
+export const archiveApps=['pipi-focus','pipi-draw',...Object.keys(extraMedia)];
+export const archiveMedia={...extraMedia,
  'pipi-focus':{oldIcon:'/assets/apps/pipi-focus/icon.webp',oldDate:'2026-05-29',oldShot:'/assets/apps/pipi-focus/en/sail.webp',newShot:'/assets/apps/pipi-focus/submission/20261023-1.webp'},
  'pipi-draw':{oldIcon:'/assets/apps/pipi-draw/icon.webp',oldDate:'2026-06-19',oldShot:'/assets/archive/draw-20260930.webp',newShot:'/assets/apps/pipi-draw/submission/20261023-1.webp'}
 };
@@ -31,7 +32,7 @@ for(const event of archiveEvents){
  event.timeBasis=event.kind==='released'?'public-store-update':event.kind==='approved'?'notification-date':event.kind==='submitted'?'submission-time':event.kind==='asset'?'git-record-date':'observation-date';
  if(milestones[event.id])event.milestones=milestones[event.id];
 }
-export const archiveNames={
+export const archiveNames={...extraNames,
  'pipi-focus':['PiPi Focus','PiPi Focus: Pirate Pomodoro','Pomodoro at Sea: Focus Timer'],
  'pipi-draw':['PiPi Draw','PiPi Draw - AI Sketch Coloring','Photo Outlines: Coloring Book']
 };

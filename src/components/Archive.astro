@@ -26,9 +26,9 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
    <label>{c.kind}<select name="kind"><option value="all">{c.any}</option>{Object.entries(c.types).map(([value,label])=><option value={value}>{label}</option>)}</select></label>
    <button type="reset">{c.reset}</button>
   </form>
-  <nav class="archive-shortcuts" aria-label={c.app}>{archiveApps.map(slug=><a href={`?app=${slug}`} data-archive-app={slug}><img src={appIconSrc(slug)} width="28" height="28" alt=""/>{appName(appList.find(a=>a.slug===slug)!,lang)}</a>)}</nav>
+  <nav class="archive-shortcuts" aria-label={c.app}>{archiveApps.slice(0,2).map(slug=><a href={`?app=${slug}`} data-archive-app={slug}><img src={appIconSrc(slug)} width="28" height="28" alt=""/>{appName(appList.find(a=>a.slug===slug)!,lang)}</a>)}</nav>
   {appList.map(app=><section class="archive-app-summary" data-app-summary={app.slug} hidden>
-   <img src={appIconSrc(app.slug)} width="56" height="56" alt=""/><div><h2>{appName(app,lang)}</h2>{!archiveApps.includes(app.slug)&&<><strong>{c.preparing}</strong><p>{c.prepareDesc}</p></>}<a href={`/${lang}/apps/${app.slug}/`}>{c.product} →</a></div>
+   <img src={appIconSrc(app.slug)} width="56" height="56" alt=""/><div><h2>{appName(app,lang)}</h2>{app.status!=='live'&&<><strong>{c.preparing}</strong><p>{c.prepareDesc}</p></>}<a href={`/${lang}/apps/${app.slug}/`}>{c.product} →</a></div>
   </section>)}
   <div class="archive-status"><p role="status" aria-live="polite" data-result-count>{archiveEvents.length} {c.results}</p><a href="/archive-evidence.json" download>{c.evidence} ↓</a></div>
   <p class="archive-date-note">{c.dateNote}</p>
@@ -50,10 +50,17 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
    </section>
    <aside class="archive-exhibits" aria-label={c.assets}>
     <h2>{c.assets}</h2><p>{c.assetNote}</p>
-    {archiveApps.map(slug=>{const media=archiveMedia[slug];return <section class="archive-exhibit" data-media-app={slug}>
-     <h3>{appName(appList.find(a=>a.slug===slug)!,lang)}</h3>
-     <p class="archive-caption">{c.names}</p><ol class="archive-names">{archiveNames[slug].map(name=><li>{name}</li>)}</ol><p class="archive-caption">{c.renameUnknown}</p><h4>{c.icons}</h4><div class="archive-icon-pair"><figure><img src={media.oldIcon} width="64" height="64" alt={`${c.old}: ${appName(appList.find(a=>a.slug===slug)!,lang)}`}/><figcaption>{c.old}<time datetime={media.oldDate}>{media.oldDate}</time></figcaption></figure><figure><img src={appIconSrc(slug)} width="64" height="64" alt={`${c.current}: ${appName(appList.find(a=>a.slug===slug)!,lang)}`}/><figcaption>{c.current}<time datetime="2026-10-23">2026-10-23</time></figcaption></figure></div><p class="archive-caption">{c.unknown}</p>
-     <details class="archive-screen-details" open><summary>{c.screens}</summary><div class="archive-screen-pair"><figure><a href={media.oldShot} target="_blank" rel="noopener"><img src={media.oldShot} width="250" height="541" loading="lazy" alt={c.screenOld}/></a><figcaption>{c.screenOld}</figcaption></figure><figure><a href={media.newShot} target="_blank" rel="noopener"><img src={media.newShot} width="250" height="541" loading="lazy" alt={c.screenNew}/></a><figcaption>{c.screenNew}</figcaption></figure></div><p class="archive-caption">{c.imageNote}</p></details>
+    {archiveApps.map(slug=>{const media=archiveMedia[slug];const name=appName(appList.find(a=>a.slug===slug)!,lang);const featured=['pipi-focus','pipi-draw'].includes(slug);return <section class="archive-exhibit" data-media-app={slug} data-featured={featured?'true':'false'} hidden={!featured}>
+     <h3>{name}</h3>
+     {archiveNames[slug].length>1&&<><p class="archive-caption">{c.names}</p><ol class="archive-names">{archiveNames[slug].map(name=><li>{name}</li>)}</ol><p class="archive-caption">{c.renameUnknown}</p></>}
+     <h4>{c.icons}</h4><div class="archive-icon-pair">
+      {media.oldIcon&&<figure><img src={media.oldIcon} width="64" height="64" alt={`${c.old}: ${name}`}/><figcaption>{c.old}<time datetime={media.oldDate}>{media.oldDate}</time></figcaption></figure>}
+      <figure><img src={appIconSrc(slug)} width="64" height="64" alt={`${media.upcoming?c.official:c.current}: ${name}`}/><figcaption>{media.upcoming?c.official:c.current}<time datetime="2026-10-23">2026-10-23</time></figcaption></figure>
+     </div><p class="archive-caption">{media.oldIcon?c.unknown:c.noOldIcon}</p>
+     {media.newShot?<details class="archive-screen-details" open><summary>{c.screens}</summary><div class:list={['archive-screen-pair',{'archive-screen-single':!media.oldShot}]}>
+      {media.oldShot&&<figure><a href={media.oldShot} target="_blank" rel="noopener"><img src={media.oldShot} width="250" height="541" loading="lazy" alt={c.screenOld}/></a><figcaption>{c.screenOld}</figcaption></figure>}
+      <figure><a href={media.newShot} target="_blank" rel="noopener"><img src={media.newShot} width="250" height="541" loading="lazy" alt={c.screenNew}/></a><figcaption>{c.screenNew}</figcaption></figure>
+     </div><p class="archive-caption">{media.pending?c.pending:c.imageNote}</p>{!media.oldShot&&<p class="archive-caption">{c.noOldScreen}</p>}</details>:<p class="archive-caption">{c.noScreen}</p>}
     </section>})}
    </aside>
   </div>
@@ -61,5 +68,5 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
   <noscript><p>{c.allHistory} — JavaScript: {c.timeline}</p></noscript>
  </div>
 </main>
-<script src="../scripts/archive-client.js"></script>
+<script is:inline type="module" src="/archive-client.js?v=2"></script>
 </BaseLayout>
