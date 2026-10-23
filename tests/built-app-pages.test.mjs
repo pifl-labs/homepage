@@ -15,10 +15,10 @@ function fixture(t, routes) {
   }
   return root;
 }
-test('catalog inventory is nonempty and excludes policy-only Tide', () => {
-  assert.equal(appSlugs.length, 10);
+test('catalog inventory is nonempty and includes formerly omitted Tide', () => {
+  assert.equal(appSlugs.length, 14);
   assert.ok(appSlugs.includes('pipi-draw'));
-  assert.ok(!appSlugs.includes('pipi-tide'));
+  assert.ok(appSlugs.includes('pipi-tide'));
 });
 test('registered app parsing rejects empty and duplicate inventory', () => {
   assert.throws(() => registeredAppSlugs(''), /must not be empty/);

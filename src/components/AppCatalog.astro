@@ -1,4 +1,5 @@
 ---
+import { submissionMedia, submissionCopy } from "../data/app-submission-media";
 import { appIconSrc } from "../data/app-icons.mjs";
 // 홈 앱 카탈로그 — 카드 그리드 + 스토어 직행 링크.
 // 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
@@ -7,6 +8,7 @@ import {
   appList, appName, displayVersion, releaseVersionLabel, formatDate, latestUpdate, previousNameLabels, storeAppName,
   statusLabels, storeLabels, updatedLabels,
 } from '../data/apps';
+import { catalogCopy } from '../data/app-catalog';
 import StoreNameNotice from './StoreNameNotice.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import type { Lang } from '../i18n/ui';
@@ -24,21 +26,21 @@ const copy = {
     title: '작은 함대,',
     titleEm: '이미 바다 위.',
     // 서사 규칙: 제작 주체는 사람, PiPi 는 동행자 (AI 저작 주장은 crew·about 에서만)
-    sub: 'PiPi와 함께 만든 앱들입니다. 코드베이스 하나, 스토어 둘 — 조용하지만 정성껏.',
+    sub: '집중, 그림, 배움, 기록. 지금 하고 싶은 일에 맞는 앱을 골라 보세요.',
     iconAlt: (n: string) => `${n} 아이콘`,
   },
   ja: {
     kicker: '00 / 艦隊',
     title: '小さな艦隊、',
     titleEm: 'もう海の上。',
-    sub: 'PiPiと一緒につくったアプリです。コードベースはひとつ、ストアはふたつ — 静かに、ていねいに。',
+    sub: '集中、お絵描き、学び、記録。今やりたいことに合うアプリを見つけよう。',
     iconAlt: (n: string) => `${n} アイコン`,
   },
   en: {
     kicker: '00 / Fleet',
     title: 'A small fleet,',
     titleEm: 'already at sea.',
-    sub: 'The apps we make with PiPi. One codebase, two stores — quiet, but made with care.',
+    sub: 'Focus, create, learn or reflect. Find the app for what you want to do today.',
     iconAlt: (n: string) => `${n} icon`,
   },
 }[lang];
@@ -54,27 +56,25 @@ const copy = {
     <div class="app-card-grid">
       {appList.map((app) => {
         const name = appName(app, lang);
+        const submitted = submissionMedia(app.slug);
         return (
-          <article class="app-card">
+          <article class:list={["app-card", { "app-card--soon": app.status === "soon" }]}>
             <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
-              <img class="app-card-icon" src={appIconSrc(app.slug)} alt={copy.iconAlt(name)} width="64" height="64" loading="lazy" />
-              <div class="app-card-body">
-                <div class="app-card-head">
+              <img class="app-card-icon" src={appIconSrc(app.slug)} alt="" width="64" height="64" loading="lazy" />
+              <div class="app-card-head">
                   <span class="app-card-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
                   <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
-                </div>
                 {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
+                </div>
+              <div class="app-card-body">
                 <span class="app-card-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
-                <p class="app-card-tag">{lang === 'ja' ? japaneseReadingParts(app.content[lang].tagline.replace(/\n/g, ' '), 'tagline').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.content[lang].tagline.replace(/\n/g, ' ')}</p>
-                {app.release && (
-                  <span class="app-card-rel">
-                    <b>{releaseVersionLabel(app).split(' · ').map((version, i) => <>{i > 0 && ' · '}<span class="app-version-part">{version}</span></>)}</b>
-                    {displayVersion(app) && ' · '}
-                    <span class:list={['app-release-date', { 'app-release-date--split': !displayVersion(app) }]}>{formatDate(latestUpdate(app), lang)} {ul.updated}</span>
-                  </span>
-                )}
+                <p class="app-card-tag">{catalogCopy[app.slug][lang]}</p>
+                <span class="app-card-detail">{({ ko: "앱 자세히 보기", ja: "アプリの詳細", en: "Explore app" })[lang]} <span aria-hidden="true">→</span></span>
               </div>
-              <span class="app-card-go" aria-hidden="true">→</span>
+              {app.status === 'live' && <figure class="app-card-preview">
+                <img src={submitted ? submitted.shots[submitted.previewIndex].src : `/assets/apps/${app.slug}/${lang}/store-preview.webp`} alt="" width="480" height="1040" loading="lazy" />
+                <figcaption>{submitted ? (submitted.pending ? submissionCopy[lang].pending : submissionCopy[lang].short) : ({ ko: '공식 스토어 화면', ja: '公式ストアの画面', en: 'Official store preview' })[lang]}</figcaption>
+              </figure>}
             </a>
 
             {app.status === 'live' && (app.stores.ios || app.stores.android) && (
@@ -96,5 +96,6 @@ const copy = {
         );
       })}
     </div>
+    <p class="app-media-footnote">{submissionCopy[lang].footnote}</p>
   </div>
 </section>

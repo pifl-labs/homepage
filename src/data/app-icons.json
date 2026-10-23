@@ -1,37 +1,67 @@
 {
   "pipi-focus": {
-    "file": "icon-7f2a0ee387d4.webp",
-    "sourceSha256": "7f2a0ee387d47295730cf5570a2be174a59007ffdb32d39d16b0bd85a94e7dba",
-    "webpSha256": "8f103dc3c3f1af3e884deb617158f7085860a27342f4e6dbfe33a316542d27ae"
+    "file": "icon-11fe2a1ebe6f.webp",
+    "sourceSha256": "11fe2a1ebe6fa80a1fa9cfdf44623acc7ba1427d7fe89326f54c09ea1163f314",
+    "webpSha256": "012d75692d7f906ecd2694da10cb032bfeb5c7d98369bb27138eb5c27830cfee"
   },
   "pipi-words": {
-    "file": "icon-89b2d0e16083.webp",
-    "sourceSha256": "89b2d0e16083c5f07fe3c850ebb2d92455f61b71b31406d739540b27e2681291",
-    "webpSha256": "c23c3722b4ca5239f028689e2f3ac044cc329bf6ca63486f3ee4867db26970a3"
+    "file": "icon-1ff7d6ea07bb.webp",
+    "sourceSha256": "1ff7d6ea07bb727f7d5917fd422426ebc9e01921ca5a3e46ced233aba6a6cfde",
+    "webpSha256": "b153315bff56e24d3a7184cddb9ba675dfd9c9d291212d632c632687bf7c0046"
   },
   "pipi-dday": {
-    "file": "icon-29a51e68818b.webp",
-    "sourceSha256": "29a51e68818b5d231cc364a039f23079ad9f7373742febeb3ae24bebae5ce4e0",
-    "webpSha256": "eaae6665c839068ce8bec264e97a63c226860083ea5417356afa494b1fd14141"
+    "file": "icon-e6374c79a9cd.webp",
+    "sourceSha256": "e6374c79a9cdb53121dd0135190c5d72caadbc3128f1a3f610ef2f78dd292c82",
+    "webpSha256": "c048bf27666d1de8542eaca4fd72c894abdb52bd4406aa3ba4cf21ab054845be"
   },
   "pipi-log": {
-    "file": "icon-62e28eb5e981.webp",
-    "sourceSha256": "62e28eb5e9816dea797b2e06f044e781c6b573294426b15b17d3df7be7130c79",
-    "webpSha256": "86954446737d707d8c7a666bdb713e82337da1f77e17ae334cbfa152cf6380da"
+    "file": "icon-20058c149c47.webp",
+    "sourceSha256": "20058c149c47d8f640ab53b8ef16d8946b6a645e79e9ae9f82d9910788f7cc09",
+    "webpSha256": "ef335cb848afff7ec563e5c74839218f4eea757c346181d53b8d93e21378eec8"
   },
   "pipi-draw": {
-    "file": "icon-d8291a9dec75.webp",
-    "sourceSha256": "d8291a9dec757af9e5e88b4de72b43752a2e7052d98357cadcdac1175d674207",
-    "webpSha256": "d26abd1fb784642518f437338c19dd194e063db416419a71c9fbf02914bb06ef"
+    "file": "icon-f9ad53b15c8d.webp",
+    "sourceSha256": "f9ad53b15c8da0c3a40e61fb41302ecfc05b90f3831aa6fefa639367a04725dc",
+    "webpSha256": "49424d84179b3a4cd5f40e66ef86e1f303f2d6f46534b4881d95b2d4c549b757"
   },
   "pipi-word-voyage": {
-    "file": "icon-54881c731423.webp",
-    "sourceSha256": "54881c731423fa1ccfc512b438fe194b8714b1354e4adfc3187174f3fb479764",
-    "webpSha256": "f7d037dd1ff7c8b481e10c9ebd78d08c2f6191bd11adc0f651c450ca0b87b8d8"
+    "file": "icon-7c5921f67636.webp",
+    "sourceSha256": "7c5921f67636c0ee1c2b07c89a8f77472c10da349f18fa30eb01230fac611f61",
+    "webpSha256": "7e514dcc6aa0d03973ebe7e693203969708e9755240e81e01bcec28dc86bd307"
   },
   "pipi-bridge": {
-    "file": "icon-049149375a2e.webp",
-    "sourceSha256": "049149375a2e992d888a018aa4c8e338569e584fa019070df94ec87cb6999038",
-    "webpSha256": "f262047216eb842cd12a466bdf204b92b8c478376608020402c78c95f7d1c82d"
+    "file": "icon-a9f3b88f7639.webp",
+    "sourceSha256": "a9f3b88f7639803c109ececf3db4bad9fd83c669cf445b1c07135c7e0cb0e6de",
+    "webpSha256": "826c9db98d75ef482fd434b7c34fe98003305cba950af8d726e099c740d34def"
+  },
+  "pipi-hello": {
+    "file": "icon-6769cb395ede.webp",
+    "sourceSha256": "6769cb395ede14306616f030d3c6d3ed85550d5802efb7f038e14e16ad71d34e",
+    "webpSha256": "056a60bbae63562a9fd7789039cffb6f027aba0eb9775acd48381a1861a64135"
+  },
+  "dialogos": {
+    "file": "icon-b3a537bd0068.webp",
+    "sourceSha256": "b3a537bd0068caade872b6a2b682f2bf3c8ad522602244d00828abb50b91e658",
+    "webpSha256": "5b504b4c066ce19451e810a94f68fa62a54a786cb08e7865e57cf2838c59d4d3"
+  },
+  "pipi-tide": {
+    "file": "icon-6baee6681e8f.webp",
+    "sourceSha256": "6baee6681e8facab205e470669dc917a44c2dc81793d7b902167921497eed3e2",
+    "webpSha256": "b1ec011acc4c178ae9bd0205ac994ede6bd0507432e5c1fdcc065916a44746fc"
+  },
+  "pipi-sudoku": {
+    "file": "icon-5e2feebecc9e.webp",
+    "sourceSha256": "5e2feebecc9e1b3f889fad0c8b9a8fb0a418f5e9aa98120a28d01713e058d70c",
+    "webpSha256": "869e85947fdf9a735f236d581aee84570b2012e2fbebee6775b42a2b1de77f31"
+  },
+  "kkachi": {
+    "file": "icon-37460f04e72f.webp",
+    "sourceSha256": "37460f04e72f1f1ed0f468e054045a2d452fa8a96618649684a0d41d23ce234e",
+    "webpSha256": "f696684f272ea6eb4d1032a7e99d1afada1aea3005e5a268f3d8ea347cfb0857"
+  },
+  "pipi-sky": {
+    "file": "icon-ce443f32bfc2.webp",
+    "sourceSha256": "ce443f32bfc23752861733aae78776b2faddb74d62594f4f79b18467ca78f95f",
+    "webpSha256": "d6478c28efd90d9773a2cd0a80ed87b3656e4910766a144f0ddc26d054163d09"
   }
 }

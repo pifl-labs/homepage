@@ -1,0 +1,266 @@
+[
+  {
+    "app": "pipi-bridge",
+    "path": "/assets/apps/pipi-bridge/icon.webp",
+    "sha256": "ad42ae034d4667ac0848806805d5c4858b6f8fd965c5f371e463a5631686de80",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-bridge",
+    "path": "/assets/apps/pipi-bridge/submission/20261023-1.webp",
+    "sha256": "6c7633338a342a44cc22816480021f1cde0cf072f653ca28cc77d609ba339c42",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-bridge",
+    "path": "/assets/apps/pipi-bridge/icon-a9f3b88f7639.webp",
+    "sha256": "826c9db98d75ef482fd434b7c34fe98003305cba950af8d726e099c740d34def",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-word-voyage",
+    "path": "/assets/apps/pipi-word-voyage/icon.webp",
+    "sha256": "f96bd5d1b9c37d0ac28eb876f2437322ea42e3fcf4e0d4783794f2bd55a7f851",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-word-voyage",
+    "path": "/assets/apps/pipi-word-voyage/en/game.webp",
+    "sha256": "515a257dfed56dc49db689b4a3b97c5741108ea6a07f54201657668ec777846a",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-word-voyage",
+    "path": "/assets/apps/pipi-word-voyage/submission/20261023-1.webp",
+    "sha256": "081618f377575571b43371b197b94e778d5e4371aa81bedb8a56399a6c1f58f0",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-word-voyage",
+    "path": "/assets/apps/pipi-word-voyage/icon-7c5921f67636.webp",
+    "sha256": "7e514dcc6aa0d03973ebe7e693203969708e9755240e81e01bcec28dc86bd307",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-hello",
+    "path": "/assets/apps/pipi-hello/icon.webp",
+    "sha256": "4874e84c7eb891c2e3225755d131ea10312abd21829b5099dfbce162a8198d6d",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-hello",
+    "path": "/assets/apps/pipi-hello/en/home.webp",
+    "sha256": "7268ecc92636da64066f8a50a83664f83b9a8145ab48e7229e21003af0bd5d23",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-hello",
+    "path": "/assets/apps/pipi-hello/submission/20261023-1.webp",
+    "sha256": "4e358e5b5f3fb2b21d19e99465ca1d38af6c6e778ccb68fce2ca7c935263ce0c",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-hello",
+    "path": "/assets/apps/pipi-hello/icon-6769cb395ede.webp",
+    "sha256": "056a60bbae63562a9fd7789039cffb6f027aba0eb9775acd48381a1861a64135",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-words",
+    "path": "/assets/apps/pipi-words/icon.webp",
+    "sha256": "173f50492afd6cb2f120e15d46df2b5f5222d802cd3f3f99a27038657be918ba",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-words",
+    "path": "/assets/apps/pipi-words/en/home.webp",
+    "sha256": "4dc4683e764008bf9dc1bb974a13a96f2f20c4d458f708c558921bd08ed825ee",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-words",
+    "path": "/assets/apps/pipi-words/submission/20261023-1.webp",
+    "sha256": "fb63c1204dd86e8b8de4819c690994585a257e686850517f88d5f04c818e58c0",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-words",
+    "path": "/assets/apps/pipi-words/icon-1ff7d6ea07bb.webp",
+    "sha256": "b153315bff56e24d3a7184cddb9ba675dfd9c9d291212d632c632687bf7c0046",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-dday",
+    "path": "/assets/apps/pipi-dday/icon.webp",
+    "sha256": "345ef70b2315c56ac2c6e7d7830406c42186b6a80b234dcd340f5a7c2fe009b2",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-dday",
+    "path": "/assets/apps/pipi-dday/en/home.webp",
+    "sha256": "bcbe5c0e7a1ea99a97523ebca15de41ed9d10150bfb90648e83d88d6d6b17c91",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-dday",
+    "path": "/assets/apps/pipi-dday/submission/20261023-1.webp",
+    "sha256": "daa5e73b2ffa945cba34a06930551e8ce31c3a6b73555fb8e3bb199b183f9ab5",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-dday",
+    "path": "/assets/apps/pipi-dday/icon-e6374c79a9cd.webp",
+    "sha256": "c048bf27666d1de8542eaca4fd72c894abdb52bd4406aa3ba4cf21ab054845be",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-log",
+    "path": "/assets/apps/pipi-log/icon.webp",
+    "sha256": "658698dd87078843d446eb606450161e35b0260958280c2f85ecb08b876d69c4",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-log",
+    "path": "/assets/apps/pipi-log/en/home.webp",
+    "sha256": "10418b0dab6b5d38614adecb1b79fce27a88e42616d33aba61809b3550c80ae9",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-log",
+    "path": "/assets/apps/pipi-log/submission/20261023-1.webp",
+    "sha256": "b01fada45a3dc9d74d0ba7d3b554da3254dba4bb80b3134bb8bee012599d2197",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-log",
+    "path": "/assets/apps/pipi-log/icon-20058c149c47.webp",
+    "sha256": "ef335cb848afff7ec563e5c74839218f4eea757c346181d53b8d93e21378eec8",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "dialogos",
+    "path": "/assets/apps/dialogos/icon.webp",
+    "sha256": "534c37970aa15f4653fcc61749ecfae8726b2fdd92cc58671cf6c2c9e9cb1ddc",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "dialogos",
+    "path": "/assets/apps/dialogos/en/home.webp",
+    "sha256": "86fa88fcaa9965590471559af7a68d6a8eb9c3d86851f80ff76b14c96ac18bcb",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "dialogos",
+    "path": "/assets/apps/dialogos/submission/20261023-1.webp",
+    "sha256": "071b1980d0717e98eca938384de3e856fbae2dbd716b67ad7cb0919a2ec9fb60",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "dialogos",
+    "path": "/assets/apps/dialogos/icon-b3a537bd0068.webp",
+    "sha256": "5b504b4c066ce19451e810a94f68fa62a54a786cb08e7865e57cf2838c59d4d3",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-tide",
+    "path": "/assets/apps/pipi-tide/submission/20261023-1.webp",
+    "sha256": "8760fb97e65f0134a3a529532d0785a962451fd1bc638e501bf1b6db740a9a18",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-tide",
+    "path": "/assets/apps/pipi-tide/icon-6baee6681e8f.webp",
+    "sha256": "b1ec011acc4c178ae9bd0205ac994ede6bd0507432e5c1fdcc065916a44746fc",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-sudoku",
+    "path": "/assets/apps/pipi-sudoku/submission/20261023-1.webp",
+    "sha256": "b7e9145bcefa42c45828e322e741b2c8bab921a08293ac90d1e850b86905a0ef",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-sudoku",
+    "path": "/assets/apps/pipi-sudoku/icon-5e2feebecc9e.webp",
+    "sha256": "869e85947fdf9a735f236d581aee84570b2012e2fbebee6775b42a2b1de77f31",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "kkachi",
+    "path": "/assets/apps/kkachi/submission/20261023-1.webp",
+    "sha256": "80709a32c944f83276f90ea846afca97fe5ebcfe57e7681830d190ef1c1fa7c0",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "kkachi",
+    "path": "/assets/apps/kkachi/icon-37460f04e72f.webp",
+    "sha256": "f696684f272ea6eb4d1032a7e99d1afada1aea3005e5a268f3d8ea347cfb0857",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-sky",
+    "path": "/assets/apps/pipi-sky/icon-ce443f32bfc2.webp",
+    "sha256": "d6478c28efd90d9773a2cd0a80ed87b3656e4910766a144f0ddc26d054163d09",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-legion",
+    "path": "/assets/apps/pipi-legion/icon.webp",
+    "sha256": "4153ba9b563cb4d4e5b48b1410501af0feb0454cb812f935d55a47d6f4cbf37f",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-legion",
+    "path": "/assets/apps/pipi-legion/icon.webp",
+    "sha256": "4153ba9b563cb4d4e5b48b1410501af0feb0454cb812f935d55a47d6f4cbf37f",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/icon.webp",
+    "sha256": "a82f75017469ac244d79bb2c8492c8a79cfc3d6f17236a1ac547894e5b8c7f50",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/en/sail.webp",
+    "sha256": "39d4143190556ae4413bf082751ee4678e6ff9d1cb04489d8b9ad6d2bb0d3fda",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/submission/20261023-1.webp",
+    "sha256": "0aadd23015bd8cb2d9d522008363ea1699889be3b05730475883ce28160d7daf",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/icon-11fe2a1ebe6f.webp",
+    "sha256": "012d75692d7f906ecd2694da10cb032bfeb5c7d98369bb27138eb5c27830cfee",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/apps/pipi-draw/icon.webp",
+    "sha256": "43035fd8adb8fa3a8895f521b0b07e4c35d60518a9b0efe504cf7c97597f01a8",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/archive/draw-20260930.webp",
+    "sha256": "c5c68b6d7f6db5ec2a55b854b0e54f8676725e35ce544a56b646851690306c04",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/apps/pipi-draw/submission/20261023-1.webp",
+    "sha256": "4edce11456909b06a7b43b399c1717b41056a193d47086ae4b12057075c3ef39",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/apps/pipi-draw/icon-f9ad53b15c8d.webp",
+    "sha256": "49424d84179b3a4cd5f40e66ef86e1f303f2d6f46534b4881d95b2d4c549b757",
+    "versionAssociation": "unverified"
+  }
+]

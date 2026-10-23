@@ -1,0 +1,22 @@
+---
+import {archiveJourneys} from '../data/archive-journeys.mjs';
+import {appList,appName} from '../data/apps';
+import {appIconSrc} from '../data/app-icons.mjs';
+import type {Lang} from '../i18n/ui';
+const {lang}=Astro.props as {lang:Lang};
+const copy={
+ ko:{title:'기능은 어떻게 달라졌을까요?',note:'앱을 선택해 변화의 흐름을 비교하세요. 버전 문서의 변경과 공개 확인은 구분합니다. 연도·플랫폼·종류 필터는 아래 사건 기록에 적용됩니다.',steps:['시작 기준','주요 변화','최근 변화'],sources:'문서와 확인 범위',pending:'공개 기능 이력 확인 중',version:'버전 문서 기준 · 공개일 아님',docs:'문서',intro:'소개 문서',observed:'공개 관측',public:'공개 기록',candidate:'후보',submitted:'제출 문서'},
+ ja:{title:'機能はどう変わった？',note:'アプリを選んで変化を比較できます。バージョン資料と公開確認は区別しています。年・OS・種類の絞り込みは下の出来事に適用されます。',steps:['出発点','主な変化','最近の変化'],sources:'資料と確認範囲',pending:'公開機能の履歴を確認中',version:'バージョン資料の比較・公開日ではありません',docs:'資料',intro:'紹介資料',observed:'公開観測',public:'公開記録',candidate:'候補',submitted:'提出資料'},
+ en:{title:'How did the features evolve?',note:'Select apps to compare their journeys. Version notes and verified releases are distinct. Year, platform and type filters apply to the event records below.',steps:['Starting point','Major change','Recent change'],sources:'Sources and limits',pending:'Public feature history unverified',version:'Version-document comparison, not release dates',docs:'notes',intro:'intro notes',observed:'public observation',public:'public record',candidate:'candidate',submitted:'submission notes'}
+}[lang];
+const version=(v:string)=>v.replaceAll('소개 문서',copy.intro).replaceAll('제출 문서',copy.submitted).replaceAll('공개 관측',copy.observed).replaceAll('공개 기록',copy.public).replaceAll('후보',copy.candidate).replaceAll('관측',copy.observed).replaceAll('문서',copy.docs);
+---
+<section class="archive-journeys" aria-labelledby="journey-title">
+ <h2 id="journey-title">{copy.title}</h2><p class="journey-note">{copy.note}</p>
+ {appList.map(app=>{const item=archiveJourneys.find(x=>x.app===app.slug)!;return <details class="archive-journey" data-journey-app={app.slug}>
+  <summary><img src={appIconSrc(app.slug)} alt="" width="28" height="28"/><span>{appName(app,lang)}</span><small>{item.stages.length?`${item.stages.length} · ${copy.steps.join(' → ')}`:copy.pending}</small></summary>
+  {item.stages.length>0&&<><p class="journey-note">{copy.version}</p><ol class="journey-stages">{item.stages.map((stage,i)=><li><span class="journey-step">{copy.steps[item.stages.length===2&&i===1?2:i]}</span><h3>{version(stage.version)}</h3><p>{stage.text[lang]}</p></li>)}</ol></>}
+  <p class="journey-limit">{item.limit[lang]}</p>
+  <details class="journey-sources"><summary>{copy.sources}</summary><ul>{item.sources.map(source=><li><code>{source.path}</code>{source.commit&&<span> · Git {source.commit.slice(0,8)}</span>}</li>)}</ul></details>
+ </details>})}
+</section>

@@ -1,0 +1,458 @@
+{
+  "pipi-dday": {
+    "version": "1.1.5 (28)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6770268950/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-dday/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/EfftdYmBR5XZfflZPvSOOw/331x720bb.png",
+        "label": {
+          "ko": "다가오는 일정",
+          "ja": "これからの予定",
+          "en": "Upcoming dates"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-dday/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/BC-w6JFAX2BxT03S3Sqz5Q/331x720bb.png",
+        "label": {
+          "ko": "항해 카운트다운",
+          "ja": "航海カウントダウン",
+          "en": "Voyage countdown"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-dday/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/YcuE7spwd6SVQ4Ib6qfR1g/331x720bb.png",
+        "label": {
+          "ko": "일정 꾸미기",
+          "ja": "予定のカスタマイズ",
+          "en": "Customize a date"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-draw": {
+    "version": "1.2.2 (52)",
+    "pending": true,
+    "source": "https://appstoreconnect.apple.com/apps/6779071131/distribution/ios/version/inflight",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-draw/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/OlcH0ZJACX4CRI66YIKnHQ/332x720bb.png",
+        "label": {
+          "ko": "사진에서 색칠 도안으로",
+          "ja": "写真をぬりえに",
+          "en": "Photo to coloring page"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-draw/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/LS-rZq2zAO_2mMgDbadxcQ/332x720bb.png",
+        "label": {
+          "ko": "도안에 색칠하기",
+          "ja": "線画に色を塗る",
+          "en": "Color the outlines"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-draw/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/0UZB0E_KVSwBcD31YjVXRA/332x720bb.png",
+        "label": {
+          "ko": "최근 작업",
+          "ja": "最近の作品",
+          "en": "Recent work"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "dialogos": {
+    "version": "1.0.3 (18)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6780508628/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/dialogos/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/EhaW4DeUh4rv_3mjlpIynQ/331x720bb.png",
+        "label": {
+          "ko": "대화할 철학자 선택",
+          "ja": "対話する哲学者を選ぶ",
+          "en": "Choose a philosopher"
+        }
+      },
+      {
+        "src": "/assets/apps/dialogos/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/9rCIcdpOULZPXj5C0YnYZg/331x720bb.png",
+        "label": {
+          "ko": "원전과 함께 읽기",
+          "ja": "原典とともに読む",
+          "en": "Read with original sources"
+        }
+      },
+      {
+        "src": "/assets/apps/dialogos/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/b0AEzrPHQJWmjGFUB9r35Q/331x720bb.png",
+        "label": {
+          "ko": "질문으로 이어지는 대화",
+          "ja": "問いかけから続く対話",
+          "en": "A dialogue through questions"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-focus": {
+    "version": "1.2.1 (52)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6762258878/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-focus/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/1l8sFocwuNK9KdshY7Xeeg/332x720bb.png",
+        "label": {
+          "ko": "집중 시작",
+          "ja": "集中を始める",
+          "en": "Start focusing"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-focus/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/pORNLF29MzXt5-1pX9ud5Q/332x720bb.png",
+        "label": {
+          "ko": "집중을 위한 소리",
+          "ja": "集中のための音",
+          "en": "Sounds for focus"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-focus/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/qYrgcbtyDhfxOLwCD8CQpA/332x720bb.png",
+        "label": {
+          "ko": "항해와 타이머",
+          "ja": "航海とタイマー",
+          "en": "Voyage and timer"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-words": {
+    "version": "1.0.14 (35)",
+    "pending": true,
+    "source": "https://appstoreconnect.apple.com/apps/6770267735/distribution/ios/version/inflight",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-words/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/XqRrvWAOKK-D82d2ERIUug/332x720bb.png",
+        "label": {
+          "ko": "기억해서 쓰고 비교하기",
+          "ja": "思い出して書き、見比べる",
+          "en": "Recall, write and compare"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-words/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/-LRNsuWVpagHj5527xM7dw/332x720bb.png",
+        "label": {
+          "ko": "단어 학습 시작",
+          "ja": "単語学習を始める",
+          "en": "Start vocabulary practice"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-words/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/DVvzuVZyFP32TQop8qzPqA/332x720bb.png",
+        "label": {
+          "ko": "학습 진도",
+          "ja": "学習の進み具合",
+          "en": "Learning progress"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-bridge": {
+    "version": "1.0.2 (23)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6801205183/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-bridge/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/B27aFTbD5qyLKa88l9LVcw/331x720bb.png",
+        "label": {
+          "ko": "보호자 안내 언어",
+          "ja": "保護者向けの表示言語",
+          "en": "Language for grown-ups"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-bridge/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/Hdt_RypXkFsWEZrGQOZi4A/331x720bb.png",
+        "label": {
+          "ko": "오늘의 배움",
+          "ja": "今日の学び",
+          "en": "Today’s learning"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-bridge/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/imwNQkUc9a5oiTr8MxZTew/331x720bb.png",
+        "label": {
+          "ko": "학습 지도",
+          "ja": "学習マップ",
+          "en": "Learning map"
+        }
+      }
+    ],
+    "previewIndex": 1
+  },
+  "pipi-tide": {
+    "version": "1.1.2 (14)",
+    "pending": true,
+    "source": "https://appstoreconnect.apple.com/apps/6820126418/distribution/ios/version/inflight",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-tide/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/-mFgjp0WIfkyojrn0hHgIA/332x720bb.png",
+        "label": {
+          "ko": "조석과 바다 상태",
+          "ja": "潮と海の様子",
+          "en": "Tide and sea conditions"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-tide/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/u7JSXkSOCYtl7AuhRSmnfg/332x720bb.png",
+        "label": {
+          "ko": "바다 활동 지수",
+          "ja": "海のアクティビティ指数",
+          "en": "Sea activity indices"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-tide/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/OPGAVQp22nmc9jJpP6Wp5w/332x720bb.png",
+        "label": {
+          "ko": "물때 알림",
+          "ja": "潮の通知",
+          "en": "Tide alerts"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-word-voyage": {
+    "version": "1.1.0 (31)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6788949612/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-word-voyage/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/DOwTJ4xjddd-olNLnQ_IOg/332x720bb.png",
+        "label": {
+          "ko": "여정과 게임 모드",
+          "ja": "旅とゲームモード",
+          "en": "Voyage and game modes"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-word-voyage/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/orxFtSWHq3KTfHe32O0UMA/332x720bb.png",
+        "label": {
+          "ko": "낱말 찾기",
+          "ja": "単語探し",
+          "en": "Word search"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-word-voyage/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/KDttBMTAugF2MqEZ0JMnzQ/332x720bb.png",
+        "label": {
+          "ko": "초성 퍼즐",
+          "ja": "初声パズル",
+          "en": "Initial-consonant puzzle"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "kkachi": {
+    "version": "1.0.0 (9)",
+    "pending": true,
+    "source": "https://appstoreconnect.apple.com/apps/6824772783/distribution/ios/version/inflight",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/kkachi/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/tF5ZvJrcmNqXZyuMRxS-3A/331x720bb.png",
+        "label": {
+          "ko": "오늘의 사주 이야기",
+          "ja": "今日の四柱推命",
+          "en": "Today’s fortune"
+        }
+      },
+      {
+        "src": "/assets/apps/kkachi/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/lhRpnIishWgyGBEHopLOgQ/331x720bb.png",
+        "label": {
+          "ko": "올해의 흐름",
+          "ja": "今年の流れ",
+          "en": "Your year ahead"
+        }
+      },
+      {
+        "src": "/assets/apps/kkachi/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/ITk-A0rwIrMSpnnik4OHbQ/331x720bb.png",
+        "label": {
+          "ko": "나의 사주",
+          "ja": "自分の四柱",
+          "en": "Your Four Pillars"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-hello": {
+    "version": "1.0.10 (33)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6777299814/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-hello/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/AQEeKAF7nlRZqJ8cYnbsAg/332x720bb.png",
+        "label": {
+          "ko": "일본어 배움의 시작",
+          "ja": "日本語の学びを始める",
+          "en": "Start learning Japanese"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-hello/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/3tX9fEWIsc0WKprNYmKliA/332x720bb.png",
+        "label": {
+          "ko": "글자 보고 듣기",
+          "ja": "文字を見て聞く",
+          "en": "See and hear a character"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-hello/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/iG_Bj4vTQG7b9iy8Mqi44g/332x720bb.png",
+        "label": {
+          "ko": "획순 따라 쓰기",
+          "ja": "書き順をなぞる",
+          "en": "Trace stroke order"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-log": {
+    "version": "1.0.12 (25)",
+    "pending": false,
+    "source": "https://appstoreconnect.apple.com/apps/6770272665/distribution/ios/version/deliverable",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-log/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/2sIANouv-kEgbxshmTbOJg/332x720bb.png",
+        "label": {
+          "ko": "오늘의 기분",
+          "ja": "今日の気分",
+          "en": "Today’s mood"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-log/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/mFnJPBuhCRmuQzTifr7oOQ/332x720bb.png",
+        "label": {
+          "ko": "월별 기록",
+          "ja": "月ごとの記録",
+          "en": "Monthly journal"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-log/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/Ighds6MUuAX2t-cfSUodFA/332x720bb.png",
+        "label": {
+          "ko": "기분의 변화",
+          "ja": "気分の変化",
+          "en": "Mood trends"
+        }
+      }
+    ],
+    "previewIndex": 0
+  },
+  "pipi-sudoku": {
+    "version": "1.0.0 (11)",
+    "pending": true,
+    "source": "https://appstoreconnect.apple.com/apps/6820125053/distribution/ios/version/inflight",
+    "observedAt": "2026-10-23",
+    "language": "en",
+    "buildVisualVerified": false,
+    "shots": [
+      {
+        "src": "/assets/apps/pipi-sudoku/submission/20261023-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/O48-3zfMAtpqtPKkBBDf0A/331x720bb.png",
+        "label": {
+          "ko": "풀이 힌트",
+          "ja": "解き方のヒント",
+          "en": "Solving hints"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-sudoku/submission/20261023-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/GBxZ2ZnX-bfFZM5VnjfBzg/331x720bb.png",
+        "label": {
+          "ko": "숫자와 메모",
+          "ja": "数字とメモ",
+          "en": "Numbers and notes"
+        }
+      },
+      {
+        "src": "/assets/apps/pipi-sudoku/submission/20261023-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/6H-9MnyPEEqrriLGRpao8g/331x720bb.png",
+        "label": {
+          "ko": "이어 풀기",
+          "ja": "続きを解く",
+          "en": "Continue a puzzle"
+        }
+      }
+    ],
+    "previewIndex": 0
+  }
+}

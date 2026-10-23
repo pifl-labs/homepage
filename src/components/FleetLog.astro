@@ -13,7 +13,7 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 
 // 최신 정비 순 정렬 — "지금 무엇이 움직이고 있나"가 먼저 보이도록.
-const rows = [...liveApps].sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
+const rows = liveApps.filter(app => app.release).sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
 
 // 서로 다른 앱의 관측일을 모두 오늘 확인한 것처럼 보이지 않게 범위로 표시한다.
 const checkedDates = [...new Set(liveApps.flatMap(releaseObservationDates))].sort();
@@ -53,11 +53,9 @@ const copy = {
 ---
 <section class="fleet-log-section" id="fleet">
   <div class="container">
-    <div class="section-head">
-      <div class="kicker">{copy.kicker}</div>
-      <h2 class="section-title">{copy.title} <span class="italic">{copy.titleEm}</span></h2>
-      <p class="section-sub">{copy.sub}</p>
-    </div>
+    <details class="fleet-disclosure">
+      <summary>{({ ko: '마지막으로 확인한 스토어 버전', ja: '最後に確認したストアバージョン', en: 'Last checked store versions' })[lang]}</summary>
+      <p class="section-sub">{({ko:"이 목록은 마지막 확인 상태표입니다. 전체 연혁은 기록관에서 확인하세요.",ja:"この一覧は最後に確認した状態です。過去の歩みは記録館をご覧ください。",en:"This is the last checked status, not a complete version history. Explore the archive for earlier records."})[lang]} <a href={`/${lang}/archive/`}>{({ko:"기록관 보기 →",ja:"記録館へ →",en:"Explore the archive →"})[lang]}</a></p>
 
     <ol class="fleet-log">
       {rows.map((app) => {
@@ -92,5 +90,6 @@ const copy = {
     </ol>
 
     <p class="fleet-note">{copy.noteBefore}{rangeDates.map((date, i) => <>{i > 0 && ' – '}<time datetime={date} style="white-space: nowrap">{formatDate(date, lang)}</time></>)}{copy.noteAfter}</p>
+    </details>
   </div>
 </section>

@@ -1,0 +1,18 @@
+import type { Lang } from '../i18n/ui';
+// Concise public-store summaries. Provenance: docs/release/homepage-app-audit-20261023.json.
+export const catalogCopy: Record<string, Record<Lang, string>> = {
+  'pipi-bridge': { ko: '4~8세 아이의 한국어·한글·수학·학교생활 첫걸음. 부모 도움말은 다섯 언어로.', ja: '4〜8歳の韓国語・ハングル・算数・学校生活の第一歩。保護者向けガイドは5言語。', en: 'Korean, Hangul, early math and school basics for ages 4–8. Parent guidance in five languages.' },
+  'pipi-focus': { ko: '집중 시간을 항해로 바꾸는 포모도로 타이머. 로파이·빗소리와 함께 공부하고 섬을 발견해요.', ja: '集中時間が航海になるポモドーロタイマー。ローファイや雨音と勉強して、島を発見。', en: 'Turn focus sessions into voyages. Study with a Pomodoro timer, lofi and rain sounds, and discover islands.' },
+  'pipi-draw': { ko: '내 사진을 AI 색칠 도안으로 바꾸고 직접 칠해요. 사진 위에 바로 그리기도 가능해요.', ja: '写真をAIでぬりえの下絵にして、自分で彩色。元の写真にそのまま描くことも。', en: 'Turn your photos into AI coloring pages, then color them yourself. Or draw directly on the original photo.' },
+  'pipi-word-voyage': { ko: '한글을 이어 낱말을 완성하는 퍼즐. 숨은 낱말·초성·속담도 시간 제한 없이 즐겨요.', ja: 'ハングルをつないで単語を完成。単語探し・初声・ことわざクイズも時間制限なし。', en: 'Connect Hangul letters into Korean words. Play word searches, initial-consonant and proverb quizzes without a timer.' },
+  'pipi-hello': { ko: '6~8세 어린이의 첫 일본어. 글자를 보고 듣고 따라 쓰는 짧은 놀이 학습.', ja: '6〜8歳のはじめての韓国語。文字を見て、聞いて、なぞる短い遊び学習。', en: 'First Japanese for ages 6–8. See, hear and trace letters in short, playful learning sessions.' },
+  'pipi-words': { ko: 'JLPT·TOPIK 시험 어휘를 익히는 단어장. 간격 반복과 듣기 퀴즈로 복습해요.', ja: 'JLPT・TOPIKの試験語彙を学ぶ単語帳。間隔反復と聞き取りクイズで復習。', en: 'Build JLPT and TOPIK vocabulary with spaced repetition, flashcards and listening quizzes.' },
+  'pipi-dday': { ko: '기념일과 음력 날짜까지 세는 디데이 위젯. 소중한 날이 다가오면 PiPi의 표정도 달라져요.', ja: '記念日や旧暦の日付を数えるカウントダウンウィジェット。その日が近づくとPiPiの表情も変化。', en: 'Count down to anniversaries and lunar dates with home-screen widgets. PiPi reacts as your day gets closer.' },
+  'pipi-log': { ko: '오늘의 기분을 바다 날씨로 남기는 감정일기. 사진·태그·달력으로 마음의 흐름을 돌아봐요.', ja: '今日の気分を海の天気で残す感情日記。写真・タグ・カレンダーで心の変化を振り返る。', en: 'Record your mood as sea weather. Reflect on your days with photos, tags and a calendar.' },
+  'dialogos': { ko: '네 철학자의 관점으로 생각을 돌아보는 AI 대화. 원전 출처를 함께 보며 질문해요. 전문 상담은 아니에요.', ja: '4人の哲学者の視点で考えを深めるAI対話。原典の出典とともに問いかけます。専門的な相談ではありません。', en: 'Explore your questions through AI dialogues with four philosophers and original-source references. Not professional counseling.' },
+  'pipi-legion': { ko: '배를 직접 조종하는 해상 전투 게임을 준비 중이에요. 공개 출시와 기능은 아직 확인되지 않았어요.', ja: '船を自分で操る海戦ゲームを準備中。一般公開と機能はまだ確認できていません。', en: 'A naval combat game in development, built around steering your own ship. Public availability and features are not yet verified.' },
+  "pipi-tide": {"ko": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.", "ja": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。", "en": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android."},
+  "pipi-sudoku": {"ko": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.", "ja": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。", "en": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android."},
+  "kkachi": {"ko": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.", "ja": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。", "en": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released."},
+  "pipi-sky": {"ko": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.", "ja": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。", "en": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released."},
+};

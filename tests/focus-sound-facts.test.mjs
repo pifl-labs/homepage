@@ -6,9 +6,9 @@ const source = readFileSync(new URL('../src/data/apps.ts', import.meta.url),'utf
 const focusText = source.slice(source.indexOf('const focus: AppMeta = '), source.indexOf('\nconst hello: AppMeta'));
 const focus = runInNewContext(focusText.replace('const focus: AppMeta = ','const focus = ')+'\nfocus');
 test('Focus release label follows KR/JP/US public iOS1.1.0 and UTC release date',()=>{
- assert.equal(focus.release.ios.version,'1.1.0');
- assert.equal(focus.release.ios.updated,'2026-10-15');
- assert.equal(focus.release.ios.checkedAt,'2026-10-16');
+ assert.equal(focus.release.ios.version,'1.2.0');
+ assert.equal(focus.release.ios.updated,'2026-10-19');
+ assert.equal(focus.release.ios.checkedAt,'2026-10-23');
  assert.equal(focus.release.checkedAt,'2026-09-30');
  assert.equal(focus.release.android,undefined,'do not infer an Android release');
 });

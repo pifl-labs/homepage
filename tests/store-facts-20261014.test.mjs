@@ -4,6 +4,7 @@ import { test } from 'node:test';
 
 const source = readFileSync(new URL('../src/data/apps.ts', import.meta.url), 'utf8');
 const receipt = JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261014.json', import.meta.url), 'utf8'));
+const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261023.json', import.meta.url), 'utf8'));
 const variables = { 'com.pifl.pipi.dday': 'dday', 'com.pifl.pipi.draw': 'draw', 'com.pifl.pipi.bridge': 'bridge' };
 const block = (v) => source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 
@@ -11,7 +12,8 @@ for (const [bundle, v] of Object.entries(variables)) {
   test(`${bundle}: iOS version, UTC release day and observation day come from the 2026-10-14 receipt`, () => {
     const r = receipt.ios[bundle];
     assert.ok(block(v), `${v} block exists`);
-    assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.updatedUTC}', checkedAt: '${r.observedKSTDay}' }`));
+    const latest = current.find(a=>a.android.en.url.includes(bundle)).ios.ko;
+    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-10-23' }`));
     for (const bound of r.releaseBoundsUTC) assert.ok(bound.startsWith(r.updatedUTC), `${bundle}: every release bound stays on ${r.updatedUTC} UTC`);
   });
 }

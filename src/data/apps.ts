@@ -64,6 +64,7 @@ export interface AppMeta {
   /** 출시 앱만 — 스토어 실측 버전·업데이트일. 카드/랜딩/구조화 데이터가 공유하는 SSOT. */
   release?: AppRelease;
   /** hero 대표 스크린샷 file 명. 스크린샷이 아직 없는 '출시 예정' 앱은 생략한다. */
+  privacyPath?: string | null;
   heroShot?: string;
   content: Record<Lang, AppContent>;
 }
@@ -103,9 +104,9 @@ const focus: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
   release: {
-    // App Store KR/JP/US 공개 확인 2026-10-16. updated는 공식 release timestamp의 UTC 날짜.
-    ios: { version: '1.1.0', updated: '2026-10-15', checkedAt: '2026-10-16' },
-    since: '2026-05-15',
+    // 2026-10-23: KR returned 1.2.0; JP/US returned 1.2.1. Keep the conservative KR snapshot; see the audit receipt.
+    ios: { version: '1.2.0', updated: '2026-10-19', checkedAt: '2026-10-23' },
+    // First release date unverified: May 15 was a review receipt, not launch.
     checkedAt: '2026-09-30',
   },
   heroShot: 'sail',
@@ -198,9 +199,9 @@ const hello: AppMeta = {
     ios: 'https://apps.apple.com/app/id6777299814',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.hello',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
+  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
   release: {
-    ios: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-08' },
+    ios: { version: '1.0.10', updated: '2026-10-18', checkedAt: '2026-10-23' },
     since: '2026-06-24',
     checkedAt: '2026-09-30',
   },
@@ -251,7 +252,7 @@ const hello: AppMeta = {
       ],
     },
     en: {
-      tagline: "A child's first Japanese,\nlearned through play.",
+      tagline: "Learn and play,\none kana at a time.",
       lede: 'A first Japanese for kids aged 6–8. From hiragana and katakana to basic words and greetings, learned by recall with letter cards and listening games. No ads, no account, fully on device.',
       metaDesc: 'A first Japanese for kids 6–8. Hiragana, katakana, first words and greetings through play. No ads, no data collected, 100% on-device with a parental gate.',
       shotsTitle: 'From letters to a first hello',
@@ -291,9 +292,9 @@ const words: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-words-jlpt-topik-vocab/id6770267735',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
+  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
   release: {
-    ios: { version: '1.0.12', updated: '2026-10-05', checkedAt: '2026-10-08' },
+    ios: { version: '1.0.12', updated: '2026-10-05', checkedAt: '2026-10-23' },
     since: '2026-05-29',
     checkedAt: '2026-09-30',
   },
@@ -386,7 +387,7 @@ const dday: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday',
   },
   release: {
-    ios: { version: '1.1.5', updated: '2026-10-13', checkedAt: '2026-10-14' },
+    ios: { version: '1.1.5', updated: '2026-10-13', checkedAt: '2026-10-23' },
     since: '2026-06-02',
     checkedAt: '2026-09-30',
   },
@@ -437,7 +438,7 @@ const dday: AppMeta = {
       ],
     },
     en: {
-      tagline: 'Every moment is a voyage toward your destination.',
+      tagline: 'Count down to your next big day.',
       lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
       metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free to download. Offers in-app purchases.',
       shotsTitle: 'The moment days become a voyage',
@@ -478,9 +479,9 @@ const log: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-log/id6770272665',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.log',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
+  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
   release: {
-    ios: { version: '1.0.11', updated: '2026-10-05', checkedAt: '2026-10-08' },
+    ios: { version: '1.0.12', updated: '2026-10-19', checkedAt: '2026-10-23' },
     android: { version: '1.0.11', updated: '2026-10-04', checkedAt: '2026-10-08' },
     since: '2026-06-09',
     checkedAt: '2026-09-27',
@@ -557,13 +558,16 @@ const log: AppMeta = {
 };
 
 // Dialogos — 스토아 철학 대화 앱 (PiPi 라인과 별개 브랜드). 콘텐츠 SSOT = pipi_thus/docs/{SPEC,release/STORE-METADATA,legal/*}.
-// 미출시 → status 'soon'. 출시 시 status 'live' + stores URL 추가.
+// Public Apple KR/JP/US and Google Play KO/JA/EN verified 2026-10-23.
 const dialogos: AppMeta = {
   slug: 'dialogos',
-  name: 'Dialogos',
-  status: 'soon',
+  name: 'Dialogos: Stoic Dialogues',
+  nameByLang: { ko: 'Dialogos: 철학자와의 대화', ja: 'Dialogos: 賢者との対話' },
+  schemaCategory: 'LifestyleApplication',
+  status: 'live',
   category: { ko: '라이프스타일 · 철학', ja: 'ライフスタイル · 哲学', en: 'Lifestyle · Philosophy' },
-  stores: {},
+  stores: { ios: 'https://apps.apple.com/app/id6780508628', android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.thus' },
+  release: { ios: { version: '1.0.3', updated: '2026-10-22', checkedAt: '2026-10-23' }, checkedAt: '2026-10-23' },
   heroShot: 'home',
   content: {
     ko: {
@@ -572,8 +576,8 @@ const dialogos: AppMeta = {
       metaDesc: '스토아 철학자와 1:1로 대화하는 앱. 마르쿠스·세네카·에픽테토스·소크라테스가 원전에 근거해 답하고 출처를 함께 보여줍니다. 광고·계정 없음.',
       shotsTitle: '현자와 마주 앉는 순간',
       featuresTitle: '왜 Dialogos 인가',
-      ctaTitle: '곧 대화를 시작합니다',
-      ctaSub: 'App Store · Google Play 출시 준비 중.',
+      ctaTitle: '오늘의 질문으로 시작하세요',
+      ctaSub: '하루 30회 무료 대화. 추가 깊은 대화와 Pro 구독은 선택 구매.',
       shots: [
         { file: 'home',          label: '고대의 현자와 마주 앉다', desc: '마르쿠스·세네카·에픽테토스·소크라테스 중 오늘의 상대를 고릅니다.' },
         { file: 'chat_marcus',   label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
@@ -583,7 +587,7 @@ const dialogos: AppMeta = {
       features: [
         { icon: 'fa-feather',     title: '네 명의 현자',     desc: '명상록·편지·엥케이리디온·대화편 — 각자의 목소리로 답합니다.' },
         { icon: 'fa-quote-right', title: '원전 근거 인용',   desc: '명언 붙여넣기가 아니라, 답변마다 퍼블릭 도메인 출처를 표기.' },
-        { icon: 'fa-ban',         title: '광고·추적 없음',   desc: '광고도 계정도 없고, 대화 내용은 서버에 저장하지 않습니다.' },
+        { icon: 'fa-ban',         title: '광고·계정 없음',   desc: '대화 기록은 기기에 저장됩니다. AI 답변에는 인터넷과 외부 처리가 필요합니다.' },
         { icon: 'fa-language',    title: 'ja · ko · en 네이티브', desc: '번역이 아닌 시장별 네이티브 톤으로 대화합니다.' },
       ],
     },
@@ -593,8 +597,8 @@ const dialogos: AppMeta = {
       metaDesc: 'ストア派の賢者と一対一で対話するアプリ。マルクス・セネカ・エピクテトス・ソクラテスが原典に基づいて答え、出典を添えて示します。広告・アカウントなし。',
       shotsTitle: '賢者と向き合う瞬間',
       featuresTitle: 'Dialogos を選ぶ理由',
-      ctaTitle: 'まもなく対話を始めます',
-      ctaSub: 'App Store · Google Play で公開準備中。',
+      ctaTitle: '今日の問いから始めよう',
+      ctaSub: '1日30回まで無料。深い対話の追加購入とProの購読は任意。',
       shots: [
         { file: 'home',          label: '古代の賢者と向き合う', desc: 'マルクス・セネカ・エピクテトス・ソクラテスから今日の相手を選ぶ。' },
         { file: 'chat_marcus',   label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
@@ -604,7 +608,7 @@ const dialogos: AppMeta = {
       features: [
         { icon: 'fa-feather',     title: '四人の賢者',       desc: '自省録・手紙・提要・対話篇——それぞれの声で答えます。' },
         { icon: 'fa-quote-right', title: '原典に基づく出典', desc: '名言の貼り付けではなく、返答ごとにパブリックドメインの出典を表示。' },
-        { icon: 'fa-ban',         title: '広告・トラッキングなし', desc: '広告もアカウントもなく、対話内容はサーバーに保存しません。' },
+        { icon: 'fa-ban',         title: '広告・アカウントなし', desc: '履歴は端末に保存。AIの返答にはインターネット接続と外部処理が必要です。' },
         { icon: 'fa-language',    title: 'ja · ko · en ネイティブ', desc: '翻訳ではなく市場ごとのネイティブなトーンで対話します。' },
       ],
     },
@@ -614,8 +618,8 @@ const dialogos: AppMeta = {
       metaDesc: 'Talk one-on-one with Marcus Aurelius, Seneca, Epictetus and Socrates. Every reply is grounded in public-domain sources, with citations. No ads, no account.',
       shotsTitle: 'The moment you sit with a sage',
       featuresTitle: 'Why Dialogos',
-      ctaTitle: 'Conversations begin soon',
-      ctaSub: 'Coming to the App Store & Google Play.',
+      ctaTitle: 'Start with a question',
+      ctaSub: 'Free up to 30 messages a day. Optional deep-reply packs and Pro subscriptions.',
       shots: [
         { file: 'home',          label: 'Sit with the ancient sages',  desc: "Choose today's mentor from Marcus, Seneca, Epictetus and Socrates." },
         { file: 'chat_marcus',   label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
@@ -625,7 +629,7 @@ const dialogos: AppMeta = {
       features: [
         { icon: 'fa-feather',     title: 'Four sages',         desc: 'Meditations, Letters, Enchiridion, Dialogues — each in their own voice.' },
         { icon: 'fa-quote-right', title: 'Grounded in sources', desc: 'Not quote-wallpaper — every reply shows its public-domain source.' },
-        { icon: 'fa-ban',         title: 'No ads, no tracking', desc: 'No ads, no account, and we never store your conversations on our servers.' },
+        { icon: 'fa-ban',         title: 'No ads, no account', desc: 'History stays on your device. AI replies require internet access and external processing.' },
         { icon: 'fa-language',    title: 'Native in ja · ko · en', desc: 'Not translated — a native tone written for each market.' },
       ],
     },
@@ -651,9 +655,9 @@ const draw: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
   },
   release: {
-    // KR/JP/US App Store 공개 확인 2026-10-14. updated는 공식 출시 시각의 UTC 날짜.
-    ios: { version: '1.1.2', updated: '2026-10-13', checkedAt: '2026-10-14' },
-    since: '2026-07-14',
+    // KR/JP/US App Store 공개 확인 2026-10-23. updated는 공식 출시 시각의 UTC 날짜.
+    ios: { version: '1.2.1', updated: '2026-10-21', checkedAt: '2026-10-23' },
+    // July 14 was version 1.0 submission, not a verified first release.
     checkedAt: '2026-09-30',
   },
   heroShot: 'ai_result',
@@ -747,9 +751,9 @@ const wordVoyage: AppMeta = {
     ios: 'https://apps.apple.com/app/id6788949612',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-08 KST; dates remain UTC calendar dates.
+  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
   release: {
-    ios: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-08' },
+    ios: { version: '1.1.0', updated: '2026-10-21', checkedAt: '2026-10-23' },
     android: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-07' },
     since: '2026-07-13',
     checkedAt: '2026-09-24',
@@ -825,7 +829,12 @@ const wordVoyage: AppMeta = {
 const bridge: AppMeta = {
   slug: 'pipi-bridge',
   schemaCategory: 'EducationalApplication',
-  name: 'Korean Bridge',
+  name: 'Korean Bridge: Hangul for Kids',
+  nameByLang: { ko: 'Korean Bridge - 어린이 한국어·한글·수학', ja: 'Korean Bridge - 子どもハングル・算数' },
+  storeNames: {
+    ios: { ko: 'Korean Bridge - 어린이 한국어·한글·수학', ja: 'Korean Bridge - 子どもハングル・算数', en: 'Korean Bridge: Hangul for Kids' },
+    android: { ko: 'Korean Bridge - 어린이 한국어·한글·수학', ja: 'Korean Bridge - 子どもハングル・算数', en: 'Korean Bridge: Hangul for Kids' },
+  },
   status: 'live',
   category: { ko: '교육 · 한국어 · 학교 준비', ja: '教育 · 韓国語と学校の準備', en: 'Education · Korean' },
   stores: {
@@ -833,7 +842,7 @@ const bridge: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge',
   },
   release: {
-    ios: { version: '1.0.1', updated: '2026-10-13', checkedAt: '2026-10-14' },
+    ios: { version: '1.0.2', updated: '2026-10-21', checkedAt: '2026-10-23' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
     checkedAt: '2026-09-21',
   },
@@ -951,9 +960,209 @@ const legion: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion };
+const tide: AppMeta = {
+  slug: 'pipi-tide',
+  schemaCategory: 'UtilitiesApplication',
+  "name": "Tide Friend: Korea Tide Times",
+  "nameByLang": {
+    "ko": "물때친구 - 만조 간조 물때표 위젯",
+    "ja": "Tide Friend: Korea Tide Times"
+  },
+  "status": "live",
+  "category": {
+    "ko": "날씨 · 물때",
+    "ja": "天気 · 潮汐",
+    "en": "Weather · Tides"
+  },
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide"
+  },
+  "content": {
+    "ko": {
+      "tagline": "날씨 · 물때",
+      "lede": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "Google Play에서 만나세요",
+      "ctaSub": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "天気 · 潮汐",
+      "lede": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "Google Playで入手",
+      "ctaSub": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Weather · Tides",
+      "lede": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Get it on Google Play",
+      "ctaSub": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android.",
+      "shots": [],
+      "features": []
+    }
+  },
+  "privacyPath": "/en/apps/pipi-tide/privacy/",
+  "heroShot": "store-preview"
+};
+const sudoku: AppMeta = {
+  slug: 'pipi-sudoku',
+  schemaCategory: 'GameApplication',
+  "name": "Cell by Cell Sudoku",
+  "nameByLang": {
+    "ko": "한칸씩 스도쿠",
+    "ja": "ひとマスずつナンプレ"
+  },
+  "status": "live",
+  "category": {
+    "ko": "퍼즐 · 스도쿠",
+    "ja": "パズル · ナンプレ",
+    "en": "Puzzles · Sudoku"
+  },
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku"
+  },
+  "content": {
+    "ko": {
+      "tagline": "퍼즐 · 스도쿠",
+      "lede": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "Google Play에서 만나세요",
+      "ctaSub": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "パズル · ナンプレ",
+      "lede": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "Google Playで入手",
+      "ctaSub": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Puzzles · Sudoku",
+      "lede": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Get it on Google Play",
+      "ctaSub": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android.",
+      "shots": [],
+      "features": []
+    }
+  },
+  "heroShot": "store-preview"
+};
+const kkachi: AppMeta = {
+  slug: 'kkachi',
+  "name": "Kkachi: Korean Saju",
+  "nameByLang": {
+    "ko": "까치사주",
+    "ja": "Kkachi: Korean Saju"
+  },
+  "status": "soon",
+  "category": {
+    "ko": "라이프스타일 · 사주",
+    "ja": "ライフスタイル · 四柱推命",
+    "en": "Lifestyle · Korean saju"
+  },
+  "stores": {},
+  "content": {
+    "ko": {
+      "tagline": "나의 사주, 하루의 이야기",
+      "lede": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "공개 출시 준비 중",
+      "ctaSub": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "ライフスタイル · 四柱推命",
+      "lede": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "一般公開の準備中",
+      "ctaSub": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Lifestyle · Korean saju",
+      "lede": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Preparing for public release",
+      "ctaSub": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released.",
+      "shots": [],
+      "features": []
+    }
+  }
+};
+const sky: AppMeta = {
+  slug: 'pipi-sky',
+  "name": "Skydaze: Cloud & Star Gazing",
+  "nameByLang": {
+    "ko": "Skydaze: Cloud & Star Gazing",
+    "ja": "Skydaze: Cloud & Star Gazing"
+  },
+  "status": "soon",
+  "category": {
+    "ko": "휴식 · 하늘 관찰",
+    "ja": "リラックス · 空の観察",
+    "en": "Relaxation · Sky gazing"
+  },
+  "stores": {},
+  "content": {
+    "ko": {
+      "tagline": "휴식 · 하늘 관찰",
+      "lede": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
+      "shotsTitle": "",
+      "featuresTitle": "앱 소개",
+      "ctaTitle": "공개 출시 준비 중",
+      "ctaSub": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
+      "shots": [],
+      "features": []
+    },
+    "ja": {
+      "tagline": "リラックス · 空の観察",
+      "lede": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
+      "shotsTitle": "",
+      "featuresTitle": "アプリについて",
+      "ctaTitle": "一般公開の準備中",
+      "ctaSub": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
+      "shots": [],
+      "features": []
+    },
+    "en": {
+      "tagline": "Watch the sky. Take a quiet moment.",
+      "lede": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
+      "shotsTitle": "",
+      "featuresTitle": "About the app",
+      "ctaTitle": "Preparing for public release",
+      "ctaSub": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
+      "shots": [],
+      "features": []
+    }
+  },
+  "previousName": "PiPi Sky",
+  "privacyPath": null
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky };
 // 출시 앱을 먼저, 출시 예정 앱을 뒤에 둔다. Bridge는 공개 앱이다.
-export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, legion];
+export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, sky, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */

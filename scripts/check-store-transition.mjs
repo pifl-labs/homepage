@@ -52,15 +52,15 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(bridgeItem.softwareVersion, undefined, `${lang}: homepage schema must not claim shared version`);
   const bridgeFleetRow = home.match(/<li class="fleet-row">(?:(?!<\/li>).)*Korean Bridge(?:(?!<\/li>).)*<\/li>/s)?.[0];
   assert.ok(bridgeFleetRow, `${lang}: Bridge maintenance row`);
-  assert.ok(bridgeFleetRow.includes('v1.0.1'), `${lang}: verified iOS version is visible`);
+  assert.ok(bridgeFleetRow.includes('v1.0.2'), `${lang}: verified iOS version is visible`);
   assert.ok(!bridgeFleetRow.includes('fleet-both'), `${lang}: no unverified both-store equality claim`);
   const focusItem = homeItems.find(a => a.url.endsWith('/pipi-focus/'));
   for (const item of [detailSchema, focusItem]) {
     assert.equal(item.name, name);
     assert.equal(item.alternateName, 'PiPi Focus');
     assert.equal(item.softwareVersion, undefined, `${lang}: do not generalize iOS version`);
-    assert.equal(item.dateModified, '2026-10-15');
-    assert.equal(item.datePublished, '2026-05-15');
+    assert.equal(item.dateModified, '2026-10-19');
+    assert.equal(item.datePublished, undefined);
   }
   assert.ok(detail.includes(`<title>${name} —`), `${lang}: title`);
   assert.ok(detail.includes(alias) && home.includes(alias), `${lang}: discoverable old name`);
@@ -69,7 +69,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(notices(detail).length, 0, `${lang}: no stale hero/final CTA transition notice`);
   assert.doesNotMatch(detail, /PiPi Focus: (?:해적 포모도로|海賊ポモドーロ|Pirate Pomodoro)/);
   const release = detail.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
-  assert.ok(release.includes('iOS v1.1.0'), `${lang}: visible verified iOS-only version`);
+  assert.ok(release.includes('iOS v1.2.0'), `${lang}: visible verified iOS-only version`);
   assert.doesNotMatch(detail, /v1\.0\.11|iOS v1\.0\.13/);
   const links = [...detail.matchAll(/<a\b[^>]*data-store-link="([^"]+)"[^>]*>/gs)];
   assert.equal(links.length, 4);
@@ -85,7 +85,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.equal(notices(html).length, ['pipi-hello', 'pipi-words', 'pipi-dday'].includes(slug) ? 0 : slug === 'pipi-draw' ? (lang === 'ja' ? 2 : 0) : 2, `${lang}/${slug}: exact platform name notices`);
     assert.equal(appSchema(html).softwareVersion, undefined);
     assert.ok(!html.includes('Android v'));
-    const iosVersions = { 'pipi-hello': '1.0.9', 'pipi-words': '1.0.12', 'pipi-dday': '1.1.5', 'pipi-draw': '1.1.2' };
+    const iosVersions = { 'pipi-hello': '1.0.10', 'pipi-words': '1.0.12', 'pipi-dday': '1.1.5', 'pipi-draw': '1.2.1' };
     assert.ok(html.includes(`iOS v${iosVersions[slug]}`), `${lang}/${slug}: verified iOS version is labelled`);
   }
   const log = read(lang, 'apps/pipi-log');
@@ -94,8 +94,8 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const item of [logSchema, logItem]) {
     assert.equal(item.name, logNames[index], `${lang}: Log public store name`);
     assert.equal(item.alternateName, 'PiPi Log', `${lang}: searchable former name`);
-    assert.equal(item.softwareVersion, '1.0.11', `${lang}: both publicly observed stores at v1.0.11`);
-    assert.equal(item.dateModified, '2026-10-05', `${lang}: public store update date`);
+    assert.equal(item.softwareVersion, undefined, `${lang}: differing dated store versions stay separate`);
+    assert.equal(item.dateModified, '2026-10-19', `${lang}: public store update date`);
   }
   assert.ok(log.includes(`class="app-id-name"`), `${lang}: Log landing identity`);
   assert.ok(log.includes(logNames[index]), `${lang}: Log landing visible name`);
@@ -115,16 +115,17 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const item of [voyageSchema, voyageItem]) {
     assert.equal(item.name, voyageNames[index], `${lang}: public Voyage listing name`);
     assert.equal(item.alternateName, 'PiPi Word Voyage', `${lang}: old name remains searchable`);
-    assert.equal(item.softwareVersion, '1.0.9', `${lang}: both publicly verified store versions`);
-    assert.equal(item.dateModified, '2026-10-05', `${lang}: both public store update dates`);
+    assert.equal(item.softwareVersion, undefined, `${lang}: differing dated store versions stay separate`);
+    assert.equal(item.dateModified, '2026-10-21', `${lang}: latest public store update date`);
   }
   assert.ok(voyage.includes('v1.0.9'), `${lang}: visible release version`);
   assert.equal(notices(voyage).length, 0, `${lang}: stores have the same localized listing name`);
   assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/home.webp`), `${lang}: stale old-name home shot hidden`);
   assert.ok(!voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/logbook.webp`), `${lang}: misleading all-words shot hidden`);
-  for (const shot of ['game', 'voyage', 'daily']) {
-    assert.ok(voyage.includes(`/assets/apps/pipi-word-voyage/${lang}/${shot}.webp`), `${lang}: factual ${shot} shot retained`);
+  for (const shot of [1, 2, 3]) {
+    assert.ok(voyage.includes(`/assets/apps/pipi-word-voyage/submission/20261023-${shot}.webp`), `${lang}: current listing screenshot ${shot}`);
   }
+  assert.ok(voyage.includes('1.1.0 (31)'), `${lang}: attached listing build identified`);
   for (const oldClaim of [
     '표준국어대사전을 바탕으로 검증한 낱말만', '발견한 모든 낱말', '통신은 광고 표시에만',
     '標準国語大辞典で検証した単語だけ', '発見したすべての単語', '通信は広告表示にのみ使用',
@@ -134,7 +135,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.ok(voyage.includes('id6788949612'), `${lang}: App Store destination retained`);
   // Existing split-version app: preserve the source snapshot without collapsing it to one version.
   const hello = read(lang, 'apps/pipi-hello');
-  assert.ok(hello.includes('iOS v1.0.9'));
+  assert.ok(hello.includes('iOS v1.0.10'));
   assert.ok(!hello.includes('Android v'));
   assert.ok(!Object.hasOwn(appSchema(hello), 'softwareVersion'));
   assert.ok(!Object.hasOwn(homeItems.find(a => a.url.endsWith('/pipi-hello/')), 'softwareVersion'));

@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {appList,appName} from '../data/apps';
+import {appIconSrc} from '../data/app-icons.mjs';
+import {archiveEvents,archiveApps,archiveMedia,archiveNames} from '../data/archive.mjs';
+import ArchiveJourneys from './ArchiveJourneys.astro';
+import {archiveCopy} from '../data/archive-copy';
+import type {Lang} from '../i18n/ui';
+const {lang}=Astro.props as {lang:Lang};
+const c=archiveCopy[lang];
+const years=[...new Set(archiveEvents.map(e=>e.date.slice(0,4)))].sort().reverse();
+const platforms={ios:'iOS',android:'Android'};
+const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/archive/`}));
+---
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=4']}>
+<main id="main" class="archive" data-archive data-count-label={c.results} data-all-label={c.all}>
+ <div class="container">
+  <header class="archive-hero">
+   <p class="archive-eyebrow">{c.title} <span>2026 —</span></p>
+   <h1>{c.intro}</h1><p class="archive-lede">{c.desc}</p>
+   <p class="archive-meta">{c.manual} <span aria-hidden="true">·</span> {appList.length} {c.app} <span aria-hidden="true">·</span> {archiveEvents.length} {c.results}</p>
+  </header>
+  <fieldset class="archive-app-picker">
+   <legend>{c.chooseApps}</legend><p class="archive-picker-help">{c.multiHelp}</p>
+   <div class="archive-app-buttons">{appList.map(app=><button type="button" data-app-toggle={app.slug} aria-pressed="false" aria-label={appName(app,lang)} title={appName(app,lang)}><img src={appIconSrc(app.slug)} width="28" height="28" alt=""/><span>{appName(app,lang).split(/[:：]|\s[-–]\s/)[0]}</span><span class="archive-check" aria-hidden="true">✓</span></button>)}</div>
+   <div class="archive-selection"><p role="status" aria-live="polite" data-selection-status>{c.all}</p><button type="button" data-clear-apps disabled>{c.clearApps}</button></div>
+  </fieldset>
+  <form class="archive-filters" aria-label={c.title}>
+   <label>{c.year}<select name="year"><option value="all">{c.any}</option>{years.map(year=><option>{year}</option>)}</select></label>
+   <label>{c.platform}<select name="platform"><option value="all">{c.any}</option>{Object.entries(platforms).map(([value,label])=><option value={value}>{label}</option>)}</select></label>
+   <label>{c.kind}<select name="kind"><option value="all">{c.any}</option>{Object.entries(c.types).map(([value,label])=><option value={value}>{label}</option>)}</select></label>
+   <button type="reset">{c.reset}</button>
+  </form>
+  {appList.map(app=><section class="archive-app-summary" data-app-summary={app.slug} hidden>
+   <img src={appIconSrc(app.slug)} width="56" height="56" alt=""/><div><h2>{appName(app,lang)}</h2>{app.status!=='live'&&<><strong>{c.preparing}</strong><p>{c.prepareDesc}</p></>}<a href={`/${lang}/apps/${app.slug}/`}>{c.product} →</a></div>
+  </section>)}
+  <div class="archive-status"><p role="status" aria-live="polite" data-result-count>{archiveEvents.length} {c.results}</p><a href="/archive-evidence.json" download>{c.evidence} ↓</a></div>
+  <p class="archive-date-note">{c.dateNote}</p>
+  <ArchiveJourneys lang={lang}/>
+  <div class="archive-layout">
+   <section class="archive-history" aria-label={c.timeline}>
+    <p data-empty hidden class="archive-empty">{c.empty}</p>
+    {years.map(year=><section data-year-group={year} class="archive-year"><h2>{year}</h2><ol>
+     {archiveEvents.filter(e=>e.date.startsWith(year)).map(e=>{
+      const app=appList.find(a=>a.slug===e.app)!;
+      return <li data-event data-app={e.app} data-year={year} data-platform={e.platform} data-kind={e.kind}>
+       <div class="archive-date"><time datetime={e.timestamp||e.date}>{e.date}</time><span class={`archive-kind archive-kind--${e.kind}`}>{c.types[e.kind]}</span></div>
+       <article><div class="archive-record-meta"><img src={appIconSrc(e.app)} width="24" height="24" alt=""/><a href={`?app=${e.app}`} data-archive-app={e.app}>{appName(app,lang)}</a><span>{platforms[e.platform]||c.sharedAsset}{e.version&&` · ${e.version}`}</span></div>
+        <h3>{e.title[lang]}</h3><p>{e.summary[lang]}</p>
+        <details><summary>{c.source}</summary><dl><div><dt>{c.source}</dt><dd>{c.sources[e.source]}{e.reference&&` · ${e.reference.slice(0,8)}`}</dd></div><div><dt>{c.checked}</dt><dd><time datetime={e.observedAt}>{e.observedAt}</time></dd></div>{e.timestamp&&<div><dt>UTC</dt><dd>{e.timestamp}</dd></div>}{e.milestones&&Object.entries(e.milestones).map(([key,value])=><div><dt>{key==='submittedAt'?c.types.submitted:c.types.approved} (UTC)</dt><dd><time datetime={value}>{value}</time></dd></div>)}{e.region&&<div><dt>{c.platform}</dt><dd>{e.region}</dd></div>}</dl></details>
+       </article>
+      </li>
+     })}
+    </ol></section>)}
+   </section>
+   <aside class="archive-exhibits" aria-label={c.assets}>
+    <h2>{c.assets}</h2><p>{c.assetNote}</p>
+    {archiveApps.map(slug=>{const media=archiveMedia[slug];const name=appName(appList.find(a=>a.slug===slug)!,lang);const featured=['pipi-focus','pipi-draw'].includes(slug);return <section class="archive-exhibit" data-media-app={slug} data-featured={featured?'true':'false'} hidden={!featured}>
+     <h3>{name}</h3>
+     {archiveNames[slug].length>1&&<><p class="archive-caption">{c.names}</p><ol class="archive-names">{archiveNames[slug].map(name=><li>{name}</li>)}</ol><p class="archive-caption">{c.renameUnknown}</p></>}
+     <h4>{c.icons}</h4><div class="archive-icon-pair">
+      {media.oldIcon&&<figure><img src={media.oldIcon} width="64" height="64" alt={`${c.old}: ${name}`}/><figcaption>{c.old}<time datetime={media.oldDate}>{media.oldDate}</time></figcaption></figure>}
+      <figure><img src={appIconSrc(slug)} width="64" height="64" alt={`${media.upcoming?c.official:c.current}: ${name}`}/><figcaption>{media.upcoming?c.official:c.current}<time datetime="2026-10-23">2026-10-23</time></figcaption></figure>
+     </div><p class="archive-caption">{media.oldIcon?c.unknown:c.noOldIcon}</p>
+     {media.newShot?<details class="archive-screen-details" open><summary>{c.screens}</summary><div class:list={['archive-screen-pair',{'archive-screen-single':!media.oldShot}]}>
+      {media.oldShot&&<figure><a href={media.oldShot} target="_blank" rel="noopener"><img src={media.oldShot} width="250" height="541" loading="lazy" alt={c.screenOld}/></a><figcaption>{c.screenOld}</figcaption></figure>}
+      <figure><a href={media.newShot} target="_blank" rel="noopener"><img src={media.newShot} width="250" height="541" loading="lazy" alt={c.screenNew}/></a><figcaption>{c.screenNew}</figcaption></figure>
+     </div><p class="archive-caption">{media.pending?c.pending:c.imageNote}</p>{!media.oldShot&&<p class="archive-caption">{c.noOldScreen}</p>}</details>:<p class="archive-caption">{c.noScreen}</p>}
+    </section>})}
+   </aside>
+  </div>
+  <p class="archive-scope">{c.scope}</p>
+  <noscript><p>{c.allHistory} — JavaScript: {c.timeline}</p></noscript>
+ </div>
+</main>
+<script is:inline type="module" src="/archive-client.js?v=4"></script>
+</BaseLayout>

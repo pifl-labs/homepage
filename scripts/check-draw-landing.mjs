@@ -20,14 +20,17 @@ for (const [lang, checks] of Object.entries(expected)) {
   for (const text of checks.note) assert.ok(notes[0][1].includes(text), `${lang}: missing ${text}`);
   for (const text of [...checks.styles, checks.sample, checks.direct]) assert.ok(html.includes(text), `${lang}: missing ${text}`);
   assert.doesNotMatch(html, /ai_styles\.webp|iPad급|iPad級|iPad-grade|Default · Ink|基本 · インク/);
-  assert.equal([...html.matchAll(/class="app-shot"/g)].length, 4);
+  assert.equal([...html.matchAll(/class="app-shot"/g)].length, 3);
+  assert.ok(html.includes('submission/20261023-1.webp'));
+  assert.ok(html.includes('1.2.2 (52)'));
+  assert.ok(html.includes('app-media-note'));
   const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)]
     .map((match) => JSON.parse(match[1])).find((value) => value['@type'] === 'SoftwareApplication');
   assert.equal(jsonLd.softwareVersion, undefined);
-  assert.ok(html.includes('iOS v1.1.2'));
+  assert.ok(html.includes('iOS v1.2.1'));
   assert.ok(!html.includes('Android v'));
-  assert.equal(jsonLd.dateModified, '2026-10-13');
-  assert.equal(jsonLd.datePublished, '2026-07-14');
+  assert.equal(jsonLd.dateModified, '2026-10-21');
+  assert.equal(jsonLd.datePublished, undefined);
   for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
     if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;
     const other = readFileSync(file, 'utf8');
