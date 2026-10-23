@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResourceCards from './ResourceCards.astro';
+import {resourceCopy} from '../data/resource-copy.mjs';
+const {lang}=Astro.props;const c=resourceCopy[lang];
+---
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/resources/`} alternates={['ko','en','ja'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/resources/`}))}>
+<main id="main" class="resource-section" style="padding-top:6rem" data-resource-library data-count-label={c.count}><div class="container">
+<header><p>{c.title}</p><h1>{c.intro}</h1><p>{c.desc}</p></header>
+<form class="resource-filters" aria-label={c.title}>
+<label>{c.category}<select name="category"><option value="">{c.all}</option>{Object.entries(c.cats).map(([v,t])=><option value={v}>{t}</option>)}</select></label>
+<label>{c.language}<select name="language"><option value="">{c.all}</option>{Object.entries(c.langs).map(([v,t])=><option value={v}>{t}</option>)}</select></label>
+<label>{c.format}<select name="format"><option value="">{c.all}</option><option>PDF</option><option>PNG</option></select></label>
+<button type="reset">{c.reset}</button></form><p>{c.filterNote}</p><p class="resource-status" role="status" aria-live="polite" data-resource-count>8 {c.count}</p>
+<p hidden data-resource-empty>{c.empty}</p><ResourceCards lang={lang}/><p class="resource-note">{c.note}</p>
+</div></main><script is:inline src="/resources-client.js?v=1"></script>
+</BaseLayout>
