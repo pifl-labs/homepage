@@ -8,25 +8,28 @@ import type {Lang} from '../i18n/ui';
 const {lang}=Astro.props as {lang:Lang};
 const c=archiveCopy[lang];
 const years=[...new Set(archiveEvents.map(e=>e.date.slice(0,4)))].sort().reverse();
-const platforms={ios:'iOS',android:'Android',web:'Web'};
+const platforms={ios:'iOS',android:'Android'};
 const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/archive/`}));
 ---
-<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=1']}>
-<main id="main" class="archive" data-archive data-count-label={c.results}>
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=3']}>
+<main id="main" class="archive" data-archive data-count-label={c.results} data-all-label={c.all}>
  <div class="container">
   <header class="archive-hero">
    <p class="archive-eyebrow">{c.title} <span>2026 —</span></p>
    <h1>{c.intro}</h1><p class="archive-lede">{c.desc}</p>
    <p class="archive-meta">{c.manual} <span aria-hidden="true">·</span> {appList.length} {c.app} <span aria-hidden="true">·</span> {archiveEvents.length} {c.results}</p>
   </header>
+  <fieldset class="archive-app-picker">
+   <legend>{c.chooseApps}</legend><p class="archive-picker-help">{c.multiHelp}</p>
+   <div class="archive-app-buttons">{appList.map(app=><button type="button" data-app-toggle={app.slug} aria-pressed="false" aria-label={appName(app,lang)} title={appName(app,lang)}><img src={appIconSrc(app.slug)} width="28" height="28" alt=""/><span>{appName(app,lang).split(/[:：]|\s[-–]\s/)[0]}</span><span class="archive-check" aria-hidden="true">✓</span></button>)}</div>
+   <div class="archive-selection"><p role="status" aria-live="polite" data-selection-status>{c.all}</p><button type="button" data-clear-apps disabled>{c.clearApps}</button></div>
+  </fieldset>
   <form class="archive-filters" aria-label={c.title}>
-   <label>{c.app}<select name="app"><option value="all">{c.all}</option>{appList.map(app=><option value={app.slug}>{appName(app,lang)}</option>)}</select></label>
    <label>{c.year}<select name="year"><option value="all">{c.any}</option>{years.map(year=><option>{year}</option>)}</select></label>
    <label>{c.platform}<select name="platform"><option value="all">{c.any}</option>{Object.entries(platforms).map(([value,label])=><option value={value}>{label}</option>)}</select></label>
    <label>{c.kind}<select name="kind"><option value="all">{c.any}</option>{Object.entries(c.types).map(([value,label])=><option value={value}>{label}</option>)}</select></label>
    <button type="reset">{c.reset}</button>
   </form>
-  <nav class="archive-shortcuts" aria-label={c.app}>{archiveApps.slice(0,2).map(slug=><a href={`?app=${slug}`} data-archive-app={slug}><img src={appIconSrc(slug)} width="28" height="28" alt=""/>{appName(appList.find(a=>a.slug===slug)!,lang)}</a>)}</nav>
   {appList.map(app=><section class="archive-app-summary" data-app-summary={app.slug} hidden>
    <img src={appIconSrc(app.slug)} width="56" height="56" alt=""/><div><h2>{appName(app,lang)}</h2>{app.status!=='live'&&<><strong>{c.preparing}</strong><p>{c.prepareDesc}</p></>}<a href={`/${lang}/apps/${app.slug}/`}>{c.product} →</a></div>
   </section>)}
@@ -40,7 +43,7 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
       const app=appList.find(a=>a.slug===e.app)!;
       return <li data-event data-app={e.app} data-year={year} data-platform={e.platform} data-kind={e.kind}>
        <div class="archive-date"><time datetime={e.timestamp||e.date}>{e.date}</time><span class={`archive-kind archive-kind--${e.kind}`}>{c.types[e.kind]}</span></div>
-       <article><div class="archive-record-meta"><img src={appIconSrc(e.app)} width="24" height="24" alt=""/><a href={`?app=${e.app}`} data-archive-app={e.app}>{appName(app,lang)}</a><span>{platforms[e.platform]}{e.version&&` · ${e.version}`}</span></div>
+       <article><div class="archive-record-meta"><img src={appIconSrc(e.app)} width="24" height="24" alt=""/><a href={`?app=${e.app}`} data-archive-app={e.app}>{appName(app,lang)}</a><span>{platforms[e.platform]||c.sharedAsset}{e.version&&` · ${e.version}`}</span></div>
         <h3>{e.title[lang]}</h3><p>{e.summary[lang]}</p>
         <details><summary>{c.source}</summary><dl><div><dt>{c.source}</dt><dd>{c.sources[e.source]}{e.reference&&` · ${e.reference.slice(0,8)}`}</dd></div><div><dt>{c.checked}</dt><dd><time datetime={e.observedAt}>{e.observedAt}</time></dd></div>{e.timestamp&&<div><dt>UTC</dt><dd>{e.timestamp}</dd></div>}{e.milestones&&Object.entries(e.milestones).map(([key,value])=><div><dt>{key==='submittedAt'?c.types.submitted:c.types.approved} (UTC)</dt><dd><time datetime={value}>{value}</time></dd></div>)}{e.region&&<div><dt>{c.platform}</dt><dd>{e.region}</dd></div>}</dl></details>
        </article>
@@ -68,5 +71,5 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
   <noscript><p>{c.allHistory} — JavaScript: {c.timeline}</p></noscript>
  </div>
 </main>
-<script is:inline type="module" src="/archive-client.js?v=2"></script>
+<script is:inline type="module" src="/archive-client.js?v=3"></script>
 </BaseLayout>

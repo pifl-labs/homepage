@@ -368,7 +368,7 @@ export const extraEvents=[
     "id": "kkachi-materials",
     "date": "2026-10-23",
     "kind": "asset",
-    "platform": "web",
+    "platform": null,
     "version": null,
     "source": "git",
     "title": {
@@ -388,7 +388,7 @@ export const extraEvents=[
     "id": "pipi-sky-materials",
     "date": "2026-10-23",
     "kind": "asset",
-    "platform": "web",
+    "platform": null,
     "version": null,
     "source": "git",
     "title": {
@@ -408,7 +408,7 @@ export const extraEvents=[
     "id": "pipi-legion-materials",
     "date": "2026-10-23",
     "kind": "asset",
-    "platform": "web",
+    "platform": null,
     "version": null,
     "source": "git",
     "title": {

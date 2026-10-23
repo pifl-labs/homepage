@@ -29,7 +29,7 @@
       "id": "kkachi-materials",
       "date": "2026-10-23",
       "kind": "asset",
-      "platform": "web",
+      "platform": null,
       "version": null,
       "source": "git",
       "title": {
@@ -50,7 +50,7 @@
       "id": "pipi-legion-materials",
       "date": "2026-10-23",
       "kind": "asset",
-      "platform": "web",
+      "platform": null,
       "version": null,
       "source": "git",
       "title": {
@@ -71,7 +71,7 @@
       "id": "pipi-sky-materials",
       "date": "2026-10-23",
       "kind": "asset",
-      "platform": "web",
+      "platform": null,
       "version": null,
       "source": "git",
       "title": {
@@ -669,15 +669,15 @@
       "app": "pipi-focus",
       "date": "2026-05-29",
       "kind": "asset",
-      "platform": "web",
+      "platform": null,
       "version": null,
       "observedAt": "2026-10-23",
       "source": "git",
       "reference": "0253ac3366b0c9bdda94c417deb6d2c53d2f56bb",
       "title": {
-        "ko": "첫 웹 소개 자료",
-        "ja": "最初のウェブ紹介資料",
-        "en": "Early website materials"
+        "ko": "초기 앱 소개 자산",
+        "ja": "初期のアプリ紹介資料",
+        "en": "Early app presentation assets"
       },
       "summary": {
         "ko": "웹 저장소에 아이콘과 항해 화면이 남아 있습니다. 이 날짜는 Git 기록일이며 앱 공개일이 아닙니다.",
