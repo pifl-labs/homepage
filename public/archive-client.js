@@ -21,6 +21,7 @@ if(root){
   for(const button of buttons)button.setAttribute('aria-pressed',String(selected.has(button.dataset.appToggle)));
   root.querySelector('[data-selection-status]').textContent=selected.size?buttons.filter(b=>selected.has(b.dataset.appToggle)).map(b=>b.querySelector('span').textContent.trim()).join(' · '):root.dataset.allLabel;
   root.querySelector('[data-clear-apps]').disabled=!selected.size;
+  for(const panel of root.querySelectorAll('[data-journey-app]'))panel.hidden=selected.size>0&&!selected.has(panel.dataset.journeyApp);
   for(const panel of root.querySelectorAll('[data-app-summary]'))panel.hidden=selected.size!==1||!selected.has(panel.dataset.appSummary);
   for(const panel of root.querySelectorAll('[data-media-app]'))panel.hidden=selected.size?!selected.has(panel.dataset.mediaApp):panel.dataset.featured!=='true';
   root.querySelector('.archive-exhibits').hidden=![...root.querySelectorAll('[data-media-app]')].some(p=>!p.hidden);

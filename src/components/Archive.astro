@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import {appList,appName} from '../data/apps';
 import {appIconSrc} from '../data/app-icons.mjs';
 import {archiveEvents,archiveApps,archiveMedia,archiveNames} from '../data/archive.mjs';
+import ArchiveJourneys from './ArchiveJourneys.astro';
 import {archiveCopy} from '../data/archive-copy';
 import type {Lang} from '../i18n/ui';
 const {lang}=Astro.props as {lang:Lang};
@@ -11,7 +12,7 @@ const years=[...new Set(archiveEvents.map(e=>e.date.slice(0,4)))].sort().reverse
 const platforms={ios:'iOS',android:'Android'};
 const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/archive/`}));
 ---
-<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=3']}>
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=4']}>
 <main id="main" class="archive" data-archive data-count-label={c.results} data-all-label={c.all}>
  <div class="container">
   <header class="archive-hero">
@@ -35,6 +36,7 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
   </section>)}
   <div class="archive-status"><p role="status" aria-live="polite" data-result-count>{archiveEvents.length} {c.results}</p><a href="/archive-evidence.json" download>{c.evidence} ↓</a></div>
   <p class="archive-date-note">{c.dateNote}</p>
+  <ArchiveJourneys lang={lang}/>
   <div class="archive-layout">
    <section class="archive-history" aria-label={c.timeline}>
     <p data-empty hidden class="archive-empty">{c.empty}</p>
@@ -71,5 +73,5 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
   <noscript><p>{c.allHistory} — JavaScript: {c.timeline}</p></noscript>
  </div>
 </main>
-<script is:inline type="module" src="/archive-client.js?v=3"></script>
+<script is:inline type="module" src="/archive-client.js?v=4"></script>
 </BaseLayout>

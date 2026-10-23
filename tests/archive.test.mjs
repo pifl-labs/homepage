@@ -26,7 +26,7 @@ test('archive browser logic is external under the production self-only script po
  const headers=readFileSync('public/_headers','utf8');assert.match(headers,/script-src 'self';/);
  for(const lang of ['ko','ja','en']){
   const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
-  assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=3"/);
+  assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=4"/);
   const scripts=[...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)];
   assert.equal(scripts.filter(([,attrs,body])=>!attrs.includes('application/ld+json')&&body.trim()).length,0,'executable inline JS would be blocked by deployed CSP');
  }
