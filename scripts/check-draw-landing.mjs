@@ -30,7 +30,7 @@ for (const [lang, checks] of Object.entries(expected)) {
   assert.ok(html.includes('iOS v1.2.1'));
   assert.ok(!html.includes('Android v'));
   assert.equal(jsonLd.dateModified, '2026-10-21');
-  assert.equal(jsonLd.datePublished, '2026-07-14');
+  assert.equal(jsonLd.datePublished, undefined);
   for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
     if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;
     const other = readFileSync(file, 'utf8');

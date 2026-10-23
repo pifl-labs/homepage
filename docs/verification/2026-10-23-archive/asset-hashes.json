@@ -1,0 +1,50 @@
+[
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/icon.webp",
+    "sha256": "a82f75017469ac244d79bb2c8492c8a79cfc3d6f17236a1ac547894e5b8c7f50",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/en/sail.webp",
+    "sha256": "39d4143190556ae4413bf082751ee4678e6ff9d1cb04489d8b9ad6d2bb0d3fda",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/submission/20261023-1.webp",
+    "sha256": "0aadd23015bd8cb2d9d522008363ea1699889be3b05730475883ce28160d7daf",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-focus",
+    "path": "/assets/apps/pipi-focus/icon-11fe2a1ebe6f.webp",
+    "sha256": "012d75692d7f906ecd2694da10cb032bfeb5c7d98369bb27138eb5c27830cfee",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/apps/pipi-draw/icon.webp",
+    "sha256": "43035fd8adb8fa3a8895f521b0b07e4c35d60518a9b0efe504cf7c97597f01a8",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/archive/draw-20260930.webp",
+    "sha256": "c5c68b6d7f6db5ec2a55b854b0e54f8676725e35ce544a56b646851690306c04",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/apps/pipi-draw/submission/20261023-1.webp",
+    "sha256": "4edce11456909b06a7b43b399c1717b41056a193d47086ae4b12057075c3ef39",
+    "versionAssociation": "unverified"
+  },
+  {
+    "app": "pipi-draw",
+    "path": "/assets/apps/pipi-draw/icon-f9ad53b15c8d.webp",
+    "sha256": "49424d84179b3a4cd5f40e66ef86e1f303f2d6f46534b4881d95b2d4c549b757",
+    "versionAssociation": "unverified"
+  }
+]

@@ -54,8 +54,8 @@ const copy = {
 <section class="fleet-log-section" id="fleet">
   <div class="container">
     <details class="fleet-disclosure">
-      <summary>{({ ko: '스토어 버전·업데이트 확인하기', ja: 'ストアのバージョン・更新記録', en: 'Store versions & update history' })[lang]}</summary>
-      <p class="section-sub">{copy.sub}</p>
+      <summary>{({ ko: '마지막으로 확인한 스토어 버전', ja: '最後に確認したストアバージョン', en: 'Last checked store versions' })[lang]}</summary>
+      <p class="section-sub">{({ko:"이 목록은 마지막 확인 상태표입니다. 전체 연혁은 기록관에서 확인하세요.",ja:"この一覧は最後に確認した状態です。過去の歩みは記録館をご覧ください。",en:"This is the last checked status, not a complete version history. Explore the archive for earlier records."})[lang]} <a href={`/${lang}/archive/`}>{({ko:"기록관 보기 →",ja:"記録館へ →",en:"Explore the archive →"})[lang]}</a></p>
 
     <ol class="fleet-log">
       {rows.map((app) => {

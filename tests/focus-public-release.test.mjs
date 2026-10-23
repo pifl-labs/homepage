@@ -42,7 +42,7 @@ test('only the freshly checked iOS platform gets the new dated observation', () 
 
 test('an iOS update neither fabricates Android parity nor changes the first launch or destinations', () => {
   assert.equal(focus.release.android, undefined);
-  assert.equal(focus.release.since, '2026-05-15');
+  assert.equal(focus.release.since, undefined, 'review/submission date must not masquerade as first release');
   assert.equal(focus.stores.ios, 'https://apps.apple.com/app/pipi-focus-pirate-pomodoro/id6762258878');
   assert.equal(focus.stores.android, 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus');
 });
@@ -75,14 +75,10 @@ for (const lang of ['ko', 'ja', 'en']) {
 
 for (const lang of ['ko', 'ja', 'en']) {
   const detail = new URL(`../dist/${lang}/apps/pipi-focus/index.html`, import.meta.url);
-  test(`${lang}: Focus keeps the first-launch separator with its text without changing other apps`, { skip: !existsSync(detail) }, () => {
+  test(`${lang}: Focus omits an unverified launch date without changing other apps`, { skip: !existsSync(detail) }, () => {
     const html = readFileSync(detail, 'utf8');
     const release = html.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
-    const group = release?.match(/<span class="app-rel-since-group"[^>]*>(.*?)<\/span>\s*<\/span>/s)?.[1];
-    assert.ok(group, 'the separator and first-launch text share one flex item');
-    assert.match(group, /class="app-rel-sep"[^>]*aria-hidden="true"[^>]*>·<\/span>\s+<span/);
-    assert.match(group, /2026(?:\.05\.15|年|.*May 15)|May 15, 2026/);
-    assert.match(group, /class="app-rel-since-date" style="white-space:\s*nowrap;?"/, 'only the short fixed date is atomic, not the label or release line');
+    assert.doesNotMatch(release, /app-rel-since-group|2026-05-15/, 'unverified first launch is omitted');
     const otherRoot = new URL(`../dist/${lang}/apps/`, import.meta.url);
     for (const entry of readdirSync(otherRoot, { withFileTypes: true })) {
       if (!entry.isDirectory() || entry.name === 'pipi-focus') continue;

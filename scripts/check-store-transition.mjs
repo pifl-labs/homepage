@@ -60,7 +60,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
     assert.equal(item.alternateName, 'PiPi Focus');
     assert.equal(item.softwareVersion, undefined, `${lang}: do not generalize iOS version`);
     assert.equal(item.dateModified, '2026-10-19');
-    assert.equal(item.datePublished, '2026-05-15');
+    assert.equal(item.datePublished, undefined);
   }
   assert.ok(detail.includes(`<title>${name} —`), `${lang}: title`);
   assert.ok(detail.includes(alias) && home.includes(alias), `${lang}: discoverable old name`);

@@ -106,7 +106,7 @@ const focus: AppMeta = {
   release: {
     // 2026-10-23: KR returned 1.2.0; JP/US returned 1.2.1. Keep the conservative KR snapshot; see the audit receipt.
     ios: { version: '1.2.0', updated: '2026-10-19', checkedAt: '2026-10-23' },
-    since: '2026-05-15',
+    // First release date unverified: May 15 was a review receipt, not launch.
     checkedAt: '2026-09-30',
   },
   heroShot: 'sail',
@@ -657,7 +657,7 @@ const draw: AppMeta = {
   release: {
     // KR/JP/US App Store 공개 확인 2026-10-23. updated는 공식 출시 시각의 UTC 날짜.
     ios: { version: '1.2.1', updated: '2026-10-21', checkedAt: '2026-10-23' },
-    since: '2026-07-14',
+    // July 14 was version 1.0 submission, not a verified first release.
     checkedAt: '2026-09-30',
   },
   heroShot: 'ai_result',

@@ -15,7 +15,7 @@ test('English Draw lead explains the actual task and qualifies AI results', () =
 test('Draw iOS follows current KR/JP/US public 1.2.1, without inferring Android or changing limits', () => {
   assert.equal(draw.release.ios.version, '1.2.1');
   assert.equal(draw.release.ios.updated, '2026-10-21');
-  assert.equal(draw.release.since, '2026-07-14');
+  assert.equal(draw.release.since, undefined, 'review/submission date must not masquerade as first release');
   assert.equal(draw.release.checkedAt, '2026-09-30');
   assert.equal(draw.release.android, undefined);
   assert.equal(draw.content.en.downloadNote, '2 free AI conversions a day; internet required. Contains ads and optional conversion-ticket purchases. No ads inside the coloring screen.');
