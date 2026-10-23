@@ -35,6 +35,18 @@ The English phrases describe each app's purpose; they are not new store names.
 | High and low tide information — 물때친구 - 만조 간조 물때표 위젯 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
 | AI philosophical dialogue — Dialogos: 철학자와의 대화 | [App Store (Korea)](https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
 
+### Step-by-step sudoku hints on Android
+
+[Cell by Cell Sudoku — Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=en&gl=US)
+
+Free, no ads and no account. Work through 300 included puzzles with hints that
+show where to look, why, and then the digit. You decide when to fill it in.
+Hints use single candidates and hidden singles; a puzzle you enter may need
+harder techniques that are not covered.
+
+US Google Play listing checked 24 October 2026. Android link only;
+this entry is separate from the ten-app snapshot above.
+
 ### App portfolio (PDF)
 
 [Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).
