@@ -19,6 +19,6 @@
   const search=q.toString();if(push)history.pushState(null,'',location.pathname+(search?'?'+search:'')+location.hash);
   document.querySelectorAll('.lang-pill a').forEach(a=>{const u=new URL(a.href);u.search=search;a.href=u.href;});
  };
- const restore=()=>{const q=new URLSearchParams(location.search);for(const key of fields){const select=form.elements[key];select.value=q.get(key)||'';if(select.selectedIndex<0)select.value='';}apply();};
+ const restore=()=>{const q=new URLSearchParams(location.search);for(const key of fields){const select=form.elements[key];select.value=q.get(key)||'';if(select.selectedIndex<0)select.value='';}apply();if(location.hash){requestAnimationFrame(()=>{const target=document.getElementById(location.hash.slice(1));if(target&&!target.hidden)target.scrollIntoView({block:"start"});});}};
  form.addEventListener('change',()=>apply(true));form.addEventListener('reset',()=>{for(const key of fields)form.elements[key].value='';apply(true);});window.addEventListener('popstate',restore);restore();
 })();
