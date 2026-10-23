@@ -14,23 +14,24 @@ This repository contains the company marketing website, not the Flutter app sour
 ### Ten apps: official store links
 
 The original ten-product Korean-storefront snapshot was checked on 17 October
-2026. Dialogos's App Store listing was additionally checked on 23 October 2026,
-bringing this table to nine App Store links and two Google Play links. This is
-not a complete list of each app's supported platforms. Check the linked store
+2026. Dialogos's App Store listing and all ten Google Play listings were checked
+on 23 October 2026. This table now provides nine App Store links and ten Google
+Play links. It does not establish availability in other countries or identical
+features across platforms. Check the linked store
 for current availability, device requirements, ads and purchases.
 
 The English phrases describe each app's purpose; they are not new store names.
 
-| Purpose — Korean storefront name | Verified public listing |
+| Purpose — Korean storefront name | Verified public listings |
 | --- | --- |
-| Korean and Hangul activities for children — Korean Bridge - 어린이 한국어·한글·수학 | [App Store (Korea)](https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4) |
-| Pomodoro timer — 집중항해: 포모도로 타이머 | [App Store (Korea)](https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878?uo=4) |
-| Photo-to-coloring-page outlines — 밑그림: 사진으로 만드는 색칠공부 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131?uo=4) |
-| Hangul word puzzles — 낱말항해: 한글 단어 퍼즐 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612?uo=4) |
-| Japanese activities for children — 말놀이 새싹: 어린이 일본어 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814?uo=4) |
-| JLPT and TOPIK vocabulary — 단어루틴: JLPT·TOPIK 단어장 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-topik-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4) |
-| D-Day and anniversary widgets — 그날까지: 디데이·기념일 위젯 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4) |
-| Weather-themed mood journal — 기분 한 칸: 날씨 감정일기 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4) |
+| Korean and Hangul activities for children — Korean Bridge - 어린이 한국어·한글·수학 | [App Store (Korea)](https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR) |
+| Pomodoro timer — 집중항해: 포모도로 타이머 | [App Store (Korea)](https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR) |
+| Photo-to-coloring-page outlines — 밑그림: 사진으로 만드는 색칠공부 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR) |
+| Hangul word puzzles — 낱말항해: 한글 단어 퍼즐 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR) |
+| Japanese activities for children — 말놀이 새싹: 어린이 일본어 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR) |
+| JLPT and TOPIK vocabulary — 단어루틴: JLPT·TOPIK 단어장 | [App Store (Korea)](https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-topik-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR) |
+| D-Day and anniversary widgets — 그날까지: 디데이·기념일 위젯 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR) |
+| Weather-themed mood journal — 기분 한 칸: 날씨 감정일기 | [App Store (Korea)](https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR) |
 | High and low tide information — 물때친구 - 만조 간조 물때표 위젯 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
 | AI philosophical dialogue — Dialogos: 철학자와의 대화 | [App Store (Korea)](https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
 
