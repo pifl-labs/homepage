@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="ja"
+  title={"血圧記録：血圧手帳・脈拍 プライバシーポリシー - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. 血圧記録：血圧手帳・脈拍 アプリプライバシーポリシー"}
+  canonical="https://pifl-labs.com/ja/apps/pipi-bp/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-bp/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-bp/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-bp/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-bp/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<section class="legal-hero">
+        <div class="container">
+            <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">血圧記録：血圧手帳・脈拍 プライバシーポリシー</span></h1>
+            <p class="legal-date">施行日: 2026年10月25日</p>
+        </div>
+    </section>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>株式会社ピープルラブズ(以下「当社」)は、お客様の個人情報を保護することを重要な責務と認識しております。本プライバシーポリシーは、モバイルアプリケーション <strong>血圧記録：血圧手帳・脈拍</strong>(以下「本アプリ」)における個人情報の収集、利用、保管、開示について説明します。本ポリシーに記載のない事項については、当社の <a href="/ja/privacy">一般プライバシーポリシー</a> が適用されます。</p>
+                <p>本アプリは血圧を測定しません。センサー、カメラ、HealthKit、Health Connect は使用しません。お客様がご自宅の血圧計で測った数値を手入力します。</p>
+
+                <h2>第1条 (利用目的)</h2>
+                <ul>
+                    <li><strong>アプリ機能の提供</strong>: 血圧・脈拍の数値、タグ、メモ、通知設定の記録、リマインダー通知、PDF・CSV へのエクスポート</li>
+                    <li><strong>広告配信</strong>: Google AdMob による広告表示</li>
+                    <li><strong>利用状況の分析</strong>: Firebase Analytics(Google)による匿名の利用統計の収集</li>
+                    <li><strong>カスタマーサポート</strong>: メールによるお問い合わせの受付および対応</li>
+                </ul>
+
+                <h2>第2条 (収集する個人情報の項目)</h2>
+                <p>本アプリはアカウント登録を必要としません。クラウドバックアップおよび同期機能もありません。当社は次の情報を取り扱います。</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>区分</th>
+                            <th>項目</th>
+                            <th>収集方法</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>お客様が入力した健康記録</td>
+                            <td>血圧の数値、脈拍、タグ、メモ、通知設定</td>
+                            <td>デバイス内のローカル SQLite データベースにのみ保存(当社および第三者へは送信されません)</td>
+                        </tr>
+                        <tr>
+                            <td>広告識別子</td>
+                            <td>広告ID(IDFA/AAID)、おおよその位置(国単位)、デバイス情報(OS、モデル、言語)</td>
+                            <td>Google AdMob SDK による自動収集(同意時)</td>
+                        </tr>
+                        <tr>
+                            <td>匿名の利用統計</td>
+                            <td>アプリの起動、利用した機能、回数や区分(例: 記録件数)、Firebase の標準識別子(アプリインスタンスID)、デバイス情報。血圧の数値、区分、メモは収集しません。</td>
+                            <td>Firebase Analytics SDK(Google)による自動収集</td>
+                        </tr>
+                        <tr>
+                            <td>メールお問い合わせ</td>
+                            <td>メールアドレス、氏名(任意)、お問い合わせ内容</td>
+                            <td>メール送信</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>健康記録は広告のターゲティングには使用されません。</p>
+
+                <h2>第3条 (保有期間)</h2>
+                <ul>
+                    <li><strong>健康記録(ローカル)</strong>: お客様がアプリ内で個別の記録を削除するか、アプリを削除するまで。当社は複製を保持しません。</li>
+                    <li><strong>エクスポートした PDF・CSV ファイル</strong>: デバイス上で作成され、お客様の選択によりデバイスの共有シートを通じてのみ共有されます。当社は複製を保持せず、ファイルはお客様ご自身で管理します。</li>
+                    <li><strong>広告識別子および広告関連データ</strong>: Google AdMob ポリシーに準拠</li>
+                    <li><strong>匿名の利用統計</strong>: Google Firebase ポリシーに準拠</li>
+                    <li><strong>メールお問い合わせ記録</strong>: 対応完了後 <strong>3年</strong></li>
+                </ul>
+
+                <h2>第4条 (第三者提供)</h2>
+                <p>当社は、お客様の同意がある場合または法令に基づく場合を除き、個人情報を第三者に提供しません。健康記録はお客様のデバイスにのみ保存され、当社および第三者へは送信されません。</p>
+
+                <h2>第5条 (個人情報処理の委託)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>委託先</th>
+                            <th>委託業務</th>
+                            <th>保有期間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>モバイル広告配信および広告識別子の処理</td>
+                            <td>委託契約終了時</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase Analytics)</td>
+                            <td>匿名の利用統計の処理</td>
+                            <td>委託契約終了時</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>第6条 (広告識別子およびトラッキング同意)</h2>
+                <p>本アプリは Google AdMob を通じて、バナー広告、インタースティシャル広告、任意で視聴するリワード広告を表示します。その過程で AdMob は広告識別子(IDFA/AAID)、おおよその位置(国単位)、デバイス情報を処理することがあります。健康記録は広告のターゲティングには使用されません。</p>
+                <ul>
+                    <li><strong>iOS ユーザー</strong>: アプリが Apple の App Tracking Transparency (ATT) 同意ダイアログでトラッキング許可を確認します。<strong>拒否した場合は非パーソナライズ広告のみ</strong>表示されます。</li>
+                    <li><strong>EEA・英国のユーザー</strong>: Google UMP(User Messaging Platform)の同意フォームが表示されます。設定 → 広告のプライバシーオプションからいつでも選択を変更できます。</li>
+                    <li><strong>Android ユーザー</strong>: デバイス設定 → Google → 広告 → 「広告 ID を削除」または「広告のカスタマイズをオプトアウト」から制御できます。</li>
+                </ul>
+                <p>Google AdMob のデータ処理についての詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご参照ください。</p>
+
+                <h2>第7条 (利用状況の分析)</h2>
+                <p>本アプリは Firebase Analytics(Google)を使用し、アプリの起動、利用した機能、記録件数などの回数や区分といった匿名の利用統計を収集します。血圧の数値、区分、メモは収集しません。Firebase の標準識別子(アプリインスタンスID)とデバイス情報は Google が処理します。</p>
+
+                <h2>第8条 (アプリ権限)</h2>
+                <p>本アプリはサービス提供のため、以下の権限を要求することがあります。各権限は拒否可能ですが、関連機能の利用が制限される場合があります。</p>
+                <ul>
+                    <li><strong>通知</strong>: ローカル通知のみを使用します。プッシュサーバーはありません。</li>
+                    <li><strong>App Tracking Transparency (iOS)</strong>: 広告関連性向上のためのトラッキング同意</li>
+                </ul>
+                <p>本アプリはセンサー、カメラ、HealthKit、Health Connect を使用しません。</p>
+
+                <h2>第9条 (アプリ内課金)</h2>
+                <p>本アプリのバージョン1.0にはアプリ内課金はありません。変更がある場合は、本ポリシーを改定します。</p>
+
+                <h2>第10条 (個人情報の破棄手続および方法)</h2>
+                <ul>
+                    <li><strong>手続</strong>: 不要となった個人情報は、個人情報保護責任者の承認を経て破棄します。</li>
+                    <li><strong>方法</strong>: 電子ファイルは復元不可能な方法で完全に削除します。お客様はアプリ内で個別の記録を削除できます。すべての健康記録を含むアプリ使用データは、お客様がアプリを削除すると同時にデバイスから削除されます。</li>
+                </ul>
+
+                <h2>第11条 (ユーザーの権利)</h2>
+                <ol>
+                    <li>個人情報の処理に関する情報の提供を受ける権利</li>
+                    <li>個人情報の処理への同意およびその範囲を選択する権利</li>
+                    <li>個人情報の処理状況の確認および閲覧を要求する権利</li>
+                    <li>個人情報の訂正、削除、処理停止、破棄を要求する権利</li>
+                    <li>処理によって生じた損害に対する救済を求める権利</li>
+                </ol>
+                <p>権利行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。健康記録はお客様のデバイスにのみ存在するため、アプリ内で個別の記録を直接削除できます。</p>
+
+                <h2>第12条 (安全管理措置)</h2>
+                <ul>
+                    <li>健康記録はお客様のデバイスにのみ保存され、当社および第三者へは送信されません</li>
+                    <li>アカウント、クラウドバックアップ、同期がないため、当社のサーバーに健康記録の複製は保管されません</li>
+                    <li>エクスポートしたファイルは、お客様の選択によりデバイスの共有シートを通じてのみ共有されます</li>
+                </ul>
+
+                <h2>第13条 (子どものプライバシー)</h2>
+                <p>本アプリは満14歳未満の子どもを主な対象としていません。当社は満14歳未満の子どもの個人情報を意図的に収集することはなく、収集が確認された場合は直ちに削除します。保護者は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> に削除をリクエストできます。</p>
+
+                <h2>第14条 (国外移転)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>移転先</th>
+                            <th>移転先国</th>
+                            <th>移転目的</th>
+                            <th>移転項目</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>米国</td>
+                            <td>モバイル広告配信</td>
+                            <td>広告識別子、おおよその位置(国単位)、デバイス情報</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase Analytics)</td>
+                            <td>米国</td>
+                            <td>匿名の利用統計</td>
+                            <td>利用イベント、アプリインスタンスID、デバイス情報</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>第15条 (個人情報保護責任者)</h2>
+                <ul>
+                    <li><strong>会社名</strong>: 株式会社ピープルラブズ (PiFl Labs Co., Ltd.)</li>
+                    <li><strong>メール</strong>: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+                </ul>
+
+                <h2>第16条 (APPI - 日本の個人情報保護法)</h2>
+                <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>
+
+                <h2>第17条 (医療に関する免責事項)</h2>
+                <p>本アプリは個人の記録用ツールであり、医学的助言を提供するものではありません。アプリに表示される区分は、米国心臓協会(AHA)の2017 ACC/AHA 分類に従った参考情報です。血圧や治療に関する判断は、必ず医療専門家にご相談ください。</p>
+
+                <h2>第18条 (改定)</h2>
+                <p>本プライバシーポリシーは、2026年10月25日から施行します。変更がある場合は、本ページを通じて告知いたします。</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
