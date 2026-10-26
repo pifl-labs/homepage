@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="ja"
+  title={"血圧記録：血圧手帳・脈拍 消費者健康データのプライバシーポリシー - PiFl Labs"}
+  description={"血圧記録：血圧手帳・脈拍(BP Diary & Blood Pressure Log)アプリが、米国ワシントン州 My Health My Data Act などに基づき消費者の健康データをどう取り扱うか"}
+  canonical="https://pifl-labs.com/ja/apps/pipi-bp/consumer-health-data/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-bp/consumer-health-data/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-bp/consumer-health-data/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-bp/consumer-health-data/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-bp/consumer-health-data/"}]}
+  extraCss={["/styles.css"]}
+>
+<!-- Legal Header -->
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">血圧記録：血圧手帳・脈拍 消費者健康データのプライバシーポリシー</span></h1>
+            <p class="legal-date">施行日：2026年10月26日</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>この消費者健康データのプライバシーポリシーは、株式会社ピープルラブズ(PiFl Labs Co., Ltd.、以下「当社」)のモバイルアプリ<strong>血圧記録：血圧手帳・脈拍</strong>(英語名 BP Diary &amp; Blood Pressure Log、以下「本アプリ」)に適用されます。米国ワシントン州 My Health My Data Act(RCW 19.373)およびこれに類する米国の州法の求めに従い、本アプリが取り扱う消費者の健康データについて説明します。本アプリの<a href="/ja/apps/pipi-bp/privacy/">プライバシーポリシー</a>は別の文書です。</p>
+                <p>本アプリにはアカウントも当社のサーバーもありません。入力された記録は端末内にあり、当社は見ることができません。これらの法律は、アプリが端末内で処理する情報にも適用されるため、その情報もあわせて以下に記載しています。</p>
+
+                <h2>1. 収集する消費者の健康データと、その目的・使い方</h2>
+                <ScrollableLegalTable label="消費者の健康データ：横にスクロール">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>区分</th>
+                            <th>含まれる情報</th>
+                            <th>保存場所</th>
+                            <th>目的と使い方</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>入力された記録</td>
+                            <td>最高血圧・最低血圧、脈拍(任意)、測定日時、朝・夜・その他の区分、状況タグ(服薬前、服薬後、運動後、ストレス)、メモ(任意)</td>
+                            <td>端末内のアプリのデータベースにのみ保存。iCloudまたはGoogleの端末バックアップをお使いの場合はそのバックアップに含まれます。当社には送信しません</td>
+                            <td>血圧手帳として保存し、選んだガイドラインに基づく一覧・推移・平均・参考用の分類を表示し、ホーム画面のウィジェットに「自分」の記録を表示し、ご依頼に応じてPDF・CSVレポートを作成します。</td>
+                        </tr>
+                        <tr>
+                            <td>家族の記録と名前</td>
+                            <td>追加された家族ごとの同じ記録項目と、付けられた名前(任意)</td>
+                            <td>上と同じ。Appleのヘルスケアには送りません</td>
+                            <td>上と同じ用途で、人ごとに分けて保存します。家族の記録は、ご本人の同意を得た場合にのみ入力してください。</td>
+                        </tr>
+                        <tr>
+                            <td>ヘルスケアから読み取った記録(任意)</td>
+                            <td>血圧計のアプリなど他のアプリがヘルスケアに保存した血圧と心拍数、その日時、保存したアプリの名前</td>
+                            <td>アプリのデータベースには保存せず、メモリと、端末のバックアップから除外されるキャッシュフォルダにのみ保持。当社には送信しません</td>
+                            <td>「自分」の記録とあわせて一覧・推移と、ご自身で作成するレポートに表示します。ヘルスケア連携をオンにした後にのみ読み取り、欧州経済領域(EEA)・英国・スイスでは読み取りません。</td>
+                        </tr>
+                        <tr>
+                            <td>記録から算出した情報</td>
+                            <td>参考用の分類、平均と推移。ウィジェット用に、本アプリに入力された「自分」の最新の記録と直近7日間の1日ごとの平均</td>
+                            <td>端末内。ウィジェットの表示情報は端末のバックアップに含まれることがあります</td>
+                            <td>アプリとウィジェットに表示します。</td>
+                        </tr>
+                        <tr>
+                            <td>当社が受け取るアプリの利用情報</td>
+                            <td>アプリインスタンスID(インストールごとにランダムに作られる識別子)、アプリを開いて使った時間、初期設定の完了・記録の保存(朝・夜・その他の区分と脈拍入力の有無のみ)・記録の編集・オンにしたリマインダーの数・PDFとCSVの作成・リマインダーのタップ・Pro画面を開くことと購入などのイベント、表示中の人の記録件数の区分(1、2〜9、10〜29、30以上 ― 「自分」の表示中にヘルスケア連携がオンの場合は、ヘルスケアから読み取った記録も数えます)、Googleが自動で記録する購入情報(商品ID・価格)、端末の機種・OSとアプリのバージョン、言語、IPアドレスから推定したおおよその位置(国・地域)</td>
+                            <td>アプリに含まれるFirebase Analytics SDKがGoogleへ自動送信し、Googleが当社に代わって処理。血圧・脈拍の数値、分類、タグ、メモ、名前、ヘルスケアの値は送信しません</td>
+                            <td>アプリの使われ方を把握し、不具合を見つけ、アプリを改善します。広告・マーケティングには使わず、ユーザーが誰かを特定しようとすることもありません。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>2. 取得元</h2>
+                <ul>
+                    <li><strong>ユーザーご本人</strong>：アプリに入力された記録、タグ、メモ、名前</li>
+                    <li><strong>Appleのヘルスケア</strong>：連携をオンにした場合、他のアプリがヘルスケアに保存した血圧と心拍数</li>
+                    <li><strong>端末とアプリ</strong>：アプリが記録から算出した情報と、アプリの利用中に自動で収集されるアプリの利用情報</li>
+                </ul>
+
+                <h2>3. 共有</h2>
+                <ul>
+                    <li><strong>共有する消費者の健康データの区分</strong>：ありません。当社は消費者の健康データを販売しません。</li>
+                    <li><strong>共有先となる第三者の区分と関連会社</strong>：ありません。</li>
+                </ul>
+                <p>Google LLCは、Firebase Analyticsの処理者(processor)として、当社に代わり1に記載したアプリの利用情報を処理します。血圧の記録は受け取りません。</p>
+                <p>本アプリでは、ご自身の情報をご自身で選んだ場所に移すことができ、その際に当社が情報を受け取ることはありません。ヘルスケア連携をオンにしたときに「自分」の記録をAppleのヘルスケアに保存すること、端末の共有画面からPDF・CSVレポートを送ること、端末のiCloudまたはGoogleのバックアップがこれにあたります。</p>
+
+                <h2>4. ユーザーの権利と行使の方法</h2>
+                <p>本アプリは、最初の記録の前に同意をいただきます。ユーザーには次の権利があります。</p>
+                <ul>
+                    <li><strong>確認とアクセス</strong>：当社がユーザーの消費者の健康データを収集・共有・販売しているかを確認し、その情報にアクセスできます。本アプリが端末内に保存する情報は、人ごとにアプリですべて確認できます。Googleが当社に代わって処理するアプリの利用情報については、メールでご請求ください。</li>
+                    <li><strong>同意の撤回</strong>：いつでも同意を撤回できます。本アプリに記録を収集させないようにするには、記録の入力をやめ、記録を削除する(下記)か、アプリを削除してください。ヘルスケア連携を止めるには、設定 › ヘルスケア連携 の「ヘルスケアと連携」をオフにし、端末の 設定 › プライバシーとセキュリティ › ヘルスケア で本アプリのアクセスを変更してください。アプリの利用情報はアプリ内でオフにする設定がないため、アプリを削除すると止まります。メールで同意の撤回と、当社が保有するアプリの利用情報の削除をご請求いただくこともできます。</li>
+                    <li><strong>削除</strong>：アプリで記録を1件ずつ削除したり、家族をその人の記録とともに削除したり、設定 › データ ›「すべてのデータを削除」を使ったりできます。アプリを削除すると、端末内のアプリのデータが削除されます。端末のバックアップの複製は、iCloudまたはGoogleアカウントの設定でそのバックアップを削除すると削除され、ヘルスケアに保存済みの記録はヘルスケアで削除するまで残ります。アプリの利用情報は、メールでご請求いただければ、特定できた記録をGoogle上で削除します。</li>
+                </ul>
+
+                <h3>ご請求の方法</h3>
+                <ul>
+                    <li><a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> に、件名を「消費者健康データの請求」としてお送りください。アカウントは必要ありません。</li>
+                    <li>ご請求の確認に必要な情報をお尋ねすることがあります。アプリの利用情報は、名前やメールアドレスではなく、ランダムなアプリインスタンスIDにのみ結び付いているため、メールだけではご本人の記録を特定できないことがあります。その場合は、その旨と理由をお知らせします。</li>
+                    <li>ご請求を受け取った日から遅滞なく、45日以内にお答えします。さらに時間が必要な場合は1回に限り最大45日延長することがあり、その理由を最初の45日以内にお知らせします。ご請求は無料です。</li>
+                    <li>権利を行使したことを理由に、ユーザーを差別的に取り扱うことはありません。</li>
+                </ul>
+
+                <h3>異議申し立て</h3>
+                <p>当社がご請求をお断りした場合は、当社からの回答に件名を「異議申し立て(Appeal)」として返信することで、異議を申し立てることができます。当社は異議申し立てを受け取った日から45日以内に、行った対応とその理由を書面でお知らせします。異議申し立てが認められなかった場合は、米国ワシントン州司法長官室に <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener">www.atg.wa.gov/file-complaint</a> から申し立てることができます。</p>
+
+                <h2>5. お問い合わせ先</h2>
+                <ul>
+                    <li><strong>会社</strong>：株式会社ピープルラブズ (PiFl Labs Co., Ltd.)</li>
+                    <li><strong>所在地</strong>：59 Jukseongseo-gil, Sa-dong 107-ho, Jeju-si, Jeju-do 63242, Republic of Korea</li>
+                    <li><strong>メール</strong>：<a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+                </ul>
+
+                <h2>6. 改定</h2>
+                <p>本ポリシーは2026年10月26日から施行します。新しい区分の消費者の健康データを収集・使用・共有したり、新しい目的に使用したりする前には、本ポリシーを改定し、ユーザーの同意をいただきます。</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+</BaseLayout>

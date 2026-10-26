@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="en"
+  title={"BP Diary & Blood Pressure Log Consumer Health Data Privacy Policy - PiFl Labs"}
+  description={"How the BP Diary & Blood Pressure Log app handles consumer health data under Washington's My Health My Data Act and similar U.S. state laws"}
+  canonical="https://pifl-labs.com/en/apps/pipi-bp/consumer-health-data/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-bp/consumer-health-data/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-bp/consumer-health-data/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-bp/consumer-health-data/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-bp/consumer-health-data/"}]}
+  extraCss={["/styles.css"]}
+>
+<!-- Legal Header -->
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/en/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">BP Diary &amp; Blood Pressure Log Consumer Health Data Privacy Policy</span></h1>
+            <p class="legal-date">Effective Date: October 26, 2026</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>This Consumer Health Data Privacy Policy covers the mobile application <strong>BP Diary &amp; Blood Pressure Log</strong> ("App") by PiFl Labs Co., Ltd. ("we", "us"). It describes the consumer health data the App handles, as required by Washington's My Health My Data Act (RCW 19.373) and similar U.S. state laws. The App's <a href="/en/apps/pipi-bp/privacy/">Privacy Policy</a> is a separate document.</p>
+                <p>The App has no accounts and no servers of ours. Readings you enter stay on your device, and we cannot see them. Because these laws also cover data an app processes on your device, that data is listed below too.</p>
+
+                <h2>1. Consumer Health Data We Collect, Why, and How We Use It</h2>
+                <ScrollableLegalTable label="Consumer health data: scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>What it includes</th>
+                            <th>Where it is kept</th>
+                            <th>Purpose and how it is used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Readings you enter</td>
+                            <td>Systolic and diastolic blood pressure, pulse (optional), date and time, morning/evening/other, situation tags (before medication, after medication, after exercise, stressed), note (optional)</td>
+                            <td>Only on your device, in the App's database. Included in your own iCloud or Google device backup if you use one. Never sent to us.</td>
+                            <td>To keep your blood pressure diary; to show lists, trends, averages and reference categories from the guideline you choose; to show your "Me" readings in the home-screen widget; and to create PDF and CSV reports when you ask.</td>
+                        </tr>
+                        <tr>
+                            <td>Family members' readings and names</td>
+                            <td>The same reading items for each family member you add, and the name you give them (optional)</td>
+                            <td>Same as above. Never sent to Apple Health.</td>
+                            <td>The same uses, kept separately for each person. Please add a family member's readings only with their permission.</td>
+                        </tr>
+                        <tr>
+                            <td>Readings from Apple Health (optional)</td>
+                            <td>Blood pressure and heart rate that other apps, such as your monitor's app, saved to the Health app; their times; the name of the app that saved them</td>
+                            <td>Not in the App's database: only in memory and in a cache folder excluded from device backups. Never sent to us.</td>
+                            <td>To show them with your "Me" readings in lists, trends and reports you create. Read only after you turn on the Health app connection, and not read in the EEA, the UK or Switzerland.</td>
+                        </tr>
+                        <tr>
+                            <td>Information derived from readings</td>
+                            <td>Reference categories, averages and trends; for the widget, your latest "Me" reading entered in the App and daily averages for the last 7 days</td>
+                            <td>On your device. Widget content may be included in your device backup.</td>
+                            <td>To display them in the App and the widget.</td>
+                        </tr>
+                        <tr>
+                            <td>App usage information we receive</td>
+                            <td>An app-instance ID (a random identifier for each installation); when the App is opened and used; events such as finishing setup, saving a reading (with only morning/evening/other and whether a pulse was entered) or editing one, the number of reminders turned on, creating a PDF or CSV, tapping a reminder, and opening or buying Pro; the range of readings saved for the person being viewed (1, 2–9, 10–29, 30 or more — for "Me", this count includes readings from Apple Health when the connection is on); purchase details Google records automatically (product ID, price); device model, operating system and App version, language, and approximate location (country, region) inferred from the IP address</td>
+                            <td>Sent automatically by the Firebase Analytics SDK in the App to Google, which processes it for us. Blood pressure and pulse values, categories, tags, notes, names and values from Apple Health are never sent.</td>
+                            <td>To understand how the App is used, find problems and improve the App. We do not use it for advertising or marketing, and we do not try to identify you.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>2. Sources</h2>
+                <ul>
+                    <li><strong>You</strong>: the readings, tags, notes and names you type into the App.</li>
+                    <li><strong>Apple Health</strong>: if you turn on the connection, blood pressure and heart rate that other apps saved there.</li>
+                    <li><strong>Your device and the App</strong>: information the App derives from your readings, and app usage information collected automatically while you use the App.</li>
+                </ul>
+
+                <h2>3. Sharing</h2>
+                <ul>
+                    <li><strong>Categories of consumer health data we share</strong>: none. We do not sell consumer health data.</li>
+                    <li><strong>Categories of third parties and specific affiliates we share it with</strong>: none.</li>
+                </ul>
+                <p>Google LLC processes the app usage information in Section 1 on our behalf, as our processor for Firebase Analytics. It receives none of your readings.</p>
+                <p>The App also lets you move your own data where you choose, and we do not receive it when you do: saving your "Me" readings to Apple Health when you turn on the connection, sharing a PDF or CSV report through your device's share sheet, and your device's own iCloud or Google backup.</p>
+
+                <h2>4. Your Rights and How to Use Them</h2>
+                <p>The App asks for your consent before your first reading. You have the following rights:</p>
+                <ul>
+                    <li><strong>Confirm and access</strong>: you can ask whether we collect, share or sell your consumer health data, and get access to it. Everything the App keeps on your device can be seen in the App, for each person. For the app usage information Google processes for us, email us.</li>
+                    <li><strong>Withdraw consent</strong>: you can withdraw consent at any time. To stop the App from collecting readings, stop entering them, and delete them (below) or delete the App. To stop the Apple Health connection, turn off "Connect with the Health app" in Settings › Health app, and change the App's access in your device's Settings › Privacy &amp; Security › Health. The App does not have an in-app switch for app usage information, so deleting the App stops it; you can also email us to withdraw consent and ask us to delete the usage information we hold.</li>
+                    <li><strong>Delete</strong>: in the App you can delete a single reading, delete a family member together with their readings, or use Settings › Data › "Delete all data". Deleting the App removes its data from your device. Copies in your device backup are removed when you delete that backup in your iCloud or Google account settings, and readings already saved to Apple Health stay there until you delete them in the Health app. For app usage information, email us and we will have Google delete the records we can find.</li>
+                </ul>
+
+                <h3>How to make a request</h3>
+                <ul>
+                    <li>Email <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> with the subject "Consumer health data request". You do not need an account.</li>
+                    <li>We may ask for information we need to confirm your request. App usage information is linked only to a random app-instance ID, not to your name or email address, so we may not be able to find records about you from an email alone. If so, we will tell you and explain why.</li>
+                    <li>We respond without undue delay and within 45 days of receiving your request. If we need more time, we may extend this once by up to 45 more days, and we will tell you why within the first 45 days. Requests are free of charge.</li>
+                    <li>We will not discriminate against you for exercising these rights.</li>
+                </ul>
+
+                <h3>Appeals</h3>
+                <p>If we decline your request, you can appeal by replying to our decision with "Appeal" in the subject. We will reply in writing within 45 days of receiving your appeal, explaining what we did and why. If we deny your appeal, you can contact the Washington State Attorney General at <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener">www.atg.wa.gov/file-complaint</a>.</p>
+
+                <h2>5. Contact</h2>
+                <ul>
+                    <li><strong>Company</strong>: PiFl Labs Co., Ltd.</li>
+                    <li><strong>Address</strong>: 59 Jukseongseo-gil, Sa-dong 107-ho, Jeju-si, Jeju-do 63242, Republic of Korea</li>
+                    <li><strong>Email</strong>: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+                </ul>
+
+                <h2>6. Changes</h2>
+                <p>This policy is effective as of October 26, 2026. Before we collect, use or share new categories of consumer health data, or use it for new purposes, we will update this policy and ask for your consent.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+</BaseLayout>

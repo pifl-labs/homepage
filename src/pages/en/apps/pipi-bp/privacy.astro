@@ -1,156 +1,205 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
 ---
 <BaseLayout
   lang="en"
-  title={"Blood Pressure Log: BP Tracker Privacy Policy - PiFl Labs"}
-  description={"PiFl Labs Co., Ltd. Blood Pressure Log: BP Tracker app privacy policy"}
+  title={"BP Diary & Blood Pressure Log Privacy Policy - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. BP Diary & Blood Pressure Log app privacy policy"}
   canonical="https://pifl-labs.com/en/apps/pipi-bp/privacy/"
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-bp/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-bp/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-bp/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-bp/privacy/"}]}
   extraCss={["/styles.css"]}
 >
-<section class="legal-hero">
+<!-- Legal Header -->
+    <section class="legal-hero">
         <div class="container">
             <a href="/en/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Blood Pressure Log: BP Tracker Privacy Policy</span></h1>
-            <p class="legal-date">Effective Date: October 25, 2026</p>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">BP Diary &amp; Blood Pressure Log Privacy Policy</span></h1>
+            <p class="legal-date">Effective Date: October 26, 2026</p>
         </div>
     </section>
 
+    <!-- Legal Content -->
     <main class="legal-page">
         <div class="container">
             <div class="legal-card">
-                <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and disclose information when you use the mobile application <strong>Blood Pressure Log: BP Tracker</strong> ("App"). For matters not covered here, our <a href="/en/privacy">general Privacy Policy</a> applies.</p>
-                <p>The App does not measure blood pressure. It does not use any sensor, the camera, HealthKit, or Health Connect. You type in readings taken with your own home monitor.</p>
+                <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how information is handled when you use the mobile application <strong>BP Diary &amp; Blood Pressure Log</strong> ("App"). For matters not covered here, our <a href="/en/privacy">general Privacy Policy</a> applies.</p>
+                <p><strong>In short</strong>: your blood pressure readings are stored on your device and are never sent to our servers. The App has no sign-up, no ads and no tracking. The only information we receive is usage statistics through Firebase Analytics (Google), which never include blood pressure or pulse values, categories, notes or names, and the emails you send us. Information required by Washington's My Health My Data Act and similar U.S. state laws is in our separate <a href="/en/apps/pipi-bp/consumer-health-data/">Consumer Health Data Privacy Policy</a>.</p>
+                <p>The App does not measure blood pressure. It uses no sensors or camera; you type in the numbers from your own blood pressure monitor.</p>
 
                 <h2>1. Purpose of Processing</h2>
                 <ul>
-                    <li><strong>App functionality</strong>: Recording blood pressure and pulse readings, tags, notes, and reminder settings; reminders; exporting your records as PDF or CSV</li>
-                    <li><strong>Advertising</strong>: Ad serving via Google AdMob</li>
-                    <li><strong>Analytics</strong>: Anonymous usage statistics via Firebase Analytics (Google)</li>
-                    <li><strong>Customer support</strong>: Receiving and responding to email inquiries</li>
+                    <li><strong>Recording and viewing readings (on your device)</strong>: storing the blood pressure and pulse readings you enter and showing them as lists, trends, averages and reference categories.</li>
+                    <li><strong>Family readings (on your device)</strong>: keeping readings separately for each family profile you add.</li>
+                    <li><strong>Reminders and widget (on your device)</strong>: reminding you at the times you choose and showing your latest "Me" reading in the home-screen widget.</li>
+                    <li><strong>Health app connection (optional)</strong>: if you turn it on, saving your "Me" readings to Apple Health and showing blood pressure and heart rate that other apps saved there.</li>
+                    <li><strong>Report export (Pro)</strong>: creating PDF and CSV files on your device and sharing them where you choose.</li>
+                    <li><strong>Pro one-time purchase</strong>: unlocking Pro features through Apple App Store or Google Play payment.</li>
+                    <li><strong>Usage statistics</strong>: understanding how the App is used through Firebase Analytics (Google), to find problems and improve the App.</li>
+                    <li><strong>Support</strong>: replying to inquiries you send by email.</li>
                 </ul>
 
-                <h2>2. Information We Collect</h2>
-                <p>The App does not require account registration. There is no cloud backup and no sync. We process the following:</p>
+                <h2>2. Information We Process</h2>
+                <p>The App has no sign-up, accounts, servers of ours or sync. Information marked "on your device" below stays on your device, and we cannot see it.</p>
+                <ScrollableLegalTable label="Information processed: scroll sideways">
                 <table>
                     <thead>
                         <tr>
                             <th>Category</th>
                             <th>Items</th>
-                            <th>Collection Method</th>
+                            <th>How it is collected and kept</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Health Records You Enter</td>
-                            <td>Blood pressure readings, pulse, tags, notes, reminder settings</td>
-                            <td>Stored only on your device in a local SQLite database (never transmitted to us or to any third party)</td>
+                            <td>Readings</td>
+                            <td>Systolic and diastolic blood pressure, pulse (optional), date and time, morning/evening/other, situation tags (before medication, after medication, after exercise, stressed), note (optional, up to 100 characters)</td>
+                            <td>Entered by you. Stored only in the App's database on your device; never sent to us</td>
                         </tr>
                         <tr>
-                            <td>Advertising Identifier</td>
-                            <td>Ad ID (IDFA/AAID), coarse location (country level), device info (OS, model, language)</td>
-                            <td>Automatic via Google AdMob SDK (with consent)</td>
+                            <td>Profiles</td>
+                            <td>Names (optional, up to 20 characters) and display colors for "Me" and up to 5 family members you add</td>
+                            <td>Entered by you. Stored on your device</td>
                         </tr>
                         <tr>
-                            <td>Anonymous Usage Statistics</td>
-                            <td>App opens, which features are used, counts and buckets (for example, the number of readings), standard Firebase identifiers (app instance ID), device info. Blood pressure values, categories, and notes are never collected.</td>
-                            <td>Automatic via Firebase Analytics SDK (Google)</td>
+                            <td>Reminders and settings</td>
+                            <td>Reminder times and on/off, guideline and whether categories are shown, theme and language, the profile being viewed, whether you agreed before your first reading, whether the Health app connection is on, whether you bought Pro</td>
+                            <td>Stored on your device</td>
                         </tr>
                         <tr>
-                            <td>Email Inquiries</td>
-                            <td>Email address, name (optional), inquiry content</td>
-                            <td>Direct email submission</td>
+                            <td>Values read from Apple Health (optional)</td>
+                            <td>Blood pressure and heart rate that other apps saved to the Health app, their times, and the name of the app that saved them</td>
+                            <td>Read only if you turn on the Health app connection. Not stored in the App's database; kept only in memory and in a cache folder excluded from device backups (Section 7)</td>
+                        </tr>
+                        <tr>
+                            <td>Widget content</td>
+                            <td>Your latest reading entered in the App for "Me" (blood pressure, pulse, time, category), daily averages for the last 7 days, whether you logged this morning and evening, the next reminder time</td>
+                            <td>Written by the App to the widget's storage on your device</td>
+                        </tr>
+                        <tr>
+                            <td>Usage statistics</td>
+                            <td>App-instance ID (a random identifier created for each installation); basic events such as opening and using the App; finishing setup; saving a reading (only morning/evening/other and whether a pulse was entered) and editing one; the number of reminders turned on; PDF and CSV exports; reminder taps; opening Pro (and from where) and completing the purchase; the range of readings saved for the person being viewed (1, 2–9, 10–29, 30 or more); purchase details Google records automatically when you pay in the store (product ID, price); device model, operating system and version, App version, language, and approximate location (country, region) inferred from the IP address</td>
+                            <td>Sent automatically to Google by the Firebase Analytics SDK while you use the App. Blood pressure and pulse values, categories, tags, notes, names and values read from the Health app are never sent</td>
+                        </tr>
+                        <tr>
+                            <td>Email inquiries</td>
+                            <td>Email address, name (optional), message</td>
+                            <td>When you email us</td>
                         </tr>
                     </tbody>
                 </table>
-                <p>Your health records are never used for ad targeting.</p>
+                </ScrollableLegalTable>
+                <p>When you are viewing "Me" and the Health app connection is on, the range of readings also counts readings read from the Health app. Even then, no Health app values, times or sources are sent.</p>
+                <p>When you create a PDF and the needed font is not on your device, the App downloads the font file from Google Fonts. This request passes your device's IP address and other connection details to Google, but none of your readings.</p>
 
                 <h2>3. Retention Period</h2>
                 <ul>
-                    <li><strong>Health records (local)</strong>: Until you delete individual readings in the App or delete the App. We hold no copy.</li>
-                    <li><strong>Exported PDF/CSV files</strong>: Created on your device and shared only through your device's share sheet by your choice. We hold no copy; you manage these files.</li>
-                    <li><strong>Advertising identifier and ad data</strong>: As per Google AdMob policy</li>
-                    <li><strong>Anonymous usage statistics</strong>: As per Google Firebase policy</li>
-                    <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after resolution</li>
+                    <li><strong>Readings, profiles, settings and widget content on your device</strong>: until you delete them in the App or uninstall the App. We keep no copy. For copies in device backups, see Section 8.</li>
+                    <li><strong>Cache of values read from Apple Health</strong>: until you turn off the Health app connection, use "Delete all data", or uninstall the App. The operating system may remove it earlier if storage runs low.</li>
+                    <li><strong>Exported PDF and CSV files</strong>: the App creates the file in your device's temporary folder and hands it to the share sheet. The operating system clears the temporary folder; files you send are yours to manage.</li>
+                    <li><strong>Usage statistics</strong>: deleted after the period set in Google Analytics data retention (up to 14 months). Aggregated reports that do not identify anyone may remain.</li>
+                    <li><strong>Email inquiries</strong>: <strong>3 years</strong> after the inquiry is resolved</li>
                 </ul>
 
                 <h2>4. Disclosure to Third Parties</h2>
-                <p>We do not sell, trade, or transfer your personal information to third parties except as required by law or with your explicit consent. Your health records are stored only on your device and are never transmitted to us or to any third party.</p>
+                <p>We do not disclose or sell personal data to third parties. The following happen only when you choose or turn them on, and we do not receive or pass on the information:</p>
+                <ul>
+                    <li>With the Health app connection on, your "Me" readings are saved to Apple Health on your device (Section 7). Information in the Health app is governed by Apple's policies and your Health settings.</li>
+                    <li>When you export a report, the file goes to the app or person you pick in the share sheet.</li>
+                    <li>If your device backup is on, App data is included in your own iCloud or Google account backup (Section 8).</li>
+                </ul>
 
                 <h2>5. Processing Entrustment</h2>
+                <ScrollableLegalTable label="Service providers: scroll sideways">
                 <table>
                     <thead>
                         <tr>
-                            <th>Processor</th>
-                            <th>Purpose</th>
+                            <th>Service provider</th>
+                            <th>Task</th>
                             <th>Retention</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Google LLC (AdMob)</td>
-                            <td>Mobile ad serving and ad identifier processing</td>
-                            <td>Until contract termination</td>
-                        </tr>
-                        <tr>
                             <td>Google LLC (Firebase Analytics)</td>
-                            <td>Anonymous usage statistics</td>
-                            <td>Until contract termination</td>
+                            <td>Collecting and analyzing the usage statistics in Section 2</td>
+                            <td>Same as usage statistics in Section 3</td>
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
+                <p>Apple and Google process Pro payments in their own payment systems; we never receive card or other payment details. Information those platforms handle when you download or pay is governed by their privacy policies. Email inquiries are handled as described in our <a href="/en/privacy">general Privacy Policy</a>.</p>
 
-                <h2>6. Advertising and Tracking Consent</h2>
-                <p>The App shows banner ads, interstitial ads, and optional rewarded ads via Google AdMob. For this purpose AdMob may process advertising identifiers (IDFA/AAID), coarse location (country level), and device information. Your health records are never used for ad targeting.</p>
+                <h2>6. Advertising and Tracking</h2>
+                <p>The App shows no ads and contains no advertising SDK. It is set up not to collect advertising identifiers (IDFA, AAID), and it does not combine your information with information from other companies' apps or websites to track you, so it does not ask for App Tracking Transparency permission. Your readings and Health app information are never used for advertising or marketing.</p>
+
+                <h2>7. Apple Health Connection</h2>
+                <p>The connection is optional and works only after you turn on "Connect with the Health app" in Settings › Health app. It is available on iPhone and iPad with the Apple Health app; the Android version does not currently connect to Health Connect.</p>
                 <ul>
-                    <li><strong>iOS users</strong>: The App asks for Apple's App Tracking Transparency (ATT) permission. <strong>If you decline, only non-personalized ads will be shown.</strong></li>
-                    <li><strong>EEA and UK users</strong>: The Google User Messaging Platform (UMP) consent form is shown. You can change your choice at any time in Settings → Ad privacy options.</li>
-                    <li><strong>Android users</strong>: You can opt out via Settings → Google → Ads → "Delete advertising ID" or "Opt out of ad personalization".</li>
-                </ul>
-                <p>For details on Google AdMob's data processing, see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-
-                <h2>7. Analytics</h2>
-                <p>The App uses Firebase Analytics (Google) to collect anonymous usage statistics, such as app opens, which features are used, and counts and buckets such as the number of readings. We never collect blood pressure values, categories, or notes. Google processes standard Firebase identifiers (app instance ID) and device information.</p>
-
-                <h2>8. App Permissions</h2>
-                <p>The App may request the following permissions. Each can be denied, though doing so may limit related functionality.</p>
-                <ul>
-                    <li><strong>Notifications</strong>: Local reminders only. There is no push server.</li>
-                    <li><strong>App Tracking Transparency (iOS)</strong>: Tracking consent for ad relevance</li>
-                </ul>
-                <p>The App does not use any sensor, the camera, HealthKit, or Health Connect.</p>
-
-                <h2>9. In-App Purchases</h2>
-                <p>Version 1.0 of the App has no in-app purchases. If this changes, we will update this Policy.</p>
-
-                <h2>10. Data Destruction</h2>
-                <ul>
-                    <li><strong>Procedure</strong>: Unnecessary personal data is destroyed after approval by the Data Protection Officer.</li>
-                    <li><strong>Method</strong>: Electronic files are permanently deleted using non-recoverable methods. You can delete individual readings in the App. Local app data, including all your health records, is removed when you delete the App.</li>
+                    <li><strong>Saving to Health</strong>: when you turn it on, the App saves blood pressure and pulse (if entered) from the "Me" profile to the Health app, including your existing "Me" readings at that moment. While the connection is on, editing or deleting a "Me" reading in the App also edits or deletes the value this App saved to Health. Family members' readings are never sent to the Health app.</li>
+                    <li><strong>Reading from Health</strong>: the App reads blood pressure from the past year that other apps (such as your monitor's app) saved to the Health app, and the heart rate the same app saved around that time, and shows them with your "Me" readings in lists, trends and reports you create. These values are not stored in the App's database; to show them quickly when you reopen the App, they are kept only in a cache folder excluded from device backups. You cannot edit or delete these readings in the App; manage them in the Health app.</li>
+                    <li><strong>EEA, UK and Switzerland</strong>: if your device's region is set to one of these, the App does not ask for read access and does not read from the Health app. Saving to Health works the same.</li>
+                    <li>Values read from the Health app are never used for advertising or marketing and are never sent to our servers or to Google.</li>
+                    <li>Turning off the connection or using "Delete all data" does not remove values already saved in the Health app; you can delete them there. You can change the App's access to health data at any time in your device's Settings › Privacy &amp; Security › Health.</li>
                 </ul>
 
-                <h2>11. Your Rights</h2>
-                <ol>
-                    <li>Right to be informed about the processing of your personal data</li>
-                    <li>Right to consent to and determine the scope of processing</li>
-                    <li>Right to access and request information about your personal data</li>
-                    <li>Right to request correction, deletion, suspension, or destruction</li>
-                    <li>Right to seek redress for damages caused by processing</li>
-                </ol>
-                <p>To exercise these rights, contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>. Because your health records exist only on your device, you can delete individual readings directly in the App.</p>
-
-                <h2>12. Security Measures</h2>
+                <h2>8. Device Backups</h2>
                 <ul>
-                    <li>Health records are stored only on your device and are never transmitted to us or to any third party</li>
-                    <li>No account, no cloud backup, and no sync, so no copy of your health records is held on our servers</li>
-                    <li>Exported files are shared only through your device's share sheet, by your choice</li>
+                    <li><strong>iPhone and iPad</strong>: if you use iCloud Backup, the App's database (readings, profiles, settings) and widget content are included in that backup, so you can restore them on a new device. The cache of values read from the Health app is excluded from backups.</li>
+                    <li><strong>Android</strong>: the App allows Android auto backup, so if your device's Google backup is on, App data (readings, profiles, settings) is included in your Google account backup and may be restored when you move to a new device.</li>
+                    <li>Backups are stored in your own Apple or Google account, and we cannot access them. You can turn backups off or delete them in your device settings.</li>
                 </ul>
 
-                <h2>13. Children's Privacy</h2>
-                <p>The App is not directed at children under 14. We do not knowingly collect personal data from children under 14. If we become aware of such collection, we will delete it immediately. Parents may request deletion at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+                <h2>9. Reminders and Widget</h2>
+                <ul>
+                    <li><strong>Reminders</strong>: reminders are local notifications scheduled on your device without any server. They never include blood pressure values.</li>
+                    <li><strong>Widget</strong>: the widget always shows only "Me" readings, never family members'. The lock-screen widget (iOS) shows only the next reminder time, not blood pressure values. Values in the iOS home-screen widget are marked as privacy-sensitive, so the system hides them when the widget is visible while your device is locked.</li>
+                </ul>
 
-                <h2>14. International Data Transfers</h2>
+                <h2>10. App Permissions</h2>
+                <p>The App may request or use the following permissions. You can decline optional ones; only the related feature will be unavailable.</p>
+                <ul>
+                    <li><strong>Notifications (optional)</strong>: requested when you turn on reminders during setup or in Settings.</li>
+                    <li><strong>Health (optional, iPhone and iPad)</strong>: read and write access for blood pressure and heart rate, requested only when you turn on the Health app connection (Section 7).</li>
+                    <li><strong>Internet (Android)</strong>: used for usage statistics, store payments and PDF font downloads. Readings are never sent.</li>
+                    <li><strong>Boot completed (Android)</strong>: used to reschedule reminders after the device restarts or the App updates.</li>
+                    <li>The App does not use camera, sensor, location, contacts, microphone or photo permissions.</li>
+                </ul>
+
+                <h2>11. Pro One-Time Purchase</h2>
+                <p>The App sells Pro features (PDF and CSV reports, 90-day and 1-year trends, morning vs. evening comparison) as a one-time purchase (com.pifl.pipi.bp.pro); there is no subscription. Apple App Store or Google Play processes the payment, and we never receive card or other payment details. Whether you bought Pro is stored on your device, and "Restore purchase" checks your purchase with the store again. The App does not send receipts to our servers. When a payment is made, Firebase Analytics may record the purchase and product details (Section 2).</p>
+
+                <h2>12. Data Destruction</h2>
+                <ul>
+                    <li><strong>Deleting in the App</strong>: you can delete readings one at a time, and deleting a family profile deletes that person's readings too. Settings › Data › "Delete all data" deletes every reading and family profile on the device, clears the "Me" name, turns off the Health app connection and deletes the cache of values read from the Health app. Reminder times, display settings and your Pro purchase remain.</li>
+                    <li><strong>Uninstalling</strong>: uninstalling the App removes its data from your device, including widget content. Copies in device backups and values saved in the Health app can be deleted in your backup settings and in the Health app.</li>
+                    <li><strong>Information we hold</strong>: email inquiries are permanently deleted in an unrecoverable way after the retention period, and Google deletes usage statistics after the retention period in Section 3.</li>
+                </ul>
+
+                <h2>13. Your Rights</h2>
+                <ul>
+                    <li>We cannot see information on your device, so you can view, edit and delete it yourself in the App (Section 12).</li>
+                    <li>The information we hold is usage statistics and email inquiries. To request access, deletion or suspension of processing, email <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> and we will act without delay. Usage statistics are identified only by an app-instance ID that is not linked to your name or email, so we may not be able to find your records from an email alone. If so, we will tell you and explain why.</li>
+                    <li>The App has no in-app setting to turn off usage statistics. To stop them, uninstall the App.</li>
+                    <li>Please add a family member's readings only with their permission. Family members can exercise these rights too.</li>
+                    <li>For rights under Washington's My Health My Data Act and similar U.S. state laws (confirm and access, withdraw consent, delete, appeal) and how to use them, see our <a href="/en/apps/pipi-bp/consumer-health-data/">Consumer Health Data Privacy Policy</a>.</li>
+                </ul>
+
+                <h2>14. Security Measures</h2>
+                <ul>
+                    <li>Readings are stored only on your device; there are no accounts, servers of ours or sync</li>
+                    <li>Usage statistics never include blood pressure or pulse values, categories, tags, notes or names, and the App is set up not to collect advertising identifiers</li>
+                    <li>Values read from the Health app are not stored in the App's database; they are kept only in a cache excluded from device backups</li>
+                    <li>No blood pressure values on the lock-screen widget, and no names in exported file names</li>
+                    <li>Usage statistics are sent over encrypted connections (HTTPS)</li>
+                </ul>
+
+                <h2>15. Children's Privacy</h2>
+                <p>The App is not directed at children under 14. We do not knowingly collect personal data from children under 14, and if we learn that we have, we delete it promptly. Guardians may contact <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> to request deletion.</p>
+
+                <h2>16. International Data Transfers</h2>
+                <p>To process usage statistics, we transfer personal data abroad as follows.</p>
+                <ScrollableLegalTable label="International transfers: scroll sideways">
                 <table>
                     <thead>
                         <tr>
@@ -162,35 +211,42 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Google LLC (AdMob)</td>
-                            <td>United States</td>
-                            <td>Mobile ad serving</td>
-                            <td>Ad identifier, coarse location (country level), device info</td>
-                        </tr>
-                        <tr>
                             <td>Google LLC (Firebase Analytics)</td>
                             <td>United States</td>
-                            <td>Anonymous usage statistics</td>
-                            <td>Usage events, app instance ID, device info</td>
+                            <td>Usage statistics</td>
+                            <td>The usage statistics items in Section 2</td>
                         </tr>
                     </tbody>
                 </table>
+                </ScrollableLegalTable>
+                <h3>Google LLC (Firebase Analytics) transfer details</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · Privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy contact form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: app-instance ID, app usage events, range of readings, purchase details when you pay, device model, operating system, App version, language, IP address (used to infer approximate location)</li>
+                    <li><strong>When and how</strong>: sent from time to time while you use the App by the Firebase Analytics SDK in the App, directly to Google's servers over encrypted connections (HTTPS), without passing through any server of ours. It may be processed in other countries where Google operates data centers.</li>
+                    <li><strong>Purpose</strong>: understanding how the App is used, finding problems and improving the App</li>
+                    <li><strong>Retention</strong>: as in Section 3 (Google Analytics data retention, up to 14 months)</li>
+                    <li><strong>How to refuse and its effect</strong>: the App has no in-app setting to turn off usage statistics, so to refuse the transfer you need to stop using (uninstall) the App, and you will not be able to use it. You can ask us to delete information already sent as described in Section 13.</li>
+                </ul>
+                <p>PDF font downloads (Google Fonts) are requests for font files and send none of your readings.</p>
 
-                <h2>15. Data Protection Officer</h2>
+                <h2>17. Data Protection Officer</h2>
                 <ul>
                     <li><strong>Company</strong>: PiFl Labs Co., Ltd.</li>
                     <li><strong>Email</strong>: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
                 </ul>
 
-                <h2>16. GDPR (European Economic Area)</h2>
+                <h2>18. Medical Notice</h2>
+                <p>The App is a personal diary that does not measure blood pressure. It is not a medical device and does not diagnose or treat any condition. The categories it shows are for reference, from the guideline you choose (or, if you have not chosen, the one for your device's region): American Heart Association (AHA/ACC 2025), European Society of Cardiology (ESC 2024, home readings), Japanese Society of Hypertension (JSH2025, home readings), Korean Society of Hypertension (2026), Brazilian Guidelines of Hypertension (2025), or ISH 2020 · Indonesian Society of Hypertension (PERHI 2021). The App shows the source of each guideline. In the EEA, the UK and Switzerland, readings are shown as reference ranges from the guideline, without category names. Always talk to a healthcare professional about your blood pressure and treatment.</p>
+
+                <h2>19. GDPR (European Economic Area)</h2>
                 <p>If you are located in the EEA, you have additional rights under the General Data Protection Regulation, including the right to access, rectify, erase, restrict processing, data portability, and object to processing. Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
-                <h2>17. Medical Disclaimer</h2>
-                <p>The App is a personal record and does not provide medical advice. The categories shown in the App follow the American Heart Association 2017 ACC/AHA classification and are for reference only. Please consult a healthcare professional about your blood pressure and any treatment decisions.</p>
-
-                <h2>18. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective as of October 25, 2026. Any changes will be announced on this page.</p>
+                <h2>20. Changes to this Policy</h2>
+                <p>This Privacy Policy is effective as of October 26, 2026. Any changes will be announced on this page.</p>
             </div>
         </div>
     </main>
+
+    <!-- Footer -->
 </BaseLayout>
