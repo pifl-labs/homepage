@@ -103,3 +103,16 @@ test('usage statistics are described as opt-in with an in-app switch, never as i
     }
   }
 });
+
+// GA 는 iOS 에서 IDFV 를 기본 수집하고(Info.plist 에 GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED 없음) IP 로 도시까지 추정한다 —
+// App Store 라벨(Device ID·Coarse Location)과 같은 범위를 방침에도 적는다.
+test('usage statistics disclose the iOS IDFV and city-level approximate location', { skip }, () => {
+  const city = { ko: '도시·지역·국가', ja: '市区町村・地域・国', en: 'city, region, country', '': 'city, region, country' };
+  for (const prefix of [...LOCALES, '']) {
+    for (const page of PAGES) {
+      const body = main(read(prefix, page));
+      assert.match(body, /IDFV/, `${prefix || 'root'} ${page}: IDFV`);
+      assert.ok(body.includes(city[prefix]), `${prefix || 'root'} ${page}: 도시 수준 위치`);
+    }
+  }
+});
