@@ -94,7 +94,7 @@ test('no page says the readings range counts Health app readings', { skip }, () 
 // "앱 안에 끄는 설정이 없다(앱을 지워야 멈춘다)"는 옛 설명이 다시 들어오면 안 되고, 스위치 안내는 있어야 한다.
 test('usage statistics are described as opt-in with an in-app switch, never as impossible to turn off', { skip }, () => {
   const stale = [/끄는 설정이 없/, /no in-app (?:setting|switch)|does not have an in-app switch/i, /オフにする設定が(?:ない|ありません)/];
-  const SWITCH = { ko: /사용 통계 보내기/, en: /Share usage statistics/, ja: /利用統計の送信スイッチ/, '': /Share usage statistics/ };
+  const SWITCH = { ko: /사용 통계 보내기/, en: /Share usage statistics/, ja: /設定 › プライバシー ›「利用統計を送信」/, '': /Share usage statistics/ };
   for (const page of PAGES) {
     for (const prefix of [...LOCALES, '']) {
       const body = main(read(prefix, page));
