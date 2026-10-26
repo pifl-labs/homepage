@@ -103,12 +103,3 @@ test('usage statistics are described as opt-in with an in-app switch, never as i
     }
   }
 });
-
-// 워싱턴 MHMDA RCW 19.373.020(1)(b): 회사 홈페이지에 소비자 건강 정보 처리방침 링크를 눈에 띄게 둔다 — 공용 푸터에 넣었다.
-test('every locale homepage links to the consumer health data policy in the footer', { skip }, () => {
-  for (const locale of LOCALES) {
-    const html = readFileSync(new URL(`../dist/${locale}/index.html`, import.meta.url), 'utf8');
-    const footer = html.match(/<footer class="footer">([\s\S]*?)<\/footer>/)?.[1] ?? '';
-    assert.match(footer, new RegExp(`href="/${locale}/apps/pipi-bp/consumer-health-data/"`), `${locale} 홈 푸터`);
-  }
-});

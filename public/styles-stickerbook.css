@@ -702,9 +702,6 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   gap: 1rem; flex-wrap: wrap;
 }
 .footer-bottom > * { position: relative; z-index: 2; }
-/* 하단 법적 링크(이용약관·개인정보·소비자 건강 정보) — 색 지정이 없어 브라우저 기본 파랑이 남색 위에 대비 2.2:1 로 떴다. 위 열 링크와 같은 색에 밑줄 */
-.footer-bottom a { color: var(--text-secondary); text-decoration: underline; text-underline-offset: 2px; }
-.footer-bottom a:hover { color: var(--accent-highlight); }
 
 /* ── 푸터 환경설정 — 테마 + 글자 크기 (우측 하단 한 줄) ───────────── */
 .footer-prefs {
