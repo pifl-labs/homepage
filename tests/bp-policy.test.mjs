@@ -73,3 +73,19 @@ test('consumer health data pages carry the WA MHMDA rights, timelines and AG con
     assert.match(body, /Firebase Analytics/);
   }
 });
+
+// pipi_bp 180643e 부터 Analytics readings_bucket 은 앱에 직접 적은 기록만 센다(!r.isImported).
+// "건강 앱 기록도 기록 수 구간에 센다"는 옛 설명이 다시 들어오면 안 된다.
+test('no page says the readings range counts Health app readings', { skip }, () => {
+  const stale = [
+    /건강 앱에서 읽은 기록(?:의 개수)?도 (?:함께 )?(?:셈|셉)/,
+    /also counts readings read from the Health app|this count includes readings from Apple Health/i,
+    /ヘルスケアから読み取った記録(?:の件数)?も(?:含まれ|数え)/,
+  ];
+  for (const page of PAGES) {
+    for (const prefix of [...LOCALES, '']) {
+      const body = main(read(prefix, page));
+      for (const re of stale) assert.doesNotMatch(body, re, `${prefix || 'root'} ${page}`);
+    }
+  }
+});
