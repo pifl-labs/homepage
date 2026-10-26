@@ -17,7 +17,7 @@ const canonical = html => html.match(/<link rel="canonical" href="([^"]+)"/)?.[1
 const alternates = html => Object.fromEntries(
   [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(m => [m[1], m[2]]),
 );
-const EFFECTIVE = { ko: '2026년 10월 26일', en: 'October 26, 2026', ja: '2026年10月26日', '': 'October 26, 2026' };
+const EFFECTIVE = { ko: '2026년 10월 27일', en: 'October 27, 2026', ja: '2026年10月27日', '': 'October 27, 2026' };
 
 for (const page of PAGES) {
   for (const locale of LOCALES) {
@@ -44,7 +44,7 @@ for (const page of PAGES) {
   test(`${page}: effective date, obfuscated email only, no ad-era or stale facts`, { skip }, () => {
     for (const prefix of [...LOCALES, '']) {
       const body = main(read(prefix, page));
-      assert.ok(body.includes(EFFECTIVE[prefix]), `${prefix || 'root'} ${page}: 시행일 2026-10-26`);
+      assert.ok(body.includes(EFFECTIVE[prefix]), `${prefix || 'root'} ${page}: 시행일 2026-10-27`);
       assert.doesNotMatch(body, /mailto:/i);
       assert.match(body, /data-email-user="privacy" data-email-domain="pifl-labs\.com"/);
       // 2026-10-26 대표 결정으로 광고를 없앴다 — 광고 SDK·동의 양식·옛 분류 기준·옛 주소가 남으면 안 된다.
@@ -101,5 +101,14 @@ test('usage statistics are described as opt-in with an in-app switch, never as i
       for (const re of stale) assert.doesNotMatch(body, re, `${prefix || 'root'} ${page}`);
       assert.match(body, SWITCH[prefix], `${prefix || 'root'} ${page}: 설정 스위치 안내`);
     }
+  }
+});
+
+// 워싱턴 MHMDA RCW 19.373.020(1)(b): 회사 홈페이지에 소비자 건강 정보 처리방침 링크를 눈에 띄게 둔다 — 공용 푸터에 넣었다.
+test('every locale homepage links to the consumer health data policy in the footer', { skip }, () => {
+  for (const locale of LOCALES) {
+    const html = readFileSync(new URL(`../dist/${locale}/index.html`, import.meta.url), 'utf8');
+    const footer = html.match(/<footer class="footer">([\s\S]*?)<\/footer>/)?.[1] ?? '';
+    assert.match(footer, new RegExp(`href="/${locale}/apps/pipi-bp/consumer-health-data/"`), `${locale} 홈 푸터`);
   }
 });
