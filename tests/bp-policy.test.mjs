@@ -89,3 +89,17 @@ test('no page says the readings range counts Health app readings', { skip }, () 
     }
   }
 });
+
+// pipi_bp feat/analytics-consent 부터 사용 통계는 opt-in(기본 꺼짐)이고 설정 › 개인정보 스위치로 끄고 켠다.
+// "앱 안에 끄는 설정이 없다(앱을 지워야 멈춘다)"는 옛 설명이 다시 들어오면 안 되고, 스위치 안내는 있어야 한다.
+test('usage statistics are described as opt-in with an in-app switch, never as impossible to turn off', { skip }, () => {
+  const stale = [/끄는 설정이 없/, /no in-app (?:setting|switch)|does not have an in-app switch/i, /オフにする設定が(?:ない|ありません)/];
+  const SWITCH = { ko: /사용 통계 보내기/, en: /Share usage statistics/, ja: /利用統計の送信スイッチ/, '': /Share usage statistics/ };
+  for (const page of PAGES) {
+    for (const prefix of [...LOCALES, '']) {
+      const body = main(read(prefix, page));
+      for (const re of stale) assert.doesNotMatch(body, re, `${prefix || 'root'} ${page}`);
+      assert.match(body, SWITCH[prefix], `${prefix || 'root'} ${page}: 설정 스위치 안내`);
+    }
+  }
+});

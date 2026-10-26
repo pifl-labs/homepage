@@ -24,7 +24,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
         <div class="container">
             <div class="legal-card">
                 <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how information is handled when you use the mobile application <strong>BP Diary &amp; Blood Pressure Log</strong> ("App"). For matters not covered here, our <a href="/en/privacy">general Privacy Policy</a> applies.</p>
-                <p><strong>In short</strong>: your blood pressure readings are stored on your device and are never sent to our servers. The App has no sign-up, no ads and no tracking. The only information we receive is usage statistics through Firebase Analytics (Google), which never include blood pressure or pulse values, categories, notes or names, and the emails you send us. Information required by Washington's My Health My Data Act and similar U.S. state laws is in our separate <a href="/en/apps/pipi-bp/consumer-health-data/">Consumer Health Data Privacy Policy</a>.</p>
+                <p><strong>In short</strong>: your blood pressure readings are stored on your device and are never sent to our servers. The App has no sign-up, no ads and no tracking. The only information we receive is usage statistics through Firebase Analytics (Google), sent only if you turn them on (they are off by default) and never including blood pressure or pulse values, categories, notes or names, and the emails you send us. Information required by Washington's My Health My Data Act and similar U.S. state laws is in our separate <a href="/en/apps/pipi-bp/consumer-health-data/">Consumer Health Data Privacy Policy</a>.</p>
                 <p>The App does not measure blood pressure. It uses no sensors or camera; you type in the numbers from your own blood pressure monitor.</p>
 
                 <h2>1. Purpose of Processing</h2>
@@ -35,7 +35,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Health app connection (optional)</strong>: if you turn it on, saving your "Me" readings to Apple Health and showing blood pressure and heart rate that other apps saved there.</li>
                     <li><strong>Report export (Pro)</strong>: creating PDF and CSV files on your device and sharing them where you choose.</li>
                     <li><strong>Pro one-time purchase</strong>: unlocking Pro features through Apple App Store or Google Play payment.</li>
-                    <li><strong>Usage statistics</strong>: understanding how the App is used through Firebase Analytics (Google), to find problems and improve the App.</li>
+                    <li><strong>Usage statistics (optional, off by default)</strong>: if you turn them on, understanding how the App is used through Firebase Analytics (Google), to find problems and improve the App.</li>
                     <li><strong>Support</strong>: replying to inquiries you send by email.</li>
                 </ul>
 
@@ -63,7 +63,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                         </tr>
                         <tr>
                             <td>Reminders and settings</td>
-                            <td>Reminder times and on/off, guideline and whether categories are shown, theme and language, the profile being viewed, whether you agreed before your first reading, whether the Health app connection is on, whether you bought Pro</td>
+                            <td>Reminder times and on/off, guideline and whether categories are shown, theme and language, the profile being viewed, whether you agreed before your first reading, whether the Health app connection is on, whether you share usage statistics, whether you bought Pro</td>
                             <td>Stored on your device</td>
                         </tr>
                         <tr>
@@ -79,7 +79,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                         <tr>
                             <td>Usage statistics</td>
                             <td>App-instance ID (a random identifier created for each installation); basic events such as opening and using the App; finishing setup; saving a reading (only morning/evening/other and whether a pulse was entered) and editing one; the number of reminders turned on; PDF and CSV exports; reminder taps; opening Pro (and from where) and completing the purchase; the range of readings saved for the person being viewed (1, 2–9, 10–29, 30 or more); purchase details Google records automatically when you pay in the store (product ID, price); device model, operating system and version, App version, language, and approximate location (country, region) inferred from the IP address</td>
-                            <td>Sent automatically to Google by the Firebase Analytics SDK while you use the App. Blood pressure and pulse values, categories, tags, notes, names and values read from the Health app are never sent</td>
+                            <td>Only if you turn them on (with the usage statistics checkbox on the consent screen before your first reading, or Settings › Privacy › "Share usage statistics"; off by default), sent automatically to Google by the Firebase Analytics SDK while you use the App. Until then the App starts with collection turned off, so not even automatic events such as app opens are sent. Blood pressure and pulse values, categories, tags, notes, names and values read from the Health app are never sent</td>
                         </tr>
                         <tr>
                             <td>Email inquiries</td>
@@ -160,13 +160,13 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <ul>
                     <li><strong>Notifications (optional)</strong>: requested when you turn on reminders during setup or in Settings.</li>
                     <li><strong>Health (optional, iPhone and iPad)</strong>: read and write access for blood pressure and heart rate, requested only when you turn on the Health app connection (Section 7).</li>
-                    <li><strong>Internet (Android)</strong>: used for usage statistics, store payments and PDF font downloads. Readings are never sent.</li>
+                    <li><strong>Internet (Android)</strong>: used for usage statistics (if you turn them on), store payments and PDF font downloads. Readings are never sent.</li>
                     <li><strong>Boot completed (Android)</strong>: used to reschedule reminders after the device restarts or the App updates.</li>
                     <li>The App does not use camera, sensor, location, contacts, microphone or photo permissions.</li>
                 </ul>
 
                 <h2>11. Pro One-Time Purchase</h2>
-                <p>The App sells Pro features (PDF and CSV reports, 90-day and 1-year trends, morning vs. evening comparison) as a one-time purchase (com.pifl.pipi.bp.pro); there is no subscription. Apple App Store or Google Play processes the payment, and we never receive card or other payment details. Whether you bought Pro is stored on your device, and "Restore purchase" checks your purchase with the store again. The App does not send receipts to our servers. When a payment is made, Firebase Analytics may record the purchase and product details (Section 2).</p>
+                <p>The App sells Pro features (PDF and CSV reports, 90-day and 1-year trends, morning vs. evening comparison) as a one-time purchase (com.pifl.pipi.bp.pro); there is no subscription. Apple App Store or Google Play processes the payment, and we never receive card or other payment details. Whether you bought Pro is stored on your device, and "Restore purchase" checks your purchase with the store again. The App does not send receipts to our servers. If usage statistics are on when a payment is made, Firebase Analytics may record the purchase and product details (Section 2).</p>
 
                 <h2>12. Data Destruction</h2>
                 <ul>
@@ -179,7 +179,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <ul>
                     <li>We cannot see information on your device, so you can view, edit and delete it yourself in the App (Section 12).</li>
                     <li>The information we hold is usage statistics and email inquiries. To request access, deletion or suspension of processing, email <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> and we will act without delay. Usage statistics are identified only by an app-instance ID that is not linked to your name or email, so we may not be able to find your records from an email alone. If so, we will tell you and explain why.</li>
-                    <li>The App has no in-app setting to turn off usage statistics. To stop them, uninstall the App.</li>
+                    <li>Usage statistics are off by default, and you can turn them on or off at any time in Settings › Privacy › "Share usage statistics". Turning them off stops collection right away (withdrawing consent); to delete information already sent, email us at the address above.</li>
                     <li>Please add a family member's readings only with their permission. Family members can exercise these rights too.</li>
                     <li>For rights under Washington's My Health My Data Act and similar U.S. state laws (confirm and access, withdraw consent, delete, appeal) and how to use them, see our <a href="/en/apps/pipi-bp/consumer-health-data/">Consumer Health Data Privacy Policy</a>.</li>
                 </ul>
@@ -190,14 +190,14 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li>Usage statistics never include blood pressure or pulse values, categories, tags, notes or names, and the App is set up not to collect advertising identifiers</li>
                     <li>Values read from the Health app are not stored in the App's database; they are kept only in a cache excluded from device backups</li>
                     <li>No blood pressure values on the lock-screen widget, and no names in exported file names</li>
-                    <li>Usage statistics are sent over encrypted connections (HTTPS)</li>
+                    <li>Usage statistics are sent only if you turn them on (off by default), over encrypted connections (HTTPS)</li>
                 </ul>
 
                 <h2>15. Children's Privacy</h2>
                 <p>The App is not directed at children under 14. We do not knowingly collect personal data from children under 14, and if we learn that we have, we delete it promptly. Guardians may contact <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> to request deletion.</p>
 
                 <h2>16. International Data Transfers</h2>
-                <p>To process usage statistics, we transfer personal data abroad as follows.</p>
+                <p>If you turn on usage statistics, we transfer personal data abroad to process them, as follows.</p>
                 <ScrollableLegalTable label="International transfers: scroll sideways">
                 <table>
                     <thead>
@@ -222,10 +222,10 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · Privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy contact form</a></p>
                 <ul>
                     <li><strong>Items</strong>: app-instance ID, app usage events, range of readings, purchase details when you pay, device model, operating system, App version, language, IP address (used to infer approximate location)</li>
-                    <li><strong>When and how</strong>: sent from time to time while you use the App by the Firebase Analytics SDK in the App, directly to Google's servers over encrypted connections (HTTPS), without passing through any server of ours. It may be processed in other countries where Google operates data centers.</li>
+                    <li><strong>When and how</strong>: only if you turn on usage statistics, sent from time to time while you use the App by the Firebase Analytics SDK in the App, directly to Google's servers over encrypted connections (HTTPS), without passing through any server of ours. It may be processed in other countries where Google operates data centers.</li>
                     <li><strong>Purpose</strong>: understanding how the App is used, finding problems and improving the App</li>
                     <li><strong>Retention</strong>: as in Section 3 (Google Analytics data retention, up to 14 months)</li>
-                    <li><strong>How to refuse and its effect</strong>: the App has no in-app setting to turn off usage statistics, so to refuse the transfer you need to stop using (uninstall) the App, and you will not be able to use it. You can ask us to delete information already sent as described in Section 13.</li>
+                    <li><strong>How to refuse and its effect</strong>: usage statistics are off by default, so nothing is transferred unless you turn them on. If you have turned them on, turning off Settings › Privacy › "Share usage statistics" stops the transfer, and every feature of the App keeps working. You can ask us to delete information already sent as described in Section 13.</li>
                 </ul>
                 <p>PDF font downloads (Google Fonts) are requests for font files and send none of your readings.</p>
 
