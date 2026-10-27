@@ -24,7 +24,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
         <div class="container">
             <div class="legal-card">
                 <p>주식회사 피플랩스(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여, 모바일 애플리케이션 <strong>습관 트래커: 매일 루틴 체크</strong>(영문 이름 Habit Tracker: Goals &amp; Routine, 홈 화면에는 '습관 트래커', 영어로는 'Habits'로 표시, 이하 "앱")에 대한 개인정보 처리방침을 다음과 같이 수립·공개합니다. 본 방침은 회사 웹사이트의 <a href="/ko/privacy">통합 개인정보처리방침</a>에 우선하여 본 앱에 적용됩니다.</p>
-                <p><strong>요약</strong>: 습관, 체크 기록, 하루 보호, 설정은 이용자의 기기 안에만 저장되며 회사 서버로 보내지 않습니다. 앱에는 회원가입, 회사 서버, 백업·동기화 기능이 없습니다. 무료로 쓰는 동안에는 Google AdMob 광고가 표시되고, 이 과정에서 Google이 기기 식별자와 광고 이용 정보를 처리합니다. 회사는 Firebase Analytics(Google)로 이용 통계를 받지만, 습관 이름이나 기록 내용은 포함하지 않으며 광고 ID도 수집하지 않습니다. Pro를 구매하면 앱은 광고를 불러오지 않습니다.</p>
+                <p><strong>요약</strong>: 습관, 체크 기록, 하루 보호, 설정은 이용자의 기기 안에만 저장되며 회사 서버로 보내지 않습니다. 앱에는 회원가입, 회사 서버, 백업·동기화 기능이 없습니다. 무료로 쓰는 동안에는 Google AdMob 광고가 표시되고, 이 과정에서 Google이 기기 식별자와 광고 이용 정보를 처리합니다. 회사는 Firebase Analytics(Google)로 이용 통계를 받지만(EEA·영국 등 GDPR 적용 지역에서는 동의한 경우에만), 습관 이름이나 기록 내용은 포함하지 않으며 광고 ID도 수집하지 않습니다. Pro를 구매하면 앱은 광고를 불러오지 않습니다.</p>
 
                 <h2>제1조 (개인정보의 처리 목적)</h2>
                 <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
@@ -35,7 +35,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>광고 게재(무료 이용 시)</strong>: Google AdMob으로 배너·전면·보상형 광고를 보여 주고, 이용자가 직접 고른 보상형 광고를 끝까지 보면 보상(하루 보호, 7일 동안 습관 칸 1개 추가, 연간 히트맵 24시간 열기)을 줍니다.</li>
                     <li><strong>부적절한 광고 신고</strong>: 이용자가 신고 메일을 보낼 때, 문제의 광고를 찾는 데 필요한 정보를 메일 본문에 미리 적어 둡니다.</li>
                     <li><strong>Pro 1회 구매</strong>: Apple App Store 또는 Google Play 결제를 거쳐 Pro 기능을 엽니다.</li>
-                    <li><strong>이용 통계 분석</strong>: Firebase Analytics(Google)로 앱이 어떻게 쓰이는지 파악해 오류를 찾고 앱을 개선합니다.</li>
+                    <li><strong>이용 통계 분석(EEA·영국 등은 동의 시)</strong>: Firebase Analytics(Google)로 앱이 어떻게 쓰이는지 파악해 오류를 찾고 앱을 개선합니다. 수집 기준은 제6조에 있습니다.</li>
                     <li><strong>고객 문의 응대</strong>: 이메일을 통한 문의 접수 및 처리 결과 통보</li>
                 </ul>
 
@@ -84,7 +84,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                         <tr>
                             <td>이용 통계</td>
                             <td>앱 인스턴스 ID(앱 설치마다 무작위로 정해지는 식별자)와 iPhone·iPad의 공급업체 식별자(IDFV, iOS가 그 기기에서 회사 앱에 부여하는 식별자), 앱 실행·이용 시간 같은 기본 이벤트, 첫 안내 완료, 습관 만들기(추천 습관인지 직접 만든 것인지), 체크(체크 뒤 연속 기록의 구간: 0, 1, 2–6, 7–29, 30 이상), 오늘 습관 전부 완료(습관 수), 하루 보호 제안·사용, 보상형 광고 제안·시청 완료(보상 종류), 전면 광고 표시(표시 계기), 습관 칸 추가, 알림을 눌러 앱 열기, Pro 화면 열기·구매·구매 복원, 광고 동의 결과(동의를 묻는 지역인지, 광고를 요청할 수 있는지), 사용 중인 습관 수 구간(1, 2–3, 4–6, 7 이상), 스토어 결제 시 Google이 자동으로 기록하는 구매 정보(상품 ID·가격), 기기 모델·운영체제와 버전, 앱 버전, 언어, IP 주소로 추정한 대략적 위치(도시·지역·국가)</td>
-                            <td>앱을 쓰는 동안 앱에 포함된 Firebase Analytics SDK가 Google로 자동 전송(회사 서버를 거치지 않음). 습관 이름, 체크한 날짜 등 기록 내용은 보내지 않으며, Firebase Analytics의 광고 ID(IDFA/AAID) 수집은 꺼 두었음</td>
+                            <td>수집은 기본으로 꺼져 있으며, 제6조의 기준에 따라 켜진 경우에만 앱을 쓰는 동안 앱에 포함된 Firebase Analytics SDK가 Google로 자동 전송(회사 서버를 거치지 않음). 수집 여부가 정해지기 전의 이벤트는 기기 메모리에만 잠시 두었다가, 수집하지 않기로 정해지면 버림. 습관 이름, 체크한 날짜 등 기록 내용은 보내지 않으며, Firebase Analytics의 광고 ID(IDFA/AAID) 수집은 꺼 두었음</td>
                         </tr>
                         <tr>
                             <td>이메일 문의</td>
@@ -142,6 +142,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>iOS 사용자</strong>: 앱을 처음 실행할 때 Apple의 앱 추적 투명성(App Tracking Transparency, ATT) 창으로 추적 허용 여부를 묻습니다. 허용하지 않으면 광고 ID(IDFA)가 Google에 전달되지 않으며, 앱의 모든 기능을 그대로 쓸 수 있습니다. 기기의 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 언제든 바꿀 수 있습니다.</li>
                     <li><strong>Android 사용자</strong>: 기기 설정의 Google 광고 메뉴(기기에 따라 설정 &gt; Google &gt; 광고 또는 설정 &gt; 개인정보 보호 &gt; 광고)에서 광고 ID를 삭제하거나 재설정할 수 있습니다.</li>
                     <li><strong>유럽경제지역(EEA)·영국·스위스 등 광고 동의를 묻는 지역</strong>: 앱은 광고를 요청하기 전에 Google User Messaging Platform(UMP) 동의 화면을 보여 줍니다. 고른 내용은 Google이 정보를 처리하고 광고를 고르는 방식에 반영되며, 설정의 '광고 개인정보 선택'에서 언제든 바꿀 수 있습니다(이 항목은 동의가 필요한 지역에서만 보입니다). Google이 광고를 요청할 수 없다고 알리면 앱은 광고를 요청하지 않으며, 이 경우 보상형 광고로 받는 기능만 쓸 수 없습니다.</li>
+                    <li><strong>이용 통계(Firebase Analytics) 수집 기준</strong>: 수집은 기본으로 꺼져 있습니다. GDPR이 적용되는 지역(EEA·영국 등, 광고 동의 창이 판단)에서는 광고 동의 창(UMP)에서 '기기에 정보 저장 및/또는 접근'(목적 1)에 동의한 경우에만 수집하며, 설정의 '광고 개인정보 선택'에서 이 동의를 철회하면 수집을 멈춥니다. 그 밖의 지역에서는 수집합니다. 지역을 확인할 수 없으면 수집하지 않습니다. Pro 이용자에게는 광고 동의 창을 보여 주지 않으므로, GDPR 적용 지역이거나 지역을 확인할 수 없으면 수집하지 않습니다.</li>
                     <li><strong>Pro 이용자</strong>: Pro를 구매하면 앱은 광고를 불러오지 않습니다. Pro 상태로 앱을 시작하면 추적 허용(ATT)과 광고 동의를 묻지 않고 광고 SDK도 시작하지 않습니다.</li>
                     <li><strong>아동 대상 아님 표시</strong>: 앱은 광고 요청을 아동 대상이 아닌 것으로 표시하고, 광고 콘텐츠 등급을 PG 이하로 제한해 성인용 광고를 막습니다.</li>
                 </ul>
@@ -195,7 +196,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <ul>
                     <li>기기 안의 정보는 회사가 볼 수 없으므로, 앱에서 직접 열람·수정·삭제할 수 있습니다(제11조).</li>
                     <li>회사가 보유하는 정보는 이용 통계와 이메일 문의 기록입니다. 열람·삭제·처리정지 요청은 <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>로 보내 주시면 지체 없이 조치하겠습니다. 이용 통계는 이름·이메일과 연결되지 않은 앱 인스턴스 ID(iOS는 IDFV 포함)로만 구분되므로, 이메일 요청만으로는 해당 기록을 찾지 못할 수 있습니다. 이 경우 그 사실과 이유를 알려 드립니다.</li>
-                    <li>앱 안에는 이용 통계를 끄는 설정이 없습니다. 이용 통계 전송을 멈추려면 앱을 삭제하면 되며, 이미 보낸 정보의 삭제는 위 이메일로 요청할 수 있습니다.</li>
+                    <li>GDPR 적용 지역(EEA·영국 등)에서는 설정의 '광고 개인정보 선택'에서 저장소 접근 동의(목적 1)를 철회하면 이용 통계 수집이 멈춥니다(동의 철회). 그 밖의 지역에는 앱 안에 이용 통계만 따로 끄는 설정이 없으므로, 전송을 멈추려면 앱을 삭제하면 됩니다. 이미 보낸 정보의 삭제는 위 이메일로 요청할 수 있습니다.</li>
                     <li>광고에 쓰이는 정보는 제6조의 방법(추적 허용 거부, 광고 ID 삭제, '광고 개인정보 선택', Pro 구매)으로 제한할 수 있습니다. Google이 보유한 광고 정보에 관한 요청은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>의 방법으로 Google에 직접 할 수 있습니다.</li>
                 </ul>
 
@@ -203,7 +204,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <ul>
                     <li>습관과 체크 기록은 기기 안에만 저장하며, 계정·회사 서버·동기화 기능이 없습니다</li>
                     <li>이용 통계와 광고 요청에는 습관 이름이나 기록 내용을 넣지 않습니다</li>
-                    <li>Firebase Analytics의 광고 ID(IDFA/AAID) 수집을 꺼 두었습니다</li>
+                    <li>이용 통계 수집은 기본으로 꺼져 있고 제6조의 기준을 충족할 때만 켜지며, Firebase Analytics의 광고 ID(IDFA/AAID) 수집은 꺼 두었습니다</li>
                     <li>광고 요청을 아동 대상이 아닌 것으로 표시하고 광고 콘텐츠 등급을 PG 이하로 제한합니다</li>
                     <li>광고와 이용 통계는 암호화된 통신(HTTPS)으로 전송됩니다</li>
                 </ul>
@@ -255,10 +256,10 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <p>미국 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · 개인정보 문의: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google 개인정보 문의 양식</a></p>
                 <ul>
                     <li><strong>이전 항목</strong>: 앱 인스턴스 ID·IDFV(iOS), 앱 이용 이벤트, 연속 기록·습관 수 구간, 결제 시 구매 정보, 광고 동의 결과, 기기 모델·운영체제·앱 버전·언어, IP 주소(대략적 위치 추정에 쓰임)</li>
-                    <li><strong>이전 시기·방법</strong>: 앱을 쓰는 동안 앱에 포함된 Firebase Analytics SDK가 암호화된 통신(HTTPS)으로 Google 서버에 수시로 전송합니다(회사 서버를 거치지 않음). Google이 데이터센터를 운영하는 다른 국가에서 처리될 수 있습니다.</li>
+                    <li><strong>이전 시기·방법</strong>: 제6조의 기준에 따라 수집이 켜진 경우에만, 앱을 쓰는 동안 앱에 포함된 Firebase Analytics SDK가 암호화된 통신(HTTPS)으로 Google 서버에 수시로 전송합니다(회사 서버를 거치지 않음). Google이 데이터센터를 운영하는 다른 국가에서 처리될 수 있습니다.</li>
                     <li><strong>이용 목적</strong>: 앱 이용 현황 파악, 오류 발견, 앱 개선</li>
                     <li><strong>보유·이용 기간</strong>: 제3조와 같습니다(Google Analytics 데이터 보존 설정, 최대 14개월).</li>
-                    <li><strong>이전 거부 방법·절차와 효과</strong>: 이용 통계는 앱을 쓰는 동안 자동으로 전송되며 앱 안에서 따로 끌 수 없으므로, 원하지 않으면 앱 이용을 중단(삭제)하고 제12조의 방법으로 이미 보낸 정보의 삭제를 요청할 수 있습니다. 이 경우 앱을 이용할 수 없습니다.</li>
+                    <li><strong>이전 거부 방법·절차와 효과</strong>: GDPR 적용 지역(EEA·영국 등)에서는 광고 동의 창이나 설정의 '광고 개인정보 선택'에서 저장소 접근에 동의하지 않거나 동의를 철회하면 이전되지 않으며, 앱의 모든 기능을 그대로 쓸 수 있습니다. 그 밖의 지역에서는 앱 안에서 이용 통계만 따로 끌 수 없으므로, 원하지 않으면 앱 이용을 중단(삭제)하고 제12조의 방법으로 이미 보낸 정보의 삭제를 요청할 수 있습니다. 이 경우 앱을 이용할 수 없습니다.</li>
                 </ul>
 
                 <h2>제16조 (개인정보 보호책임자)</h2>
@@ -291,7 +292,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 </ul>
 
                 <h3>GDPR (European Economic Area, UK, Switzerland)</h3>
-                <p>If you are located in the EEA, the UK or Switzerland, you have additional rights under the General Data Protection Regulation (and the UK GDPR or the Swiss Federal Act on Data Protection), including the right to access, rectify, erase, restrict processing, data portability, and object to processing, and the right to withdraw your ad consent at any time in Settings › Ad privacy choices. You may also lodge a complaint with your local data protection authority. To exercise these rights, contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+                <p>If you are located in the EEA, the UK or Switzerland, you have additional rights under the General Data Protection Regulation (and the UK GDPR or the Swiss Federal Act on Data Protection), including the right to access, rectify, erase, restrict processing, data portability, and object to processing, and the right to withdraw your consent at any time in Settings › Ad privacy choices (withdrawing consent to store and/or access information on a device also stops usage statistics). You may also lodge a complaint with your local data protection authority. To exercise these rights, contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
                 <h3>APPI (Japan)</h3>
                 <p>日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します。お問い合わせは <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。</p>

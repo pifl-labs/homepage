@@ -67,6 +67,37 @@ test('ads, consent and analytics are disclosed; no "no ads / no tracking" claims
   }
 });
 
+// pipi_habit feat/release-required 32bef63(앱 PR #4)부터 Firebase Analytics 수집은 기본 꺼짐이고, GDPR 적용 지역(TCF gdprApplies=1)에서는
+// UMP 목적 1(기기 저장소 접근) 동의 시에만, 그 밖 지역은 수집, 지역 모름은 끔, Pro 는 GDPR·지역 모름이면 끔. 판정 전 이벤트는 메모리 보류 후 끔이면 버린다.
+// "앱 안에 끄는 설정이 없다(앱을 지워야 멈춘다)"를 지역 구분 없이 단정하던 옛 문장이 다시 들어오면 안 된다.
+test('usage statistics: off by default, GDPR regions only with Purpose 1 consent, Pro conservative, withdrawal via Ad privacy choices', { skip }, () => {
+  const rules = {
+    ko: [/수집은 기본으로 꺼져/, /'기기에 정보 저장 및\/또는 접근'\(목적 1\)에 동의한 경우에만 수집/, /이 동의를 철회하면 수집을 멈춥니다/,
+      /지역을 확인할 수 없으면 수집하지 않습니다/, /Pro 이용자에게는 광고 동의 창을 보여 주지 않으므로, GDPR 적용 지역이거나 지역을 확인할 수 없으면 수집하지 않습니다/,
+      /기기 메모리에만 잠시 두었다가, 수집하지 않기로 정해지면 버림/, /저장소 접근 동의\(목적 1\)를 철회하면 이용 통계 수집이 멈춥니다/],
+    en: [/Collection is off by default/, /consent to "Store and\/or access information on a device" \(Purpose 1\)/, /withdrawing that consent in Settings › Ad privacy choices stops collection/,
+      /If the region cannot be determined, they are not collected/, /Pro users are not shown the consent form, so for them usage statistics are not collected in GDPR regions or when the region cannot be determined/,
+      /held only in your device's memory and discarded if collection stays off/, /\(Purpose 1\) in Settings › Ad privacy choices stops usage statistics/],
+    ja: [/収集は初期設定でオフです/, /「端末への情報の保存・アクセス」\(目的1\)に同意した場合にのみ収集/, /この同意を撤回すると収集を停止します/,
+      /地域を確認できない場合は収集しません/, /Proのユーザーには同意画面を表示しないため、GDPRが適用される地域の場合や地域を確認できない場合は収集しません/,
+      /端末のメモリにのみ一時的に保持し、収集しないと決まった場合は破棄します/, /\(目的1\)への同意を撤回すると、利用統計の収集が止まります/],
+  };
+  rules[''] = rules.en;
+  const stale = [
+    /앱 안에는 이용 통계를 끄는 설정이 없습니다/,
+    /이용 통계는 앱을 쓰는 동안 자동으로 전송되며 앱 안에서 따로 끌 수 없으므로/,
+    /The App has no setting to turn off usage statistics/,
+    /usage statistics are sent automatically while you use the App and cannot be turned off/,
+    /本アプリには利用統計をオフにする設定はありません/,
+    /利用統計はアプリの利用中に自動で送信され/,
+  ];
+  for (const prefix of PREFIXES) {
+    const body = main(read(prefix));
+    for (const re of rules[prefix]) assert.match(body, re, `${name(prefix)}: ${re}`);
+    for (const re of stale) assert.doesNotMatch(body, re, `${name(prefix)}: 옛 문장 ${re}`);
+  }
+});
+
 test('Pro is a one-time purchase without server receipt validation', { skip }, () => {
   const noServerCheck = {
     ko: /회사 서버에서 영수증을 검증하지 않습니다/,
