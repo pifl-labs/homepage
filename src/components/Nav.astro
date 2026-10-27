@@ -21,7 +21,7 @@ const langHref = (l: Lang) => `/${l}${rest}`;
     </a>
     <div class="nav-links">
       <a href={`${home}#apps`}>{t.navApps}</a>
-      <a href={`${home}#crew`}>{t.navCrew}</a>
+      <a href={`/${lang}/resources/`}>{({ko:"무료 자료실",en:"Free resources",ja:"無料素材"})[lang]}</a>
       <a href={`${home}#about`}>{t.navShip}</a>
       <a href={`${home}#log`}>{t.navLog}</a>
     </div>
