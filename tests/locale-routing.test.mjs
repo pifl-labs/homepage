@@ -56,7 +56,8 @@ for (const cookie of ['pref-lang=en', 'other=1; pref-lang=%65%6E; unrelated=x'])
   });
 }
 
-for (const path of ['/ko', '/ja/', '/en/apps/pipi-draw/', '/ko/apps/pipi-hello/privacy/', '/ja/apps/pipi-bridge/privacy/', '/assets/icon.png', '/store-attribution.mjs', '/.well-known/apple-app-site-association', '/.well-known/assetlinks.json', '/robots.txt', '/sitemap-index.xml', '/go/tiktok/']) {
+// '/apps/pipi-spend/privacy' 는 가계부 앱이 7개 비사이트 언어를 #<languageCode> 앵커로 여는 언어 중립 페이지 — 302 를 끼우지 않는다.
+for (const path of ['/ko', '/ja/', '/en/apps/pipi-draw/', '/ko/apps/pipi-hello/privacy/', '/ja/apps/pipi-bridge/privacy/', '/assets/icon.png', '/store-attribution.mjs', '/.well-known/apple-app-site-association', '/.well-known/assetlinks.json', '/robots.txt', '/sitemap-index.xml', '/go/tiktok/', '/apps/pipi-spend/privacy', '/apps/pipi-spend/privacy/']) {
   test(`explicit locale and static endpoints untouched: ${path}`, async () => {
     const response = await route(path, { cookie: 'pref-lang=%', 'accept-language': 'en' });
     assert.equal(response.status, 200);
