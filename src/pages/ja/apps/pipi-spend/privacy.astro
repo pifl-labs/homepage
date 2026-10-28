@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="ja"
+  title={"家計簿：毎日の支出記録 プライバシーポリシー - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. 家計簿：毎日の支出記録(Spending Log: Expense Tracker)アプリのプライバシーポリシー"}
+  canonical="https://pifl-labs.com/ja/apps/pipi-spend/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-spend/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-spend/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-spend/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-spend/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<!-- Legal Header -->
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームに戻る</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">プライバシーポリシー — 家計簿：毎日の支出記録</span></h1>
+            <p class="legal-date">施行日：2026年10月27日</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、iOSおよびAndroid向けモバイルアプリ「家計簿：毎日の支出記録」（英語名 Spending Log: Expense Tracker、以下「本アプリ」）を提供しています。本ポリシーでは、本アプリのご利用時にどのような情報を、なぜ処理し、誰が受け取るのか、そしてお客様が選べることについて説明します。</p>
+
+                <h2>1. 概要</h2>
+                <ul>
+                    <li>支出はお客様ご自身が手入力します。本アプリにはアカウント登録がなく、銀行口座・カードとの連携、レシートの読み取り、クラウド同期もありません。アドバイスも提供しません。</li>
+                    <li>支出の記録、がまんしたお金の記録、定期支出、カテゴリ、予算、設定（任意で入力した時給を含む）は<strong>お客様の端末の中だけに</strong>保存されます。当社はこれらを取得せず、見ることもできません。</li>
+                    <li>本アプリは<strong>Google AdMob</strong>で広告を表示し、<strong>Google Analytics for Firebase</strong>で利用状況を計測します。これらのGoogleのサービスは、第4条に記載する端末識別子や利用情報を受け取ります。</li>
+                    <li>パーソナライズ広告とトラッキングはいつでも拒否できます（第7条）。</li>
+                </ul>
+
+                <h2>2. 事業者と連絡先</h2>
+                <p>本ポリシーで説明する個人情報等の取扱事業者は次のとおりです。</p>
+                <ul>
+                    <li>名称：株式会社ピープルラブズ（PiFl Labs Co., Ltd.）</li>
+                    <li>所在地：59 Jukseongseo-gil, Jeju, Republic of Korea（大韓民国、韓国語表記：제주 죽성서길 59）</li>
+                    <li>D-U-N-S：696579400</li>
+                    <li>メール：<a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></li>
+                </ul>
+                <p>プライバシーに関するご質問・ご請求は <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> までお送りください。</p>
+
+                <h2>3. 端末の中だけに保存される情報（取得しません）</h2>
+                <ScrollableLegalTable label="3. 端末の中だけに保存される情報（取得しません）：横にスクロール">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>情報</th>
+                            <th>保存場所</th>
+                            <th>当社・第三者への送信</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>支出の記録（金額、カテゴリ、メモ、日付、「よかった」「後悔」の印）</td>
+                            <td>お客様の端末内にある本アプリ専用のローカルデータベース（SQLite）</td>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <td>がまんしたお金の記録（「がまんした」：金額、カテゴリ、メモ、日付）</td>
+                            <td>同上</td>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <td>定期支出（金額、カテゴリ、メモ、毎月記録する日）</td>
+                            <td>同上</td>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <td>カテゴリ、予算</td>
+                            <td>同上</td>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <td>設定（通貨、月の開始日、週の開始曜日、テーマ、言語、リマインダー時刻、任意で入力した時給、Proの購入状態、一時解放の期限）</td>
+                            <td>同上</td>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <td>直前の復元より前のデータのコピー（バックアップから復元した場合のみ）</td>
+                            <td>お客様の端末内にある本アプリ専用の保存領域のファイル</td>
+                            <td>なし</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <ul>
+                    <li><strong>当社にはこれらの情報を受け取るサーバーがありません。</strong> お客様ご自身が書き出し、バックアップファイルの作成、レシート画像の共有を行わない限り、情報が端末の外に出ることはありません。</li>
+                    <li><strong>メッセージから貼り付け：</strong> お客様が「メッセージから貼り付け」をタップしたときに限り、本アプリはクリップボードのテキストを読み取り、端末内で金額・日付・お店の名前を解析します。そのテキストと解析結果が当社や第三者に送信されることはなく、本アプリはメッセージや通知へのアクセス権限を求めません。</li>
+                    <li><strong>ほかのアプリから共有：</strong> ほかのアプリの共有メニューから、決済メッセージのテキストを本アプリに送れます。テキストは、本アプリだけが使える端末内の保存領域（iOSでは本アプリの共有拡張機能と共用するApp Groupコンテナ）に置かれ、本アプリが開いて読み取った時点で削除されます。テキストは「メッセージから貼り付け」と同じく端末内で解析され、当社や第三者に送信されることはなく、権限も必要ありません。</li>
+                    <li><strong>端末内での計算：</strong> 「この時間のいつもの」の提案、支出の労働時間換算、後悔した支出のランキング、月末レシートは、お客様の記録をもとに端末内で計算します。</li>
+                    <li><strong>書き出し：</strong> CSV・PDFファイルは端末内で作成されます。Androidではシステムの「名前を付けて保存」画面で保存先を選び、iOSでは共有シートで扱い方を選びます。本アプリはストレージの権限を求めません。ファイルを別の場所に保存・送信した後は、その保存先・送信先の規約が適用されます。</li>
+                    <li><strong>月末レシートの画像：</strong> 共有するとき、画像は端末内で作成されて共有シートに渡され、送り先はお客様が選びます。共有の前に金額を隠せます。</li>
+                    <li><strong>バックアップファイル：</strong> お客様が「バックアップファイルを作成」をタップしたときに限り、本アプリは記録（印の付いた支出、がまんしたお金、定期支出、カテゴリ、予算）と設定（入力した場合は時給を含む）を収めたファイル（JSON）を作成します。Proの購入状態と一時解放は含まれず、Proは「購入を復元」で戻せます。保存先はお客様が選び（Android：システムの「名前を付けて保存」画面、iOS：共有シート）、ファイルが当社に送信されることはありません。ファイルは暗号化されないため、安全な場所に保管してください。「バックアップから復元」はお客様が選んだファイルだけを読み取り、何が変わるかを確認してから反映します。復元を反映する直前のデータは、「最後の復元を取り消す」のために本アプリ専用の保存領域にコピーとして残し、このコピーは次の復元で置き換えられ、取り消すと削除されます。</li>
+                    <li><strong>端末のバックアップ：</strong> OS自体のバックアップ（iOSのiCloudデバイスバックアップ、GoogleアカウントへのAndroid自動バックアップ）に本アプリのデータが含まれる場合があります。このバックアップはAppleまたはGoogleがお客様のアカウントと各社の規約に基づいて行うもので、当社が受け取ることはありません。バックアップは端末の設定で管理できます。</li>
+                    <li><strong>削除：</strong> 本アプリで記録を削除すると端末から消去されます。本アプリをアンインストールすると、端末内の本アプリのデータはすべて削除されます（OSのバックアップに残るコピーはお客様のバックアップ設定に従います）。</li>
+                </ul>
+
+                <h2>4. 外部サービスが処理する情報</h2>
+                <p>本アプリにはGoogleのソフトウェア開発キット（SDK）が組み込まれています。本アプリの利用中、これらのSDKが以下の情報をお客様の端末からGoogleへ直接送信します。<strong>いずれのSDKにも、金額、メモ、店名、時給、貼り付けや共有をしたテキスト、残高、予算、予算超過の有無が渡ることはありません。</strong></p>
+                <h3>4.1 Google AdMob（広告）— Google LLC</h3>
+                <ul>
+                    <li><strong>情報：</strong> 広告ID（iOSではトラッキングを許可した場合に限りIDFA、AndroidではAndroid広告ID）、IPアドレス、端末・OSの情報、広告とのやり取りに関する情報（どの広告が表示・タップされたかなど）</li>
+                    <li><strong>目的：</strong> 広告の配信、広告効果の測定、不正行為の防止</li>
+                    <li><strong>パーソナライズ広告と非パーソナライズ広告：</strong> お客様が許可した場合に限りパーソナライズ広告を表示します（第6条）。それ以外の場合、本アプリは非パーソナライズ広告をリクエストします。非パーソナライズ広告はお客様の過去の行動に基づきませんが、Googleは広告の配信・測定と不正防止のために上記の情報を引き続き使用します。</li>
+                    <li><strong>広告の表示場所：</strong> ホーム・カレンダー・集計画面下部のバナー、1日2回までの全画面広告、お客様が自ら選んだときだけ表示されるリワード広告</li>
+                </ul>
+                <h3>4.2 Google Analytics for Firebase（アプリの利用分析）— Google LLC</h3>
+                <ul>
+                    <li><strong>情報：</strong> アプリインスタンスID（本アプリのインストールごとに割り当てられるランダムな識別子）、端末・OSの情報、GoogleがIPアドレスから推定するおおよその位置、利用イベント</li>
+                    <li><strong>利用イベントの内容：</strong> 区分の値とオン／オフの値だけです。たとえば、どの機能を使ったか、支出をどう入力したか（手入力・貼り付け・共有・いつもの提案）、デフォルトカテゴリのキー、初期設定で予算を設定したかどうか、バックアップを統合と上書きのどちらで復元したか、支出に「よかった」「後悔」のどちらをつけたか、共有したレシート画像で金額を隠したかどうかです。金額、メモ・店名、貼り付けや共有をしたテキスト、時給、残高、予算超過の有無は含みません。</li>
+                    <li><strong>広告ID：</strong> Firebaseによる広告IDの収集は<strong>無効</strong>にしています。</li>
+                    <li><strong>目的：</strong> 本アプリの使われ方を全体の統計として把握し、不具合の修正と改善に役立てるため</li>
+                </ul>
+                <h3>4.3 アプリ内購入 — Apple / Google</h3>
+                <p>「Pro」（プロダクトID com.pifl.pipi.spend.pro）は、App Store（Apple Inc.）またはGoogle Play（Google LLC）が処理する買い切りの1回購入です。<strong>当社がカード情報や支払い情報を受け取ることはありません。</strong> 本アプリはProを有効にするために端末上でストアから購入結果を受け取り、「購入を復元」はストアに改めて確認します。これらの情報が当社に送信されることはありません。</p>
+                <h3>4.4 お客様からのメール</h3>
+                <p><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> にメールをお送りいただくと、当社はメールアドレスと本文を受け取ります。設定の「不適切な広告を報告」を選ぶと、最近表示された広告のレスポンスIDとOSの名称・バージョンがあらかじめ入力されたメールが開きます。送信前に内容を確認・編集できます。当社はこれらの情報を、お問い合わせへの回答と、広告の報告であればGoogleへの通報にのみ使用します。</p>
+                <h3>Googleのポリシー</h3>
+                <ul>
+                    <li>Googleプライバシーポリシー：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+                    <li>Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用：<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></li>
+                </ul>
+
+                <h2>5. 通知</h2>
+                <p>夜のリマインダーは<strong>任意</strong>の機能です。お客様が選んだ時刻に端末内で予約されるローカル通知で、サーバーから送られるものではなく、広告の文言も含みません。本アプリは初期設定の画面で通知の許可をお願いしますが、許可しなくてもすべての機能を使えます。リマインダーは本アプリの設定、または端末の通知設定からオフにできます。</p>
+
+                <h2>6. 同意とトラッキング</h2>
+                <ul>
+                    <li><strong>iOS — App Tracking Transparency（ATT）：</strong> 初回起動時に、iOSがトラッキングを許可するかどうかを確認します。許可した場合、AdMobはパーソナライズ広告にIDFAを使用できます。「Appにトラッキングしないように要求」を選んだ場合はIDFAを利用できず、本アプリは非パーソナライズ広告のみをリクエストします。</li>
+                    <li><strong>欧州経済領域（EEA）・英国・スイス：</strong> Googleの同意フォーム（User Messaging Platform、「UMP」）で、パーソナライズ広告と、広告のために端末へ情報を保存・アクセスすることへの同意をお伺いします。</li>
+                    <li><strong>プライバシー法のある米国の州（カリフォルニア州を含む）：</strong> Googleの米国州向けプライバシーメッセージで、ターゲティング広告のための個人情報の「販売」または「共有」をオプトアウトできます。</li>
+                    <li><strong>設定の「プライバシーの選択」：</strong> お住まいの地域でGoogleの同意ツールが求める場合、設定に「プライバシーの選択」が表示されます。ここからフォームを再表示し、いつでも選択を変更できます。</li>
+                </ul>
+                <h3>法的根拠（EEA・英国・スイス）</h3>
+                <ScrollableLegalTable label="法的根拠（EEA・英国・スイス）：横にスクロール">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>処理</th>
+                            <th>法的根拠</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>パーソナライズ広告、広告のための端末への情報の保存・アクセス</td>
+                            <td>お客様の同意（GDPR第6条1項(a)）。UMPフォームで同意いただき、「プライバシーの選択」からいつでも撤回できます。</td>
+                        </tr>
+                        <tr>
+                            <td>非パーソナライズ広告、広告の測定、不正行為の防止</td>
+                            <td>広告によって本アプリを無料で提供するという当社の正当な利益（第6条1項(f)）。UMPフォームでお客様が選んだ範囲内で処理し、フォームがこれらの目的について同意を求める場合はお客様の同意</td>
+                        </tr>
+                        <tr>
+                            <td>集計によるアプリの利用分析（Firebase）</td>
+                            <td>本アプリの使われ方を把握して不具合を直し改善するという当社の正当な利益（第6条1項(f)）。広告IDや金額などの支出内容は使わず、必要最小限にしています。メールでいつでも異議を申し立てられます（第21条）。</td>
+                        </tr>
+                        <tr>
+                            <td>Proの購入</td>
+                            <td>購入契約の履行（第6条1項(b)）</td>
+                        </tr>
+                        <tr>
+                            <td>メールへの回答</td>
+                            <td>お客様に回答するという当社の正当な利益（第6条1項(f)）</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>7. 拒否・撤回の方法</h2>
+                <ul>
+                    <li><strong>iOS：</strong> 設定 &gt; プライバシーとセキュリティ &gt; トラッキング で本アプリのトラッキングをオフにする（または「Appからのトラッキング要求を許可」をオフにする）。</li>
+                    <li><strong>Android：</strong> 設定 &gt; Google &gt; 広告 &gt; 広告IDを削除（以前のAndroidでは「広告のカスタマイズをオプトアウト」）。メニュー名は端末によって異なる場合があります。</li>
+                    <li><strong>本アプリ内：</strong> 設定 &gt; プライバシーの選択（Googleの同意ツールが適用される地域で表示）— 同意の変更・撤回、販売・共有のオプトアウト</li>
+                    <li><strong>Pro：</strong> Proを購入すると広告が表示されなくなります。</li>
+                    <li><strong>通知：</strong> 本アプリの設定または端末の設定でリマインダーをオフにする。</li>
+                    <li><strong>すべての送信を止める：</strong> 本アプリをアンインストールする。</li>
+                </ul>
+
+                <h2>8. 韓国のお客様 — パーソナライズ広告のための行動情報</h2>
+                <p>韓国個人情報保護委員会のパーソナライズ広告・行動情報に関する案内に基づき、次の事項をお知らせします。</p>
+                <ScrollableLegalTable label="8. 韓国のお客様 — パーソナライズ広告のための行動情報：横にスクロール">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>収集する行動情報</td>
+                            <td>広告ID（トラッキング許可時のIDFA、Android広告ID）、広告の利用記録（表示・タップ）、IPアドレス、端末・OSの情報</td>
+                        </tr>
+                        <tr>
+                            <td>収集方法</td>
+                            <td>本アプリの利用中にGoogle AdMob SDKが自動的に収集</td>
+                        </tr>
+                        <tr>
+                            <td>目的</td>
+                            <td>パーソナライズ広告・非パーソナライズ広告の配信、広告の測定、不正行為の防止</td>
+                        </tr>
+                        <tr>
+                            <td>収集・処理する事業者</td>
+                            <td>Google LLC</td>
+                        </tr>
+                        <tr>
+                            <td>保存期間</td>
+                            <td>Googleの保存ポリシーによる：<a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener">https://policies.google.com/technologies/retention</a></td>
+                        </tr>
+                        <tr>
+                            <td>拒否方法</td>
+                            <td>iOS：設定 &gt; プライバシーとセキュリティ &gt; トラッキング／Android：設定 &gt; Google &gt; 広告 &gt; 広告IDを削除／本アプリ：設定 &gt; プライバシーの選択（表示される場合）</td>
+                        </tr>
+                        <tr>
+                            <td>問い合わせ</td>
+                            <td><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <p>当社はセンシティブな行動情報を収集せず、支出の内容を広告に使うことは一切ありません。</p>
+
+                <h2>9. 日本のお客様 — 広告IDと外部送信</h2>
+                <ul>
+                    <li><strong>広告ID：</strong> 本アプリはGoogle AdMobを通じて、第4.1条の目的で広告ID（iOSはトラッキングを許可した場合に限りIDFA、Android広告ID）を利用します。利用を止める方法は第7条をご覧ください。</li>
+                    <li><strong>外部送信（電気通信事業法第27条の12）：</strong> 本アプリは、お客様の端末から次の情報を外部に送信します。</li>
+                </ul>
+                <ScrollableLegalTable label="9. 日本のお客様 — 広告IDと外部送信：横にスクロール">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>送信先</th>
+                            <th>サービス</th>
+                            <th>送信される情報</th>
+                            <th>利用目的</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC</td>
+                            <td>Google AdMob</td>
+                            <td>広告ID、IPアドレス、端末・OSの情報、広告とのやり取りに関する情報</td>
+                            <td>広告の配信・効果測定、不正行為の防止</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC</td>
+                            <td>Google Analytics for Firebase</td>
+                            <td>アプリインスタンスID、端末・OSの情報、利用イベント（おおよその位置はIPアドレスから推定）</td>
+                            <td>利用状況の分析と本アプリの改善</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <p>オプトアウトの方法は第7条のとおりです。</p>
+
+                <h2>10. カリフォルニア州その他の米国の州</h2>
+                <ul>
+                    <li><strong>過去12か月に収集した情報の区分：</strong> 識別子（広告ID、アプリインスタンスID、IPアドレス）、インターネットその他の電子的ネットワーク活動（広告とのやり取り、利用イベント）、おおよその位置情報（IPアドレスから推定）、端末情報。取得元はGoogleのSDKを通じたお客様の端末で、目的は第4条のとおりです。</li>
+                    <li><strong>販売・共有：</strong> 当社は個人情報を対価を得て販売しません。ただし、ターゲティング広告のために識別子や広告とのやり取りの情報をGoogleが利用できるようにすることは、カリフォルニア州などの州法上「販売」または「共有」に当たる場合があります。<strong>「Do Not Sell or Share My Personal Information」（個人情報の販売・共有の拒否）：</strong> 本アプリの 設定 &gt; プライバシーの選択 を開き、Googleの米国州向けプライバシーメッセージでオプトアウトを選んでください。第7条の端末設定でもトラッキングを制限できます。</li>
+                    <li><strong>センシティブな個人情報：</strong> 収集・利用しません。</li>
+                    <li><strong>お客様の権利：</strong> 知る権利、アクセス・訂正・削除、販売・共有のオプトアウト、権利行使を理由に差別されない権利があります。ご請求は <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> へお送りください。支出のデータは端末の外に出ないため、本アプリで直接確認・書き出し・削除ができます。</li>
+                    <li>当社は16歳未満の消費者の個人情報を、それと知りながら販売・共有しません。</li>
+                </ul>
+
+                <h2>11. 保存期間</h2>
+                <ul>
+                    <li><strong>端末内の情報：</strong> お客様が本アプリで削除するか、本アプリをアンインストールするまで端末に残ります。</li>
+                    <li><strong>お客様が作成したバックアップファイル：</strong> 保存した場所に、お客様が削除するまで残ります。本アプリをアンインストールしても削除されません。</li>
+                    <li><strong>Googleが受け取った情報（AdMob、Firebase）：</strong> Googleが自社のポリシー（<a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener">https://policies.google.com/technologies/retention</a>）に基づいて保存します。当社は分析データを集計した形でのみ利用します。</li>
+                    <li><strong>サポートへのメール：</strong> 対応完了後3年間保存し、その後削除します。法令で長く保存する義務がある場合は、その期間保存します。</li>
+                </ul>
+
+                <h2>12. 外国への移転</h2>
+                <p>Google AdMobとGoogle Analytics for Firebaseが収集する情報は、本アプリの利用中にインターネット経由でお客様の端末からGoogle LLC（米国）へ送信され、米国およびGoogleが事業を行うその他の国で処理されます。EEA・英国・スイスからの移転について、GoogleはEU–米国データプライバシーフレームワークや標準契約条項など、データ保護法で認められた保護措置に基づいています。米国の個人情報保護制度については、個人情報保護委員会のウェブサイトで公表されている情報をご参照ください。パーソナライズ広告に関する処理は第7条の方法で拒否でき、本アプリをアンインストールするとすべての送信が止まります。</p>
+
+                <h2>13. お子様</h2>
+                <p>本アプリは13歳未満（EEAでは16歳未満）のお子様を対象としていません。当社は、お子様の個人情報をそれと知りながら取得することはありません。お子様が本アプリを利用し、関連する情報の削除をご希望の場合は <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> までご連絡ください。</p>
+
+                <h2>14. お客様の権利</h2>
+                <p>お住まいの地域によって、お客様には個人情報の開示・訂正・削除・利用停止、処理への異議、データポータビリティ、同意の撤回、データ保護当局への苦情申し立てなどの権利があります。ご請求は <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a> へお送りください。法令で定められた期間内に対応します。支出のデータは端末の中にしかないため、本アプリでご自身で確認・書き出し・削除ができます。Googleが保有する情報については当社がご請求をお手伝いするほか、Google自身のツール（広告IDのリセット・削除など）もご利用いただけます。</p>
+
+                <h2>15. 安全管理</h2>
+                <p>支出のデータは端末内の本アプリ専用の保存領域にあり、画面ロックなど端末自体のセキュリティ設定で保護されます。当社は支出のデータを保存するサーバーを運用していないため、当社側から支出のデータが漏えいすることはありません。</p>
+
+                <h2>16. 本ポリシーの変更</h2>
+                <p>本アプリや法令の変更に合わせて本ポリシーを改定することがあります。新しい版は新しい施行日とともに掲載し、重要な変更がある場合は本アプリ内またはその他の適切な方法でお知らせします。</p>
+
+                <h2>17. お問い合わせ</h2>
+                <p>PiFl Labs Co., Ltd. — 59 Jukseongseo-gil, Jeju, Republic of Korea — <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+</BaseLayout>

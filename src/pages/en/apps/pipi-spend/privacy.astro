@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="en"
+  title={"Spending Log: Expense Tracker Privacy Policy - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. Spending Log: Expense Tracker app privacy policy"}
+  canonical="https://pifl-labs.com/en/apps/pipi-spend/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-spend/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-spend/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-spend/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-spend/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<!-- Legal Header -->
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/en/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Privacy Policy — Spending Log: Expense Tracker</span></h1>
+            <p class="legal-date">Effective date: October 27, 2026</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>PiFl Labs Co., Ltd. ("PiFl Labs", "we", "us") provides the mobile app "Spending Log: Expense Tracker" (the "App") for iOS and Android. This policy explains what information is processed when you use the App, why, who receives it, and the choices you have.</p>
+
+                <h2>1. Summary</h2>
+                <ul>
+                    <li>You enter your spending by hand. The App has no account or sign-up, no bank or card linking, no receipt scanning and no cloud sync, and it does not give advice.</li>
+                    <li>Your spending records, purchases you held back, recurring expenses, categories, budgets and settings (including an optional hourly wage) are stored <strong>only on your device</strong>. We do not collect them and cannot see them.</li>
+                    <li>The App shows ads through <strong>Google AdMob</strong> and measures how the App is used through <strong>Google Analytics for Firebase</strong>. These Google services receive device identifiers and usage data, as described in Section 4.</li>
+                    <li>You can refuse personalized ads and tracking at any time (Section 7).</li>
+                </ul>
+
+                <h2>2. Who is responsible and how to contact us</h2>
+                <p>The controller of the personal information described in this policy is:</p>
+                <p>PiFl Labs Co., Ltd.<br />59 Jukseongseo-gil, Jeju, Republic of Korea<br />D-U-N-S 696579400<br />Email: <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
+                <p>For any privacy question or request, write to <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
+
+                <h2>3. Information that stays on your device (not collected)</h2>
+                <ScrollableLegalTable label="3. Information that stays on your device (not collected): scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Where it is kept</th>
+                            <th>Sent to us or third parties?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spending records (amount, category, memo, date, and any "Worth it" / "Regret it" mark)</td>
+                            <td>Local database (SQLite) inside the App on your device</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Purchases you held back ("Resisted": amount, category, memo, date)</td>
+                            <td>Same</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Recurring expenses (amount, category, memo, day of the month)</td>
+                            <td>Same</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Categories and budgets</td>
+                            <td>Same</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Settings (currency, month start day, week start day, theme, language, reminder time, optional hourly wage, Pro status, temporary unlock times)</td>
+                            <td>Same</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Copy of your data from just before your last restore (only after you restore from a backup file)</td>
+                            <td>A file in the App's private storage on your device</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <ul>
+                    <li><strong>We have no server that receives this data.</strong> It never leaves your device unless you export it, create a backup file or share a receipt image yourself.</li>
+                    <li><strong>Paste from message:</strong> only when you tap "Paste from message" does the App read the text on your clipboard; it then works out the amount, date and merchant on your device. That text and the result are not sent to us or to any third party, and the App does not request permission to access your messages or notifications.</li>
+                    <li><strong>Share from another app:</strong> you can send the text of a payment message to the App from another app's share menu. The text is kept in a storage area on your device that only the App can use (on iOS, an App Group container shared with the App's share extension) until the App opens and reads it; the App then deletes it. The text is processed on your device just like "Paste from message", is not sent to us or to any third party, and no permission is needed.</li>
+                    <li><strong>Calculated on your device:</strong> "Usual for this time" suggestions, the work-hours view of your expenses, the regret ranking and the monthly receipt are worked out on your device from your own records.</li>
+                    <li><strong>Export:</strong> when you export a CSV or PDF file, the file is created on your device. On Android you choose where to save it in the system "Save as" screen; on iOS you choose what to do with it in the share sheet. The App does not request storage permission. Once you save or send the file elsewhere, that destination's terms apply.</li>
+                    <li><strong>Monthly receipt image:</strong> when you share it, the image is created on your device and passed to the share sheet, where you choose where it goes. You can hide amounts before sharing.</li>
+                    <li><strong>Backup file:</strong> only when you tap "Create backup file" does the App create a file (JSON) containing your records (expenses with their marks, held-back purchases, recurring expenses, categories, budgets) and your settings, including the hourly wage if you set one. Pro status and temporary unlocks are not included; to get Pro back, use "Restore purchases". You choose where the file is saved (Android: the system "Save as" screen; iOS: the share sheet), and it is never sent to us. The file is not encrypted, so keep it somewhere safe. "Restore from backup" reads only the file you pick and shows a preview before anything changes. Just before a restore is applied, the App keeps a copy of your previous data in its private storage on your device so that "Undo last restore" can bring it back; that copy is replaced at the next restore and deleted when you undo.</li>
+                    <li><strong>Device backups:</strong> your operating system's own backup (iCloud device backup on iOS, Android Auto Backup to your Google account) may include the App's data. Apple or Google performs that backup under your account and their terms; we never receive it. You can manage backups in your device settings.</li>
+                    <li><strong>Deletion:</strong> deleting an entry in the App removes it from the device. Uninstalling the App deletes all App data on the device (copies in OS backups follow your backup settings).</li>
+                </ul>
+
+                <h2>4. Information processed by third-party services</h2>
+                <p>The App contains software development kits (SDKs) from Google. When you use the App, these SDKs send the information below directly from your device to Google. <strong>None of them receive your amounts, memos, merchant names, hourly wage, the text you paste or share, balances, budgets or whether you are over budget.</strong></p>
+                <h3>4.1 Google AdMob (advertising) — Google LLC</h3>
+                <ul>
+                    <li><strong>Information:</strong> advertising identifier (on iOS, the IDFA only if you allow tracking; on Android, the Android advertising ID), IP address, device and operating system information, and ad interaction data (for example, which ads were shown or tapped).</li>
+                    <li><strong>Purposes:</strong> serving ads, measuring ads, and preventing fraud.</li>
+                    <li><strong>Personalized vs. non-personalized ads:</strong> ads are personalized only where you have allowed it (Section 6). Otherwise the App requests non-personalized ads, which are not based on your past behavior; Google still uses the information above to deliver and measure ads and to prevent fraud.</li>
+                    <li><strong>Where ads appear:</strong> a banner on the Home, Calendar and Stats screens, full-screen ads at most twice a day, and rewarded ads only when you choose to watch one.</li>
+                </ul>
+                <h3>4.2 Google Analytics for Firebase (app analytics) — Google LLC</h3>
+                <ul>
+                    <li><strong>Information:</strong> app-instance ID (a random identifier for this installation of the App), device and operating system information, approximate location that Google derives from your IP address, and usage events.</li>
+                    <li><strong>What usage events contain:</strong> only categorical values and on/off flags, such as which feature was used, how an expense was entered (typed, pasted, shared or from a suggestion), the key of a default category, whether a budget was set during onboarding, whether a backup was restored by merging or overwriting, whether an expense was marked "Worth it" or "Regret it", and whether amounts were hidden on a shared receipt image. Never amounts, memos or merchant names, the text you paste or share, your hourly wage, balances, or budget-exceeded status.</li>
+                    <li><strong>Advertising ID:</strong> collection of the advertising ID by Firebase is <strong>disabled</strong>.</li>
+                    <li><strong>Purpose:</strong> understanding, in aggregate, how the App is used so we can fix problems and improve it.</li>
+                </ul>
+                <h3>4.3 In-app purchase — Apple / Google</h3>
+                <p>"Pro" (product ID com.pifl.pipi.spend.pro) is a one-time purchase processed by the App Store (Apple Inc.) or Google Play (Google LLC). <strong>We never receive your card or payment details.</strong> The App receives the purchase result from the store on your device to unlock Pro, and "Restore purchases" asks the store again. This information is not sent to us.</p>
+                <h3>4.4 Emails you send us</h3>
+                <p>If you email <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>, we receive your email address and your message. The "Report an inappropriate ad" item in Settings opens an email to us that is pre-filled with the response IDs of recently shown ads and your operating system name and version; you can review or edit it before sending. We use this only to answer you and, for ad reports, to report the ad to Google.</p>
+                <h3>Google's policies</h3>
+                <ul>
+                    <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+                    <li>How Google uses information from sites or apps that use its services: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></li>
+                </ul>
+
+                <h2>5. Notifications</h2>
+                <p>The evening reminder is <strong>optional</strong>. It is a local notification scheduled on your device at the time you choose; it is not sent from a server, and its text contains no advertising. The App asks for notification permission during onboarding, and every feature works without it. You can turn the reminder off in the App's Settings or in your device's notification settings.</p>
+
+                <h2>6. Consent and tracking</h2>
+                <ul>
+                    <li><strong>iOS – App Tracking Transparency (ATT):</strong> on first launch, iOS asks whether the App may track you. If you allow it, AdMob may use the IDFA for personalized ads. If you choose "Ask App Not to Track", the IDFA is not available and the App requests non-personalized ads only.</li>
+                    <li><strong>EEA, UK and Switzerland:</strong> Google's consent form (User Messaging Platform, "UMP") asks for your consent to personalized ads and to storing or accessing information on your device for ads.</li>
+                    <li><strong>US states with privacy laws (including California):</strong> Google's US-state privacy message lets you opt out of the sale or sharing of personal information for targeted advertising.</li>
+                    <li><strong>"Privacy choices" in Settings:</strong> when Google's consent tools require it in your region, Settings shows "Privacy choices", which reopens the form so you can change your choices at any time.</li>
+                </ul>
+                <h3>Legal bases (EEA, UK, Switzerland)</h3>
+                <ScrollableLegalTable label="Legal bases (EEA, UK, Switzerland): scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Processing</th>
+                            <th>Legal basis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Personalized ads; storing or accessing information on your device for ads</td>
+                            <td>Your consent (GDPR Art. 6(1)(a)), given in the UMP form. You can withdraw it at any time via "Privacy choices".</td>
+                        </tr>
+                        <tr>
+                            <td>Non-personalized ads, ad measurement and fraud prevention</td>
+                            <td>Our legitimate interest in offering the App free of charge with ads (Art. 6(1)(f)), within the choices you make in the UMP form; where that form asks for consent for these purposes, your consent.</td>
+                        </tr>
+                        <tr>
+                            <td>Aggregated app analytics (Firebase)</td>
+                            <td>Our legitimate interest in understanding how the App is used in order to fix and improve it (Art. 6(1)(f)). Data is minimized: no advertising ID, no amounts or other spending content. You may object at any time (Art. 21) by writing to us.</td>
+                        </tr>
+                        <tr>
+                            <td>Pro purchase</td>
+                            <td>Performance of the purchase contract (Art. 6(1)(b)).</td>
+                        </tr>
+                        <tr>
+                            <td>Answering your emails</td>
+                            <td>Our legitimate interest in responding to you (Art. 6(1)(f)).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>7. How to refuse or withdraw</h2>
+                <ul>
+                    <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Tracking — turn tracking off for the App (or turn off "Allow Apps to Request to Track").</li>
+                    <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; Delete advertising ID (on older Android versions: "Opt out of Ads Personalization"). Menu names may vary by device.</li>
+                    <li><strong>In the App:</strong> Settings &gt; Privacy choices (shown where Google's consent tools apply) — change or withdraw consent, or opt out of sale or sharing.</li>
+                    <li><strong>Pro:</strong> buying Pro removes ads.</li>
+                    <li><strong>Notifications:</strong> turn off the reminder in the App's Settings or in your device's settings.</li>
+                    <li><strong>Stop all collection:</strong> uninstall the App.</li>
+                </ul>
+
+                <h2>8. Users in Korea — behavioral information for personalized ads</h2>
+                <p>In line with the Personal Information Protection Commission's guidelines on behavioral information for personalized advertising:</p>
+                <ScrollableLegalTable label="8. Users in Korea — behavioral information for personalized ads: scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Behavioral information collected</td>
+                            <td>Advertising identifier (IDFA only if tracking is allowed; Android advertising ID), ad interaction data (ads shown and tapped), IP address, device and OS information</td>
+                        </tr>
+                        <tr>
+                            <td>Collection method</td>
+                            <td>Collected automatically by the Google AdMob SDK when you use the App</td>
+                        </tr>
+                        <tr>
+                            <td>Purposes</td>
+                            <td>Serving personalized and non-personalized ads, measuring ads, preventing fraud</td>
+                        </tr>
+                        <tr>
+                            <td>Business that collects and processes it</td>
+                            <td>Google LLC</td>
+                        </tr>
+                        <tr>
+                            <td>Retention</td>
+                            <td>According to Google's retention policy: <a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener">https://policies.google.com/technologies/retention</a></td>
+                        </tr>
+                        <tr>
+                            <td>How to refuse</td>
+                            <td>iOS: Settings &gt; Privacy &amp; Security &gt; Tracking / Android: Settings &gt; Google &gt; Ads &gt; Delete advertising ID / In the App: Settings &gt; Privacy choices (where shown)</td>
+                        </tr>
+                        <tr>
+                            <td>Contact</td>
+                            <td><a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <p>We do not collect sensitive behavioral information, and the App never uses your spending content for ads.</p>
+
+                <h2>9. Users in Japan — advertising ID and external transmission</h2>
+                <ul>
+                    <li><strong>Advertising ID:</strong> the App uses the advertising ID (IDFA on iOS only if you allow tracking; Android advertising ID) through Google AdMob for the purposes in Section 4.1. See Section 7 for how to stop this.</li>
+                    <li><strong>External transmission (Telecommunications Business Act, Art. 27-12):</strong> the App sends the following information from your device to an outside party.</li>
+                </ul>
+                <ScrollableLegalTable label="9. Users in Japan — advertising ID and external transmission: scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recipient</th>
+                            <th>Service</th>
+                            <th>Information sent</th>
+                            <th>Purposes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC</td>
+                            <td>Google AdMob</td>
+                            <td>Advertising ID, IP address, device and OS information, ad interaction data</td>
+                            <td>Serving and measuring ads, preventing fraud</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC</td>
+                            <td>Google Analytics for Firebase</td>
+                            <td>App-instance ID, device and OS information, usage events (approximate location is derived from the IP address)</td>
+                            <td>Analyzing how the App is used to improve it</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>10. California and other US states</h2>
+                <ul>
+                    <li><strong>Categories collected in the past 12 months:</strong> identifiers (advertising ID, app-instance ID, IP address); internet or other electronic network activity (ad interactions, app usage events); approximate geolocation (derived from IP address); device information. Sources: your device, through the Google SDKs. Purposes: Section 4.</li>
+                    <li><strong>Sale or sharing:</strong> we do not sell personal information for money. Making identifiers and ad interaction data available to Google for targeted advertising may count as "selling" or "sharing" under California and other state laws. <strong>Do Not Sell or Share My Personal Information:</strong> open Settings &gt; Privacy choices in the App and choose the opt-out in Google's US-state privacy message. You can also limit tracking with the device settings in Section 7.</li>
+                    <li><strong>Sensitive personal information:</strong> we do not collect or use it.</li>
+                    <li><strong>Your rights:</strong> to know, access, correct and delete personal information, to opt out of sale or sharing, and not to be discriminated against for using these rights. Send requests to <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>. Because your spending data never leaves your device, you can view, export or delete it directly in the App.</li>
+                    <li>We do not knowingly sell or share personal information of consumers under 16.</li>
+                </ul>
+
+                <h2>11. Retention</h2>
+                <ul>
+                    <li><strong>Data on your device:</strong> kept until you delete it in the App or uninstall the App.</li>
+                    <li><strong>Backup files you create:</strong> kept wherever you saved them until you delete them; uninstalling the App does not delete them.</li>
+                    <li><strong>Data received by Google (AdMob, Firebase):</strong> retained by Google according to its policies (<a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener">https://policies.google.com/technologies/retention</a>). We use analytics data only in aggregated form.</li>
+                    <li><strong>Emails to support:</strong> kept for 3 years after your request is resolved, then deleted, unless the law requires us to keep them longer.</li>
+                </ul>
+
+                <h2>12. International transfer</h2>
+                <p>Information collected by Google AdMob and Google Analytics for Firebase is sent over the internet from your device to Google LLC (United States) when you use the App, and is processed in the United States and other countries where Google operates. For transfers from the EEA, UK and Switzerland, Google relies on safeguards recognized by data protection law, such as the EU–U.S. Data Privacy Framework and standard contractual clauses. You can avoid personalized-ad processing as described in Section 7, or stop all transfers by uninstalling the App.</p>
+
+                <h2>13. Children</h2>
+                <p>The App is not directed to children under 13 (under 16 in the EEA). We do not knowingly collect personal information from children. If you believe a child has used the App and you want related information deleted, contact us at <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>.</p>
+
+                <h2>14. Your rights</h2>
+                <p>Depending on where you live, you may have the right to access, correct, delete, restrict or object to the processing of your personal information, to data portability, to withdraw consent at any time, and to complain to a data protection authority. Write to <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>; we will respond within the time required by law. Your spending data is on your device only, so you can view, export and delete it yourself in the App. For information held by Google, we will help with your request, and you can also use Google's own tools (for example, resetting or deleting your advertising ID).</p>
+
+                <h2>15. Security</h2>
+                <p>Your spending data is kept in the App's private storage on your device and is protected by your device's own security settings, such as the screen lock. Because we do not run a server that stores your spending data, it cannot be leaked from our side.</p>
+
+                <h2>16. Changes to this policy</h2>
+                <p>We may update this policy when the App or the law changes. We will post the new version with a new effective date, and if the changes are significant we will let you know in the App or by other appropriate means.</p>
+
+                <h2>17. Contact</h2>
+                <p>PiFl Labs Co., Ltd. — 59 Jukseongseo-gil, Jeju, Republic of Korea — <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+</BaseLayout>

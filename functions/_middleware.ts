@@ -67,6 +67,11 @@ function readCookie(cookieHeader: string | null, name: string): string | null {
 // 고정 URL이므로 i18n 302를 끼우지 않고 그대로 서빙한다.
 const STATIC_PATH_PREFIXES = ['/_astro/', '/fonts/', '/assets/', '/.well-known/', '/go/'];
 const STATIC_FILE_RE = /\.(woff2?|ttf|otf|png|webp|jpe?g|svg|gif|ico|css|js|mjs|map|xml|txt|json|webmanifest)$/i;
+// 언어 중립으로 그대로 서빙하는 페이지(canonical 은 /en/ 판, 사이트맵 제외).
+// `/apps/pipi-spend/privacy` — 가계부 앱(pipi_spend app_config.dart privacyPolicyUrlFor)이 사이트 언어(ko/en/ja) 밖의
+// 7개 언어(de·fr·es·pt·it·zh·id)를 이 한 페이지의 `#<languageCode>` 섹션으로 연다. 302 로 /ko/·/en/·/ja/ 판에 보내면
+// 그 판에는 해당 언어 섹션이 없어 앵커가 빈 곳에 떨어진다.
+const LANGUAGE_NEUTRAL_PATHS = new Set(['/apps/pipi-spend/privacy', '/apps/pipi-spend/privacy/']);
 
 type PagesContext = {
   request: Request;
@@ -102,6 +107,11 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
 
   // 2) 정적 자산 통과 (robots/sitemap/favicon/_headers 등 루트 자산 포함)
   if (STATIC_PATH_PREFIXES.some((p) => path.startsWith(p)) || STATIC_FILE_RE.test(path)) {
+    return next();
+  }
+
+  // 2-1) 앱이 앵커로 여는 언어 중립 페이지 통과
+  if (LANGUAGE_NEUTRAL_PATHS.has(path)) {
     return next();
   }
 
