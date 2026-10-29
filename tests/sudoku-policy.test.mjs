@@ -150,9 +150,9 @@ const RANKINGS = {
     '参加をオフにすると', 'インターネット接続の権限', 'ランキングに参加した場合のランキング情報', 'IPアドレス', '第15条第1項第4号', '180日'],
 };
 const NO_NETWORK = {
-  ko: ['앱은 스스로 네트워크 요청을 보내지 않으며 회사 서버에 연결하지 않습니다', '앱 자체의 네트워크 요청 없음', '동의(순위 참여)', '이 정보로 이용자를 알아볼 수 없습니다'],
-  en: ['It makes no network requests of its own and does not connect to our servers', 'no network requests of its own, no connection to our servers', 'consent, given by joining', 'this information does not identify you'],
-  ja: ['本アプリは自らネットワーク通信を行わず', 'アプリ自体のネットワーク通信なし', '同意（ランキングへの参加）', 'お客様を特定することはできません'],
+  ko: ['앱은 스스로 네트워크 요청을 보내지 않으며 회사 서버에 연결하지 않습니다', '앱 자체의 네트워크 요청 없음', '동의(순위 참여)', '이 정보로 이용자를 알아볼 수 없습니다', '이용자를 알아볼 수 있는 정보는 받지 않으며', '제2조에 적은 순위 정보가'],
+  en: ['It makes no network requests of its own and does not connect to our servers', 'no network requests of its own, no connection to our servers', 'consent, given by joining', 'this information does not identify you', 'receives nothing that identifies you', 'the rankings information described in Section 2 is shown'],
+  ja: ['本アプリは自らネットワーク通信を行わず', 'アプリ自体のネットワーク通信なし', '同意（ランキングへの参加）', 'お客様を特定することはできません', 'お客様を特定できる情報は受け取りません', '第2条に記載したランキング情報が'],
 };
 for (const locale of LOCALES) {
   test(`${locale} privacy: covers the optional rankings and drops the never-online claim`, { skip }, () => {
