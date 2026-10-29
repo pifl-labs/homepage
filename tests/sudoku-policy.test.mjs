@@ -139,19 +139,20 @@ test('privacy: one effective date in the hero and the last article, the same in 
 
 // 순위(2026-10-29, 선택 기능). 근거는 pipi_sudoku lib/app/ranking.dart 와 pipi_commons services/pifl_games/README.md 의
 // '개인정보'다: 참여 전에는 네트워크를 쓰지 않고, 참여하면 익명 계정·별명·결과만 Google Firebase(Firestore 서울, Auth 미국)로
-// 보내며, 끄면 보낸 것을 지운다. 옛 '네트워크 요청이 전혀 없다'는 문장이 남으면 사실과 다르다.
+// 보내며, 끄면 보낸 것을 지운다. 인증에는 IP 주소가 따라가고(Google이 수 주간 기록), 처리 근거는 이용자가 요청한 기능의 제공이다
+// (동의 근거라면 만 14세 미만 법정대리인 동의가 필요해진다). 옛 '네트워크 요청이 전혀 없다'는 문장이 남으면 사실과 다르다.
 const RANKINGS = {
   ko: ['순위 기능 제공(선택)', '순위(선택)', '익명 계정 ID', 'Cloud Firestore 서울 리전', 'Google LLC (Firebase Authentication)',
-    '순위 참여를 끄면', '인터넷 연결 권한', '순위에 참여한 경우의 순위 정보'],
+    '순위 참여를 끄면', '인터넷 연결 권한', '순위에 참여한 경우의 순위 정보', 'IP 주소', '제15조 제1항 제4호', '180일'],
   en: ['Rankings (optional)', 'anonymous account ID', 'Cloud Firestore in the Seoul region', 'Google LLC (Firebase Authentication)',
-    'turn the rankings off', 'internet permission', 'if you join the rankings, the rankings information'],
+    'turn the rankings off', 'internet permission', 'if you join the rankings, the rankings information', 'IP address', 'Article 6(1)(b)', '180 days'],
   ja: ['ランキング機能の提供（任意）', 'ランキング（任意）', '匿名アカウントID', 'Cloud Firestore ソウルリージョン', 'Google LLC（Firebase Authentication）',
-    '参加をオフにすると', 'インターネット接続の権限', 'ランキングに参加した場合のランキング情報'],
+    '参加をオフにすると', 'インターネット接続の権限', 'ランキングに参加した場合のランキング情報', 'IPアドレス', '第15条第1項第4号', '180日'],
 };
 const NO_NETWORK = {
-  ko: ['앱은 스스로 네트워크 요청을 보내지 않으며 회사 서버에 연결하지 않습니다', '앱 자체의 네트워크 요청 없음'],
-  en: ['It makes no network requests of its own and does not connect to our servers', 'no network requests of its own, no connection to our servers'],
-  ja: ['本アプリは自らネットワーク通信を行わず', 'アプリ自体のネットワーク通信なし'],
+  ko: ['앱은 스스로 네트워크 요청을 보내지 않으며 회사 서버에 연결하지 않습니다', '앱 자체의 네트워크 요청 없음', '동의(순위 참여)', '이 정보로 이용자를 알아볼 수 없습니다'],
+  en: ['It makes no network requests of its own and does not connect to our servers', 'no network requests of its own, no connection to our servers', 'consent, given by joining', 'this information does not identify you'],
+  ja: ['本アプリは自らネットワーク通信を行わず', 'アプリ自体のネットワーク通信なし', '同意（ランキングへの参加）', 'お客様を特定することはできません'],
 };
 for (const locale of LOCALES) {
   test(`${locale} privacy: covers the optional rankings and drops the never-online claim`, { skip }, () => {
