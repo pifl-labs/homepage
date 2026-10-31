@@ -35,17 +35,17 @@ The English phrases describe each app's purpose; they are not new store names.
 | High and low tide information — 물때친구 - 만조 간조 물때표 위젯 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
 | AI philosophical dialogue — Dialogos: 철학자와의 대화 | [App Store (Korea)](https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
 
-### Step-by-step sudoku hints on Android
+### Step-by-step sudoku hints
 
-[Cell by Cell Sudoku — Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=en&gl=US)
+[Cell by Cell Sudoku — App Store (US)](https://apps.apple.com/us/app/cell-by-cell-sudoku/id6820125053) ·
+[Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=en&gl=US)
 
-Free, no ads and no account. Work through 300 included puzzles with hints that
-show where to look, why, and then the digit. You decide when to fill it in.
-Hints use single candidates and hidden singles; a puzzle you enter may need
-harder techniques that are not covered.
+Hints show where to look, why, and then the digit. You decide when to fill it in.
+A puzzle you enter may need techniques that the built-in hints do not cover.
 
-US Google Play listing checked 24 October 2026. Android link only;
-this entry is separate from the ten-app snapshot above.
+US App Store listing checked 31 October 2026; the Google Play link was checked
+24 October 2026. Versions and features can differ by platform.
+This supplemental entry is separate from the ten-app snapshot above.
 
 ### App portfolio (PDF)
 
