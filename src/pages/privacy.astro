@@ -57,6 +57,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>Email inquiry records</strong>: <strong>3 years</strong> after inquiry resolution (Korean Act on Consumer Protection in Electronic Commerce)</li>
                     <li><strong>Website access logs</strong>: <strong>3 months</strong> (Korean Protection of Communications Secrets Act)</li>
+                    <li><strong>Website visit statistics</strong> (Cloudflare Web Analytics): raw data for <strong>7 days</strong>, then sampled aggregates for <strong>up to 6 months</strong></li>
                 </ul>
 
                 <h2>4. Disclosure to Third Parties</h2>
@@ -76,6 +77,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <tr>
                             <td>Cloudflare, Inc.</td>
                             <td>Website hosting and delivery, and visit statistics (Cloudflare Web Analytics)</td>
+                            <td>Until contract termination</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC</td>
+                            <td>Web font delivery (Google Fonts)</td>
                             <td>Until contract termination</td>
                         </tr>
                         <tr>
@@ -112,7 +118,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>9. Cookies</h2>
-                <p>We currently do not use cookies or other automatic personal data collection devices. Website visit statistics are counted with Cloudflare Web Analytics, which uses no cookies or browser storage (localStorage) and does not identify individuals from IP addresses or browser information. If we begin to use cookies in the future, this policy will be updated accordingly.</p>
+                <p>We do not use cookies to identify you or to collect personal data. For convenience, the website uses the following:</p>
+                <ul>
+                    <li><strong>Language cookie (pref-lang)</strong>: stores only the code of the language the website shows you (ko, ja or en) and lasts one year.</li>
+                    <li><strong>Browser storage (localStorage)</strong>: stores only your theme and text size settings on your device; it is not sent to us.</li>
+                </ul>
+                <p>Website visit statistics are counted with Cloudflare Web Analytics, which uses no cookies or browser storage and does not identify individuals from IP addresses or browser information. You can delete or block cookies and site data in your browser settings; the website still works, except that your language and display settings will not be remembered.</p>
 
                 <h2>10. International Data Transfers</h2>
                 <table>
@@ -130,6 +141,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             <td>United States and countries where Cloudflare data centers are located</td>
                             <td>Web hosting and visit statistics</td>
                             <td>Access logs (IP address, browser type, device and operating system type, pages visited, referrer)</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC</td>
+                            <td>United States</td>
+                            <td>Web font delivery (Google Fonts)</td>
+                            <td>IP address, browser information</td>
                         </tr>
                         <tr>
                             <td>Notion Labs, Inc.</td>
@@ -159,7 +176,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </ul>
 
                 <h2>14. Changes to this Policy</h2>
-                <p>This Privacy Policy is effective as of November 3, 2026. Compared with the previous version (effective March 10, 2026), it corrects the website hosting and visit-statistics provider to Cloudflare, Inc., which actually operates the site, and discloses the cookie-free visit statistics tool and the items it records (pages visited, referrer, device and operating system type). Any changes will be announced on our website.</p>
+                <p>This Privacy Policy is effective as of November 3, 2026. Compared with the previous version (effective March 10, 2026), it corrects the website hosting and visit-statistics provider to Cloudflare, Inc., which actually operates the site, and discloses Google Fonts web font delivery, the cookie-free visit statistics tool with the items it records (pages visited, referrer, device and operating system type) and their retention, and the language cookie and display-setting storage. Any changes will be announced on our website.</p>
             </div>
         </div>
     </main>
