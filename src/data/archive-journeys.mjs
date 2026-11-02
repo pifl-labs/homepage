@@ -29,9 +29,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "1.0.4–1.0.15의 개별 수정은 이 요약에서 모두 복원하지 않았습니다.",
-      "ja": "1.0.4–1.0.15の個別修正は網羅していません。",
-      "en": "Individual fixes in 1.0.4–1.0.15 are not exhaustively reconstructed."
+      "ko": "1.0.4–1.0.15의 개별 수정은 이 요약에서 모두 복원하지 않았습니다. 공개 1.2.3까지의 이후 변화는 날짜 기록에만 남겼습니다.",
+      "ja": "1.0.4–1.0.15の個別修正は網羅していません。公開版1.2.3までの以降の変化は日付の記録にのみ残しています。",
+      "en": "Individual fixes in 1.0.4–1.0.15 are not exhaustively reconstructed. Later changes up to public 1.2.3 are kept in the dated records only."
     },
     "sources": [
       {
@@ -80,9 +80,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "1.0.1(19)은 공개 보류된 유지보수 빌드입니다. 1.2.2의 기능별 차이는 별도 검증이 필요합니다.",
-      "ja": "1.0.1(19)は公開保留の保守ビルド。1.2.2の機能差は別途確認が必要です。",
-      "en": "1.0.1(19) was held from public release. Feature changes in version 1.2.2 need separate verification."
+      "ko": "1.0.1(19)은 공개 보류된 유지보수 빌드입니다. 1.2.2의 기능별 차이는 별도 검증이 필요합니다. 공개 1.2.3의 변화는 날짜 기록에만 남겼습니다.",
+      "ja": "1.0.1(19)は公開保留の保守ビルド。1.2.2の機能差は別途確認が必要です。公開版1.2.3の変化は日付の記録にのみ残しています。",
+      "en": "1.0.1(19) was held from public release. Feature changes in version 1.2.2 need separate verification. Public 1.2.3 changes are kept in the dated records only."
     },
     "sources": [
       {
@@ -182,9 +182,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "현재 개발 메타데이터의 이후 공유 기능을 1.0.12 기능으로 섞지 않았습니다.",
-      "ja": "後続開発の共有機能を1.0.12に混ぜていません。",
-      "en": "Later sharing features in development metadata are not attributed to 1.0.12."
+      "ko": "현재 개발 메타데이터의 이후 공유 기능을 1.0.12 기능으로 섞지 않았습니다. 공개 1.0.13의 변화는 날짜 기록에만 남겼습니다.",
+      "ja": "後続開発の共有機能を1.0.12に混ぜていません。公開版1.0.13の変化は日付の記録にのみ残しています。",
+      "en": "Later sharing features in development metadata are not attributed to 1.0.12. Public 1.0.13 changes are kept in the dated records only."
     },
     "sources": [
       {
@@ -238,9 +238,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "Play에서는 1.1.4가 1.1.5로 대체된 기록이 있어 두 버전의 개선을 묶었습니다.",
-      "ja": "Playでは1.1.4を1.1.5へ置き換えた記録があるためまとめています。",
-      "en": "The notes record Play 1.1.4 being replaced by 1.1.5, so their changes are grouped."
+      "ko": "Play에서는 1.1.4가 1.1.5로 대체된 기록이 있어 두 버전의 개선을 묶었습니다. 2.0 이후 변화는 이 요약에 넣지 않고 날짜 기록(2.0.1)에만 남겼습니다.",
+      "ja": "Playでは1.1.4を1.1.5へ置き換えた記録があるためまとめています。2.0以降の変化はこの要約に含めず、日付の記録（2.0.1）にのみ残しています。",
+      "en": "The notes record Play 1.1.4 being replaced by 1.1.5, so their changes are grouped. Changes from 2.0 on are kept in the dated 2.0.1 record, not in this summary."
     },
     "sources": [
       {
@@ -289,9 +289,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "초기 구독 조건은 현재 조건으로 재사용하지 않습니다. 각 중간 버전 공개일은 별도 확인이 필요합니다.",
-      "ja": "初期の購読条件を現在の条件として再利用していません。中間版の公開日は別途確認が必要です。",
-      "en": "Historical subscription terms are not presented as current terms; intermediate release dates need verification."
+      "ko": "초기 구독 조건은 현재 조건으로 재사용하지 않습니다. 각 중간 버전 공개일은 별도 확인이 필요합니다. 공개 1.1.0의 변화는 날짜 기록에만 남겼습니다.",
+      "ja": "初期の購読条件を現在の条件として再利用していません。中間版の公開日は別途確認が必要です。公開版1.1.0の変化は日付の記録にのみ残しています。",
+      "en": "Historical subscription terms are not presented as current terms; intermediate release dates need verification. Public 1.1.0 changes are kept in the dated records only."
     },
     "sources": [
       {
@@ -333,16 +333,16 @@ export const archiveJourneys = [
       {
         "version": "1.0.10 후보 → 1.1.0 공개 관측",
         "text": {
-          "ko": "속담 빈칸을 타일로 채우고 뜻을 확인하는 모드가 최근 등록 문구에 포함됩니다.",
-          "ja": "ことわざの空欄をタイルで埋めて意味を確認するモードが最近の登録文に含まれます。",
-          "en": "Recent listing notes add a mode for filling proverb gaps with tiles and checking their meanings."
+          "ko": "속담 한 구절의 빈칸을 본편과 같은 글자 휠로 채우는 모드가 공개 등록 문구에 포함됩니다.",
+          "ja": "ことわざの空欄を本編と同じ文字ホイールで埋めるモードが公開掲載文に含まれます。",
+          "en": "The public listing includes a proverb mode that fills gaps with the same letter wheel as the main game."
         }
       }
     ],
     "limit": {
-      "ko": "속담 기능 문서는 1.0.10 후보 이름으로 남아 있습니다. 최초 도달 버전을 1.0.10으로 단정하지 않습니다.",
-      "ja": "ことわざの資料は1.0.10候補名で残っています。初公開を1.0.10とは断定しません。",
-      "en": "Proverb documentation retains the 1.0.10 candidate label; its first public arrival is not asserted as 1.0.10."
+      "ko": "속담 기능 문서는 1.0.10 후보 이름으로 남아 있습니다. 최초 도달 버전을 1.0.10으로 단정하지 않습니다. 1.2.0 이후 공개 1.3.1까지의 변화는 날짜 기록에만 남겼습니다.",
+      "ja": "ことわざの資料は1.0.10候補名で残っています。初公開を1.0.10とは断定しません。1.2.0以降、公開版1.3.1までの変化は日付の記録にのみ残しています。",
+      "en": "Proverb documentation retains the 1.0.10 candidate label; its first public arrival is not asserted as 1.0.10. Changes from 1.2.0 to public 1.3.1 are kept in the dated records only."
     },
     "sources": [
       {
@@ -498,9 +498,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "Android 공개 상태만 기존 조사로 확인했습니다. 각 문서의 배포 버전 연결과 iOS 출시는 미확인입니다. 이전 개인 계정과 합치지 않습니다.",
-      "ja": "既存調査ではAndroid公開状態を確認。各資料と配布版の対応・iOS公開は未確認。旧個人アカウントとは統合しません。",
-      "en": "The prior audit confirms Android availability, not each documented version rollout or an iOS launch. The earlier personal-account lineage is kept separate."
+      "ko": "각 문서의 배포 버전 연결은 미확인입니다. 이전 개인 계정과 합치지 않습니다. 물시계로 이름이 바뀐 Android 1.2.0은 날짜 기록에만 남겼고, 2026-11-02에 App Store 공개 목록에는 없었습니다.",
+      "ja": "各資料と配布版の対応は未確認。旧個人アカウントとは統合しません。Tidewalkに名称が変わったAndroid 1.2.0は日付の記録にのみ残し、2026-11-02時点でApp Storeの公開一覧にはありませんでした。",
+      "en": "Each documented version rollout is unverified, and the earlier personal-account lineage is kept separate. Android 1.2.0, renamed Tidewalk, is kept in the dated records only; on 2026-11-02 it was not in the public App Store listings."
     },
     "sources": [
       {
@@ -541,9 +541,9 @@ export const archiveJourneys = [
       }
     ],
     "limit": {
-      "ko": "1.0.1의 실제 공개 여부와 iOS 첫 출시 완료는 이번에 확인하지 않았습니다. 새로운 공개 기능으로 표시하지 않습니다.",
-      "ja": "1.0.1の公開とiOS初公開完了は今回未確認。新しい公開機能として扱いません。",
-      "en": "Public rollout of 1.0.1 and completion of the iOS launch were not verified here; this is not presented as a new public feature."
+      "ko": "iOS는 2026-10-28에 처음 공개됐습니다(App Store 조회). 첫 iOS 공개 버전은 기록하지 않았고, 1.0.2의 코스·오늘의 퍼즐·순위는 날짜 기록에 남겼습니다.",
+      "ja": "iOSは2026-10-28に初公開されました（App Storeの照会）。最初のiOS公開版は記録しておらず、1.0.2のコース・今日のパズル・順位は日付の記録に残しています。",
+      "en": "iOS first appeared on 2026-10-28 (App Store lookup). The first public iOS version is not recorded; the 1.0.2 courses, daily puzzle and rankings are kept in the dated record."
     },
     "sources": [
       {
@@ -578,9 +578,9 @@ export const archiveJourneys = [
     "app": "kkachi",
     "stages": [],
     "limit": {
-      "ko": "버전 설정과 준비 상태는 확인했지만 공개 이전·이후를 비교할 버전별 기능 릴리스노트는 이번 범위에서 찾지 못했습니다.",
-      "ja": "バージョン設定と準備状態は確認しましたが、公開前後を比べる機能ノートは今回見つかりませんでした。",
-      "en": "Version configuration and preparation status were checked; comparable versioned feature notes were not found in this scoped review."
+      "ko": "Android 1.1.0 공개는 확인했지만, 버전별 기능 릴리스노트를 찾지 못해 공개 전후의 기능 변화는 정리하지 않았습니다.",
+      "ja": "Android 1.1.0の公開は確認しましたが、バージョンごとの機能ノートが見つからないため、公開前後の機能変化はまとめていません。",
+      "en": "The Android 1.1.0 release was observed, but no versioned feature notes were found, so changes before and after release are not summarized."
     },
     "sources": [
       {

@@ -372,14 +372,14 @@ export const extraEvents=[
     "version": null,
     "source": "git",
     "title": {
-      "ko": "준비 중인 앱의 공식 자료",
-      "ja": "準備中アプリの公式資料",
-      "en": "Official materials for an upcoming app"
+      "ko": "공개 전 공식 자료",
+      "ja": "公開前の公式資料",
+      "en": "Official materials before release"
     },
     "summary": {
-      "ko": "공식 아이콘 자료를 보관했습니다. 앱은 공개 출시 전입니다. 제출·업로드·내부 테스트를 출시 이력으로 표시하지 않습니다.",
-      "ja": "公式アイコン資料を保存。アプリは公開前です。提出・アップロード・内部テストを公開履歴として扱いません。",
-      "en": "Official icon material is preserved. The app remains unreleased. Submissions, uploads and internal testing are not presented as release history."
+      "ko": "공식 아이콘 자료를 보관했습니다. 2026-10-23 기준 앱은 공개 출시 전이었고, 이후 Google Play 공개는 별도 기록입니다. 제출·업로드·내부 테스트를 출시 이력으로 표시하지 않습니다.",
+      "ja": "公式アイコン資料を保存。2026-10-23時点でアプリは公開前で、その後のGoogle Play公開は別の記録です。提出・アップロード・内部テストを公開履歴として扱いません。",
+      "en": "Official icon material is preserved. As of 2026-10-23 the app was unreleased; its later Google Play release is a separate record. Submissions, uploads and internal testing are not presented as release history."
     }
   },
   {
@@ -421,6 +421,242 @@ export const extraEvents=[
       "ja": "公式アイコン資料を保存。アプリは公開前です。提出・アップロード・内部テストを公開履歴として扱いません。",
       "en": "Official icon material is preserved. The app remains unreleased. Submissions, uploads and internal testing are not presented as release history."
     }
+  },
+  {
+    "app": "pipi-focus",
+    "observedAt": "2026-11-02",
+    "id": "focus-123",
+    "date": "2026-10-24",
+    "timestamp": "2026-10-24T15:17:49Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.2.3",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "오래 집중한 만큼 보물",
+      "ja": "長く集中した分だけ宝物",
+      "en": "Treasure for longer focus"
+    },
+    "summary": {
+      "ko": "공개 스토어의 1.2.3 기록입니다. 릴리스노트에는 25분마다 보물 1개를 받고 남은 시간은 다음 항해로 이어진다고 적혀 있습니다.",
+      "ja": "公開ストアの1.2.3の記録です。リリースノートには、25分ごとに宝物が1つ、残り時間は次の航海に繰り越されると書かれています。",
+      "en": "Public-store record for 1.2.3. Its release notes say every 25 minutes earns one treasure and leftover time carries into the next voyage."
+    }
+  },
+  {
+    "app": "pipi-draw",
+    "observedAt": "2026-11-02",
+    "id": "draw-123",
+    "date": "2026-10-30",
+    "timestamp": "2026-10-30T19:56:44Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.2.3",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "아이와 함께 크게",
+      "ja": "子どもと一緒に大きく",
+      "en": "Bigger tools for drawing together"
+    },
+    "summary": {
+      "ko": "공개 스토어의 1.2.3 기록입니다. 릴리스노트에는 도구와 색을 크게 보여 주는 '크게', 두 손가락 확대·이동, 그릴 부분 먼저 고르기가 적혀 있습니다. 등록 화면에는 이전 화면이 남아 있습니다.",
+      "ja": "公開ストアの1.2.3の記録です。リリースノートには、道具と色を大きく表示する機能、二本指の拡大・移動、描く部分を先に選ぶ流れが書かれています。掲載画像には以前の画面が残っています。",
+      "en": "Public-store record for 1.2.3. Its notes describe a larger tools-and-colors mode, two-finger zoom and pan, and choosing the area to draw first. Listing images still include earlier screens."
+    }
+  },
+  {
+    "app": "pipi-word-voyage",
+    "observedAt": "2026-11-02",
+    "id": "pipi-word-voyage-131",
+    "date": "2026-11-01",
+    "timestamp": "2026-11-01T20:54:23Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.3.1",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "테마 항해 팩과 큰 글자",
+      "ja": "テーマ航海パックと大きな文字",
+      "en": "Theme Voyage packs and larger text"
+    },
+    "summary": {
+      "ko": "공개 스토어의 1.3.1 기록입니다. 테마 항해 팩을 쉬운 음식 팩부터 보여 주고, 큰 글자에서도 판 글자가 칸 안에 들어간다고 적혀 있습니다. 1.2.0·1.3.0의 공개 시점은 따로 기록하지 않았습니다.",
+      "ja": "公開ストアの1.3.1の記録です。テーマ航海のパックをやさしい食べ物から並べ、大きな文字でも盤面の文字がマスに収まると書かれています。1.2.0・1.3.0の公開時期は記録していません。",
+      "en": "Public-store record for 1.3.1: Theme Voyage packs start from the easiest, Food, and board letters fit their squares at larger text sizes. Public timing of 1.2.0 and 1.3.0 is not recorded here."
+    }
+  },
+  {
+    "app": "pipi-hello",
+    "observedAt": "2026-11-02",
+    "id": "pipi-hello-110",
+    "date": "2026-10-25",
+    "timestamp": "2026-10-25T19:54:01Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.1.0",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "상황 레슨 8편과 첫 그림책",
+      "ja": "場面レッスンと初めての絵本",
+      "en": "Eight situation lessons"
+    },
+    "summary": {
+      "ko": "한국 스토어의 1.1.0 릴리스노트에는 배운 히라가나로 읽는 첫 그림책과 상황 레슨 8편이 적혀 있습니다. 배우는 언어와 내용은 기기 언어에 따라 다릅니다.",
+      "ja": "日本ストアの1.1.0のリリースノートには、習ったハングルで読む初めての絵本と、場面レッスンの追加が書かれています。学ぶ言語と内容は端末の言語で変わります。",
+      "en": "The US 1.1.0 notes list eight situation lessons, five of them new, each with a scene picture. The language learned and the content depend on the device language."
+    }
+  },
+  {
+    "app": "pipi-words",
+    "observedAt": "2026-11-02",
+    "id": "pipi-words-1014",
+    "date": "2026-10-23",
+    "timestamp": "2026-10-23T02:25:35Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.0.14",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "퀴즈 수정과 다음 복습일",
+      "ja": "クイズの修正と次の復習日",
+      "en": "Quiz fixes and next review dates"
+    },
+    "summary": {
+      "ko": "공개 스토어의 1.0.14 기록입니다. 타이핑 퀴즈 결과 멈춤과 TOPIK II 단어팩 열림 문제를 고치고, 카드 뒷면에 다음 복습일을 보여 준다고 적혀 있습니다.",
+      "ja": "公開ストアの1.0.14の記録です。入力クイズの結果画面が止まる問題などを直し、カードの裏に次の復習日を表示すると書かれています。",
+      "en": "Public-store record for 1.0.14: fixes for the typing-quiz results and a TOPIK II pack, and next review dates on card backs."
+    }
+  },
+  {
+    "app": "pipi-words",
+    "observedAt": "2026-11-02",
+    "id": "pipi-words-android-110",
+    "date": "2026-11-02",
+    "kind": "observed",
+    "platform": "android",
+    "version": "1.1.0",
+    "source": "store-check",
+    "title": {
+      "ko": "Android 1.1.0 공개 확인",
+      "ja": "Android 1.1.0の公開を確認",
+      "en": "Android 1.1.0 observed"
+    },
+    "summary": {
+      "ko": "Google Play 프로덕션의 1.1.0을 확인했습니다. 등록정보에는 EPS-TOPIK 단어팩 7개와 화면·뜻 표시 언어 9개 추가가 적혀 있습니다. 같은 날 iOS 공개 버전은 1.0.14였습니다.",
+      "ja": "Google Playの本番で1.1.0を確認しました。掲載情報にはEPS-TOPIKの単語パック7つと、表示言語9つの追加が書かれています。同日のiOS公開版は1.0.14でした。",
+      "en": "Google Play production showed 1.1.0, whose listing adds seven EPS-TOPIK decks and nine display languages. The public iOS version that day was 1.0.14."
+    }
+  },
+  {
+    "app": "pipi-dday",
+    "observedAt": "2026-11-02",
+    "id": "pipi-dday-201",
+    "date": "2026-10-24",
+    "timestamp": "2026-10-24T16:05:29Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "2.0.1",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "그날까지 2.0",
+      "ja": "その日まで 2.0",
+      "en": "Until That Day 2.0"
+    },
+    "summary": {
+      "ko": "공개 스토어의 2.0.1 기록입니다. 현재 등록정보는 아이·커플·월급날 같은 카테고리, 날짜별 사진, 위젯 모양 선택을 설명합니다. 2.0.0 자체의 공개 시각은 기록하지 않았습니다.",
+      "ja": "公開ストアの2.0.1の記録です。現在の掲載情報は、子ども・カップル・給料日などのカテゴリー、日付ごとの写真、ウィジェットの選択を説明しています。2.0.0自体の公開時刻は記録していません。",
+      "en": "Public-store record for 2.0.1. The current listing describes categories such as babies, couples and paydays, a photo per date and widget layouts. The 2.0.0 publication time is not recorded."
+    }
+  },
+  {
+    "app": "pipi-log",
+    "observedAt": "2026-11-02",
+    "id": "pipi-log-1013",
+    "date": "2026-10-23",
+    "timestamp": "2026-10-23T15:39:10Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.0.13",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "오늘 기분 보내기",
+      "ja": "今日の気分を送る",
+      "en": "Send today’s mood"
+    },
+    "summary": {
+      "ko": "공개 스토어의 1.0.13 기록입니다. 기분과 날짜만 담은 이미지로 오늘 기분을 보내는 기능과 저장 오류 수정이 릴리스노트에 적혀 있습니다.",
+      "ja": "公開ストアの1.0.13の記録です。気分と日付だけを入れた画像で今日の気分を送る機能と、保存の不具合修正が書かれています。",
+      "en": "Public-store record for 1.0.13: send today’s mood as an image with only the mood and date, plus saving fixes."
+    }
+  },
+  {
+    "app": "pipi-sudoku",
+    "observedAt": "2026-11-02",
+    "id": "pipi-sudoku-ios-102",
+    "date": "2026-10-31",
+    "timestamp": "2026-10-31T16:42:26Z",
+    "kind": "released",
+    "platform": "ios",
+    "version": "1.0.2",
+    "source": "public-store",
+    "region": "KR · JP · US",
+    "title": {
+      "ko": "코스 4개와 퍼즐 600개",
+      "ja": "4つのコースと600問",
+      "en": "Four courses and 600 puzzles"
+    },
+    "summary": {
+      "ko": "공개 스토어의 1.0.2 기록입니다. App Store 조회의 첫 공개일은 2026-10-28입니다. 릴리스노트에는 코스 4개·퍼즐 600개, 오늘의 퍼즐, 선택형 순위가 적혀 있습니다.",
+      "ja": "公開ストアの1.0.2の記録です。App Storeの照会では初公開日は2026-10-28です。リリースノートには4コース・600問、今日のパズル、任意の順位が書かれています。",
+      "en": "Public-store record for 1.0.2. The App Store lookup gives 2026-10-28 as the first iOS release. Notes list four courses, 600 puzzles, a daily puzzle and optional rankings."
+    }
+  },
+  {
+    "app": "pipi-tide",
+    "observedAt": "2026-11-02",
+    "id": "pipi-tide-android-120",
+    "date": "2026-11-02",
+    "kind": "observed",
+    "platform": "android",
+    "version": "1.2.0",
+    "source": "store-check",
+    "title": {
+      "ko": "물시계로 바뀐 1.2.0",
+      "ja": "Tidewalkになった1.2.0",
+      "en": "1.2.0 as Tidewalk"
+    },
+    "summary": {
+      "ko": "Google Play 프로덕션의 1.2.0을 확인했습니다. 등록 이름이 물시계(Tidewalk)로 바뀌고 나올 시각 카운트다운을 중심으로 설명합니다. 정확한 이름 변경일은 확인하지 않았고, 같은 날 App Store 공개 목록에는 없었습니다.",
+      "ja": "Google Playの本番で1.2.0を確認しました。掲載名はTidewalkに変わり、戻る時刻のカウントダウンを中心に説明しています。正確な名称変更日は未確認で、同日のApp Store公開一覧にはありませんでした。",
+      "en": "Google Play production showed 1.2.0. The listing is now named Tidewalk and centers on a head-back countdown. The exact rename date is unverified; it was not in the public App Store listings that day."
+    }
+  },
+  {
+    "app": "kkachi",
+    "observedAt": "2026-11-02",
+    "id": "kkachi-android-110",
+    "date": "2026-11-02",
+    "kind": "observed",
+    "platform": "android",
+    "version": "1.1.0",
+    "source": "store-check",
+    "title": {
+      "ko": "Google Play 공개 확인",
+      "ja": "Google Playの公開を確認",
+      "en": "Google Play release observed"
+    },
+    "summary": {
+      "ko": "Google Play 프로덕션의 1.1.0 공개를 확인했습니다. 등록 이름은 '까치: 나만의 민화'입니다. 첫 공개일은 확인하지 않았고, 같은 날 App Store 공개 목록에는 없었습니다.",
+      "ja": "Google Playの本番で1.1.0の公開を確認しました。掲載名は「カチ：わたしの民画」です。初公開日は未確認で、同日のApp Store公開一覧にはありませんでした。",
+      "en": "Google Play production showed 1.1.0 publicly, listed as Kkachi: Your Folk Painting. The first public date is unverified; it was not in the public App Store listings that day."
+    }
   }
 ];
 export const extraMedia={
@@ -458,14 +694,14 @@ export const extraMedia={
     "oldShot": "/assets/apps/pipi-words/en/home.webp",
     "newShot": "/assets/apps/pipi-words/submission/20261023-1.webp",
     "upcoming": false,
-    "pending": true
+    "pending": false
   },
   "pipi-dday": {
     "oldIcon": "/assets/apps/pipi-dday/icon.webp",
     "oldDate": "2026-06-02",
     "oldReference": "002c63e87cf88a2acf1efbd9dd5afec5f005d623",
     "oldShot": "/assets/apps/pipi-dday/en/home.webp",
-    "newShot": "/assets/apps/pipi-dday/submission/20261023-1.webp",
+    "newShot": "/assets/apps/pipi-dday/submission/20261102-1.webp",
     "upcoming": false,
     "pending": false
   },
@@ -492,7 +728,7 @@ export const extraMedia={
     "oldDate": null,
     "oldReference": null,
     "oldShot": null,
-    "newShot": "/assets/apps/pipi-tide/submission/20261023-1.webp",
+    "newShot": "/assets/apps/pipi-tide/submission/20261102-1.webp",
     "upcoming": false,
     "pending": true
   },
@@ -501,17 +737,17 @@ export const extraMedia={
     "oldDate": null,
     "oldReference": null,
     "oldShot": null,
-    "newShot": "/assets/apps/pipi-sudoku/submission/20261023-1.webp",
+    "newShot": "/assets/apps/pipi-sudoku/submission/20261102-1.webp",
     "upcoming": false,
-    "pending": true
+    "pending": false
   },
   "kkachi": {
     "oldIcon": null,
     "oldDate": null,
     "oldReference": null,
     "oldShot": null,
-    "newShot": "/assets/apps/kkachi/submission/20261023-1.webp",
-    "upcoming": true,
+    "newShot": "/assets/apps/kkachi/submission/20261102-1.webp",
+    "upcoming": false,
     "pending": true
   },
   "pipi-sky": {
@@ -561,13 +797,15 @@ export const extraNames={
     "Dialogos: Stoic Dialogues"
   ],
   "pipi-tide": [
-    "Tide Friend: Korea Tide Times"
+    "Tide Friend: Korea Tide Times",
+    "Tidewalk: Korea Tide Timer"
   ],
   "pipi-sudoku": [
     "Cell by Cell Sudoku"
   ],
   "kkachi": [
-    "Kkachi: Korean Saju"
+    "Kkachi: Korean Saju",
+    "Kkachi: Your Folk Painting"
   ],
   "pipi-sky": [
     "PiPi Sky - 구름 너머 하늘",

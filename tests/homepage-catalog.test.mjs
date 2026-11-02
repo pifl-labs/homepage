@@ -22,8 +22,8 @@ test('nine public products have official localized screenshot provenance and ass
 for (const lang of ['ko','ja','en']) test(`${lang}: built catalog separates exploration, downloads and optional release history`, () => {
   const html=readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url),'utf8');
   assert.equal((html.match(/class="app-card-main"/g)||[]).length,14);
-  assert.equal((html.match(/class="app-card-preview"/g)||[]).length,11);
-  assert.equal((html.match(/class="app-card-stores"/g)||[]).length,11);
+  assert.equal((html.match(/class="app-card-preview"/g)||[]).length,12);
+  assert.equal((html.match(/class="app-card-stores"/g)||[]).length,12);
   assert.match(html, /<details class="fleet-disclosure">/);
   assert.doesNotMatch(html, /<details class="fleet-disclosure" open/);
   const catalog=html.match(/<section class="apps-home"[\s\S]*?<\/section>/)[0];
@@ -33,11 +33,17 @@ for (const lang of ['ko','ja','en']) test(`${lang}: built catalog separates expl
 test('account union is represented and unreleased apps cannot advertise downloads', async () => {
   const {appList} = await import('../src/data/apps.ts');
   assert.equal(appList.length,14);
-  assert.equal(appList.filter(a=>a.status==='live').length,11);
-  for(const slug of ['kkachi','pipi-sky','pipi-legion']) {
+  // 2026-11-02 public listings: Kkachi is live on Google Play; Sudoku is live on both stores.
+  const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url))).apps;
+  assert.equal(appList.filter(a=>a.status==='live').length,12);
+  for(const slug of ['pipi-sky','pipi-legion']) {
     const app=appList.find(a=>a.slug===slug);assert.equal(app.status,'soon');assert.deepEqual(app.stores,{});
+    const seen=current.find(a=>a.slug===slug);assert.equal(seen.ios,undefined);assert.deepEqual(Object.values(seen.android).map(v=>v.publicStatus),[404,404,404]);
   }
-  for(const slug of ['pipi-tide','pipi-sudoku']) {
+  const sudoku=appList.find(a=>a.slug==='pipi-sudoku');
+  assert.equal(sudoku.stores.ios,`https://apps.apple.com/app/id${current.find(a=>a.slug==='pipi-sudoku').ios.en.trackViewUrl.match(/id(\d+)/)[1]}`);
+  assert.match(readFileSync(new URL('../dist/en/apps/pipi-sudoku/index.html',import.meta.url),'utf8'),/"operatingSystem":"iOS, Android"/);
+  for(const slug of ['pipi-tide','kkachi']) {
     const app=appList.find(a=>a.slug===slug);assert.equal(app.status,'live');assert.ok(app.stores.android);assert.equal(app.stores.ios,undefined);
     const html=readFileSync(new URL(`../dist/en/apps/${slug}/index.html`,import.meta.url),'utf8');
     assert.match(html,/"operatingSystem":"Android"/);

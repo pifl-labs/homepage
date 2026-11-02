@@ -4,16 +4,18 @@ import { test } from 'node:test';
 
 const source = readFileSync(new URL('../src/data/apps.ts', import.meta.url), 'utf8');
 const receipt = JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261014.json', import.meta.url), 'utf8'));
-const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261023.json', import.meta.url), 'utf8'));
+const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps;
 const variables = { 'com.pifl.pipi.dday': 'dday', 'com.pifl.pipi.draw': 'draw', 'com.pifl.pipi.bridge': 'bridge' };
+const slugs = { 'com.pifl.pipi.dday': 'pipi-dday', 'com.pifl.pipi.draw': 'pipi-draw', 'com.pifl.pipi.bridge': 'pipi-bridge' };
+const playDay = (text) => new Date(`${text} UTC`).toISOString().slice(0, 10);
 const block = (v) => source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 
 for (const [bundle, v] of Object.entries(variables)) {
-  test(`${bundle}: iOS version, UTC release day and observation day come from the 2026-10-14 receipt`, () => {
+  test(`${bundle}: current iOS version and UTC release day follow the 2026-11-02 receipt; 2026-10-14 release bounds stay intact`, () => {
     const r = receipt.ios[bundle];
     assert.ok(block(v), `${v} block exists`);
-    const latest = current.find(a=>a.android.en.url.includes(bundle)).ios.ko;
-    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-10-23' }`));
+    const latest = current.find(a => a.slug === slugs[bundle]).ios.ko;
+    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-11-02' }`));
     for (const bound of r.releaseBoundsUTC) assert.ok(bound.startsWith(r.updatedUTC), `${bundle}: every release bound stays on ${r.updatedUTC} UTC`);
   });
 }
@@ -53,9 +55,14 @@ test('Until That Day: site names and both store names match the renamed public l
   assert.doesNotMatch(b, /featuresTitle: '[^']*PiPi D-Day/);
 });
 
-test('Observations that did not show an Android version do not fabricate one', () => {
+test('Android versions appear only when a later observation shows them', () => {
+  // The 2026-10-14 receipt could not read an Android version; that history stays as recorded.
   assert.equal(receipt.android['com.pifl.pipi.dday'].version, 'UNVERIFIED');
-  for (const v of Object.values(variables)) assert.doesNotMatch(block(v), /android: \{ version:/);
+  for (const [bundle, v] of Object.entries(variables)) {
+    const a = current.find(x => x.slug === slugs[bundle]);
+    assert.deepEqual(a.playProduction.map(r => r.name), [a.android.en.version], `${bundle}: listing matches production`);
+    assert.ok(block(v).includes(`android: { version: '${a.android.en.version}', updated: '${playDay(a.android.en.updatedDisplay)}', checkedAt: '2026-11-02' }`));
+  }
 });
 
 test('Footer links every locale to the matching PiPi Worlds home in a new tab', () => {

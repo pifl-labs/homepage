@@ -54,6 +54,8 @@ export interface AppMeta {
   nameByLang?: Partial<Record<Lang, string>>;
   /** 제품명이 바뀌어도 기존 이름으로 찾을 수 있게 병기한다. */
   previousName?: string;
+  /** 이전 이름이 언어마다 달랐던 앱만 지정한다(미지정 언어는 previousName). */
+  previousNameByLang?: Partial<Record<Lang, string>>;
   /** 스토어별 공개 표시명 스냅샷. 변경 출처는 docs/release의 날짜별 공개 근거, 이전 관측일은 release.checkedAt. */
   storeNames?: Record<'ios' | 'android', Record<Lang, string>>;
   status: 'live' | 'soon';
@@ -103,11 +105,12 @@ const focus: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-focus-pirate-pomodoro/id6762258878',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus',
   },
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    // 2026-10-23: KR returned 1.2.0; JP/US returned 1.2.1. Keep the conservative KR snapshot; see the audit receipt.
-    ios: { version: '1.2.0', updated: '2026-10-19', checkedAt: '2026-10-23' },
+    ios: { version: '1.2.3', updated: '2026-10-24', checkedAt: '2026-11-02' },
+    android: { version: '1.2.3', updated: '2026-10-24', checkedAt: '2026-11-02' },
     // First release date unverified: May 15 was a review receipt, not launch.
-    checkedAt: '2026-09-30',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'sail',
   content: {
@@ -199,11 +202,12 @@ const hello: AppMeta = {
     ios: 'https://apps.apple.com/app/id6777299814',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.hello',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.0.10', updated: '2026-10-18', checkedAt: '2026-10-23' },
+    ios: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-02' },
+    android: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-02' },
     since: '2026-06-24',
-    checkedAt: '2026-09-30',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'home',
   content: {
@@ -256,7 +260,7 @@ const hello: AppMeta = {
       lede: 'A first Japanese for kids aged 6–8. From hiragana and katakana to basic words and greetings, learned by recall with letter cards and listening games. No ads, no account, fully on device.',
       metaDesc: 'A first Japanese for kids 6–8. Hiragana, katakana, first words and greetings through play. No ads, no data collected, 100% on-device with a parental gate.',
       shotsTitle: 'From letters to a first hello',
-      featuresTitle: 'Why PiPi Hello',
+      featuresTitle: 'Why KanaSprout',
       ctaTitle: 'Start their first Japanese today',
       ctaSub: 'Free to download. Offers in-app purchases.',
       shots: [
@@ -292,11 +296,13 @@ const words: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-words-jlpt-topik-vocab/id6770267735',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
+  // iOS 1.1.0 was still waiting for review, so the public versions differ by platform.
   release: {
-    ios: { version: '1.0.12', updated: '2026-10-05', checkedAt: '2026-10-23' },
+    ios: { version: '1.0.14', updated: '2026-10-23', checkedAt: '2026-11-02' },
+    android: { version: '1.1.0', updated: '2026-11-02', checkedAt: '2026-11-02' },
     since: '2026-05-29',
-    checkedAt: '2026-09-30',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'home',
   content: {
@@ -305,7 +311,7 @@ const words: AppMeta = {
       lede: 'JLPT N5~N1·TOPIK 1~6급 어휘를 카드와 퀴즈로 복습하세요. iOS 손글씨에서는 뜻을 보고 직접 쓴 뒤 정답과 비교합니다. 자동 채점은 하지 않습니다.',
       metaDesc: 'JLPT·TOPIK 한일 단어장, 카드·퀴즈·SM-2 복습 일정. iOS 손글씨는 학습한 단어를 직접 쓰고 자체 비교합니다. 자동 채점 없음. 무료 설치·앱 내 구매.',
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
-      featuresTitle: '왜 PiPi Words 인가',
+      featuresTitle: '왜 단어루틴인가',
       ctaTitle: '오늘 단어 학습을 시작하세요',
       ctaSub: '무료 설치 · 앱 내 구매가 있습니다.',
       shots: [
@@ -327,7 +333,7 @@ const words: AppMeta = {
       lede: 'JLPT N5〜N1・TOPIK 1〜6級の単語をカードとクイズで復習。iOSの手書きは意味を見て書き、正解と自分で比べます。自動採点はありません。',
       metaDesc: 'JLPT・TOPIK韓日単語帳、カード・クイズとSM-2復習予定。iOSでは学習した単語を手書きで思い出し、自分で比較。自動採点なし。無料ダウンロード・アプリ内課金あり。',
       shotsTitle: '航海のように積み上がる語彙学習',
-      featuresTitle: 'PiPi Words を選ぶ理由',
+      featuresTitle: 'ことば習慣を選ぶ理由',
       ctaTitle: '今日から単語学習を始めよう',
       ctaSub: '無料でダウンロードできます。アプリ内課金があります。',
       shots: [
@@ -386,17 +392,19 @@ const dday: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-d-day/id6770268950',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dday',
   },
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.1.5', updated: '2026-10-13', checkedAt: '2026-10-23' },
+    ios: { version: '2.0.1', updated: '2026-10-24', checkedAt: '2026-11-02' },
+    android: { version: '2.0.1', updated: '2026-10-24', checkedAt: '2026-11-02' },
     since: '2026-06-02',
-    checkedAt: '2026-09-30',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '모든 순간이\n목적지로 향하는 항해',
-      lede: '수능·결혼기념일·전역·생일까지, 소중한 날을 해적 항해처럼 카운트다운. D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀌고, 홈 화면 위젯으로 매일 확인합니다.',
-      metaDesc: '앵무새 PiPi가 D-100부터 당일까지 6단계로 반응하는 디데이 위젯. 수능·결혼기념일·생일 무엇이든 계정 없이 홈 화면에서. 무료 설치 · 앱 내 구매.',
+      lede: '아이의 백일, 커플의 주년, 월급날, 시험일, 가족 행사까지 — 기다리는 날을 세어 주는 디데이·기념일 카운트다운. 날짜마다 내 사진을 넣고, 음력 날짜도 그대로 세며, 홈 화면 위젯으로 매일 확인합니다.',
+      metaDesc: '아이 백일·커플 주년·월급날·시험일을 세는 디데이·기념일 위젯. 날짜마다 사진, 음력 날짜, 원하는 날·시각 알림. 계정 없이 날짜 5개까지 무료, Pro는 한 번 결제.',
       shotsTitle: '남은 날이 항해가 되는 순간',
       featuresTitle: '왜 그날까지인가',
       ctaTitle: '지금 항해를 시작하세요',
@@ -409,16 +417,16 @@ const dday: AppMeta = {
         { file: 'onboarding',  label: 'PiPi와 함께 출항',      desc: 'PiPi가 당신의 모든 항해를 함께 카운트다운합니다.' },
       ],
       features: [
-        { icon: 'fa-face-smile',       title: 'PiPi의 6단계 리액션', desc: 'D-100부터 D-Day까지 PiPi의 표정이 6단계로 바뀝니다.' },
-        { icon: 'fa-table-cells-large', title: '홈 화면 위젯',        desc: 'iOS·Android 위젯과 스킨 6종으로 남은 날을 항상 곁에.' },
-        { icon: 'fa-bell',             title: '마일스톤 알림',       desc: 'D-100·30·7·1·D-Day마다 PiPi의 해적 메시지로 알립니다.' },
-        { icon: 'fa-wifi',             title: '기록은 전부 기기 안에', desc: '서버도 계정도 없이, 기록은 기기에만 저장됩니다(통신은 광고 표시에만 씁니다).' },
+        { icon: 'fa-calendar-check',   title: '아이·커플·월급날까지', desc: '백일과 생일, 커플 주년, 월급날, 시험일, 가족 행사를 알맞게 계산합니다. 음력 날짜도 매년 반복할 수 있어요.' },
+        { icon: 'fa-table-cells-large', title: '사진과 홈 화면 위젯', desc: '날짜마다 내 사진을 넣고, 사진 크게·날짜 크게·여러 일정·진행 막대·달력 중 위젯마다 모양을 고릅니다.' },
+        { icon: 'fa-bell',             title: '원하는 날 알림',     desc: 'D-100·30·7·1·D-Day와 직접 정한 날 중에서, 원하는 시각에 알려 줍니다.' },
+        { icon: 'fa-wifi',             title: '기록은 기기 안에',   desc: '계정 없이 쓰고, 날짜와 사진은 기기에 저장됩니다. 광고와 구매에는 인터넷을 사용할 수 있어요.' },
       ],
     },
     ja: {
       tagline: 'すべての瞬間は、\n目的地へ向かう航海',
-      lede: '受験・結婚記念日・誕生日まで、大切な日を海賊の航海としてカウントダウン。D-100からD-DayまでPiPiの表情が6段階で変化し、ホーム画面ウィジェットで毎日確認できます。',
-      metaDesc: 'オウムのPiPiがD-100から当日まで6段階で反応するカウントダウンウィジェット。受験・記念日・誕生日をアカウントなしでホーム画面に。無料ダウンロード・アプリ内課金あり。',
+      lede: '子どもの記念日、カップルの記念日、給料日、試験日、家族の行事まで — 待ち遠しい日を数えるカウントダウン。日付ごとに写真を入れ、旧暦の日付もそのまま数えて、ホーム画面ウィジェットで毎日確認できます。',
+      metaDesc: '子どもやカップルの記念日、給料日、試験日を数えるカウントダウンウィジェット。日付ごとの写真、旧暦、好きな日時の通知。アカウント不要、日付5件まで無料、Proは買い切り。',
       shotsTitle: '残り日数が航海になる瞬間',
       featuresTitle: '「その日まで」を選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
@@ -431,16 +439,16 @@ const dday: AppMeta = {
         { file: 'onboarding',  label: 'PiPiと一緒に出航',        desc: 'PiPiがあなたのすべての航海を一緒にカウントダウン。' },
       ],
       features: [
-        { icon: 'fa-face-smile',       title: 'PiPiの6段階リアクション', desc: 'D-100からD-DayまでPiPiの表情が6段階で変化します。' },
-        { icon: 'fa-table-cells-large', title: 'ホーム画面ウィジェット',  desc: 'iOS·Androidウィジェットとスキン6種で残り日数をいつも。' },
-        { icon: 'fa-bell',             title: 'マイルストーン通知',     desc: 'D-100·30·7·1·D-Dayごとに PiPiの海賊メッセージでお知らせ。' },
-        { icon: 'fa-wifi',             title: '記録はすべて端末内',     desc: 'サーバーもアカウントも不要、記録は端末にのみ保存されます(通信は広告表示にのみ使用)。' },
+        { icon: 'fa-calendar-check',   title: '子ども・カップル・給料日も', desc: '子どもの記念日と誕生日、カップルの記念日、給料日、試験日、家族の行事を計算。旧暦の日付も毎年くり返せます。' },
+        { icon: 'fa-table-cells-large', title: '写真とホーム画面ウィジェット', desc: '日付ごとに写真を入れ、写真・日数・予定一覧・進み具合・カレンダーからウィジェットごとに形を選べます。' },
+        { icon: 'fa-bell',             title: '好きな日に通知',     desc: 'D-100·30·7·1·D-Dayと自分で決めた日から、好きな時刻にお知らせ。' },
+        { icon: 'fa-wifi',             title: '記録は端末内に',     desc: 'アカウント不要。日付と写真は端末に保存されます。広告と購入にはインターネットを使う場合があります。' },
       ],
     },
     en: {
       tagline: 'Count down to your next big day.',
-      lede: "Count down to weddings, exams, birthdays and more as a pirate voyage. PiPi's expression shifts through 6 stages from D-100 to D-Day, right on your home screen widget.",
-      metaDesc: 'A countdown widget where parrot PiPi reacts in 6 stages from D-100 to D-Day. Weddings, exams, birthdays — no account, records stay on device. Free to download. Offers in-app purchases.',
+      lede: "Count down to baby milestones, couple anniversaries, paydays, exams and family events. Add a photo to each date, keep lunar dates, and check them every day on home-screen widgets.",
+      metaDesc: 'A countdown and anniversary widget for baby milestones, couples, paydays and exams. Photos for each date, lunar dates and alerts on the days and times you choose. No account; 5 dates free, Pro is a one-time purchase.',
       shotsTitle: 'The moment days become a voyage',
       featuresTitle: 'Why Until That Day',
       ctaTitle: 'Start your voyage now',
@@ -453,10 +461,10 @@ const dday: AppMeta = {
         { file: 'onboarding',  label: 'Set sail with PiPi',       desc: 'PiPi counts down every one of your voyages with you.' },
       ],
       features: [
-        { icon: 'fa-face-smile',       title: "PiPi's 6 reactions",  desc: "PiPi's expression shifts through 6 stages from D-100 to D-Day." },
-        { icon: 'fa-table-cells-large', title: 'Home screen widget', desc: 'iOS & Android widgets with 6 skins keep the count always near.' },
-        { icon: 'fa-bell',             title: 'Milestone alerts',    desc: 'Pirate messages from PiPi at D-100, 30, 7, 1 and D-Day.' },
-        { icon: 'fa-wifi',             title: 'Stays on your device', desc: 'No server, no account — records stay on your device (the network is only used to show ads).' },
+        { icon: 'fa-calendar-check',   title: 'Babies, couples, paydays', desc: 'Counts baby milestones and birthdays, couple anniversaries, paydays, exams and family events. Lunar dates can repeat every year.' },
+        { icon: 'fa-table-cells-large', title: 'Photos and widgets', desc: 'Add a photo to each date and pick a layout per widget: photo, big number, several dates, progress bar or calendar.' },
+        { icon: 'fa-bell',             title: 'Alerts you choose',   desc: 'Pick from D-100, 30, 7, 1 and D-Day or add your own, at the time you choose.' },
+        { icon: 'fa-wifi',             title: 'Stays on your device', desc: 'No account needed. Dates and photos stay on your device; ads and purchases may use the internet.' },
       ],
     },
   },
@@ -479,19 +487,19 @@ const log: AppMeta = {
     ios: 'https://apps.apple.com/app/pipi-log/id6770272665',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.log',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.0.12', updated: '2026-10-19', checkedAt: '2026-10-23' },
-    android: { version: '1.0.11', updated: '2026-10-04', checkedAt: '2026-10-08' },
+    ios: { version: '1.0.13', updated: '2026-10-23', checkedAt: '2026-11-02' },
+    android: { version: '1.0.13', updated: '2026-10-23', checkedAt: '2026-11-02' },
     since: '2026-06-09',
-    checkedAt: '2026-09-27',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'home',
   content: {
     ko: {
       tagline: '하루의 마음을\n바다 날씨로 남기다',
       lede: '매일의 기분을 9단계 바다 날씨로 기록하면 PiPi가 그 마음에 반응합니다. 선장의 질문으로 하루를 돌아보고, 한 달의 항해를 지도 한 장으로. 계정 없이 시작하며 일지와 사진은 기기에 저장됩니다.',
-      metaDesc: '하루의 기분을 아홉 가지 바다 날씨로 남기는 항해일지형 감정 일기. 추이 차트와 한 달 항해 지도, 프리미엄 생체인증 잠금. iOS · Android에서 무료로 시작.',
+      metaDesc: '하루의 기분을 아홉 가지 바다 날씨로 남기는 항해일지형 감정 일기. 캘린더 회고와 월간 기분 지도, 잠금·백업까지 모든 기록 기능이 무료. 광고·추적 없음.',
       shotsTitle: '마음을 적는 항해일지',
       featuresTitle: '왜 기분 한 칸인가',
       ctaTitle: '지금 항해를 시작하세요',
@@ -507,13 +515,13 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9단계 바다 날씨',   desc: '무지개 바다부터 태풍까지, 기분을 날씨로 기록.' },
         { icon: 'fa-feather',   title: 'PiPi가 마음에 반응', desc: '기록한 기분에 PiPi가 항해 메시지로 답합니다.' },
         { icon: 'fa-pen-nib',   title: '선장의 질문',       desc: '매일 다른 질문으로 하루를 가볍게 돌아봐요.' },
-        { icon: 'fa-lock',      title: '잠금 + 기기 저장',      desc: '프리미엄에서는 생체인증으로 일지를 잠글 수 있습니다. 일지·사진은 기기에 저장되며, 광고와 인앱 결제에는 통신을 사용합니다.' },
+        { icon: 'fa-lock',      title: '잠금 + 기기 저장',      desc: '잠금과 백업을 포함한 모든 기록 기능이 무료예요. 일지와 사진은 기기에 저장되고 개발자 서버로 보내지 않아요. 스토어 결제에는 네트워크를 사용합니다.' },
       ],
     },
     ja: {
       tagline: '今日の心を、\n海の天気で残す',
       lede: '毎日の気分を9段階の海の天気で記録すると、PiPiがその心に反応します。船長の質問で一日を振り返り、ひと月の航海を地図に。登録不要。日記と写真は端末に保存。',
-      metaDesc: '一日の気分を九つの海の天気で残す航海日誌型の気分日記。推移チャートとひと月の航海マップ、プレミアムの生体認証ロック。iOS・Androidで無料から。',
+      metaDesc: '一日の気分を九つの海の天気で残す航海日誌型の気分日記。カレンダーでの振り返りと月の気分マップ、ロック・バックアップまで記録機能はすべて無料。広告・トラッキングなし。',
       shotsTitle: '心を綴る航海日誌',
       featuresTitle: '気分のひとこまを選ぶ理由',
       ctaTitle: '今すぐ航海を始めよう',
@@ -529,17 +537,17 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9段階の海の天気',   desc: '虹の海から台風まで、気分を天気で記録。' },
         { icon: 'fa-feather',   title: 'PiPiが心に反応',    desc: '記録した気分にPiPiが航海メッセージで応える。' },
         { icon: 'fa-pen-nib',   title: '船長の質問',        desc: '毎日違う質問で一日を軽く振り返る。' },
-        { icon: 'fa-lock',      title: 'ロック + 端末内保存',      desc: 'プレミアム購入後は生体認証で日記をロック。日記・写真は端末内に保存し、広告とアプリ内購入には通信を使用します。' },
+        { icon: 'fa-lock',      title: 'ロック + 端末内保存',      desc: 'ロックとバックアップを含む記録機能はすべて無料。日記と写真は端末に保存し、開発者のサーバーには送りません。ストア決済にはネットワークを使います。' },
       ],
     },
     en: {
       tagline: 'Log your heart\nas sea weather.',
       lede: 'Pick one of nine sea-weather moods; PiPi responds. Add a note, photo or tag if you want more context, then revisit entries in the calendar. No account needed. Entries and photos stay on your device.',
-      metaDesc: 'Choose a sea-weather mood, add optional notes, photos or tags, and revisit entries in the calendar. Free download with ads and optional one-time purchase.',
+      metaDesc: 'Choose a sea-weather mood, add optional notes, photos or tags, and revisit entries in the calendar. No ads or tracking; every journaling feature is free.',
       shotsTitle: 'A logbook for your heart',
       featuresTitle: 'Why Mood Tile',
       ctaTitle: 'Start your voyage now',
-      ctaSub: 'Free download on iOS & Android. Ads + optional one-time purchase; no subscription.',
+      ctaSub: 'Free on iOS & Android. No ads; optional one-time Lifetime Supporter purchase, no subscription.',
       shots: [
         { file: 'home',        label: "Log today's sea weather",   desc: 'Pick your mood from 9 sea-weathers and write the day with PiPi.' },
         { file: 'calendar',    label: 'A month as a weather calendar', desc: "Each day's weather lands on the calendar at a glance." },
@@ -551,7 +559,7 @@ const log: AppMeta = {
         { icon: 'fa-cloud-sun', title: '9 sea-weathers',    desc: 'From rainbow seas to typhoons — log your mood as weather.' },
         { icon: 'fa-tags',      title: 'Optional context',   desc: 'Keep a mood-only entry, or add a note, photo or tag. Revisit past entries in the calendar.' },
         { icon: 'fa-pen-nib',   title: "The captain's prompt", desc: 'A fresh question each day to reflect, lightly.' },
-        { icon: 'fa-lock',      title: 'Locked & on-device',    desc: 'Premium adds biometric lock for entries. Journal entries and photos stay on your device; ads and in-app purchases use network services.' },
+        { icon: 'fa-lock',      title: 'Locked & on-device',    desc: 'Lock, backup and every other journaling feature are free. Entries and photos stay on your device and are not sent to our servers; store payments use the network.' },
       ],
     },
   },
@@ -567,7 +575,11 @@ const dialogos: AppMeta = {
   status: 'live',
   category: { ko: '라이프스타일 · 철학', ja: 'ライフスタイル · 哲学', en: 'Lifestyle · Philosophy' },
   stores: { ios: 'https://apps.apple.com/app/id6780508628', android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.thus' },
-  release: { ios: { version: '1.0.3', updated: '2026-10-22', checkedAt: '2026-10-23' }, checkedAt: '2026-10-23' },
+  release: {
+    ios: { version: '1.0.3', updated: '2026-10-22', checkedAt: '2026-11-02' },
+    android: { version: '1.0.3', updated: '2026-10-22', checkedAt: '2026-11-02' },
+    checkedAt: '2026-11-02',
+  },
   heroShot: 'home',
   content: {
     ko: {
@@ -646,7 +658,7 @@ const draw: AppMeta = {
   previousName: 'PiPi Draw',
   storeNames: {
     ios: { ko: '밑그림: 사진으로 만드는 색칠공부', ja: '下絵づくり：写真をぬりえに変換', en: 'Photo Outlines: Coloring Book' },
-    android: { ko: '밑그림: 사진으로 만드는 색칠공부', ja: '下絵づくり：写真がぬりえに！お絵かきも楽しい', en: 'Photo Outlines: Coloring Book' },
+    android: { ko: '밑그림: AI 색칠도안 생성기', ja: '下絵づくり：AIぬりえジェネレーター', en: 'Photo Outlines: Coloring Book' },
   },
   status: 'live',
   category: { ko: '크리에이티브 · 색칠', ja: 'クリエイティブ · ぬりえ', en: 'Creative · Coloring' },
@@ -654,11 +666,13 @@ const draw: AppMeta = {
     ios: 'https://apps.apple.com/app/id6779071131',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.draw',
   },
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    // KR/JP/US App Store 공개 확인 2026-10-23. updated는 공식 출시 시각의 UTC 날짜.
-    ios: { version: '1.2.1', updated: '2026-10-21', checkedAt: '2026-10-23' },
+    // updated는 iOS 공식 출시 시각의 UTC 날짜, Android는 Google Play 표시 날짜.
+    ios: { version: '1.2.3', updated: '2026-10-30', checkedAt: '2026-11-02' },
+    android: { version: '1.2.3', updated: '2026-10-31', checkedAt: '2026-11-02' },
     // July 14 was version 1.0 submission, not a verified first release.
-    checkedAt: '2026-09-30',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'ai_result',
   content: {
@@ -667,7 +681,7 @@ const draw: AppMeta = {
       lede: '사진을 AI 색칠 도안으로 바꾸고 내 손으로 색을 채워 보세요. 결과는 사진과 설정에 따라 달라집니다. 주제가 뚜렷하고 배경이 단순한 사진부터 시작하세요.',
       metaDesc: '내 사진을 AI 색칠 도안으로. 하루 2회 무료 변환, 10종 브러시와 채우기로 색칠하세요. 가입 없이 시작하며 AI 변환에는 인터넷이 필요합니다. iOS · Android.',
       shotsTitle: '사진 한 장에서 작품까지',
-      featuresTitle: '왜 PiPi Draw 인가',
+      featuresTitle: '왜 밑그림인가',
       ctaTitle: '지금 색칠을 시작하세요',
       ctaSub: '사진 한 장으로 시작하세요. AI 변환은 하루 2회 무료, 가입 없이 이용할 수 있어요.',
       downloadNote: 'AI 변환은 하루 2회 무료 · 인터넷 연결 필요. 앱 내 광고와 선택형 변환권 구매가 있으며, 색칠 화면 안에는 광고가 없습니다.',
@@ -678,7 +692,7 @@ const draw: AppMeta = {
         { file: 'home',      label: '작품 보관함',           desc: '그린 작품이 홈에 차곡차곡 — 이어 그리기도 한 번에.' },
       ],
       features: [
-        { icon: 'fa-wand-magic-sparkles', title: '사진에서 나만의 도안으로', desc: '원본 느낌·동화풍·꼬마 캐릭터·웹툰풍 중 원하는 스타일을 고르세요. 라인 두께·디테일·대비·배경도 조절할 수 있어요.' },
+        { icon: 'fa-wand-magic-sparkles', title: '사진에서 나만의 도안으로', desc: '원본 느낌·동화풍·꼬마 캐릭터·만화풍 중 원하는 스타일을 고르세요. 라인 두께·디테일·대비·배경도 조절할 수 있어요.' },
         { icon: 'fa-paintbrush',          title: '10종 브러시와 채우기', desc: '연필·마커·크레용·수채화 등으로 직접 칠하거나, 채우기로 닫힌 영역에 색을 넣어요.' },
         { icon: 'fa-ban',                 title: '드로잉 중 광고 없음', desc: '색칠에 빠져 있는 동안에는 광고를 띄우지 않습니다.' },
         { icon: 'fa-image',               title: 'AI 없이 사진에 바로 색칠', desc: '사진을 원래 색 그대로 불러와 그 위에 그릴 수도 있어요. AI 변환 횟수를 쓰지 않는 무료 기능입니다.' },
@@ -689,7 +703,7 @@ const draw: AppMeta = {
       lede: '写真をAIでぬりえ図案にして、自分の手で色を塗りましょう。仕上がりは写真や設定によって異なります。主役がはっきりし、背景がシンプルな写真で始めましょう。',
       metaDesc: '自分の写真をAIでぬりえ図案に。1日2回の無料変換、10種のブラシと塗りつぶし。会員登録不要、AI変換にはネット接続が必要です。iOS・Android。',
       shotsTitle: '写真一枚から作品まで',
-      featuresTitle: 'PiPi Draw を選ぶ理由',
+      featuresTitle: '下絵づくりを選ぶ理由',
       ctaTitle: '今すぐ塗りはじめよう',
       ctaSub: '写真1枚で塗り絵に。AI変換は1日2回無料。会員登録不要。',
       downloadNote: 'AI変換は1日2回無料・インターネット接続が必要です。広告と任意の変換チケット購入があります。色塗り画面内には広告を表示しません。',
@@ -700,7 +714,7 @@ const draw: AppMeta = {
         { file: 'home',      label: '作品コレクション',       desc: '描いた作品がホームに整列 — 続きを描くのもワンタップ。' },
       ],
       features: [
-        { icon: 'fa-wand-magic-sparkles', title: '自分の写真をぬりえに', desc: '写真らしく・絵本風・ちびキャラ・ウェブトゥーン風から選べます。線の太さ・細かさ・コントラスト・背景も調整できます。' },
+        { icon: 'fa-wand-magic-sparkles', title: '自分の写真をぬりえに', desc: '写真らしく・絵本風・ちびキャラ・マンガ風から選べます。線の太さ・細かさ・コントラスト・背景も調整できます。' },
         { icon: 'fa-paintbrush',          title: '10種のブラシと塗りつぶし', desc: '鉛筆・マーカー・クレヨン・水彩などで描いたり、塗りつぶしで閉じた領域に色を入れたりできます。' },
         { icon: 'fa-ban',                 title: 'お絵かき中は広告なし', desc: '塗りに集中している間は広告を表示しません。' },
         { icon: 'fa-image',               title: 'AIなしで写真に直接お絵かき', desc: '写真を元の色のまま読み込み、その上に描くこともできます。AI変換の回数を使わない無料機能です。' },
@@ -711,7 +725,7 @@ const draw: AppMeta = {
       lede: 'Use AI to turn a photo into a coloring outline, then color it by hand. Results vary with the photo; start with one clear subject and a simple background.',
       metaDesc: 'Turn your photos into coloring pages. Get 2 free AI conversions daily, 10 brushes and a fill tool. No sign-up; AI conversion needs internet. iOS & Android.',
       shotsTitle: 'From one photo to artwork',
-      featuresTitle: 'Why PiPi Draw',
+      featuresTitle: 'Why Photo Outlines',
       ctaTitle: 'Start coloring today',
       ctaSub: 'Start with a favorite photo. Get 2 free AI conversions a day, with no sign-up.',
       downloadNote: '2 free AI conversions a day; internet required. Contains ads and optional conversion-ticket purchases. No ads inside the coloring screen.',
@@ -722,7 +736,7 @@ const draw: AppMeta = {
         { file: 'home',      label: 'Your gallery',                desc: 'Every piece lined up on the home screen — pick up where you left off.' },
       ],
       features: [
-        { icon: 'fa-wand-magic-sparkles', title: 'Your photo, your coloring page', desc: 'Choose True to Photo, Storybook, Chibi or Webtoon, then adjust line thickness, detail, contrast and background.' },
+        { icon: 'fa-wand-magic-sparkles', title: 'Your photo, your coloring page', desc: 'Choose True to Photo, Storybook, Chibi or Digital Comic, then adjust line thickness, detail, contrast and background.' },
         { icon: 'fa-paintbrush',          title: '10 brushes and a fill tool', desc: 'Draw with pencil, marker, crayon, watercolor and more, or tap a closed area to fill it with color.' },
         { icon: 'fa-ban',                 title: 'No ads while drawing',  desc: 'We never interrupt you with an ad while you are coloring.' },
         { icon: 'fa-image',               title: 'Draw on photos without AI', desc: 'Import a photo in its original colors and draw over it for free. This uses no AI conversion credits.' },
@@ -751,12 +765,12 @@ const wordVoyage: AppMeta = {
     ios: 'https://apps.apple.com/app/id6788949612',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage',
   },
-  // iOS: Apple public KR/JP/US lookup, 2026-10-23 UTC; Android retains its separate dated snapshot.
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.1.0', updated: '2026-10-21', checkedAt: '2026-10-23' },
-    android: { version: '1.0.9', updated: '2026-10-05', checkedAt: '2026-10-07' },
+    ios: { version: '1.3.1', updated: '2026-11-01', checkedAt: '2026-11-02' },
+    android: { version: '1.3.1', updated: '2026-11-01', checkedAt: '2026-11-02' },
     since: '2026-07-13',
-    checkedAt: '2026-09-24',
+    checkedAt: '2026-11-02',
   },
   heroShot: 'game',
   content: {
@@ -841,10 +855,12 @@ const bridge: AppMeta = {
     ios: 'https://apps.apple.com/app/id6801205183',
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge',
   },
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.0.2', updated: '2026-10-21', checkedAt: '2026-10-23' },
+    ios: { version: '1.0.2', updated: '2026-10-21', checkedAt: '2026-11-02' },
+    android: { version: '1.0.2', updated: '2026-10-22', checkedAt: '2026-11-02' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
-    checkedAt: '2026-09-21',
+    checkedAt: '2026-11-02',
   },
   content: {
     ko: {
@@ -857,7 +873,7 @@ const bridge: AppMeta = {
       ctaSub: '무료로 시작하세요.',
       shots: [],
       features: [
-        { icon: 'fa-clock',        title: '하루 10분 루틴',      desc: '활동 10개, 다섯 개마다 놀이 쉼, 그리고 간격 복습 — 아이 호흡에 맞춰 진행합니다.' },
+        { icon: 'fa-clock',        title: '하루 10분 루틴',      desc: '활동 10개, 다섯 번째 활동 뒤 짧은 쉼, 그리고 간격 복습 — 아이 호흡에 맞춰 진행합니다.' },
         { icon: 'fa-language',     title: '부모 안내 5개 언어',   desc: '한국어·영어·일본어·중국어 간체·베트남어로 부모 화면을 제공합니다.' },
         { icon: 'fa-volume-high',  title: '한국어 문장 음성',     desc: '300개 문장 음성을 앱에 담아, 인터넷 없이도 발음을 들려줍니다.' },
         { icon: 'fa-shield-heart', title: '광고·계정·결제 없음',  desc: '아이 화면에 광고가 없고, 진도는 기기 안에만 저장됩니다.' },
@@ -873,7 +889,7 @@ const bridge: AppMeta = {
       ctaSub: '無料でダウンロード。',
       shots: [],
       features: [
-        { icon: 'fa-clock',        title: '1日10分の習慣',        desc: 'アクティビティ10個、5個ごとに遊びの休憩、そして間隔をあけた復習 — 子どもの呼吸に合わせて進みます。' },
+        { icon: 'fa-clock',        title: '1日10分の習慣',        desc: 'アクティビティ10個、5個目のあとに短い休憩、そして間隔をあけた復習 — 子どもの呼吸に合わせて進みます。' },
         { icon: 'fa-language',     title: '保護者案内は5言語',     desc: '韓国語・英語・日本語・簡体中国語・ベトナム語で保護者画面を用意しています。' },
         { icon: 'fa-volume-high',  title: '韓国語の文の音声',      desc: '300文の音声をアプリに収録。ネットがなくても発音を聞けます。' },
         { icon: 'fa-shield-heart', title: '広告・アカウント・課金なし', desc: '子どもの画面に広告はなく、進捗は端末内にのみ保存されます。' },
@@ -889,7 +905,7 @@ const bridge: AppMeta = {
       ctaSub: 'Free to download.',
       shots: [],
       features: [
-        { icon: 'fa-clock',        title: 'Ten minutes a day',    desc: 'Ten activities, a play break every five, and spaced review — paced to a small child.' },
+        { icon: 'fa-clock',        title: 'Ten minutes a day',    desc: 'Ten activities, a short break after the fifth, and spaced review — paced to a small child.' },
         { icon: 'fa-language',     title: 'Parent guide in 5 languages', desc: 'Korean, English, Japanese, Simplified Chinese and Vietnamese.' },
         { icon: 'fa-volume-high',  title: 'Korean sentence audio', desc: '300 sentence clips ship inside the app, so pronunciation works offline.' },
         { icon: 'fa-shield-heart', title: 'No ads, account or purchases', desc: 'Nothing is sold to the child, and progress stays on the device.' },
@@ -963,11 +979,14 @@ const legion: AppMeta = {
 const tide: AppMeta = {
   slug: 'pipi-tide',
   schemaCategory: 'UtilitiesApplication',
-  "name": "Tide Friend: Korea Tide Times",
+  "name": "Tidewalk: Korea Tide Timer",
   "nameByLang": {
-    "ko": "물때친구 - 만조 간조 물때표 위젯",
-    "ja": "Tide Friend: Korea Tide Times"
+    "ko": "물시계 - 바닷길·갯벌 물때 타이머",
+    "ja": "Tidewalk: Korea Tide Timer"
   },
+  // Google Play renamed the listing by 2026-10-31 (1.2.0). Former public names stay searchable.
+  previousName: 'Tide Friend',
+  previousNameByLang: { ko: '물때친구' },
   "status": "live",
   "category": {
     "ko": "날씨 · 물때",
@@ -977,34 +996,39 @@ const tide: AppMeta = {
   "stores": {
     "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide"
   },
+  // Android public listing + production track 2026-11-02. iOS 1.2.0 was waiting for review.
+  release: {
+    android: { version: '1.2.0', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    checkedAt: '2026-11-02',
+  },
   "content": {
     "ko": {
       "tagline": "날씨 · 물때",
-      "lede": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "lede": "갯벌·바닷길에서 '건너가기 시작'이나 '지금 들어가요'를 누르면 나올 시각까지 남은 시간을 알림창에서 카운트다운해 줘요. 전국 바닷길 13곳의 열림 시간과 물때표, 간조 전 알림도 확인해요. 현재 Android에서 이용할 수 있어요.",
       "shotsTitle": "",
       "featuresTitle": "앱 소개",
       "ctaTitle": "Google Play에서 만나세요",
-      "ctaSub": "만조·간조 시간과 물때 달력, 낚시·갯벌 지수와 간조 전 알림을 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "ctaSub": "갯벌·바닷길에서 '건너가기 시작'이나 '지금 들어가요'를 누르면 나올 시각까지 남은 시간을 알림창에서 카운트다운해 줘요. 전국 바닷길 13곳의 열림 시간과 물때표, 간조 전 알림도 확인해요. 현재 Android에서 이용할 수 있어요.",
       "shots": [],
       "features": []
     },
     "ja": {
       "tagline": "天気 · 潮汐",
-      "lede": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。",
+      "lede": "干潟や海の道に入るときにボタンを押すと、戻る時刻までの残り時間を通知でカウントダウンします。韓国の海の道13か所の通れる時間、潮汐表、干潮前の通知も確認できます。現在Androidで利用できます。",
       "shotsTitle": "",
       "featuresTitle": "アプリについて",
       "ctaTitle": "Google Playで入手",
-      "ctaSub": "韓国の満潮・干潮時刻、潮汐カレンダー、釣り・干潟指数と干潮通知を確認。現在Androidで利用できます。",
+      "ctaSub": "干潟や海の道に入るときにボタンを押すと、戻る時刻までの残り時間を通知でカウントダウンします。韓国の海の道13か所の通れる時間、潮汐表、干潮前の通知も確認できます。現在Androidで利用できます。",
       "shots": [],
       "features": []
     },
     "en": {
       "tagline": "Weather · Tides",
-      "lede": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android.",
+      "lede": "Tap “Start crossing” or “I’m going in” on a mudflat or sea road and a notification counts down to your head-back time. Check open times for 13 Korean sea roads, tide tables and low-tide alerts. Available on Android.",
       "shotsTitle": "",
       "featuresTitle": "About the app",
       "ctaTitle": "Get it on Google Play",
-      "ctaSub": "Check Korean tide times, a tide calendar, fishing and mudflat indexes, and low-tide alerts. Available on Android.",
+      "ctaSub": "Tap “Start crossing” or “I’m going in” on a mudflat or sea road and a notification counts down to your head-back time. Check open times for 13 Korean sea roads, tide tables and low-tide alerts. Available on Android.",
       "shots": [],
       "features": []
     }
@@ -1027,36 +1051,44 @@ const sudoku: AppMeta = {
     "en": "Puzzles · Sudoku"
   },
   "stores": {
+    "ios": "https://apps.apple.com/app/id6820125053",
     "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku"
+  },
+  // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing. iOS first appeared 2026-10-28;
+  // the earlier Android launch date is unverified, so since stays empty.
+  release: {
+    ios: { version: '1.0.2', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    android: { version: '1.0.2', updated: '2026-10-29', checkedAt: '2026-11-02' },
+    checkedAt: '2026-11-02',
   },
   "content": {
     "ko": {
       "tagline": "퍼즐 · 스도쿠",
-      "lede": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.",
+      "lede": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 코스 4개, 검증된 퍼즐 600개와 매일 열리는 오늘의 퍼즐을 계정·광고 없이 풀어요. iOS · Android에서 이용할 수 있어요.",
       "shotsTitle": "",
       "featuresTitle": "앱 소개",
-      "ctaTitle": "Google Play에서 만나세요",
-      "ctaSub": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 광고 없이 300개 퍼즐을 풀어요. 현재 Android에서 이용할 수 있어요.",
+      "ctaTitle": "App Store · Google Play에서 만나세요",
+      "ctaSub": "정답 대신 어디를 왜 봐야 하는지 알려 주는 단계별 힌트. 코스 4개, 검증된 퍼즐 600개와 매일 열리는 오늘의 퍼즐을 계정·광고 없이 풀어요. iOS · Android에서 이용할 수 있어요.",
       "shots": [],
       "features": []
     },
     "ja": {
       "tagline": "パズル · ナンプレ",
-      "lede": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。",
+      "lede": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。4つのコース・検証済みの600問と毎日の「今日のパズル」を、アカウントも広告もなしで。iOS・Androidで利用できます。",
       "shotsTitle": "",
       "featuresTitle": "アプリについて",
-      "ctaTitle": "Google Playで入手",
-      "ctaSub": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。広告なしで300問に挑戦。現在Androidで利用できます。",
+      "ctaTitle": "App Store・Google Playで入手",
+      "ctaSub": "答えだけでなく、どこをなぜ見るかを示す段階ヒント。4つのコース・検証済みの600問と毎日の「今日のパズル」を、アカウントも広告もなしで。iOS・Androidで利用できます。",
       "shots": [],
       "features": []
     },
     "en": {
       "tagline": "Puzzles · Sudoku",
-      "lede": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android.",
+      "lede": "Step-by-step hints show where to look and why, not the answer. Four courses, 600 verified puzzles and a new daily puzzle, with no account and no ads. Available on iOS and Android.",
       "shotsTitle": "",
       "featuresTitle": "About the app",
-      "ctaTitle": "Get it on Google Play",
-      "ctaSub": "Solve 300 puzzles without ads. Step-by-step hints explain where to look and why. Available on Android.",
+      "ctaTitle": "Get it on the App Store and Google Play",
+      "ctaSub": "Step-by-step hints show where to look and why, not the answer. Four courses, 600 verified puzzles and a new daily puzzle, with no account and no ads. Available on iOS and Android.",
       "shots": [],
       "features": []
     }
@@ -1065,46 +1097,60 @@ const sudoku: AppMeta = {
 };
 const kkachi: AppMeta = {
   slug: 'kkachi',
-  "name": "Kkachi: Korean Saju",
+  schemaCategory: 'LifestyleApplication',
+  "name": "Kkachi: Your Folk Painting",
   "nameByLang": {
-    "ko": "까치사주",
-    "ja": "Kkachi: Korean Saju"
+    "ko": "까치: 나만의 민화",
+    "ja": "カチ：わたしの民画"
   },
-  "status": "soon",
+  // Shown as 까치사주 / Kkachi: Korean Saju while it was being prepared; kept so the old name still finds it.
+  previousName: 'Kkachi: Korean Saju',
+  previousNameByLang: { ko: '까치사주' },
+  "status": "live",
   "category": {
     "ko": "라이프스타일 · 사주",
     "ja": "ライフスタイル · 四柱推命",
     "en": "Lifestyle · Korean saju"
   },
-  "stores": {},
-  "content": {
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi"
+  },
+  // Android public listing + production track 2026-11-02 (first public date unverified). iOS 1.1.0 was waiting for review.
+  release: {
+    android: { version: '1.1.0', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    checkedAt: '2026-11-02',
+  },
+  content: {
     "ko": {
-      "tagline": "나의 사주, 하루의 이야기",
-      "lede": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
+      "tagline": "내 사주로 그린\n민화 한 폭",
+      "lede": "까치는 내 사주로 한국 민화 한 폭을 그려 드려요. 무엇을 그릴지는 사주가, 어떤 모습일지는 출생 정보가 정해요. '그림 읽기'로 소재마다 뜻을 읽고, 오늘·올해의 흐름과 내 사주, 궁합도 민화와 함께 봐요.",
+      "metaDesc": "내 사주로 그린 한국 민화 한 폭과 함께 오늘·올해의 흐름, 내 사주, 궁합을 쉬운 말로 읽어요. 회원가입·광고·서버 전송 없음. Android에서 이용할 수 있어요.",
       "shotsTitle": "",
       "featuresTitle": "앱 소개",
-      "ctaTitle": "공개 출시 준비 중",
-      "ctaSub": "생년월일을 바탕으로 전통 사주와 날짜별 풀이를 살펴보는 앱을 준비 중이에요. 스토어 심사·테스트 중이며 아직 공개 출시되지 않았어요.",
+      "ctaTitle": "Google Play에서 만나세요",
+      "ctaSub": "회원가입·광고·서버 전송 없이 기기 안에서 계산해요. 앱 안에 유료 상품이 있어요. 오락과 문화 체험을 위한 앱으로, 미래를 예측하거나 보장하지 않아요. 현재 Android에서 이용할 수 있어요.",
       "shots": [],
       "features": []
     },
     "ja": {
-      "tagline": "ライフスタイル · 四柱推命",
-      "lede": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。",
+      "tagline": "命式から描く、\nわたしの民画",
+      "lede": "カチは、あなたの命式から韓国の民画を一幅描きます。何を描くかは命式が、どんな姿かは生まれの情報が決めます。「絵の読み方」で題材ごとの意味を読み、今日・今年の流れや命式、相性も民画とともに。",
+      "metaDesc": "命式から描いた韓国の民画とともに、今日・今年の流れ、命式、相性をやさしい言葉で。会員登録・広告・サーバー送信なし。Androidで利用できます。",
       "shotsTitle": "",
       "featuresTitle": "アプリについて",
-      "ctaTitle": "一般公開の準備中",
-      "ctaSub": "生年月日をもとに韓国の四柱推命や日ごとの解説を読むアプリを準備中。審査・テスト中で、一般公開はまだです。",
+      "ctaTitle": "Google Playで入手",
+      "ctaSub": "会員登録・広告・サーバー送信なしで、端末の中で計算します。アプリ内課金があります。娯楽と文化体験のためのアプリで、未来を予測・保証するものではありません。現在Androidで利用できます。",
       "shots": [],
       "features": []
     },
     "en": {
-      "tagline": "Lifestyle · Korean saju",
-      "lede": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released.",
+      "tagline": "Your Saju,\npainted as folk art",
+      "lede": "Kkachi paints a Korean folk painting from your Saju: your chart decides what is in it and your birth details how it looks. “Reading the painting” explains each part, and readings for today, this year, your chart and compatibility come with paintings too.",
+      "metaDesc": "A Korean folk painting drawn from your Saju, with today, this year, your chart and compatibility in plain words. No sign-up, no ads, no server. Available on Android.",
       "shotsTitle": "",
       "featuresTitle": "About the app",
-      "ctaTitle": "Preparing for public release",
-      "ctaSub": "A Korean saju app for traditional birth-chart and daily readings. In store review and testing; not publicly released.",
+      "ctaTitle": "Get it on Google Play",
+      "ctaSub": "No sign-up, no ads, nothing sent to a server — it runs on your device. Offers in-app purchases. For entertainment and cultural experience; it does not predict or guarantee the future. Available on Android.",
       "shots": [],
       "features": []
     }
@@ -1196,6 +1242,9 @@ export function storeAppName(app: AppMeta, platform: 'ios' | 'android', lang: La
 }
 
 export const previousNameLabels: Record<Lang, string> = { ko: '기존', ja: '旧名', en: 'Previously' };
+
+/** 화면·구조화 데이터가 함께 쓰는 언어별 이전 이름. */
+export const previousNameOf = (app: AppMeta, lang: Lang): string | undefined => app.previousNameByLang?.[lang] ?? app.previousName;
 
 /** 공통 스냅샷과 플랫폼 재관측일을 함께 보존한다. 한 플랫폼 확인으로 다른 플랫폼을 오늘 확인했다고 하지 않는다. */
 export function releaseObservationDates(app: AppMeta): string[] {

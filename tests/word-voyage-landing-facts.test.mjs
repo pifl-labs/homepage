@@ -9,9 +9,10 @@ test('Word Voyage landing is present and names match both public stores in all l
   assert.ok(wordVoyage, 'Word Voyage app metadata must exist');
   assert.match(wordVoyage, /name: 'Hangul Voyage: Korean Puzzle'/);
   assert.match(wordVoyage, /nameByLang: \{ ko: '낱말항해: 한글 단어 퍼즐', ja: 'ハングル航海：韓国語の単語パズル' \}/);
-  assert.match(wordVoyage, /ios: \{ version: '1\.1\.0', updated: '2026-10-21', checkedAt: '2026-10-23' \}/);
-  assert.match(wordVoyage, /android: \{ version: '1\.0\.9', updated: '2026-10-05', checkedAt: '2026-10-07' \}/);
-  assert.match(wordVoyage, /checkedAt: '2026-09-24'/);
+  const a = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(x => x.slug === 'pipi-word-voyage');
+  assert.ok(wordVoyage.includes(`ios: { version: '${a.ios.en.version}', updated: '${a.ios.en.currentVersionReleaseDate.slice(0, 10)}', checkedAt: '2026-11-02' }`));
+  assert.ok(wordVoyage.includes(`android: { version: '${a.android.en.version}', updated: '${new Date(`${a.android.en.updatedDisplay} UTC`).toISOString().slice(0, 10)}', checkedAt: '2026-11-02' }`));
+  assert.match(wordVoyage, /checkedAt: '2026-11-02',\n  \}/);
 });
 
 test('Word Voyage landing promises only evidenced bonus-word logbook and network uses', () => {

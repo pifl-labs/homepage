@@ -5,7 +5,7 @@ import { appIconSrc } from "../data/app-icons.mjs";
 // 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
 // 카피는 lang 별 map, 나머지는 전부 apps.ts 파생.
 import {
-  appList, appName, displayVersion, releaseVersionLabel, formatDate, latestUpdate, previousNameLabels, storeAppName,
+  appList, appName, displayVersion, releaseVersionLabel, formatDate, latestUpdate, previousNameLabels, previousNameOf, storeAppName,
   statusLabels, storeLabels, updatedLabels,
 } from '../data/apps';
 import { catalogCopy } from '../data/app-catalog';
@@ -64,7 +64,7 @@ const copy = {
               <div class="app-card-head">
                   <span class="app-card-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
                   <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
-                {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
+                {previousNameOf(app, lang) && <span class="app-previous-name">{previousNameLabels[lang]} {previousNameOf(app, lang)}</span>}
                 </div>
               <div class="app-card-body">
                 <span class="app-card-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>

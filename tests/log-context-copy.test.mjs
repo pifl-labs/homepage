@@ -12,7 +12,8 @@ test('EN Mood landing gives a mood-first action, optional context and calendar r
   for (const term of ['nine sea-weather moods', 'PiPi responds', 'note, photo or tag if', 'calendar', 'No account needed', 'Entries and photos stay on your device']) {
     assert.ok(c.lede.includes(term), term);
   }
-  for (const term of ['optional notes, photos or tags', 'calendar', 'ads', 'one-time purchase']) assert.ok(c.metaDesc.includes(term), term);
+  // 2026-11-02 listings: "No ads or tracking", every journaling feature (lock, backup) is free.
+  for (const term of ['optional notes, photos or tags', 'calendar', 'No ads or tracking', 'every journaling feature is free']) assert.ok(c.metaDesc.includes(term), term);
 });
 
 test('optional-context feature retains the four-card grid and the other feature roles', () => {
@@ -21,19 +22,22 @@ test('optional-context feature retains the four-card grid and the other feature 
   assert.equal(cards.map(c => c.icon).join(','), 'fa-cloud-sun,fa-tags,fa-pen-nib,fa-lock');
   assert.equal(cards[1].title, 'Optional context');
   for (const term of ['mood-only entry', 'note, photo or tag', 'calendar']) assert.ok(cards[1].desc.includes(term), term);
-  assert.ok(cards[3].desc.includes('Premium adds biometric lock'));
-  assert.ok(cards[3].desc.includes('ads and in-app purchases use network services'));
+  assert.ok(cards[3].desc.includes('Lock, backup and every other journaling feature are free'));
+  assert.ok(cards[3].desc.includes('store payments use the network'));
+  assert.doesNotMatch(cards[3].desc, /only store payments/);
+  assert.doesNotMatch(JSON.stringify(log.content), /Premium adds biometric|프리미엄에서는 생체인증|プレミアム購入後は生体認証|프리미엄 생체인증|プレミアムの生体認証/);
 });
 
-test('download CTA separates free download from ads and optional one-time payment', () => {
-  assert.equal(log.content.en.ctaSub, 'Free download on iOS & Android. Ads + optional one-time purchase; no subscription.');
+test('download CTA states no ads and the optional one-time supporter purchase', () => {
+  assert.equal(log.content.en.ctaSub, 'Free on iOS & Android. No ads; optional one-time Lifetime Supporter purchase, no subscription.');
   const english = JSON.stringify(log.content.en);
   assert.doesNotMatch(english, /guaranteed|clinically proven|cure|improves mental|no data collection|fully offline|everything is free/i);
 });
 
 test('the factual-copy change keeps the actual release, store destinations and screenshots', () => {
-  assert.equal(log.release.ios.version, '1.0.12');
-  assert.equal(log.release.android.version, '1.0.11');
+  const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(a => a.slug === 'pipi-log');
+  assert.equal(log.release.ios.version, current.ios.en.version);
+  assert.equal(log.release.android.version, current.android.en.version);
   assert.equal(log.stores.ios, 'https://apps.apple.com/app/pipi-log/id6770272665');
   assert.equal(new URL(log.stores.android).searchParams.get('id'), 'com.pifl.pipi.log');
   assert.equal(log.content.en.shots.map(s => s.file).join(','), 'home,calendar,analytics,monthly-map,collection');
