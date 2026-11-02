@@ -32,7 +32,7 @@ astro.config.mjs           # output static, i18n(en/ko/ja), build format directo
 - **공통 레이아웃**: `BaseLayout` + `Nav`/`Footer` 컴포넌트. 페이지 본문만 각 `.astro`가 보유.
 - **i18n**: 루트 `/`는 `functions/_middleware.ts`가 `Accept-Language`·쿠키 감지 → `/ko//en//ja` 302.
   미들웨어 미실행 환경은 `public/lang-detect.js`가 클라이언트 폴백. x-default = `/ko/`.
-- **CSP**: `public/_headers`에 정의. `script-src 'self'` — 인라인 JS 금지. 외부 스크립트(`/theme-init.js`,
+- **CSP**: `public/_headers`에 정의. `script-src 'self'` + Cloudflare Web Analytics 자동 삽입 beacon(`static.cloudflareinsights.com/beacon.min.js`, 끝 `/` 경로 포함) — 인라인 JS 금지. 외부 스크립트(`/theme-init.js`,
   `/script.js`, `/lang-detect.js`)만 사용.
 - **테마·글자크기**: `<html data-theme>`/`data-type-scale` + `theme-init.js`(pre-paint) + `colors_and_type.css`
   토큰. 라이트모드는 `:root[data-theme="light"]` 오버라이드.
