@@ -1079,59 +1079,195 @@
     }
   },
   "names": {
-    "pipi-bridge": [
-      "Korean Bridge: Hangul for Kids"
-    ],
-    "pipi-word-voyage": [
-      "PiPi Word Voyage",
-      "Hangul Voyage: Korean Puzzle"
-    ],
-    "pipi-hello": [
-      "PiPi Hello: Japanese for Kids",
-      "KanaSprout: Japanese for Kids"
-    ],
-    "pipi-words": [
-      "PiPi Words",
-      "Vocab Routine: JLPT & TOPIK"
-    ],
-    "pipi-dday": [
-      "PiPi D-Day",
-      "Until That Day: Countdown"
-    ],
-    "pipi-log": [
-      "PiPi Log",
-      "Mood Tile: Daily Journal"
-    ],
-    "dialogos": [
-      "Dialogos: Stoic Dialogues"
-    ],
-    "pipi-tide": [
-      "Tide Friend: Korea Tide Times",
-      "Tidewalk: Korea Tide Timer"
-    ],
-    "pipi-sudoku": [
-      "Cell by Cell Sudoku"
-    ],
-    "kkachi": [
-      "Kkachi: Korean Saju",
-      "Kkachi: Your Folk Painting"
-    ],
-    "pipi-sky": [
-      "PiPi Sky - 구름 너머 하늘",
-      "Skydaze: Cloud & Star Gazing"
-    ],
-    "pipi-legion": [
-      "PiPi Legion Chronicle"
-    ],
-    "pipi-focus": [
-      "PiPi Focus",
-      "PiPi Focus: Pirate Pomodoro",
-      "Pomodoro at Sea: Focus Timer"
-    ],
-    "pipi-draw": [
-      "PiPi Draw",
-      "PiPi Draw - AI Sketch Coloring",
-      "Photo Outlines: Coloring Book"
-    ]
+    "pipi-bridge": {
+      "ko": [
+        "Korean Bridge - 어린이 한국어·한글·수학"
+      ],
+      "ja": [
+        "Korean Bridge - 子どもハングル・算数"
+      ],
+      "en": [
+        "Korean Bridge: Hangul for Kids"
+      ]
+    },
+    "pipi-word-voyage": {
+      "ko": [
+        "PiPi Word Voyage",
+        "피피 낱말항해",
+        "낱말항해: 한글 단어 퍼즐"
+      ],
+      "ja": [
+        "PiPi Word Voyage",
+        "ピピ ことばの航海",
+        "ハングル航海：韓国語の単語パズル"
+      ],
+      "en": [
+        "PiPi Word Voyage",
+        "Hangul Voyage: Korean Puzzle"
+      ]
+    },
+    "pipi-hello": {
+      "ko": [
+        "PiPi Hello",
+        "말놀이 새싹: 어린이 일본어"
+      ],
+      "ja": [
+        "PiPi Hello",
+        "ハングルの芽：子どもの韓国語"
+      ],
+      "en": [
+        "PiPi Hello: Japanese for Kids",
+        "KanaSprout: Japanese for Kids"
+      ]
+    },
+    "pipi-words": {
+      "ko": [
+        "PiPi Words",
+        "단어루틴: JLPT·TOPIK 단어장"
+      ],
+      "ja": [
+        "PiPi Words",
+        "ことば習慣：韓国語・TOPIK単語帳"
+      ],
+      "en": [
+        "PiPi Words",
+        "Vocab Routine: JLPT & TOPIK"
+      ]
+    },
+    "pipi-dday": {
+      "ko": [
+        "PiPi D-Day - 해적의 항해 디데이",
+        "그날까지: 디데이·기념일 위젯"
+      ],
+      "ja": [
+        "PiPi D-Day（ピピディーデイ）",
+        "その日まで：カウントダウン"
+      ],
+      "en": [
+        "PiPi D-Day",
+        "Until That Day: Countdown"
+      ]
+    },
+    "pipi-log": {
+      "ko": [
+        "PiPi Log",
+        "기분 한 칸: 날씨 감정일기"
+      ],
+      "ja": [
+        "PiPi Log",
+        "気分のひとこま：感情日記"
+      ],
+      "en": [
+        "PiPi Log",
+        "Mood Tile: Daily Journal"
+      ]
+    },
+    "dialogos": {
+      "ko": [
+        "Dialogos: 철학자와의 대화"
+      ],
+      "ja": [
+        "Dialogos: 賢者との対話"
+      ],
+      "en": [
+        "Dialogos: Stoic Dialogues"
+      ]
+    },
+    "pipi-tide": {
+      "ko": [
+        "물때친구 - 만조 간조 물때표 위젯",
+        "물시계 - 바닷길·갯벌 물때 타이머"
+      ],
+      "ja": [
+        "Tide Friend: Korea Tide Times",
+        "Tidewalk: Korea Tide Timer"
+      ],
+      "en": [
+        "Tide Friend: Korea Tide Times",
+        "Tidewalk: Korea Tide Timer"
+      ]
+    },
+    "pipi-sudoku": {
+      "ko": [
+        "한칸씩 스도쿠"
+      ],
+      "ja": [
+        "ひとマスずつナンプレ"
+      ],
+      "en": [
+        "Cell by Cell Sudoku"
+      ]
+    },
+    "kkachi": {
+      "ko": [
+        "까치사주",
+        "까치: 나만의 민화"
+      ],
+      "ja": [
+        "Kkachi: Korean Saju",
+        "カチ：わたしの民画"
+      ],
+      "en": [
+        "Kkachi: Korean Saju",
+        "Kkachi: Your Folk Painting"
+      ]
+    },
+    "pipi-sky": {
+      "ko": [
+        "PiPi Sky - 구름 너머 하늘",
+        "하늘멍 - 구름 위 하늘·별자리·밤하늘"
+      ],
+      "ja": [
+        "PiPi Sky",
+        "Skydaze - 雲の上の空と星空・星座"
+      ],
+      "en": [
+        "PiPi Sky - 구름 너머 하늘",
+        "Skydaze: Cloud & Star Gazing"
+      ]
+    },
+    "pipi-legion": {
+      "ko": [
+        "피피 군단전기"
+      ],
+      "ja": [
+        "ピピ軍団戦記"
+      ],
+      "en": [
+        "PiPi Legion Chronicle"
+      ]
+    },
+    "pipi-focus": {
+      "ko": [
+        "PiPi Focus",
+        "PiPi Focus: 해적 포모도로",
+        "집중항해: 포모도로 타이머"
+      ],
+      "ja": [
+        "PiPi Focus",
+        "PiPi Focus: 海賊ポモドーロ",
+        "集中航海：ポモドーロタイマー"
+      ],
+      "en": [
+        "PiPi Focus",
+        "PiPi Focus: Pirate Pomodoro",
+        "Pomodoro at Sea: Focus Timer"
+      ]
+    },
+    "pipi-draw": {
+      "ko": [
+        "PiPi Draw",
+        "밑그림: 사진으로 만드는 색칠공부"
+      ],
+      "ja": [
+        "PiPi Draw",
+        "下絵づくり：写真をぬりえに変換"
+      ],
+      "en": [
+        "PiPi Draw",
+        "PiPi Draw - AI Sketch Coloring",
+        "Photo Outlines: Coloring Book"
+      ]
+    }
   }
 }

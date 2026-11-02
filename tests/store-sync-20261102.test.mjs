@@ -86,6 +86,36 @@ for (const app of appList) {
   });
 }
 
+test('apps without a public listing use their App Store Connect registered name in each language', () => {
+  const locale = { ko: 'ko', ja: 'ja', en: 'en-US' };
+  // Legion registers only en-US, and that slot holds the Korean name: ja/en have no registered name to compare.
+  const exceptions = { 'pipi-legion': ['ja', 'en'] };
+  for (const app of appList.filter((a) => a.status === 'soon')) {
+    const registered = current.find((a) => a.slug === app.slug).appStoreConnectNames?.[0]?.names;
+    assert.ok(registered, `${app.slug}: registered names recorded`);
+    for (const lang of langs) {
+      const name = registered[locale[lang]] ?? registered['en-US'];
+      if (exceptions[app.slug]?.includes(lang)) continue;
+      assert.equal(appName(app, lang), name, `${app.slug}/${lang}`);
+    }
+  }
+});
+
+test('archive names over time are per language and end with that language\'s current name', async () => {
+  const { archiveNames } = await import('../src/data/archive.mjs');
+  for (const app of appList) {
+    for (const lang of langs) {
+      const list = archiveNames[app.slug][lang];
+      assert.ok(Array.isArray(list) && list.length, `${app.slug}/${lang}: list`);
+      assert.equal(list.at(-1), appName(app, lang), `${app.slug}/${lang}: ends with the current name`);
+      assert.equal(new Set(list).size, list.length, `${app.slug}/${lang}: no repeats`);
+    }
+  }
+  const html = readFileSync(new URL('../dist/ko/archive/index.html', import.meta.url), 'utf8');
+  assert.ok(html.includes('<li>PiPi Focus: 해적 포모도로</li><li>집중항해: 포모도로 타이머</li>'), 'ko archive shows Korean store names');
+  assert.ok(!html.includes('<li>Pomodoro at Sea: Focus Timer</li>'), 'ko archive does not list the English-only name');
+});
+
 test('account apps without a public listing are not advertised on the homepage', () => {
   assert.deepEqual(receipt.accountAppsWithoutPublicListing.map((e) => e.bundleId).sort(), ['com.pifl.pipi.bp', 'com.pifl.pipi.drill', 'com.pifl.pipi.habit', 'com.pifl.pipi.spend']);
   for (const extra of receipt.accountAppsWithoutPublicListing) {

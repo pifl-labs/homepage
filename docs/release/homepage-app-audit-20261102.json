@@ -195,6 +195,16 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "en-US": "Pomodoro at Sea: Focus Timer",
+            "ja": "集中航海：ポモドーロタイマー",
+            "ko": "집중항해: 포모도로 타이머"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.2.3",
@@ -409,6 +419,16 @@
         {
           "name": "1.2.3",
           "status": "completed"
+        }
+      ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "en-US": "Photo Outlines: Coloring Book",
+            "ja": "下絵づくり：写真をぬりえに変換",
+            "ko": "밑그림: 사진으로 만드는 색칠공부"
+          }
         }
       ],
       "appStoreConnect": [
@@ -639,6 +659,16 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "ko": "낱말항해: 한글 단어 퍼즐",
+            "en-US": "Hangul Voyage: Korean Puzzle",
+            "ja": "ハングル航海：韓国語の単語パズル"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.3.1",
@@ -853,6 +883,16 @@
         {
           "name": "1.1.0",
           "status": "completed"
+        }
+      ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "ja": "ハングルの芽：子どもの韓国語",
+            "ko": "말놀이 새싹: 어린이 일본어",
+            "en-US": "KanaSprout: Japanese for Kids"
+          }
         }
       ],
       "appStoreConnect": [
@@ -1074,6 +1114,24 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "en-US": "Vocab Routine: JLPT & TOPIK",
+            "ko": "단어루틴: JLPT·TOPIK 단어장",
+            "ja": "ことば習慣：韓国語・TOPIK単語帳"
+          }
+        },
+        {
+          "state": "WAITING_FOR_REVIEW",
+          "names": {
+            "en-US": "Vocab Routine: JLPT & TOPIK",
+            "ko": "단어루틴: JLPT 일본어 단어장",
+            "ja": "ことば習慣：TOPIK韓国語単語帳"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.1.0",
@@ -1288,6 +1346,16 @@
         {
           "name": "2.0.1",
           "status": "completed"
+        }
+      ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "ja": "その日まで：カウントダウン",
+            "en-US": "Until That Day: Countdown",
+            "ko": "그날까지: 디데이·기념일 위젯"
+          }
         }
       ],
       "appStoreConnect": [
@@ -1506,6 +1574,16 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "en-US": "Mood Tile: Daily Journal",
+            "ko": "기분 한 칸: 날씨 감정일기",
+            "ja": "気分のひとこま：感情日記"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.0.13",
@@ -1717,6 +1795,16 @@
         {
           "name": "1.0.3",
           "status": "completed"
+        }
+      ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "ja": "Dialogos: 賢者との対話",
+            "ko": "Dialogos: 철학자와의 대화",
+            "en-US": "Dialogos: Stoic Dialogues"
+          }
         }
       ],
       "appStoreConnect": [
@@ -1931,6 +2019,16 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "en-US": "Korean Bridge: Hangul for Kids",
+            "ja": "Korean Bridge - 子どもハングル・算数",
+            "ko": "Korean Bridge - 어린이 한국어·한글·수학"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.0.2",
@@ -2083,6 +2181,15 @@
         {
           "name": "1.2.0",
           "status": "completed"
+        }
+      ],
+      "appStoreConnectNames": [
+        {
+          "state": "WAITING_FOR_REVIEW",
+          "names": {
+            "ko": "물시계 - 바닷길·갯벌 물때 타이머",
+            "en-US": "Tidewalk: Korea Tide Timer"
+          }
         }
       ],
       "appStoreConnect": [
@@ -2299,6 +2406,16 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "READY_FOR_DISTRIBUTION",
+          "names": {
+            "en-US": "Cell by Cell Sudoku",
+            "ko": "한칸씩 스도쿠",
+            "ja": "ひとマスずつナンプレ"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.0.2",
@@ -2449,6 +2566,16 @@
           "status": "completed"
         }
       ],
+      "appStoreConnectNames": [
+        {
+          "state": "WAITING_FOR_REVIEW",
+          "names": {
+            "en-US": "Kkachi: Your Folk Painting",
+            "ko": "까치: 나만의 민화",
+            "ja": "カチ：わたしの民画"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.1.0",
@@ -2500,6 +2627,16 @@
         }
       },
       "playProduction": [],
+      "appStoreConnectNames": [
+        {
+          "state": "PREPARE_FOR_SUBMISSION",
+          "names": {
+            "ko": "하늘멍 - 구름 위 하늘·별자리·밤하늘",
+            "ja": "Skydaze - 雲の上の空と星空・星座",
+            "en-US": "Skydaze: Cloud & Star Gazing"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.0",
@@ -2540,6 +2677,14 @@
         }
       },
       "playProduction": [],
+      "appStoreConnectNames": [
+        {
+          "state": "PREPARE_FOR_SUBMISSION",
+          "names": {
+            "en-US": "피피 군단전기"
+          }
+        }
+      ],
       "appStoreConnect": [
         {
           "versionString": "1.0",

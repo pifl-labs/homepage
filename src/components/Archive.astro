@@ -57,7 +57,7 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
     <h2>{c.assets}</h2><p>{c.assetNote}</p>
     {archiveApps.map(slug=>{const media=archiveMedia[slug];const name=appName(appList.find(a=>a.slug===slug)!,lang);const featured=['pipi-focus','pipi-draw'].includes(slug);return <section class="archive-exhibit" data-media-app={slug} data-featured={featured?'true':'false'} hidden={!featured}>
      <h3>{name}</h3>
-     {archiveNames[slug].length>1&&<><p class="archive-caption">{c.names}</p><ol class="archive-names">{archiveNames[slug].map(name=><li>{name}</li>)}</ol><p class="archive-caption">{c.renameUnknown}</p></>}
+     {archiveNames[slug][lang].length>1&&<><p class="archive-caption">{c.names}</p><ol class="archive-names">{archiveNames[slug][lang].map(name=><li>{name}</li>)}</ol><p class="archive-caption">{c.renameUnknown}</p></>}
      <h4>{c.icons}</h4><div class="archive-icon-pair">
       {media.oldIcon&&<figure><img src={media.oldIcon} width="64" height="64" alt={`${c.old}: ${name}`}/><figcaption>{c.old}<time datetime={media.oldDate}>{media.oldDate}</time></figcaption></figure>}
       <figure><img src={appIconSrc(slug)} width="64" height="64" alt={`${media.upcoming?c.official:c.current}: ${name}`}/><figcaption>{media.upcoming?c.official:c.current}<time datetime="2026-10-23">2026-10-23</time></figcaption></figure>

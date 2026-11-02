@@ -33,6 +33,6 @@ for(const event of archiveEvents){
  if(milestones[event.id])event.milestones=milestones[event.id];
 }
 export const archiveNames={...extraNames,
- 'pipi-focus':['PiPi Focus','PiPi Focus: Pirate Pomodoro','Pomodoro at Sea: Focus Timer'],
- 'pipi-draw':['PiPi Draw','PiPi Draw - AI Sketch Coloring','Photo Outlines: Coloring Book']
+ 'pipi-focus':{ko:['PiPi Focus','PiPi Focus: 해적 포모도로','집중항해: 포모도로 타이머'],ja:['PiPi Focus','PiPi Focus: 海賊ポモドーロ','集中航海：ポモドーロタイマー'],en:['PiPi Focus','PiPi Focus: Pirate Pomodoro','Pomodoro at Sea: Focus Timer']},
+ 'pipi-draw':{ko:['PiPi Draw','밑그림: 사진으로 만드는 색칠공부'],ja:['PiPi Draw','下絵づくり：写真をぬりえに変換'],en:['PiPi Draw','PiPi Draw - AI Sketch Coloring','Photo Outlines: Coloring Book']}
 };

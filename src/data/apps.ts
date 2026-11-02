@@ -1159,9 +1159,10 @@ const kkachi: AppMeta = {
 const sky: AppMeta = {
   slug: 'pipi-sky',
   "name": "Skydaze: Cloud & Star Gazing",
+  // Not public yet: the App Store Connect registered ko/ja names (2026-11-02), not the English fallback.
   "nameByLang": {
-    "ko": "Skydaze: Cloud & Star Gazing",
-    "ja": "Skydaze: Cloud & Star Gazing"
+    "ko": "하늘멍 - 구름 위 하늘·별자리·밤하늘",
+    "ja": "Skydaze - 雲の上の空と星空・星座"
   },
   "status": "soon",
   "category": {
