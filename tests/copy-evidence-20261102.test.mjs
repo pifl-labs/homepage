@@ -45,7 +45,8 @@ const claims = [
   ['pipi-tide', 'ko', "'건너가기 시작'이나 '지금 들어가요'를 누르면", 'android', "'건너가기 시작'이나 '지금 들어가요'를 누르면"],
   ['pipi-tide', 'ko', '전국 바닷길 13곳', 'android', '전국 바닷길 13곳'],
   ['pipi-tide', 'en', 'Start crossing', 'android', 'Start crossing'],
-  ['pipi-tide', 'en', '13 Korean sea roads', 'android', '13'],
+  ['pipi-tide', 'en', '13 Korean sea roads', 'android', '13 Korean sea roads, including Silmido'],
+  ['pipi-tide', 'ja', '韓国の海の道13か所', 'android', '韓国の海路13ヶ所'],
   // Kkachi: a folk painting from your Saju; no sign-up, ads or server; entertainment disclaimer
   ['kkachi', 'ko', '내 사주로 한국 민화 한 폭을 그려 드려요', 'android', '내 사주로 한국 민화 한 폭을 그려 드려요'],
   ['kkachi', 'ko', '회원가입·광고·서버 전송 없이', 'android', '회원가입, 광고, 서버 전송이 없어요'],
@@ -79,6 +80,24 @@ test('stale claims the listings no longer support are gone from all three langua
   assert.doesNotMatch(all('pipi-sudoku'), /300/);
   assert.doesNotMatch(all('kkachi'), /준비 중|準備中|not publicly released|공개 출시되지 않았|一般公開はまだ/);
   for (const lang of ['ko', 'ja', 'en']) assert.doesNotMatch(store('pipi-dday', 'android', lang), /PiPi/, 'the 2.0 listing never mentions PiPi');
+});
+
+test('built pages show language-specific former names, the derived Draw version and no doubled archive label', () => {
+  const page = (lang, path) => readFileSync(new URL(`../dist/${lang}/${path}index.html`, import.meta.url), 'utf8');
+  const alt = (html) => [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map((m) => JSON.parse(m[1])).find((v) => v['@type'] === 'SoftwareApplication')?.alternateName;
+  const former = { 'pipi-tide': { ko: '물때친구', ja: 'Tide Friend', en: 'Tide Friend' }, kkachi: { ko: '까치사주', ja: 'Kkachi: Korean Saju', en: 'Kkachi: Korean Saju' } };
+  const label = { ko: '기존', ja: '旧名', en: 'Previously' };
+  for (const [slug, names] of Object.entries(former)) {
+    for (const lang of ['ko', 'ja', 'en']) {
+      const html = page(lang, `apps/${slug}/`);
+      assert.match(html, new RegExp(`class="app-previous-name"[^>]*>${label[lang]} ${names[lang]}<`), `${lang}/${slug}: visible former name`);
+      assert.equal(alt(html), names[lang], `${lang}/${slug}: JSON-LD alternateName`);
+    }
+  }
+  const drawVersion = JSON.parse(readFileSync(new URL('../src/data/app-submission-media.json', import.meta.url), 'utf8'))['pipi-draw'].version.split(' ')[0];
+  assert.ok(page('ko', 'apps/pipi-draw/').includes(`${drawVersion}의 모든 화면 변경`), 'Draw note follows the recorded listing version');
+  assert.ok(page('en', 'apps/pipi-draw/').includes(`every interface change in ${drawVersion}.`));
+  assert.doesNotMatch(page('ko', 'archive/'), /공개 공개/, 'journey labels are not replaced twice');
 });
 
 test('Play badges match the ads and purchase statements', () => {
