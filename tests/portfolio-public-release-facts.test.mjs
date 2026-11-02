@@ -3,11 +3,13 @@ import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
 const source=readFileSync(new URL('../src/data/apps.ts',import.meta.url),'utf8');
 const receipt=JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261008.json',import.meta.url),'utf8'));
-const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261023.json', import.meta.url), 'utf8'));
+const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps;
 const variables={'com.pifl.pipi.wordvoyage':'wordVoyage','com.pifl.pipi.hello':'hello','com.pifl.pipi.words':'words','com.pifl.pipi.log':'log'};
+const slugs={'com.pifl.pipi.wordvoyage':'pipi-word-voyage','com.pifl.pipi.hello':'pipi-hello','com.pifl.pipi.words':'pipi-words','com.pifl.pipi.log':'pipi-log'};
+const playDay=text=>new Date(`${text} UTC`).toISOString().slice(0,10);
 const block=v=>source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 for(const [bundle,v] of Object.entries(variables))test(`${bundle}: observed iOS version and UTC date replace older metadata`,()=>{
- const r=current.find(a=>a.android.en.url.includes(bundle)).ios.ko;assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-10-23' }`));
+ const r=current.find(a=>a.slug===slugs[bundle]).ios.ko;assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-11-02' }`));
 });
 test('Words iOS destination uses all three current public listing names and keeps aliases',()=>{
  const b=block('words');const ios=b.match(/ios: \{ ko: '([^']+)', ja: '([^']+)', en: '([^']+)' \}/);
@@ -15,12 +17,17 @@ test('Words iOS destination uses all three current public listing names and keep
  assert.match(b,/previousName: 'PiPi Words'/);assert.match(b,/id6770267735/);assert.match(b,/com\.pifl\.pipi\.words/);
 });
 test('Android versions and different update dates keep independent dated evidence',()=>{
- for(const [bundle,r] of Object.entries(receipt.android))assert.ok(block(variables[bundle]).includes(`android: { version: '${r.version}', updated: '${r.updatedCalendar}', checkedAt: '${r.checkedKSTDay}' }`));
+ for(const [bundle,v] of Object.entries(variables)){
+  const a=current.find(x=>x.slug===slugs[bundle]);
+  assert.deepEqual(a.playProduction.map(r=>r.name),[a.android.en.version],`${bundle}: public listing matches the production track`);
+  assert.ok(block(v).includes(`android: { version: '${a.android.en.version}', updated: '${playDay(a.android.en.updatedDisplay)}', checkedAt: '2026-11-02' }`));
+ }
+ // The 2026-10-08 receipt stays as history; its unverified timezone note is not rewritten.
  assert.equal(receipt.android['com.pifl.pipi.wordvoyage'].timezone,'UNVERIFIED');assert.equal(receipt.android['com.pifl.pipi.log'].updatedCalendar,'2026-10-04');
 });
-test('One-platform observations do not fabricate Android releases or erase previous name snapshot dates',()=>{
- for(const v of ['words','hello'])assert.doesNotMatch(block(v),/android: \{ version:/);
- assert.match(block('wordVoyage'),/checkedAt: '2026-09-24'/);assert.match(block('words'),/checkedAt: '2026-09-30'/);
+test('Platforms keep their own versions when they differ, and observations stay dated',()=>{
+ assert.match(block('words'),/ios: \{ version: '1\.0\.14'/);assert.match(block('words'),/android: \{ version: '1\.1\.0'/);
+ for(const v of Object.values(variables))assert.match(block(v),/checkedAt: '2026-11-02',\n  \}/);
  const fleet=readFileSync(new URL('../src/components/FleetLog.astro',import.meta.url),'utf8');assert.match(fleet,/liveApps\.flatMap\(releaseObservationDates\)/);
  assert.match(source,/app\.release\?\.checkedAt, app\.release\?\.ios\?\.checkedAt, app\.release\?\.android\?\.checkedAt/);
 });

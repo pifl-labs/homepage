@@ -15,6 +15,15 @@ test('submission images have exact official sources, localized labels and no inv
    for(const lang of ['ko','ja','en'])assert.ok(shot.label[lang]);
   }
  }
- assert.equal(media['pipi-sudoku'].version,'1.0.0 (11)');
- assert.equal(media['pipi-sudoku'].pending,true);
+ // Every record matches the 2026-11-02 App Store Connect listing snapshot: version (build), review state, image sources.
+ const current=JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json',import.meta.url))).apps;
+ const token=u=>u.match(/\/thumb\/([^/]+)\//)[1];
+ for(const [slug,item] of Object.entries(media)){
+  const seen=current.find(a=>a.slug===slug).listingMedia;
+  assert.equal(item.version,`${seen.version} (${seen.build})`,slug);
+  assert.equal(item.pending,seen.state!=='READY_FOR_DISTRIBUTION',slug);
+  assert.deepEqual(item.shots.map(s=>token(s.source)),seen.firstThree.map(token),slug);
+ }
+ assert.equal(media['pipi-sudoku'].pending,false,'Sudoku iOS 1.0.2 is public');
+ for(const slug of ['pipi-tide','kkachi'])assert.equal(media[slug].pending,true,`${slug} iOS is still in review`);
 });

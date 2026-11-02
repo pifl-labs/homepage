@@ -6,7 +6,7 @@ import StoreNameNotice from './StoreNameNotice.astro';
 import DrawPhotoChecklist from './DrawPhotoChecklist.astro';
 import HelloLetterMatch from './HelloLetterMatch.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
-import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
+import { appName, apps, displayVersion, formatDate, latestUpdate, previousNameLabels, previousNameOf, releaseVersionLabel, storeAppName, storeLabels, updatedLabels } from '../data/apps';
 import { localeBase, type Lang } from '../i18n/ui';
 import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
 
@@ -92,7 +92,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name,
-  ...(app.previousName ? { alternateName: app.previousName } : {}),
+  ...(previousNameOf(app, lang) ? { alternateName: previousNameOf(app, lang) } : {}),
   ...(app.schemaCategory ? { applicationCategory: app.schemaCategory } : {}),
   description: c.lede,
   url: canonical,
@@ -134,7 +134,7 @@ const jsonLd = {
             <img class="app-id-icon" src={iconSrc} alt={iconAlt} width="72" height="72" fetchpriority="high" />
             <div class="app-id-meta">
               <span class="app-id-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
-              {app.previousName && <span class="app-previous-name">{previousNameLabels[lang]} {app.previousName}</span>}
+              {previousNameOf(app, lang) && <span class="app-previous-name">{previousNameLabels[lang]} {previousNameOf(app, lang)}</span>}
               <span class="app-id-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
             </div>
           </div>
@@ -200,7 +200,7 @@ const jsonLd = {
           <p><strong>{mediaCopy.label} · iOS {submitted.version}</strong></p>
           {submitted.pending && <p>{mediaCopy.warning}</p>}
           <p>{mediaCopy.detail}</p>
-          {slug === "pipi-draw" && <p>{({ ko: "예시 도안입니다. 제출 등록정보에는 이전 화면이 남아 있어 1.2.2의 모든 화면 변경을 보여주지는 않습니다.", ja: "サンプル図案です。提出した登録情報に以前の画面が残っており、1.2.2のすべての画面変更を示すものではありません。", en: "Sample page shown. The submitted listing still contains earlier screens and does not show every interface change in 1.2.2." })[lang]}</p>}
+          {slug === "pipi-draw" && <p>{({ ko: `예시 도안입니다. 등록정보에는 이전 화면이 남아 있어 ${submitted.version.split(" ")[0]}의 모든 화면 변경을 보여주지는 않습니다.`, ja: `サンプル図案です。登録情報に以前の画面が残っており、${submitted.version.split(" ")[0]}のすべての画面変更を示すものではありません。`, en: `Sample page shown. The listing still contains earlier screens and does not show every interface change in ${submitted.version.split(" ")[0]}.` })[lang]}</p>}
         </div>}
         <div class="app-shots-scroll" tabindex="0" role="region" aria-label={submitted ? mediaCopy.title : c.shotsTitle}>
           {shots.map((s) => (

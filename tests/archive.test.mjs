@@ -34,9 +34,17 @@ test('archive browser logic is external under the production self-only script po
 test('all 14 canonical apps have representative records and no fabricated beta releases',()=>{
  assert.equal(new Set(archiveEvents.map(e=>e.app)).size,14);
  assert.equal(Object.keys(archiveMedia).length,14);
- for(const slug of ['kkachi','pipi-sky','pipi-legion']){
+ for(const slug of ['pipi-sky','pipi-legion']){
   assert.ok(archiveEvents.filter(e=>e.app===slug).every(e=>e.kind==='asset'&&e.version===null));
   assert.equal(archiveMedia[slug].upcoming,true);
  }
- for(const slug of ['pipi-tide','pipi-sudoku'])assert.ok(archiveEvents.filter(e=>e.app===slug).every(e=>e.platform==='android'&&e.kind==='observed'&&e.version===null));
+ // 2026-11-02: Kkachi and Tide have dated Android production observations only; Sudoku has its first public iOS record.
+ for(const slug of ['kkachi','pipi-tide']){
+  assert.equal(archiveMedia[slug].upcoming,false);
+  assert.ok(archiveEvents.filter(e=>e.app===slug).every(e=>e.platform!=='ios'&&e.kind!=='released'));
+  assert.ok(archiveEvents.some(e=>e.app===slug&&e.kind==='observed'&&e.platform==='android'&&e.version&&e.timeBasis==='observation-date'));
+ }
+ const sudokuIos=archiveEvents.filter(e=>e.app==='pipi-sudoku'&&e.platform==='ios');
+ assert.deepEqual(sudokuIos.map(e=>[e.kind,e.version,e.timestamp]),[['released','1.0.2','2026-10-31T16:42:26Z']]);
+ assert.ok(archiveEvents.filter(e=>e.app==='pipi-sudoku'&&e.platform==='android').every(e=>e.kind==='observed'&&e.version===null));
 });

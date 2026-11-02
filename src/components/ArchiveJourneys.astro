@@ -9,7 +9,7 @@ const copy={
  ja:{title:'機能はどう変わった？',note:'アプリを選んで変化を比較できます。バージョン資料と公開確認は区別しています。年・OS・種類の絞り込みは下の出来事に適用されます。',steps:['出発点','主な変化','最近の変化'],sources:'資料と確認範囲',pending:'公開機能の履歴を確認中',version:'バージョン資料の比較・公開日ではありません',docs:'資料',intro:'紹介資料',observed:'公開観測',public:'公開記録',candidate:'候補',submitted:'提出資料'},
  en:{title:'How did the features evolve?',note:'Select apps to compare their journeys. Version notes and verified releases are distinct. Year, platform and type filters apply to the event records below.',steps:['Starting point','Major change','Recent change'],sources:'Sources and limits',pending:'Public feature history unverified',version:'Version-document comparison, not release dates',docs:'notes',intro:'intro notes',observed:'public observation',public:'public record',candidate:'candidate',submitted:'submission notes'}
 }[lang];
-const version=(v:string)=>v.replaceAll('소개 문서',copy.intro).replaceAll('제출 문서',copy.submitted).replaceAll('공개 관측',copy.observed).replaceAll('공개 기록',copy.public).replaceAll('후보',copy.candidate).replaceAll('관측',copy.observed).replaceAll('문서',copy.docs);
+const version=(v:string)=>v.replaceAll('소개 문서',copy.intro).replaceAll('제출 문서',copy.submitted).replaceAll('공개 관측',copy.observed).replaceAll('공개 기록',copy.public).replaceAll('후보',copy.candidate).replace(/(?<!공개 )관측/g,copy.observed).replaceAll('문서',copy.docs);
 ---
 <section class="archive-journeys" aria-labelledby="journey-title">
  <h2 id="journey-title">{copy.title}</h2><p class="journey-note">{copy.note}</p>

@@ -9,7 +9,8 @@ const start = source.indexOf('const focus: AppMeta = ');
 const end = source.indexOf('\nconst hello: AppMeta', start);
 assert.ok(start >= 0 && end > start);
 const focus = runInNewContext(source.slice(start, end).replace('const focus: AppMeta = ', 'const focus = ') + '\nfocus');
-const expected = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261023.json', import.meta.url), 'utf8')).find(a => a.slug === 'pipi-focus').ios.ko;
+const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(a => a.slug === 'pipi-focus');
+const expected = current.ios.ko;
 
 test('the public receipt identifies the same current Focus iOS release in KR, JP and US', () => {
   assert.deepEqual(Object.keys(receipt.lookup).sort(), ['jp', 'kr', 'us']);
@@ -35,13 +36,16 @@ test('the update day remains the official UTC release day, not the KST observati
   assert.notEqual(receipt.updatedUTC, receipt.observedKSTDay);
 });
 
-test('only the freshly checked iOS platform gets the new dated observation', () => {
-  assert.equal(focus.release.ios.checkedAt, '2026-10-23');
-  assert.equal(focus.release.checkedAt, receipt.previousCommonObservationPreserved);
+test('both platforms carry the 2026-11-02 observation they were re-checked on', () => {
+  for (const lang of ['ko', 'ja', 'en']) assert.equal(current.ios[lang].version, expected.version, `${lang} storefront agrees`);
+  assert.equal(focus.release.ios.checkedAt, '2026-11-02');
+  assert.equal(focus.release.android.checkedAt, '2026-11-02');
+  assert.equal(focus.release.checkedAt, '2026-11-02');
 });
 
-test('an iOS update neither fabricates Android parity nor changes the first launch or destinations', () => {
-  assert.equal(focus.release.android, undefined);
+test('Android parity comes from the public Play listing and production track, without changing the first launch or destinations', () => {
+  assert.equal(focus.release.android.version, current.android.en.version);
+  assert.deepEqual(current.playProduction.map(r => r.name), [focus.release.android.version]);
   assert.equal(focus.release.since, undefined, 'review/submission date must not masquerade as first release');
   assert.equal(focus.stores.ios, 'https://apps.apple.com/app/pipi-focus-pirate-pomodoro/id6762258878');
   assert.equal(focus.stores.android, 'https://play.google.com/store/apps/details?id=com.pifl.pipi.focus');
@@ -50,26 +54,26 @@ test('an iOS update neither fabricates Android parity nor changes the first laun
 for (const lang of ['ko', 'ja', 'en']) {
   const detail = new URL(`../dist/${lang}/apps/pipi-focus/index.html`, import.meta.url);
   const home = new URL(`../dist/${lang}/index.html`, import.meta.url);
-  test(`${lang}: built landing, catalog and fleet use the verified iOS-only version and date`, { skip: !existsSync(detail) || !existsSync(home) }, () => {
+  test(`${lang}: built landing, catalog and fleet use the verified shared version and date`, { skip: !existsSync(detail) || !existsSync(home) }, () => {
     const html = readFileSync(detail, 'utf8');
     const catalog = readFileSync(home, 'utf8');
     const release = html.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
-    assert.ok(release?.includes('iOS v1.2.0'));
-    assert.ok(release.includes('datetime="2026-10-19"'));
-    assert.doesNotMatch(release, /Android v|v1\.0\.16/);
+    assert.ok(release?.includes('v1.2.3'));
+    assert.ok(release.includes('datetime="2026-10-24"'));
+    assert.doesNotMatch(release, /iOS v|Android v|v1\.2\.0|v1\.0\.16/);
     const schemas = value => [...value.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
     const app = schemas(html).find(s => s['@type'] === 'SoftwareApplication');
     const item = schemas(catalog).find(s => s['@type'] === 'ItemList').itemListElement.map(e => e.item).find(i => i.url.endsWith('/pipi-focus/'));
     for (const data of [app, item]) {
-      assert.equal(data.dateModified, '2026-10-19');
-      assert.equal(data.softwareVersion, undefined, 'no unverified shared iOS/Android version');
+      assert.equal(data.dateModified, '2026-10-24');
+      assert.equal(data.softwareVersion, '1.2.3', 'both stores verified at the same version');
     }
     const rows = [...catalog.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
     const focusRow = rows.find(row => row.includes(`href="/${lang}/apps/pipi-focus/"`));
-    assert.ok(rows[0].includes('2026-10-22'), 'latest verified update sorts first');
-    assert.ok(focusRow.includes('v1.2.0') && focusRow.includes('datetime="2026-10-19"'));
+    assert.ok(rows[0].includes('2026-11-02'), 'latest verified update sorts first');
+    assert.ok(focusRow.includes('v1.2.3') && focusRow.includes('datetime="2026-10-24"'));
     const observation = catalog.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
-    assert.ok(observation?.includes('datetime="2026-09-21"') && observation.includes('datetime="2026-10-23"'));
+    assert.ok(observation?.includes('datetime="2026-11-02"'));
   });
 }
 

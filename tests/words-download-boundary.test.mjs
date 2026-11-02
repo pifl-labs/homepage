@@ -26,7 +26,8 @@ test('iOS-qualified manual comparison is not recast as cross-platform handwritin
   assert.ok(words.content.en.features[3].desc.includes('Ads, stores and purchase restoration use the network'));
 });
 test('real destinations, release and screenshots remain the current verified product rather than a new app build', () => {
-  assert.equal(words.release.ios.version, '1.0.12');
+  const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(a => a.slug === 'pipi-words');
+  assert.equal(words.release.ios.version, current.ios.en.version);
   assert.ok(words.stores.ios.endsWith('/id6770267735'));
   assert.equal(new URL(words.stores.android).searchParams.get('id'), 'com.pifl.pipi.words');
   assert.equal(words.content.en.shots.map(s => s.file).join(','), 'home,study,flashcard,voyage,achievements');
