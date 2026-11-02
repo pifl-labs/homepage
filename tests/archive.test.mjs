@@ -23,7 +23,9 @@ for(const lang of ['ko','ja','en'])test(`${lang}: archive includes 14 apps, all 
  assert.ok(html.includes(`https://pifl-labs.com/${lang}/archive/`));
 });
 test('archive browser logic is external under the production self-only script policy',()=>{
- const headers=readFileSync('public/_headers','utf8');assert.match(headers,/script-src 'self';/);
+ const headers=readFileSync('public/_headers','utf8');
+ // Inline scripts stay blocked: only same-origin files and Cloudflare Web Analytics' injected beacon (versioned path) may run.
+ assert.deepEqual(headers.match(/script-src ([^;]+);/)[1].trim().split(/\s+/),["'self'",'https://static.cloudflareinsights.com/beacon.min.js','https://static.cloudflareinsights.com/beacon.min.js/']);
  for(const lang of ['ko','ja','en']){
   const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
   assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=4"/);
