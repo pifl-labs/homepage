@@ -47,6 +47,15 @@ US App Store listing checked 31 October 2026; the Google Play link was checked
 24 October 2026. Versions and features can differ by platform.
 This supplemental entry is separate from the ten-app snapshot above.
 
+### More Android apps
+
+Official US Google Play listings checked 5 November 2026.
+
+| App | Purpose and cost | Official install link |
+| --- | --- | --- |
+| Spending Log: Expense Tracker | Log expenses yourself or paste a payment message you choose; no bank linking. Free with ads; optional one-time Pro, not a subscription. | [Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=en&gl=US) |
+| Kkachi: Your Folk Painting | A Korean folk painting shaped by your Saju, for entertainment and cultural reflection—not a prediction or professional advice. Free download, no ads; in-app purchases listed. | [Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=en&gl=US) |
+
 ### App portfolio (PDF)
 
 [Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).
