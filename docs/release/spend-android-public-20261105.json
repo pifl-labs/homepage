@@ -1,0 +1,120 @@
+{
+  "at": "2026-11-05T07:08:48.617114+00:00",
+  "apps": [
+    {
+      "locale": "en",
+      "country": "US",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=en&gl=US",
+      "status": 200,
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Spending Log: Expense Tracker",
+        "url": "https://play.google.com/store/apps/details/Spending_Log_Expense_Tracker?id=com.pifl.pipi.spend&hl=en",
+        "description": "Log spending in 2 taps or paste a payment text. No bank linking, no account.",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "FINANCE",
+        "image": "https://play-lh.googleusercontent.com/8QWU3Z_ANDyorWcUqskoihN1xkDJs2MUlVsoHfE47YTEwdTLb6LDxM5CDf1xIPGiq3B77T3lZbYByKST-j70BQ",
+        "contentRating": "Everyone",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "about": "arrow_forward\nSpending Log is an expense tracker you keep yourself: type an expense, paste a copied payment message or share one from another app. No bank linking, no account to create, and your records stay on your device.\nPaste from a payment message\n• Copy a card or payment message, then tap \"Paste from message\" at the top of the entry screen\n• The amount, date and merchant (as the memo) are filled in. Just pick a category and tap Save\n• Or share the message to Spending Log from another app, and the entry screen opens already filled in\n• Cancellations, refunds, running totals, balances and other currencies are skipped\n• The app never reads your messages or notifications and asks for no such permission. The clipboard is read only when you tap the button, and the text is processed on your device and never sent anywhere\nTwo-tap entry\n• The number pad comes first: amount, category, Save. The ring on Home then shows what's left of this month's budget\n• Your usuals: chips suggest what you often log at this time of day. One tap saves it, and you can undo\n• Add a memo or another date only when needed. Edit or delete entries anytime\nResisted and recurring\n• Resisted: log something you decided not to buy. Home shows what you held back this month, apart from your spending\n• Repeat monthly: subscriptions and rent are logged automatically on their day. Manage them in Settings\nBudget, calendar and stats\n• The remaining-budget ring shows a color and a percentage, plus what you can spend per day\n• Start your month on any day from the 1st to the 28th, for example on payday\n• Daily totals on a monthly calendar\n• Category donut chart, last 6 months bars and a category ranking\nLooking back\n• Mark yesterday's expenses as worth it or regretted, and see your top 3 regretted categories in Stats\n• Work hours (optional): enter your hourly wage to see each expense as hours of work\n• Monthly receipt: share your month as a receipt-style image, with amounts hidden if you like\nCategories, export and backup\n• 12 everyday categories, plus your own\n• Save a CSV or PDF file with the system \"Save as\" screen (no storage permission)\n• Back up to a file you keep yourself. Restoring shows a preview first: merge or overwrite, settle conflicts, and undo the last restore if needed\nAlso included\n• An optional evening reminder, scheduled on your device\n• Light and dark theme, 10 languages, one currency in your local format (no exchange rates)\nWhat it doesn't do\nNo bank or card linking and no receipt scanning. It doesn't send or receive money or give advice: it's a log you keep yourself.\nFree with ads, or Pro once\nSpending Log is free and shows ads: a banner on Home, Calendar and Stats, and at most two full-screen ads a day. If you like, watch an ad to unlock extras for a while:\n• 90-day, 1-year and custom-range stats for 24 hours\n• 3 more categories for 7 days (up to 24 in total)\n• One CSV or PDF export per ad\nSpending Log Pro is a one-time purchase, not a subscription:\n• No ads\n• Unlimited categories\n• A budget for each category\n• 90-day, 1-year and custom-range stats\n• Unlimited export\nPro isn't saved in backup files. On a new device, tap \"Restore purchases\".\nPrivacy\nYour records, settings and hourly wage are stored only on your device, and we never receive them. Ads come from Google AdMob and usage statistics from Google Analytics for Firebase; neither receives your amounts, memos, wage or budgets. You decide whether ads may be personalized and can change it later.\nQuestions or feedback: support@pifl-labs.com\nLog spending in 2 taps or paste a payment text. No bank linking, no account.",
+      "updatedOn": "Oct 28, 2026",
+      "iconURL": "https://play-lh.googleusercontent.com/ohRyQRA9rNfhp7xLW0MtW1soD8SEX45Oec7MyH3FaxtukWUG_6GKVpvh3JiugzryLi7Bia02HPw=s20",
+      "sourceSHA256": "0ceeb88b0e6f4bacb61ab55f50d6fe9d538bc17869e3f328e5c60877ce6a809e"
+    },
+    {
+      "locale": "ko",
+      "country": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
+      "status": 200,
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "가계부: 매일 지출 기록",
+        "url": "https://play.google.com/store/apps/details/%EA%B0%80%EA%B3%84%EB%B6%80_%EB%A7%A4%EC%9D%BC_%EC%A7%80%EC%B6%9C_%EA%B8%B0%EB%A1%9D?id=com.pifl.pipi.spend&hl=ko",
+        "description": "두 번 눌러 지출 기록, 결제 문자는 붙여넣기로. 계좌 연결·회원가입 없는 가계부.",
+        "operatingSystem": "Android",
+        "applicationCategory": "FINANCE",
+        "image": "https://play-lh.googleusercontent.com/8QWU3Z_ANDyorWcUqskoihN1xkDJs2MUlVsoHfE47YTEwdTLb6LDxM5CDf1xIPGiq3B77T3lZbYByKST-j70BQ",
+        "contentRating": "3세 이상",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "about": "arrow_forward\n내가 직접 기록하는 가계부예요. 금액을 입력하거나, 복사해 둔 결제 문자를 붙여 넣거나, 다른 앱에서 공유하면 돼요. 은행 계좌나 카드를 연결하지 않고, 회원가입도 필요 없어요. 모든 기록은 내 기기 안에만 저장돼요.\n금액을 입력하고 카테고리를 고른 뒤 저장을 누르면 끝. 두 번만 누르면 홈 화면의 링에 이번 달 남은 예산이 바로 보여요.\n■ 결제 문자 붙여넣기\n• 카드 승인 문자나 결제 알림 문구를 복사한 뒤, 입력 화면 위쪽의 '문자 붙여넣기'를 누르세요\n• 금액·날짜·가맹점이 자동으로 채워져요(가맹점은 메모로 들어가요). 카테고리를 고르고 저장만 누르면 끝\n• 다른 앱에서 공유하기로 보내도 돼요. 금액이 채워진 입력 화면이 바로 열려요\n• 취소·환불 문구, 누적·잔액 금액, 다른 통화로 결제한 금액은 건너뛰어요\n• 앱은 문자나 알림을 직접 읽지 않고, 그런 권한도 요청하지 않아요. 버튼을 누를 때만 클립보드를 읽으며, 해석은 기기 안에서 끝나고 어디로도 전송되지 않아요\n■ 두 번 누르면 끝나는 입력\n• 숫자 패드가 먼저 열려요. 금액을 넣고 카테고리를 고른 뒤 저장을 누르면 끝이에요\n• 이 시간 단골: 이맘때 자주 기록하는 항목이 칩으로 떠요. 한 번 누르면 바로 기록되고, 되돌릴 수도 있어요\n• 메모나 날짜는 필요할 때만 바꾸면 돼요\n• 저장한 기록은 언제든 고치거나 지울 수 있어요\n■ 참았어요 · 매달 반복\n• 참았어요: 사려다 참은 것도 기록해 보세요. 홈에서 '이번 달 참은 돈'을 지출과 따로 보여 줘요\n• 매달 반복: 구독료·월세처럼 매달 나가는 지출은 정한 날에 자동으로 기록돼요. 설정의 '반복 지출'에서 관리해요\n■ 이번 달 예산이 한눈에\n• 월 예산을 정해 두면 기록할 때마다 남은 예산 링이 바로 바뀌어요\n• 링은 색과 퍼센트 숫자를 함께 보여 줘서 알아보기 쉬워요\n• 이번 달 남은 기간 동안 하루에 얼마까지 쓸 수 있는지 알려 줘요\n• 한 달 시작일은 1일부터 28일 중에서 고를 수 있어요. 월급날에 맞춰 보세요\n■ 달력 · 통계\n• 월 달력에서 날짜별 지출 합계를 보고, 날짜를 누르면 그날 쓴 내역이 나와요\n• 이번 달 카테고리별 도넛 차트, 최근 6개월 막대그래프, 카테고리 순위\n■ 돌아보기\n• 어제 돌아보기: 어제 쓴 돈에 '잘 썼어요'·'후회해요'를 남기면 통계에서 후회한 지출 TOP 3를 보여 줘요\n• 노동 시간 환산(선택): 시급을 넣으면 지출마다 몇 시간 일한 돈인지 함께 보여 줘요\n• 월말 영수증: 한 달을 영수증 모양 이미지로 공유해요. 금액을 숨길 수도 있어요\n■ 카테고리 · 내보내기 · 백업\n• 식비·카페·교통 등 자주 쓰는 카테고리 12개가 처음부터 들어 있고, 나만의 카테고리도 추가·편집할 수 있어요\n• 기록을 CSV나 PDF 파일로 만들고, 시스템 '다른 이름으로 저장' 화면에서 저장할 위치를 골라요. 저장공간 권한은 필요 없어요\n• 백업 파일을 만들어 원하는 곳에 직접 보관해요. 복원할 때는 무엇이 바뀌는지 먼저 보여 주고, 합치기·덮어쓰기와 충돌 항목을 고를 수 있어요. 마지막 복원은 되돌릴 수 있어요\n■ 매일 쓰기 편하게\n• 저녁 기록 알림(선택): 기기 안에서 예약되는 알림이라 설정에서 언제든 끌 수 있어요\n• 라이트·다크 테마\n• 통화 하나를 골라 지역 표기법대로 보여 줘요(환율 변환은 없어요)\n• 10개 언어 지원: 한국어, 영어, 일본어, 독일어, 프랑스어, 스페인어, 포르투갈어(브라질), 이탈리아어, 중국어(번체), 인도네시아어\n■ 이런 기능은 없어요\n• 은행·카드 연동\n• 영수증 촬영·인식\n• 송금처럼 돈이 오가는 기능\n• 조언 기능\n내가 직접 적는 기록장이에요.\n■ 무료(광고 포함), 또는 Pro 한 번 구매\n앱은 무료이고 광고가 나와요. 홈·캘린더·통계 화면 아래에 배너가 있고, 전면 광고는 하루 최대 2번이에요. 원하면 광고를 보고 일부 기능을 잠시 쓸 수 있어요.\n• 90일·1년·기간 직접 선택 통계 24시간 열기\n• 카테고리 3개 추가 7일(최대 24개)\n• 광고 1번에 CSV·PDF 내보내기 1회\nPro는 구독이 아니라 한 번만 사는 상품이에요.\n• 광고 제거\n• 카테고리 무제한\n• 카테고리별 예산\n• 90일·1년·기간 직접 선택 통계\n• 내보내기 무제한\nPro 구매는 백업 파일에 담기지 않아요. 새 기기에서는 '구매 복원'을 눌러 주세요.\n■ 개인정보\n지출 기록, 참은 돈, 반복 지출, 카테고리, 예산, 설정, 시급은 기기 안에만 저장되고 저희에게 전송되지 않아요. 광고는 Google AdMob이, 앱 이용 통계는 Google Analytics for Firebase가 처리하며, 어느 쪽에도 금액, 메모, 시급, 예산은 전달되지 않아요. 맞춤형 광고를 허용할지는 직접 정할 수 있고, 나중에 바꿀 수도 있어요.\n문의·의견: support@pifl-labs.com\n----\n개발자 연락처 :\n(주)피플랩스 대한민국 63238 제주특별자치도 제주시\n제주시 아란서길 101-2 203호 (아라일동,세인트빌) 814-86-03813 2026-제주아라-0057 제주특별자치도 제주시 064-728-7512\n두 번 눌러 지출 기록, 결제 문자는 붙여넣기로. 계좌 연결·회원가입 없는 가계부.",
+      "updatedOn": "2026. 10. 28.",
+      "iconURL": null,
+      "sourceSHA256": "479fad732c1dd63a1d41ae5ad836891033008f662ee4dd59b8647337ab8c1829"
+    },
+    {
+      "locale": "ja",
+      "country": "JP",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ja&gl=JP",
+      "status": 200,
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "家計簿：毎日の支出記録",
+        "url": "https://play.google.com/store/apps/details/%E5%AE%B6%E8%A8%88%E7%B0%BF_%E6%AF%8E%E6%97%A5%E3%81%AE%E6%94%AF%E5%87%BA%E8%A8%98%E9%8C%B2?id=com.pifl.pipi.spend&hl=ja",
+        "description": "2タップで支出を記録、決済メッセージは貼り付けでOK。口座連携・登録不要の家計簿。",
+        "operatingSystem": "Android",
+        "applicationCategory": "FINANCE",
+        "image": "https://play-lh.googleusercontent.com/8QWU3Z_ANDyorWcUqskoihN1xkDJs2MUlVsoHfE47YTEwdTLb6LDxM5CDf1xIPGiq3B77T3lZbYByKST-j70BQ",
+        "contentRating": "3 歳以上",
+        "author": {
+          "@type": "Person",
+          "name": "PiFl Labs",
+          "url": "https://pifl-labs.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "about": "arrow_forward\n自分で記録する、シンプルな家計簿です。金額を入力するか、コピーした決済メッセージを貼り付けるか、ほかのアプリから共有するだけ。銀行口座やカードとの連携はなく、アカウント登録も不要。記録はすべてお使いの端末の中だけに保存されます。\n金額を入力してカテゴリを選び、保存をタップすれば完了。たった2タップで、今月の予算があといくら残っているかがホーム画面のリングでわかります。\n■ 決済メッセージを貼り付け\n・カードの利用通知や決済の通知文をコピーして、入力画面の上にある「メッセージから貼り付け」をタップ\n・金額・日付・お店の名前が自動で入ります（お店の名前はメモに入ります）。あとはカテゴリを選んで保存をタップするだけ\n・ほかのアプリから共有で送ることもできます。金額が入った入力画面がすぐに開きます\n・取消・返金の文面、累計・残高の金額、外貨での支払いは読み取りません\n・アプリがメッセージや通知を直接読むことはなく、そのための権限も求めません。クリップボードを読むのはボタンをタップしたときだけで、読み取りは端末内で行われ、どこにも送信されません\n■ 2タップで記録\n・最初に数字パッドが開きます。金額を入れてカテゴリを選び、保存をタップすれば記録されます\n・この時間のいつもの：この時間帯によく記録する項目がチップで表示され、1タップですぐ記録。元に戻すこともできます\n・メモや日付の変更は必要なときだけ\n・記録はあとから編集・削除できます\n■ がまんした・毎月くり返す\n・がまんした：買うのをやめたものも記録できます。ホームに「今月がまんしたお金」を支出とは別に表示します\n・毎月くり返す：サブスクや家賃など毎月の支出は、決めた日に自動で記録されます。設定の「定期支出」で管理できます\n■ 今月の予算がひと目でわかる\n・月の予算を決めておくと、記録するたびに残り予算のリングが更新されます\n・リングは色とパーセントの両方で表示するので見やすい\n・月末まで1日あたりいくら使えるかも表示\n・月の開始日は1日〜28日から選べます。給料日に合わせるのもおすすめです\n■ カレンダー・集計\n・月のカレンダーで日ごとの合計を確認。日付をタップすると、その日の明細を表示\n・今月のカテゴリ別ドーナツグラフ、直近6か月の棒グラフ、カテゴリランキング\n■ ふり返り\n・昨日のふり返り：昨日の支出に「よかった」「後悔」をつけると、集計画面に後悔した支出 TOP 3 が表示されます\n・労働時間に換算（任意）：時給を入れると、支出ごとに何時間働いた分かも表示します\n・月末レシート：1か月をレシート風の画像にして共有できます。金額を隠すこともできます\n■ カテゴリ・書き出し・バックアップ\n・食費・カフェ・交通費など、よく使う12カテゴリを最初から用意。自分専用のカテゴリの追加・編集もできます\n・記録をCSVまたはPDFファイルにして、システムの「名前を付けて保存」画面で保存先を選べます。ストレージの権限は不要です\n・バックアップファイルを作って、好きな場所に自分で保管できます。復元の前に何が変わるかを確認でき、統合か上書きか、食い違う記録はどちらを残すかを選べます。最後の復元は取り消せます\n■ 毎日使いやすく\n・夜のリマインダー（任意）：端末内で設定される通知なので、設定画面からいつでもオフにできます\n・ライト／ダークテーマ\n・通貨を1つ選び、お住まいの地域の表記で表示（為替換算はありません）\n・10言語に対応：日本語、英語、韓国語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、イタリア語、中国語（繁体字）、インドネシア語\n■ このアプリにない機能\n・銀行・カードとの連携\n・レシートの読み取り\n・送金など、お金をやり取りする機能\n・アドバイス機能\n自分でつける記録帳です。\n■ 無料（広告あり）、またはProを買い切りで\nアプリは無料で、広告が表示されます。ホーム・カレンダー・集計画面の下部にバナー広告、全画面広告は1日2回までです。希望すれば、広告を見て一部の機能を一定期間使えます。\n・90日・1年・期間指定の集計を24時間\n・カテゴリを7日間3つ追加（最大24個）\n・広告1回でCSV・PDFの書き出し1回\nProはサブスクリプションではなく、1回きりの買い切りです。\n・広告なし\n・カテゴリ無制限\n・カテゴリ別の予算\n・90日・1年・期間指定の集計\n・書き出し無制限\nProの購入はバックアップファイルに含まれません。新しい端末では「購入を復元」をタップしてください。\n■ プライバシー\n支出の記録、がまんしたお金、定期支出、カテゴリ、予算、設定、時給は端末の中だけに保存され、当社に送信されることはありません。広告はGoogle AdMob、アプリの利用統計はGoogle Analytics for Firebaseが扱い、どちらにも金額・メモ・時給・予算が渡ることはありません。広告のパーソナライズを許可するかどうかはご自身で選べ、あとから変更もできます。\nお問い合わせ・ご意見：support@pifl-labs.com\n2タップで支出を記録、決済メッセージは貼り付けでOK。口座連携・登録不要の家計簿。",
+      "updatedOn": "2026/10/28",
+      "iconURL": null,
+      "sourceSHA256": "525c465cc8c520944911633aee3fa8ee83e788afa2be29327cd358f67dd6fb1b"
+    }
+  ],
+  "icon": {
+    "url": "https://play-lh.googleusercontent.com/8QWU3Z_ANDyorWcUqskoihN1xkDJs2MUlVsoHfE47YTEwdTLb6LDxM5CDf1xIPGiq3B77T3lZbYByKST-j70BQ",
+    "source": "Exact SoftwareApplication.image URL (not similarly labeled 20px third-party icon)",
+    "mime": "image/png",
+    "sha256": "0acbccb1c9dc610c53c872edd2d0d8228dccffb692827cadc4a600e627d6f088",
+    "webpSHA256": "409820c0cdaa43f1ff7da8ce1fee21a5e6ce6d36f7664ee84fef5f5f1a52cb49",
+    "dimensions": [
+      512,
+      512
+    ],
+    "conversion": "lossless WebP exact=True, full RGBA pixel identity"
+  },
+  "scope": "Current Android public metadata only; no version, first launch date or iOS inference"
+}

@@ -68,6 +68,8 @@ export interface AppMeta {
   /** hero 대표 스크린샷 file 명. 스크린샷이 아직 없는 '출시 예정' 앱은 생략한다. */
   privacyPath?: string | null;
   heroShot?: string;
+  /** false when no verified localized store preview is available; never substitute an icon or invented UI. */
+  catalogPreview?: boolean;
   content: Record<Lang, AppContent>;
 }
 
@@ -1156,6 +1158,109 @@ const kkachi: AppMeta = {
     }
   }
 };
+// Android public listing checked 2026-11-05; iOS/version/first-public date are not inferred.
+const spend: AppMeta = {
+  slug: 'pipi-spend',
+  "name": "Spending Log: Expense Tracker",
+  "nameByLang": {
+    "ko": "가계부: 매일 지출 기록",
+    "ja": "家計簿：毎日の支出記録"
+  },
+  "status": "live",
+  "category": {
+    "ko": "금융 · 지출 기록",
+    "ja": "ファイナンス · 支出記録",
+    "en": "Finance · Expense tracker"
+  },
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend"
+  },
+  "schemaCategory": "FinanceApplication",
+  "catalogPreview": false,
+  "content": {
+    "ko": {
+      "tagline": "지출 기록은 내가 직접",
+      "lede": "금액을 입력하거나 복사해 둔 결제 문자를 붙여 넣어 기록하세요. 은행·카드 연결이나 회원가입 없이, 지출 기록은 내 기기에 저장해요.",
+      "shotsTitle": "",
+      "featuresTitle": "내 방식대로 기록하기",
+      "ctaTitle": "Android에서 시작하세요",
+      "ctaSub": "돈을 보내거나 금융 조언을 하는 앱이 아닌, 내가 직접 쓰는 지출 기록장이에요.",
+      "downloadNote": "무료 설치·광고 포함. 광고 제거와 추가 기능은 선택형 일회성 Pro 구매로 이용해요. 구독은 아니에요.",
+      "shots": [],
+      "features": [
+        {
+          "icon": "fa-pen",
+          "title": "직접 입력하고 저장",
+          "desc": "금액과 카테고리를 고르고 저장하세요. 메모와 날짜는 필요할 때 바꾸고, 저장한 기록도 수정하거나 지울 수 있어요."
+        },
+        {
+          "icon": "fa-paste",
+          "title": "내가 고른 문자만 붙여넣기",
+          "desc": "복사한 결제 문구를 버튼으로 붙여 넣거나 다른 앱에서 공유하세요. 해석은 기기 안에서 끝나며 문자·알림을 자동으로 읽지 않아요."
+        },
+        {
+          "icon": "fa-chart-pie",
+          "title": "예산과 기록 돌아보기",
+          "desc": "달력과 통계에서 기록을 살펴보세요. 은행 계좌나 카드 연결, 영수증 스캔은 하지 않아요."
+        }
+      ]
+    },
+    "en": {
+      "tagline": "Keep your own spending log",
+      "lede": "Type an expense or paste a payment message you chose to copy. No bank or card linking, no account to create. Your expense records stay on your device.",
+      "shotsTitle": "",
+      "featuresTitle": "Record it your way",
+      "ctaTitle": "Start on Android",
+      "ctaSub": "A log you keep yourself—not a money-transfer service or financial adviser.",
+      "downloadNote": "Free to install, with ads. Optional one-time Pro purchase removes ads and adds features. Not a subscription.",
+      "shots": [],
+      "features": [
+        {
+          "icon": "fa-pen",
+          "title": "Enter, save, adjust",
+          "desc": "Enter an amount, pick a category and save. Change the memo or date when needed, and edit or delete saved records."
+        },
+        {
+          "icon": "fa-paste",
+          "title": "Paste only what you choose",
+          "desc": "Paste a copied payment message with a button, or share it from another app. Text is processed on your device; the app never monitors messages or notifications."
+        },
+        {
+          "icon": "fa-chart-pie",
+          "title": "Look back at your records",
+          "desc": "Review your entries in a calendar and statistics. No bank or card linking, and no receipt scanning."
+        }
+      ]
+    },
+    "ja": {
+      "tagline": "支出を自分で記録",
+      "lede": "金額を入力するか、自分でコピーした決済メッセージを貼り付けて記録。銀行口座・カード連携やアカウント登録は不要。支出の記録は端末内に保存されます。",
+      "shotsTitle": "",
+      "featuresTitle": "自分のペースで記録",
+      "ctaTitle": "Androidではじめる",
+      "ctaSub": "送金や金融の助言をするサービスではなく、自分でつける支出の記録帳です。",
+      "downloadNote": "無料ダウンロード・広告あり。広告の削除と追加機能は、任意の買い切りProで利用できます。定期購入ではありません。",
+      "shots": [],
+      "features": [
+        {
+          "icon": "fa-pen",
+          "title": "入力して、保存する",
+          "desc": "金額を入れ、カテゴリを選んで保存。メモや日付は必要なときだけ変更でき、保存した記録も編集・削除できます。"
+        },
+        {
+          "icon": "fa-paste",
+          "title": "選んだ文面だけ貼り付け",
+          "desc": "コピーした決済メッセージをボタンで貼り付けるか、ほかのアプリから共有。読み取りは端末内で行い、メッセージや通知を自動で読みません。"
+        },
+        {
+          "icon": "fa-chart-pie",
+          "title": "記録を振り返る",
+          "desc": "カレンダーと統計で記録を確認。銀行口座・カードとの連携やレシートの読み取りはしません。"
+        }
+      ]
+    }
+  }
+};
 const sky: AppMeta = {
   slug: 'pipi-sky',
   "name": "Skydaze: Cloud & Star Gazing",
@@ -1207,9 +1312,9 @@ const sky: AppMeta = {
   "privacyPath": null
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky };
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky, 'pipi-spend': spend };
 // 출시 앱을 먼저, 출시 예정 앱을 뒤에 둔다. Bridge는 공개 앱이다.
-export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, sky, legion];
+export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, spend, sky, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */

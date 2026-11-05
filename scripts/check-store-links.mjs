@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { APPLE_PROVIDER_TOKEN, storeUrl, websiteCampaign } from '../public/store-attribution.mjs';
+import { appList } from '../src/data/apps.ts';
 import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
@@ -38,8 +39,8 @@ for (const lang of ['ko', 'ja', 'en']) {
       assert.ok(attrs.rel.includes('noopener'), file);
       pageLinks++;
     }
-    // Published app pages have two placements × two stores; coming-soon has none.
-    if (file.endsWith(join(lang, 'index.html'))) assert.ok(pageLinks > 0 && pageLinks % 2 === 0, file);
+    // Home has one exact link per verified platform. Detail has two placements per platform; coming-soon has none.
+    if (file.endsWith(join(lang, 'index.html'))) assert.equal(pageLinks, appList.filter(a=>a.status==='live').reduce((n,a)=>n+Number(Boolean(a.stores.ios))+Number(Boolean(a.stores.android)),0), file);
     else {
       const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)]
         .map((m) => JSON.parse(m[1]));

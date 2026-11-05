@@ -182,6 +182,6 @@ test('the shared site footer does not link the app policy', { skip }, () => {
     const html = readFileSync(new URL(`../dist/${locale}/index.html`, import.meta.url), 'utf8');
     const footer = html.match(/<footer[\s\S]*?<\/footer>/)?.[0] ?? '';
     assert.ok(footer.length > 0, `${locale}: footer 존재`);
-    assert.ok(!footer.includes('pipi-spend'), `${locale}: 공용 푸터에 pipi-spend 링크 없음`);
+    assert.ok(!footer.includes(`href="/${locale}/apps/pipi-spend/privacy/"`)&&!footer.includes('href="/apps/pipi-spend/privacy/"'), `${locale}: 공용 푸터에 앱 전용 법적 링크 없음`);
   }
 });

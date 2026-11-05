@@ -18,7 +18,7 @@ const playDay = (slug) => new Date(`${seen(slug).android.en.updatedDisplay} UTC`
 const latestDay = (slug) => [iosDay(slug), playDay(slug)].sort().at(-1);
 const { liveApps, formatDate } = await import('../src/data/apps.ts');
 // Expected observation days come from the receipt, so a wrong checkedAt in apps.ts cannot set its own expectation.
-const observationDates = [...new Set(liveApps.map((app) => seen(app.slug).observedAt))].sort();
+const observationDates = [...new Set(liveApps.filter(app=>app.release).map((app) => {assert.ok(seen(app.slug), `${app.slug}: versioned app requires its own receipt`);return seen(app.slug).observedAt;}))].sort();
 const observationRange = [observationDates[0], observationDates.at(-1)].filter((d, i, all) => i === 0 || d !== all[0]);
 const versionToken = (prefix, version) => new RegExp(`(?:^|[^\\w.])${prefix}v${version.replace(/\./g, '\\.')}(?![\\w.])`);
 function expectVersionLabel(html, slug, where) {

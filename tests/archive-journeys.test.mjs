@@ -4,7 +4,7 @@ import {archiveJourneys} from '../src/data/archive-journeys.mjs';
 import {archiveApps,archiveEvents} from '../src/data/archive.mjs';
 import {readFileSync} from 'node:fs';
 test('every archive app has a localized, sourced journey or explicit evidence limit',()=>{
- assert.deepEqual(archiveJourneys.map(x=>x.app).sort(),[...archiveApps].sort());
+ assert.deepEqual(archiveJourneys.map(x=>x.app).sort(),[...archiveApps,'pipi-spend'].sort());
  assert.equal(archiveEvents.length,41);
  for(const item of archiveJourneys){
   assert.ok(item.sources.length);
@@ -16,7 +16,7 @@ test('every archive app has a localized, sourced journey or explicit evidence li
 test('all locales render native disclosures without changing dated event counts',()=>{
  for(const lang of ['ko','ja','en']){
   const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
-  assert.equal((html.match(/data-journey-app=/g)||[]).length,14);
+  assert.equal((html.match(/data-journey-app=/g)||[]).length,15);
   assert.equal((html.match(/data-event /g)||[]).length,41);
   assert.ok(html.includes('journey-sources'));
  }

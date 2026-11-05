@@ -16,7 +16,7 @@ function fixture(t, routes) {
   return root;
 }
 test('catalog inventory is nonempty and includes formerly omitted Tide', () => {
-  assert.equal(appSlugs.length, 14);
+  assert.equal(appSlugs.length, 15);
   assert.ok(appSlugs.includes('pipi-draw'));
   assert.ok(appSlugs.includes('pipi-tide'));
 });
