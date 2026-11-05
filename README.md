@@ -35,6 +35,14 @@ The English phrases describe each app's purpose; they are not new store names.
 | High and low tide information — 물때친구 - 만조 간조 물때표 위젯 | [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
 | AI philosophical dialogue — Dialogos: 철학자와의 대화 | [App Store (Korea)](https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4) · [Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
 
+### Current Android names (Korea)
+
+Checked 5 November 2026: the historical entries above now appear on Google Play as
+[밑그림: AI 색칠도안 생성기](https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR) and
+[물시계 - 바닷길·갯벌 물때 타이머](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR).
+These are the same two Android packages linked above, not new apps.
+App Store names and features may differ; check each linked listing.
+
 ### Step-by-step sudoku hints
 
 [Cell by Cell Sudoku — App Store (US)](https://apps.apple.com/us/app/cell-by-cell-sudoku/id6820125053) ·
