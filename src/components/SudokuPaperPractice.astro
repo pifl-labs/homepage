@@ -1,0 +1,63 @@
+---
+// Separate original worksheet, not an app screen or a built-in app puzzle.
+// Existing assets: PR150. Do not regenerate or change their bytes here.
+---
+<section class="app-section sudoku-paper-section" id="sudoku-paper-practice" aria-labelledby="sudoku-paper-title">
+  <div class="container">
+    <div class="sudoku-paper">
+      <p class="sudoku-paper-eyebrow">Free print-first practice</p>
+      <h2 id="sudoku-paper-title">One puzzle. Three hints.</h2>
+      <p>Try an original <span class="sudoku-paper-grid">9 × 9</span> Sudoku on paper, with three step-by-step hints and the solution. No app or account needed.</p>
+      <div class="sudoku-paper-links">
+        <a class="btn btn-primary" href="/assets/printables/one-square-at-a-time-en-a4.pdf" hreflang="en" download="one-square-at-a-time-en-a4.pdf">Download A4 PDF</a>
+        <a class="btn btn-ghost" href="/assets/printables/one-square-at-a-time-en.txt" hreflang="en">Read plain text</a>
+      </div>
+      <p class="sudoku-paper-note">PDF · 2 pages · about 7 KB. English. This separate PiFl Labs worksheet is not an app screenshot, a built-in app puzzle or the exact in-app hint wording.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sudoku-paper-section { scroll-margin-top: 6rem; }
+  .sudoku-paper {
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+  }
+  .sudoku-paper-eyebrow {
+    margin-bottom: .65rem;
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .sudoku-paper h2 {
+    margin-bottom: .85rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  .sudoku-paper p:not(.sudoku-paper-eyebrow) {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+  .sudoku-paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-block: 1.25rem;
+  }
+  .sudoku-paper-links a {
+    max-width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    text-align: center;
+  }
+  .sudoku-paper-note { font-size: .85rem; }
+  /* A short mathematical unit; never keep the full sentence on one line. */
+  .sudoku-paper-grid { white-space: nowrap; }
+</style>

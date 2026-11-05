@@ -1085,7 +1085,7 @@ const sudoku: AppMeta = {
       "features": []
     },
     "en": {
-      "tagline": "Puzzles · Sudoku",
+      "tagline": "See where to look next",
       "lede": "Step-by-step hints show where to look and why, not the answer. Four courses, 600 verified puzzles and a new daily puzzle, with no account and no ads. Available on iOS and Android.",
       "shotsTitle": "",
       "featuresTitle": "About the app",
