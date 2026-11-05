@@ -58,7 +58,7 @@ const copy = {
         const name = appName(app, lang);
         const submitted = submissionMedia(app.slug);
         return (
-          <article class:list={["app-card", { "app-card--soon": app.status === "soon" }]}>
+          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class:list={["app-card", { "app-card--soon": app.status === "soon" }]}>
             <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
               <img class="app-card-icon" src={appIconSrc(app.slug)} alt="" width="64" height="64" loading="lazy" />
               <div class="app-card-head">
@@ -71,7 +71,7 @@ const copy = {
                 <p class="app-card-tag">{catalogCopy[app.slug][lang]}</p>
                 <span class="app-card-detail">{({ ko: "앱 자세히 보기", ja: "アプリの詳細", en: "Explore app" })[lang]} <span aria-hidden="true">→</span></span>
               </div>
-              {app.status === 'live' && <figure class="app-card-preview">
+              {app.status === 'live' && app.catalogPreview !== false && <figure class="app-card-preview">
                 <img src={submitted ? submitted.shots[submitted.previewIndex].src : `/assets/apps/${app.slug}/${lang}/store-preview.webp`} alt="" width="480" height="1040" loading="lazy" />
                 <figcaption>{submitted ? (submitted.pending ? submissionCopy[lang].pending : submissionCopy[lang].short) : ({ ko: '공식 스토어 화면', ja: '公式ストアの画面', en: 'Official store preview' })[lang]}</figcaption>
               </figure>}
@@ -99,3 +99,9 @@ const copy = {
     <p class="app-media-footnote">{submissionCopy[lang].footnote}</p>
   </div>
 </section>
+
+<style>
+  /* This entry has no verified screenshot: do not reserve an empty preview column. */
+  #app-pipi-spend { scroll-margin-top: 6rem; }
+  #app-pipi-spend .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
+</style>

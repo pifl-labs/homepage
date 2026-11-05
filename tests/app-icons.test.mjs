@@ -6,7 +6,7 @@ import icons from '../src/data/app-icons.json' with { type: 'json' };
 import { appIconSrc } from '../src/data/app-icons.mjs';
 
 test('official public-store and prerelease icons have source-versioned URLs and exact asset hashes', () => {
-  assert.equal(Object.keys(icons).length, 13);
+  assert.equal(Object.keys(icons).length, 14);
   for (const [slug, icon] of Object.entries(icons)) {
     assert.equal(icon.file, `icon-${icon.sourceSha256.slice(0, 12)}.webp`);
     assert.equal(appIconSrc(slug), `/assets/apps/${slug}/${icon.file}`);

@@ -1,6 +1,8 @@
 import type { Lang } from '../i18n/ui';
+// Spend source: docs/release/spend-android-public-20261105.json.
 // Concise public-store summaries. Provenance: docs/release/homepage-app-audit-20261023.json.
 export const catalogCopy: Record<string, Record<Lang, string>> = {
+  'pipi-spend': {"ko": "금액을 직접 입력하거나 내가 고른 결제 문자를 붙여 넣는 가계부. 은행·카드 연결 없이 기기에 기록해요. Android · 광고 포함 · 선택형 일회성 Pro.", "ja": "金額を入力するか、自分で選んだ決済メッセージを貼り付け。銀行・カード連携なしで端末に記録。Android・広告あり・任意の買い切りPro。", "en": "Enter expenses or paste payment messages you choose. No bank linking; records stay on your device. Android, with ads and optional one-time Pro."},
   'pipi-bridge': { ko: '4~8세 아이의 한국어·한글·수학·학교생활 첫걸음. 부모 도움말은 다섯 언어로.', ja: '4〜8歳の韓国語・ハングル・算数・学校生活の第一歩。保護者向けガイドは5言語。', en: 'Korean, Hangul, early math and school basics for ages 4–8. Parent guidance in five languages.' },
   'pipi-focus': { ko: '집중 시간을 항해로 바꾸는 포모도로 타이머. 로파이·빗소리와 함께 공부하고 섬을 발견해요.', ja: '集中時間が航海になるポモドーロタイマー。ローファイや雨音と勉強して、島を発見。', en: 'Turn focus sessions into voyages. Study with a Pomodoro timer, lofi and rain sounds, and discover islands.' },
   'pipi-draw': { ko: '내 사진을 AI 색칠 도안으로 바꾸고 직접 칠해요. 사진 위에 바로 그리기도 가능해요.', ja: '写真をAIでぬりえの下絵にして、自分で彩色。元の写真にそのまま描くことも。', en: 'Turn your photos into AI coloring pages, then color them yourself. Or draw directly on the original photo.' },

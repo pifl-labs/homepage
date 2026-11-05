@@ -11,8 +11,10 @@ const langs = ['ko', 'ja', 'en'];
 const country = { ko: 'kr', ja: 'jp', en: 'us' };
 const packages = { 'pipi-focus': 'focus', 'pipi-draw': 'draw', 'pipi-word-voyage': 'wordvoyage', 'pipi-hello': 'hello', 'pipi-words': 'words', 'pipi-dday': 'dday', 'pipi-log': 'log', dialogos: 'thus', 'pipi-bridge': 'bridge', 'pipi-tide': 'tide', 'pipi-sudoku': 'sudoku', kkachi: 'kkachi', 'pipi-sky': 'sky', 'pipi-legion': 'spike' };
 
-test('the receipt covers every homepage app with provenance for each storefront', () => {
-  assert.equal(current.length, appList.length);
+test('the dated receipt preserves fourteen observed products; the later Spend entry has separate evidence', () => {
+  assert.equal(current.length, 14);
+  assert.deepEqual(new Set([...current.map(a=>a.slug),'pipi-spend']), new Set(appList.map(a=>a.slug)));
+  assert.equal(appList.length,15);
   for (const seen of current) {
     assert.equal(seen.observedAt, receipt.observedAt);
     assert.deepEqual(Object.keys(seen.android).sort(), [...langs].sort(), `${seen.slug}: three Play locales`);
@@ -38,7 +40,7 @@ test('the receipt covers every homepage app with provenance for each storefront'
 });
 const playDay = (text) => new Date(`${text} UTC`).toISOString().slice(0, 10);
 
-for (const app of appList) {
+for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
   const seen = current.find((a) => a.slug === app.slug);
   const iosLive = Boolean(seen.ios);
   const androidLive = langs.every((l) => seen.android[l]?.jsonLd);
@@ -103,7 +105,7 @@ test('apps without a public listing use their App Store Connect registered name 
 
 test('archive names over time are per language and end with that language\'s current name', async () => {
   const { archiveNames } = await import('../src/data/archive.mjs');
-  for (const app of appList) {
+  for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
     for (const lang of langs) {
       const list = archiveNames[app.slug][lang];
       assert.ok(Array.isArray(list) && list.length, `${app.slug}/${lang}: list`);
@@ -116,11 +118,16 @@ test('archive names over time are per language and end with that language\'s cur
   assert.ok(!html.includes('<li>Pomodoro at Sea: Focus Timer</li>'), 'ko archive does not list the English-only name');
 });
 
-test('account apps without a public listing are not advertised on the homepage', () => {
+test('dated unlisted accounts remain unpublished unless separate later public evidence exists', () => {
   assert.deepEqual(receipt.accountAppsWithoutPublicListing.map((e) => e.bundleId).sort(), ['com.pifl.pipi.bp', 'com.pifl.pipi.drill', 'com.pifl.pipi.habit', 'com.pifl.pipi.spend']);
   for (const extra of receipt.accountAppsWithoutPublicListing) {
     assert.equal(extra.iosPublic, false, extra.bundleId);
     assert.deepEqual(Object.values(extra.playPublicStatus), [404, 404, 404], extra.bundleId);
-    assert.equal(appList.some((a) => a.stores.android?.endsWith(`id=${extra.bundleId}`)), false);
+    if(extra.bundleId==='com.pifl.pipi.spend'){
+      const later=JSON.parse(readFileSync(new URL('../docs/release/spend-android-public-20261105.json',import.meta.url),'utf8'));
+      assert.equal(later.apps.length,3);assert.ok(later.apps.every(x=>x.status===200&&new URL(x.url).searchParams.get('id')===extra.bundleId));
+      assert.equal(appList.find(a=>a.slug==='pipi-spend').stores.ios,undefined);
+      assert.equal(new URL(appList.find(a=>a.slug==='pipi-spend').stores.android).searchParams.get('id'),extra.bundleId);
+    }else assert.equal(appList.some((a) => a.stores.android?.endsWith(`id=${extra.bundleId}`)), false);
   }
 });

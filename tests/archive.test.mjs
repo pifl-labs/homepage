@@ -15,9 +15,9 @@ test('archive preserves distinct events, unknown versions and sanitized provenan
  assert.doesNotMatch(JSON.stringify(data),/mail\.google|message_id|@|token|TestFlight/i);
  for(const media of Object.values(archiveMedia))for(const key of ['oldIcon','oldShot','newShot'])if(media[key])assert.ok(existsSync('public'+media[key]));
 });
-for(const lang of ['ko','ja','en'])test(`${lang}: archive includes 14 apps, all events and accessible filter controls`,()=>{
+for(const lang of ['ko','ja','en'])test(`${lang}: archive includes 15 registered apps, all events and accessible filter controls`,()=>{
  const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
- assert.equal((html.match(/data-app-summary=/g)||[]).length,14);
+ assert.equal((html.match(/data-app-summary=/g)||[]).length,15);
  assert.equal((html.match(/data-event /g)||[]).length,archiveEvents.length);
  assert.ok(html.includes('aria-live="polite"'));assert.ok(html.includes('type="reset"'));
  assert.ok(html.includes(`https://pifl-labs.com/${lang}/archive/`));

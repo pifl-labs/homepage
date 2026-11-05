@@ -35,7 +35,12 @@ for (const [lang, checks] of Object.entries(expected)) {
   for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
     if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;
     const other = readFileSync(file, 'utf8');
-    assert.doesNotMatch(other, /class="app-download-note"/, `${file}: Draw disclosure leaked`);
+    if(file.includes('/pipi-spend/')) {
+      const ownNote=other.match(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/s)?.[1];
+      assert.ok(ownNote, `${file}: Spend must disclose its own cost`);
+      assert.match(ownNote,/Pro/);
+      for(const text of [checks.note[0],checks.note[3]]) assert.ok(!ownNote.includes(text), `${file}: Draw-specific conversion claim leaked`);
+    } else assert.doesNotMatch(other, /class="app-download-note"/, `${file}: Draw disclosure leaked`);
   }
   checked++;
 }

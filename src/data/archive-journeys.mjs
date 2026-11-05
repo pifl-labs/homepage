@@ -1,5 +1,21 @@
 // Manually reviewed version documents; document versions are not release dates.
 export const archiveJourneys = [
+{
+  "app": "pipi-spend",
+  "stages": [],
+  "limit": {
+    "ko": "2026년 11월 5일 Google Play 공개 소개를 확인했습니다. Android 소개이며, 버전별 변화·최초 출시일·iOS 출시는 확인하지 않았습니다.",
+    "ja": "2026年11月5日にGoogle Playの公開紹介を確認。Androidの紹介であり、バージョン別の変化・初回公開日・iOS公開は未確認です。",
+    "en": "Google Play public listing checked on November 5, 2026. Android only; version history, first release date and an iOS release are unverified."
+  },
+  "sources": [
+    {
+      "path": "docs/release/spend-android-public-20261105.json",
+      "commit": null,
+      "sha256": "9697ea414998c59b989ec9116cec14565af52016ca1a1e38b6d9305b79882100"
+    }
+  ]
+},
   {
     "app": "pipi-focus",
     "stages": [
