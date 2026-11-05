@@ -1,0 +1,51 @@
+---
+// Current KR Google Play description checked 2026-11-05. Android only;
+// do not infer iOS parity, exam outcomes, or a new app release.
+---
+<section class="app-section words-eps-section" id="android-eps-topik" aria-labelledby="words-eps-title">
+  <div class="container">
+    <div class="words-eps">
+      <p class="words-eps-eyebrow">Android · EPS-TOPIK</p>
+      <h2 id="words-eps-title">무료 팩부터 골라 보세요</h2>
+      <p>고용허가제 한국어용 <span class="words-eps-code">EPS-TOPIK</span> 단어팩 7개 중 <strong><span class="words-eps-code">EPS-1·2</span>는 무료</strong>입니다. <span class="words-eps-code">EPS-3~7</span>은 묶음 구매나 프리미엄으로 이용할 수 있어요.</p>
+      <p>기본 무료 한도는 새 단어 하루 20장, 퀴즈 하루 10회입니다. 이미 배운 단어의 복습은 무제한이에요.</p>
+      <p>광고와 선택형 인앱결제가 있습니다. 프리미엄은 월 자동갱신 구독 또는 일회성 평생 이용권 중 선택할 수 있어요.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .words-eps-section { scroll-margin-top: 6rem; }
+  .words-eps {
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .words-eps-eyebrow {
+    margin-bottom: .65rem;
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .words-eps h2 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .words-eps p:not(.words-eps-eyebrow) {
+    margin-bottom: .85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    text-wrap: pretty;
+  }
+  .words-eps strong { color: var(--text-primary); }
+  /* Only short pack identifiers, never a full sentence or paragraph. */
+  .words-eps-code { white-space: nowrap; }
+</style>
