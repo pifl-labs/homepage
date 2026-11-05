@@ -55,6 +55,13 @@ US App Store listing checked 31 October 2026; the Google Play link was checked
 24 October 2026. Versions and features can differ by platform.
 This supplemental entry is separate from the ten-app snapshot above.
 
+#### Free print-first practice
+
+[Original Sudoku practice PDF (A4, 2 pages)](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-en-a4.pdf) · [Plaintext companion](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-en.txt)
+
+One original 9 x 9 puzzle, three progressive hints and an answer key. No app or account needed.
+This is a separate practice puzzle, not an app screenshot or a built-in app puzzle. The Android app link is optional; current store availability and purchases apply.
+
 ### More Android apps
 
 Official US Google Play listings checked 5 November 2026.
