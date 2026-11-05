@@ -1,0 +1,55 @@
+ONE SQUARE AT A TIME
+A free print-first Sudoku break - PiFl Labs
+
+Puzzle ID: PIFL-SUDOKU-PRINT-FIRST-20261105
+Original 9 x 9 practice puzzle. A dot means an empty cell.
+Fill every row, column and 3 x 3 box with digits 1 to 9, without repeats.
+Row numbers run top to bottom; column numbers run left to right.
+
+7 . 5 1 . . 8 . 6
+6 8 2 . 5 . 1 4 9
+9 . 4 . . . 3 . .
+. . 9 . . . . . 8
+. . . 4 . 3 2 6 1
+. . . . 7 8 4 . .
+. . . . . 2 . 3 .
+. 7 8 . . 5 6 . .
+. 9 . 6 1 . 7 . 2
+
+HINTS - READ ONLY AS NEEDED
+
+HINT 1
+Start with the original puzzle.
+LOOK - Row 1, column 2 (r1c2).
+WHY - Row 1 is missing 2, 3, 4, 9. Column 2 already contains 7, 8, 9. The 3 x 3 box contains 2, 4, 5, 6, 7, 8, 9. Only one digit fits all three.
+DIGIT - 3
+
+HINT 2
+After filling hint 1, look here next.
+LOOK - Row 1, column 8 (r1c8).
+WHY - Row 1 is missing 2, 4, 9. Column 8 already contains 3, 4, 6. The 3 x 3 box contains 1, 3, 4, 6, 8, 9. Only one digit fits all three.
+DIGIT - 2
+
+HINT 3
+After filling hint 2, look here next.
+LOOK - Row 2, column 6 (r2c6).
+WHY - Row 2 is missing 3, 7. Column 6 already contains 2, 3, 5, 8. The 3 x 3 box contains 1, 5. Only one digit fits all three.
+DIGIT - 7
+
+ANSWER KEY - SPOILER
+7 3 5 1 4 9 8 2 6
+6 8 2 3 5 7 1 4 9
+9 1 4 8 2 6 3 5 7
+3 4 9 2 6 1 5 7 8
+8 5 7 4 9 3 2 6 1
+1 2 6 5 7 8 4 9 3
+4 6 1 7 8 2 9 3 5
+2 7 8 9 3 5 6 1 4
+5 9 3 6 1 4 7 8 2
+
+These original hints use single candidates. This is not an app screenshot, a built-in app puzzle, or exact in-app hint wording.
+The worksheet needs no app or account.
+Optional Android app: Cell by Cell Sudoku, from PiFl Labs.
+https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=en&gl=US
+Availability, device requirements and purchases: check the linked store.
+Prepared 5 November 2026. No health, learning, speed or financial outcome is claimed.
