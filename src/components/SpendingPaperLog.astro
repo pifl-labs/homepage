@@ -1,0 +1,62 @@
+---
+// Separate original blank paper tool. No app screenshot, financial data or upload form.
+---
+<section class="app-section spend-paper-section" id="spending-paper-log" aria-labelledby="spend-paper-title">
+  <div class="container">
+    <div class="spend-paper">
+      <p class="spend-paper-eyebrow">Free paper tool</p>
+      <h2 id="spend-paper-title">Start on paper, if you prefer</h2>
+      <p>Set your own dates and currency, then record up to 18 expenses on one A4 page. Use it without installing an app or creating an account.</p>
+      <div class="spend-paper-links">
+        <a class="btn btn-primary" href="/assets/printables/payday-spending-log-en-a4.pdf" type="application/pdf" hreflang="en" download="payday-spending-log-en-a4.pdf">Open PDF (A4)</a>
+        <a class="btn btn-ghost" href="/assets/printables/payday-spending-log-en.txt" hreflang="en">Text version</a>
+      </div>
+      <p class="spend-paper-note">English PDF, <span class="spend-paper-unit">1 page</span>, about <span class="spend-paper-unit">22 KB</span>. Keep filled pages private - no upload is provided. This standalone sheet is not an app screen or a new app feature.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .spend-paper-section { scroll-margin-top: 6rem; }
+  .spend-paper {
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+  }
+  .spend-paper-eyebrow {
+    margin-bottom: .65rem;
+    color: var(--text-secondary);
+    font-size: .875rem;
+    font-weight: 600;
+  }
+  .spend-paper h2 {
+    margin-bottom: .85rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+  .spend-paper p:not(.spend-paper-eyebrow) {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+  .spend-paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-block: 1.25rem;
+  }
+  .spend-paper-links a {
+    max-width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    text-align: center;
+  }
+  .spend-paper-note { font-size: .875rem; }
+  /* Short fixed units, confirmed to fit at 320px / 200% text. */
+  .spend-paper-unit { white-space: nowrap; }
+</style>

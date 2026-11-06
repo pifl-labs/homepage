@@ -223,3 +223,11 @@ A standalone A5 card with Japanese instructions for Korean vocabulary learners: 
 - Original one-page family role-play for asking for help with `도와주세요.` Use an empty, light box and only pretend its lid is hard to open. A child may point, speak together with a grown-up, or stop. No scoring, audio or pronunciation instruction.
 - No app, registration, purchase or submission of child information is needed for the sheet. The separate iPhone/iPad app [Korean Bridge](https://apps.apple.com/app/id6801205183) offers Vietnamese grown-up guidance; its US 1.0.1 listing checked 17 October 2026 says no ads or in-app purchases. Availability is not guaranteed in every region. This paper is not a new app feature or Vietnamese puzzle interface.
 - PiFl Labs original, with AI translation/layout assistance. Not independently educator/native-speaker reviewed or physically print-tested; learning outcomes are not established. Free home/classroom printing with attribution. Existing Noto Sans JP and NanumGothic are embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/help-me-ko-vi-OFL.txt). The Korean-Vietnamese dictionary is a word-meaning reference, not an endorsement.
+
+## Free payday spending log
+
+An original blank A4 paper log: choose your own dates and currency, then record up to 18 expenses. No app, account or upload is needed; keep completed pages private. This is not an app screenshot, a new app feature, a recommended budget or financial advice.
+
+- [English PDF](https://pifl-labs.com/assets/printables/payday-spending-log-en-a4.pdf) · [Text version](https://pifl-labs.com/assets/printables/payday-spending-log-en.txt) · [Paper-first entry](https://pifl-labs.com/en/apps/pipi-spend/#spending-paper-log)
+- Optional Android app: [Spending Log: Expense Tracker](https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=en&gl=GB), UK listing checked 6 November 2026. Contains ads; optional one-time Pro purchase, no subscription. Availability in other countries is not inferred.
+- PiFl Labs original. Free personal/classroom printing with attribution; no selling or rehosting. Noto Sans JP is embedded under the [SIL Open Font License](https://pifl-labs.com/assets/printables/payday-spending-log-en-OFL.txt). Physical printing, native app behavior and marketing or financial outcomes are unverified.
