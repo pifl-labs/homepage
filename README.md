@@ -62,6 +62,14 @@ This supplemental entry is separate from the ten-app snapshot above.
 One original 9 x 9 puzzle, three progressive hints and an answer key. No app or account needed.
 This is a separate practice puzzle, not an app screenshot or a built-in app puzzle. The Android app link is optional; current store availability and purchases apply.
 
+#### 日本語で、紙からナンプレ
+
+[日本語の無料PDF（A4・2ページ）](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ja-a4.pdf) · [同じ問題と説明のテキスト版](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ja.txt)
+
+英語版と同じオリジナル問題1問に、日本語の段階ヒント3つと答えを付けました。新しい別問題・アプリの収録問題や画面ではありません。紙だけで使え、インストール・登録・購入は不要です。
+別の選択肢として、PiFl LabsのAndroidアプリ [ひとマスずつナンプレ（日本Google Play）](https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ja&gl=JP) を案内しています。提供状況・対応端末・費用はストアの最新表示をご確認ください。
+2026年11月6日作成。AI翻訳・レイアウト補助を使用し、実際の印刷・母語話者の独立校閲・学習効果は未確認です。Noto Sans JPの埋め込みは既存の [SIL Open Font License](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ja-OFL.txt) に従います。
+
 ### More Android apps
 
 Official US Google Play listings checked 5 November 2026.
