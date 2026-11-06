@@ -71,6 +71,16 @@ Official US Google Play listings checked 5 November 2026.
 | Spending Log: Expense Tracker | Log expenses yourself or paste a payment message you choose; no bank linking. Free with ads; optional one-time Pro, not a subscription. | [Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=en&gl=US) |
 | Kkachi: Your Folk Painting | A Korean folk painting shaped by your Saju, for entertainment and cultural reflection—not a prediction or professional advice. Free download, no ads; in-app purchases listed. | [Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=en&gl=US) |
 
+### Manual blood-pressure records (Android)
+
+[혈압 기록: 혈압 수첩·심박 — Google Play (Korea)](https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR).
+Korean listing checked 6 November 2026; this does not establish iOS or worldwide availability.
+
+Enter readings from your own blood-pressure monitor. The app does not measure blood pressure
+and is not a medical device or a source of medical advice. Basic records and up to six family
+profiles are free; enter another person's readings only with their permission.
+PDF/CSV export requires an optional one-time Pro purchase. There is no subscription.
+
 ### App portfolio (PDF)
 
 [Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).
