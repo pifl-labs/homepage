@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
+import { liveApps, latestUpdate } from '../src/data/apps.ts';
 
 const receipt = JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261016-focus.json', import.meta.url), 'utf8'));
 const source = readFileSync(new URL('../src/data/apps.ts', import.meta.url), 'utf8');
@@ -70,7 +71,10 @@ for (const lang of ['ko', 'ja', 'en']) {
     }
     const rows = [...catalog.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
     const focusRow = rows.find(row => row.includes(`href="/${lang}/apps/pipi-focus/"`));
-    assert.ok(rows[0].includes('2026-11-02'), 'latest verified update sorts first');
+    const observedDates = rows.map(row=>row.match(/datetime="([^"]+)"/)?.[1]);
+    const latest = liveApps.map(latestUpdate).filter(Boolean).sort().at(-1);
+    assert.equal(observedDates[0], latest, 'latest independently observed app update sorts first');
+    assert.deepEqual(observedDates, [...observedDates].sort().reverse(), 'all fleet rows remain newest-first');
     assert.ok(focusRow.includes('v1.2.3') && focusRow.includes('datetime="2026-10-24"'));
     const observation = catalog.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
     assert.ok(observation?.includes('datetime="2026-11-02"'));

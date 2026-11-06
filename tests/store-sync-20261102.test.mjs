@@ -7,6 +7,9 @@ import { appList, appName, storeAppName } from '../src/data/apps.ts';
 // Public store responses decide availability, names and versions; console state never makes an app "live".
 const receipt = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8'));
 const current = receipt.apps;
+// Later evidence updates only this platform; the dated baseline receipt remains immutable.
+const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
+
 const langs = ['ko', 'ja', 'en'];
 const country = { ko: 'kr', ja: 'jp', en: 'us' };
 const packages = { 'pipi-focus': 'focus', 'pipi-draw': 'draw', 'pipi-word-voyage': 'wordvoyage', 'pipi-hello': 'hello', 'pipi-words': 'words', 'pipi-dday': 'dday', 'pipi-log': 'log', dialogos: 'thus', 'pipi-bridge': 'bridge', 'pipi-tide': 'tide', 'pipi-sudoku': 'sudoku', kkachi: 'kkachi', 'pipi-sky': 'sky', 'pipi-legion': 'spike' };
@@ -66,9 +69,11 @@ for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
     if (iosLive) {
       const versions = new Set(langs.map((l) => seen.ios[l].version));
       assert.equal(versions.size, 1, 'KR/JP/US agree');
-      assert.equal(app.release.ios.version, seen.ios.en.version);
-      assert.equal(app.release.ios.updated, seen.ios.en.currentVersionReleaseDate.slice(0, 10));
-      assert.equal(app.release.ios.checkedAt, '2026-11-02');
+      const later = app.slug === 'pipi-log' ? laterLogIOS.apps.find(r=>r.lang==='en').app : null;
+      const observed = later ?? seen.ios.en;
+      assert.equal(app.release.ios.version, observed.version);
+      assert.equal(app.release.ios.updated, observed.currentVersionReleaseDate.slice(0, 10));
+      assert.equal(app.release.ios.checkedAt, later ? laterLogIOS.observedAt : '2026-11-02');
     } else {
       assert.equal(app.release?.ios, undefined);
     }

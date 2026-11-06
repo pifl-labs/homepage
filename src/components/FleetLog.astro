@@ -72,8 +72,8 @@ const copy = {
               <span class="fleet-meta">
                 {!common ? (
                   <span class="fleet-ver">
-                    {r.ios && <span class="fleet-chip"><i class="fab fa-apple" aria-hidden="true"></i> v{r.ios.version}</span>}
-                    {r.android && <span class="fleet-chip"><i class="fab fa-google-play" aria-hidden="true"></i> v{r.android.version}</span>}
+                    {r.ios && <span class="fleet-chip" style="color: var(--text-primary)"><i class="fab fa-apple" aria-hidden="true"></i> iOS v{r.ios.version}</span>}
+                    {r.android && <span class="fleet-chip" style="color: var(--text-primary)"><i class="fab fa-google-play" aria-hidden="true"></i> Android v{r.android.version}</span>}
                   </span>
                 ) : (
                   <span class="fleet-ver">

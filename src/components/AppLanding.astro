@@ -120,7 +120,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : [])]}
+  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : [])]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 

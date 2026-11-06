@@ -36,7 +36,9 @@ test('download CTA states no ads and the optional one-time supporter purchase', 
 
 test('the factual-copy change keeps the actual release, store destinations and screenshots', () => {
   const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(a => a.slug === 'pipi-log');
-  assert.equal(log.release.ios.version, current.ios.en.version);
+  const later = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
+  assert.equal(current.ios.en.version, '1.0.13', 'dated baseline stays historical');
+  assert.equal(log.release.ios.version, later.apps.find(r=>r.lang==='en').app.version);
   assert.equal(log.release.android.version, current.android.en.version);
   assert.equal(log.stores.ios, 'https://apps.apple.com/app/pipi-log/id6770272665');
   assert.equal(new URL(log.stores.android).searchParams.get('id'), 'com.pifl.pipi.log');

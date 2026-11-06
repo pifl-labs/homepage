@@ -1,0 +1,65 @@
+{
+  "observedAt": "2026-11-06",
+  "scope": "Only Log iOS current public KR/JP/US metadata; Android retains last2026-11-02 source. Not installed binary/screens/privacy or global parity.",
+  "updatedDateConvention": "UTC ISOdate from currentVersionReleaseDate.slice(0,10), matching existing release schema; timestamp is preserved.",
+  "apps": [
+    {
+      "lang": "ko",
+      "country": "kr",
+      "observedAt": "2026-11-06T01:09:13.873545+00:00",
+      "url": "https://itunes.apple.com/lookup?id=6770272665&country=kr&entity=software",
+      "HTTP": 200,
+      "app": {
+        "trackId": 6770272665,
+        "trackName": "기분 한 칸: 날씨 감정일기",
+        "bundleId": "com.pifl.pipi.log",
+        "sellerName": "PiFl Labs Co., Ltd.",
+        "version": "1.0.14",
+        "price": 0.0,
+        "currency": "KRW",
+        "currentVersionReleaseDate": "2026-11-04T17:21:03Z"
+      }
+    },
+    {
+      "lang": "ja",
+      "country": "jp",
+      "observedAt": "2026-11-06T01:21:00.948980+00:00",
+      "url": "https://itunes.apple.com/lookup?id=6770272665&country=jp&entity=software",
+      "HTTP": 200,
+      "app": {
+        "trackId": 6770272665,
+        "trackName": "気分のひとこま：感情日記",
+        "bundleId": "com.pifl.pipi.log",
+        "sellerName": "PiFl Labs Co., Ltd.",
+        "version": "1.0.14",
+        "price": 0.0,
+        "currency": "JPY",
+        "currentVersionReleaseDate": "2026-11-04T17:21:03Z"
+      }
+    },
+    {
+      "lang": "en",
+      "country": "us",
+      "observedAt": "2026-11-06T01:08:26.113594+00:00",
+      "url": "https://itunes.apple.com/lookup?id=6762258878,6770267735,6770272665,6770268950,6779071131,6777299814,6801205183,6788949612,6780508628&country=us",
+      "HTTP": 200,
+      "app": {
+        "trackId": 6770272665,
+        "trackName": "Mood Tile: Daily Journal",
+        "bundleId": "com.pifl.pipi.log",
+        "sellerName": "PiFl Labs Co., Ltd.",
+        "version": "1.0.14",
+        "price": 0.0,
+        "currency": "USD",
+        "currentVersionReleaseDate": "2026-11-04T17:21:03Z"
+      }
+    }
+  ],
+  "unchangedAndroidObservation": {
+    "version": "1.0.13",
+    "updated": "2026-10-23",
+    "checkedAt": "2026-11-02"
+  },
+  "originalSharedObservation": "2026-11-02",
+  "originalSince": "2026-06-09"
+}
