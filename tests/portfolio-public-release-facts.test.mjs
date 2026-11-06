@@ -4,12 +4,16 @@ import {test} from 'node:test';
 const source=readFileSync(new URL('../src/data/apps.ts',import.meta.url),'utf8');
 const receipt=JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261008.json',import.meta.url),'utf8'));
 const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps;
+const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json',import.meta.url),'utf8'));
 const variables={'com.pifl.pipi.wordvoyage':'wordVoyage','com.pifl.pipi.hello':'hello','com.pifl.pipi.words':'words','com.pifl.pipi.log':'log'};
 const slugs={'com.pifl.pipi.wordvoyage':'pipi-word-voyage','com.pifl.pipi.hello':'pipi-hello','com.pifl.pipi.words':'pipi-words','com.pifl.pipi.log':'pipi-log'};
 const playDay=text=>new Date(`${text} UTC`).toISOString().slice(0,10);
 const block=v=>source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 for(const [bundle,v] of Object.entries(variables))test(`${bundle}: observed iOS version and UTC date replace older metadata`,()=>{
- const r=current.find(a=>a.slug===slugs[bundle]).ios.ko;assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-11-02' }`));
+ const later = bundle==='com.pifl.pipi.log' ? laterLogIOS.apps.find(a=>a.lang==='ko').app : null;
+ const r=later??current.find(a=>a.slug===slugs[bundle]).ios.ko;
+ const checkedAt=later?laterLogIOS.observedAt:'2026-11-02';
+ assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.currentVersionReleaseDate.slice(0,10)}', checkedAt: '${checkedAt}' }`));
 });
 test('Words iOS destination uses all three current public listing names and keeps aliases',()=>{
  const b=block('words');const ios=b.match(/ios: \{ ko: '([^']+)', ja: '([^']+)', en: '([^']+)' \}/);

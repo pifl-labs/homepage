@@ -10,15 +10,20 @@ const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 // Expected release facts come from the latest public receipt, not from hand-typed versions.
 const receipt = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps;
 const seen = (slug) => receipt.find((a) => a.slug === slug);
-const iosVersion = (slug) => seen(slug).ios.en.version;
+const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
+const iosRecord = slug => slug === 'pipi-log' ? laterLogIOS.apps.find(r=>r.lang==='en').app : seen(slug).ios.en;
+const iosVersion = (slug) => iosRecord(slug).version;
 const androidVersion = (slug) => seen(slug).android.en.version;
 const shared = (slug) => (iosVersion(slug) === androidVersion(slug) ? iosVersion(slug) : undefined);
-const iosDay = (slug) => seen(slug).ios.en.currentVersionReleaseDate.slice(0, 10);
+const iosDay = (slug) => iosRecord(slug).currentVersionReleaseDate.slice(0, 10);
 const playDay = (slug) => new Date(`${seen(slug).android.en.updatedDisplay} UTC`).toISOString().slice(0, 10);
 const latestDay = (slug) => [iosDay(slug), playDay(slug)].sort().at(-1);
 const { liveApps, formatDate } = await import('../src/data/apps.ts');
 // Expected observation days come from the receipt, so a wrong checkedAt in apps.ts cannot set its own expectation.
-const observationDates = [...new Set(liveApps.filter(app=>app.release).map((app) => {assert.ok(seen(app.slug), `${app.slug}: versioned app requires its own receipt`);return seen(app.slug).observedAt;}))].sort();
+const observationDates = [...new Set(liveApps.filter(app=>app.release).flatMap((app) => {
+  assert.ok(seen(app.slug), `${app.slug}: versioned app requires its own receipt`);
+  return [seen(app.slug).observedAt, ...(app.slug==='pipi-log' ? [laterLogIOS.observedAt] : [])];
+}))].sort();
 const observationRange = [observationDates[0], observationDates.at(-1)].filter((d, i, all) => i === 0 || d !== all[0]);
 const versionToken = (prefix, version) => new RegExp(`(?:^|[^\\w.])${prefix}v${version.replace(/\./g, '\\.')}(?![\\w.])`);
 function expectVersionLabel(html, slug, where) {

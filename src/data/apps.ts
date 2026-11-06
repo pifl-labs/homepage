@@ -491,7 +491,8 @@ const log: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.0.13', updated: '2026-10-23', checkedAt: '2026-11-02' },
+    // 2026-11-06: KR/JP/US iOS only; Android keeps its own 2026-11-02 observation.
+    ios: { version: '1.0.14', updated: '2026-11-04', checkedAt: '2026-11-06' },
     android: { version: '1.0.13', updated: '2026-10-23', checkedAt: '2026-11-02' },
     since: '2026-06-09',
     checkedAt: '2026-11-02',

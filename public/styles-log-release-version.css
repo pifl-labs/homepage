@@ -1,0 +1,4 @@
+/* Preserve the existing release pill; its small text must stay readable in light mode. */
+html[data-theme="light"] .app-page--log .app-rel-ver {
+  color: var(--text-primary);
+}
