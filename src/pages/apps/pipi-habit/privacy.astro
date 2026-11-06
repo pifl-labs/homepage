@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ScrollableLegalTable from '../../../components/ScrollableLegalTable.astro';
+---
+<BaseLayout
+  lang="en"
+  title={"Habit Tracker: Goals & Routine Privacy Policy - PiFl Labs"}
+  description={"PiFl Labs Co., Ltd. Habit Tracker: Goals & Routine app privacy policy"}
+  canonical="https://pifl-labs.com/en/apps/pipi-habit/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-habit/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-habit/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-habit/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-habit/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<!-- Legal Header -->
+    <section class="legal-hero">
+        <div class="container">
+            <a href="/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h1><i class="fas fa-shield-alt"></i> <span class="text-gradient">Habit Tracker: Goals &amp; Routine Privacy Policy</span></h1>
+            <p class="legal-date">Effective Date: October 27, 2026</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>PiFl Labs Co., Ltd. ("Company", "we", "us") is committed to protecting your personal data. This Privacy Policy explains how information is handled when you use the mobile application <strong>Habit Tracker: Goals &amp; Routine</strong> (shown as "Habits" on your home screen; "App"). For matters not covered here, our <a href="/privacy">general Privacy Policy</a> applies.</p>
+                <p><strong>In short</strong>: your habits, check-ins, Day Shield use and settings are stored only on your device and are never sent to our servers. The App has no sign-up, no servers of ours and no backup or sync feature. While you use it for free, the App shows Google AdMob ads, and Google processes device identifiers and ad interaction information to do so. We receive usage statistics through Firebase Analytics (Google) — in the EEA, the UK and other regions where the GDPR applies, only if you consent — which never include your habit names or what you logged, and the App does not collect advertising identifiers for analytics. If you buy Pro, the App does not load ads.</p>
+
+                <h2>1. Purpose of Processing</h2>
+                <ul>
+                    <li><strong>Tracking habits (on your device)</strong>: storing the habits you create and your check-ins, and showing them as today's list, streaks, a calendar and statistics.</li>
+                    <li><strong>Day Shield (on your device)</strong>: covering a day you missed yesterday so your streak keeps going.</li>
+                    <li><strong>Reminders (on your device)</strong>: sending reminders scheduled on your device at the time you set for each habit.</li>
+                    <li><strong>Ads (free use)</strong>: showing banner, interstitial and rewarded ads through Google AdMob, and giving you the reward (a Day Shield, one extra habit slot for 7 days, or the yearly heatmap for 24 hours) when you finish a rewarded ad you chose to watch.</li>
+                    <li><strong>Reporting an inappropriate ad</strong>: when you send a report email, pre-filling the information needed to find the ad.</li>
+                    <li><strong>Pro one-time purchase</strong>: unlocking Pro through Apple App Store or Google Play payment.</li>
+                    <li><strong>Usage statistics (with consent in the EEA, the UK and similar regions)</strong>: understanding how the App is used through Firebase Analytics (Google), to find problems and improve the App. When they are collected is set out in Section 6.</li>
+                    <li><strong>Support</strong>: replying to inquiries you send by email.</li>
+                </ul>
+
+                <h2>2. Information We Process</h2>
+                <p>The App has no sign-up, accounts, servers of ours, backup or sync. Information marked "on your device" below stays on your device, and we cannot see it.</p>
+                <ScrollableLegalTable label="Information processed: scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Items</th>
+                            <th>How it is collected and stored</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Habits</td>
+                            <td>Habit name (up to 30 characters), icon, color, days of the week, daily target, reminder time (optional), sort order, date created, date archived</td>
+                            <td>Entered by you. Stored only in the App's database (SQLite) on your device; never sent to us</td>
+                        </tr>
+                        <tr>
+                            <td>Check-ins</td>
+                            <td>Date for each habit, how many times you checked it that day, time of the last check</td>
+                            <td>Stored in the App's database on your device</td>
+                        </tr>
+                        <tr>
+                            <td>Day Shield records</td>
+                            <td>The habit and date a Day Shield covered, and recent use times for the weekly limit</td>
+                            <td>Stored on your device</td>
+                        </tr>
+                        <tr>
+                            <td>Settings</td>
+                            <td>First day of the week, theme, language, number of habit slots and when extra slots expire, when the yearly heatmap unlock expires, whether you finished the introduction, whether you bought Pro</td>
+                            <td>Stored on your device</td>
+                        </tr>
+                        <tr>
+                            <td>Ad display records</td>
+                            <td>Number of app launches, how many interstitial ads were shown today and when the last one was, how many times you closed the celebration screen, whether you have seen an ad, and the response ID (a value AdMob uses to identify a single ad) and time of the last ad shown on screen</td>
+                            <td>Recorded on your device by the App to limit how often ads appear and to support ad reports. Never sent to us, except in a report email you choose to send</td>
+                        </tr>
+                        <tr>
+                            <td>Ad-related information</td>
+                            <td>Device identifiers such as the advertising ID (IDFA/AAID), IP address (may be used to infer approximate location), device information (operating system, model, language), ad interactions such as ad requests, impressions, taps and video views, performance and diagnostic information, ad consent status</td>
+                            <td>Sent directly to Google by the Google Mobile Ads SDK in the App when it loads and shows ads during free use, without passing through any server of ours. On iOS, the advertising ID is shared only if you allow tracking (Section 6). The ads SDK is not started while you use Pro</td>
+                        </tr>
+                        <tr>
+                            <td>Usage statistics</td>
+                            <td>App-instance ID (a random identifier created for each installation) and, on iPhone and iPad, the identifier for vendor (IDFV) that iOS assigns to our apps on that device; basic events such as opening and using the App; finishing the introduction; creating a habit (from a suggestion or your own); a check-in (the streak range after it: 0, 1, 2–6, 7–29, 30 or more); finishing all of today's habits (number of habits); Day Shield offered and used; rewarded ad offered and completed (reward type); interstitial ad shown (what triggered it); habit slot added; opening the App from a reminder; opening the Pro screen, buying and restoring Pro; ad consent result (whether you are in a region where consent is asked, and whether ads can be requested); range of active habits (1, 2–3, 4–6, 7 or more); purchase details Google records automatically for store payments (product ID, price); device model, operating system and version, App version, language; approximate location inferred from IP address (city, region, country)</td>
+                            <td>Collection is off by default. Only when it is turned on under the rules in Section 6 does the Firebase Analytics SDK in the App send them automatically to Google while you use the App, without passing through any server of ours. Events from before that decision are held only in your device's memory and discarded if collection stays off. Habit names, check-in dates and other content you log are never sent, and Firebase Analytics' collection of advertising identifiers (IDFA/AAID) is turned off</td>
+                        </tr>
+                        <tr>
+                            <td>Email inquiries</td>
+                            <td>Email address, name (optional), message. For an inappropriate-ad report, the App pre-fills the App version, platform (iOS or Android), and the response ID and time of the last ad you saw</td>
+                            <td>When you email us. A report email is sent only after you review it, and edit it if you like, in your own mail app and send it</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+
+                <h2>3. Retention Period</h2>
+                <ul>
+                    <li><strong>Habits, check-ins, Day Shield records, settings and ad display records on your device</strong>: until you delete them in the App or uninstall the App. We keep no copy. For copies in device backups, see Section 8.</li>
+                    <li><strong>Ad-related information</strong>: governed by Google's Privacy Policy. Google states that it anonymizes advertising data in server logs by removing part of the IP address after 9 months and cookie information after 18 months (provider policy).</li>
+                    <li><strong>Usage statistics</strong>: deleted after the period set in Google Analytics data retention (up to 14 months). Aggregated reports that do not identify anyone may remain.</li>
+                    <li><strong>Email inquiries</strong>: <strong>3 years</strong> after the inquiry is resolved</li>
+                </ul>
+
+                <h2>4. Disclosure to Third Parties</h2>
+                <p>We do not disclose or sell personal data to third parties. Information Google processes for ads and usage statistics is described in Section 5 (entrustment) and Section 6 (advertising and tracking). How Google uses this information for its own services is governed by <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>. The following happens only when you turn it on, and we do not receive or pass on the information:</p>
+                <ul>
+                    <li>If your device backup is on, App data is included in your own iCloud or Google account backup (Section 8).</li>
+                </ul>
+
+                <h2>5. Processing Entrustment</h2>
+                <ScrollableLegalTable label="Service providers: scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Provider</th>
+                            <th>Task</th>
+                            <th>Retention</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>Serving and measuring mobile ads, confirming rewarded ad views, providing the ad consent form (User Messaging Platform)</td>
+                            <td>Same as ad-related information in Section 3</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase Analytics)</td>
+                            <td>Collecting and analyzing the usage statistics in Section 2</td>
+                            <td>Same as usage statistics in Section 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <p>Apple and Google process Pro payments in their own payment systems; we never receive card or other payment details. Information those platforms handle when you download or pay is governed by their privacy policies. Email inquiries are handled as described in our <a href="/privacy">general Privacy Policy</a>.</p>
+
+                <h2>6. Advertising and Tracking</h2>
+                <p>While you use the App for free, it shows banner, interstitial and rewarded ads through Google AdMob. A rewarded ad starts only when you tap a button to watch one (such as "Watch an ad to get it"). When ads load, the Google Mobile Ads SDK sends the ad-related information in Section 2 to Google, which uses it to serve and measure ads and, where permitted, to personalize them. Your habit names and check-ins are never used for ads and never sent to Google.</p>
+                <ul>
+                    <li><strong>iOS</strong>: the first time you open the App, Apple's App Tracking Transparency (ATT) prompt asks whether to allow tracking. If you do not allow it, the advertising ID (IDFA) is not shared with Google, and every feature of the App keeps working. You can change this at any time in your device's Settings › Privacy &amp; Security › Tracking.</li>
+                    <li><strong>Android</strong>: you can delete or reset your advertising ID in your device's Google ads settings (depending on the device, Settings › Google › Ads or Settings › Privacy › Ads).</li>
+                    <li><strong>EEA, UK, Switzerland and other regions where ad consent is asked</strong>: before requesting ads, the App shows Google's User Messaging Platform (UMP) consent form. Your choices shape how Google processes information and selects ads, and you can change them at any time in Settings › Ad privacy choices (this item appears only where consent is required). If Google indicates that ads cannot be requested, the App does not request ads; only the rewards earned by watching ads are then unavailable.</li>
+                    <li><strong>When usage statistics (Firebase Analytics) are collected</strong>: collection is off by default. In regions where the GDPR applies (the EEA, the UK and others, as determined by the consent form), usage statistics are collected only if you consent to "Store and/or access information on a device" (Purpose 1) in the ad consent form (UMP), and withdrawing that consent in Settings › Ad privacy choices stops collection. In other regions, they are collected. If the region cannot be determined, they are not collected. Pro users are not shown the consent form, so for them usage statistics are not collected in GDPR regions or when the region cannot be determined.</li>
+                    <li><strong>Pro</strong>: once you buy Pro, the App does not load ads. When the App starts with Pro, it does not ask for tracking permission (ATT) or ad consent and does not start the ads SDK.</li>
+                    <li><strong>Not directed at children</strong>: the App marks its ad requests as not directed at children and limits ad content to a PG rating or lower to block adult ads.</li>
+                </ul>
+                <p>For details on how Google processes data, see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>; for Firebase Analytics, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
+
+                <h2>7. Reminders</h2>
+                <ul>
+                    <li>Habit reminders are local notifications scheduled on your device without any push server. Reminders do not send information to any server.</li>
+                    <li>Reminder text includes the habit name. To keep it off your lock screen, turn off notification previews in your device's notification settings.</li>
+                    <li>When you open the App by tapping a reminder, only that fact (a reminder tap) is recorded in usage statistics, not which habit it was for.</li>
+                </ul>
+
+                <h2>8. Device Backups</h2>
+                <ul>
+                    <li>The App itself has no backup or sync feature, but your operating system's device backup may include App data.</li>
+                    <li><strong>iPhone and iPad</strong>: if you use iCloud Backup, the App's database (habits, check-ins, Day Shield records, settings) and ad display records are included in that backup, so you can restore them on a new device.</li>
+                    <li><strong>Android</strong>: the App allows Android auto backup, so if your device's Google backup is on, App data is included in your Google account backup and may be restored when you move to a new device.</li>
+                    <li>Backups are stored in your own Apple or Google account, and we cannot access them. You can turn backups off or delete them in your device settings.</li>
+                </ul>
+
+                <h2>9. App Permissions</h2>
+                <p>The App may request or use the following permissions. You can decline optional ones; only the related feature will be unavailable.</p>
+                <ul>
+                    <li><strong>Notifications (optional)</strong>: requested when you turn on reminders in the introduction or in Settings. If you decline, every feature still works; reminders just are not scheduled.</li>
+                    <li><strong>Tracking (optional, iPhone and iPad)</strong>: requested once, the first time you open the App, for ads during free use (Section 6).</li>
+                    <li><strong>Internet (Android)</strong>: used for ads, usage statistics and store payments. Your habits and check-ins are never sent.</li>
+                    <li><strong>Boot completed (Android)</strong>: used to reschedule habit reminders after the device restarts or the App updates.</li>
+                    <li><strong>Vibration (Android)</strong>: used to vibrate, for example for reminders.</li>
+                    <li>The App does not use camera, location, contacts, microphone, photo or health data permissions.</li>
+                </ul>
+
+                <h2>10. Pro One-Time Purchase</h2>
+                <p>The App sells Pro (no ads, unlimited habits, the yearly heatmap always open, Day Shield without watching an ad) as a one-time purchase (com.pifl.pipi.habit.pro); there is no subscription. Apple App Store or Google Play processes the payment, and we never receive card or other payment details. Whether you bought Pro is stored on your device, and "Restore purchase" checks your purchase with the store again. The App does not send receipts to our servers, and we do not verify receipts on any server of ours. When a payment is made, Firebase Analytics may record the purchase and product details (Section 2).</p>
+
+                <h2>11. Data Destruction</h2>
+                <ul>
+                    <li><strong>Deleting in the App</strong>: deleting a habit also deletes its check-ins and Day Shield records, and this cannot be undone. An archived habit keeps its records and can be restored.</li>
+                    <li><strong>Uninstalling</strong>: uninstalling the App removes its data from your device (habits, check-ins, Day Shield records, settings and ad display records). Copies in device backups can be deleted in your backup settings.</li>
+                    <li><strong>Information we hold</strong>: email inquiries are permanently deleted in an unrecoverable way after the retention period, and Google deletes usage statistics after the retention period in Section 3. Google processes and deletes ad-related information under its own policies.</li>
+                </ul>
+
+                <h2>12. Your Rights</h2>
+                <ul>
+                    <li>We cannot see information on your device, so you can view, edit and delete it yourself in the App (Section 11).</li>
+                    <li>The information we hold is usage statistics and email inquiries. To request access, deletion or suspension of processing, email <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> and we will act without delay. Usage statistics are identified only by an app-instance ID (and, on iOS, the IDFV) that is not linked to your name or email, so we may not be able to find your records from an email alone. If so, we will tell you and explain why.</li>
+                    <li>In regions where the GDPR applies (the EEA, the UK and others), withdrawing your consent to store and/or access information on a device (Purpose 1) in Settings › Ad privacy choices stops usage statistics (withdrawing consent). In other regions, the App has no separate setting to turn off usage statistics only; to stop them, uninstall the App. To delete information already sent, email us at the address above.</li>
+                    <li>You can limit the information used for ads as described in Section 6 (declining tracking, deleting your advertising ID, Ad privacy choices, or buying Pro). Requests about ad information Google holds can be made directly to Google as described in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+                </ul>
+
+                <h2>13. Security Measures</h2>
+                <ul>
+                    <li>Habits and check-ins are stored only on your device; there are no accounts, servers of ours or sync</li>
+                    <li>Usage statistics and ad requests never include habit names or what you logged</li>
+                    <li>Usage statistics are off by default and turned on only under the rules in Section 6, and Firebase Analytics' collection of advertising identifiers (IDFA/AAID) is turned off</li>
+                    <li>Ad requests are marked as not directed at children, and ad content is limited to a PG rating or lower</li>
+                    <li>Ads and usage statistics are sent over encrypted connections (HTTPS)</li>
+                </ul>
+
+                <h2>14. Children's Privacy</h2>
+                <p>The App is not directed at children under 14. We do not knowingly collect personal data from children under 14, and if we learn that we have, we delete it promptly. Guardians may contact <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> to request deletion.</p>
+
+                <h2>15. International Data Transfers</h2>
+                <p>To serve ads and process usage statistics, we transfer personal data abroad as follows.</p>
+                <ScrollableLegalTable label="International transfers: scroll sideways">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recipient</th>
+                            <th>Country</th>
+                            <th>Purpose</th>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>United States</td>
+                            <td>Serving and measuring mobile ads</td>
+                            <td>The ad-related information in Section 2</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (Firebase Analytics)</td>
+                            <td>United States</td>
+                            <td>Usage statistics</td>
+                            <td>The usage statistics items in Section 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </ScrollableLegalTable>
+                <p>Contact details and specifics for each recipient are below.</p>
+
+                <h3>Google LLC (AdMob) transfer details</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · Privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy contact form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: device identifiers such as the advertising ID (IDFA/AAID), IP address (may be used to infer approximate location), device information, ad interactions such as ad requests, impressions, taps and video views, performance and diagnostic information, ad consent status</li>
+                    <li><strong>When and how</strong>: whenever the App loads and shows ads during free use, sent by the Google Mobile Ads SDK in the App directly to Google's servers over encrypted connections (HTTPS), without passing through any server of ours. On iOS, the App first asks whether to allow tracking (ATT), and in regions where ad consent is required it requests ads only after the consent form. It may be processed in other countries where Google operates data centers.</li>
+                    <li><strong>Purpose</strong>: serving and measuring ads, confirming rewarded ad views, and, where permitted, personalized ads</li>
+                    <li><strong>Retention</strong>: as in Section 3 (governed by Google's Privacy Policy)</li>
+                    <li><strong>How to refuse and its effect</strong>: declining tracking on iOS or deleting your advertising ID on Android stops the advertising ID from being shared. In regions where ad consent is asked, you can change your choice at any time in Settings › Ad privacy choices. In regions where it is not asked (such as Korea), loading ads sends your IP address, ad interactions and similar information and cannot be turned off separately in the App, but if you buy Pro the App does not load ads, so nothing is sent. In every case, habit tracking keeps working.</li>
+                </ul>
+
+                <h3>Google LLC (Firebase Analytics) transfer details</h3>
+                <p>United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · Privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy contact form</a></p>
+                <ul>
+                    <li><strong>Items</strong>: app-instance ID and IDFV (iOS), app usage events, streak and habit-count ranges, purchase details when you pay, ad consent result, device model, operating system, App version, language, IP address (used to infer approximate location)</li>
+                    <li><strong>When and how</strong>: only when collection is turned on under the rules in Section 6, sent from time to time while you use the App by the Firebase Analytics SDK in the App, directly to Google's servers over encrypted connections (HTTPS), without passing through any server of ours. It may be processed in other countries where Google operates data centers.</li>
+                    <li><strong>Purpose</strong>: understanding how the App is used, finding problems and improving the App</li>
+                    <li><strong>Retention</strong>: as in Section 3 (Google Analytics data retention, up to 14 months)</li>
+                    <li><strong>How to refuse and its effect</strong>: in regions where the GDPR applies (the EEA, the UK and others), nothing is transferred if you do not consent to, or withdraw consent to, storing and/or accessing information on a device in the consent form or in Settings › Ad privacy choices, and every feature of the App keeps working. In other regions, usage statistics cannot be turned off separately in the App; if you do not want them sent, stop using (uninstall) the App and ask us to delete information already sent as described in Section 12. In that case, you cannot use the App.</li>
+                </ul>
+
+                <h2>16. Data Protection Officer</h2>
+                <ul>
+                    <li><strong>Company</strong>: PiFl Labs Co., Ltd.</li>
+                    <li><strong>Address</strong>: 59 Jukseongseo-gil, Sa-dong 107-ho, Jeju-si, Jeju-do 63242, Republic of Korea</li>
+                    <li><strong>Email</strong>: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></li>
+                </ul>
+
+                <h2>17. U.S. State Privacy Rights</h2>
+                <p>This section is for users covered by U.S. state privacy laws such as the California Consumer Privacy Act (CCPA/CPRA).</p>
+                <ul>
+                    <li><strong>Sale and sharing</strong>: we do not sell personal information for money. However, the device identifiers and ad interactions shared with Google for ads during free use (Section 2) may count as "sharing" personal information for cross-context behavioral advertising, or as "targeted advertising", under some state laws.</li>
+                    <li><strong>How to opt out</strong>: decline tracking on iOS, delete your advertising ID on Android, make a choice in Settings › Ad privacy choices if it appears in the App, or buy Pro (Section 6). You can also email <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</li>
+                    <li><strong>Your rights</strong>: you may ask to know (access), correct or delete the personal information we hold and use the opt-out above, and we will not discriminate against you for doing so. Send requests to the email above; if we deny a request, we will explain why, and you may appeal by replying to the same address. The only information we hold is usage statistics and email inquiries; your habit names and what you logged never leave your device.</li>
+                </ul>
+
+                <h2>18. GDPR (European Economic Area, UK, Switzerland)</h2>
+                <p>If you are located in the EEA, the UK or Switzerland, you have additional rights under the General Data Protection Regulation (and the UK GDPR or the Swiss Federal Act on Data Protection), including the right to access, rectify, erase, restrict processing, data portability, and object to processing, and the right to withdraw your consent at any time in Settings › Ad privacy choices (withdrawing consent to store and/or access information on a device also stops usage statistics). You may also lodge a complaint with your local data protection authority. Contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+
+                <h2>19. Changes to this Policy</h2>
+                <p>This Privacy Policy is effective as of October 27, 2026. Any changes will be announced on this page.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+</BaseLayout>
