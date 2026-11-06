@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PiFl Labs//CSAT date guide KO//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2027-suneung-20261119@pifl-labs.com
+DTSTAMP:20261106T065509Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:2027학년도 대학수학능력시험
+DESCRIPTION:시험 시행일: 2026년 11월 19일(목). 종일 날짜 메
+ 모이며 입실 시각이나 알림은 포함하지 않습니다. 입실 
+ 시각·준비물·최신 공지는 공식 안내를 확인하세요.\n출
+ 처: 교육부 2026-03-31 시행기본계획 발표.\nPiFl Labs 제작. 
+ 교육부와 무관한 비공식 달력 파일입니다.
+URL:https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=10575
+ 6&lev=0&m=020402
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
