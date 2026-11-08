@@ -3,9 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 const component = readFileSync(new URL('../src/components/DrawPhotoChecklist.astro', import.meta.url), 'utf8');
 const landing = readFileSync(new URL('../src/components/AppLanding.astro', import.meta.url), 'utf8');
-test('photo checklist renders only for English Draw', () => {
-  assert.match(landing, /app\.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist \/>/);
-});
+test('Draw landing routes related resources to the shared library', () => { assert.match(landing, /<RelatedResources lang=\{lang\} app=\{app.slug\}/); });
 test('links to the exact already published English PNG with distinct campaign', () => {
   const match = component.match(/const checklistUrl = '([^']+)'/);
   const url = new URL(match[1]);

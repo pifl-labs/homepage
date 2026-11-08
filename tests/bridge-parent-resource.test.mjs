@@ -1,12 +1,2 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-
-const source = readFileSync(new URL('../src/components/AppLanding.astro', import.meta.url), 'utf8');
-
-test('only English Bridge landing exposes the already-public optional family activity', () => {
-  assert.match(source, /app\.slug === 'pipi-bridge' && lang === 'en'/);
-  assert.match(source, /https:\/\/pipi-worlds\.com\/en\/learn\/korean-school-help-phrase\//);
-  assert.match(source, /No app or sign-up needed\./);
-  assert.match(source, /aria-labelledby="bridge-resource-title"/);
-});
+import test from 'node:test';import assert from 'node:assert/strict';import {resources} from '../src/data/resources.mjs';
+test('Bridge family activity keeps original English destination and Vietnamese companion',()=>{const r=resources.find(r=>r.id==='help-me');assert.equal(r.app,'pipi-bridge');assert.equal(r.guide,'https://pipi-worlds.com/en/learn/korean-school-help-phrase/');assert.deepEqual(r.variants.map(v=>v.language),['en','vi']);});

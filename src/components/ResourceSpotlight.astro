@@ -1,0 +1,6 @@
+---
+import ResourceCards from './ResourceCards.astro';import {resources} from '../data/resources.mjs';import {resourceCopy} from '../data/resource-copy.mjs';
+const {lang}=Astro.props;const c=resourceCopy[lang];
+const items=['small-start','word-recall','kana-match'].map(id=>resources.find(r=>r.id===id));
+---
+<section class="resource-section"><div class="container"><div class="resource-heading"><h2>{c.title}</h2><a href={`/${lang}/resources/`}>{c.more} →</a></div><p>{c.desc}</p><ResourceCards lang={lang} items={items} compact={true}/></div></section>
