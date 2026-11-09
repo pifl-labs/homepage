@@ -87,7 +87,10 @@ const sourceLib = app.slug === 'dialogos'
     }[lang]
   : null;
 
-// SoftwareApplication 구조화 데이터 — 미출시(soon) 앱엔 offers/OS 미출력 (구조화 데이터 정확성)
+const installUrls = [app.stores.ios, app.stores.android].filter((url): url is string => Boolean(url));
+
+// 스토어 페이지는 binary downloadUrl이 아닌 installUrl로, 공개된 모든 플랫폼을 안내한다.
+// 미출시(soon) 앱엔 설치 경로·offers·OS를 출력하지 않는다.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -103,7 +106,7 @@ const jsonLd = {
     ? {
         operatingSystem: [app.stores.ios && 'iOS', app.stores.android && 'Android'].filter(Boolean).join(', '),
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        ...(app.stores.ios ? { downloadUrl: app.stores.ios } : {}),
+        ...(installUrls.length ? { installUrl: installUrls } : {}),
         ...(app.release ? {
           ...(displayVersion(app) ? { softwareVersion: displayVersion(app) } : {}),
           ...(app.release.since ? { datePublished: app.release.since } : {}),
