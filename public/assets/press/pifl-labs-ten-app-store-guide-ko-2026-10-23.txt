@@ -1,0 +1,77 @@
+PiFl Labs · 10개 앱 한국 스토어 안내
+2026-10-23 한국 공개 스토어 설명 기준. 가격·광고·구매 조건은 바뀔 수 있습니다.
+개발사 직접 작성·AI 편집 보조. 독립 리뷰·기기 실행·학습/건강효과 검증 자료가 아닙니다.
+앱별 출시 국가·지원 기기·플랫폼 기능은 링크한 현재 스토어에서 확인하세요.
+
+## 집중항해: 포모도로 타이머
+집중 시간을 정하고, 쉬는 시간을 함께 챙기는 포모도로 타이머.
+핵심 기능 무료·광고 포함. 광고 제거는 선택 1회 구매.
+타이머의 오프라인 사용과 광고·구매 통신은 별개입니다.
+App Store (한국): https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR
+
+## 단어루틴: JLPT·TOPIK 단어장
+한·일 어휘 복습. iOS에서는 뜻만 보고 쓰고, 정답과 직접 비교합니다.
+무료 팩·일일 한도·광고가 있습니다. 추가 팩·구독은 선택 유료.
+손글씨는 자동채점이 아닌 자기비교입니다.
+App Store (한국): https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-topik-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR
+
+## 기분 한 칸: 날씨 감정일기
+날씨처럼 기분을 고르고, 글·사진을 더하는 감정일기.
+기록 기능 무료·무광고. 평생 후원은 선택 1회 구매.
+구매 복원은 일기 백업이 아닙니다. 기기 변경 전 기록을 따로 내보내세요.
+App Store (한국): https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR
+
+## 그날까지: 디데이·기념일 위젯
+양력·음력 기념일을 세고, 위젯으로 남은 날을 확인하세요.
+광고 포함 무료 사용. Pro는 선택 1회 구매이며 구독이 아닙니다.
+디데이 확인은 오프라인; 광고·구매 통신은 별개입니다.
+App Store (한국): https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR
+
+## 밑그림: 사진으로 만드는 색칠공부
+기기 내 사진 필터, AI 선화, 손으로 색칠하기를 선택하세요.
+광고·무료 AI 횟수 한도가 있습니다. 추가 변환 팩은 선택 유료.
+AI 변환은 동의 후 사진을 서버로 전송합니다. 미성년자는 보호자와 함께 확인하세요.
+App Store (한국): https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR
+
+## 말놀이 새싹: 어린이 일본어
+6~8세 어린이가 히라가나·가타카나와 첫 일본어를 만납니다.
+무광고. 무료 콘텐츠가 있고, 나머지는 연간 자동갱신 구독.
+구독·설정에는 보호자 확인이 있습니다. 가격·체험 자격은 스토어에서 확인하세요.
+App Store (한국): https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR
+
+## Korean Bridge - 어린이 한국어·한글·수학
+4~8세 한국어·한글·기초 수학 활동.
+보호자 안내는 5개 언어로 제공합니다.
+광고·인앱결제·구독이 없는 무료 앱.
+교사·학교를 대체하거나 학습 효과를 보장하는 자료가 아닙니다.
+App Store (한국): https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR
+
+## 낱말항해: 한글 단어 퍼즐
+한글을 읽을 수 있다면, 낱말 연결·단어 찾기·초성·속담 퍼즐.
+무료 플레이·광고 포함. 힌트는 코인 또는 선택 광고로 이용.
+한국어 단어 퍼즐입니다. 영어 뜻풀이·번역 강좌가 아닙니다.
+App Store (한국): https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR
+
+## 물때친구 - 만조 간조 물때표 위젯
+만조·간조와 물때 정보를 확인하는 바다 도우미.
+광고 기반 무료 앱. 한국 Google Play 링크만 안내합니다.
+예보는 실제와 다를 수 있습니다. 현장 안내·기상특보를 우선하세요.
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR
+
+## Dialogos: 철학자와의 대화
+고대 철학자의 관점에서 AI가 답하는 1:1 철학 문답.
+무료 30회/일. Pro 자동갱신 구독·깊은 답변 묶음은 선택 유료. 묶음은 일일 한도를 늘리지 않습니다.
+메시지는 AI 처리에 전송됩니다. 실제 철학자 발언·의료·심리상담이 아닙니다.
+App Store (한국): https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4
+Google Play (한국): https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR
+
+자료에 사용한 나눔고딕: SIL Open Font License 1.1. 라이선스 원문을 PDF에 첨부했으며 동봉 텍스트에도 제공합니다.
+QR의 실제 기기 스캔·실물 인쇄는 검증하지 않았습니다. PDF의 클릭 링크와 이 텍스트 URL을 이용할 수 있습니다.
