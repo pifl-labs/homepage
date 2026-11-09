@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { APPLE_PROVIDER_TOKEN, storeUrl, websiteCampaign } from '../public/store-attribution.mjs';
 import { appList } from '../src/data/apps.ts';
+import { assertCompanyAndroidCatalogAnchor } from './company-android-catalog.mjs';
 import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
@@ -19,9 +20,14 @@ for (const lang of ['ko', 'ja', 'en']) {
   for (const file of files) {
     const html = readFileSync(file, 'utf8');
     assert.match(html, /<script[^>]*type="module"[^>]*src="\/store-links.js"/, file);
-    let pageLinks = 0;
+    let pageLinks = 0, pageCatalogLinks = 0;
     for (const match of html.matchAll(/<a\b[^>]*>/g)) {
       const attrs = Object.fromEntries([...match[0].matchAll(/([\w-]+)="([^"]*)"/g)].map((m) => [m[1], decode(m[2])]));
+      if (Object.hasOwn(attrs, 'data-company-android-catalog')) {
+        assertCompanyAndroidCatalogAnchor(attrs, lang, file.endsWith(join(lang, 'index.html')));
+        pageCatalogLinks++;
+        continue;
+      }
       if (!attrs.href || !/^https:\/\/(apps\.apple\.com|play\.google\.com)\//.test(attrs.href)) continue;
       assert.ok(attrs['data-store-link'], `Missing original store destination: ${file}`);
       assert.equal(attrs.href, storeUrl(attrs['data-store-link'], websiteCampaign(lang)), file);
@@ -39,6 +45,7 @@ for (const lang of ['ko', 'ja', 'en']) {
       assert.ok(attrs.rel.includes('noopener'), file);
       pageLinks++;
     }
+    assert.equal(pageCatalogLinks, file.endsWith(join(lang, 'index.html')) ? 1 : 0, 'Only one companycatalog on each home; never an app-install count');
     // Home has one exact link per verified platform. Detail has two placements per platform; coming-soon has none.
     if (file.endsWith(join(lang, 'index.html'))) assert.equal(pageLinks, appList.filter(a=>a.status==='live').reduce((n,a)=>n+Number(Boolean(a.stores.ios))+Number(Boolean(a.stores.android)),0), file);
     else {
