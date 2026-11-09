@@ -13,12 +13,15 @@ import StoreNameNotice from './StoreNameNotice.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import type { Lang } from '../i18n/ui';
 import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
+import { companyAndroidCatalogUrl } from '../../scripts/company-android-catalog.mjs';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const campaign = websiteCampaign(lang);
 const sl = storeLabels[lang];
 const ul = updatedLabels[lang];
+
+const androidCatalogUrl = companyAndroidCatalogUrl(lang);
 
 const copy = {
   ko: {
@@ -27,6 +30,8 @@ const copy = {
     titleEm: '이미 바다 위.',
     // 서사 규칙: 제작 주체는 사람, PiPi 는 동행자 (AI 저작 주장은 crew·about 에서만)
     sub: '집중, 그림, 배움, 기록. 지금 하고 싶은 일에 맞는 앱을 골라 보세요.',
+    androidCatalogLead: 'Android 앱 전체:',
+    androidCatalogAria: 'Google Play에서 PiFl Labs의 Android 앱 목록 열기 (새 탭)',
     iconAlt: (n: string) => `${n} 아이콘`,
   },
   ja: {
@@ -34,6 +39,8 @@ const copy = {
     title: '小さな艦隊、',
     titleEm: 'もう海の上。',
     sub: '集中、お絵描き、学び、記録。今やりたいことに合うアプリを見つけよう。',
+    androidCatalogLead: 'Android版一覧：',
+    androidCatalogAria: 'Google PlayでPiFl LabsのAndroidアプリ一覧を開く（新しいタブ）',
     iconAlt: (n: string) => `${n} アイコン`,
   },
   en: {
@@ -41,6 +48,8 @@ const copy = {
     title: 'A small fleet,',
     titleEm: 'already at sea.',
     sub: 'Focus, create, learn or reflect. Find the app for what you want to do today.',
+    androidCatalogLead: 'All Android apps:',
+    androidCatalogAria: 'PiFl Labs Android apps on Google Play (opens in a new tab)',
     iconAlt: (n: string) => `${n} icon`,
   },
 }[lang];
@@ -51,6 +60,7 @@ const copy = {
       <div class="kicker">{copy.kicker}</div>
       <h2 class="section-title">{copy.title} <span class="italic">{copy.titleEm}</span></h2>
       <p class="section-sub">{copy.sub}</p>
+      <p class="section-sub">{copy.androidCatalogLead} <a class="btn btn-ghost" href={androidCatalogUrl} target="_blank" rel="noopener" aria-label={copy.androidCatalogAria} data-company-android-catalog="true">Google Play</a></p>
     </div>
 
     <div class="app-card-grid">
