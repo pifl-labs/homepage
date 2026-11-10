@@ -89,6 +89,12 @@ and is not a medical device or a source of medical advice. Basic records and up 
 profiles are free; enter another person's readings only with their permission.
 PDF/CSV export requires an optional one-time Pro purchase. There is no subscription.
 
+### Android 앱 선택 안내 (한국어)
+
+[무료 PDF (A4, 4쪽)](https://pifl-labs.com/assets/printables/android-everyday-apps-four-ko-a4.pdf) · [같은 내용의 텍스트](https://pifl-labs.com/assets/printables/android-everyday-apps-four-ko.txt)
+
+까치·가계부·한칸씩 스도쿠·혈압 기록을 고를 때 볼 기능, 광고·선택 구매, 데이터 보관 범위를 나눠 정리했습니다. 각 쪽에서 해당 앱의 한국 Google Play 소개로 바로 갈 수 있습니다. 개발사가 작성한 공개 소개 요약이며, 이 네 가지는 회사의 전체 앱 수를 뜻하지 않습니다. 설치·구매 조건은 스토어의 최신 표시를 확인하세요.
+
 ### App portfolio (PDF)
 
 [Download the eight-app iOS overview (PDF, 4 pages)](https://pifl-labs.com/assets/press/pifl-labs-ios-portfolio-2026-10-11.pdf).

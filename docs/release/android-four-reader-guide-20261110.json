@@ -1,0 +1,95 @@
+{
+  "observedOn": "2026-11-10",
+  "scope": "Selected four Android apps, not company total; Korean store availability/free install observations; product descriptions are publisher-provided source, not native/security/clinical or installation outcome verification",
+  "koreanStoreSources": [
+    {
+      "at": "2026-11-10T06:54:25.056609+00:00",
+      "country": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "HTTP": 200,
+      "sourceSHA256": "5662fb7fcf06755aa497da9d459ffd5dafe33d3751ad97ae060eaa07a59a7425",
+      "name": "까치: 나만의 민화",
+      "package": "com.pifl.pipi.kkachi",
+      "author": "PiFl Labs",
+      "price": "0",
+      "currency": "KRW",
+      "reusedAlreadyProvidedToday": false
+    },
+    {
+      "at": "2026-11-10T06:54:25.625270+00:00",
+      "country": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
+      "HTTP": 200,
+      "sourceSHA256": "13ade810c8c220f3e9b0bc18557ebdf83384ddb2959f19968736ec32683efad5",
+      "name": "가계부: 매일 지출 기록",
+      "package": "com.pifl.pipi.spend",
+      "author": "PiFl Labs",
+      "price": "0",
+      "currency": "KRW",
+      "reusedAlreadyProvidedToday": false
+    },
+    {
+      "at": "2026-11-10T05:39:42.772551+00:00",
+      "country": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+      "HTTP": 200,
+      "sourceSHA256": "8792a561f130a8e26c5fe99887ea05de823f1fc45210619585c7f26da79ba09f",
+      "name": "한칸씩 스도쿠",
+      "package": "com.pifl.pipi.sudoku",
+      "author": "PiFl Labs",
+      "price": "0",
+      "currency": "KRW",
+      "reusedAlreadyProvidedToday": true
+    },
+    {
+      "at": "2026-11-10T06:54:26.132337+00:00",
+      "country": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR",
+      "HTTP": 200,
+      "sourceSHA256": "84f71d8c880396b5fd6ae0eb3208724d38d46827afc18be93acb62540646cec5",
+      "name": "혈압 기록: 혈압 수첩·심박",
+      "package": "com.pifl.pipi.bp",
+      "author": "PiFl Labs",
+      "price": "0",
+      "currency": "KRW",
+      "reusedAlreadyProvidedToday": false
+    }
+  ],
+  "reusedProductDescriptionSources": [
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=en&gl=US",
+      "at": "2026-11-10T04:58:58.360038+00:00",
+      "package": "com.pifl.pipi.kkachi",
+      "descriptionSHA256": "b4ac48cd496e0f4f1e0fd03daea5c03129b96dc9180c8de07dbff602b7983bda",
+      "providedEarlierTodayReusedNotNewGET": true
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=en&gl=DK",
+      "at": "2026-11-10T04:52:34.075444+00:00",
+      "package": "com.pifl.pipi.spend",
+      "descriptionSHA256": "73b901e3d60628a9b2e120dfc905c628deea194f74193765fd4f9f47c0b11d14",
+      "providedEarlierTodayReusedNotNewGET": true
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=en&gl=IN",
+      "at": "2026-11-10T05:11:37.813146+00:00",
+      "package": "com.pifl.pipi.bp",
+      "descriptionSHA256": "4acef5a7f7a311013bb7ada3331fab3e792cf9028ba8fdf43332eca0c9633b7f",
+      "providedEarlierTodayReusedNotNewGET": true
+    }
+  ],
+  "assetsSHA256": {
+    "android-everyday-apps-four-ko-a4.pdf": "677009a71a7dda437c58fef328340f06b9264313a76ebf5473e876cc1c8ac1d8",
+    "android-everyday-apps-four-OFL.txt": "b403ee7c26461ea34ce6eadc783a1fc4f5b9e74b82dd477f5a7cba707c9a2f64",
+    "android-everyday-apps-four-ko.txt": "1e295bcdc8c3bbde1e53fa0911a18202f5ac9fc6c94d72fdbfcb3508b243d94a"
+  },
+  "manualPageReview": {
+    "pages": 4,
+    "bodyPoints": 14,
+    "allFourFinalRendersInspected": true,
+    "glyphsMissing": 0,
+    "case": "2026-11-10-android-four-reader-guide-ko"
+  },
+  "notFreshAndroidVersionClaim": true,
+  "notAppBuildNativePrivacyMedicalCertificationOrInstallLift": true
+}
