@@ -15,6 +15,9 @@ const expected = [
   'https://pifl-labs.com/assets/printables/one-small-start-ko.pdf',
   'https://pifl-labs.com/assets/printables/one-word-recall-card-ja.pdf',
   'https://pifl-labs.com/assets/printables/one-word-recall-card-ko.pdf',
+  'https://pifl-labs.com/assets/printables/one-square-at-a-time-en-a4.pdf',
+  'https://pifl-labs.com/assets/printables/one-square-at-a-time-ja-a4.pdf',
+  'https://pifl-labs.com/assets/printables/payday-spending-log-en-a4.pdf',
 ];
 const publicationDates = ['2026-10-11', '2026-10-11', '2026-10-11', '2026-10-12', '2026-10-12T21:30:29Z', '2026-10-13T04:58:57Z', '2026-10-13T12:30:42Z'];
 const validateResourceXML = input => {
@@ -23,7 +26,31 @@ const validateResourceXML = input => {
   assert.doesNotMatch(input, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>/);
 };
 
-test('only the seven already-public canonical PDFs, once each', () => {
+// These independent worksheets are already public; indexing must not edit them.
+for (const [name, sha] of [
+  ['one-square-at-a-time-en-a4.pdf', '11a9d62e8091020494777c538024b9271b76b0751d3b5f43099d3767d2f30d0e'],
+  ['one-square-at-a-time-ja-a4.pdf', '4a81a9d2be8ca717ed3241a2d70519d281c570a84865fe48ba7968c833a9e796'],
+  ['payday-spending-log-en-a4.pdf', '5bbeb66c2775d079d3e4ffab611fa27af958af31f941dba39108352526056594'],
+]) {
+  test(`${name} adds discovery without regeneration or an invented update date`, () => {
+    const pdf = read('public/assets/printables/' + name);
+    assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
+    assert.equal(createHash('sha256').update(pdf).digest('hex'), sha);
+    const block = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)]
+      .map(m => m[1]).find(b => b.includes(`/assets/printables/${name}</loc>`));
+    assert.ok(block, 'published worksheet URL missing from sitemap');
+    assert.doesNotMatch(block, /<lastmod>/, 'a build, app-release or guessed publication date is not a PDF modification date');
+  });
+}
+
+test('rejects a missing worksheet and a fabricated new lastmod', () => {
+  const block = '  <url>\n    <loc>https://pifl-labs.com/assets/printables/payday-spending-log-en-a4.pdf</loc>\n  </url>\n';
+  assert.ok(xml.includes(block));
+  assert.throws(() => validateResourceXML(xml.replace(block, '')));
+  assert.throws(() => validateResourceXML(xml.replace('payday-spending-log-en-a4.pdf</loc>', 'payday-spending-log-en-a4.pdf</loc>\n    <lastmod>2026-11-10</lastmod>')));
+});
+
+test('the seven legacy and three new-app public PDFs appear once each', () => {
   validateResourceXML(xml);
   assert.deepEqual(urls, expected);
   assert.equal(new Set(urls).size, urls.length);
@@ -38,7 +65,7 @@ test('only the seven already-public canonical PDFs, once each', () => {
 test('standard UTF-8 root urlset, accurate fixed publication date; no SEO promises', () => {
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'));
-  assert.equal((xml.match(/<url>/g) || []).length, 7);
+  assert.equal((xml.match(/<url>/g) || []).length, 10);
   assert.deepEqual([...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]), publicationDates);
   assert.doesNotMatch(xml, /<!DOCTYPE|<!ENTITY|<priority>|<changefreq>|pipi-worlds|\.txt<\/loc>/);
 });
