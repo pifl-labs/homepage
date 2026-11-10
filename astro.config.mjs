@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { apps, latestUpdate } from './src/data/apps.ts';
 
 // pifl-labs.com — Astro static site (Cloudflare Pages 배포)
 // publicDir(public/)·outDir(dist/)는 Astro 기본값 사용.
@@ -46,15 +45,9 @@ export default defineConfig({
         defaultLocale: 'ko',
         locales: { ko: 'ko-KR', en: 'en-US', ja: 'ja-JP' },
       },
-      // 앱 랜딩은 스토어 실측 업데이트일을 lastmod 로 쓴다(수기 날짜 금지).
-      serialize(item) {
-        const m = new URL(item.url).pathname.match(/^\/(?:ko|en|ja)\/apps\/([^/]+)\/?$/);
-        const slug = m?.[1];
-        const app = slug ? apps[slug] : undefined;
-        const updated = app ? latestUpdate(app) : '';
-        if (updated) item.lastmod = `${updated}T00:00:00+09:00`;
-        return item;
-      },
+      // lastmod는 웹 페이지의 실제 주요 수정 시각이다. 앱 스토어 출시/업데이트일이나
+      // 빌드 시각으로 대체하지 않는다. 검증된 페이지 수정 이력이 없으므로 생략한다.
+      // public/sitemap-resources.xml의 실제 PDF 공개 시각은 별도로 보존한다.
     }),
   ],
 });
