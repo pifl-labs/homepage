@@ -1,7 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { liveAppCount } from '../data/apps';
+import { verifiedPublicAppCount } from '../data/public-portfolio';
 import type { Lang } from '../i18n/ui';
 
 // 기본 OG 카드(1200×630). 앱 랜딩은 세로 스크린샷을 넘기므로 크기 메타를 붙이지 않는다.
@@ -30,12 +30,12 @@ const {
 } = Astro.props;
 
 const ogLocale = lang === 'ko' ? 'ko_KR' : lang === 'ja' ? 'ja_JP' : 'en_US';
-// Organization 설명 — 언어별 + 라이브 앱 수는 apps.ts 에서 파생(수동 숫자 금지).
+// Company-public roster and curated website appList are deliberately separate.
 const orgDescription = lang === 'ko'
-  ? `사람 하나와 앵무새 하나의 Flutter 스튜디오. 앱 ${liveAppCount}개가 iOS · Android에서 항해 중입니다.`
+  ? `사람 하나와 앵무새 하나의 Flutter 스튜디오. 공개 스토어에서 앱 ${verifiedPublicAppCount}개를 선보입니다. 지원 플랫폼과 제공 지역은 앱마다 다릅니다.`
   : lang === 'ja'
-    ? `人ひとり、オウム一羽のFlutterスタジオ。${liveAppCount}つのアプリが iOS · Android で公開中です。`
-    : `A one-human, one-parrot Flutter studio already at sea, with ${liveAppCount} apps shipping on iOS and Android.`;
+    ? `人ひとり、オウム一羽のFlutterスタジオ。公開アプリ${verifiedPublicAppCount}本。対応プラットフォームや提供地域はアプリごとに異なります。`
+    : `A one-human, one-parrot Flutter studio with ${verifiedPublicAppCount} released apps. Platforms and regional availability vary by app.`;
 const skipLabel = lang === 'ko' ? '본문으로 건너뛰기' : lang === 'ja' ? '本文へスキップ' : 'Skip to content';
 const fontCss = lang === 'ja' ? '/fonts-pretendard-jp.css' : '/fonts-pretendard-kren.css';
 const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/fonts/PretendardVariable.woff2';
