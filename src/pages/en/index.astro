@@ -3,13 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppCatalog from '../../components/AppCatalog.astro';
 import FleetLog from '../../components/FleetLog.astro';
 import AppsJsonLd from '../../components/AppsJsonLd.astro';
-import { fleetLastUpdated, formatDate, liveAppCount } from '../../data/apps';
+import { fleetLastUpdated, formatDate } from '../../data/apps';
+import { verifiedPublicAppCount } from '../../data/public-portfolio';
 const lang = 'en' as const;
 ---
 <BaseLayout
   lang="en"
   title={"PiFl Labs — A crew of one parrot. Allegedly."}
-  description={`A one-human, one-parrot Flutter studio already at sea — ${liveAppCount} apps shipping in public stores. One codebase, two stores, zero krakens.`}
+  description={`A one-human, one-parrot Flutter studio already at sea — ${verifiedPublicAppCount} apps shipping in public stores. One codebase, two stores, zero krakens.`}
   canonical="https://pifl-labs.com/en/"
   keywords={"PiFl Labs, Flutter, App Development, Cross-platform, iOS, Android, Software Development"}
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/"}]}
@@ -38,7 +39,7 @@ const lang = 'en' as const;
         </div>
 
         <div class="hero-meta reveal d4">
-          <span><b>{liveAppCount}</b> apps shipped</span>
+          <span><b>{verifiedPublicAppCount}</b> apps shipped</span>
           <span><b>iOS&nbsp;·&nbsp;Android</b></span>
           <span><b>Free to download</b> · Some apps offer in-app purchases</span>
           <span><b>{formatDate(fleetLastUpdated, lang)}</b> last maintained</span>
@@ -78,7 +79,7 @@ const lang = 'en' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>Already at sea</i> · charting what's next</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>Fleet at sea:</i> {liveAppCount} apps</span>
+    <span><b>// 04</b> <i>Fleet at sea:</i> {verifiedPublicAppCount} apps</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> One human. <i>One parrot.</i> Many hats.</span>
     <span class="sep">✦</span>
@@ -88,7 +89,7 @@ const lang = 'en' as const;
     <span class="sep">✦</span>
     <span><b>// 03</b> <i>Already at sea</i> · charting what's next</span>
     <span class="sep">✦</span>
-    <span><b>// 04</b> <i>Fleet at sea:</i> {liveAppCount} apps</span>
+    <span><b>// 04</b> <i>Fleet at sea:</i> {verifiedPublicAppCount} apps</span>
     <span class="sep">✦</span>
     <span><b>// 05</b> One human. <i>One parrot.</i> Many hats.</span>
     <span class="sep">✦</span>
@@ -143,7 +144,7 @@ const lang = 'en' as const;
       <div>
         <div class="currently-meta">● Currently</div>
         <div class="currently-text">
-          Heads down, sails up. <b>{liveAppCount} apps are out at sea in public stores, and the most recent refit landed on {formatDate(fleetLastUpdated, lang)}.</b> More ships are in drydock — PiPi Legion Chronicle among them. Trademark pending — and there's still one human, one parrot, a codebase, and a lot of coffee.
+          Heads down, sails up. <b>{verifiedPublicAppCount} apps are out at sea in public stores, and the most recent refit landed on {formatDate(fleetLastUpdated, lang)}.</b> More ships are in drydock — PiPi Legion Chronicle among them. Trademark pending — and there's still one human, one parrot, a codebase, and a lot of coffee.
         </div>
       </div>
       <div class="currently-badge">Live log</div>
@@ -221,7 +222,7 @@ const lang = 'en' as const;
       <div class="kicker">04 / Dispatches</div>
       <h2 class="section-title">From the log. <span class="italic">Quiet but moving.</span></h2>
       <p class="section-sub">
-        {liveAppCount} apps are already live. We're <em>not done yet.</em> Here's what's on deck right now.
+        {verifiedPublicAppCount} apps are already live. We're <em>not done yet.</em> Here's what's on deck right now.
       </p>
     </div>
 
@@ -233,7 +234,7 @@ const lang = 'en' as const;
         <div class="dispatch-art"><picture><source srcset="/assets/pipi/pipi-admiral.webp" type="image/webp"><img src="/assets/pipi/pipi-admiral.png" alt="" width="256" height="256" loading="lazy"></picture></div>
         <div class="dispatch-body">
           <div class="slot-role"><span class="italic">Already</span> shipped</div>
-          <div class="slot-desc">{liveAppCount} apps live in public stores. Short on features, long on care — and we keep working on them after launch.</div>
+          <div class="slot-desc">{verifiedPublicAppCount} apps live in public stores. Short on features, long on care — and we keep working on them after launch.</div>
         </div>
       </article>
 
