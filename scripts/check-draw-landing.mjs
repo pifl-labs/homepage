@@ -31,6 +31,24 @@ for (const [lang, checks] of Object.entries(expected)) {
   assert.ok(!html.includes('styles-focus-web-trial.css'), `${lang}: Focus-only CSS does not leak to Draw`);
   assert.ok(!html.includes('styles-words-web-trial.css'), `${lang}: Words-only CSS does not leak to Draw`);
   assert.ok(!html.includes('styles-voyage-web-trial.css'), `${lang}: Voyage-only CSS does not leak to Draw`);
+  const photoGuides = [...html.matchAll(/<section\b[^>]*id="draw-ja-photo-guide"[^>]*>(.*?)<\/section>/gs)];
+  assert.equal(photoGuides.length, lang === 'ja' ? 1 : 0, `${lang}: photo guide is Japanese Draw only`);
+  if (lang === 'ja') {
+    const guide = photoGuides[0][0];
+    assert.match(guide, /aria-labelledby="draw-ja-photo-guide-title"/, 'JA photo guide heading association');
+    assert.match(guide, /<h2\b[^>]*id="draw-ja-photo-guide-title"[^>]*>写真選び<\/h2>/, 'JA photo guide exact heading');
+    const paragraphs = [...guide.matchAll(/<p\b[^>]*>(.*?)<\/p>/gs)];
+    assert.match(guide, /<p\b[^>]*style="text-wrap: balance"[^>]*>/, 'JA guide paragraph uses only local balanced wrapping');
+    assert.deepEqual([...guide.matchAll(/style="([^"]*)"/g)].map(match => match[1]), ['text-wrap: balance'], 'JA guide has exactly one local typography declaration');
+    assert.deepEqual(paragraphs.map(match => match[1]), ['主役・背景・写真の端を見比べる無料ガイドです。写真は手元に置いたまま読めます。写真の変換機能ではありません。'], 'JA photo guide exact read-only boundary');
+    const links = [...guide.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*hreflang="([^"]+)"[^>]*>(.*?)<\/a>/gs)];
+    assert.equal((guide.match(/<a\b/g) ?? []).length, 1, 'JA photo guide has only one action');
+    assert.equal(links.length, 1, 'JA photo guide has one language-marked link');
+    assert.equal(links[0][1], 'https://pipi-worlds.com/ja/guides/photo-to-coloring-outline/', 'JA photo guide exact destination');
+    assert.equal(links[0][2], 'ja', 'JA photo guide matching language');
+    assert.equal(links[0][3].replace(/<[^>]+>/g, '').trim(), 'ガイドを読む', 'JA photo guide action label');
+    assert.doesNotMatch(guide, /<form|<input|<button|<script|<img|<iframe|download=|target=|onclick|type="file"|app-download-note/, 'JA photo guide is a read-only resource, not a conversion/upload demo');
+  }
   const notes = [...html.matchAll(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/gs)];
   assert.equal(notes.length, 1, `${lang}: one disclosure near the hero downloads`);
   for (const text of checks.note) assert.ok(notes[0][1].includes(text), `${lang}: missing ${text}`);
@@ -51,6 +69,7 @@ for (const [lang, checks] of Object.entries(expected)) {
   for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
     if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;
     const other = readFileSync(file, 'utf8');
+    assert.ok(!other.includes('draw-ja-photo-guide'), `${file}: Japanese Draw guide does not leak`);
     if (!file.includes('/pipi-focus/')) assert.ok(!other.includes('styles-focus-web-trial.css'), `${file}: Focus-only CSS does not leak`);
     if (!file.includes('/pipi-words/')) assert.ok(!other.includes('styles-words-web-trial.css'), `${file}: Words-only CSS does not leak`);
     if (!file.includes('/pipi-word-voyage/') || lang === 'ja') assert.ok(!other.includes('styles-voyage-web-trial.css'), `${file}: Voyage-only CSS does not leak`);
