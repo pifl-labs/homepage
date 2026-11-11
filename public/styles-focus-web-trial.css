@@ -1,0 +1,13 @@
+/* Secondary web preview only: keep the label, boundary and focus ring distinct. */
+.app-page [data-web-trial="focus"] {
+  box-sizing: border-box;
+  width: min(100%, 65ch);
+  max-width: 100%;
+  padding-inline: .25rem;
+}
+.app-page [data-web-trial="focus"] p {
+  margin: .4em 0 0;
+}
+.app-page:lang(ja) [data-web-trial="focus"] p {
+  text-wrap: balance;
+}
