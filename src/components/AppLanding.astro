@@ -292,7 +292,21 @@ const jsonLd = {
       </section>
     )}
 
-    {app.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist />}
+    {app.slug === 'pipi-draw' && lang === 'en' && <DrawPhotoChecklist />}{app.slug === 'pipi-draw' && lang === 'ja' && (
+      <section class="app-section app-section--bridge-resource" id="draw-ja-photo-guide" aria-labelledby="draw-ja-photo-guide-title">
+        <div class="container">
+          <div class="app-bridge-resource">
+            <div>
+              <h2 id="draw-ja-photo-guide-title">写真選び</h2>
+              <p style="text-wrap: balance">主役・背景・写真の端を見比べる無料ガイドです。写真は手元に置いたまま読めます。写真の変換機能ではありません。</p>
+            </div>
+            <a class="app-bridge-resource-link" href="https://pipi-worlds.com/ja/guides/photo-to-coloring-outline/" hreflang="ja">
+              <span>ガイドを読む</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
 
     {app.slug === 'pipi-words' && lang === 'en' && (
       <section class="app-section words-recall-resource" id="words-recall-resource" aria-labelledby="words-recall-resource-title">
