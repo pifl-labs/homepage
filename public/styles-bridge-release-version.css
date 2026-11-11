@@ -1,0 +1,14 @@
+/* Bridge: preserve each short platform/version unit when the stores differ. */
+.app-rel-ver[data-bridge-release] .bridge-platform-version {
+  display: inline-block;
+  white-space: nowrap;
+}
+/* Same existing readable light token used for Log's small release metadata. */
+html[data-theme="light"] .app-rel-ver[data-bridge-release] {
+  color: var(--text-primary);
+}
+
+/* The changed small date needs the established secondary token, not muted text. */
+html[data-theme="light"] .app-rel-ver[data-bridge-release] ~ time {
+  color: var(--text-secondary);
+}

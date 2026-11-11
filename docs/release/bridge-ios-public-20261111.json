@@ -1,0 +1,75 @@
+{
+  "observedAt": "2026-11-11",
+  "scope": "Only Bridge iOS current public KR/JP/US version/date; no console/binary/learning outcome/Android freshness or global earliest date inferred.",
+  "updatedDateConvention": "UTC ISO date from currentVersionReleaseDate.slice(0,10)",
+  "originalSharedObservation": "2026-11-02",
+  "unchangedAndroidObservation": {
+    "version": "1.0.2",
+    "updated": "2026-10-22",
+    "checkedAt": "2026-11-02"
+  },
+  "originalSince": null,
+  "apps": [
+    {
+      "lang": "en",
+      "country": "us",
+      "HTTP": 200,
+      "url": "https://itunes.apple.com/lookup?id=6801205183&country=us",
+      "observedAt": "2026-11-11T01:35:47.214Z",
+      "app": {
+        "trackId": 6801205183,
+        "trackName": "Korean Bridge: Hangul for Kids",
+        "sellerName": "PiFl Labs Co., Ltd.",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+        "releaseDate": "2026-09-16T07:00:00Z"
+      }
+    },
+    {
+      "lang": "ko",
+      "country": "kr",
+      "HTTP": 200,
+      "url": "https://itunes.apple.com/lookup?id=6801205183&country=kr",
+      "observedAt": "2026-11-11T01:35:47.497Z",
+      "app": {
+        "trackId": 6801205183,
+        "trackName": "Korean Bridge - 어린이 한국어·한글·수학",
+        "sellerName": "PiFl Labs Co., Ltd.",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+        "releaseDate": "2026-09-16T07:00:00Z"
+      }
+    },
+    {
+      "lang": "ja",
+      "country": "jp",
+      "HTTP": 200,
+      "url": "https://itunes.apple.com/lookup?id=6801205183&country=jp",
+      "observedAt": "2026-11-11T01:35:47.833Z",
+      "app": {
+        "trackId": 6801205183,
+        "trackName": "Korean Bridge - 子どもハングル・算数",
+        "sellerName": "PiFl Labs Co., Ltd.",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+        "releaseDate": "2026-09-16T07:00:00Z"
+      }
+    }
+  ],
+  "unchangedOtherAppBlocksSHA256": {
+    "focus": "7199a4cb8765e66768e7ce4737dda90bc57a710211a3d95e096b7ab6bbb048f1",
+    "hello": "0b46e6905855d6793e1325f99c3e6f0b9a46c8f11934f673dd6d808858b2e69f",
+    "words": "be129babaeffa0d671573b56e4a64bf581b271050094ad0e68f98052bc0b3b64",
+    "dday": "26d042d8f94260d903eacea6069979ba471503204a04871b597efc75b9732715",
+    "log": "501e67a19a760d74d2b3af6c83e317b4cf2b2cbff0b5482ff68d5f93ef74f7c5",
+    "dialogos": "9d5f6b4ce259b77f9e94a3ed7d13c5f1f28d083817aa16404732e76aa50b45b7",
+    "draw": "288673215732fbe8e8feac0da7f0b811bf1b12546b4555f49ade498fa71c5ad6",
+    "wordVoyage": "a9978f6bd9c22af13170a3db552b63696e88a4ec5ecc976c382444600545b285",
+    "legion": "8ac23c48ca5752985fc7c40e1564142a25e3179aead4eefe73be333fc3658096",
+    "tide": "da041b21d37356d1a694f81d168eafc3b76e93d1794e8cab438d21c248a289e6",
+    "sudoku": "b68be0f7abe705d160a6e1f6bffdd7ae7a7505bea13f948429192d64df9afa91",
+    "kkachi": "02622beaee46fa3d4520c587336f5d79abfd48b0636d721a091ab524cf02021a",
+    "spend": "33dde26b3b29a06d58a638def902adf8a8bbaba057cfc4fbd86936be531d30e5",
+    "sky": "ce9d456936c647c218d5d57232de0f8cf23c50cd505e10bfb7a08a634df8a541"
+  }
+}

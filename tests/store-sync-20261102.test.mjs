@@ -9,6 +9,7 @@ const receipt = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-au
 const current = receipt.apps;
 // Later evidence updates only this platform; the dated baseline receipt remains immutable.
 const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
+const laterBridgeIOS = JSON.parse(readFileSync(new URL('../docs/release/bridge-ios-public-20261111.json', import.meta.url), 'utf8'));
 
 const langs = ['ko', 'ja', 'en'];
 const country = { ko: 'kr', ja: 'jp', en: 'us' };
@@ -69,11 +70,12 @@ for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
     if (iosLive) {
       const versions = new Set(langs.map((l) => seen.ios[l].version));
       assert.equal(versions.size, 1, 'KR/JP/US agree');
-      const later = app.slug === 'pipi-log' ? laterLogIOS.apps.find(r=>r.lang==='en').app : null;
+      const laterReceipt = app.slug === 'pipi-log' ? laterLogIOS : app.slug === 'pipi-bridge' ? laterBridgeIOS : null;
+      const later = laterReceipt?.apps.find(r=>r.lang==='en').app ?? null;
       const observed = later ?? seen.ios.en;
       assert.equal(app.release.ios.version, observed.version);
       assert.equal(app.release.ios.updated, observed.currentVersionReleaseDate.slice(0, 10));
-      assert.equal(app.release.ios.checkedAt, later ? laterLogIOS.observedAt : '2026-11-02');
+      assert.equal(app.release.ios.checkedAt, later ? laterReceipt.observedAt : '2026-11-02');
     } else {
       assert.equal(app.release?.ios, undefined);
     }

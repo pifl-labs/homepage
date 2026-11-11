@@ -5,17 +5,19 @@ import { test } from 'node:test';
 const source = readFileSync(new URL('../src/data/apps.ts', import.meta.url), 'utf8');
 const receipt = JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261014.json', import.meta.url), 'utf8'));
 const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps;
+const laterBridge = JSON.parse(readFileSync(new URL('../docs/release/bridge-ios-public-20261111.json', import.meta.url), 'utf8'));
 const variables = { 'com.pifl.pipi.dday': 'dday', 'com.pifl.pipi.draw': 'draw', 'com.pifl.pipi.bridge': 'bridge' };
 const slugs = { 'com.pifl.pipi.dday': 'pipi-dday', 'com.pifl.pipi.draw': 'pipi-draw', 'com.pifl.pipi.bridge': 'pipi-bridge' };
 const playDay = (text) => new Date(`${text} UTC`).toISOString().slice(0, 10);
 const block = (v) => source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 
 for (const [bundle, v] of Object.entries(variables)) {
-  test(`${bundle}: current iOS version and UTC release day follow the 2026-11-02 receipt; 2026-10-14 release bounds stay intact`, () => {
+  test(`${bundle}: current iOS version and UTC release day follow dated public receipts; 2026-10-14 release bounds stay intact`, () => {
     const r = receipt.ios[bundle];
     assert.ok(block(v), `${v} block exists`);
-    const latest = current.find(a => a.slug === slugs[bundle]).ios.ko;
-    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '2026-11-02' }`));
+    const latest = v === 'bridge' ? laterBridge.apps.find(a => a.lang === 'ko').app : current.find(a => a.slug === slugs[bundle]).ios.ko;
+    const observed = v === 'bridge' ? laterBridge.observedAt : '2026-11-02';
+    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '${observed}' }`));
     for (const bound of r.releaseBoundsUTC) assert.ok(bound.startsWith(r.updatedUTC), `${bundle}: every release bound stays on ${r.updatedUTC} UTC`);
   });
 }
