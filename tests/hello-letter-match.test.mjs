@@ -16,6 +16,16 @@ test('sample leads to real store options without new destination or tracking', (
   assert.match(component, /href="#hello-download">View app download options/);
   assert.match(landing, /id=\{app\.slug === 'pipi-hello' && lang === 'en' \? 'hello-download' : undefined\}/);
 });
+test('optional English parent guide is credited and not presented as a hands-on review', () => {
+  const url = 'https://iapp4me.com/tasks/introduce-japanese-kana-with-cards-and-tracing';
+  assert.equal(component.split(`href="${url}"`).length - 1, 1);
+  assert.match(component, /hreflang="en" target="_blank" rel="noopener noreferrer">Read iApp4Me’s parent guide \(developer-source overview\)<\/a>/);
+  assert.doesNotMatch(component, /independent review|recommended by iApp4Me|tested by iApp4Me|proven learning/i);
+  // The existing external link style carries a 44px target and visible focus;
+  // this change adds no script, dependency, layout or app-learning claim.
+  assert.match(component, /\.hello-match-download \{[^}]*min-height: 44px/);
+  assert.match(component, /\.hello-match-download:focus-visible \{ outline: 2px solid/);
+});
 test('enlarged letters reflow instead of shrinking or clipping', () => {
   assert.match(component, /repeat\(auto-fit, minmax\(min\(100%, 4rem\), 1fr\)\)/);
   assert.doesNotMatch(component, /text-overflow:\s*ellipsis|overflow:\s*hidden|!important/);
