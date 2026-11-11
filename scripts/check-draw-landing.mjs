@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 import { focusWebTrialFor } from '../src/data/focus-web-trial.mjs';
 import { wordsWebTrialFor } from '../src/data/words-web-trial.mjs';
+import { voyageWebTrialFor } from '../src/data/voyage-web-trial.mjs';
 import { createHash } from 'node:crypto';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
@@ -16,6 +17,9 @@ assert.deepEqual(readFileSync(join(dist, 'styles-focus-web-trial.css')), focusCs
 const wordsCss = readFileSync(new URL('../public/styles-words-web-trial.css', import.meta.url));
 const wordsCssUrl = `/styles-words-web-trial.css?v=${createHash('sha256').update(wordsCss).digest('hex').slice(0, 12)}`;
 assert.deepEqual(readFileSync(join(dist, 'styles-words-web-trial.css')), wordsCss, 'Words stylesheet built bytes match source');
+const voyageCss = readFileSync(new URL('../public/styles-voyage-web-trial.css', import.meta.url));
+const voyageCssUrl = `/styles-voyage-web-trial.css?v=${createHash('sha256').update(voyageCss).digest('hex').slice(0, 12)}`;
+assert.deepEqual(readFileSync(join(dist, 'styles-voyage-web-trial.css')), voyageCss, 'Voyage stylesheet built bytes match source');
 const expected = {
   ko: { note: ['하루 2회 무료', '인터넷', '광고', '선택형 변환권 구매'], styles: ['원본 느낌', '동화풍', '꼬마 캐릭터', '만화풍'], sample: '예시 도안', direct: 'AI 변환 횟수를 쓰지 않는 무료 기능' },
   ja: { note: ['1日2回無料', 'インターネット', '広告', '任意の変換チケット購入'], styles: ['写真らしく', '絵本風', 'ちびキャラ', 'マンガ風'], sample: 'サンプル図案', direct: 'AI変換の回数を使わない無料機能' },
@@ -26,6 +30,7 @@ for (const [lang, checks] of Object.entries(expected)) {
   const html = readFileSync(join(dist, lang, 'apps/pipi-draw/index.html'), 'utf8');
   assert.ok(!html.includes('styles-focus-web-trial.css'), `${lang}: Focus-only CSS does not leak to Draw`);
   assert.ok(!html.includes('styles-words-web-trial.css'), `${lang}: Words-only CSS does not leak to Draw`);
+  assert.ok(!html.includes('styles-voyage-web-trial.css'), `${lang}: Voyage-only CSS does not leak to Draw`);
   const notes = [...html.matchAll(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/gs)];
   assert.equal(notes.length, 1, `${lang}: one disclosure near the hero downloads`);
   for (const text of checks.note) assert.ok(notes[0][1].includes(text), `${lang}: missing ${text}`);
@@ -48,6 +53,7 @@ for (const [lang, checks] of Object.entries(expected)) {
     const other = readFileSync(file, 'utf8');
     if (!file.includes('/pipi-focus/')) assert.ok(!other.includes('styles-focus-web-trial.css'), `${file}: Focus-only CSS does not leak`);
     if (!file.includes('/pipi-words/')) assert.ok(!other.includes('styles-words-web-trial.css'), `${file}: Words-only CSS does not leak`);
+    if (!file.includes('/pipi-word-voyage/') || lang === 'ja') assert.ok(!other.includes('styles-voyage-web-trial.css'), `${file}: Voyage-only CSS does not leak`);
     if(file.includes('/pipi-spend/')) {
       const ownNote=other.match(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/s)?.[1];
       assert.ok(ownNote, `${file}: Spend must disclose its own cost`);
@@ -90,6 +96,24 @@ for (const [lang, checks] of Object.entries(expected)) {
       assert.equal(notes[0][1].replace(links[0][0], '').replace(paragraphs[0][0], '').trim(), '', `${file}: no inline boundary text or other content`);
       const styleLinks = [...other.matchAll(/<link\b[^>]*href="(\/styles-words-web-trial\.css[^\"]*)"[^>]*>/g)];
       assert.deepEqual(styleLinks.map(match => match[1]), [wordsCssUrl], `${file}: exact content-versioned Words stylesheet`);
+      for (const text of [checks.note[0], checks.note[3]]) assert.ok(!notes[0][1].includes(text), `${file}: Draw-specific conversion claim leaked`);
+    } else if (file.includes('/pipi-word-voyage/') && lang !== 'ja') {
+      const notes = [...other.matchAll(/<div\b[^>]*class="app-download-note"[^>]*>(.*?)<\/div>/gs)];
+      const trial = voyageWebTrialFor({ slug: 'pipi-word-voyage', status: 'live', lang });
+      assert.equal(notes.length, 1, `${file}: one Voyage web sample note`);
+      assert.match(notes[0][0], /data-web-trial="voyage"/, `${file}: explicit Voyage sample marker`);
+      assert.equal((other.match(/class="app-download-note"/g) ?? []).length, 1, `${file}: no extra legacy paragraph disclosure`);
+      const links = [...notes[0][1].matchAll(/<a\b[^>]*href="([^"]+)"[^>]*hreflang="([^"]+)"[^>]*>(.*?)<\/a>/gs)];
+      assert.equal(links.length, 1, `${file}: one Voyage sample destination`);
+      assert.equal(links[0][1], trial.href, `${file}: matching-locale Korean word-link examples`);
+      assert.equal(links[0][2], lang, `${file}: matching link language`);
+      assert.equal(links[0][3], trial.label, `${file}: web sample link label`);
+      const paragraphs = [...notes[0][1].matchAll(/<p\b[^>]*>(.*?)<\/p>/gs)];
+      assert.equal(paragraphs.length, 1, `${file}: boundary note has its own paragraph`);
+      assert.equal(paragraphs[0][1], trial.note, `${file}: exact separate-web and no-transfer disclosure`);
+      assert.equal(notes[0][1].replace(links[0][0], '').replace(paragraphs[0][0], '').trim(), '', `${file}: no inline boundary text or other content`);
+      const styleLinks = [...other.matchAll(/<link\b[^>]*href="(\/styles-voyage-web-trial\.css[^\"]*)"[^>]*>/g)];
+      assert.deepEqual(styleLinks.map(match => match[1]), [voyageCssUrl], `${file}: exact content-versioned Voyage stylesheet`);
       for (const text of [checks.note[0], checks.note[3]]) assert.ok(!notes[0][1].includes(text), `${file}: Draw-specific conversion claim leaked`);
     } else assert.doesNotMatch(other, /class="app-download-note"/, `${file}: Draw disclosure leaked`);
   }
