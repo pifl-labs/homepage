@@ -62,6 +62,15 @@ This supplemental entry is separate from the ten-app snapshot above.
 One original 9 x 9 puzzle, three progressive hints and an answer key. No app or account needed.
 This is a separate practice puzzle, not an app screenshot or a built-in app puzzle. The Android app link is optional; current store availability and purchases apply.
 
+#### 한국어 스도쿠 무료 연습지
+
+[한국어 무료 PDF (A4·2쪽)](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ko-a4.pdf) · [같은 문제·힌트·정답의 텍스트판](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ko.txt)
+
+문제 1개와 단계 힌트 3개, 정답을 담았습니다. 앱 설치·회원가입·구매 없이 종이로 풀 수 있습니다.
+기존 영어판·일본어판과 **같은 원본 문제**의 한국어 설명판입니다. 새 문제, 앱 수록 문제·화면·힌트 원문은 아닙니다.
+별도 선택으로 우리가 만든 Android 앱 [한칸씩 스도쿠 (한국 Google Play)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR)를 안내합니다. 앱 제공 여부·지원 기기·비용은 스토어의 최신 표시를 확인하세요.
+2026년 11월 11일 작성. 실제 인쇄·독립 한국어 교열·학습 효과는 미검증입니다. 기존 Nanum Gothic 글꼴의 [SIL Open Font License](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ko-OFL.txt)를 함께 제공합니다.
+
 #### 日本語で、紙からナンプレ
 
 [日本語の無料PDF（A4・2ページ）](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ja-a4.pdf) · [同じ問題と説明のテキスト版](https://raw.githubusercontent.com/pifl-labs/homepage/main/public/assets/printables/one-square-at-a-time-ja.txt)
