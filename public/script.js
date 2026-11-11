@@ -93,6 +93,12 @@ document.querySelectorAll('a[href^="#"]:not([data-email-user])').forEach(anchor 
         const navHeight = navEl ? navEl.offsetHeight : 0;
         const targetPosition = target.offsetTop - navHeight;
         history.pushState(null, null, targetHash);
+        // A skip link must move keyboard focus, not only the viewport.
+        // Keep ordinary section links' existing scrolling behavior unchanged.
+        if (this.classList.contains('skip-link')) {
+            if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+        }
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
