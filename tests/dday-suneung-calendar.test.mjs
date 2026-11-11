@@ -23,7 +23,7 @@ test('date is exam year 2026 and academic year 2027, never stale today count', (
 test('one valid calendar and one event with required stable fields', () => {
   for (const p of ['BEGIN:VCALENDAR', 'END:VCALENDAR', 'BEGIN:VEVENT', 'END:VEVENT', 'VERSION:2.0']) assert.equal(lines.filter(l => l === p).length, 1);
   assert.deepEqual(prop('UID'), ['2027-suneung-20261119@pifl-labs.com']);
-  assert.match(prop('DTSTAMP')[0], /^20261106T\d{6}Z$/);
+  assert.match(prop('DTSTAMP')[0], /^20261111T\d{6}Z$/);
   assert.equal(prop('PRODID').length, 1);
 });
 test('single all-day date uses exclusive next-day end and no timezone shift', () => {
@@ -40,10 +40,10 @@ test('UTF8 calendar uses CRLF, safe physical folding <=75 octets and no BOM', ()
   assert(folded.endsWith('\r\n'));
   for (const l of folded.split('\r\n')) assert(Buffer.byteLength(l, 'utf8') <= 75);
   assert.equal(prop('DESCRIPTION').length, 1);
-  assert(prop('DESCRIPTION')[0].includes('\\n출처: 교육부 2026-03-31'));
+  assert(prop('DESCRIPTION')[0].includes('\\n출처: 교육부 2024-08-16'));
 });
 test('official source and independence disclosure appear in page and file', () => {
-  assert(prop('URL')[0].startsWith('https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=105756&'));
+  assert(prop('URL')[0].startsWith('https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=100526&'));
   for (const x of ['교육부 원문 확인', '교육부와 무관한 PiFl Labs', '입실 시각·준비물·최신 공지']) assert(component.includes(x));
   assert(prop('DESCRIPTION')[0].includes('교육부와 무관한 비공식 달력 파일'));
   assert.equal(prop('SUMMARY')[0], '2027학년도 대학수학능력시험');
@@ -59,4 +59,12 @@ test('app relationship keeps Android manual date and free/paid limits distinct',
 test('scoped responsive styles use existing tokens without hiding or truncating prose', () => {
   for (const x of ['min-width: 0', 'flex-wrap: wrap', 'max-width: 100%', 'min-height: 44px', 'var(--bg-card)', 'word-break: keep-all']) assert(component.includes(x));
   assert.doesNotMatch(component, /text-overflow|max-height|overflow:\s*hidden|white-space:\s*nowrap|font-size:\s*\d+px/);
+});
+
+test('page and calendar use the same verified MOE announcement, not the unavailable March link', () => {
+  const expected = 'https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=100526&lev=0&m=020402&opType=N&s=moe';
+  assert.equal(prop('URL')[0], expected);
+  assert.ok(component.includes(expected.replaceAll('&', '&amp;')));
+  assert.doesNotMatch(component + event, /boardSeq=105756|2026-03-31/);
+  assert.ok(prop('DESCRIPTION')[0].includes('교육부 2024-08-16 수능 시행일 발표.'));
 });
