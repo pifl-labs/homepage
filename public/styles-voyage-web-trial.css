@@ -1,0 +1,10 @@
+/* Separate word-link examples: retain the secondary hierarchy and focus ring. */
+.app-page [data-web-trial="voyage"] {
+  box-sizing: border-box;
+  width: min(100%, 65ch);
+  max-width: 100%;
+  padding-inline: .25rem;
+}
+.app-page [data-web-trial="voyage"] p {
+  margin: .4em 0 0;
+}
