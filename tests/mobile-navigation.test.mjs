@@ -60,8 +60,10 @@ test('fleet wraps release metadata before sacrificing the name longest word',()=
 });
 
 
-test('approved R5 lede explains separate apps while both existing action destinations remain',()=>{
- const expected={ko:'집중 타이머부터 단어 학습, 감정 기록까지. 지금 필요한 작은 앱을 골라 보세요.',ja:'集中タイマー、ことばの学習、気持ちの記録。いま使いたい小さなアプリを見つけてください。',en:'Small apps for focus, language learning, and a daily journal. Choose the one that fits your day.'};
+test('current portfolio lede retains the separate-app and two-action contract from R5',()=>{
+ // Nov11 portfolio breadth supersedes the historical three-genre lede only.
+ // The approved R5 headline and all reflow/action checks above remain exact.
+ const expected={ko:'스도쿠와 민화, 가계부부터 언어 공부와 집중, 일상 기록까지. 지금 필요한 작은 앱을 골라 보세요.',ja:'数独・韓国の民画・家計簿から、語学・集中・日々の記録まで。いま使いたい小さなアプリを見つけてください。',en:'Apps for Sudoku, Korean folk art, spending logs, language practice, focus and journaling. Find one for what you need today.'};
  for(const [lang,text] of Object.entries(expected)){
   const page=readFileSync(new URL(`../src/pages/${lang}/index.astro`,import.meta.url),'utf8');
   const lede=page.match(/<p class="hero-lede[^>]*>([\s\S]*?)<\/p>/)[1];
