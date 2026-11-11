@@ -2,6 +2,7 @@
 import { submissionMedia, submissionCopy } from "../data/app-submission-media";
 import { appIconSrc } from "../data/app-icons.mjs";
 import { focusWebTrialFor } from '../data/focus-web-trial.mjs';
+import { wordsWebTrialFor } from '../data/words-web-trial.mjs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
 import DrawPhotoChecklist from './DrawPhotoChecklist.astro';
@@ -19,6 +20,7 @@ const app = apps[slug];
 if (!app) throw new Error(`Unknown app slug: ${slug}`);
 const c = app.content[lang];
 const focusWebTrial = focusWebTrialFor({ slug: app.slug, status: app.status, lang });
+const wordsWebTrial = wordsWebTrialFor({ slug: app.slug, status: app.status, lang });
 const submitted = submissionMedia(slug);
 const mediaCopy = submissionCopy[lang];
 const shots = submitted ? submitted.shots.map(s => ({ src: s.src, label: s.label[lang], desc: "" })) : c.shots.map(s => ({ ...s, src: `/assets/apps/${slug}/${lang}/${s.file}.webp` }));
@@ -125,7 +127,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : []), ...(focusWebTrial ? ['/styles-focus-web-trial.css?v=a75176d23d53'] : [])]}
+  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : []), ...(focusWebTrial ? ['/styles-focus-web-trial.css?v=a75176d23d53'] : []), ...(wordsWebTrial ? ['/styles-words-web-trial.css?v=33d77faa265c'] : [])]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -178,6 +180,9 @@ const jsonLd = {
           {c.downloadNote && <p class="app-download-note">{lang === 'ja' && app.slug === 'pipi-draw' ? japaneseReadingParts(c.downloadNote, 'drawDownloadNote').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : c.downloadNote}</p>}{focusWebTrial && <div class="app-download-note" data-web-trial="focus">
             <a class="app-bridge-resource-link" href={focusWebTrial.href} hreflang={lang}>{focusWebTrial.label}</a>
             <p>{focusWebTrial.note}</p>
+          </div>}{wordsWebTrial && <div class="app-download-note" data-web-trial="words">
+            <a class="app-bridge-resource-link" href={wordsWebTrial.href} hreflang={lang}>{wordsWebTrial.label}</a>
+            <p>{wordsWebTrial.note}</p>
           </div>}
 
           {rel && (

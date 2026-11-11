@@ -1,0 +1,14 @@
+/* Separate vocabulary sample: preserve the secondary hierarchy and focus ring. */
+.app-page [data-web-trial="words"] {
+  box-sizing: border-box;
+  width: min(100%, 65ch);
+  max-width: 100%;
+  padding-inline: .25rem;
+}
+.app-page [data-web-trial="words"] p {
+  margin: .4em 0 0;
+}
+.app-page:lang(ja) [data-web-trial="words"] p,
+.app-page:lang(ja) [data-web-trial="words"] a {
+  text-wrap: balance;
+}
