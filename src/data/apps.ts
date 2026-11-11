@@ -859,8 +859,9 @@ const bridge: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge',
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
+  // 2026-11-11: Apple KR/JP/US 1.0.3 재관측만 반영. Android와 공통 확인일은 기존 근거를 보존한다.
   release: {
-    ios: { version: '1.0.2', updated: '2026-10-21', checkedAt: '2026-11-02' },
+    ios: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-11' },
     android: { version: '1.0.2', updated: '2026-10-22', checkedAt: '2026-11-02' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
     checkedAt: '2026-11-02',

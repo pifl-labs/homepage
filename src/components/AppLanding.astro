@@ -123,7 +123,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : [])]}
+  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : [])]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -177,7 +177,9 @@ const jsonLd = {
 
           {rel && (
             <p class="app-rel-line">
-              <span class="app-rel-ver">{relVersion}</span>
+              <span class="app-rel-ver" data-bridge-release={app.slug === 'pipi-bridge' || undefined}>{app.slug === 'pipi-bridge' && rel.ios && rel.android && rel.ios.version !== rel.android.version
+                ? <><span class="bridge-platform-version">iOS v{rel.ios.version}</span>{' · '}<span class="bridge-platform-version">Android v{rel.android.version}</span></>
+                : relVersion}</span>
               <span class="app-rel-sep" aria-hidden="true">·</span>
               <time datetime={latestUpdate(app)}>{relUpdated} {ul.updated}</time>
               {relSince && (app.slug === 'pipi-focus'
