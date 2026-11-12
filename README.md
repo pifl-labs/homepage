@@ -11,6 +11,17 @@ The website contains product details and official store links. Some apps include
 ads or optional purchases; availability and pricing vary by app and store.
 This repository contains the company marketing website, not the Flutter app source.
 
+### External reading: KanaSprout
+
+[iApp4Me’s source-based overview of KanaSprout](https://iapp4me.com/apps/kanasprout)
+compares its introductory Japanese activities, platform-specific free-content
+boundaries and purchase limitations. The overview uses our public product
+documentation and store imagery; it is not an installed-device test, child-privacy
+audit or learning-outcome study.
+
+For our current product information and store links, see
+[the official KanaSprout page](https://pifl-labs.com/en/apps/pipi-hello/).
+
 ### Ten apps: official store links
 
 The original ten-product Korean-storefront snapshot was checked on 17 October
