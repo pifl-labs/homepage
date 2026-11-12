@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="ja"
+  title={"Skydaze プライバシーポリシー - PiFl Labs"}
+  description={"PiFl Labs Skydaze(하늘멍)のプライバシーポリシー — アカウント・広告・分析SDKなし。位置情報は端末内でのみ使い、座標をサーバーへ送りません。"}
+  canonical="https://pifl-labs.com/ja/apps/pipi-sky/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-sky/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-sky/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-sky/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-sky/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<section class="legal-hero">
+        <div class="container">
+            <a href="/ja/" class="legal-back"><i class="fas fa-arrow-left"></i> ホームへ</a>
+            <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">Skydaze プライバシーポリシー</span></h1>
+            <p class="legal-date">施行日：2026年10月30日</p>
+        </div>
+    </section>
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>Skydazeは、アカウント情報、広告識別子、連絡先、写真、マイクデータ、利用状況分析を収集しません。広告SDKおよび分析SDKも含まれていません。</p>
+                <h2>位置情報</h2>
+                <ul>
+                    <li>位置情報の権限は、近くの空データタイルと太陽・月の位置を選ぶためにのみ使用します。</li>
+                    <li>正確な住所への変換は行いません。すべての地域に共通するデータ一式をダウンロードするため、座標や位置別のリクエストはサーバーへ送信されません。次回起動のため選択した地域名（韓国以外では約100 kmの1°格子）だけを端末に保存し、正確な座標は保存しません。</li>
+                    <li>権限を許可しない場合は、保存済みの地域または端末のタイムゾーンの代表都市付近の空を表示します。</li>
+                </ul>
+                <h2>端末に保存する情報</h2>
+                <p>端末内に保存するのは、方位補正値、赤色ナイトモード、空を眺める音の設定、バックグラウンド音楽の設定と追加した音楽ファイル、音楽のリピート方法と選んだ曲・曲順、大きく表示の設定、アプリの言語の設定、空の時間のお知らせの設定とそれに基づいて予約したお知らせ、オンボーディング完了状態、高さレールの初回案内を見たかどうか、選択した地域名、レビュー依頼の記録（アプリを2分以上使った日数、最後に数えた日とその日の利用時間、レビューを依頼したアプリのバージョン）、再ダウンロードを避けるための空データ一式のキャッシュだけです。追加した音楽ファイルはアプリ内にコピーするだけで、どこにも送信しません。空の時間のお知らせは端末内だけで予約・表示し、サーバーを経由しません。アプリを削除すると、これらも削除されます。</p>
+                <h2>第三者への提供</h2>
+                <p>個人情報を収集しないため、第三者への提供や販売は行いません。「この空を送る」を押すと、画面の空の画像と出典の行を端末の共有画面に渡し、送り先はご自身で選びます。アプリが画像をサーバーへ送信することはなく、画像と共有テキストに座標は含まれません。画像は共有のためにアプリの一時フォルダーに短時間残り、端末によって削除されます。写真への保存は端末の共有画面が行い、Skydazeは写真を読み取りません。</p>
+                <h2>子どものプライバシー</h2>
+                <p>Skydazeは個人情報を収集せず、子どもの個人情報を意図的に求めることもありません。</p>
+                <h2>お問い合わせ</h2>
+                <p>プライバシーに関するお問い合わせは、<a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>までお送りください。</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>

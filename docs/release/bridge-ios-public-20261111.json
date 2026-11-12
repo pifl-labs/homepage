@@ -70,6 +70,7 @@
     "sudoku": "b68be0f7abe705d160a6e1f6bffdd7ae7a7505bea13f948429192d64df9afa91",
     "kkachi": "02622beaee46fa3d4520c587336f5d79abfd48b0636d721a091ab524cf02021a",
     "spend": "33dde26b3b29a06d58a638def902adf8a8bbaba057cfc4fbd86936be531d30e5",
-    "sky": "ce9d456936c647c218d5d57232de0f8cf23c50cd505e10bfb7a08a634df8a541"
-  }
+    "sky": "04e9e224fce67a053163b5df3ae7bb70a868cd3ecf82a1a17c97f5c54fb80ae1"
+  },
+  "unchangedOtherAppBlocksNote": "sky 블록은 2026-11-13 하늘멍(Skydaze) 1.0 스토어 제출 준비로 소개 문구·개인정보처리방침 링크를 갱신했다(Bridge 릴리스와 무관)."
 }

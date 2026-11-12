@@ -1292,37 +1292,87 @@ const sky: AppMeta = {
   "content": {
     "ko": {
       "tagline": "휴식 · 하늘 관찰",
-      "lede": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
+      "lede": "흐린 날에도 구름 위의 하늘은 이어져요. 지역·시간·높이를 골라 그 높이의 하늘을 조용히 바라보는 앱이에요. 공개 출시를 준비하고 있어요.",
       "shotsTitle": "",
       "featuresTitle": "앱 소개",
       "ctaTitle": "공개 출시 준비 중",
       "ctaSub": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
       "shots": [],
-      "features": []
+      "features": [
+        {
+          "title": "흐린 날, 구름 위로",
+          "desc": "높이를 올리면 NOAA GFS 모델값으로 그린 구름층 위의 하늘을 볼 수 있어요. 지금 그 높이가 어떤지 데이터와 출처·발표 시각을 함께 보여줘요."
+        },
+        {
+          "title": "구름 비행 · 성층권 · 우주",
+          "desc": "발아래가 구름 바다면 손가락 하나로 그 위를 날고, 성층권(약 30km)까지 올라 우주 전망대로 이어갈 수 있어요."
+        },
+        {
+          "title": "하늘멍",
+          "desc": "고른 높이에 머물며 별·달과 잔잔한 소리·음악을 들어요. 재촉하는 표시나 연속 출석은 없어요."
+        },
+        {
+          "title": "계정·광고·분석 없음",
+          "desc": "위치는 기기 안에서만 쓰고 좌표를 서버로 보내지 않아요. 한국어·English·日本語·简体中文·繁體中文 지원."
+        }
+      ]
     },
     "ja": {
       "tagline": "リラックス · 空の観察",
-      "lede": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
+      "lede": "曇りの日でも、雲の上の空は続いています。場所・時刻・高度を選んで、その高さの空を静かに眺めるアプリです。一般公開の準備中です。",
       "shotsTitle": "",
       "featuresTitle": "アプリについて",
       "ctaTitle": "一般公開の準備中",
       "ctaSub": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
       "shots": [],
-      "features": []
+      "features": [
+        {
+          "title": "曇りの日は雲の上へ",
+          "desc": "高度を上げると、NOAA GFSのモデル値で描いた雲の上の空が見られます。どの画面にもデータの出典と発表時刻を表示します。"
+        },
+        {
+          "title": "雲の上を飛ぶ · 成層圏 · 宇宙",
+          "desc": "足もとが雲海なら指一本でその上を飛び、成層圏(約30km)まで上がって宇宙展望台へ続けられます。"
+        },
+        {
+          "title": "空ぼーっと",
+          "desc": "選んだ高度にとどまり、星や月、静かな音と音楽を楽しめます。急かす表示や連続記録はありません。"
+        },
+        {
+          "title": "アカウント・広告・分析なし",
+          "desc": "位置情報は端末内でのみ使い、座標をサーバーへ送りません。日本語・English・한국어・简体中文・繁體中文に対応。"
+        }
+      ]
     },
     "en": {
       "tagline": "Watch the sky. Take a quiet moment.",
-      "lede": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
+      "lede": "On a cloudy day, the sky above the clouds is still there. Pick a place, a time and a height, and look at that sky quietly. Preparing for public release.",
       "shotsTitle": "",
       "featuresTitle": "About the app",
       "ctaTitle": "Preparing for public release",
       "ctaSub": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
       "shots": [],
-      "features": []
+      "features": [
+        {
+          "title": "Above the clouds on a grey day",
+          "desc": "Raise the height to see the sky above the cloud layer, drawn from NOAA GFS model values, with the source and issue time on every screen."
+        },
+        {
+          "title": "Cloud flight · stratosphere · space",
+          "desc": "When a sea of clouds lies below, fly over it with one finger, rise to the stratosphere (about 30 km) and carry on to the space observatory."
+        },
+        {
+          "title": "Sky Gaze",
+          "desc": "Stay at the height you chose with the stars, the Moon and quiet sound and music. No nudges, no streaks."
+        },
+        {
+          "title": "No account, ads or analytics",
+          "desc": "Location is used only on your device and coordinates are never sent to a server. English, Korean, Japanese, Simplified and Traditional Chinese."
+        }
+      ]
     }
   },
-  "previousName": "PiPi Sky",
-  "privacyPath": null
+  "previousName": "PiPi Sky"
 };
 
 export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky, 'pipi-spend': spend };

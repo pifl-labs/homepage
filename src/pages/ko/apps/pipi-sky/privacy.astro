@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="ko"
+  title={"하늘멍 개인정보처리방침 - PiFl Labs"}
+  description={"PiFl Labs 하늘멍(Skydaze) 개인정보처리방침 — 계정·광고·분석 SDK 없음, 위치는 기기 안에서만 쓰고 좌표를 서버로 보내지 않습니다."}
+  canonical="https://pifl-labs.com/ko/apps/pipi-sky/privacy/"
+  alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/pipi-sky/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/pipi-sky/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/pipi-sky/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/pipi-sky/privacy/"}]}
+  extraCss={["/styles.css"]}
+>
+<section class="legal-hero">
+        <div class="container">
+            <a href="/ko/" class="legal-back"><i class="fas fa-arrow-left"></i> 홈으로</a>
+            <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">하늘멍 개인정보처리방침</span></h1>
+            <p class="legal-date">시행일: 2026년 10월 30일</p>
+        </div>
+    </section>
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <p>하늘멍은 계정, 광고 식별자, 연락처, 사진, 마이크 데이터 및 사용 분석 정보를 수집하지 않습니다. 광고·분석 SDK도 포함하지 않습니다.</p>
+                <h2>위치</h2>
+                <ul>
+                    <li>위치 권한은 가까운 하늘 데이터 타일과 태양·달 위치를 고를 때만 사용합니다.</li>
+                    <li>정확한 주소로 변환하지 않습니다. 앱은 모든 지역에 공통인 데이터 묶음 하나만 내려받아 위치 좌표나 위치별 요청을 서버로 전송하지 않습니다. 다음 실행을 위해 선택된 지역명(한국 밖은 약 100 km 크기의 1° 격자 칸)만 기기에 저장하고 정확한 위치 좌표는 저장하지 않습니다.</li>
+                    <li>권한을 허용하지 않으면 저장된 지역 또는 기기 시간대의 대표 도시 주변 하늘을 보여줍니다.</li>
+                </ul>
+                <h2>기기에 저장되는 정보</h2>
+                <p>기기 내부에 저장하는 항목은 다음이 전부입니다. 방향 보정값, 적색 야간 모드, 하늘멍 소리 선택, 배경 음악 선택과 직접 추가한 음악 파일, 음악 반복 방식과 고른 곡·곡 순서, 크게 보기, 앱 언어 선택, 하늘 시간 알림 선택과 그에 따라 기기에 예약된 알림, 온보딩 완료 여부, 높이 레일 첫 안내를 본 적 있는지, 선택된 지역명, 리뷰 요청 기록(앱을 2분 이상 쓴 날의 수, 마지막으로 센 날과 그날 쓴 시간, 리뷰를 요청한 앱 버전), 그리고 다시 내려받지 않기 위해 보관하는 하늘 데이터 묶음 사본입니다. 직접 추가한 음악 파일은 앱 안에 복사해 두기만 하고 어디로도 보내지 않습니다. 하늘 시간 알림은 기기 안에서만 예약하고 띄우며 서버를 거치지 않습니다. 앱을 삭제하면 함께 삭제됩니다.</p>
+                <h2>외부 제공</h2>
+                <p>개인정보를 수집하지 않으므로 제3자에게 제공하거나 판매하지 않습니다. 하늘 보내기를 누르면 지금 화면의 하늘 그림과 출처 줄을 기기의 공유 화면으로 넘기며, 보낼 곳은 직접 고릅니다. 앱은 그림을 서버로 보내지 않고 그림과 공유 글에 좌표를 넣지 않습니다. 그림은 공유를 위해 앱 임시 폴더에 잠시 남았다가 기기가 정리합니다. 사진 앱에 저장하는 것은 기기의 공유 화면이 하며, 하늘멍은 사진을 읽지 않습니다.</p>
+                <h2>어린이</h2>
+                <p>하늘멍은 개인정보를 수집하지 않으며, 어린이의 개인정보를 의도적으로 요청하지 않습니다.</p>
+                <h2>문의</h2>
+                <p>개인정보 관련 문의는 <a href="#" data-email-user="support" data-email-domain="pifl-labs.com"><span class="email-text">support (at) pifl-labs.com</span></a>으로 보내 주세요.</p>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
