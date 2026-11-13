@@ -770,8 +770,9 @@ const wordVoyage: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.3.1', updated: '2026-11-01', checkedAt: '2026-11-02' },
-    // 2026-11-13: visible Google Play About dialogs agree in KR/JP/US; iOS observation is unchanged.
+    // 2026-11-13: public Apple KR/JP lookups and the same-day US receipt independently agree.
+    ios: { version: '1.4.1', updated: '2026-11-04', checkedAt: '2026-11-13' },
+    // 2026-11-13: visible Google Play About dialogs independently agree in KR/JP/US.
     android: { version: '1.4.1', updated: '2026-11-04', checkedAt: '2026-11-13' },
     since: '2026-07-13',
     checkedAt: '2026-11-02',

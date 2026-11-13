@@ -77,7 +77,7 @@ const copy = {
                   </span>
                 ) : (
                   <span class="fleet-ver">
-                    <span class="fleet-chip fleet-chip--solo">v{displayVersion(app)}</span>
+                    <span class="fleet-chip fleet-chip--solo" style={app.slug === 'pipi-word-voyage' ? 'color: var(--text-primary)' : undefined}>v{displayVersion(app)}</span>
                     <span class="fleet-both">{copy.both}</span>
                   </span>
                 )}

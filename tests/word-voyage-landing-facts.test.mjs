@@ -12,7 +12,9 @@ test('Word Voyage landing is present and names match both public stores in all l
   const a = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(x => x.slug === 'pipi-word-voyage');
   const newer = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json', import.meta.url), 'utf8'));
   const android = newer.apps.find(r=>r.lang==='en').app;
-  assert.ok(wordVoyage.includes(`ios: { version: '${a.ios.en.version}', updated: '${a.ios.en.currentVersionReleaseDate.slice(0, 10)}', checkedAt: '2026-11-02' }`));
+  const currentIOS = JSON.parse(readFileSync(new URL('../docs/release/voyage-ios-public-20261113.json', import.meta.url), 'utf8'));
+  const ios = currentIOS.apps.find(r=>r.lang==='en').app;
+  assert.ok(wordVoyage.includes(`ios: { version: '${ios.version}', updated: '${ios.currentVersionReleaseDate.slice(0, 10)}', checkedAt: '${currentIOS.observedAt}' }`));
   assert.ok(wordVoyage.includes(`android: { version: '${android.version}', updated: '${android.updatedCalendar}', checkedAt: '${newer.observedAt}' }`));
   assert.match(wordVoyage, /checkedAt: '2026-11-02',\n  \}/);
 });
