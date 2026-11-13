@@ -11,20 +11,6 @@ The website contains product details and official store links. Some apps include
 ads or optional purchases; availability and pricing vary by app and store.
 This repository contains the company marketing website, not the Flutter app source.
 
-### Skydaze: now on Android
-
-[하늘멍 — 한국 Google Play](https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR) ·
-[Skydaze — Google Play (US)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=en&gl=US) ·
-[Skydaze — 日本 Google Play](https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ja&gl=JP)
-
-Choose a place, time and height to explore a virtual sky. Clouds visualize
-NOAA GFS model data, not live camera images or a weather forecast. Cloud flight
-requires a supported device.
-
-Public Android listings checked 13 November 2026: version 1.0.0, released
-12 November and updated 13 November. Regional and device eligibility vary;
-this entry does not establish iOS availability.
-
 ### External reading: KanaSprout
 
 [iApp4Me’s source-based overview of KanaSprout](https://iapp4me.com/apps/kanasprout)
