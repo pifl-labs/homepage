@@ -7,6 +7,7 @@ import {onRequest} from '../functions/_middleware.ts';
 const read=p=>readFileSync(new URL(p,import.meta.url),'utf8');
 const receipt=JSON.parse(read('../docs/release/bridge-ios-public-20261111.json'));
 const laterVoyageAndroid=JSON.parse(read('../docs/release/voyage-android-public-20261113.json'));
+const laterVoyageIOS=JSON.parse(read('../docs/release/voyage-ios-public-20261113.json'));
 const bridge=apps['pipi-bridge'];
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 
@@ -34,7 +35,8 @@ test('every other app source block stays byte-identical to current main',()=>{
     const block=source.match(new RegExp(`const ${name}: AppMeta = \\{[\\s\\S]*?\\n\\};`))?.[0];
     assert.ok(block,name);
     if(name==='wordVoyage')assert.equal(hash,laterVoyageAndroid.originalBlockSHA256,'dated Voyage receipt preserves the prior invariant');
-    assert.equal(sha(block),name==='wordVoyage'?laterVoyageAndroid.expectedBlockSHA256:hash,name);
+    if(name==='wordVoyage')assert.equal(laterVoyageIOS.originalBlockSHA256,laterVoyageAndroid.expectedBlockSHA256,'later iOS evidence preserves the Android-only baseline');
+    assert.equal(sha(block),name==='wordVoyage'?laterVoyageIOS.expectedBlockSHA256:hash,name);
   }
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; submitted 1.0.2 screenshots remain historical`,()=>{

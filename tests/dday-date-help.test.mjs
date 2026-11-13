@@ -73,7 +73,9 @@ test('dated evidence preserves exact shared source outside the optional D-Day en
   assert.deepEqual(receipt.actualSyntheticExample,{start:'2026-11-13',hundredthDay:'2027-02-20',hundredDaysLater:'2027-02-21',realPersonDate:false,clipboardWrite:false});
   const laterVoyage = JSON.parse(read('../docs/release/voyage-android-public-20261113.json'));
   assert.equal(receipt.unchangedAppsSHA256, laterVoyage.originalAppsFileSHA256, 'original D-Day baseline remains immutable');
-  assert.equal(sha(read('../src/data/apps.ts')),laterVoyage.expectedAppsFileSHA256);
+  const laterVoyageIOS = JSON.parse(read('../docs/release/voyage-ios-public-20261113.json'));
+  assert.equal(laterVoyageIOS.originalAppsFileSHA256,laterVoyage.expectedAppsFileSHA256);
+  assert.equal(sha(read('../src/data/apps.ts')),laterVoyageIOS.expectedAppsFileSHA256);
   const block=`{ddayDateHelp && <div class="app-download-note" data-date-help="dday">\n            <a class="app-bridge-resource-link" href={ddayDateHelp.href} hreflang="ko">{ddayDateHelp.label}</a>\n            <p>{ddayDateHelp.note}</p>\n          </div>}`;
   const edits=[
     "\nimport { ddayDateHelpFor } from '../data/dday-date-help.mjs';",
