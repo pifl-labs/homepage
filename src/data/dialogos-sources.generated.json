@@ -3873,5 +3873,3067 @@
         ]
       }
     }
+  },
+  "epicurus-letter-to-menoeceus": {
+    "slug": "epicurus-letter-to-menoeceus",
+    "mentorId": "epicurus",
+    "icon": "fa-envelope-open-text",
+    "updated": "2026-11-13",
+    "content": {
+      "ko": {
+        "workName": "메노이케우스에게 보내는 편지",
+        "mentorName": "에피쿠로스",
+        "lede": "에피쿠로스 『메노이케우스에게 보내는 편지』 해설. 쾌락은 방탕이 아니라 몸의 고통과 마음의 동요가 없는 상태라는 그의 윤리를 구절로 읽고, 무료 그리스어·영어 원문을 안내합니다.",
+        "intro": "<em>메노이케우스에게 보내는 편지</em>(그리스어 <em>Ἐπιστολὴ πρὸς Μενοικέα</em>)는 아테네에 ‘정원’ 학원을 연 철학자 에피쿠로스(기원전 341–270)가 메노이케우스에게 행복하게 사는 법의 요점을 적어 보낸 짧은 편지입니다. 지혜를 찾는 데 이르거나 늦은 나이는 없다는 권고로 시작해 신에 대한 바른 생각, 죽음에 대한 두려움, 욕망의 구분을 차례로 다루고, 쾌락이란 방탕한 향락이 아니라 몸에 고통이 없고 마음이 어지럽지 않은 상태라고 밝힙니다. Dialogos에서 에피쿠로스와 나누는 대화는 이 편지와 『주요 교설』·『바티칸 금언집』의 사상을 바탕으로 합니다.",
+        "context": "<p>에피쿠로스는 약 300권의 글을 썼다고 전하지만(디오게네스 라에르티오스 10.26) 온전히 남은 것은 거의 없습니다. 이 편지가 지금까지 읽히는 것은 고대 전기 작가 디오게네스 라에르티오스가 『유명한 철학자들의 생애』 제10권에 자연학을 다룬 「헤로도토스에게」, 천체 현상을 다룬 「피토클레스에게」와 함께 ‘인간의 삶’을 다룬 이 편지를 통째로 옮겨 적었기 때문입니다(10.29, 10.122–135). 편지는 지혜를 찾으라는 권고(122), 신을 불멸하고 복된 존재로 생각하라는 말(123–124), 죽음에 대한 두려움(124–125), 자연스러운 욕망과 헛된 욕망의 구분(127), 쾌락의 뜻(128–132), 모든 덕이 거기서 나온다는 실천적 지혜(132)로 이어지고, 이것을 밤낮으로 혼자서, 그리고 자신과 닮은 벗과 함께 익히라는 당부로 끝납니다(135).</p>",
+        "sections": [
+          {
+            "anchor": "sec-122",
+            "title": "122 · 지혜에 늦은 나이는 없다",
+            "body": "편지는 젊은이는 지혜 찾기를 미루지 말고 노인은 거기에 지치지 말라는 권고로 시작합니다. 철학할 때가 아직 오지 않았다거나 이미 지났다고 말하는 것은 행복할 때가 아직 오지 않았다거나 이미 지났다고 말하는 것과 같다고 덧붙입니다. (122)"
+          },
+          {
+            "anchor": "sec-125",
+            "title": "124–125 · 죽음에 대한 두려움",
+            "body": "좋고 나쁨은 모두 감각에 있는데 죽음은 감각이 없어지는 것이니 죽음은 우리에게 아무것도 아니라는 논증입니다. 에피쿠로스는 죽음이 와 있을 때가 아니라 올 것을 미리 떠올릴 때 괴로워진다고 짚으며, 이 논증으로 지금의 두려움을 덜어 주려 합니다. 삶을 가볍게 여기라는 말이 아닙니다. (124–125)"
+          },
+          {
+            "anchor": "sec-128",
+            "title": "128 · 모든 선택이 향하는 곳",
+            "body": "무엇을 택하고 무엇을 피할지 바르게 살피면 모든 선택이 몸의 건강과 마음의 평정(아타락시아)으로 돌아간다고 말합니다. 우리가 하는 모든 일은 아프지 않고 두렵지 않으려는 것이며, 그 상태에 이르면 마음의 폭풍이 걷힌다는 것입니다. (128)"
+          },
+          {
+            "anchor": "sec-130",
+            "title": "130–131 · 자족과 쾌락의 참뜻",
+            "body": "자족은 늘 적게 쓰자는 것이 아니라 많이 없을 때 적은 것으로 넉넉하자는 것입니다. 모자람의 괴로움이 사라지면 소박한 음식도 값비싼 식사만큼 즐겁고, 그렇게 길들면 가끔 오는 호사도 더 잘 누린다고 합니다. 그래서 쾌락이 목표라는 말은 방탕한 향락이 아니라 몸에 고통이 없고 마음이 어지럽지 않은 상태를 뜻합니다. (130–131)"
+          },
+          {
+            "anchor": "sec-132",
+            "title": "132 · 실천적 지혜",
+            "body": "즐거운 삶을 낳는 것은 술자리와 잔치가 아니라 무엇을 택하고 피할지 이유를 따지는 맑은 셈이라고 말합니다. 그 셈의 바탕인 실천적 지혜(프로네시스)를 철학보다 귀한 가장 큰 선으로 꼽고, 지혜롭고 아름답고 올바르게 살지 않고는 즐겁게 살 수 없으며 그 반대도 그렇다고 덧붙입니다. (132)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "젊다고 지혜 찾기를 미루지 말고, 늙었다고 지혜 찾기에 지치지도 말라. 마음의 건강을 돌보는 데 너무 이르거나 너무 늦은 사람은 없다.",
+            "cite": "122",
+            "gloss": "‘이 나이에 무슨’ 하며 새로 배우기를 망설일 때. 마음을 돌보는 일에는 시작할 나이도 마감도 없다."
+          },
+          {
+            "text": "가장 두렵다는 죽음도 우리에게는 아무것도 아니다. 우리가 있을 때 죽음은 여기 없고, 죽음이 여기 있을 때 우리는 없다.",
+            "cite": "125",
+            "gloss": "잠들기 전 죽음 생각에 두려워질 때를 위한 논증. 괴로움은 죽음 자체가 아니라 그것을 미리 떠올리는 지금에 있다. 지금의 두려움을 덜려는 말이지, 삶을 가볍게 여기라는 말이 아니다."
+          },
+          {
+            "text": "우리가 하는 모든 일은 결국 아프지 않고 두렵지 않기 위해서다. 한 번 그 상태에 이르면 마음의 폭풍은 남김없이 걷힌다.",
+            "cite": "128",
+            "gloss": "할 일에 쫓겨 왜 이렇게 애쓰는지 잊었을 때. 모든 애씀이 향하는 끝은 ‘덜 아프고 덜 두려운 상태’였다."
+          },
+          {
+            "text": "호사를 가장 달게 누리는 사람은 그것이 가장 덜 필요한 사람이다. 자연스러운 것은 모두 얻기 쉽고, 헛된 것은 얻기 어렵다.",
+            "cite": "130",
+            "gloss": "‘이걸 사야 행복할 것 같은’ 마음이 들 때. 늘 아끼라는 말이 아니다. 많이 없을 때도 적은 것으로 넉넉할 수 있으면 가끔의 호사가 더 달다."
+          },
+          {
+            "text": "즐거움이 목표라고 할 때 우리가 뜻하는 것은 방탕한 이들의 쾌락도, 향락에 빠지는 쾌락도 아니다. 몸이 아프지 않고 마음이 어지럽지 않은 상태다.",
+            "cite": "131",
+            "gloss": "‘하고 싶은 걸 다 해야 행복하다’고 믿다 지친 사람에게. 에피쿠로스의 쾌락은 소란이 아니라 고요다."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "쾌락 (헤도네, hēdonē)",
+            "def": "에피쿠로스가 행복한 삶의 처음이자 끝이라 부른 것입니다. 다만 그 뜻은 방탕한 향락이 아니라 몸에 고통이 없고 마음이 어지럽지 않은 상태입니다(128, 131)."
+          },
+          {
+            "term": "아타락시아 (ataraxia, 마음의 평정)",
+            "def": "마음이 흔들리지 않는 상태입니다. 몸의 건강과 함께 모든 선택과 회피가 돌아가야 할 목표로 꼽힙니다(128)."
+          },
+          {
+            "term": "자족 (아우타르케이아, autarkeia)",
+            "def": "많이 없을 때 적은 것으로 넉넉할 줄 아는 힘입니다. 늘 적게 쓰라는 금욕이 아니라, 덜 필요할수록 가끔의 호사도 더 즐길 수 있다는 생각입니다(130)."
+          },
+          {
+            "term": "자연스러운 욕망과 헛된 욕망",
+            "def": "욕망 가운데 어떤 것은 자연스럽고 어떤 것은 헛되며, 자연스러운 것 가운데서도 꼭 필요한 것과 그렇지 않은 것이 있다는 구분입니다. 자연스러운 것은 얻기 쉽고 헛된 것은 얻기 어렵다고 봅니다(127, 130)."
+          },
+          {
+            "term": "실천적 지혜 (프로네시스, phronēsis)",
+            "def": "무엇을 택하고 피할지 따져 보는 지혜입니다. 에피쿠로스는 이것을 철학보다 귀한 가장 큰 선이자 다른 모든 덕의 뿌리로 보았습니다(132)."
+          }
+        ],
+        "apply": "<p>오늘 사고 싶은 것이나 붙잡고 싶은 목표가 하나 떠오르면, 130절처럼 ‘이것은 자연스러운 필요인가, 헛된 생각이 만든 바람인가’를 한 줄로 적어 보세요. 필요라면 생각보다 쉽게 채워지고, 헛된 바람이라면 채워도 곧 다음 바람이 옵니다.</p><p>분주함에 지친 날에는 128절을 떠올리세요. 하루의 애씀이 결국 ‘덜 아프고 덜 두려운 상태’를 위한 것이라면, 그 목적에서 오히려 멀어지게 하는 일 하나를 오늘 목록에서 빼 보는 것입니다. 에피쿠로스는 편지 끝에서 이런 생각을 혼자서, 그리고 마음 맞는 벗과 함께 밤낮으로 익히라고 권했습니다(135).</p>",
+        "provenance": "Dialogos의 답변과 이 쪽의 구절은 저작권이 없는 그리스어 원문에서 직접 현대 한국어로 의역한 것이며, 저작권이 있는 현대 번역본의 문장을 옮기지 않습니다. 출처 표기(예: 125, 131)는 디오게네스 라에르티오스 『유명한 철학자들의 생애』 제10권의 절 번호로, 해당 사상이 나오는 자리를 가리킵니다. 판본마다 절의 경계가 조금씩 달라, Dialogos는 el.wikisource 그리스어 본문의 번호를 따릅니다.",
+        "faq": [
+          {
+            "q": "『메노이케우스에게 보내는 편지』는 어떤 글인가요?",
+            "a": "에피쿠로스가 메노이케우스에게 행복하게 사는 법의 요점을 적어 보낸 짧은 편지로, 그의 윤리를 가장 압축해 보여 주는 글입니다. 지혜를 찾는 데 늦은 나이는 없다는 권고(122), 죽음에 대한 두려움(124–125), 욕망의 구분(127), 쾌락의 참뜻(131), 실천적 지혜(132)를 차례로 다룹니다. 디오게네스 라에르티오스 『유명한 철학자들의 생애』 제10권에 전문이 실려 전합니다."
+          },
+          {
+            "q": "에피쿠로스는 누구인가요?",
+            "a": "에피쿠로스(기원전 341–270)는 아테네 시민으로 사모스에서 자랐다고 전하며, 아테네에 정원을 사서 학원을 연 철학자입니다(디오게네스 라에르티오스 10.1, 10.10–11). 여러 곳에서 찾아온 벗들이 그 정원에서 함께 살며 공부했고, 생활은 소박했다고 전합니다. 약 300권을 썼다고 하지만 지금은 편지 세 통과 금언 모음, 단편들만 남아 있습니다."
+          },
+          {
+            "q": "에피쿠로스의 쾌락주의는 마음껏 즐기라는 뜻인가요?",
+            "a": "아닙니다. 그는 쾌락이 목표라고 할 때 방탕한 이들의 쾌락이 아니라 ‘몸에 고통이 없고 마음이 어지럽지 않은 상태’를 뜻한다고 분명히 밝혔고(131), 이어서 술자리와 잔치가 즐거운 삶을 만들지 않는다고 말했습니다(132). 그 자신도 빵과 물에 만족한다고 썼으며, 치즈 한 단지만 있으면 잔치를 벌일 수 있다고 했습니다(디오게네스 라에르티오스 10.11). ‘미식가’라는 뜻의 영어 epicure는 그의 이름에서 나왔지만 뜻이 바뀐 말입니다."
+          },
+          {
+            "q": "‘죽음은 우리에게 아무것도 아니다’는 무슨 뜻인가요?",
+            "a": "좋고 나쁨은 감각에서 오는데 죽음은 감각이 없어지는 것이니, 죽음 자체는 우리가 겪을 일이 아니라는 논증입니다(124–125). 에피쿠로스는 사람을 괴롭히는 것이 죽음이 아니라 그것을 미리 떠올리는 지금의 두려움이라고 보고, 그 두려움을 덜려고 이 논증을 썼습니다. 삶을 가볍게 여기라는 말이 아닙니다."
+          },
+          {
+            "q": "에피쿠로스는 무신론자였나요?",
+            "a": "아닙니다. 그는 이 편지에서 신을 불멸하고 복된 존재로 생각하라고 하고 ‘신들은 있다’고 말합니다(123). 다만 많은 사람이 믿는 것처럼 인간사에 노하거나 상을 주는 신은 아니라고 보았습니다. 흔히 ‘에피쿠로스의 역설’로 불리는 악의 문제 논증(신이 악을 없애려 하나 못 하는가…)은 남아 있는 에피쿠로스의 글에 없고, 기독교 저술가 락탄티우스가 『신의 분노에 대하여』 13장에서 에피쿠로스의 논증이라고 소개한 것이 그 출처입니다."
+          },
+          {
+            "q": "원문을 무료로 읽을 수 있나요?",
+            "a": "네. 그리스어 원문은 el.wikisource에 절 번호와 함께 실려 있고, 로버트 드루 힉스(R. D. Hicks)의 1925년 영역은 퍼블릭 도메인이라 Wikisource와 Internet Archive에서 읽을 수 있습니다. 아래 퍼블릭 도메인 링크를 참고하세요."
+          },
+          {
+            "q": "한국어 번역본이 있나요?",
+            "a": "있습니다. 현대지성 클래식 47 『에피쿠로스 쾌락』(박문재 옮김, 2022)에 「메노이케우스에게 보낸 서신」이 실려 있습니다. 출판사 소개에 따르면 남아 있는 글 8편을 그리스어에서 옮긴 완역본입니다."
+          },
+          {
+            "q": "Dialogos는 이 편지를 어떻게 인용하나요?",
+            "a": "Dialogos의 에피쿠로스는 편지의 생각을 현대어로 풀어 대화에 녹이고, 생각이 나온 절 번호(예: 128)를 출처로 붙입니다. 저작권이 있는 번역문은 옮기지 않으며, ‘죽음은 우리에게 아무것도 아니다’(125)는 죽음을 떠올리는 두려움을 다룰 때에만 조심해서 꺼냅니다."
+          }
+        ],
+        "pdIntro": "아래는 저작권 걱정 없이 읽을 수 있는 원문과 영역본입니다. 그리스어 원문은 고대 문헌이라 퍼블릭 도메인입니다. 영어는 로버트 드루 힉스(Robert Drew Hicks, 1850–1929)가 옮긴 로엡 고전 총서판(1925년 런던 하이네만 간행)으로, 역자 사후 70년이 지났고 미국에서도 간행 후 95년이 지나 퍼블릭 도메인입니다. 한국어 퍼블릭 도메인 완역은 확인하지 못해 그리스어 원문과 영어 역본으로 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "el.wikisource — 메노이케우스에게 보내는 편지 그리스어 원문 (절 번호 122–135)",
+            "url": "https://el.wikisource.org/wiki/%CE%95%CF%80%CE%B9%CF%83%CF%84%CE%BF%CE%BB%CE%AE_%CF%80%CF%81%CE%BF%CF%82_%CE%9C%CE%B5%CE%BD%CE%BF%CE%B9%CE%BA%CE%AD%CE%B1"
+          },
+          {
+            "label": "Wikisource — 『유명한 철학자들의 생애』 제10권 (R. D. Hicks 영역, 1925)",
+            "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+          },
+          {
+            "label": "Internet Archive — Lives of Eminent Philosophers 제2권 스캔 (Hicks 영역, 1925)",
+            "url": "https://archive.org/details/livesofeminentph02dioguoft"
+          }
+        ],
+        "related": [
+          {
+            "slug": "epicurus-sayings",
+            "label": "주요 교설과 금언 · 에피쿠로스"
+          },
+          {
+            "slug": "letters-to-lucilius",
+            "label": "루킬리우스에게 보내는 편지 · 세네카"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
+          },
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "즐거운 학문 · 니체"
+          }
+        ],
+        "editions": [
+          {
+            "title": "에피쿠로스 쾌락 (현대지성 클래식 47)",
+            "translator": "박문재",
+            "publisher": "현대지성 (현대지성 클래식)",
+            "note": "2022년 12월 간행. 출판사 소개에 따르면 남아 있는 에피쿠로스의 글 8편을 그리스어에서 옮긴 완역본으로, 목차에 「메노이케우스에게 보낸 서신」 「주요 가르침들」 「에피쿠로스 어록」이 들어 있습니다. 각주와 역자 해제가 붙어 있습니다.",
+            "verifiedSource": "https://hdjisung.com/bbs/board.php?bo_table=22&wr_id=145"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "メノイケウス宛の手紙",
+        "mentorName": "エピクロス",
+        "lede": "エピクロス『メノイケウス宛の手紙』の解説。快楽とは放蕩ではなく、身体の苦痛と心の乱れがない状態だという倫理を一節ずつ読み、無料のギリシア語・英語原文を案内します。",
+        "intro": "<em>メノイケウス宛の手紙</em>(ギリシア語 <em>Ἐπιστολὴ πρὸς Μενοικέα</em>)は、アテナイに「庭園」の学園を開いた哲学者エピクロス(前341–前270)が、幸福に生きるための要点をメノイケウスに書き送った短い手紙です。知を求めるのに早すぎる年齢も遅すぎる年齢もないという勧めに始まり、神についての正しい考え、死への恐れ、欲望の区別を順に扱い、快楽とは放蕩ではなく、身体に苦痛がなく心が乱されていない状態のことだと明言します。Dialogos でエピクロスと交わす対話は、この手紙と『主要教説』『ヴァチカン箴言集』の思想にもとづいています。",
+        "context": "<p>エピクロスは約300巻を書いたと伝えられますが(ディオゲネス・ラエルティオス 10.26)、完全な形で残ったものはほとんどありません。この手紙が今も読めるのは、古代の伝記作家ディオゲネス・ラエルティオスが『ギリシア哲学者列伝』第10巻に、自然学を扱う「ヘロドトス宛」、天体現象を扱う「ピュトクレス宛」とともに、「人間の生」を扱うこの手紙を丸ごと書き写したからです(10.29, 10.122–135)。手紙は知を求める勧め(122)、神を不死で至福な存在と考えよという言葉(123–124)、死への恐れ(124–125)、自然な欲望と空しい欲望の区別(127)、快楽の意味(128–132)、あらゆる徳の源である思慮(132)と進み、これらを昼も夜も、ひとりで、また自分に似た友とともに習えという言葉で結ばれます(135)。日本では出隆・岩崎允胤訳『エピクロス 教説と手紙』(岩波文庫、1959年)に「メノイケウス宛の手紙」として収められています。</p>",
+        "sections": [
+          {
+            "anchor": "sec-122",
+            "title": "122 · 知に遅すぎる年齢はない",
+            "body": "手紙は、若者は知を求めるのを先送りせず、老人はそれに倦むなという勧めで始まります。哲学の時がまだ来ていない、あるいはもう過ぎたと言うのは、幸福の時がまだ来ていない、もう過ぎたと言うのと同じだと続けます。(122)"
+          },
+          {
+            "anchor": "sec-125",
+            "title": "124–125 · 死への恐れ",
+            "body": "善いことも悪いこともすべて感覚のうちにあり、死は感覚がなくなることだから、死は私たちにとって何ものでもない、という論証です。エピクロスは、人を苦しめるのは死がそこにある時ではなく、来ることを先取りして思い描く時だと指摘し、この論証で今の恐れを和らげようとします。生を軽んじよという意味ではありません。(124–125)"
+          },
+          {
+            "anchor": "sec-128",
+            "title": "128 · すべての選択が向かう先",
+            "body": "何を選び何を避けるかを正しく見きわめれば、すべての選択は身体の健康と魂の平静(アタラクシア)に帰着すると述べます。私たちのすることはすべて苦しまず怯えないためであり、その状態に至れば魂の嵐は消えるというのです。(128)"
+          },
+          {
+            "anchor": "sec-130",
+            "title": "130–131 · 自足と快楽の本当の意味",
+            "body": "自足とは、いつも少なく使えということではなく、多くを持たないときに少しで足りるようにしておくことです。欠乏の苦しみがなくなれば質素な食事も豪華な食事と同じだけ快く、そうして慣れておけば、たまの贅沢もいっそう楽しめると言います。だから快楽が目的だという言葉は、放蕩ではなく、身体に苦痛がなく魂が乱されていない状態を指すのです。(130–131)"
+          },
+          {
+            "anchor": "sec-132",
+            "title": "132 · 思慮",
+            "body": "快い生を生むのは酒宴やごちそうではなく、何を選び何を避けるかの理由を確かめる醒めた推論だと述べます。その土台である思慮(プロネーシス)を哲学より尊い最大の善とし、思慮深く、美しく、正しく生きることなしに快く生きることはできず、その逆もまた同じだと続けます。(132)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "若いからといって知を求めるのを先送りしてはならず、老いたからといって知を求めるのに倦んではならない。魂の健やかさのためには、早すぎる者も遅すぎる者もいないのだから。",
+            "cite": "122",
+            "gloss": "定年を前に「今さら学び直しても」と思うときに。心の手入れに、始めどきの年齢も締め切りもない。"
+          },
+          {
+            "text": "災いのうちで最も恐ろしいとされる死も、私たちにとっては何ものでもない。私たちがいるとき死はそこになく、死がそこにあるとき私たちはいないのだから。",
+            "cite": "125",
+            "gloss": "夜ふと「死んだらどうなるのか」と怖くなるときのための論証。苦しめているのは死そのものではなく、それを先取りして思い描く今の心だ。今の恐れを和らげるための言葉であって、生を軽んじよという意味ではない。"
+          },
+          {
+            "text": "私たちがすることはすべて、苦しまず、怯えずにいるためである。ひとたびその状態に至れば、魂の嵐はすっかり解けて消える。",
+            "cite": "128",
+            "gloss": "締め切りに追われ、何のために頑張っているのか見失ったときに。努力の行き先は「苦しまず怯えない状態」だったと思い出させる。"
+          },
+          {
+            "text": "贅沢をいちばん心地よく味わうのは、それをいちばん必要としない人である。自然なものはどれもたやすく手に入り、空しいものは手に入りにくい。",
+            "cite": "130",
+            "gloss": "限定品やセールの通知に心が揺れるときに。いつも我慢せよではない。多くがなくても少しで足りる人ほど、たまの贅沢をいちばん楽しめる。"
+          },
+          {
+            "text": "快楽が目的だと言うとき、私たちが指しているのは放蕩者の快楽でも、享楽にひたる快楽でもない。身体に苦痛がなく、魂がかき乱されていないことである。",
+            "cite": "131",
+            "gloss": "「エピキュリアン＝美食家」というイメージとは逆。週末に騒いでも疲れが抜けないとき、静けさとしての快を思い出す。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "快楽 (ヘードネー, hēdonē)",
+            "def": "エピクロスが幸福な生の始まりであり終わりと呼んだものです。ただしその意味は放蕩の享楽ではなく、身体に苦痛がなく魂が乱されていない状態です(128, 131)。"
+          },
+          {
+            "term": "アタラクシア (ataraxia, 魂の平静)",
+            "def": "心がかき乱されていない状態です。身体の健康とともに、すべての選択と忌避が帰着すべき目標とされます(128)。"
+          },
+          {
+            "term": "自足 (アウタルケイア, autarkeia)",
+            "def": "多くを持たないとき、少しで足りるようにしておく力です。常に切り詰めよという禁欲ではなく、必要が少ないほど、たまの贅沢もよく味わえるという考えです(130)。"
+          },
+          {
+            "term": "自然な欲望と空しい欲望",
+            "def": "欲望には自然なものと空しいものがあり、自然なもののなかにも必要なものとそうでないものがある、という区別です。自然なものは手に入りやすく、空しいものは手に入りにくいとされます(127, 130)。"
+          },
+          {
+            "term": "思慮 (プロネーシス, phronēsis)",
+            "def": "何を選び何を避けるかを見きわめる知恵です。エピクロスはこれを哲学より尊い最大の善とし、ほかのすべての徳の源と見なしました(132)。"
+          }
+        ],
+        "apply": "<p>今日、欲しい物や手に入れたい肩書きがひとつ浮かんだら、130節にならって「これは自然な必要か、空しい思い込みが生んだ望みか」を一行書いてみてください。必要なら案外たやすく満たせますし、空しい望みなら満たしてもすぐ次が来ます。</p><p>忙しさに疲れた日は128節を思い出しましょう。一日の努力が「苦しまず怯えない状態」のためなら、かえってそこから遠ざけている用事をひとつ、今日のリストから外してみるのです。エピクロスは手紙の最後で、こうした考えをひとりで、また気の合う友とともに、昼も夜も習うよう勧めています(135)。</p>",
+        "provenance": "Dialogos の回答とこのページの訳文は、著作権のないギリシア語原文から直接現代日本語へ意訳したもので、著作権のある現代語訳の文章は転載していません。出典の表記(例:125、131)は、ディオゲネス・ラエルティオス『ギリシア哲学者列伝』第10巻の節番号で、その思想が現れる箇所を指します。節の区切りは版によって少しずつ異なるため、Dialogos は el.wikisource のギリシア語本文の番号に従います。",
+        "faq": [
+          {
+            "q": "『メノイケウス宛の手紙』とはどんな作品ですか？",
+            "a": "エピクロスが幸福に生きるための要点をメノイケウスに書き送った短い手紙で、彼の倫理を最も凝縮して伝える文章です。知を求めるのに遅すぎる年齢はないという勧め(122)、死への恐れ(124–125)、欲望の区別(127)、快楽の本当の意味(131)、思慮(132)を順に扱います。ディオゲネス・ラエルティオス『ギリシア哲学者列伝』第10巻に全文が収められて伝わりました。"
+          },
+          {
+            "q": "エピクロスとはどんな人ですか？",
+            "a": "エピクロス(前341–前270)はアテナイ市民で、サモスで育ったと伝えられ、アテナイに庭園を買って学園を開いた哲学者です(ディオゲネス・ラエルティオス 10.1, 10.10–11)。各地から来た友人たちがその庭園でともに暮らして学び、生活は質素だったと伝えられます。約300巻を書いたとされますが、現存するのは手紙3通と格言集、断片だけです。"
+          },
+          {
+            "q": "「エピキュリアン」は美食家という意味では？",
+            "a": "英語の epicure や日本語の「エピキュリアン」は美食家・享楽家を指すことがありますが、エピクロス本人の考えとは逆です。彼は快楽が目的だと言うとき、それは放蕩者の快楽ではなく「身体に苦痛がなく魂が乱されていない状態」だと明言し(131)、酒宴やごちそうが快い生をつくるのではないと続けました(132)。本人はパンと水で満足していると書き、チーズを小壺ひとつ送ってくれればごちそうになると言っています(ディオゲネス・ラエルティオス 10.11)。"
+          },
+          {
+            "q": "「死は私たちにとって何ものでもない」とはどういう意味ですか？",
+            "a": "善悪は感覚のうちにあり、死は感覚がなくなることなので、死そのものは私たちが経験するものではない、という論証です(124–125)。エピクロスは、人を苦しめるのは死ではなく、それを先取りして思い描く今の恐れだと考え、その恐れを和らげるためにこの論証を用いました。生を軽んじよという意味ではありません。"
+          },
+          {
+            "q": "エピクロスは無神論者だったのですか？",
+            "a": "いいえ。彼はこの手紙で、神を不死で至福な存在と考えよと述べ、「神々は存在する」と書いています(123)。ただし、多くの人が信じるように人間に怒ったり褒美を与えたりする神ではないと考えました。いわゆる「エピクロスのパラドックス」(神は悪を取り除こうとしてできないのか…)は現存するエピクロスの著作になく、キリスト教著作家ラクタンティウスが『神の怒りについて』13章でエピクロスの論証として紹介したのが出どころです。"
+          },
+          {
+            "q": "原文を無料で読めますか？",
+            "a": "はい。ギリシア語原文は el.wikisource に節番号つきで載っており、R. D. ヒックスによる1925年の英訳はパブリックドメインなので Wikisource と Internet Archive で読めます。下のパブリックドメインのリンクをご覧ください。"
+          },
+          {
+            "q": "日本語訳はありますか？",
+            "a": "出隆・岩崎允胤訳『エピクロス 教説と手紙』(岩波文庫、1959年)に「メノイケウス宛の手紙」が収められています。2002年にはワイド版岩波文庫でも刊行されました。"
+          },
+          {
+            "q": "Dialogos はこの手紙をどう引用しますか？",
+            "a": "Dialogos のエピクロスは手紙の考えを現代語にほどいて対話に織り込み、その考えが出てくる節番号(例:128)を出典として添えます。著作権のある訳文は転載しません。「死は私たちにとって何ものでもない」(125)は、死を思い描く恐れを扱う場面でだけ慎重に用います。"
+          }
+        ],
+        "pdIntro": "以下は著作権を気にせず読める原文と英訳です。ギリシア語原文は古代の文献なのでパブリックドメインです。英訳はロバート・ドルー・ヒックス(Robert Drew Hicks, 1850–1929)によるローブ古典叢書版(1925年ロンドン、ハイネマン刊)で、訳者の没後70年が過ぎ、米国でも刊行から95年が経過したためパブリックドメインです。日本語のパブリックドメイン完訳は確認できなかったため、ギリシア語原文と英訳をご案内します。",
+        "pdLinks": [
+          {
+            "label": "el.wikisource — メノイケウス宛の手紙 ギリシア語原文(節番号 122–135)",
+            "url": "https://el.wikisource.org/wiki/%CE%95%CF%80%CE%B9%CF%83%CF%84%CE%BF%CE%BB%CE%AE_%CF%80%CF%81%CE%BF%CF%82_%CE%9C%CE%B5%CE%BD%CE%BF%CE%B9%CE%BA%CE%AD%CE%B1"
+          },
+          {
+            "label": "Wikisource — 『ギリシア哲学者列伝』第10巻(R. D. ヒックス英訳、1925年)",
+            "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+          },
+          {
+            "label": "Internet Archive — Lives of Eminent Philosophers 第2巻スキャン(ヒックス英訳、1925年)",
+            "url": "https://archive.org/details/livesofeminentph02dioguoft"
+          }
+        ],
+        "related": [
+          {
+            "slug": "epicurus-sayings",
+            "label": "主要教説と箴言 · エピクロス"
+          },
+          {
+            "slug": "letters-to-lucilius",
+            "label": "ルキリウスへの手紙 · セネカ"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
+          },
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "悦ばしき知識 · ニーチェ"
+          }
+        ],
+        "editions": [
+          {
+            "title": "エピクロス 教説と手紙（岩波文庫）",
+            "translator": "出隆・岩崎允胤",
+            "publisher": "岩波書店（岩波文庫）",
+            "note": "1959年刊。国立国会図書館の書誌では C. ベイリーが編者として記され、目次に「メノイケウス宛の手紙」が載っています。2002年にはワイド版岩波文庫としても刊行されました。",
+            "verifiedSource": "https://ndlsearch.ndl.go.jp/en/books/R100000002-I000000990866"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Letter to Menoeceus",
+        "mentorName": "Epicurus",
+        "lede": "Epicurus's Letter to Menoeceus explained: pleasure as freedom from pain and turmoil, not indulgence. Key passages, plus free Greek and English texts.",
+        "intro": "The <em>Letter to Menoeceus</em> (Greek <em>Ἐπιστολὴ πρὸς Μενοικέα</em>) is a short letter in which Epicurus (341–270 BCE), who founded a school in a garden in Athens, sets out for Menoeceus the essentials of living happily. It opens by urging that no age is too early or too late to seek wisdom, moves through right belief about the gods, the fear of death and the sorting of desires, and states plainly that the pleasure he calls the goal is not indulgence but the absence of pain in the body and turmoil in the mind. Conversations with Epicurus in Dialogos draw on this letter together with the <em>Principal Doctrines</em> and the <em>Vatican Sayings</em>.",
+        "context": "<p>Epicurus is said to have written some 300 books (Diogenes Laertius 10.26), yet almost none survives whole. We can still read this letter because the ancient biographer Diogenes Laertius copied it out in full in Book 10 of his <em>Lives of the Eminent Philosophers</em>, alongside the letter to Herodotus on physics and the letter to Pythocles on celestial phenomena; this third letter, he says, concerns human life (10.29, 10.122–135). It moves from an invitation to seek wisdom (122), to thinking of God as immortal and blessed (123–124), to the fear of death (124–125), to the distinction between natural and empty desires (127), to the meaning of pleasure (128–132) and to practical wisdom, the source of every other virtue (132). It closes by asking Menoeceus to practise these ideas day and night, on his own and with a friend like himself (135).</p>",
+        "sections": [
+          {
+            "anchor": "sec-122",
+            "title": "122 · No age is too late for wisdom",
+            "body": "The letter opens by telling the young not to put off seeking wisdom and the old not to grow tired of it. To say that the time for philosophy has not yet come, or has already passed, is like saying the time for happiness has not yet come or is gone. (122)"
+          },
+          {
+            "anchor": "sec-125",
+            "title": "124–125 · The fear of death",
+            "body": "Every good and evil lies in sensation, and death is the loss of sensation, so death is nothing to us. Epicurus points out that what pains us is not death when it is present but the anticipation of it, and he offers the argument to ease that present fear. It is not an invitation to take life lightly. (124–125)"
+          },
+          {
+            "anchor": "sec-128",
+            "title": "128 · Where every choice leads",
+            "body": "Seen clearly, every choice and avoidance comes back to the health of the body and the calm of the mind (ataraxia). Everything we do is meant to keep us from pain and fear, and once we reach that state the storm in the soul clears. (128)"
+          },
+          {
+            "anchor": "sec-130",
+            "title": "130–131 · Self-sufficiency and what pleasure means",
+            "body": "Self-sufficiency does not mean always living on little; it means being content with little when we lack much. Once the pain of want is gone, plain food pleases as much as a lavish meal, and someone used to simple fare enjoys an occasional luxury all the more. So when Epicurus calls pleasure the goal, he means no pain in the body and no turmoil in the mind, not a life of indulgence. (130–131)"
+          },
+          {
+            "anchor": "sec-132",
+            "title": "132 · Practical wisdom",
+            "body": "A pleasant life, he says, comes not from drinking parties and feasts but from sober reasoning about the grounds of every choice and avoidance. He ranks practical wisdom (phronēsis) above philosophy itself as the greatest good, and adds that one cannot live pleasantly without living wisely, honourably and justly, nor live that way without living pleasantly. (132)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "If you are young, don't put off seeking wisdom; if you are old, don't grow tired of it. Nobody arrives too soon or too late to care for a healthy soul.",
+            "cite": "122",
+            "gloss": "For anyone who thinks they're too busy now and will be too old later: looking after your mind has no starting age and no deadline."
+          },
+          {
+            "text": "So death, the evil we shudder at most, is nothing to us. While we are here, death has not come, and when death has come, we are here no longer.",
+            "cite": "125",
+            "gloss": "An argument for the late-night dread of not existing: what hurts is not death but picturing it now. It is meant to ease that present fear, not to make life seem any less worth living."
+          },
+          {
+            "text": "Everything we do is for the sake of this: to be free of pain and free of fear. Once we have reached it, every storm in the soul breaks up.",
+            "cite": "128",
+            "gloss": "When a packed calendar has made you forget why you're working so hard: the point of all the effort was supposed to be less pain and less fear."
+          },
+          {
+            "text": "Those who need luxury least enjoy it most. What is natural is always easy to come by; what is empty is hard to get.",
+            "cite": "130",
+            "gloss": "Not a vow of austerity. If you can be content with little when you lack much, the occasional treat tastes better. Worth recalling when an upgrade starts to feel urgent."
+          },
+          {
+            "text": "When we say pleasure is the goal, we are not talking about what the dissolute enjoy or about pleasure as mere indulgence. We mean a body free of pain and a mind free of turmoil.",
+            "cite": "131",
+            "gloss": "The opposite of what 'epicurean' has come to suggest. For a weekend that left you more drained than rested: Epicurus's pleasure is calm, not noise."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "pleasure (hēdonē)",
+            "def": "What Epicurus called the beginning and end of the happy life. He defines it not as indulgence but as the absence of pain in the body and turmoil in the mind (128, 131)."
+          },
+          {
+            "term": "ataraxia (calm of mind)",
+            "def": "The state of an untroubled mind. Together with bodily health, it is the target to which every choice and avoidance should be referred (128)."
+          },
+          {
+            "term": "self-sufficiency (autarkeia)",
+            "def": "The ability to be content with little when we lack much. It is not a rule of permanent frugality; needing less simply lets us enjoy the occasional luxury more (130)."
+          },
+          {
+            "term": "natural and empty desires",
+            "def": "Some desires are natural and some are empty, and among the natural ones some are necessary and some are not. What is natural is easy to obtain; what is empty is hard to get (127, 130)."
+          },
+          {
+            "term": "practical wisdom (phronēsis)",
+            "def": "The judgment that weighs what to choose and what to avoid. Epicurus counts it the greatest good, more precious than philosophy, and the root of all the other virtues (132)."
+          }
+        ],
+        "apply": "<p>The next time something you want, or a goal you feel you must reach, tugs at you, borrow section 130 and write one line: is this a natural need, or a want made by empty opinion? Needs tend to be easier to meet than you expect; empty wants, once met, are quickly replaced by the next one.</p><p>On days when busyness wears you down, recall section 128. If all the effort is meant to leave you with less pain and less fear, take one task off today's list that is pulling you away from that aim. Epicurus ends the letter by asking his reader to practise these ideas day and night, alone and with a like-minded friend (135).</p>",
+        "provenance": "Dialogos's replies and the passages on this page are paraphrased directly from the out-of-copyright Greek into modern English; they do not reproduce the wording of any copyrighted modern translation. Citations (for example, 125 or 131) give the section numbers of Book 10 of Diogenes Laertius's <em>Lives of the Eminent Philosophers</em> and point to where an idea appears. Editions divide the sections slightly differently; Dialogos follows the numbering of the Greek text on el.wikisource.",
+        "faq": [
+          {
+            "q": "What is Epicurus's Letter to Menoeceus about?",
+            "a": "It is a short letter in which Epicurus sums up how to live happily, and it is the most compact statement of his ethics. It covers seeking wisdom at any age (122), the fear of death (124–125), the sorting of desires (127), what pleasure really means (131) and practical wisdom (132). The full text survives because Diogenes Laertius included it in Book 10 of his Lives of the Eminent Philosophers."
+          },
+          {
+            "q": "Who was Epicurus?",
+            "a": "Epicurus (341–270 BCE) was an Athenian citizen, said to have been raised on Samos, who bought a garden in Athens and opened his school there (Diogenes Laertius 10.1, 10.10–11). Friends came from many places to live and study with him in the Garden, and their way of life was frugal. He is said to have written about 300 books, but only three letters, collections of maxims and fragments survive."
+          },
+          {
+            "q": "Did Epicurus say 'eat, drink and be merry'?",
+            "a": "No. That line echoes the Bible (Ecclesiastes 8:15; Luke 12:19), and Epicurus rejects that kind of life. When he calls pleasure the goal, he says he does not mean the pleasures of the dissolute but no pain in the body and no turmoil in the mind (131), and he adds that drinking parties and feasts do not make a pleasant life (132). He wrote that he was content with bread and water, and in a letter he asked for a little pot of cheese so he could feast when he liked (Diogenes Laertius 10.11)."
+          },
+          {
+            "q": "What does 'death is nothing to us' mean?",
+            "a": "Good and evil are matters of sensation, and death is the end of sensation, so death itself is not something we will ever experience (124–125). Epicurus held that what troubles people is not death but the fear of picturing it in advance, and he offered the argument to ease that fear. It is not a reason to value life any less."
+          },
+          {
+            "q": "Was Epicurus an atheist?",
+            "a": "No. In this letter he tells Menoeceus to think of God as an immortal and blessed being and states that the gods exist (123), though not as most people imagine them, rewarding and punishing humans. The so-called 'Epicurean paradox' about evil (is God willing to prevent evil but not able…) is not found in Epicurus's surviving writings; its source is the Christian writer Lactantius, who presents it as Epicurus's argument in chapter 13 of On the Anger of God."
+          },
+          {
+            "q": "Can I read the letter for free?",
+            "a": "Yes. The Greek text, with section numbers, is on el.wikisource, and R. D. Hicks's 1925 English translation is in the public domain and available on Wikisource and the Internet Archive. See the public-domain links below."
+          },
+          {
+            "q": "Which modern translation should I read?",
+            "a": "The Epicurus Reader, translated by Brad Inwood and Lloyd P. Gerson (Hackett, 1994), gathers the surviving letters, the ancient collections of maxims and key ancient testimony in one volume. For a free option, Hicks's public-domain translation is linked below."
+          },
+          {
+            "q": "How does Dialogos quote this letter?",
+            "a": "Dialogos's Epicurus unpacks the letter's ideas in modern language during conversation and cites the section where an idea appears (for example, 128). It does not reproduce copyrighted translations, and it brings up 'death is nothing to us' (125) only carefully, when the conversation is about the fear of thinking about death."
+          }
+        ],
+        "pdIntro": "The links below lead to texts you can read freely. The Greek original is an ancient text and in the public domain. The English is Robert Drew Hicks's (1850–1929) Loeb Classical Library translation, published in London by Heinemann in 1925; more than 70 years have passed since the translator's death, and in the United States works published in 1925 entered the public domain in 2021.",
+        "pdLinks": [
+          {
+            "label": "el.wikisource — Letter to Menoeceus, Greek text (sections 122–135)",
+            "url": "https://el.wikisource.org/wiki/%CE%95%CF%80%CE%B9%CF%83%CF%84%CE%BF%CE%BB%CE%AE_%CF%80%CF%81%CE%BF%CF%82_%CE%9C%CE%B5%CE%BD%CE%BF%CE%B9%CE%BA%CE%AD%CE%B1"
+          },
+          {
+            "label": "Wikisource — Lives of the Eminent Philosophers, Book X (tr. R. D. Hicks, 1925)",
+            "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+          },
+          {
+            "label": "Internet Archive — Lives of Eminent Philosophers, Vol. 2 scan (tr. Hicks, 1925)",
+            "url": "https://archive.org/details/livesofeminentph02dioguoft"
+          }
+        ],
+        "related": [
+          {
+            "slug": "epicurus-sayings",
+            "label": "Principal Doctrines and Sayings · Epicurus"
+          },
+          {
+            "slug": "letters-to-lucilius",
+            "label": "Letters to Lucilius · Seneca"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
+          },
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "The Gay Science · Nietzsche"
+          }
+        ],
+        "editions": [
+          {
+            "title": "The Epicurus Reader: Selected Writings and Testimonia",
+            "translator": "Brad Inwood and Lloyd P. Gerson",
+            "publisher": "Hackett Publishing",
+            "note": "Published in 1994. The publisher lists an introduction, the ancient biography of Epicurus, the surviving letters, the ancient collections of maxims, the testimony of Cicero and Lucretius, and the polemic of Plutarch in one compact volume.",
+            "verifiedSource": "https://hackettpublishing.com/the-epicurus-reader"
+          }
+        ]
+      }
+    }
+  },
+  "epicurus-sayings": {
+    "slug": "epicurus-sayings",
+    "mentorId": "epicurus",
+    "icon": "fa-seedling",
+    "updated": "2026-11-13",
+    "content": {
+      "ko": {
+        "workName": "주요 교설과 금언",
+        "mentorName": "에피쿠로스",
+        "lede": "에피쿠로스 『주요 교설』·『바티칸 금언집』과 세네카가 전한 단편에서 고른 금언 모음. 우정·욕망·돈·고독에 관한 짧은 구절을 원문 번호와 함께 풀이하고 무료 원문을 안내합니다.",
+        "intro": "이 쪽은 에피쿠로스의 짧은 말들을 한데 모은 <em>모음 페이지</em>입니다. 40개 조항의 <em>주요 교설</em>(<em>Κύριαι Δόξαι</em>), 바티칸 도서관 사본에 전하는 81개 금언인 <em>바티칸 금언집</em>(<em>Gnomologium Vaticanum</em>), 그리고 세네카의 편지가 전하는 에피쿠로스의 말 한 구절에서 Dialogos가 고른 구절을 실었습니다. 세 원천 모두 한두 문장짜리 금언이라 책마다 몇 구절씩밖에 되지 않아, 책마다 쪽을 따로 두지 않고 한 쪽에 모았습니다. 구절마다 어느 책의 몇 번인지 함께 적습니다.",
+        "context": "<p>『주요 교설』은 고대 전기 작가 디오게네스 라에르티오스가 『유명한 철학자들의 생애』 전체를 마무리하며 제10권 끝에 옮겨 적은 40개 조항입니다(10.139–154). 『바티칸 금언집』은 1888년 카를 보트케(Karl Wotke)가 바티칸 도서관의 14세기 그리스어 사본(Vat. gr. 1950)에서 찾아내 헤르만 우제너(Hermann Usener)와 함께 학술지 『빈 연구(Wiener Studien)』 제10권에 발표한 81개 금언입니다. 우제너는 이 모음이 에피쿠로스와 그의 뛰어난 제자 세 사람의 편지를 간추린 책에서 뽑혔다고 보았고, 그래서 일부는 제자의 말일 수 있습니다. 『주요 교설』과 같은 문장도 섞여 있어 Dialogos는 겹치는 문장을 『주요 교설』 번호로만 씁니다. 세 번째 원천은 로마의 스토아 철학자 세네카입니다. 그는 루킬리우스에게 보낸 편지 끝에 그날 건넬 한마디로 에피쿠로스의 말을 자주 덧붙였습니다.</p>",
+        "sections": [
+          {
+            "anchor": "principal-doctrines",
+            "title": "주요 교설",
+            "body": "디오게네스 라에르티오스가 전하는 40개 조항입니다. 이 쪽에는 몸의 고통이 오래가지 않는다는 말(4), 조용한 삶이 주는 안전(14), 자연의 부와 헛된 생각의 부(15), 올바름과 평정(17), 필요의 한도(21), 우정(27), 서로 해치지 않기로 한 약속으로서의 정의(31)를 실었습니다. 4번은 앞의 두 절만 옮겼고 오래 앓는 병에 관한 마지막 절은 뺐으며, Dialogos는 이 구절을 언젠가 끝나는 통증에만 씁니다. (4, 14, 15, 17, 21, 27, 31)"
+          },
+          {
+            "anchor": "vatican-sayings",
+            "title": "바티칸 금언집",
+            "body": "1888년에 공개된 81개 금언입니다. 미루지 않기(14), 몸이 정말 바라는 것(33), 친구에 대한 믿음(34)과 우정의 부름(52), 지금 가진 것(35), 웃음과 생활(41), 상실을 달래는 법(55), 일상의 감옥(58), 칭찬(64), 욕망 앞의 물음(71), 자족과 자유(77), 재산과 인정의 한계(81)를 실었습니다. 14번은 앞부분만 옮겼고, 81번은 사본이 손상된 끝 구절을 뺐습니다. (14, 33, 34, 35, 41, 52, 55, 58, 64, 71, 77, 81)"
+          },
+          {
+            "anchor": "seneca-fragment",
+            "title": "세네카의 편지가 전하는 단편",
+            "body": "세네카는 『루킬리우스에게 보내는 편지』 제7서에서 많은 사람의 갈채에 기대지 말라며 세 가지 말을 소개하는데, 그 셋째가 에피쿠로스가 함께 공부하던 벗에게 쓴 편지 구절입니다. 그리스어 원문은 남아 있지 않아 세네카의 라틴어로 전합니다. (7.11)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "몸의 고통은 끊임없이 오래 머물지 않는다. 가장 심한 고통은 가장 짧게 머물고, 몸의 즐거움을 겨우 넘어서는 고통도 여러 날 이어지지는 않는다.",
+            "cite": "4",
+            "gloss": "삐거나 다친 뒤, 수술 뒤 회복처럼 언젠가 끝나는 통증 앞에서. 가장 날카로운 순간이 가장 짧다는 것을 붙든다. 오래가는 통증에 하는 말은 아니며, 그럴 땐 의사와 상의하는 것이 먼저다. (앞의 두 절만 옮김)",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "사람들 사이의 안전은 어느 정도 힘과 넉넉함으로도 얻을 수 있지만, 가장 티 없는 안전은 조용히 지내며 군중에게서 물러나는 데서 온다.",
+            "cite": "14",
+            "gloss": "사람과 소음에 지친 날에. 모두와 끊으라는 말이 아니다. 에피쿠로스는 정원에서 벗들과 함께 살았다. 물러날 곳은 군중의 소란이지 아끼는 사람들이 아니다.",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "자연이 요구하는 부에는 한계가 있고 얻기도 쉽다. 그러나 헛된 생각이 좇는 부는 끝없이 달아난다.",
+            "cite": "15",
+            "gloss": "아무리 벌어도 모자란 느낌이 들 때. 필요가 정한 선에는 끝이 있지만, 헛된 생각이 정한 선은 다가갈수록 물러난다.",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "올바른 사람은 마음이 가장 흔들리지 않고, 올바르지 않은 사람은 가장 큰 동요로 가득하다.",
+            "cite": "17",
+            "gloss": "‘한 번쯤 눈감아도 되지 않을까’ 흔들릴 때. 정직은 남보다 먼저 내 마음의 평온을 지킨다.",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "삶에 필요한 것의 한도를 아는 사람은, 모자람의 괴로움을 덜고 삶 전체를 온전하게 하는 것이 얼마나 쉽게 얻어지는지 안다. 그래서 다툼이 따르는 일을 더 바라지 않는다.",
+            "cite": "21",
+            "gloss": "승진·순위 경쟁에 끝없이 끌려갈 때. 내게 정말 필요한 몫이 생각보다 작다는 것을 셈해 보게 한다.",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "지혜가 평생의 행복을 위해 마련하는 것들 가운데 단연 가장 큰 것은 벗을 얻는 일이다.",
+            "cite": "27",
+            "gloss": "성과에 매달리다 사람을 놓친 것 같을 때. 에피쿠로스에게 행복의 가장 큰 재료는 친구였다.",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "자연에 따른 정의란, 서로 해치지도 해침당하지도 않으려고 맺는, 서로에게 이로운 약속의 증표다.",
+            "cite": "31",
+            "gloss": "동업·연애·함께 사는 관계의 규칙이 흔들릴 때. 공정함은 거창한 이념보다 ‘서로 다치지 않기로 한 약속’에서 시작한다.",
+            "book": "주요 교설",
+            "bookId": "kd"
+          },
+          {
+            "text": "우리는 한 번 태어날 뿐, 두 번 태어날 수는 없다. 그런데 너는 내일의 주인도 아니면서 지금 누릴 때를 미룬다. 삶은 미루는 사이에 새어 나간다.",
+            "cite": "14",
+            "gloss": "‘언젠가 여유가 생기면’ 하고 미루는 사람에게. 내일 일은 내 손에 있지 않으니 작은 기쁨부터 오늘로 옮겨 오라. (금언의 일부만 옮김)",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "몸이 외치는 소리는 셋이다. 배고프지 않기, 목마르지 않기, 춥지 않기. 이것을 지금 갖고 앞으로도 가지리라 기대할 수 있는 사람은 행복을 두고 신과도 겨룰 만하다.",
+            "cite": "33",
+            "gloss": "더 가져야 안심될 것 같을 때. 몸이 정말 요구하는 목록은 짧다. 끼니와 잠자리가 실제로 위태로운 사람에게 ‘그거면 됐다’고 하는 말은 아니다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "우리에게 필요한 것은 친구가 주는 도움 그 자체보다, 필요할 때 도와주리라는 믿음이다.",
+            "cite": "34",
+            "gloss": "자주 못 만나 멀어진 것 같은 친구 사이에. 우정의 힘은 만남의 횟수보다 ‘기댈 수 있다’는 믿음에 있다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "없는 것을 바라느라 지금 있는 것을 망치지 말라. 지금 있는 것도 한때는 빌며 바라던 것이었음을 헤아려라.",
+            "cite": "35",
+            "gloss": "남과 비교하다 내 것이 초라해 보일 때. 지금의 것도 한때의 소원이었음을 떠올리게 한다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "웃으면서 동시에 지혜를 찾고, 살림을 꾸리고, 그 밖에 내게 속한 것들도 누려야 한다. 그러면서 바른 철학의 말을 하기를 결코 멈추지 말라.",
+            "cite": "41",
+            "gloss": "‘인생부터 정리하고 나서 쉬겠다’는 사람에게. 생각과 웃음과 살림은 차례로가 아니라 함께 간다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "우정은 온 세상을 춤추며 돌면서 우리 모두에게 외친다. 깨어 일어나 서로의 행복을 기뻐하라고.",
+            "cite": "52",
+            "gloss": "외로움에 웅크린 날에. 우정은 기다리는 것이 아니라 먼저 일어나게 하는 부름이다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "불운은 잃어 간 좋은 것들을 고맙게 떠올리는 마음으로, 그리고 일어난 일을 일어나지 않은 것으로 만들 수는 없음을 아는 것으로 돌보아야 한다.",
+            "cite": "55",
+            "gloss": "후회와 상실감에 오래 머무를 때. 잃은 것을 지우지 않고, 그것이 주었던 좋은 것을 헤아리는 쪽으로 눈을 옮긴다. 막 잃은 직후보다 시간이 조금 흐른 뒤에 어울리는 말이다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "일상의 잡무와 세상일이라는 감옥에서 우리 자신을 풀어내야 한다.",
+            "cite": "58",
+            "gloss": "일정과 연락에 갇힌 듯한 번아웃에. 다 그만두라는 말이 아니라, 나를 묶은 것을 하나씩 풀어 보라는 말이다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "남의 칭찬은 저절로 따라오게 두고, 우리는 우리 자신을 고치는 일에 마음을 쏟아야 한다.",
+            "cite": "64",
+            "gloss": "인정받고 싶어 지칠 때. 칭찬은 쫓는 대상이 아니라 따라오는 결과다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "모든 욕망 앞에 이 물음을 세워라. 욕망이 찾는 것을 이루면 내게 무슨 일이 일어나는가, 이루지 못하면 무슨 일이 일어나는가.",
+            "cite": "71",
+            "gloss": "충동구매·이직·연애처럼 마음이 급할 때. 두 갈래 결과를 미리 그려 보는 간단한 점검법.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "적은 것으로 넉넉할 줄 아는 마음이 맺는 가장 큰 열매는 자유다.",
+            "cite": "77",
+            "gloss": "소비·빚·눈치에 묶인 사람에게. 덜 필요할수록 덜 휘둘린다. 남의 도움을 받지 말라는 뜻의 ‘자립’이 아니다.",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "가장 큰 재산이 있어도, 많은 사람에게서 받는 존경과 주목이 있어도 마음의 소란은 풀리지 않고, 기쁨이라 부를 만한 기쁨도 생기지 않는다.",
+            "cite": "81",
+            "gloss": "‘이것만 이루면 불안이 끝날 것’이라 믿을 때. 불안을 푸는 열쇠는 재산이나 인정 속에 있지 않다는 것을 먼저 확인한다. (사본이 손상된 끝 구절은 뺌)",
+            "book": "바티칸 금언집",
+            "bookId": "vs"
+          },
+          {
+            "text": "이것은 여러 사람이 아니라 너 하나에게 하는 말이다. 우리는 서로에게 충분히 큰 객석이니까.",
+            "cite": "7.11",
+            "gloss": "좋아요 수와 많은 사람의 반응에 흔들릴 때. 나를 알아봐 줄 한 사람이면 객석은 충분하다.",
+            "book": "세네카의 편지가 전하는 단편",
+            "bookId": "sen"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "우정 (필리아, philia)",
+            "def": "에피쿠로스가 평생의 행복을 위해 지혜가 마련하는 것 가운데 가장 큰 것으로 꼽은 것입니다(주요 교설 27). 우정의 힘은 도움 자체보다 서로 도우리라는 믿음에 있다고 보았습니다(바티칸 금언 34)."
+          },
+          {
+            "term": "자족 (아우타르케이아, autarkeia)",
+            "def": "적은 것으로도 넉넉할 줄 아는 힘입니다. 남에게 기대지 말라는 고립의 뜻이 아니라, 덜 필요해서 덜 휘둘리는 자유의 바탕입니다(바티칸 금언 77)."
+          },
+          {
+            "term": "헛된 생각 (케나이 독사이, kenai doxai)",
+            "def": "자연스러운 필요가 아니라 근거 없는 믿음이 만들어 낸 바람입니다. 자연의 부에는 한계가 있지만 헛된 생각이 좇는 부에는 끝이 없다고 보았습니다(주요 교설 15)."
+          },
+          {
+            "term": "자연의 정의",
+            "def": "서로 해치지도 해침당하지도 않기 위해 맺는, 서로에게 이로운 약속입니다. 정의를 사람들 사이의 약정으로 본 생각입니다(주요 교설 31)."
+          },
+          {
+            "term": "정원 (케포스, Kēpos)",
+            "def": "에피쿠로스가 아테네에서 사들여 벗들과 함께 살며 공부한 곳이자 그 학파를 부르는 이름입니다. 그에게 물러남은 혼자 숨는 것이 아니라 벗들과 함께 조용히 사는 것이었습니다(디오게네스 라에르티오스 10.10–11)."
+          }
+        ],
+        "apply": "<p>이번 주에 하나만 해 보세요. 사고 싶은 물건, 붙잡고 싶은 자리처럼 마음을 끄는 욕망 하나를 골라 바티칸 금언 71번의 두 물음을 적습니다. ‘이루면 내게 무슨 일이 생기나’, ‘이루지 못하면 무슨 일이 생기나’. 두 칸을 채우고 나면 급하던 마음이 셈할 수 있는 크기로 줄어들기도 합니다.</p><p>그리고 오래 연락하지 못한 친구 한 명에게 짧은 안부를 보내 보세요. 『주요 교설』 27번이 말하듯 에피쿠로스에게 행복의 가장 큰 재료는 벗이었고, 바티칸 금언 34번처럼 그 힘은 자주 만나는 데보다 서로 기댈 수 있다는 믿음에 있습니다.</p>",
+        "provenance": "Dialogos의 답변과 이 쪽의 구절은 저작권이 없는 그리스어 원문(세네카가 전하는 단편은 라틴어 원문)에서 직접 현대 한국어로 의역한 것이며, 저작권이 있는 현대 번역본의 문장을 옮기지 않습니다. 출처 표기는 책 이름과 번호를 가리킵니다. 『주요 교설』은 1–40번, 『바티칸 금언집』은 보트케·우제너 이래 폰 데어 뮐 판까지 이어지는 1–81번, 세네카의 단편은 『루킬리우스에게 보내는 편지』의 편지·절 번호(7.11)입니다.",
+        "faq": [
+          {
+            "q": "『주요 교설』과 『바티칸 금언집』은 어떻게 다른가요?",
+            "a": "『주요 교설』은 디오게네스 라에르티오스가 『유명한 철학자들의 생애』 제10권 끝에 옮겨 적은 40개 조항으로, 에피쿠로스 윤리의 뼈대를 담고 있습니다. 『바티칸 금언집』은 1888년 바티칸 도서관의 14세기 사본에서 발견된 81개 금언으로, 우정·욕망·생활에 관한 짧은 말이 많습니다. 두 모음에는 같은 문장도 몇 개 있습니다."
+          },
+          {
+            "q": "『바티칸 금언집』은 모두 에피쿠로스의 말인가요?",
+            "a": "꼭 그렇지는 않습니다. 이 모음을 처음 함께 펴낸 우제너는 에피쿠로스와 뛰어난 제자 세 사람의 편지를 간추린 책에서 뽑은 것으로 보았습니다. 그래서 일부는 제자의 말일 수 있다고 여겨지며, 영역자 가운데에는 다른 사람의 말로 여겨지는 금언과 『주요 교설』과 겹치는 금언을 빼고 옮긴 이도 있습니다."
+          },
+          {
+            "q": "에피쿠로스의 가장 유명한 금언은 무엇인가요?",
+            "a": "‘지혜가 평생의 행복을 위해 마련하는 것 가운데 가장 큰 것은 벗을 얻는 일’(주요 교설 27), ‘자연이 요구하는 부에는 한계가 있고 얻기 쉽다’(주요 교설 15), ‘자족의 가장 큰 열매는 자유’(바티칸 금언 77)가 자주 인용됩니다. 모두 짧지만 우정과 절제를 중심에 둔 그의 생각을 잘 보여 줍니다."
+          },
+          {
+            "q": "‘먹고 마시고 즐기자’는 에피쿠로스의 말인가요?",
+            "a": "아닙니다. 이 말은 성서(전도서 8:15, 누가복음 12:19)에 나오는 표현과 닮았고, 에피쿠로스는 오히려 그런 생활을 즐거운 삶으로 보지 않았습니다. 그는 쾌락이란 몸에 고통이 없고 마음이 어지럽지 않은 상태라고 했고(메노이케우스에게 보내는 편지 131), 자연의 부에는 한계가 있다고 했습니다(주요 교설 15)."
+          },
+          {
+            "q": "세네카는 왜 에피쿠로스를 인용했나요?",
+            "a": "세네카는 스토아 철학자였지만 다른 학파에서도 좋은 말을 찾았습니다. 그는 에피쿠로스의 글을 읽는 것을 ‘탈영병이 아니라 정탐꾼으로 적진에 건너가는 것’이라고 표현했고(편지 2.5), 편지 끝에 에피쿠로스의 말을 자주 덧붙였습니다. 이 쪽의 7.11도 그런 구절입니다."
+          },
+          {
+            "q": "원문을 무료로 읽을 수 있나요?",
+            "a": "네. 『주요 교설』 그리스어 원문은 el.wikisource에, 힉스의 1925년 퍼블릭 도메인 영역은 Wikisource에 있습니다. 『바티칸 금언집』 그리스어 원문은 Perseids(폰 데어 뮐 판)에서, 역자가 권리를 포기한 CC0 영역은 monadnock.net에서 읽을 수 있습니다. 세네카의 라틴어 원문은 The Latin Library에 있습니다."
+          },
+          {
+            "q": "한국어 번역본이 있나요?",
+            "a": "있습니다. 현대지성 클래식 47 『에피쿠로스 쾌락』(박문재 옮김, 2022)에 「주요 가르침들」과 「에피쿠로스 어록」이 실려 있습니다. 출판사 소개에 따르면 남아 있는 글 8편을 그리스어에서 옮긴 완역본입니다."
+          },
+          {
+            "q": "Dialogos는 이 금언들을 어떻게 인용하나요?",
+            "a": "Dialogos의 에피쿠로스는 금언의 뜻을 현대어로 풀어 대화에 녹이고, ‘『주요 교설』 27’, ‘『바티칸 금언집』 14’처럼 책 이름과 번호를 출처로 붙입니다. 저작권이 있는 번역문은 옮기지 않으며, 몸의 고통에 관한 『주요 교설』 4는 언젠가 끝나는 통증에만 쓰고 오래가는 통증에는 쓰지 않습니다."
+          }
+        ],
+        "pdIntro": "그리스어 원문과 세네카의 라틴어 원문은 고대 문헌이라 퍼블릭 도메인입니다. 『바티칸 금언집』 원문은 페터 폰 데어 뮐(Peter von der Mühll)이 1922년 라이프치히 토이브너에서 낸 판을 Perseids가 디지털화한 것입니다. 『주요 교설』 영역은 로버트 드루 힉스(1850–1929)의 1925년 로엡판으로, 역자 사후 70년이 지났고 미국에서도 퍼블릭 도메인입니다. 『바티칸 금언집』은 퍼블릭 도메인 영역을 찾지 못해, 역자 피터 세인트앤드리(Peter Saint-Andre)가 CC0로 모든 권리를 포기한 2010년 영역을 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "el.wikisource — 주요 교설 그리스어 원문 (1–40)",
+            "url": "https://el.wikisource.org/wiki/%CE%9A%CF%8D%CF%81%CE%B9%CE%B1%CE%B9_%CE%94%CF%8C%CE%BE%CE%B1%CE%B9"
+          },
+          {
+            "label": "Wikisource — 『유명한 철학자들의 생애』 제10권, 주요 교설 영역 (R. D. Hicks 역, 1925)",
+            "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+          },
+          {
+            "label": "Perseids — 바티칸 금언집 그리스어 원문 (von der Mühll 편, Teubner 1922)",
+            "url": "https://cts.perseids.org/read/greekLit/tlg0537/tlg014/1st1K-grc1"
+          },
+          {
+            "label": "monadnock.net — 바티칸 금언집 영역 (Peter Saint-Andre 역, 2010, CC0)",
+            "url": "https://monadnock.net/epicurus/vatican-sayings.html"
+          },
+          {
+            "label": "The Latin Library — 세네카 편지 1–12 라틴어 원문 (7.11 수록)",
+            "url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+          }
+        ],
+        "related": [
+          {
+            "slug": "epicurus-letter-to-menoeceus",
+            "label": "메노이케우스에게 보내는 편지 · 에피쿠로스"
+          },
+          {
+            "slug": "letters-to-lucilius",
+            "label": "루킬리우스에게 보내는 편지 · 세네카"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
+          },
+          {
+            "slug": "discourses",
+            "label": "담화록 · 에픽테토스"
+          },
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "즐거운 학문 · 니체"
+          }
+        ],
+        "editions": [
+          {
+            "title": "에피쿠로스 쾌락 (현대지성 클래식 47)",
+            "translator": "박문재",
+            "publisher": "현대지성 (현대지성 클래식)",
+            "note": "2022년 12월 간행. 출판사 소개에 따르면 남아 있는 에피쿠로스의 글 8편을 그리스어에서 옮긴 완역본으로, 목차에 「메노이케우스에게 보낸 서신」 「주요 가르침들」 「에피쿠로스 어록」이 들어 있습니다. 각주와 역자 해제가 붙어 있습니다.",
+            "verifiedSource": "https://hdjisung.com/bbs/board.php?bo_table=22&wr_id=145"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "主要教説と箴言",
+        "mentorName": "エピクロス",
+        "lede": "エピクロス『主要教説』『ヴァチカン箴言集』とセネカが伝えた断片から選んだ箴言集。友情・欲望・お金・孤独をめぐる短い言葉を原典の番号つきで解説し、無料の原文を案内します。",
+        "intro": "このページは、エピクロスの短い言葉をひとつにまとめた<em>アンソロジーページ</em>です。40条からなる<em>主要教説</em>(<em>Κύριαι Δόξαι</em>)、ヴァチカン図書館の写本に伝わる81の箴言<em>ヴァチカン箴言集</em>(<em>Gnomologium Vaticanum</em>)、そしてセネカの書簡が伝えるエピクロスの言葉ひとつから、Dialogos が選んだ一節を収めました。どれも一、二文の短い箴言で、一冊あたり数節にしかならないため、書物ごとにページを分けずに一か所に集めています。各節には、どの書物の何番かを添えています。",
+        "context": "<p>『主要教説』は、古代の伝記作家ディオゲネス・ラエルティオスが『ギリシア哲学者列伝』全体を締めくくるために第10巻の末尾に書き写した40条です(10.139–154)。『ヴァチカン箴言集』は、1888年にカール・ヴォトケ(Karl Wotke)がヴァチカン図書館の14世紀のギリシア語写本(Vat. gr. 1950)から見つけ、ヘルマン・ウーゼナー(Hermann Usener)とともに学術誌『ウィーン研究(Wiener Studien)』第10巻に発表した81の箴言です。ウーゼナーはこの集成を、エピクロスと彼の優れた弟子三人の書簡を抜粋した本から採られたものと見たため、一部は弟子の言葉である可能性があります。『主要教説』と同じ文も含まれるので、Dialogos では重なる文は『主要教説』の番号だけで扱います。三つ目の源はローマのストア派哲学者セネカで、彼はルキリウスへの書簡の結びに、その日の贈り物のようにエピクロスの言葉をよく添えました。日本では出隆・岩崎允胤訳『エピクロス 教説と手紙』(岩波文庫、1959年)が知られ、2002年にはワイド版も出ています。</p>",
+        "sections": [
+          {
+            "anchor": "principal-doctrines",
+            "title": "主要教説",
+            "body": "ディオゲネス・ラエルティオスが伝える40条です。このページには、肉体の苦痛は長く続かないという言葉(4)、静かな生がもたらす安全(14)、自然の富と思い込みの富(15)、正しさと平静(17)、必要の限度(21)、友情(27)、互いに害さない取り決めとしての正義(31)を収めました。4番は前半の二節だけを訳して長患いについての最後の一節は省き、Dialogos ではいずれ引いていく痛みにだけ用います。(4, 14, 15, 17, 21, 27, 31)"
+          },
+          {
+            "anchor": "vatican-sayings",
+            "title": "ヴァチカン箴言集",
+            "body": "1888年に公表された81の箴言です。先延ばしをしないこと(14)、身体が本当に求めるもの(33)、友への信頼(34)と友情の呼びかけ(52)、今あるもの(35)、笑いと暮らし(41)、不運の手当て(55)、日常の牢獄(58)、称賛(64)、欲望への問い(71)、自足と自由(77)、富と名声の限界(81)を収めました。14番は前半のみを訳し、81番は写本が損なわれた末尾を除いています。(14, 33, 34, 35, 41, 52, 55, 58, 64, 71, 77, 81)"
+          },
+          {
+            "anchor": "seneca-fragment",
+            "title": "セネカの書簡が伝える断片",
+            "body": "セネカは『ルキリウスへの手紙』第7書で、大勢の喝采を頼りにするなと説きながら三つの言葉を紹介します。その三つ目が、エピクロスがともに学んだ仲間に宛てた手紙の一節です。ギリシア語の原文は残っておらず、セネカのラテン語で伝わります。(7.11)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "肉体の苦痛は、絶え間なく長く居座りはしない。最も激しい苦痛はごく短い間しかとどまらず、肉体の快をわずかに上回る程度の苦痛も、幾日も続きはしない。",
+            "cite": "4",
+            "gloss": "ぎっくり腰や抜歯の後のように、いずれ引いていく痛みの前で。いちばん鋭い瞬間がいちばん短いと知っておく。長く続く痛みに向けた言葉ではなく、そのときはまず医師に相談を。(前半の二節のみ訳出)",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "人々からの安全は、ある程度までは力や豊かさによっても得られる。だが最も混じりけのない安全は、静かに暮らし、大勢の人々から身を引くことから生まれる。",
+            "cite": "14",
+            "gloss": "満員電車と通知の波に疲れた日に。人を断てという意味ではない。エピクロスは庭園で友人たちと暮らした。離れる先は群衆の騒がしさであって、大切な人ではない。",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "自然の求める富には限りがあり、手に入れやすい。だが空しい思い込みの求める富は、果てしなく遠のいていく。",
+            "cite": "15",
+            "gloss": "「年収がいくらあれば安心か」の答えが毎年上がっていくときに。必要が決める線には終わりがあるが、思い込みが決める線は近づくほど遠のく。",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "正しい人は最も心乱されることがなく、不正な人は最大の動揺に満ちている。",
+            "cite": "17",
+            "gloss": "経費の水増しや小さなごまかしが頭をよぎるときに。正直でいることは、誰より先に自分の心の静けさを守る。",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "生きるのに必要なものの限度を見きわめた人は、欠乏の苦しみを取り除き、生涯全体を満ち足りたものにするものがたやすく手に入ると知っている。だから、争いを伴う事柄をもはや必要としない。",
+            "cite": "21",
+            "gloss": "社内の出世競争やマウント合戦に巻き込まれて疲れたときに。本当に必要な取り分は思ったより小さいと勘定し直す。",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "知恵が生涯全体の幸福のために用意するもののうち、群を抜いて大きいのは友を得ることである。",
+            "cite": "27",
+            "gloss": "仕事に追われて友人への連絡が途絶えがちなときに。エピクロスにとって幸福のいちばん大きな材料は友だった。",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "自然にかなった正義とは、互いに害を加えず害を受けないための、互いの利益の取り決めである。",
+            "cite": "31",
+            "gloss": "シェアハウスや共働きの家事分担でもめたときに。公正さは大きな理念より「互いに傷つけない」という取り決めから始まる。",
+            "book": "主要教説",
+            "bookId": "kd"
+          },
+          {
+            "text": "私たちは一度生まれたきりで、二度生まれることはできない。それなのに君は、明日の主でもないのに、今を楽しむ好機を先へ延ばす。人生は先延ばしのうちにすり減っていく。",
+            "cite": "14",
+            "gloss": "「定年したら旅行に」「落ち着いたら会いに行こう」と先送りしているときに。明日は自分の手にないのだから、小さな楽しみから今日へ移す。(箴言の一部のみ訳出)",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "肉体の声は三つ、飢えないこと、渇かないこと、凍えないことだ。これらを今持ち、この先も持てると望める人は、幸福において神とさえ張り合えるだろう。",
+            "cite": "33",
+            "gloss": "もっと持たないと安心できない気がするときに。身体が本当に求めるリストは短い。ただし、食事や住まいそのものが危うい人に「それで足りる」と言う言葉ではない。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "私たちが友から必要としているのは、助けそのものよりも、必要なときには助けてもらえるという信頼である。",
+            "cite": "34",
+            "gloss": "転勤や子育てで友人と会えない年が続くときに。友情の力は会う回数より、頼れるという確かさにある。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "ないものを欲しがって、今あるものを台なしにしてはならない。今あるものもかつては願い求めたものだったと、思い返すべきである。",
+            "cite": "35",
+            "gloss": "SNSで他人の暮らしと比べて、自分の部屋や仕事が色あせて見えるときに。今あるものも、かつての願いだった。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "笑うと同時に、知を求め、家を切り盛りし、そのほか自分に属するものも用いなければならない。そして正しい哲学の言葉を口にすることを、決してやめてはならない。",
+            "cite": "41",
+            "gloss": "「仕事が片づいたら趣味を」「落ち着いたら勉強を」と順番待ちさせているときに。考えることも笑うことも暮らすことも、同時に進めていい。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "友情は人の住む世界を踊りめぐり、私たちみなに告げ知らせる。目を覚まして、互いの幸いを祝福せよと。",
+            "cite": "52",
+            "gloss": "誰かからの連絡を待つばかりの日に。友情は待つものではなく、こちらから立ち上がらせる呼びかけだ。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "不運は、失われていったものへの感謝と、起きたことを起きなかったことにはできないと知ることによって、手当てしなければならない。",
+            "cite": "55",
+            "gloss": "うまくいかなかった転職や終わった恋を何度も反芻してしまうときに。失ったものを消すのではなく、それがくれた良いものを数える方へ目を移す。失った直後より、少し時間がたってから響く言葉。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "日々の雑務と公の務めという牢獄から、私たち自身を解き放たねばならない。",
+            "cite": "58",
+            "gloss": "会議と通知で一日が埋まり、息が詰まるときに。全部辞めろではなく、自分を縛っているものを一つずつほどいてみること。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "他人からの称賛はおのずからついて来るにまかせ、私たちは自分自身の手当てに打ち込むべきである。",
+            "cite": "64",
+            "gloss": "評価面談や「いいね」の数に一喜一憂するときに。称賛は追いかけるものではなく、後からついて来るもの。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "あらゆる欲望に、この問いを突きつけるべきである。欲望が求めるものが果たされたら、私に何が起こるのか。果たされなかったら、何が起こるのか。",
+            "cite": "71",
+            "gloss": "深夜のネット通販のカートや、勢いでの転職サイト登録の前に。二つの結果を先に描いてみる簡単な点検。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "少しで足りるとする自足の、最大の実りは自由である。",
+            "cite": "77",
+            "gloss": "ローンや見栄の出費に縛られていると感じるときに。必要が少ないほど振り回されない。人に頼るなという意味の「自立」ではない。",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "最大の富があっても、大勢からの名誉や注目があっても、魂の乱れは解けず、喜びと呼ぶに足る喜びも生まれない。",
+            "cite": "81",
+            "gloss": "「年収があと少し上がれば」「フォロワーがあと一万人いれば」と思うときに。不安をほどく鍵は富や注目の中にはない。(写本が損なわれた末尾は除く)",
+            "book": "ヴァチカン箴言集",
+            "bookId": "vs"
+          },
+          {
+            "text": "これは大勢にではなく、君ひとりに向けて言うのだ。私たちは互いにとって、十分に大きな観客席なのだから。",
+            "cite": "7.11",
+            "gloss": "再生回数やフォロワー数に心が揺れるときに。わかってくれる一人がいれば、観客席は足りている。",
+            "book": "セネカの書簡が伝える断片",
+            "bookId": "sen"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "友情 (フィリア, philia)",
+            "def": "知恵が生涯の幸福のために用意するもののうち、エピクロスが最大と見なしたものです(主要教説27)。友情の力は助けそのものより、助けてもらえるという信頼にあると考えました(ヴァチカン箴言34)。"
+          },
+          {
+            "term": "自足 (アウタルケイア, autarkeia)",
+            "def": "少しで足りるとする力です。人に頼るなという孤立の意味ではなく、必要が少ないから振り回されないという自由の土台です(ヴァチカン箴言77)。"
+          },
+          {
+            "term": "空しい思い込み (ケナイ・ドクサイ, kenai doxai)",
+            "def": "自然な必要ではなく、根拠のない思い込みが生んだ望みです。自然の富には限りがあるが、思い込みが追う富には果てがないとされます(主要教説15)。"
+          },
+          {
+            "term": "自然にかなった正義",
+            "def": "互いに害を加えず害を受けないために結ぶ、互いの利益の取り決めです。正義を人と人との約束として捉える考えです(主要教説31)。"
+          },
+          {
+            "term": "庭園 (ケーポス, Kēpos)",
+            "def": "エピクロスがアテナイで買い取り、友人たちとともに暮らし学んだ場所で、その学派の呼び名でもあります。彼にとって身を引くとは、ひとりで隠れることではなく、友とともに静かに暮らすことでした(ディオゲネス・ラエルティオス 10.10–11)。"
+          }
+        ],
+        "apply": "<p>今週、ひとつだけ試してみてください。欲しい物や手に入れたいポストなど、心を引く欲望をひとつ選び、ヴァチカン箴言71番の二つの問いを書き出します。「かなったら自分に何が起こるか」「かなわなかったら何が起こるか」。二つの欄を埋めると、焦りが勘定できる大きさまで縮むことがあります。</p><p>それから、しばらく連絡していない友人にひとこと近況を送ってみましょう。『主要教説』27番のとおり、エピクロスにとって幸福の最大の材料は友であり、ヴァチカン箴言34番のとおり、その力は会う回数より、頼り合えるという信頼にあります。</p>",
+        "provenance": "Dialogos の回答とこのページの訳文は、著作権のないギリシア語原文(セネカが伝える断片はラテン語原文)から直接現代日本語へ意訳したもので、著作権のある現代語訳の文章は転載していません。出典の表記は書名と番号を指します。『主要教説』は1–40番、『ヴァチカン箴言集』はヴォトケ・ウーゼナー以来フォン・デア・ミュール版まで続く1–81番、セネカの断片は『ルキリウスへの手紙』の書簡・節番号(7.11)です。",
+        "faq": [
+          {
+            "q": "『主要教説』と『ヴァチカン箴言集』はどう違うのですか？",
+            "a": "『主要教説』は、ディオゲネス・ラエルティオスが『ギリシア哲学者列伝』第10巻の末尾に書き写した40条で、エピクロス倫理の骨組みを示します。『ヴァチカン箴言集』は1888年にヴァチカン図書館の14世紀の写本から見つかった81の箴言で、友情・欲望・暮らしについての短い言葉が多く含まれます。両者には同じ文もいくつかあります。"
+          },
+          {
+            "q": "『ヴァチカン箴言集』はすべてエピクロスの言葉ですか？",
+            "a": "必ずしもそうではありません。この集成を最初に共同で発表したウーゼナーは、エピクロスと優れた弟子三人の書簡を抜粋した本から採られたものと考えました。そのため一部は弟子の言葉かもしれないとされ、英訳者のなかには、他人の言葉とされる箴言や『主要教説』と重なる箴言を除いて訳した人もいます。"
+          },
+          {
+            "q": "エピクロスの有名な言葉には何がありますか？",
+            "a": "「知恵が生涯の幸福のために用意するもののうち最大のものは友を得ること」(主要教説27)、「自然の求める富には限りがあり、手に入れやすい」(主要教説15)、「自足の最大の実りは自由」(ヴァチカン箴言77)がよく引かれます。いずれも短い言葉ですが、友情と節度を中心に置いた彼の考えをよく表しています。"
+          },
+          {
+            "q": "「エピクロスは快楽主義者だから好きに生きろと言った」は本当ですか？",
+            "a": "いいえ。エピクロスの言う快楽は「身体に苦痛がなく魂が乱されていない状態」で(メノイケウス宛の手紙131)、彼は欲望ごとに「かなったら何が起こり、かなわなかったら何が起こるか」を問えと勧めています(ヴァチカン箴言71)。自然の富には限りがあるとも言っています(主要教説15)。"
+          },
+          {
+            "q": "セネカはなぜエピクロスを引用したのですか？",
+            "a": "セネカはストア派でしたが、他の学派にも良い言葉を探しました。エピクロスを読むことを「脱走兵としてではなく、偵察兵として敵陣に渡る」と表現し(書簡2.5)、書簡の結びにエピクロスの言葉をよく添えています。このページの7.11もそうした一節です。"
+          },
+          {
+            "q": "原文を無料で読めますか？",
+            "a": "はい。『主要教説』のギリシア語原文は el.wikisource に、ヒックスによる1925年のパブリックドメイン英訳は Wikisource にあります。『ヴァチカン箴言集』のギリシア語原文は Perseids(フォン・デア・ミュール版)で、訳者が権利を放棄した CC0 の英訳は monadnock.net で読めます。セネカのラテン語原文は The Latin Library にあります。"
+          },
+          {
+            "q": "日本語訳はありますか？",
+            "a": "出隆・岩崎允胤訳『エピクロス 教説と手紙』(岩波文庫、1959年)があり、2002年にはワイド版岩波文庫でも刊行されました。"
+          },
+          {
+            "q": "Dialogos はこれらの箴言をどう引用しますか？",
+            "a": "Dialogos のエピクロスは箴言の意味を現代語にほどいて対話に織り込み、「『主要教説』27」「『ヴァチカン箴言集』14」のように書名と番号を出典として添えます。著作権のある訳文は転載しません。肉体の苦痛についての『主要教説』4は、いずれ引いていく痛みにだけ用い、長く続く痛みには用いません。"
+          }
+        ],
+        "pdIntro": "ギリシア語原文とセネカのラテン語原文は古代の文献なのでパブリックドメインです。『ヴァチカン箴言集』の原文は、ペーター・フォン・デア・ミュール(Peter von der Mühll)が1922年にライプツィヒのトイプナー社から出した版を Perseids がデジタル化したものです。『主要教説』の英訳はロバート・ドルー・ヒックス(1850–1929)による1925年のローブ版で、訳者の没後70年が過ぎ、米国でもパブリックドメインです。『ヴァチカン箴言集』はパブリックドメインの英訳が見つからなかったため、訳者ピーター・セイント゠アンドレ(Peter Saint-Andre)が CC0 であらゆる権利を放棄した2010年の英訳をご案内します。",
+        "pdLinks": [
+          {
+            "label": "el.wikisource — 主要教説 ギリシア語原文(1–40)",
+            "url": "https://el.wikisource.org/wiki/%CE%9A%CF%8D%CF%81%CE%B9%CE%B1%CE%B9_%CE%94%CF%8C%CE%BE%CE%B1%CE%B9"
+          },
+          {
+            "label": "Wikisource — 『ギリシア哲学者列伝』第10巻、主要教説の英訳(R. D. ヒックス訳、1925年)",
+            "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+          },
+          {
+            "label": "Perseids — ヴァチカン箴言集 ギリシア語原文(フォン・デア・ミュール編、トイプナー 1922年)",
+            "url": "https://cts.perseids.org/read/greekLit/tlg0537/tlg014/1st1K-grc1"
+          },
+          {
+            "label": "monadnock.net — ヴァチカン箴言集 英訳(ピーター・セイント゠アンドレ訳、2010年、CC0)",
+            "url": "https://monadnock.net/epicurus/vatican-sayings.html"
+          },
+          {
+            "label": "The Latin Library — セネカ書簡1–12 ラテン語原文(7.11を収録)",
+            "url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+          }
+        ],
+        "related": [
+          {
+            "slug": "epicurus-letter-to-menoeceus",
+            "label": "メノイケウス宛の手紙 · エピクロス"
+          },
+          {
+            "slug": "letters-to-lucilius",
+            "label": "ルキリウスへの手紙 · セネカ"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
+          },
+          {
+            "slug": "discourses",
+            "label": "語録 · エピクテトス"
+          },
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "悦ばしき知識 · ニーチェ"
+          }
+        ],
+        "editions": [
+          {
+            "title": "エピクロス 教説と手紙（岩波文庫）",
+            "translator": "出隆・岩崎允胤",
+            "publisher": "岩波書店（岩波文庫）",
+            "note": "1959年刊。国立国会図書館の書誌では C. ベイリーが編者として記され、目次に「メノイケウス宛の手紙」が載っています。2002年にはワイド版岩波文庫としても刊行されました。",
+            "verifiedSource": "https://ndlsearch.ndl.go.jp/en/books/R100000002-I000000990866"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Principal Doctrines and Sayings",
+        "mentorName": "Epicurus",
+        "lede": "Epicurus's Principal Doctrines, Vatican Sayings and a fragment in Seneca: short lines on friendship, desire and money, explained with free original texts.",
+        "intro": "This is an <em>anthology page</em> gathering Epicurus's short sayings in one place. It brings together passages Dialogos has chosen from the forty <em>Principal Doctrines</em> (<em>Κύριαι Δόξαι</em>), the eighty-one <em>Vatican Sayings</em> (<em>Gnomologium Vaticanum</em>) preserved in a Vatican Library manuscript, and one saying of Epicurus quoted in Seneca's letters. Because each source is made of one- or two-sentence maxims and contributes only a handful of passages, they share a single page rather than having a page each. Every passage is labelled with its source and number.",
+        "context": "<p>The <em>Principal Doctrines</em> are forty maxims that the ancient biographer Diogenes Laertius copied out at the end of Book 10 to close his whole <em>Lives of the Eminent Philosophers</em> (10.139–154). The <em>Vatican Sayings</em> are eighty-one maxims that Karl Wotke found in 1888 in a fourteenth-century Greek manuscript in the Vatican Library (Vat. gr. 1950) and published with Hermann Usener in volume 10 of the journal <em>Wiener Studien</em>. Usener judged the collection to have been drawn from an abridgement of the letters of Epicurus and his three leading pupils, so some sayings may belong to his students. Several repeat lines from the <em>Principal Doctrines</em>; where they overlap, Dialogos cites only the Principal Doctrines number. The third source is the Roman Stoic Seneca, who often closed his letters to Lucilius with a saying of Epicurus as the day's small gift.</p>",
+        "sections": [
+          {
+            "anchor": "principal-doctrines",
+            "title": "Principal Doctrines",
+            "body": "Forty maxims preserved by Diogenes Laertius. This page includes the claim that bodily pain does not last long (4), the safety of a quiet life (14), natural wealth versus the wealth of empty opinion (15), justice and calm (17), the limits of need (21), friendship (27) and justice as a pact not to harm one another (31). For no. 4 only the first two clauses are given and the final clause about long illnesses is left out; Dialogos uses it only for pain that will pass. (4, 14, 15, 17, 21, 27, 31)"
+          },
+          {
+            "anchor": "vatican-sayings",
+            "title": "Vatican Sayings",
+            "body": "Eighty-one maxims first published in 1888. This page includes not putting life off (14), what the body really asks for (33), trust between friends (34) and friendship's wake-up call (52), what you already have (35), laughter and daily life (41), healing a misfortune (55), the prison of busywork (58), praise (64), the question to put to every desire (71), self-sufficiency and freedom (77) and the limits of wealth and fame (81). No. 14 is given only in part, and no. 81 without its damaged final clause. (14, 33, 34, 35, 41, 52, 55, 58, 64, 71, 77, 81)"
+          },
+          {
+            "anchor": "seneca-fragment",
+            "title": "Fragment preserved by Seneca",
+            "body": "In Letter 7 of his <em>Letters to Lucilius</em>, Seneca warns against relying on the approval of the many and offers three sayings; the third comes from a letter Epicurus wrote to one of his fellow students. The Greek original is lost, so it survives in Seneca's Latin. (7.11)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "Pain in the flesh does not linger on unbroken. At its height it is present for the briefest while, and pain that barely exceeds the body's pleasure does not keep up for many days.",
+            "cite": "4",
+            "gloss": "For pain that will pass, like a sprain or recovery after surgery: the sharpest moment is the shortest. Not meant for chronic pain; if pain persists, talk to a doctor first. (First two clauses only.)",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "Some safety from other people can come from strength and means, but the purest safety comes from a quiet life, stepped back from the crowd.",
+            "cite": "14",
+            "gloss": "For days when people and noise wear you down. Not a call to cut everyone off: Epicurus lived in his Garden with friends. Step back from the crowd, not from the people you love.",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "The wealth nature asks for has a limit and is easy to get. The wealth that empty opinions chase runs off without end.",
+            "cite": "15",
+            "gloss": "When 'enough' keeps moving: the number keeps rising because empty opinion sets it, not need. Need has a ceiling.",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "The just person is the least troubled of all; the unjust person is full of the greatest turmoil.",
+            "cite": "17",
+            "gloss": "When cutting a corner looks harmless: honesty protects your own peace of mind before anyone else's.",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "Whoever has seen the limits of what life requires knows how easily one can get what removes the pain of lack and makes a whole life complete. So they need nothing that has to be won by a struggle.",
+            "cite": "21",
+            "gloss": "When the race for rank, titles or followers never ends: tally what you actually need, and the prize may stop looking worth the fight.",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "Of everything wisdom prepares for a happy life from start to finish, nothing comes close to making friends.",
+            "cite": "27",
+            "gloss": "When work has crowded out your friends: for Epicurus, friendship was the biggest ingredient of a good life, not a reward for later.",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "Natural justice is a pledge of what is advantageous: that we neither harm one another nor are harmed.",
+            "cite": "31",
+            "gloss": "When house rules or a team agreement start to fray: fairness begins less with grand ideals than with a shared promise not to hurt each other.",
+            "book": "Principal Doctrines",
+            "bookId": "kd"
+          },
+          {
+            "text": "We are born once; there is no being born twice. Yet you, who are not master of tomorrow, keep postponing your chance for gladness, and life wastes away in the delay.",
+            "cite": "14",
+            "gloss": "For the trip, the call or the hobby saved for 'someday': tomorrow isn't in your hands, so move one small joy into this week. (Part of the saying only.)",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "The body cries out for three things: not to be hungry, not to be thirsty, not to be cold. Whoever has these, and can hope to keep having them, could rival even a god in happiness.",
+            "cite": "33",
+            "gloss": "When security seems to need more: the body's real list is short. It is not a lecture for anyone whose food or shelter is actually at risk.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "What we need from friends is not so much their help as the confidence that they would help if we needed it.",
+            "cite": "34",
+            "gloss": "For friendships stretched thin by distance or busy years: their strength lies less in how often you meet than in knowing you could call.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Don't let wanting what is missing spoil what is here. Remind yourself that these, too, were once things you prayed for.",
+            "cite": "35",
+            "gloss": "When comparison makes what you have look shabby: the job and the home you have now were once on your wish list.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Laugh, and at the same time pursue wisdom, look after your household and enjoy the rest of what is yours; and through it all, never stop voicing what sound philosophy teaches.",
+            "cite": "41",
+            "gloss": "For anyone treating reflection as a project for after the chores are done: thinking, laughing and running a home go together, not in sequence.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Friendship dances its way around the whole world, calling on every one of us to rise up and celebrate one another's happiness.",
+            "cite": "52",
+            "gloss": "On a lonely day spent waiting for someone to reach out: friendship, here, is a summons to get up and go first.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Heal a misfortune by being grateful for the good things that are gone, and by knowing that what has happened cannot be made not to have happened.",
+            "cite": "55",
+            "gloss": "When regret keeps replaying a loss: don't erase it, count the good it gave you. Better suited once some time has passed than in the first days of a loss.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "We have to get ourselves out of the jail of everyday busywork and civic affairs.",
+            "cite": "58",
+            "gloss": "When meetings and messages have boxed you in: not a resignation letter, but a nudge to undo one knot at a time.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Let praise from others follow on its own; our part is to busy ourselves with our own healing.",
+            "cite": "64",
+            "gloss": "When you're exhausted from chasing recognition: praise is a by-product to let arrive, not a target to hunt.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Hold every desire up to one question: if I get what it's after, what happens to me? And if I don't, what then?",
+            "cite": "71",
+            "gloss": "Before the late-night purchase or the impulsive career move: sketch both outcomes first. A simple two-line check.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Freedom is the richest fruit of needing little.",
+            "cite": "77",
+            "gloss": "For anyone tied down by debt, upgrades or keeping up appearances: the less you need, the less can pull you around. Not a call to refuse help from others.",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "Neither the greatest wealth nor honour and attention from the crowd will untie the soul's turmoil or produce any joy worth the name.",
+            "cite": "81",
+            "gloss": "For the 'once I hit that number, I'll relax' plan: wealth and attention don't untie anxiety. Look for the key elsewhere. (The damaged final clause is omitted.)",
+            "book": "Vatican Sayings",
+            "bookId": "vs"
+          },
+          {
+            "text": "These words are not for the crowd but for you. The two of us make a big enough audience for each other.",
+            "cite": "7.11",
+            "gloss": "When views and follower counts start to feel like the measure of you: one person who truly gets it is audience enough.",
+            "book": "Fragment in Seneca's Letters",
+            "bookId": "sen"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "friendship (philia)",
+            "def": "What Epicurus ranked as the greatest of all the things wisdom provides for a happy life (Principal Doctrines 27). Its strength, he thought, lies less in help itself than in the confidence that help would come (Vatican Sayings 34)."
+          },
+          {
+            "term": "self-sufficiency (autarkeia)",
+            "def": "The ability to be content with little. It does not mean refusing anyone's help; it is the ground of a freedom that comes from needing less (Vatican Sayings 77)."
+          },
+          {
+            "term": "empty opinions (kenai doxai)",
+            "def": "Wants produced not by natural need but by groundless belief. Natural wealth has a limit, but the wealth that empty opinion pursues has none (Principal Doctrines 15)."
+          },
+          {
+            "term": "natural justice",
+            "def": "A pact of mutual advantage not to harm one another or be harmed. It treats justice as an agreement between people (Principal Doctrines 31)."
+          },
+          {
+            "term": "the Garden (Kēpos)",
+            "def": "The garden Epicurus bought in Athens, where he lived and studied with his friends, and by extension the name of his school. Withdrawal, for him, meant living quietly among friends, not hiding alone (Diogenes Laertius 10.10–11)."
+          }
+        ],
+        "apply": "<p>Try one thing this week. Pick a desire that is tugging at you, an item to buy or a position to win, and write down the two questions of Vatican Saying 71: what happens to me if I get it, and what happens if I don't? Filling in both lines can shrink the urgency to a size you can actually weigh.</p><p>Then send a short note to a friend you haven't been in touch with for a while. As Principal Doctrine 27 says, friendship was Epicurus's biggest ingredient of happiness, and as Vatican Saying 34 puts it, its strength lies less in how often you meet than in knowing you can count on each other.</p>",
+        "provenance": "Dialogos's replies and the passages on this page are paraphrased directly from the out-of-copyright Greek (for the fragment preserved by Seneca, the Latin) into modern English; they do not reproduce the wording of any copyrighted modern translation. Citations give the source and number: Principal Doctrines 1–40; Vatican Sayings 1–81, the numbering used from Wotke and Usener through von der Mühll's edition; and, for the Seneca fragment, the letter and section of the <em>Letters to Lucilius</em> (7.11).",
+        "faq": [
+          {
+            "q": "What is the difference between the Principal Doctrines and the Vatican Sayings?",
+            "a": "The Principal Doctrines are forty maxims that Diogenes Laertius copied at the end of Book 10 of his Lives of the Eminent Philosophers, and they lay out the core of Epicurean ethics. The Vatican Sayings are eighty-one maxims found in 1888 in a fourteenth-century manuscript in the Vatican Library, many of them short lines on friendship, desire and daily life. A few sentences appear in both collections."
+          },
+          {
+            "q": "Are all the Vatican Sayings by Epicurus?",
+            "a": "Not necessarily. Hermann Usener, who first published them with Karl Wotke, believed they were drawn from an abridgement of the letters of Epicurus and his three leading pupils. Some may therefore come from his students, and at least one English translator leaves out the sayings usually credited to others along with those that repeat the Principal Doctrines."
+          },
+          {
+            "q": "What are Epicurus's most famous sayings?",
+            "a": "Among the most quoted are 'of everything wisdom prepares for a happy life, the greatest is making friends' (Principal Doctrines 27), 'the wealth nature asks for has a limit and is easy to get' (Principal Doctrines 15) and 'freedom is the richest fruit of needing little' (Vatican Sayings 77). Each is brief, but together they show how central friendship and moderation were to his thought."
+          },
+          {
+            "q": "What does 'freedom is the fruit of self-sufficiency' mean?",
+            "a": "Vatican Saying 77 links autarkeia, being content with little, to freedom: the less you need, the less anything outside you can pull you around. It is not a call to refuse help, since Epicurus ranked friendship above everything wisdom provides (Principal Doctrines 27). In the Letter to Menoeceus he adds that self-sufficiency is not about always living on little but about being content with little when you lack much (130)."
+          },
+          {
+            "q": "Why did Seneca quote Epicurus?",
+            "a": "Seneca was a Stoic, but he looked for good ideas in other schools too. He described reading Epicurus as crossing into the enemy's camp 'not as a deserter but as a scout' (Letter 2.5) and often ended his letters with one of Epicurus's sayings. The fragment on this page (7.11) is one of them."
+          },
+          {
+            "q": "Can I read these texts for free?",
+            "a": "Yes. The Greek of the Principal Doctrines is on el.wikisource and Hicks's 1925 public-domain English translation is on Wikisource. The Greek of the Vatican Sayings is on Perseids (von der Mühll's edition), and a CC0 English translation whose translator waived all rights is on monadnock.net. Seneca's Latin is on The Latin Library."
+          },
+          {
+            "q": "Which modern translation should I read?",
+            "a": "The Epicurus Reader, translated by Brad Inwood and Lloyd P. Gerson (Hackett, 1994), collects the letters, the ancient collections of maxims and key ancient testimony in one volume. For a free option, see the public-domain and CC0 links below."
+          },
+          {
+            "q": "How does Dialogos quote these sayings?",
+            "a": "Dialogos's Epicurus unpacks a saying's meaning in modern language and cites the source and number, such as Principal Doctrines 27 or Vatican Sayings 14. It does not reproduce copyrighted translations, and it uses Principal Doctrine 4, on bodily pain, only for pain that will pass, never for chronic pain."
+          }
+        ],
+        "pdIntro": "The Greek texts and Seneca's Latin are ancient works and in the public domain. The Greek of the Vatican Sayings on Perseids is a digitisation of Peter von der Mühll's 1922 Teubner edition (Leipzig). The English Principal Doctrines are from Robert Drew Hicks's (1850–1929) 1925 Loeb translation, public domain both in the United States and in countries where copyright runs for 70 years after the translator's death. No public-domain English Vatican Sayings could be found, so we link Peter Saint-Andre's 2010 translation, which he released under CC0, waiving all rights.",
+        "pdLinks": [
+          {
+            "label": "el.wikisource — Principal Doctrines, Greek text (1–40)",
+            "url": "https://el.wikisource.org/wiki/%CE%9A%CF%8D%CF%81%CE%B9%CE%B1%CE%B9_%CE%94%CF%8C%CE%BE%CE%B1%CE%B9"
+          },
+          {
+            "label": "Wikisource — Lives of the Eminent Philosophers, Book X, Principal Doctrines (tr. R. D. Hicks, 1925)",
+            "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+          },
+          {
+            "label": "Perseids — Vatican Sayings, Greek text (ed. von der Mühll, Teubner 1922)",
+            "url": "https://cts.perseids.org/read/greekLit/tlg0537/tlg014/1st1K-grc1"
+          },
+          {
+            "label": "monadnock.net — Vatican Sayings in English (tr. Peter Saint-Andre, 2010, CC0)",
+            "url": "https://monadnock.net/epicurus/vatican-sayings.html"
+          },
+          {
+            "label": "The Latin Library — Seneca, Letters 1–12, Latin text (includes 7.11)",
+            "url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+          }
+        ],
+        "related": [
+          {
+            "slug": "epicurus-letter-to-menoeceus",
+            "label": "Letter to Menoeceus · Epicurus"
+          },
+          {
+            "slug": "letters-to-lucilius",
+            "label": "Letters to Lucilius · Seneca"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
+          },
+          {
+            "slug": "discourses",
+            "label": "Discourses · Epictetus"
+          },
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "The Gay Science · Nietzsche"
+          }
+        ],
+        "editions": [
+          {
+            "title": "The Epicurus Reader: Selected Writings and Testimonia",
+            "translator": "Brad Inwood and Lloyd P. Gerson",
+            "publisher": "Hackett Publishing",
+            "note": "Published in 1994. The publisher lists an introduction, the ancient biography of Epicurus, the surviving letters, the ancient collections of maxims, the testimony of Cicero and Lucretius, and the polemic of Plutarch in one compact volume.",
+            "verifiedSource": "https://hackettpublishing.com/the-epicurus-reader"
+          }
+        ]
+      }
+    }
+  },
+  "nietzsche-gay-science": {
+    "slug": "nietzsche-gay-science",
+    "mentorId": "nietzsche",
+    "icon": "fa-sun",
+    "updated": "2026-11-13",
+    "content": {
+      "ko": {
+        "workName": "즐거운 학문",
+        "mentorName": "프리드리히 니체",
+        "lede": "니체 『즐거운 학문』 — Dialogos가 인용하는 퍼블릭 도메인 원전. 아모르 파티(276)·가장 무거운 무게(341) 등 핵심 구절의 우리말 의역과 무료 독일어·영어 원문 안내.",
+        "intro": "<em>즐거운 학문</em>(독일어 <em>Die fröhliche Wissenschaft</em>, 표제에 'la gaya scienza'를 함께 적음)은 프리드리히 니체(1844–1900)가 1882년에 내고 1887년 새 판에서 제5권과 서문, 부록 시를 더한 잠언집입니다. 번호 붙은 짧은 절 383개가 다섯 권으로 나뉘며, 실패를 실험의 대답으로 읽는 법(41), 자기 앞에서 부끄러워하지 않는 자유(275), 필연을 사랑하겠다는 아모르 파티(276), 같은 삶을 다시 원하겠느냐는 사고 실험(341)이 이 책에서 나옵니다. Dialogos에서 니체와 나누는 대화는 이 책을 비롯한 그의 저작을 바탕으로 합니다.",
+        "context": "<p>『즐거운 학문』 초판은 1882년에 네 권으로 나왔습니다. 제4권에는 '성 야누아리우스'라는 제목과 '1882년 1월, 제노바'라고 적힌 시가 붙어 있고, 니체는 훗날 『이 사람을 보라』에서 이 책 전체가 자신이 겪은 가장 놀라운 1월이 준 선물이었다고 돌아보았습니다. 1887년 새 판에서 제5권 「우리 두려움 없는 자들」, 1886년 가을에 쓴 서문, 부록 「포겔프라이 왕자의 노래」가 더해졌습니다. 제4권 마지막 절(342)은 이듬해 나온 『차라투스트라는 이렇게 말했다』의 첫머리와 거의 같은 문장으로 시작해 두 책을 잇는 다리가 됩니다.</p>",
+        "sections": [
+          {
+            "anchor": "book-1",
+            "title": "제1권 (1–56절)",
+            "body": "사람들이 무엇을 위해 사는지, 믿음의 근거를 따져 묻는 '지적 양심'(2)이 무엇인지 같은 물음으로 시작합니다. 41절 「후회에 맞서」는 생각하는 사람에게 자기 행동은 실험이고, 성공과 실패는 무엇보다 대답이라고 말합니다. (41)"
+          },
+          {
+            "anchor": "book-2",
+            "title": "제2권 (57–107절)",
+            "body": "현실주의자에게 건네는 말(57)로 시작해, 사물의 이름과 겉모습이 대를 이어 믿어지면서 어떻게 실체처럼 굳어지는지(58), 예술과 예술가가 삶에서 무슨 일을 하는지를 다룹니다. (57–107)"
+          },
+          {
+            "anchor": "book-3",
+            "title": "제3권 (108–275절)",
+            "body": "'신은 죽었다'는 문장이 처음 나오는 권(108·125)으로, 오래 기대 온 가치의 근거가 흔들린 뒤 무엇을 물어야 하는지를 다룹니다. 끝의 짧은 문답은 '누구를 나쁘다고 하는가 — 늘 남을 부끄럽게 하려는 사람', '가장 인간다운 일은 — 누군가의 수치를 덜어 주는 것'으로 이어지다가, 자기 앞에서 더는 부끄러워하지 않는 자유로 닫힙니다. (270, 275)"
+          },
+          {
+            "anchor": "book-4",
+            "title": "제4권 「성 야누아리우스」 (276–342절)",
+            "body": "새해 첫 다짐인 아모르 파티(276)로 열리고, 멀어진 벗을 '별의 우정'으로 받아들이는 279절과 같은 삶을 다시 원하겠느냐고 묻는 사고 실험 341절을 지나, 차라투스트라가 처음 등장하는 342절로 끝납니다. (276, 279, 341)"
+          },
+          {
+            "anchor": "book-5",
+            "title": "제5권 「우리 두려움 없는 자들」 (343–383절)",
+            "body": "1887년 새 판에서 더해진 권입니다. 우리의 명랑함이 무엇을 뜻하는지(343)에서 시작해 진리를 향한 의지, 의식과 '인식'이라는 개념의 기원 같은 물음을 다시 묻고, '커다란 건강'(382)과 에필로그(383)로 마무리합니다. (343–383)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "생각하는 사람은 제 행동을 무언가를 알아내려는 실험이자 물음으로 본다. 그에게 성공과 실패는 무엇보다 먼저 대답이다.",
+            "cite": "41",
+            "gloss": "기획안이 퇴짜 맞거나 시험을 망쳐 자책이 밀려올 때 — 결과를 나에 대한 판결이 아니라 다음 시도에 쓸 정보로 읽게 하는 구절."
+          },
+          {
+            "text": "네 양심은 무엇이라 말하는가? '너는 너인 바로 그 사람이 되어야 한다.'",
+            "cite": "270",
+            "gloss": "부모님의 기대나 남들이 정해 둔 경로를 따라가다 지쳤을 때 — 목표는 다른 누가 되는 것이 아니라 이미 나인 그 사람이 되어 가는 것이라는 물음."
+          },
+          {
+            "text": "자유에 이르렀다는 표시는 무엇인가? 더는 자기 자신 앞에서 부끄러워하지 않는 것.",
+            "cite": "275",
+            "gloss": "지난 실수를 혼자 곱씹으며 스스로를 깎아내릴 때 — 잘못을 돌아보지 말라는 게 아니라, 나를 향한 수치에서 풀려나는 것이 자유의 표시라는 문답."
+          },
+          {
+            "text": "사물에서 필연적인 것을 아름다운 것으로 보는 법을 더욱 배우고 싶다. 그러면 나도 사물을 아름답게 만드는 사람이 되리라. 아모르 파티, 이제부터 이것이 나의 사랑이기를!",
+            "cite": "276",
+            "gloss": "흔히 '지금을 즐겨라'라는 뜻으로 쓰이지만 — 원문은 피할 수 없는 것을 아름답게 보는 눈을 기르겠다는 새해의 다짐이다. 무조건 참으라는 뜻도 아니다."
+          },
+          {
+            "text": "우리는 친구였다가 서로 낯설어졌다. 그래도 그건 그래야 하는 일이니, 부끄러운 일인 양 숨기거나 흐리지 말자. 우리는 저마다 목적지와 항로를 가진 두 척의 배다.",
+            "cite": "279",
+            "gloss": "단톡방에서 조용히 멀어진 옛 친구가 마음에 걸릴 때 — 멀어짐을 누구의 잘못이 아니라 서로 다른 항로로 받아들이게 하는 구절."
+          },
+          {
+            "text": "지금 살고 있고 살아온 이 삶을 셀 수 없이 다시 살아야 한다면? 그때 모든 일 앞에 놓일 물음 '이것을 또 한 번, 몇 번이고 원하는가?'가 네 행동에 가장 무거운 무게로 얹히리라.",
+            "cite": "341",
+            "gloss": "이직이나 이사처럼 큰 결정을 앞두고 남의 기준만 셀 때 — '이 선택을 몇 번이고 다시 고르겠는가'를 묻게 하는 사고 실험. 우주에 대한 단정이 아니라 '만약'으로 시작하는 가정이다."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "즐거운 학문 (la gaya scienza)",
+            "def": "니체가 책 제목에 함께 적은 말입니다. 그는 『이 사람을 보라』에서 이 책을 두고 거의 모든 문장에서 깊은 뜻과 장난기가 다정하게 손을 잡고 있다고 썼습니다. 무겁게만 진지하지 않은 앎을 가리킵니다."
+          },
+          {
+            "term": "아모르 파티 (amor fati, 운명애)",
+            "def": "사물의 필연적인 면을 아름답게 보는 법을 배우겠다는 다짐입니다(276). '현재를 즐겨라'가 아니라 피할 수 없는 것을 사랑하겠다는 뜻입니다."
+          },
+          {
+            "term": "실험과 물음 (Versuch)",
+            "def": "자기 행동을 무언가를 알아내려는 시도로 보는 태도입니다(41). 이렇게 보면 성공과 실패는 판결이 아니라 대답이 됩니다."
+          },
+          {
+            "term": "가장 무거운 무게 (das grösste Schwergewicht)",
+            "def": "지금의 삶을 셀 수 없이 다시 살아야 한다면 그래도 원하겠느냐는 물음입니다(341). 니체는 이를 '만약 ~라면'으로 시작하는 가정으로 내놓았습니다."
+          },
+          {
+            "term": "별의 우정 (Sternen-Freundschaft)",
+            "def": "서로 다른 항로로 멀어진 벗과의 관계를 부끄러움 없이 받아들이는 우정입니다(279)."
+          }
+        ],
+        "apply": "<p>오늘 마음에 걸린 실패 하나를 골라 41절처럼 다시 적어 보세요. '나는 무엇을 알아내려고 이것을 시도했나? 결과는 어떤 대답을 주었나? 다음에는 무엇을 바꿀까?' 세 줄이면 충분합니다. 결과를 판결문이 아니라 실험 노트로 남기는 연습입니다.</p><p>큰 결정을 앞두고 있다면 341절의 물음을 빌려 보세요. '이 선택을 몇 번이고 다시 해야 한다면 그래도 고르겠는가?' 남의 기준이 아니라 내가 거듭 원할 수 있는지를 묻는 시험입니다. 다만 마음이 몹시 지쳐 있을 때는 이 물음을 잠시 내려두고, 먼저 쉬면서 가까운 사람에게 이야기하는 편이 낫습니다.</p>",
+        "provenance": "Dialogos의 답변과 이 쪽의 구절은 니체의 독일어 원문(eKGWB)과 직접 대조해 현대 한국어로 새로 의역한 것이며, 저작권이 남아 있는 현대 번역본의 문장을 옮기지 않습니다. 출처 표기(예: 276)는 『즐거운 학문』의 절 번호를 가리킵니다.",
+        "faq": [
+          {
+            "q": "『즐거운 학문』은 어떤 책인가요?",
+            "a": "니체가 1882년에 내고 1887년 새 판에서 제5권·서문·부록 시를 더한 잠언집입니다. 번호 붙은 짧은 절 383개로 이루어져 있고, 실패를 실험으로 보는 법(41), 아모르 파티(276), 같은 삶을 다시 원하겠느냐는 사고 실험(341), '신은 죽었다'는 문장(108·125)이 모두 이 책에 나옵니다."
+          },
+          {
+            "q": "'아모르 파티'는 무슨 뜻인가요?",
+            "a": "라틴어로 '운명에 대한 사랑'이라는 뜻입니다. 니체는 제4권 첫 절(276) 「새해에」에서 사물의 필연적인 면을 아름답게 보는 법을 더 배우겠다고 다짐하며 이 말을 씁니다. 같은 이름의 노래 덕분에 '지금을 즐겨라'로 알려지기도 했지만, 원문은 피할 수 없는 것을 사랑하는 눈을 기르겠다는 뜻입니다."
+          },
+          {
+            "q": "'신은 죽었다'는 이 책에서 처음 나오나요?",
+            "a": "네. 제3권 108절에 처음 나오고, 125절 「광인」에서 유명한 장면이 됩니다. 대낮에 등불을 켜고 '신을 찾는다'고 외치던 사람이 비웃음을 사자 '우리가 그를 죽였다'고 말하며, 그 뒤에 남은 방향 상실을 묻습니다. 무신론의 승리 선언이라기보다, 오래 기대 온 가치의 근거가 무너진 상황을 진단하는 장면으로 읽힙니다."
+          },
+          {
+            "q": "영원회귀는 이 책 어디에 나오나요?",
+            "a": "제4권 341절 「가장 무거운 무게」입니다. 어느 날 악마가 '지금의 이 삶을 셀 수 없이 다시 살아야 한다'고 말한다면 어떻겠느냐는 가정으로 시작해, 모든 일 앞에 '이것을 또 한 번 원하는가'라는 물음이 놓인다고 말합니다. 우주론의 단정이 아니라 '만약'으로 던진 사고 실험입니다."
+          },
+          {
+            "q": "제목의 '학문'은 과학을 뜻하나요?",
+            "a": "독일어 Wissenschaft는 자연과학만이 아니라 체계적인 앎 전반을 가리킵니다. 니체는 표제에 'la gaya scienza'를 함께 적었고, 『이 사람을 보라』에서 이 책은 거의 모든 문장에서 깊은 뜻과 장난기가 손을 잡고 있다고 말합니다. 무겁지 않게, 즐겁게 묻는 앎이라는 뜻에 가깝습니다."
+          },
+          {
+            "q": "『즐거운 학문』과 『차라투스트라는 이렇게 말했다』는 어떤 관계인가요?",
+            "a": "제4권 마지막 절(342) 「비극이 시작된다」는 서른 살의 차라투스트라가 고향을 떠나 산으로 가는 장면으로, 이듬해 나온 『차라투스트라는 이렇게 말했다』 서설 1절과 거의 같은 문장입니다. 341절의 영원회귀 사고 실험도 『차라투스트라』에서 다시 다뤄집니다."
+          },
+          {
+            "q": "원문을 무료로 읽을 수 있나요?",
+            "a": "네. 독일어 원문은 콜리·몬티나리 비판 전집의 디지털판인 eKGWB에서, 영어 번역은 Project Gutenberg의 토머스 커먼 역(1910년 레비 전집판)으로 읽을 수 있습니다. 아래 링크를 참고하세요."
+          },
+          {
+            "q": "Dialogos는 이 책을 어떻게 인용하나요?",
+            "a": "Dialogos는 니체의 독일어 원문을 직접 대조해 우리말로 새로 풀어 쓰며, 저작권이 있는 현대 번역본의 문장을 쓰지 않습니다. 답변에 붙는 출처 표기(예: 41, 276)는 그 생각이 담긴 절 번호입니다."
+          }
+        ],
+        "pdIntro": "니체(1844–1900)의 독일어 원문은 저작권이 소멸했습니다. eKGWB는 조르조 콜리와 마치노 몬티나리가 엮은 비판 전집의 디지털판으로, 온라인에서 무료로 읽을 수 있습니다. 영어로는 1910년 레비 전집 제10권으로 나온 The Joyful Wisdom을 안내합니다. 산문은 토머스 커먼(1850–1919)이, 시 부분은 폴 V. 콘과 모드 D. 페트르가 옮겼으며, Project Gutenberg는 이 책을 미국 기준 퍼블릭 도메인으로 공개합니다.",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Die fröhliche Wissenschaft (독일어 원문, 콜리·몬티나리 비판판 디지털본)",
+            "url": "https://www.nietzschesource.org/#eKGWB/FW"
+          },
+          {
+            "label": "eKGWB — 276절 「새해에」 바로 가기 (독일어)",
+            "url": "https://www.nietzschesource.org/#eKGWB/FW-276"
+          },
+          {
+            "label": "Project Gutenberg — The Joyful Wisdom (Thomas Common 역, 1910, 영어)",
+            "url": "https://www.gutenberg.org/ebooks/52881"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-zarathustra",
+            "label": "차라투스트라는 이렇게 말했다 · 니체"
+          },
+          {
+            "slug": "nietzsche-aphorisms",
+            "label": "잠언과 산문 선집 · 니체"
+          },
+          {
+            "slug": "epicurus-letter-to-menoeceus",
+            "label": "메노이케우스에게 보내는 편지 · 에피쿠로스"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "悦ばしき知識",
+        "mentorName": "フリードリヒ・ニーチェ",
+        "lede": "ニーチェ『悦ばしき知識』――Dialogosが引用するパブリックドメインの原典。アモール・ファティ(276)や「最も重い重し」(341)など主要な節の意訳と、無料で読めるドイツ語・英語原文への案内。",
+        "intro": "<em>悦ばしき知識</em>(ドイツ語 <em>Die fröhliche Wissenschaft</em>、表題に「la gaya scienza」を添える)は、フリードリヒ・ニーチェ(1844–1900)が1882年に刊行し、1887年の新版で第五書・序文・付録の詩を加えたアフォリズム集です。番号つきの短い383の節が五つの書に分かれ、失敗を実験の答えとして読む見方(41)、自分の前で恥じない自由(275)、必然を愛するアモール・ファティ(276)、同じ人生をもう一度望むかという思考実験(341)がこの本に登場します。Dialogosでニーチェと交わす対話は、この本をはじめとする彼の著作にもとづいています。",
+        "context": "<p>初版は1882年に四つの書で出ました。第四書には「聖ヤヌアリウス」という題と、「1882年1月、ジェノヴァ」と記された詩が掲げられています。ニーチェは後に『この人を見よ』で、この本全体が生涯で最もすばらしい一月からの贈り物だったと振り返りました。1887年の新版で第五書「われら怖れを知らぬ者たち」、1886年秋に書かれた序文、付録「フォーゲルフライ王子の歌」が加わりました。第四書の最後の節(342)は翌年の『ツァラトゥストラはこう言った』の冒頭とほぼ同じ文で始まり、二つの本をつなぐ橋になっています。日本では、ちくま学芸文庫『ニーチェ全集』第8巻に信太正三訳『悦ばしき知識』が収められています。</p>",
+        "sections": [
+          {
+            "anchor": "book-1",
+            "title": "第一書(1–56節)",
+            "body": "人は何のために生きているのか、信じることの根拠を問いただす「知的良心」(2)とは何か、といった問いから始まります。41節「後悔に抗して」は、考える人にとって自分の行いは実験であり、成功も失敗も何よりまず答えだと語ります。(41)"
+          },
+          {
+            "anchor": "book-2",
+            "title": "第二書(57–107節)",
+            "body": "現実主義者への呼びかけ(57)から始まり、物の名前や見かけが代々信じられるうちに、どのように実体のように固まっていくのか(58)、芸術と芸術家が生のなかで何をしているのかを扱います。(57–107)"
+          },
+          {
+            "anchor": "book-3",
+            "title": "第三書(108–275節)",
+            "body": "「神は死んだ」という文がはじめて現れる書(108・125)で、長く頼ってきた価値の根拠が揺らいだあと、何を問うべきかを扱います。終わりの短い問答は「誰を悪いと呼ぶか――いつも人を恥じ入らせようとする者」「最も人間的なことは――誰かの恥を省いてやること」と続き、もはや自分の前で恥じない自由で閉じられます。(270, 275)"
+          },
+          {
+            "anchor": "book-4",
+            "title": "第四書「聖ヤヌアリウス」(276–342節)",
+            "body": "新年の誓いであるアモール・ファティ(276)で始まり、離れていった友を「星の友情」として受けとめる279節、同じ人生をもう一度望むかと問う思考実験の341節を経て、ツァラトゥストラがはじめて登場する342節で終わります。(276, 279, 341)"
+          },
+          {
+            "anchor": "book-5",
+            "title": "第五書「われら怖れを知らぬ者たち」(343–383節)",
+            "body": "1887年の新版で加えられた書です。私たちの晴れやかさとは何を意味するのか(343)から始まり、真理への意志、意識や「認識」という概念の起源といった問いを改めて問い、「大いなる健康」(382)とエピローグ(383)で締めくくられます。(343–383)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "考える人は、自分の行いを、何かを知るための試みであり問いであると見る。彼にとって成功も失敗も、何よりもまず答えなのだ。",
+            "cite": "41",
+            "gloss": "企画が通らなかった日や資格試験に落ちた日に――結果を自分への判決ではなく、次の一手のためのデータとして読み直す一節。"
+          },
+          {
+            "text": "君の良心は何と言うか。「君は、君であるところの者になるべきだ」と。",
+            "cite": "270",
+            "gloss": "周りの期待に合わせて「いい人」を続けるのに疲れたとき――目指すのは誰か別の人になることではなく、すでに自分であるその人になっていくことだという問いかけ。"
+          },
+          {
+            "text": "到達した自由のしるしとは何か。もはや自分自身の前で恥じないことである。",
+            "cite": "275",
+            "gloss": "人前での失敗を何度も思い返して自分を責めてしまう夜に――反省するなという意味ではなく、自分に向けた恥から解かれることこそ自由のしるしだという問答。"
+          },
+          {
+            "text": "物事のうちの必然的なものを、美しいものとして見ることを、もっと学びたい。そうすれば私も、物事を美しくする者の一人になれるだろう。アモール・ファティ、これからはそれを私の愛としよう。",
+            "cite": "276",
+            "gloss": "年の初めに、変えられない境遇への恨みが残っているとき――耐え忍べという教えではなく、避けられないものを美しく見る目を育てようという新年の誓い。"
+          },
+          {
+            "text": "私たちは友だったが、互いに見知らぬ者になった。だがそれはそうあるべきことで、恥ずべきことのように隠したりぼかしたりはしまい。私たちは、それぞれに目的地と航路をもつ二隻の船なのだ。",
+            "cite": "279",
+            "gloss": "年賀状だけのやりとりになった旧友を思い出すとき――疎遠を誰かの落ち度ではなく、それぞれの航路の違いとして受けとめる一節。"
+          },
+          {
+            "text": "いま生き、これまで生きてきたこの人生を、もう一度、さらに数えきれないほど生きなければならないとしたら? そのとき何をするにも「これをもう一度、何度でも望むか」という問いが、最も重い重しとして君の行いにのしかかるだろう。",
+            "cite": "341",
+            "gloss": "転職や引っ越しのような大きな決断を前に、他人の物差しばかり気にしてしまうとき――「この選択を何度でも選び直すか」と問う思考実験。宇宙についての断定ではなく、「もしも」で始まる仮定である。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "悦ばしき知識(la gaya scienza)",
+            "def": "ニーチェが書名に添えた言葉です。彼は『この人を見よ』で、この本ではほとんどすべての文で深い意味といたずら心が優しく手を取り合っていると書きました。重苦しいだけではない知のあり方を指します。"
+          },
+          {
+            "term": "アモール・ファティ(amor fati、運命愛)",
+            "def": "物事の必然的な面を美しいものとして見ることを学ぼうという誓いです(276)。「今を楽しめ」ではなく、避けられないものを愛するという意味です。"
+          },
+          {
+            "term": "試みと問い(Versuch)",
+            "def": "自分の行いを、何かを知るための試みとして見る態度です(41)。そう見れば、成功も失敗も判決ではなく答えになります。"
+          },
+          {
+            "term": "最も重い重し(das grösste Schwergewicht)",
+            "def": "いまの人生を数えきれないほど繰り返さねばならないとしても、それを望むかという問いです(341)。ニーチェはこれを「もしも」で始まる仮定として示しました。"
+          },
+          {
+            "term": "星の友情(Sternen-Freundschaft)",
+            "def": "別々の航路で離れていった友との関係を、恥じることなく受け入れる友情です(279)。"
+          }
+        ],
+        "apply": "<p>今日、心に引っかかっている失敗をひとつ選び、41節のように書き直してみましょう。「私は何を知るためにこれを試したのか。結果はどんな答えをくれたか。次は何を変えるか」。三行で十分です。結果を判決文ではなく、実験ノートとして残す練習です。</p><p>大きな決断を前にしているなら、341節の問いを借りてみてください。「この選択を何度でもやり直すとしても、やはり選ぶか」。他人の物差しではなく、自分がくり返し望めるかを問う試金石です。ただ、心がひどく疲れているときはこの問いをいったん脇に置き、まず休んで身近な人に話すほうがよいでしょう。</p>",
+        "provenance": "Dialogosの応答とこのページの引用は、ニーチェのドイツ語原文(eKGWB)と直接照らし合わせて現代日本語に新たに意訳したものであり、著作権の残る現代訳の文章を引き写すことはしません。出典表記(例:276)は『悦ばしき知識』の節番号を指しています。",
+        "faq": [
+          {
+            "q": "『悦ばしき知識』はどんな本ですか?",
+            "a": "ニーチェが1882年に刊行し、1887年の新版で第五書・序文・付録の詩を加えたアフォリズム集です。番号つきの383の短い節からなり、失敗を実験として見る考え方(41)、アモール・ファティ(276)、同じ人生をもう一度望むかという思考実験(341)、「神は死んだ」という文(108・125)がすべてこの本に出てきます。"
+          },
+          {
+            "q": "「アモール・ファティ」とはどういう意味ですか?",
+            "a": "ラテン語で「運命への愛」という意味です。ニーチェは第四書の最初の節(276)「新年に」で、物事の必然的な面を美しいものとして見ることをもっと学びたいと誓い、この言葉を使います。あきらめや我慢ではなく、避けられないものを愛する目を育てるという決意です。"
+          },
+          {
+            "q": "「神は死んだ」はこの本が初出ですか?",
+            "a": "はい。第三書の108節に初めて現れ、125節「狂気の人間」で有名な場面になります。真昼にランプをともして「神を探している」と叫ぶ男が笑われると、「私たちが神を殺したのだ」と語り、その後に残された方向の喪失を問います。無神論の勝利宣言というより、長く頼ってきた価値の根拠が崩れた状況を診断する場面として読まれています。"
+          },
+          {
+            "q": "永劫回帰はこの本のどこに出てきますか?",
+            "a": "第四書341節「最も重い重し」です。ある日悪魔が「この人生を数えきれないほどもう一度生きねばならない」と告げたらどうするか、という仮定から始まり、あらゆる行いの前に「これをもう一度望むか」という問いが置かれると語ります。宇宙論の断定ではなく、「もしも」として投げかけられた思考実験です。"
+          },
+          {
+            "q": "書名の「知識」は科学のことですか?",
+            "a": "ドイツ語のWissenschaftは自然科学に限らず、体系的な知全般を指します。ニーチェは表題に「la gaya scienza」を添え、『この人を見よ』では、この本はほとんどすべての文で深い意味といたずら心が手を取り合っていると述べています。重々しくなく、晴れやかに問う知という意味に近い言葉です。"
+          },
+          {
+            "q": "『ツァラトゥストラはこう言った』とはどうつながっていますか?",
+            "a": "第四書の最後の節(342)「悲劇が始まる」は、三十歳のツァラトゥストラが故郷を離れて山へ向かう場面で、翌年の『ツァラトゥストラはこう言った』序説第1節とほぼ同じ文章です。341節の永劫回帰の思考実験も、『ツァラトゥストラ』で改めて取り上げられます。"
+          },
+          {
+            "q": "原文を無料で読めますか?",
+            "a": "はい。ドイツ語原文はコッリ/モンティナーリ編の批判版全集のデジタル版eKGWBで、英訳はProject Gutenbergのトマス・コモン訳(1910年のレヴィ版全集)で読めます。日本語ではちくま学芸文庫『ニーチェ全集』第8巻に信太正三訳が収められています。"
+          },
+          {
+            "q": "Dialogosはこの本をどのように引用していますか?",
+            "a": "Dialogosはニーチェのドイツ語原文と直接照らし合わせて新たに日本語で言い直しており、著作権のある現代訳の文章は使いません。応答に付く出典表記(例:41、276)は、その考えが書かれた節番号です。"
+          }
+        ],
+        "pdIntro": "ニーチェ(1844–1900)のドイツ語原文は著作権が消滅しています。eKGWBはジョルジョ・コッリとマッツィーノ・モンティナーリが編んだ批判版全集のデジタル版で、オンラインで無料で読めます。英語では1910年のレヴィ版全集第10巻として出たThe Joyful Wisdomを案内します。散文はトマス・コモン(1850–1919)、詩の部分はポール・V・コーンとモード・D・ペトルが訳しており、Project Gutenbergはこの本を米国基準のパブリックドメインとして公開しています。",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Die fröhliche Wissenschaft(ドイツ語原文、コッリ/モンティナーリ批判版デジタル版)",
+            "url": "https://www.nietzschesource.org/#eKGWB/FW"
+          },
+          {
+            "label": "eKGWB — 276節「新年に」へ直接(ドイツ語)",
+            "url": "https://www.nietzschesource.org/#eKGWB/FW-276"
+          },
+          {
+            "label": "Project Gutenberg — The Joyful Wisdom(トマス・コモン訳、1910年、英語)",
+            "url": "https://www.gutenberg.org/ebooks/52881"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-zarathustra",
+            "label": "ツァラトゥストラはこう言った · ニーチェ"
+          },
+          {
+            "slug": "nietzsche-aphorisms",
+            "label": "箴言と散文選 · ニーチェ"
+          },
+          {
+            "slug": "epicurus-letter-to-menoeceus",
+            "label": "メノイケウス宛の手紙 · エピクロス"
+          }
+        ],
+        "editions": [
+          {
+            "title": "ニーチェ全集 8 悦ばしき知識(ちくま学芸文庫)",
+            "translator": "信太正三",
+            "publisher": "筑摩書房(ちくま学芸文庫 ニーチェ全集)",
+            "note": "ちくま学芸文庫版『ニーチェ全集』本巻全15巻の第8巻。全集の一冊として、ほかの著作と同じ体裁で読み進めたい人に向きます。",
+            "verifiedSource": "https://www.chikumashobo.co.jp/product/9784480080783/"
+          }
+        ]
+      },
+      "en": {
+        "workName": "The Gay Science",
+        "mentorName": "Friedrich Nietzsche",
+        "lede": "Nietzsche's The Gay Science, a public-domain source Dialogos draws on: fresh paraphrases of amor fati (276) and the heaviest weight (341), plus free texts.",
+        "intro": "<em>The Gay Science</em> (German <em>Die fröhliche Wissenschaft</em>, with \"la gaya scienza\" added on the title page) is a book of aphorisms that Friedrich Nietzsche (1844–1900) published in 1882 and enlarged in 1887 with a fifth book, a preface, and an appendix of songs. Its 383 short numbered sections fall into five books, and it is where we find reading failure as the answer to an experiment (41), the freedom of no longer being ashamed before yourself (275), the resolve to love what is necessary, amor fati (276), and the thought experiment of wanting the same life again (341). The conversations you have with Nietzsche in Dialogos are grounded in this book and his other works.",
+        "context": "<p>The first edition appeared in 1882 in four books. Book IV carries the title \"Sanctus Januarius\" and a poem dated \"Genoa, January 1882\"; years later, in <em>Ecce Homo</em>, Nietzsche looked back on the whole book as the gift of the most wonderful January he had lived through. The 1887 edition added Book V, \"We Fearless Ones,\" a preface written in autumn 1886, and the appendix \"Songs of Prince Vogelfrei.\" The last section of Book IV (342) opens with almost the same sentences as <em>Thus Spoke Zarathustra</em>, published the following year, so it works as a bridge between the two books.</p>",
+        "sections": [
+          {
+            "anchor": "book-1",
+            "title": "Book I (sections 1–56)",
+            "body": "It opens with questions about what people actually live for and about the \"intellectual conscience\" (2) that asks for the grounds of a belief. Section 41, \"Against Remorse,\" says that to a thinker his own actions are experiments, and success and failure are above all answers. (41)"
+          },
+          {
+            "anchor": "book-2",
+            "title": "Book II (sections 57–107)",
+            "body": "Beginning with an address to the realists (57), it looks at how the names and appearances of things, believed generation after generation, harden into something like their substance (58), and at what art and artists do for life. (57–107)"
+          },
+          {
+            "anchor": "book-3",
+            "title": "Book III (sections 108–275)",
+            "body": "This is the book where the sentence \"God is dead\" first appears (108, 125), and it asks what is left to ask once the long-trusted grounds of our values give way. Its closing run of short questions goes \"Whom do you call bad? Someone who always wants to put others to shame\" and \"What is most humane? To spare someone shame,\" and ends with the freedom of no longer being ashamed before yourself. (270, 275)"
+          },
+          {
+            "anchor": "book-4",
+            "title": "Book IV: Sanctus Januarius (sections 276–342)",
+            "body": "It opens with a New Year's resolution, amor fati (276), passes through \"Star Friendship\" on accepting a friend who has drifted away (279) and the thought experiment of living the same life again (341), and closes with section 342, where Zarathustra first appears. (276, 279, 341)"
+          },
+          {
+            "anchor": "book-5",
+            "title": "Book V: We Fearless Ones (sections 343–383)",
+            "body": "Added in 1887. Starting from what our cheerfulness really means (343), it returns to the will to truth and to the origins of consciousness and of our concept of \"knowledge,\" and ends with \"The Great Health\" (382) and an epilogue (383). (343–383)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "In his own actions the thinker sees experiments and questions, meant to find something out: for him, success and failure are first of all answers.",
+            "cite": "41",
+            "gloss": "When a launch flops or an application gets turned down: read the result as information for the next attempt, not as a verdict on you."
+          },
+          {
+            "text": "What does your conscience say? \"You should become the one you are.\"",
+            "cite": "270",
+            "gloss": "When you have spent years on a path someone else drew for you: the aim is not to turn into somebody else, but to grow into the person you already are."
+          },
+          {
+            "text": "What marks the freedom you have reached? No longer being ashamed in front of yourself.",
+            "cite": "275",
+            "gloss": "When an old mistake keeps replaying and you treat yourself with contempt: not a pass on owning what you did, but a sign that freedom means letting go of shame aimed at yourself."
+          },
+          {
+            "text": "More and more, I want to learn to see what is necessary in things as beautiful; that way I will become one who makes things beautiful. Amor fati: from now on, may that be my love.",
+            "cite": "276",
+            "gloss": "A New Year's resolution, not a call to grin and bear it: for the things you cannot change, practice seeing the necessary as beautiful."
+          },
+          {
+            "text": "We were friends, and we have grown strange to each other. But that is how it should be, and we will not hide it or blur it as if it were something shameful. We are two ships, each with its own goal and its own course.",
+            "cite": "279",
+            "gloss": "When a close friendship has thinned out to birthday texts: let the distance be two different courses, not a failure anyone has to hide."
+          },
+          {
+            "text": "What if you had to live this life, as you live it now and have lived it, once more and countless times again? Then the question in everything you do, \"Do you want this once more, and countless times more?\", would lie on your actions as the heaviest weight.",
+            "cite": "341",
+            "gloss": "Facing a big decision and measuring it by other people's yardsticks: a thought experiment that asks whether you would pick this again and again. It is posed as a \"what if,\" not as a claim about the universe."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "gay science (la gaya scienza)",
+            "def": "The phrase Nietzsche set beside his title. In Ecce Homo he wrote that in almost every sentence of this book depth and playfulness hold each other tenderly by the hand: knowledge that is serious without being heavy."
+          },
+          {
+            "term": "amor fati (love of fate)",
+            "def": "The resolve to learn to see what is necessary in things as beautiful (276). It does not mean \"seize the day\"; it means loving what cannot be otherwise."
+          },
+          {
+            "term": "experiment and question (Versuch)",
+            "def": "The habit of treating your own actions as attempts to find something out (41). Seen this way, success and failure become answers rather than verdicts."
+          },
+          {
+            "term": "the heaviest weight (das grösste Schwergewicht)",
+            "def": "The question whether you would still want your present life if you had to live it countless times again (341). Nietzsche framed it as a hypothesis beginning with \"what if.\""
+          },
+          {
+            "term": "star friendship (Sternen-Freundschaft)",
+            "def": "A friendship that accepts, without shame, that two people have drifted onto different courses (279)."
+          }
+        ],
+        "apply": "<p>Pick one failure that is still bothering you and rewrite it the way section 41 suggests: \"What was I trying to find out? What answer did the result give me? What will I change next time?\" Three lines are enough. You are turning a verdict into a lab note.</p><p>If a big decision is ahead, borrow the question from section 341: \"If I had to make this choice again and again, would I still make it?\" It tests the choice against what you could want repeatedly, not against other people's metrics. When you are badly worn out, though, set the question aside for now; rest first and talk to someone close to you.</p>",
+        "provenance": "Dialogos's replies and the passages on this page are fresh paraphrases into modern English, checked directly against Nietzsche's German text (eKGWB); they do not reproduce the wording of any copyrighted modern translation. Citations (for example, 276) are section numbers in The Gay Science.",
+        "faq": [
+          {
+            "q": "What is The Gay Science about?",
+            "a": "It is a book of aphorisms Nietzsche published in 1882 and expanded in 1887 with a fifth book, a preface, and an appendix of songs. Across 383 short numbered sections it covers treating failure as an experiment (41), amor fati (276), the thought experiment of living the same life again (341), and the sentence \"God is dead\" (108, 125)."
+          },
+          {
+            "q": "What does \"amor fati\" mean?",
+            "a": "It is Latin for \"love of fate.\" In section 276, \"For the New Year,\" Nietzsche resolves to learn more and more to see what is necessary in things as beautiful, and he takes amor fati as his love from then on. It is not resignation and not \"enjoy the moment\"; it is a resolve to love what cannot be otherwise."
+          },
+          {
+            "q": "Is The Gay Science where \"God is dead\" first appears?",
+            "a": "Yes. It first appears in section 108 of Book III and becomes famous in section 125, \"The Madman.\" A man lights a lantern in broad daylight and cries that he is looking for God; when people laugh, he tells them \"we have killed him\" and asks where we are now heading. It reads less as a victory cry for atheism than as a diagnosis of what happens when the long-trusted grounds of our values collapse."
+          },
+          {
+            "q": "Where is the eternal recurrence in this book?",
+            "a": "In section 341, \"The Heaviest Weight.\" It begins with a hypothesis: what if a demon told you that you would have to live this life countless times again? Then the question \"Do you want this once more?\" would weigh on everything you do. It is a thought experiment framed as \"what if,\" not a cosmological claim."
+          },
+          {
+            "q": "Does \"science\" in the title mean natural science?",
+            "a": "The German word Wissenschaft covers organized knowledge of every kind, not only the natural sciences. Nietzsche added \"la gaya scienza\" to the title, and in Ecce Homo he said that in almost every sentence of the book depth and playfulness hold hands. \"Joyful knowledge\" is close to what he meant."
+          },
+          {
+            "q": "How is it connected to Thus Spoke Zarathustra?",
+            "a": "The last section of Book IV (342), \"Incipit tragoedia,\" shows thirty-year-old Zarathustra leaving home for the mountains, in almost the same words as the first section of the prologue to Thus Spoke Zarathustra, published the next year. The thought experiment of section 341 also returns in Zarathustra."
+          },
+          {
+            "q": "Can I read The Gay Science for free?",
+            "a": "Yes. The German text is in eKGWB, the digital version of the Colli–Montinari critical edition, and Project Gutenberg has the English translation by Thomas Common from the 1910 Levy edition. See the links below."
+          },
+          {
+            "q": "How does Dialogos quote this book?",
+            "a": "Dialogos paraphrases afresh from Nietzsche's German and does not use the wording of copyrighted modern translations. The citation attached to a reply (for example, 41 or 276) is the number of the section where the idea appears."
+          }
+        ],
+        "pdIntro": "Nietzsche (1844–1900) wrote in German, and his texts are out of copyright. eKGWB is the digital version of the critical edition edited by Giorgio Colli and Mazzino Montinari, free to read online. For English we link The Joyful Wisdom, volume 10 of the Levy edition (1910): the prose was translated by Thomas Common (1850–1919) and the verse by Paul V. Cohn and Maude D. Petre, and Project Gutenberg publishes it as public domain under US rules.",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Die fröhliche Wissenschaft (German original, digital Colli–Montinari critical edition)",
+            "url": "https://www.nietzschesource.org/#eKGWB/FW"
+          },
+          {
+            "label": "eKGWB — straight to section 276, \"For the New Year\" (German)",
+            "url": "https://www.nietzschesource.org/#eKGWB/FW-276"
+          },
+          {
+            "label": "Project Gutenberg — The Joyful Wisdom (trans. Thomas Common, 1910, English)",
+            "url": "https://www.gutenberg.org/ebooks/52881"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-zarathustra",
+            "label": "Thus Spoke Zarathustra · Nietzsche"
+          },
+          {
+            "slug": "nietzsche-aphorisms",
+            "label": "Selected Aphorisms and Prose · Nietzsche"
+          },
+          {
+            "slug": "epicurus-letter-to-menoeceus",
+            "label": "Letter to Menoeceus · Epicurus"
+          }
+        ],
+        "editions": [
+          {
+            "title": "The Gay Science: With a Prelude in Rhymes and an Appendix of Songs",
+            "translator": "Walter Kaufmann",
+            "publisher": "Vintage (Penguin Random House)",
+            "note": "Walter Kaufmann's translation with his introduction and commentary, published as a Vintage paperback in 1974; it includes the verse prelude and the appendix of songs.",
+            "verifiedSource": "https://www.penguinrandomhouse.com/books/121942/the-gay-science-by-friedrich-nietzsche-translated-with-commentary-by-walter-kaufmann/"
+          }
+        ]
+      }
+    }
+  },
+  "nietzsche-zarathustra": {
+    "slug": "nietzsche-zarathustra",
+    "mentorId": "nietzsche",
+    "icon": "fa-mountain-sun",
+    "updated": "2026-11-13",
+    "content": {
+      "ko": {
+        "workName": "차라투스트라는 이렇게 말했다",
+        "mentorName": "프리드리히 니체",
+        "lede": "니체 『차라투스트라는 이렇게 말했다』 — Dialogos가 인용하는 퍼블릭 도메인 원전. 춤추는 별(서설 5)·세 가지 변화·정오의 작은 행복 등 핵심 구절의 우리말 의역과 무료 원문 안내.",
+        "intro": "<em>차라투스트라는 이렇게 말했다</em>(독일어 <em>Also sprach Zarathustra</em>, 부제 '모두를 위한, 그리고 아무도 위하지 않는 책')는 니체가 1883년부터 1885년까지 네 부로 나누어 낸 시적인 산문입니다. 서른 살에 고향을 떠나 산에서 열 해를 보낸 차라투스트라가 사람들에게 내려와 말하고, 다시 산으로 돌아가고, 손님들을 맞는 이야기가 비유와 노래로 이어집니다. 이 쪽의 인용 번호는 부·장(·절)이며 P는 서설입니다(예: IV.13.15 = 제4부 13장 15절). Dialogos에서 니체와 나누는 대화는 이 책을 비롯한 그의 저작을 바탕으로 합니다.",
+        "context": "<p>각 부의 속표지에 따르면 제1부와 제2부는 1883년, 제3부는 1884년, 제4부는 1885년에 나왔습니다. 이야기는 『즐거운 학문』 342절과 거의 같은 문장으로 시작합니다. 서른 살의 차라투스트라는 고향을 떠나 산에서 열 해 동안 자기 정신과 고독을 누리다가, 꿀을 너무 많이 모은 벌처럼 넘치는 지혜를 나누려고 사람들에게 내려옵니다. 제1부부터는 '차라투스트라의 말'이라는 짧은 연설이 이어지고, 제3부에서 그는 산의 동굴로 돌아오며, 제4부에서는 여러 손님이 그 동굴로 모여듭니다. 논문이 아니라 비유와 노래, 장면으로 쓰였기 때문에 한 문장만 떼어 읽기보다 누가 누구에게 하는 말인지를 함께 보는 편이 좋습니다.</p>",
+        "sections": [
+          {
+            "anchor": "prologue",
+            "title": "서설 (Vorrede)",
+            "body": "산에서 내려온 차라투스트라가 처음으로 사람들에게 말을 거는 열 개의 절입니다. 5절에서 그는 모든 것을 작게 만들며 '우리는 행복을 발명했다'고 눈을 깜박이는 '마지막 인간'을 경고하고, 그 앞에서 '너희 안에는 아직 혼돈이 있다'고 말합니다. 사람들은 웃으며 차라리 그 마지막 인간으로 만들어 달라고 외칩니다. (P.5)"
+          },
+          {
+            "anchor": "part-1",
+            "title": "제1부 (1883)",
+            "body": "'차라투스트라의 말'이라는 연설들이 시작됩니다. 첫 장 「세 가지 변화에 대하여」는 정신이 무거운 짐을 지는 낙타가 되고, '너는 해야 한다'에 '나는 하고자 한다'로 맞서는 사자가 되고, 마지막에 새로 시작하는 아이가 된다고 말합니다. (I.1)"
+          },
+          {
+            "anchor": "part-3",
+            "title": "제3부 (1884)",
+            "body": "길을 떠났던 차라투스트라가 산의 동굴로 돌아옵니다. 9장 「귀향」에서 고독은 그에게 '버려짐과 고독은 다르다'고 일러 주고, 그는 고독을 고향이라 부르며 반깁니다. (III.9)"
+          },
+          {
+            "anchor": "part-4",
+            "title": "제4부 (1885)",
+            "body": "차라투스트라의 동굴로 두 왕, 늙은 마술사, 그림자 같은 손님들이 모여듭니다. 10장 「정오에」에서 그는 나무 곁에 누워 아주 작은 것이 가장 좋은 행복을 만든다는 것을 깨닫고, 13장 「보다 높은 인간에 대하여」에서는 손님들에게 자신을 웃어넘기는 법과 작고 좋은 것들을 곁에 두는 법을 권합니다. (IV.10, IV.13.15)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "너희에게 말한다. 춤추는 별을 낳으려면 아직 제 안에 혼돈을 품고 있어야 한다. 너희에게 말한다. 너희 안에는 아직 혼돈이 있다.",
+            "cite": "P.5",
+            "gloss": "진로도 마음도 어수선해 '나는 왜 이렇게 정리가 안 될까' 싶을 때 — 혼란은 고장이 아니라 아직 새것을 낳을 힘이 남아 있다는 표시라는 구절."
+          },
+          {
+            "text": "아이는 순진함이고 잊음이며, 새로 시작함이고 놀이다. 스스로 굴러가는 바퀴, 첫 움직임, 거룩한 '그래'라는 말이다.",
+            "cite": "I.1",
+            "gloss": "지난 실패의 기록이 발목을 잡아 다시 시작하기가 겁날 때 — 짐을 지는 낙타, '아니'라고 맞서는 사자 다음에 오는 아이의 가벼움을 떠올리게 하는 구절."
+          },
+          {
+            "text": "오 고독이여, 나의 고향인 고독이여! 낯설고 거친 곳에서 너무 오래 거칠게 살았기에, 너에게 돌아오는 나는 눈물을 흘리지 않을 수 없구나.",
+            "cite": "III.9",
+            "gloss": "혼자 보내는 저녁이 그저 외롭게만 느껴질 때 — 같은 장에서 고독은 '버려짐과 고독은 다르다'고 말한다. 혼자인 시간을 돌아와 쉬는 집으로 다시 보게 하는 구절."
+          },
+          {
+            "text": "바로 가장 적은 것, 가장 조용하고 가벼운 것. 도마뱀의 바스락거림, 숨결 하나, 스쳐 가는 것, 눈 깜짝할 한순간. 가장 좋은 행복은 이렇게 적은 것으로 이루어진다.",
+            "cite": "IV.10",
+            "gloss": "승진이나 내 집 마련 같은 큰일이 이뤄져야 행복할 것 같을 때 — 니체가 행복의 재료로 꼽은 건 이렇게 작고 가벼운 순간이라는 구절."
+          },
+          {
+            "text": "높은 종류일수록 드물게 잘 이루어진다. 너희가 빗나갔다고? 기운을 내라, 그게 무슨 대수인가! 아직 얼마나 많은 것이 가능한가. 자신을 제대로 웃어넘기는 법을 배워라.",
+            "cite": "IV.13.15",
+            "gloss": "높이 잡은 목표에서 미끄러져 스스로를 '실패작'이라 부를 때 — 높이 겨눌수록 빗나가기도 쉽다는 말. 같은 절은 '작고 좋은 완전한 것들을 곁에 두라'는 처방으로 끝난다."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "세 가지 변화 (낙타·사자·아이)",
+            "def": "정신이 무거운 짐을 지는 낙타가 되고, '너는 해야 한다'에 맞서 '나는 하고자 한다'고 말하는 사자가 되고, 마지막에 새로 시작하는 아이가 된다는 비유입니다(I.1)."
+          },
+          {
+            "term": "마지막 인간 (der letzte Mensch)",
+            "def": "모든 것을 작게 만들고 더는 무엇도 동경하지 않으면서 '우리는 행복을 발명했다'고 눈을 깜박이는 사람입니다. 차라투스트라가 안락에만 머무는 모습을 경고하며 그린 인물상입니다(P.5)."
+          },
+          {
+            "term": "고독과 버려짐 (Einsamkeit / Verlassenheit)",
+            "def": "「귀향」에서 고독이 직접 일러 주는 구분입니다. 사람들 속에서 홀로 남겨진 것은 버려짐이고, 고독은 스스로를 마음껏 말할 수 있는 고향이라고 말합니다(III.9)."
+          },
+          {
+            "term": "정오 (Mittag)",
+            "def": "해가 머리 바로 위에 선 시각입니다. 제4부에서 차라투스트라가 나무 곁에 누워 '세상이 방금 완전해지지 않았는가' 하고 느끼는 순간으로 그려집니다(IV.10)."
+          },
+          {
+            "term": "웃음 (Lachen)",
+            "def": "제4부의 차라투스트라는 손님들에게 자신을 웃어넘기는 법을 배우라고 거듭 말합니다(IV.13.15, IV.13.20). 무거움을 덜어 내는 태도로 쓰입니다."
+          }
+        ],
+        "apply": "<p>새로 시작하기가 두렵다면 「세 가지 변화」를 오늘의 질문 세 개로 바꿔 보세요. 지금 내가 지고 있는 짐은 무엇인가(낙타), 그중 내려놓아도 될 '해야 한다'는 무엇인가(사자), 결과를 몰라도 놀이처럼 시작해 볼 작은 일은 무엇인가(아이). 세 번째 칸에 하나만 적고 오늘 해 보면 됩니다.</p><p>'대단한 일이 있어야 행복하다'는 생각이 들 때는 「정오에」를 빌려 하루에 한 번 아주 작은 것을 알아차려 보세요. 창문으로 들어오는 바람, 커피의 첫 모금, 골목에서 마주친 길고양이의 기척 같은 것들입니다. 니체가 꼽은 가장 좋은 행복의 재료는 그렇게 가볍습니다.</p>",
+        "provenance": "Dialogos의 답변과 이 쪽의 구절은 니체의 독일어 원문(eKGWB)과 직접 대조해 현대 한국어로 새로 의역한 것이며, 저작권이 남아 있는 현대 번역본의 문장을 옮기지 않습니다. 출처 표기는 부·장(·절)을 가리키며 P는 서설입니다(예: I.1 = 제1부 1장).",
+        "faq": [
+          {
+            "q": "『차라투스트라는 이렇게 말했다』는 어떤 책인가요?",
+            "a": "니체가 1883~1885년에 네 부로 낸 시적인 산문입니다. 산에서 열 해를 지낸 차라투스트라가 사람들에게 내려와 말하고, 다시 산으로 돌아가고, 손님들을 맞는 이야기 속에 '세 가지 변화', '마지막 인간', 영원회귀 같은 생각이 비유와 노래로 담겨 있습니다. 부제는 '모두를 위한, 그리고 아무도 위하지 않는 책'입니다."
+          },
+          {
+            "q": "'초인'은 무슨 뜻인가요?",
+            "a": "서설 3절에서 차라투스트라는 '나는 너희에게 초인(Übermensch)을 가르친다. 인간은 극복되어야 할 무엇이다'라고 말합니다. 바로 뒤 5절의 '마지막 인간', 곧 모든 것을 작게 만들고 안락에만 머무는 모습과 대비되는, 스스로를 넘어서려는 목표를 가리킵니다. Dialogos는 이 말을 남을 깔보거나 지배하는 근거로 쓰지 않습니다."
+          },
+          {
+            "q": "'춤추는 별을 낳으려면 혼돈이 필요하다'는 어디에 나오나요?",
+            "a": "서설 5절입니다. 차라투스트라는 장터의 사람들에게 '춤추는 별을 낳으려면 아직 제 안에 혼돈을 품고 있어야 한다, 너희 안에는 아직 혼돈이 있다'고 말합니다. 혼돈이 남아 있다는 것은 아직 무언가를 새로 만들 힘이 있다는 긍정의 말입니다."
+          },
+          {
+            "q": "'신은 죽었다'도 이 책에 나오나요?",
+            "a": "네. 서설 2절에서 숲속의 늙은 성자와 헤어진 차라투스트라가 '이 늙은 성자는 신이 죽었다는 소식을 아직 듣지 못했구나'라고 혼잣말을 합니다. 이 문장이 처음 나온 곳은 그보다 앞선 『즐거운 학문』(108·125절)입니다."
+          },
+          {
+            "q": "왜 이렇게 읽기 어렵나요?",
+            "a": "논증 대신 비유와 노래, 장면으로 쓰였기 때문입니다. 같은 말도 누가 누구에게 하는지에 따라 뜻이 달라집니다. 서설의 장터, 제1부의 연설, 제3부의 귀향, 제4부의 손님들처럼 장면을 먼저 잡고 읽으면 한결 수월합니다."
+          },
+          {
+            "q": "인용 번호 'IV.13.15'는 무엇을 뜻하나요?",
+            "a": "부·장·절 순서입니다. IV.13.15는 제4부 13장 「보다 높은 인간에 대하여」의 15절, I.1은 제1부 1장 「세 가지 변화에 대하여」, P.5는 서설 5절입니다. 장 번호는 서설 다음 장부터 1로 셉니다."
+          },
+          {
+            "q": "원문을 무료로 읽을 수 있나요?",
+            "a": "네. 독일어 원문은 eKGWB와 Project Gutenberg에서, 영어 번역은 Project Gutenberg의 토머스 커먼 역으로 읽을 수 있습니다. 아래 링크를 참고하세요."
+          },
+          {
+            "q": "Dialogos는 이 책을 어떻게 인용하나요?",
+            "a": "Dialogos는 니체의 독일어 원문을 직접 대조해 우리말로 새로 풀어 쓰며, 저작권이 있는 현대 번역본의 문장을 쓰지 않습니다. 답변에 붙는 출처 표기(예: P.5, IV.10)는 그 생각이 담긴 부·장·절입니다."
+          }
+        ],
+        "pdIntro": "니체(1844–1900)의 독일어 원문은 저작권이 소멸했습니다. eKGWB(콜리·몬티나리 비판 전집의 디지털판)와 Project Gutenberg에서 독일어로 무료로 읽을 수 있습니다. 영어로는 토머스 커먼(1850–1919)의 번역을 안내합니다. 커먼은 1919년에 세상을 떠나 그 번역 본문은 퍼블릭 도메인입니다. 다만 Gutenberg 전자책에는 다른 사람이 쓴 서문과 해설 부록도 함께 실려 있습니다.",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Also sprach Zarathustra (독일어 원문, 콜리·몬티나리 비판판 디지털본)",
+            "url": "https://www.nietzschesource.org/#eKGWB/Za-I"
+          },
+          {
+            "label": "Project Gutenberg — Also sprach Zarathustra (독일어 원문)",
+            "url": "https://www.gutenberg.org/ebooks/7205"
+          },
+          {
+            "label": "Project Gutenberg — Thus Spake Zarathustra (Thomas Common 역, 영어)",
+            "url": "https://www.gutenberg.org/ebooks/1998"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "즐거운 학문 · 니체"
+          },
+          {
+            "slug": "nietzsche-aphorisms",
+            "label": "잠언과 산문 선집 · 니체"
+          }
+        ],
+        "editions": [
+          {
+            "title": "차라투스트라는 이렇게 말했다 (책세상 니체전집 13, 개정판)",
+            "translator": "정동호",
+            "publisher": "책세상 (니체전집)",
+            "note": "책세상 니체전집 제13권. 니체편집위원회가 감수했고, 개정판이 2026년 2월에 나왔습니다. 니체의 다른 저작과 같은 전집 체계로 읽고 싶은 독자에게 맞습니다.",
+            "verifiedSource": "https://chaeksesang.com/product/detail.html?product_no=243"
+          },
+          {
+            "title": "차라투스트라는 이렇게 말했다 (민음사 세계문학전집 94)",
+            "translator": "장희창",
+            "publisher": "민음사 (세계문학전집)",
+            "note": "2004년 민음사 세계문학전집 94번으로 나온 번역으로, 역자의 작품 해설과 연보가 실려 있습니다. 철학서이면서 문학 작품으로 읽고 싶은 독자에게 맞습니다.",
+            "verifiedSource": "https://minumsa.minumsa.com/book/1763/"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "ツァラトゥストラはこう言った",
+        "mentorName": "フリードリヒ・ニーチェ",
+        "lede": "ニーチェ『ツァラトゥストラはこう言った』――Dialogosが引用するパブリックドメインの原典。踊る星(序説5)・三つの変化・正午の小さな幸福など主要な一節の意訳と、無料で読める原文への案内。",
+        "intro": "<em>ツァラトゥストラはこう言った</em>(ドイツ語 <em>Also sprach Zarathustra</em>、副題「万人のための、そして誰のためでもない書」)は、ニーチェが1883年から1885年にかけて四部に分けて刊行した詩的な散文作品です。三十歳で故郷を離れ、山で十年を過ごしたツァラトゥストラが人々のもとへ下りて語り、また山へ帰り、客人たちを迎える物語が、比喩と歌で綴られます。このページの引用番号は部・章(・節)で、Pは序説を表します(例:IV.13.15=第四部第13章第15節)。Dialogosでニーチェと交わす対話は、この本をはじめとする彼の著作にもとづいています。",
+        "context": "<p>各部の扉によれば、第一部と第二部は1883年、第三部は1884年、第四部は1885年に出ました。物語は『悦ばしき知識』342節とほぼ同じ文で始まります。三十歳のツァラトゥストラは故郷を離れ、山で十年間、自分の精神と孤独を味わったのち、蜜を集めすぎた蜜蜂のように、あふれる知恵を分かち合おうと人々のもとへ下りていきます。第一部からは「ツァラトゥストラの説話」と呼ばれる短い演説が続き、第三部で彼は山の洞窟へ戻り、第四部ではさまざまな客人がその洞窟に集まってきます。日本では岩波文庫の氷上英廣訳(上下)をはじめ、複数の訳で読み継がれています。</p>",
+        "sections": [
+          {
+            "anchor": "prologue",
+            "title": "序説(Vorrede)",
+            "body": "山から下りたツァラトゥストラが、はじめて人々に語りかける十の節です。第5節で彼は、あらゆるものを小さくし「われわれは幸福を発明した」とまばたきする「最後の人間」を警告し、その前で「君たちのうちには、まだ混沌がある」と語ります。人々は笑って、むしろその最後の人間にしてくれと叫びます。(P.5)"
+          },
+          {
+            "anchor": "part-1",
+            "title": "第一部(1883)",
+            "body": "「ツァラトゥストラの説話」が始まります。最初の章「三つの変化について」は、精神が重荷を背負うラクダになり、「汝なすべし」に「我は欲す」で立ち向かう獅子になり、最後に新たに始める子どもになると語ります。(I.1)"
+          },
+          {
+            "anchor": "part-3",
+            "title": "第三部(1884)",
+            "body": "旅に出ていたツァラトゥストラが山の洞窟に帰ってきます。第9章「帰郷」で、孤独は彼に「見捨てられることと孤独は別物だ」と告げ、彼は孤独を故郷と呼んで迎えます。(III.9)"
+          },
+          {
+            "anchor": "part-4",
+            "title": "第四部(1885)",
+            "body": "ツァラトゥストラの洞窟に、二人の王、老いた魔術師、影のような客人たちが集まってきます。第10章「正午」で彼は木のかたわらに横たわり、ごくわずかなものこそが最上の幸福をつくると悟り、第13章「より高い人間について」では客人たちに、自分を笑い飛ばすことと、小さく良いものを身近に置くことを勧めます。(IV.10, IV.13.15)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "君たちに言う。踊る星を生むためには、人は自分のうちにまだ混沌を抱えていなければならない。君たちに言う。君たちのうちには、まだ混沌がある。",
+            "cite": "P.5",
+            "gloss": "やりたいことが散らかって定まらず、自分はだめだと思うとき――混沌は故障ではなく、まだ何かを生み出す力が残っているしるしだという言葉。"
+          },
+          {
+            "text": "子どもは無垢であり、忘却であり、新たな始まりであり、遊びである。おのずから回る車輪、最初の運動、聖なる「然り」と言うことである。",
+            "cite": "I.1",
+            "gloss": "過去の失敗が足かせになって、もう一度始めるのが怖いとき――重荷を負うラクダ、「否」を言う獅子の次に来る、子どもの軽やかさを思い出させる一節。"
+          },
+          {
+            "text": "おお孤独よ、わが故郷なる孤独よ! あまりに長く、荒々しい異郷で荒々しく生きてきたから、涙なしにおまえのもとへ帰ることはできない。",
+            "cite": "III.9",
+            "gloss": "一人暮らしの部屋に帰って寂しさばかりが募るとき――同じ章で孤独は「見捨てられることと孤独は別物だ」と語る。ひとりの時間を、帰って休む家として見直す一節。"
+          },
+          {
+            "text": "まさにごくわずかなもの、最もひそやかで軽いもの。トカゲのかさりという音、ひと息、さっとかすめるもの、まばたきほどの一瞬。最上の幸福は、そうしたわずかなものでできている。",
+            "cite": "IV.10",
+            "gloss": "大きな目標を達成しなければ幸せになれないと思い込んでいるとき――昼下がりの木陰のような、ささやかな一瞬こそ最上の幸福の材料だという一節。"
+          },
+          {
+            "text": "種類が高いものほど、うまく出来上がることはまれだ。うまくいかなかったと? 元気を出せ、それがどうしたというのだ! まだどれほど多くのことが可能か。笑うべきやり方で、自分自身を笑うことを学べ。",
+            "cite": "IV.13.15",
+            "gloss": "難関に挑んで届かず、自分を「出来損ない」と呼びたくなるとき――高く狙うほど外れることもあるという言葉。同じ節は「小さく良い、完全なものを身のまわりに置け」という処方で終わる。"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "三つの変化(ラクダ・獅子・子ども)",
+            "def": "精神が重荷を背負うラクダになり、「汝なすべし」に「我は欲す」と応じる獅子になり、最後に新たに始める子どもになるという比喩です(I.1)。"
+          },
+          {
+            "term": "最後の人間(der letzte Mensch)",
+            "def": "あらゆるものを小さくし、もはや何にも憧れず、「われわれは幸福を発明した」とまばたきする人間です。ツァラトゥストラが安楽にとどまる姿を警告して描いた人物像です(P.5)。"
+          },
+          {
+            "term": "孤独と見捨てられること(Einsamkeit / Verlassenheit)",
+            "def": "「帰郷」で孤独みずからが告げる区別です。人々のなかで取り残されることは見捨てられることで、孤独は自分を思うままに語れる故郷だと言います(III.9)。"
+          },
+          {
+            "term": "正午(Mittag)",
+            "def": "太陽が真上にある時刻です。第四部では、ツァラトゥストラが木のかたわらに横たわり「世界はいま完全になったのではないか」と感じる瞬間として描かれます(IV.10)。"
+          },
+          {
+            "term": "笑い(Lachen)",
+            "def": "第四部のツァラトゥストラは客人たちに、自分を笑い飛ばすことを学べとくり返し語ります(IV.13.15、IV.13.20)。重さを軽くする態度として用いられます。"
+          }
+        ],
+        "apply": "<p>新しく始めるのが怖いなら、「三つの変化」を今日の三つの問いに変えてみましょう。いま背負っている重荷は何か(ラクダ)、そのうち下ろしてもよい「すべき」は何か(獅子)、結果が分からなくても遊びのように始められる小さなことは何か(子ども)。三つ目の欄にひとつだけ書いて、今日やってみれば十分です。</p><p>「大きなことがなければ幸せになれない」と感じたら、「正午」を借りて、一日に一度ごく小さなものに気づいてみてください。窓から入る風、コーヒーの最初の一口、帰り道の夕焼けの色。ニーチェが挙げた最上の幸福の材料は、それほど軽いものです。</p>",
+        "provenance": "Dialogosの応答とこのページの引用は、ニーチェのドイツ語原文(eKGWB)と直接照らし合わせて現代日本語に新たに意訳したものであり、著作権の残る現代訳の文章を引き写すことはしません。出典表記は部・章(・節)を指し、Pは序説です(例:I.1=第一部第1章)。",
+        "faq": [
+          {
+            "q": "『ツァラトゥストラはこう言った』はどんな本ですか?",
+            "a": "ニーチェが1883〜1885年に四部に分けて刊行した詩的な散文作品です。山で十年を過ごしたツァラトゥストラが人々のもとへ下りて語り、また山へ帰り、客人を迎える物語のなかに、「三つの変化」「最後の人間」「永劫回帰」といった考えが比喩と歌で込められています。副題は「万人のための、そして誰のためでもない書」です。"
+          },
+          {
+            "q": "「超人」とはどういう意味ですか?",
+            "a": "序説第3節でツァラトゥストラは「私は君たちに超人(Übermensch)を教える。人間とは乗り越えられるべき何かである」と語ります。すぐ後の第5節の「最後の人間」、つまりあらゆるものを小さくし安楽にとどまる姿と対比される、自分自身を超えていこうとする目標を指す言葉です。Dialogosはこの言葉を、他人を見下したり支配したりする根拠としては使いません。"
+          },
+          {
+            "q": "「踊る星を生むには混沌が必要だ」はどこに出てきますか?",
+            "a": "序説第5節です。ツァラトゥストラは市場の人々に「踊る星を生むためには、自分のうちにまだ混沌を抱えていなければならない。君たちのうちには、まだ混沌がある」と語ります。混沌が残っていることを、まだ何かを生み出せる力として肯定する言葉です。"
+          },
+          {
+            "q": "「神は死んだ」もこの本に出てきますか?",
+            "a": "はい。序説第2節で、森の老聖者と別れたツァラトゥストラが「この老いた聖者は、神が死んだことをまだ森のなかで聞いていないのだ」とひとりごとを言います。この言葉が最初に現れたのは、それ以前の『悦ばしき知識』(108・125節)です。"
+          },
+          {
+            "q": "なぜこんなに読みにくいのですか?",
+            "a": "論証ではなく、比喩や歌、場面で書かれているからです。同じ言葉でも、誰が誰に向かって言っているかで意味が変わります。序説の市場、第一部の説話、第三部の帰郷、第四部の客人たちというように、まず場面をつかんでから読むと格段に読みやすくなります。"
+          },
+          {
+            "q": "引用番号「IV.13.15」は何を表していますか?",
+            "a": "部・章・節の順です。IV.13.15は第四部第13章「より高い人間について」の第15節、I.1は第一部第1章「三つの変化について」、P.5は序説第5節です。章番号は序説の次の章から1と数えます。"
+          },
+          {
+            "q": "原文を無料で読めますか?",
+            "a": "はい。ドイツ語原文はeKGWBとProject Gutenbergで、英訳はProject Gutenbergのトマス・コモン訳で読めます。日本語では岩波文庫の氷上英廣訳(上下)などがあります。"
+          },
+          {
+            "q": "Dialogosはこの本をどのように引用していますか?",
+            "a": "Dialogosはニーチェのドイツ語原文と直接照らし合わせて新たに日本語で言い直しており、著作権のある現代訳の文章は使いません。応答に付く出典表記(例:P.5、IV.10)は、その考えが書かれた部・章・節です。"
+          }
+        ],
+        "pdIntro": "ニーチェ(1844–1900)のドイツ語原文は著作権が消滅しています。eKGWB(コッリ/モンティナーリ編批判版全集のデジタル版)とProject Gutenbergで、ドイツ語のまま無料で読めます。英語ではトマス・コモン(1850–1919)の訳を案内します。コモンは1919年に亡くなっており、その訳文はパブリックドメインです。ただしGutenbergの電子版には、別の人物による序文と解説の付録もあわせて収められています。",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Also sprach Zarathustra(ドイツ語原文、コッリ/モンティナーリ批判版デジタル版)",
+            "url": "https://www.nietzschesource.org/#eKGWB/Za-I"
+          },
+          {
+            "label": "Project Gutenberg — Also sprach Zarathustra(ドイツ語原文)",
+            "url": "https://www.gutenberg.org/ebooks/7205"
+          },
+          {
+            "label": "Project Gutenberg — Thus Spake Zarathustra(トマス・コモン訳、英語)",
+            "url": "https://www.gutenberg.org/ebooks/1998"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "悦ばしき知識 · ニーチェ"
+          },
+          {
+            "slug": "nietzsche-aphorisms",
+            "label": "箴言と散文選 · ニーチェ"
+          }
+        ],
+        "editions": [
+          {
+            "title": "ツァラトゥストラはこう言った(上・下)(岩波文庫)",
+            "translator": "氷上英廣",
+            "publisher": "岩波書店(岩波文庫 青639-2・639-3)",
+            "note": "上巻は1967年、下巻は1970年の刊行で、下巻に第三部と第四部を収めます。日本で長く読まれてきた文庫訳です。",
+            "verifiedSource": "https://www.iwanami.co.jp/smp/336392"
+          },
+          {
+            "title": "ニーチェ全集 9・10 ツァラトゥストラ(上・下)(ちくま学芸文庫)",
+            "translator": "吉沢伝三郎",
+            "publisher": "筑摩書房(ちくま学芸文庫 ニーチェ全集)",
+            "note": "ちくま学芸文庫版『ニーチェ全集』の第9巻・第10巻。全集の一冊として他の著作と並べて読みたい人に向きます。",
+            "verifiedSource": "https://www.chikumashobo.co.jp/product/9784480080790/"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Thus Spoke Zarathustra",
+        "mentorName": "Friedrich Nietzsche",
+        "lede": "Nietzsche's Thus Spoke Zarathustra, a public-domain source for Dialogos: fresh paraphrases of the dancing star and the three metamorphoses, and free texts.",
+        "intro": "<em>Thus Spoke Zarathustra</em> (German <em>Also sprach Zarathustra</em>, subtitled \"A Book for All and None\") is a poetic prose work Nietzsche published in four parts between 1883 and 1885. Zarathustra, who left home at thirty and spent ten years in the mountains, comes down to speak to people, returns to the mountains, and later receives guests in his cave, all told through parables and songs. Citations on this page give part, chapter, and (where needed) section, with P for the Prologue: IV.13.15 means Part IV, chapter 13, section 15. The conversations you have with Nietzsche in Dialogos are grounded in this book and his other works.",
+        "context": "<p>According to the title pages of the parts, Parts I and II appeared in 1883, Part III in 1884, and Part IV in 1885. The story opens with almost the same sentences as section 342 of <em>The Gay Science</em>: at thirty Zarathustra leaves home, enjoys his spirit and his solitude in the mountains for ten years, and then, like a bee that has gathered too much honey, comes down to share his overflowing wisdom. From Part I on, a series of short speeches, \"Zarathustra's Discourses,\" follows; in Part III he returns to his mountain cave, and in Part IV a string of visitors gathers there. Because it works through parable, song, and scene rather than argument, it helps to keep track of who is speaking to whom instead of lifting single sentences out.</p>",
+        "sections": [
+          {
+            "anchor": "prologue",
+            "title": "Prologue (Vorrede)",
+            "body": "Ten sections in which Zarathustra, down from the mountains, speaks to people for the first time. In section 5 he warns of the \"last man,\" who makes everything small and blinks, saying \"We have invented happiness,\" and tells the crowd, \"you still have chaos in you.\" They laugh and shout that he should make them into those last men. (P.5)"
+          },
+          {
+            "anchor": "part-1",
+            "title": "Part I (1883)",
+            "body": "Zarathustra's discourses begin. The first chapter, \"On the Three Metamorphoses,\" says the spirit becomes a camel that carries heavy loads, then a lion that answers \"You shall\" with \"I will,\" and finally a child who begins anew. (I.1)"
+          },
+          {
+            "anchor": "part-3",
+            "title": "Part III (1884)",
+            "body": "Back from his travels, Zarathustra returns to his mountain cave. In chapter 9, \"The Homecoming,\" Solitude tells him that being forsaken and being alone are different things, and he greets solitude as his home. (III.9)"
+          },
+          {
+            "anchor": "part-4",
+            "title": "Part IV (1885)",
+            "body": "Two kings, an old magician, a shadow, and other visitors gather at Zarathustra's cave. In chapter 10, \"At Noon,\" he lies down beside a tree and realizes that the very least things make the best happiness; in chapter 13, \"On the Higher Man,\" he urges his guests to learn to laugh at themselves and to keep small, good things around them. (IV.10, IV.13.15)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "Listen: you need chaos still inside you to give birth to a dancing star. And I tell you, there is chaos in you yet.",
+            "cite": "P.5",
+            "gloss": "When your plans and your head both feel like a mess: inner chaos is not a malfunction, it is a sign you can still bring something new into the world."
+          },
+          {
+            "text": "The child is innocence and forgetting, a beginning again, a game, a wheel rolling out of itself, a first movement, a sacred saying of Yes.",
+            "cite": "I.1",
+            "gloss": "When your track record makes starting over feel impossible: after the camel that carries and the lion that refuses comes the child who simply begins, as if at play."
+          },
+          {
+            "text": "O solitude, my home, solitude! I lived too long and too wildly in wild, foreign places to come back to you without tears.",
+            "cite": "III.9",
+            "gloss": "When a night alone feels only lonely: the same chapter insists that being forsaken and being alone are different things. Solitude here is a home you come back to and rest in."
+          },
+          {
+            "text": "Precisely the least thing, the softest, the lightest: a lizard's rustle, a breath, a flicker, the blink of an eye. The best kind of happiness is made of little.",
+            "cite": "IV.10",
+            "gloss": "When happiness feels postponed until the promotion or the house: Nietzsche finds the best of it in a lizard's rustle and a passing breath."
+          },
+          {
+            "text": "The higher the kind, the more rarely a thing turns out well. So you went awry? Take heart, what does it matter! So much is still possible. Learn how to laugh at yourselves, the way one ought to laugh.",
+            "cite": "IV.13.15",
+            "gloss": "When you aimed high, fell short, and started calling yourself a failure: the higher the aim, the likelier the miss. The same section ends by telling you to keep small, good, finished things around you."
+          }
+        ],
+        "concepts": [
+          {
+            "term": "the three metamorphoses (camel, lion, child)",
+            "def": "The parable in which the spirit becomes a camel that carries heavy loads, a lion that answers \"You shall\" with \"I will,\" and finally a child who begins anew (I.1)."
+          },
+          {
+            "term": "the last man (der letzte Mensch)",
+            "def": "The person who makes everything small, longs for nothing, and blinks, saying \"We have invented happiness.\" Zarathustra sketches him as a warning against settling for mere comfort (P.5)."
+          },
+          {
+            "term": "solitude and forsakenness (Einsamkeit / Verlassenheit)",
+            "def": "A distinction Solitude itself draws in \"The Homecoming\": being left alone among others is forsakenness, while solitude is a home where you can say everything freely (III.9)."
+          },
+          {
+            "term": "noon (Mittag)",
+            "def": "The hour when the sun stands straight overhead. In Part IV it is the moment Zarathustra lies down by a tree and asks, \"Has the world not just become perfect?\" (IV.10)."
+          },
+          {
+            "term": "laughter (Lachen)",
+            "def": "In Part IV Zarathustra keeps telling his guests to learn to laugh at themselves (IV.13.15, IV.13.20), as a way of taking the weight off."
+          }
+        ],
+        "apply": "<p>If starting over scares you, turn the three metamorphoses into three questions for today. What load am I carrying (the camel)? Which \"you shall\" in it could I put down (the lion)? What small thing could I begin just to play, without knowing how it turns out (the child)? Write one answer in the third column and try it today.</p><p>When it feels as if only something big could make you happy, borrow \"At Noon\" and notice one very small thing a day: a draft through the window, the first sip of coffee, the light on the walk home. The ingredients Nietzsche names for the best happiness are that light.</p>",
+        "provenance": "Dialogos's replies and the passages on this page are fresh paraphrases into modern English, checked directly against Nietzsche's German text (eKGWB); they do not reproduce the wording of any copyrighted modern translation. Citations give part, chapter, and section, with P for the Prologue (for example, I.1 = Part I, chapter 1).",
+        "faq": [
+          {
+            "q": "What is Thus Spoke Zarathustra about?",
+            "a": "It is a poetic prose work Nietzsche published in four parts from 1883 to 1885. Zarathustra, after ten years in the mountains, comes down to speak, goes back up, and later receives guests; along the way the book sets out the three metamorphoses, the last man, and the eternal recurrence through parables and songs. Its subtitle is \"A Book for All and None.\""
+          },
+          {
+            "q": "What does \"Übermensch\" mean?",
+            "a": "In section 3 of the Prologue Zarathustra says, \"I teach you the Übermensch. Man is something that is to be overcome.\" It names a goal of going beyond oneself, set against the \"last man\" of section 5, who makes everything small and settles into comfort. Dialogos does not use the word as grounds for looking down on or dominating anyone."
+          },
+          {
+            "q": "Where does \"one must have chaos within to give birth to a dancing star\" come from?",
+            "a": "Section 5 of the Prologue. Zarathustra tells the marketplace crowd that you need chaos still inside you to give birth to a dancing star, and that there is chaos in them yet. It is meant as an affirmation: leftover chaos is the power to make something new."
+          },
+          {
+            "q": "Does \"God is dead\" appear in this book?",
+            "a": "Yes. In section 2 of the Prologue, after leaving an old saint in the forest, Zarathustra says to himself that the old saint has not yet heard that God is dead. The sentence first appeared earlier, in The Gay Science (sections 108 and 125)."
+          },
+          {
+            "q": "Why is it so hard to read?",
+            "a": "Because it is written in parable, song, and scene rather than argument, and the same words mean different things depending on who says them to whom. Get the scene first (the marketplace in the Prologue, the discourses of Part I, the homecoming in Part III, the guests in Part IV) and it becomes much easier."
+          },
+          {
+            "q": "What does a citation like \"IV.13.15\" mean?",
+            "a": "Part, chapter, section. IV.13.15 is section 15 of chapter 13 of Part IV, \"On the Higher Man\"; I.1 is chapter 1 of Part I, \"On the Three Metamorphoses\"; P.5 is section 5 of the Prologue. Chapters are counted from 1 starting after the Prologue."
+          },
+          {
+            "q": "Can I read Thus Spoke Zarathustra for free?",
+            "a": "Yes. The German text is on eKGWB and Project Gutenberg, and Project Gutenberg also has Thomas Common's English translation. See the links below."
+          },
+          {
+            "q": "How does Dialogos quote this book?",
+            "a": "Dialogos paraphrases afresh from Nietzsche's German and does not use the wording of copyrighted modern translations. The citation attached to a reply (for example, P.5 or IV.10) gives the part, chapter, and section where the idea appears."
+          }
+        ],
+        "pdIntro": "Nietzsche (1844–1900) wrote in German, and his texts are out of copyright. You can read the German free on eKGWB (the digital version of the Colli–Montinari critical edition) and on Project Gutenberg. For English we link Thomas Common's translation; Common died in 1919, so his translation is in the public domain. Note that the Gutenberg e-book also includes an introduction and an appendix of notes written by other people.",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Also sprach Zarathustra (German original, digital Colli–Montinari critical edition)",
+            "url": "https://www.nietzschesource.org/#eKGWB/Za-I"
+          },
+          {
+            "label": "Project Gutenberg — Also sprach Zarathustra (German original)",
+            "url": "https://www.gutenberg.org/ebooks/7205"
+          },
+          {
+            "label": "Project Gutenberg — Thus Spake Zarathustra (trans. Thomas Common, English)",
+            "url": "https://www.gutenberg.org/ebooks/1998"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "The Gay Science · Nietzsche"
+          },
+          {
+            "slug": "nietzsche-aphorisms",
+            "label": "Selected Aphorisms and Prose · Nietzsche"
+          }
+        ],
+        "editions": [
+          {
+            "title": "Thus Spoke Zarathustra (Penguin Classics)",
+            "translator": "R. J. Hollingdale",
+            "publisher": "Penguin Classics",
+            "note": "R. J. Hollingdale's translation with his own introduction, in the Penguin Classics paperback series.",
+            "verifiedSource": "https://www.penguin.co.uk/books/34775/thus-spoke-zarathustra-by-nietzsche-trans-and-intro-r-j-hollingdale/9780140441185"
+          },
+          {
+            "title": "Thus Spoke Zarathustra: A Book for All and None (Modern Library)",
+            "translator": "Walter Kaufmann",
+            "publisher": "Modern Library (Penguin Random House)",
+            "note": "Kaufmann's translation in a Modern Library hardcover edition (1995).",
+            "verifiedSource": "https://www.penguinrandomhouse.com/books/121945/thus-spoke-zarathustra-by-friedrich-nietzsche/9780679601753/"
+          }
+        ]
+      }
+    }
+  },
+  "nietzsche-aphorisms": {
+    "slug": "nietzsche-aphorisms",
+    "mentorId": "nietzsche",
+    "icon": "fa-scroll",
+    "updated": "2026-11-13",
+    "content": {
+      "ko": {
+        "workName": "잠언과 산문 선집",
+        "mentorName": "프리드리히 니체",
+        "lede": "니체 잠언과 산문 선집 — 『인간적인, 너무나 인간적인』『아침놀』『선악의 저편』『우상의 황혼』 등 일곱 책에서 고른 구절의 우리말 의역과 무료 원문 안내.",
+        "intro": "이 쪽은 니체의 여러 책에서 고른 구절을 한데 모은 <em>잠언과 산문 선집</em>입니다. 『인간적인, 너무나 인간적인』(1878)부터 1888년에 쓴 자서전 『이 사람을 보라』까지, Dialogos가 인용하는 구절이 책마다 한두 개, 많아야 세 개라서 책마다 따로 쪽을 만들지 않고 한 쪽에 모았습니다. 1874년의 「교육자로서의 쇼펜하우어」도 함께 실었습니다. 구절마다 어느 책의 몇 번 절인지 적었고(예: 『아침놀』 376), 아래 절은 책이 나온 순서대로 정리했습니다. Dialogos에서 니체와 나누는 대화는 이 책들을 비롯한 그의 저작을 바탕으로 합니다.",
+        "context": "<p>1874년 니체는 바젤 대학의 고전문헌학 정교수로서 「교육자로서의 쇼펜하우어」를 '반시대적 고찰'의 세 번째 편으로 냈습니다. 1876~77년 겨울 소렌토에서 쓴 『인간적인, 너무나 인간적인』은 1878년 '자유정신을 위한 책'이라는 부제를 달고 나왔고, 1880년에는 그 두 번째이자 마지막 보유인 『방랑자와 그의 그림자』가 뒤따랐습니다. 이어 1881년 『아침놀』, 1886년 『선악의 저편』, 1889년 『우상의 황혼』이 나왔습니다. 자서전 『이 사람을 보라』는 1888년 10월 15일부터 11월 4일 사이에 썼지만 1908년에야 출간되었습니다. 이 책들의 대부분은 한 줄에서 몇 쪽에 이르는 번호 붙은 짧은 절로 이루어져 있어 한 절만 떼어 읽어도 하나의 생각이 됩니다. 「교육자로서의 쇼펜하우어」만은 여러 절로 이어지는 긴 글입니다.</p>",
+        "sections": [
+          {
+            "anchor": "human-all-too-human",
+            "title": "인간적인, 너무나 인간적인 (1878)",
+            "body": "'자유정신을 위한 책'이라는 부제를 단 첫 잠언집으로, 1876~77년 겨울 소렌토에서 썼습니다. 일에 쫓기는 사람들이 개인이 아니라 직함으로만 바쁘다는 진단(283)과, 친구를 만드는 것은 함께 기뻐함이라는 한 줄(499)을 골랐습니다. (283, 499)"
+          },
+          {
+            "anchor": "wanderer",
+            "title": "방랑자와 그의 그림자 (1880)",
+            "body": "『인간적인, 너무나 인간적인』의 두 번째이자 마지막 보유로 나왔고, 1886년 새 판에서 그 책의 제2권에 묶였습니다. 가장 먼 물음의 확실성보다 가까운 것들의 좋은 이웃이 되라는 16절, 질투가 깎아내리기와 따라잡기로 갈린다는 29절을 골랐습니다. 에피쿠로스의 사치를 '작은 정원, 무화과, 작은 치즈, 좋은 벗 서넛'으로 그린 192절도 이 책에 있습니다. (16, 29)"
+          },
+          {
+            "anchor": "daybreak",
+            "title": "아침놀 (1881)",
+            "body": "'도덕적 편견에 대한 생각들'이라는 부제의 잠언집입니다. 저녁의 판단은 피로가 내린다는 317절, 지치면 푹 자라는 376절, 변화는 작은 용량으로 오래 주라는 534절을 골랐습니다. 마르쿠스 아우렐리우스의 말을 인용한 450절, 에픽테토스를 높이 평가한 546절도 이 책에 있습니다. (317, 376, 534)"
+          },
+          {
+            "anchor": "beyond-good-and-evil",
+            "title": "선악의 저편 (1886)",
+            "body": "'미래 철학의 서곡'이라는 부제의 책으로, 아홉 장 가운데 제4장 「잠언과 간주곡」(63–185절)에서 두 구절을 골랐습니다. 이 장에는 오늘날 받아들이기 어려운 잠언도 섞여 있어, Dialogos는 절 단위로만 인용합니다. (70, 183)"
+          },
+          {
+            "anchor": "twilight",
+            "title": "우상의 황혼 · 잠언과 화살 (1889)",
+            "body": "'망치로 철학하는 법'이라는 부제의 책입니다. 첫 장 「잠언과 화살」의 짧은 잠언 44개 가운데, 삶의 '왜'를 가진 사람은 거의 어떤 '어떻게'와도 지낼 수 있다는 12번과 걸으며 얻은 생각만 값지다는 34번을 골랐습니다. (12, 34)"
+          },
+          {
+            "anchor": "ecce-homo",
+            "title": "이 사람을 보라 · 나는 왜 이렇게 영리한가 (1888년 집필)",
+            "body": "'사람은 어떻게 자기 자신이 되는가'라는 부제의 자서전입니다. 「나는 왜 이렇게 영리한가」 9절에서 니체는 자기가 무엇인지 미리 알지 못했기에 헛디딤과 샛길, 늦어짐까지 저마다 뜻이 있었다고 돌아봅니다. (9)"
+          },
+          {
+            "anchor": "schopenhauer-as-educator",
+            "title": "반시대적 고찰 · 교육자로서의 쇼펜하우어 (1874)",
+            "body": "'반시대적 고찰'의 세 번째 편입니다. 첫 절은 사람마다 세상에 단 한 번뿐인 존재라는 사실을 알면서도 남의 눈이 두려워 숨기며 산다고 말하고, 참된 교육자는 우리를 풀어 주는 해방자라고 말합니다. 삶의 강을 건널 다리는 스스로 놓아야 한다는 구절이 여기 있습니다. (1)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "하루의 3분의 2를 자기 몫으로 갖지 못한 사람은, 정치가든 상인이든 관리든 학자든, 자유인이 아니다.",
+            "cite": "283",
+            "gloss": "야근과 약속으로 하루가 꽉 찼는데도 공허할 때 — 직함이 아니라 '나'로서 쓰는 시간이 얼마인지 묻는 구절. 일을 줄일 수 없는 처지를 탓하는 말은 아니다.",
+            "book": "인간적인, 너무나 인간적인",
+            "bookId": "ma"
+          },
+          {
+            "text": "친구를 만드는 것은 함께 아파함이 아니라 함께 기뻐함이다.",
+            "cite": "499",
+            "gloss": "합격 소식을 전했는데 반응이 미지근해 서운할 때 — 우정의 시금석은 기쁨을 함께 기뻐해 주는 데 있다는 한 줄. 슬픔을 나누지 말라는 뜻은 아니다.",
+            "book": "인간적인, 너무나 인간적인",
+            "bookId": "ma"
+          },
+          {
+            "text": "가장 먼 지평에 대한 확실성이 없어도 우리는 충만하고 다부진 인간의 삶을 살 수 있다. 우리는 다시 가장 가까운 것들의 좋은 이웃이 되어야 한다.",
+            "cite": "16",
+            "gloss": "인생의 큰 물음에 답이 없어 마음이 붕 뜰 때 — 먹고 자고 걷는 가까운 일부터 다시 돌보라는 구절.",
+            "book": "방랑자와 그의 그림자",
+            "bookId": "ws"
+          },
+          {
+            "text": "질투하는 이는 남이 모두의 눈높이 위로 솟을 때마다 그를 끌어내리거나 자신을 그만큼 끌어올리려 한다. 헤시오도스가 나쁜 에리스와 좋은 에리스라 부른 두 길이 여기서 갈린다.",
+            "cite": "29",
+            "gloss": "동기의 승진 소식에 속이 쓰릴 때 — 그 마음이 깎아내리기와 따라잡기, 두 갈래로 갈린다는 것을 알아차리게 하는 구절.",
+            "book": "방랑자와 그의 그림자",
+            "bookId": "ws"
+          },
+          {
+            "text": "지친 채 하루를 마치며 그날의 일과 평생의 일을 돌아보면 대개 우울한 결론에 이른다. 그러나 그건 하루나 삶의 탓이 아니라 피로의 탓이다.",
+            "cite": "317",
+            "gloss": "밤 11시, 침대에서 '내 인생 왜 이럴까'를 곱씹을 때 — 그 판결은 삶이 아니라 피로가 내린 것이니 아침에 다시 보자는 구절. 오래 이어지는 우울을 '피곤해서'로 넘기라는 뜻은 아니다.",
+            "book": "아침놀",
+            "bookId": "m"
+          },
+          {
+            "text": "지치고 자기 자신에게 질렸을 때 기운을 되찾으려면 무엇을 해야 할까? 가장 좋은 처방은 예나 지금이나 푹 자는 것이다. 말 그대로도, 비유로도. 그러면 다시 아침을 맞게 된다.",
+            "cite": "376",
+            "gloss": "의욕이 바닥났는데도 자기계발 영상으로 자신을 몰아붙일 때 — 자극보다 쉼이 먼저라는 뜻밖에 다정한 처방. 의학적 수면 권고는 아니다.",
+            "book": "아침놀",
+            "bookId": "m"
+          },
+          {
+            "text": "변화가 되도록 깊이 스며들기를 바란다면 약을 아주 적은 양씩, 그러나 오랜 시간 쉬지 말고 주어라. 큰 것을 어찌 단번에 만들겠는가!",
+            "cite": "534",
+            "gloss": "새해 다짐이 작심삼일로 끝나 자책할 때 — 한 번에 크게가 아니라 작게, 오래 가는 것이 깊은 변화라는 구절.",
+            "book": "아침놀",
+            "bookId": "m"
+          },
+          {
+            "text": "성격이 있는 사람에게는 늘 되풀이해 찾아오는 자기만의 전형적인 경험도 있다.",
+            "cite": "70",
+            "gloss": "왜 나는 매번 비슷한 사람과 비슷하게 틀어질까 싶을 때 — 반복을 저주가 아니라 나를 읽는 단서로 보게 하는 관찰.",
+            "book": "선악의 저편",
+            "bookId": "jgb"
+          },
+          {
+            "text": "\"네가 내게 거짓말을 했다는 것이 아니라, 이제 내가 너를 믿지 못하게 되었다는 것이 나를 뒤흔들었다.\"",
+            "cite": "183",
+            "gloss": "믿었던 사람의 거짓말을 알고 마음이 무너질 때 — 아픔의 정체가 거짓말 자체보다 잃어버린 믿음이라는 걸 알아보게 하는 구절.",
+            "book": "선악의 저편",
+            "bookId": "jgb"
+          },
+          {
+            "text": "자기 삶의 '왜'를 가진 사람은 거의 어떤 '어떻게'와도 견디며 지낼 수 있다.",
+            "cite": "12",
+            "gloss": "시험 준비나 가족 간병처럼 길고 버거운 시기를 지날 때 — 견딜 힘이 상황보다 '무엇을 위해'에서 나온다는 말. 이유가 있으니 무조건 참으라는 뜻은 아니다.",
+            "book": "우상의 황혼 · 잠언과 화살",
+            "bookId": "gd"
+          },
+          {
+            "text": "눌러앉아 있는 것이야말로 정신에 대한 죄다. 걸으면서 얻은 생각만이 값지다.",
+            "cite": "34",
+            "gloss": "책상 앞에서 같은 문장만 맴돌 때 — 일어나 걸으라는, 몸으로 하는 철학의 처방.",
+            "book": "우상의 황혼 · 잠언과 화살",
+            "bookId": "gd"
+          },
+          {
+            "text": "사람이 제 자신이 되어 가려면, 자기가 무엇인지 조금도 짐작하지 못하고 있어야 한다. 이렇게 보면 삶의 헛디딤도, 잠시 들어선 샛길과 옆길도, 늦어짐도 저마다 뜻과 값이 있다.",
+            "cite": "9",
+            "gloss": "전공과 다른 일을 하거나 남보다 늦게 출발해 초조할 때 — 돌아간 길과 머뭇거림도 나를 만드는 과정이었다는 회고.",
+            "book": "이 사람을 보라 · 나는 왜 이렇게 영리한가",
+            "bookId": "eh"
+          },
+          {
+            "text": "네가 삶의 강을 건너야 할 그 다리는 너 말고는 아무도 놓아 줄 수 없다. 세상에는 너 말고는 아무도 걸을 수 없는 길이 하나 있다. 어디로 가느냐고? 묻지 말고, 걸어라.",
+            "cite": "1",
+            "gloss": "진로를 두고 부모·선배·유튜브 조언 사이에서 내 목소리를 잃었을 때 — 조언을 다 버리라는 게 아니라, 마지막 다리는 내가 놓아야 한다는 구절.",
+            "book": "반시대적 고찰 · 교육자로서의 쇼펜하우어",
+            "bookId": "se"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "잠언 (아포리즘)",
+            "def": "한 줄에서 몇 쪽에 이르는 번호 붙은 짧은 글입니다. 니체의 중기 저작 대부분이 이 형식이라, 한 절만 떼어 읽어도 하나의 생각이 됩니다."
+          },
+          {
+            "term": "자유정신 (freier Geist)",
+            "def": "『인간적인, 너무나 인간적인』의 부제 '자유정신을 위한 책'에 나오는 말입니다. 니체는 출신과 환경, 신분과 직업, 시대의 지배적 견해로 보아 기대되는 것과 다르게 생각하는 사람을 자유정신이라 부른다고 썼습니다(225)."
+          },
+          {
+            "term": "함께 기뻐함 (Mitfreude)",
+            "def": "'함께 아파함(Mitleiden)'과 짝을 이루는 말로, 니체는 친구를 만드는 것은 이쪽이라고 썼습니다(『인간적인, 너무나 인간적인』 499)."
+          },
+          {
+            "term": "좋은 에리스와 나쁜 에리스",
+            "def": "에리스는 그리스 신화의 다툼의 여신입니다. 니체는 헤시오도스를 빌려, 질투가 남을 끌어내리는 나쁜 다툼과 자신을 끌어올리는 좋은 다툼으로 갈린다고 말합니다(『방랑자와 그의 그림자』 29)."
+          },
+          {
+            "term": "너 자신이 되어라",
+            "def": "「교육자로서의 쇼펜하우어」 첫 절에서 양심이 외치는 말이자, 『이 사람을 보라』의 부제 '사람은 어떻게 자기 자신이 되는가'로 이어지는 니체의 오랜 물음입니다."
+          }
+        ],
+        "apply": "<p>오늘 밤 잠들기 전 하루를 판정하고 싶어지면 『아침놀』 317을 떠올리고 판단을 내일 아침으로 미뤄 보세요. 몹시 지쳐 있다면 376의 처방대로 먼저 자는 것이 순서입니다.</p><p>바꾸고 싶은 습관이 있다면 534처럼 '아주 적은 양을, 오래' 설계하세요. 하루 5분, 한 문장, 한 정거장 걷기처럼 작게 정하고 날짜만 적어 두는 겁니다. 그리고 「교육자로서의 쇼펜하우어」 첫 절이 권하는 질문을 하나 적어 보세요. '지금까지 내가 진심으로 사랑한 것은 무엇이었나?' 그것들을 나란히 놓으면 내가 어떤 사람이 되어 가고 있는지가 조금 보입니다.</p>",
+        "provenance": "Dialogos의 답변과 이 쪽의 구절은 니체의 독일어 원문(eKGWB)과 직접 대조해 현대 한국어로 새로 의역한 것이며, 저작권이 남아 있는 현대 번역본의 문장을 옮기지 않습니다. 출처 표기는 책 이름과 절 번호를 함께 가리킵니다(예: 『아침놀』 376 = 『아침놀』 376절).",
+        "faq": [
+          {
+            "q": "이 쪽은 왜 여러 책을 한 쪽에 모았나요?",
+            "a": "Dialogos가 인용하는 니체 구절은 『즐거운 학문』과 『차라투스트라는 이렇게 말했다』에 가장 많고, 나머지 일곱 책에서는 책마다 한두 개, 많아야 세 개입니다. 그래서 그 일곱 책의 구절을 한 쪽에 모으고, 구절마다 책 이름과 절 번호를 함께 적었습니다."
+          },
+          {
+            "q": "니체가 잠언 형식으로 쓴 책은 무엇인가요?",
+            "a": "『인간적인, 너무나 인간적인』(1878)과 그 보유인 『방랑자와 그의 그림자』(1880), 『아침놀』(1881), 『즐거운 학문』(1882·1887)이 대표적입니다. 『선악의 저편』 제4장과 『우상의 황혼』 첫 장 「잠언과 화살」도 짧은 잠언을 모은 장입니다."
+          },
+          {
+            "q": "'왜 사는지 아는 사람은 어떤 상황도 견딘다'의 원문은 무엇인가요?",
+            "a": "『우상의 황혼』 「잠언과 화살」 12번입니다. 원문은 '자기 삶의 왜를 가진 사람은 거의 어떤 어떻게와도 견디며 지낼 수 있다'에 가깝고, '거의(fast)'라는 단서가 붙어 있습니다. 견뎌야 한다는 명령이 아니라, 견딜 힘이 어디서 오는지에 대한 관찰입니다."
+          },
+          {
+            "q": "'음악을 듣지 못하는 사람에게는 춤추는 사람이 미친 것처럼 보인다'는 니체의 말인가요?",
+            "a": "니체의 말로 널리 돌지만, 니체가 펴낸 주요 저작의 독일어 원문(eKGWB)에서는 이 문장을 찾을 수 없습니다. 출처가 확인되지 않은 인용이므로 Dialogos는 니체의 말로 쓰지 않습니다."
+          },
+          {
+            "q": "니체의 책에는 불편한 대목도 있나요?",
+            "a": "있습니다. 『선악의 저편』 제4장처럼 좋은 잠언 사이에 여성이나 특정 집단을 깎아내리는 문장이 섞인 곳이 있습니다. Dialogos는 절 단위로 확인한 구절만 인용하고, 그런 문장은 옮기지 않습니다. 니체를 읽을 때는 그의 한계도 함께 비판적으로 보는 편이 좋습니다."
+          },
+          {
+            "q": "'친구를 만드는 것은 함께 기뻐함'이라는 말은 어디에 있나요?",
+            "a": "『인간적인, 너무나 인간적인』 499절 「친구」입니다. 원문은 한 문장으로, 친구를 만드는 것은 함께 아파함이 아니라 함께 기뻐함이라고 말합니다. 슬픔을 나누지 말라는 뜻이 아니라, 남의 기쁨을 함께 기뻐하기가 더 드문 일이라는 관찰로 읽힙니다."
+          },
+          {
+            "q": "원문을 무료로 읽을 수 있나요?",
+            "a": "네. 일곱 책 모두 독일어 원문을 eKGWB에서 읽을 수 있고, 영어로는 Project Gutenberg의 『인간적인, 너무나 인간적인』 I·『선악의 저편』(헬렌 지먼 역), 『아침놀』(J. M. 케네디 역)을 읽을 수 있습니다."
+          },
+          {
+            "q": "Dialogos는 이 책들을 어떻게 인용하나요?",
+            "a": "Dialogos는 니체의 독일어 원문을 직접 대조해 우리말로 새로 풀어 쓰며, 저작권이 있는 현대 번역본의 문장을 쓰지 않습니다. 답변에는 '『아침놀』 376'처럼 책 이름과 절 번호를 함께 붙입니다."
+          }
+        ],
+        "pdIntro": "니체(1844–1900)의 독일어 원문은 저작권이 소멸했습니다. eKGWB는 조르조 콜리와 마치노 몬티나리가 엮은 비판 전집의 디지털판으로, 이 쪽의 일곱 책을 모두 독일어로 무료로 읽을 수 있습니다. 영어 퍼블릭 도메인 번역으로는 헬렌 지먼(1846–1934)이 옮긴 『인간적인, 너무나 인간적인』 I(1909)과 『선악의 저편』, J. M. 케네디(1886–1918)가 옮긴 『아침놀』(1911)을 안내합니다. 『방랑자와 그의 그림자』·『우상의 황혼』·『이 사람을 보라』·「교육자로서의 쇼펜하우어」의 옛 영역본은 역자의 사망 연도를 확인하지 못했거나 미국에서만 퍼블릭 도메인이어서 싣지 않았고, 이 책들은 eKGWB 독일어 원문으로 안내합니다.",
+        "pdLinks": [
+          {
+            "label": "eKGWB — 니체 저작 독일어 원문 (콜리·몬티나리 비판판 디지털본)",
+            "url": "https://www.nietzschesource.org/#eKGWB"
+          },
+          {
+            "label": "Project Gutenberg — Human, All-Too-Human I (Helen Zimmern 역, 1909, 영어)",
+            "url": "https://www.gutenberg.org/ebooks/51935"
+          },
+          {
+            "label": "Project Gutenberg — The Dawn of Day (J. M. Kennedy 역, 1911, 영어)",
+            "url": "https://www.gutenberg.org/ebooks/39955"
+          },
+          {
+            "label": "Project Gutenberg — Beyond Good and Evil (Helen Zimmern 역, 레비 전집판, 영어)",
+            "url": "https://www.gutenberg.org/ebooks/4363"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "즐거운 학문 · 니체"
+          },
+          {
+            "slug": "nietzsche-zarathustra",
+            "label": "차라투스트라는 이렇게 말했다 · 니체"
+          },
+          {
+            "slug": "meditations",
+            "label": "명상록 · 마르쿠스 아우렐리우스"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "엥케이리디온 · 에픽테토스"
+          },
+          {
+            "slug": "epicurus-sayings",
+            "label": "주요 교설과 금언 · 에피쿠로스"
+          }
+        ],
+        "editions": [
+          {
+            "title": "바그너의 경우·우상의 황혼·안티크리스트·이 사람을 보라·디오니소스 송가·니체 대 바그너 (책세상 니체전집 15, 개정판)",
+            "translator": "백승영",
+            "publisher": "책세상 (니체전집)",
+            "note": "『우상의 황혼』과 『이 사람을 보라』를 함께 담은 책세상 니체전집 제15권으로, 니체편집위원회가 감수했습니다. 개정판이 2026년 2월에 나왔습니다.",
+            "verifiedSource": "https://chaeksesang.com/product/detail.html?product_no=245"
+          },
+          {
+            "title": "선악의 저편·도덕의 계보 (책세상 니체전집)",
+            "translator": "김정현",
+            "publisher": "책세상 (니체전집)",
+            "note": "2002년에 나온 책세상 니체전집의 한 권으로, 출판사는 독일 발터 데 그루이터의 비판 전집(KGW)을 바탕으로 한 전집이라고 소개합니다.",
+            "verifiedSource": "https://chaeksesang.com/product/detail.html?product_no=144"
+          }
+        ]
+      },
+      "ja": {
+        "workName": "箴言と散文選",
+        "mentorName": "フリードリヒ・ニーチェ",
+        "lede": "ニーチェ 箴言と散文選――『人間的、あまりに人間的』『曙光』『善悪の彼岸』『偶像の黄昏』など七つの著作から選んだ一節の意訳と、無料で読める原文への案内。",
+        "intro": "このページは、ニーチェのいくつもの著作から選んだ一節をひとつにまとめた<em>箴言と散文選</em>です。『人間的、あまりに人間的』(1878)から1888年に書かれた自伝『この人を見よ』まで、Dialogosが引用する一節は一冊につき一つか二つ、多くても三つなので、本ごとに別のページを立てず一か所に集めました。1874年の「教育者としてのショーペンハウアー」もあわせて収めています。一節ごとにどの本の何番の節かを記し(例:『曙光』376)、下の各節は刊行順に並べています。Dialogosでニーチェと交わす対話は、これらの本をはじめとする彼の著作にもとづいています。",
+        "context": "<p>1874年、ニーチェはバーゼル大学の古典文献学正教授として「教育者としてのショーペンハウアー」を『反時代的考察』の第三篇として刊行しました。1876〜77年の冬にソレントで書いた『人間的、あまりに人間的』は1878年に「自由精神のための書」という副題で出版され、1880年にはその第二の、そして最後の補遺である『漂泊者とその影』が続きました。さらに1881年に『曙光』、1886年に『善悪の彼岸』、1889年に『偶像の黄昏』が出ています。自伝『この人を見よ』は1888年10月15日から11月4日にかけて書かれましたが、出版は1908年でした。これらの本の多くは一行から数ページの番号つきの短い節でできており、一節だけ取り出しても一つの考えとして読めます。日本では、ちくま学芸文庫『ニーチェ全集』に『人間的、あまりに人間的』『曙光』『善悪の彼岸』『偶像の黄昏』『この人を見よ』などが収められています。</p>",
+        "sections": [
+          {
+            "anchor": "human-all-too-human",
+            "title": "人間的、あまりに人間的(1878)",
+            "body": "「自由精神のための書」という副題をもつ最初のアフォリズム集で、1876〜77年の冬にソレントで書かれました。仕事に追われる人々は個人としてではなく肩書きとしてだけ忙しいという診断(283)と、友をつくるのは共に喜ぶことだという一行(499)を選びました。(283, 499)"
+          },
+          {
+            "anchor": "wanderer",
+            "title": "漂泊者とその影(1880)",
+            "body": "『人間的、あまりに人間的』の第二の、そして最後の補遺として出版され、1886年の新版でその第二巻にまとめられました。最も遠い問いの確実さより身近なもののよき隣人になれという16節と、嫉妬が引きずり下ろすか追いつくかに分かれるという29節を選びました。エピクロスのぜいたくを「小さな庭、いちじく、小さなチーズ、よき友三、四人」と描いた192節もこの本にあります。(16, 29)"
+          },
+          {
+            "anchor": "daybreak",
+            "title": "曙光(1881)",
+            "body": "「道徳的偏見についての考察」という副題のアフォリズム集です。夕方の判断は疲れが下すという317節、疲れたらたっぷり眠れという376節、変化は少量ずつ長く与えよという534節を選びました。マルクス・アウレリウスの言葉を引く450節、エピクテトスを高く評価する546節もこの本にあります。(317, 376, 534)"
+          },
+          {
+            "anchor": "beyond-good-and-evil",
+            "title": "善悪の彼岸(1886)",
+            "body": "「未来の哲学への序曲」という副題の本で、九つの章のうち第四章「箴言と間奏曲」(63–185節)から二つの一節を選びました。この章には今日受け入れがたい箴言も混じっているため、Dialogosは節単位でのみ引用します。(70, 183)"
+          },
+          {
+            "anchor": "twilight",
+            "title": "偶像の黄昏 · 箴言と矢(1889)",
+            "body": "「いかにハンマーで哲学するか」という副題の本です。最初の章「箴言と矢」の44の短い箴言のうち、人生の「なぜ」を持つ者はほとんどどんな「いかに」とも折り合えるという12番と、歩きながら得た思想だけが価値をもつという34番を選びました。(12, 34)"
+          },
+          {
+            "anchor": "ecce-homo",
+            "title": "この人を見よ · なぜ私はこんなに利口なのか(1888年執筆)",
+            "body": "「人はいかにして自分であるところのものになるか」という副題の自伝です。「なぜ私はこんなに利口なのか」第9節でニーチェは、自分が何者かを前もって知らなかったからこそ、踏み外しや脇道、遅れにまでそれぞれ意味があったと振り返ります。(9)"
+          },
+          {
+            "anchor": "schopenhauer-as-educator",
+            "title": "反時代的考察 · 教育者としてのショーペンハウアー(1874)",
+            "body": "『反時代的考察』の第三篇です。第1節は、人は誰もがこの世に一度きりの存在だと知りながら、隣人の目を恐れてそれを隠して生きていると語り、真の教育者とは私たちを解き放つ解放者だと述べます。人生の川を渡る橋は自分でかけるしかないという一節はここにあります。(1)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "一日の三分の二を自分のために持てない者は、政治家であれ商人であれ役人であれ学者であれ、自由な人間ではない。",
+            "cite": "283",
+            "gloss": "残業と付き合いで一日が埋まり、肩書きだけが増えていくとき――役職ではなく「自分」として使える時間がどれだけあるかを問う一節。働き方を選べない人を責める言葉ではない。",
+            "book": "人間的、あまりに人間的",
+            "bookId": "ma"
+          },
+          {
+            "text": "友をつくるのは、共に苦しむことではなく、共に喜ぶことである。",
+            "cite": "499",
+            "gloss": "内定の報告に友人の反応が薄くて寂しかったとき――友情の試金石は、喜びを一緒に喜べるかどうかにあるという一行。悲しみを分かち合うなという意味ではない。",
+            "book": "人間的、あまりに人間的",
+            "bookId": "ma"
+          },
+          {
+            "text": "最も遠い地平についての確実さなど、満ち足りた、しっかりした人間の生を生きるためには少しも必要ない。私たちはふたたび、最も身近なものたちのよき隣人にならねばならない。",
+            "cite": "16",
+            "gloss": "将来や人生の意味のような大きな問いに答えが出ず、落ち着かないとき――食事、睡眠、散歩といった身近なことの、よき隣人に戻ろうという一節。",
+            "book": "漂泊者とその影",
+            "bookId": "ws"
+          },
+          {
+            "text": "嫉妬する者は、他人が共通の尺度から抜きん出るたびにそれを感じとり、その人をそこまで引きずり下ろそうとするか、自分をそこまで引き上げようとする。ここから、ヘシオドスが悪いエリスと善いエリスと呼んだ二つのふるまいが生まれる。",
+            "cite": "29",
+            "gloss": "同期の昇進や友人の成功に心がざわつくとき――その気持ちが「引きずり下ろす」と「追いつこうとする」の二つの道に分かれることに気づかせる一節。",
+            "book": "漂泊者とその影",
+            "bookId": "ws"
+          },
+          {
+            "text": "一日の終わりに疲れきって、その日の仕事や一生の仕事を振り返る者は、たいてい憂鬱な考えに行き着く。だがそれは一日のせいでも人生のせいでもなく、疲れのせいなのだ。",
+            "cite": "317",
+            "gloss": "終電の車内で「自分の人生は何なんだ」と考え込むとき――その判決を下しているのは人生ではなく疲れだから、朝にもう一度考えようという一節。長く続く落ち込みを「ただの疲れ」で片づけろという意味ではない。",
+            "book": "曙光",
+            "bookId": "m"
+          },
+          {
+            "text": "疲れて自分自身にうんざりしたとき、元気を取り戻すには何をすればよいか。いちばん良いのは、いまも昔も、たっぷり眠ることだ。文字どおりの意味でも、たとえとしても。そうすればまた自分の朝がやって来る。",
+            "cite": "376",
+            "gloss": "気力が尽きているのに、予定を詰め込んで自分を奮い立たせようとするとき――刺激より休息が先だという、意外にやさしい処方。医学的な助言ではない。",
+            "book": "曙光",
+            "bookId": "m"
+          },
+          {
+            "text": "変化をできるだけ深いところまで届かせたいなら、薬はごく少量ずつ、しかし長い期間にわたって絶え間なく与えよ。大きなものを一度に作り出すことなど、どうしてできようか。",
+            "cite": "534",
+            "gloss": "三日坊主に終わった目標を前に自分を責めるとき――一度に大きくではなく、少しずつ長く続けることが深い変化を生むという一節。",
+            "book": "曙光",
+            "bookId": "m"
+          },
+          {
+            "text": "性格を持つ者には、くり返しやって来る、その人特有の典型的な体験もある。",
+            "cite": "70",
+            "gloss": "なぜかいつも同じような相手と同じようにこじれてしまうとき――くり返しを呪いではなく、自分を読み解く手がかりとして見る観察。",
+            "book": "善悪の彼岸",
+            "bookId": "jgb"
+          },
+          {
+            "text": "「君が私に嘘をついたことではなく、私がもう君を信じられなくなったことが、私を揺さぶったのだ。」",
+            "cite": "183",
+            "gloss": "信頼していた人の嘘を知って立ち直れないとき――痛みの正体は嘘そのものより、失われた信頼にあると気づかせる一節。",
+            "book": "善悪の彼岸",
+            "bookId": "jgb"
+          },
+          {
+            "text": "自分の人生の「なぜ」を持つ者は、ほとんどどんな「いかに」とも折り合っていける。",
+            "cite": "12",
+            "gloss": "受験勉強や介護のように長く苦しい時期を過ごしているとき――耐える力は状況ではなく「何のために」から来るという言葉。理由があるなら我慢し続けろという意味ではない。",
+            "book": "偶像の黄昏 · 箴言と矢",
+            "bookId": "gd"
+          },
+          {
+            "text": "座りこんだままでいることこそ、精神に対する罪である。歩きながら得た思想だけが価値を持つ。",
+            "cite": "34",
+            "gloss": "机に向かったまま同じところを堂々めぐりしているとき――立ち上がって歩けという、体でする哲学の処方。",
+            "book": "偶像の黄昏 · 箴言と矢",
+            "bookId": "gd"
+          },
+          {
+            "text": "人が自分であるところのものになるには、自分が何であるかをまったく予感していないことが前提となる。この見地からすれば、人生の踏み外しさえ、一時の脇道や回り道や遅れさえも、それぞれに意味と価値をもつ。",
+            "cite": "9",
+            "gloss": "回り道をして就職が遅れた、専攻と違う仕事をしている――そんな焦りに、寄り道や足踏みも自分をつくる過程だったという回想。",
+            "book": "この人を見よ · なぜ私はこんなに利口なのか",
+            "bookId": "eh"
+          },
+          {
+            "text": "君がまさに人生の川を渡るための橋は、誰も君の代わりにかけてはくれない。君自身のほかには誰も。世界には、君のほかには誰も歩けない、ただ一つの道がある。どこへ通じているのか? 問うな、歩め。",
+            "cite": "1",
+            "gloss": "進路について親や先輩やネットの助言に囲まれて、自分の声が聞こえなくなったとき――助言を捨てろではなく、最後の橋は自分でかけるしかないという一節。",
+            "book": "反時代的考察 · 教育者としてのショーペンハウアー",
+            "bookId": "se"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "アフォリズム(箴言)",
+            "def": "一行から数ページにわたる、番号つきの短い文章です。ニーチェの中期の著作の多くがこの形式で、一節だけ取り出しても一つの考えとして読めます。"
+          },
+          {
+            "term": "自由精神(freier Geist)",
+            "def": "『人間的、あまりに人間的』の副題「自由精神のための書」に出てくる言葉です。ニーチェは、生まれや環境、身分や職業、時代の支配的な見方から期待されるのとは違うように考える人を自由精神と呼ぶ、と書いています(225)。"
+          },
+          {
+            "term": "共に喜ぶこと(Mitfreude)",
+            "def": "「共に苦しむこと(Mitleiden)」と対になる言葉で、ニーチェは友をつくるのはこちらだと書きました(『人間的、あまりに人間的』499)。"
+          },
+          {
+            "term": "善いエリスと悪いエリス",
+            "def": "エリスはギリシア神話の争いの女神です。ニーチェはヘシオドスを引きながら、嫉妬は他人を引きずり下ろす悪い争いと、自分を引き上げる善い争いに分かれると語ります(『漂泊者とその影』29)。"
+          },
+          {
+            "term": "汝自身であれ",
+            "def": "「教育者としてのショーペンハウアー」第1節で良心が呼びかける言葉であり、『この人を見よ』の副題「人はいかにして自分であるところのものになるか」へとつながる、ニーチェの長年の問いです。"
+          }
+        ],
+        "apply": "<p>今夜、眠る前に一日を裁きたくなったら、『曙光』317を思い出して判断を明日の朝に回してみましょう。ひどく疲れているなら、376の処方どおり、まず眠るのが先です。</p><p>変えたい習慣があるなら、534のように「ごく少量を、長く」設計しましょう。一日5分、一文、ひと駅歩くといった小さな単位に決め、日付だけを記録します。そして「教育者としてのショーペンハウアー」第1節がすすめる問いを一つ書いてみてください。「これまで自分が本当に愛してきたものは何だったか」。それらを並べてみると、自分がどんな人になりつつあるのかが少し見えてきます。</p>",
+        "provenance": "Dialogosの応答とこのページの引用は、ニーチェのドイツ語原文(eKGWB)と直接照らし合わせて現代日本語に新たに意訳したものであり、著作権の残る現代訳の文章を引き写すことはしません。出典表記は書名と節番号をあわせて示しています(例:『曙光』376=『曙光』第376節)。",
+        "faq": [
+          {
+            "q": "なぜ複数の本を一つのページにまとめているのですか?",
+            "a": "Dialogosが引用するニーチェの一節は『悦ばしき知識』と『ツァラトゥストラはこう言った』に最も多く、残る七つの本からは一冊につき一つか二つ、多くても三つです。そこでその七冊の一節を一つのページに集め、一節ごとに書名と節番号を記しました。"
+          },
+          {
+            "q": "ニーチェがアフォリズムの形で書いた本はどれですか?",
+            "a": "『人間的、あまりに人間的』(1878)とその補遺『漂泊者とその影』(1880)、『曙光』(1881)、『悦ばしき知識』(1882・1887)が代表的です。『善悪の彼岸』第四章や『偶像の黄昏』の最初の章「箴言と矢」も、短い箴言を集めた章です。"
+          },
+          {
+            "q": "「生きる理由を知る者はどんな状況にも耐えられる」の原文は?",
+            "a": "『偶像の黄昏』「箴言と矢」の12番です。原文は「自分の人生のなぜを持つ者は、ほとんどどんないかにとも折り合っていける」に近く、「ほとんど(fast)」という限定がついています。耐えよという命令ではなく、耐える力がどこから来るかについての観察です。"
+          },
+          {
+            "q": "「音楽が聞こえない者には、踊る人は狂って見える」はニーチェの言葉ですか?",
+            "a": "ニーチェの言葉として広く出回っていますが、ニーチェが刊行した主要著作のドイツ語原文(eKGWB)にはこの文は見当たりません。出典が確認できない引用なので、Dialogosはニーチェの言葉としては使いません。"
+          },
+          {
+            "q": "ニーチェの本には受け入れがたい箇所もありますか?",
+            "a": "あります。『善悪の彼岸』第四章のように、良い箴言のあいだに女性や特定の集団をおとしめる文が混じっているところがあります。Dialogosは節単位で確かめた一節だけを引用し、そうした文は取り上げません。ニーチェを読むときは、その限界もあわせて批判的に見るのがよいでしょう。"
+          },
+          {
+            "q": "日本語訳で読むにはどの本がありますか?",
+            "a": "ちくま学芸文庫『ニーチェ全集』には、第6巻(『漂泊者とその影』を収録)、第7巻『曙光』、第14巻『偶像の黄昏』などが収められています。全集の一冊として同じ体裁で読み進められます。"
+          },
+          {
+            "q": "原文を無料で読めますか?",
+            "a": "はい。七冊すべてのドイツ語原文をeKGWBで読めます。英語ではProject Gutenbergで『人間的、あまりに人間的』I・『善悪の彼岸』(ヘレン・ジマーン訳)と『曙光』(J・M・ケネディ訳)が読めます。"
+          },
+          {
+            "q": "Dialogosはこれらの本をどのように引用していますか?",
+            "a": "Dialogosはニーチェのドイツ語原文と直接照らし合わせて新たに日本語で言い直しており、著作権のある現代訳の文章は使いません。応答には「『曙光』376」のように書名と節番号をあわせて付けます。"
+          }
+        ],
+        "pdIntro": "ニーチェ(1844–1900)のドイツ語原文は著作権が消滅しています。eKGWBはジョルジョ・コッリとマッツィーノ・モンティナーリが編んだ批判版全集のデジタル版で、このページの七冊すべてをドイツ語で無料で読めます。英語のパブリックドメイン訳としては、ヘレン・ジマーン(1846–1934)訳の『人間的、あまりに人間的』I(1909年)と『善悪の彼岸』、J・M・ケネディ(1886–1918)訳の『曙光』(1911年)を案内します。『漂泊者とその影』『偶像の黄昏』『この人を見よ』「教育者としてのショーペンハウアー」の古い英訳は、訳者の没年が確認できないか米国でのみパブリックドメインであるため載せず、これらはeKGWBのドイツ語原文で案内します。",
+        "pdLinks": [
+          {
+            "label": "eKGWB — ニーチェ著作のドイツ語原文(コッリ/モンティナーリ批判版デジタル版)",
+            "url": "https://www.nietzschesource.org/#eKGWB"
+          },
+          {
+            "label": "Project Gutenberg — Human, All-Too-Human I(ヘレン・ジマーン訳、1909年、英語)",
+            "url": "https://www.gutenberg.org/ebooks/51935"
+          },
+          {
+            "label": "Project Gutenberg — The Dawn of Day(J・M・ケネディ訳、1911年、英語)",
+            "url": "https://www.gutenberg.org/ebooks/39955"
+          },
+          {
+            "label": "Project Gutenberg — Beyond Good and Evil(ヘレン・ジマーン訳、レヴィ版全集、英語)",
+            "url": "https://www.gutenberg.org/ebooks/4363"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "悦ばしき知識 · ニーチェ"
+          },
+          {
+            "slug": "nietzsche-zarathustra",
+            "label": "ツァラトゥストラはこう言った · ニーチェ"
+          },
+          {
+            "slug": "meditations",
+            "label": "自省録 · マルクス・アウレリウス"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "エンケイリディオン · エピクテトス"
+          },
+          {
+            "slug": "epicurus-sayings",
+            "label": "主要教説と箴言 · エピクロス"
+          }
+        ],
+        "editions": [
+          {
+            "title": "ニーチェ全集 6 人間的、あまりに人間的 2(ちくま学芸文庫)",
+            "translator": "中島義生",
+            "publisher": "筑摩書房(ちくま学芸文庫 ニーチェ全集)",
+            "note": "『さまざまな意見と箴言』と『漂泊者とその影』の二つのアフォリズム集を合わせた巻です。",
+            "verifiedSource": "https://www.chikumashobo.co.jp/product/9784480080769/"
+          },
+          {
+            "title": "ニーチェ全集 7 曙光(ちくま学芸文庫)",
+            "translator": "茅野良男",
+            "publisher": "筑摩書房(ちくま学芸文庫 ニーチェ全集)",
+            "note": "ちくま学芸文庫版『ニーチェ全集』の第7巻で、『曙光』を収めます。",
+            "verifiedSource": "https://www.chikumashobo.co.jp/product/9784480080776/"
+          },
+          {
+            "title": "ニーチェ全集 14 偶像の黄昏 反キリスト者(ちくま学芸文庫)",
+            "translator": "原佑",
+            "publisher": "筑摩書房(ちくま学芸文庫 ニーチェ全集)",
+            "note": "ちくま学芸文庫版『ニーチェ全集』の第14巻で、『偶像の黄昏』を収めます。",
+            "verifiedSource": "https://www.chikumashobo.co.jp/product/9784480080844/"
+          }
+        ]
+      },
+      "en": {
+        "workName": "Selected Aphorisms and Prose",
+        "mentorName": "Friedrich Nietzsche",
+        "lede": "Nietzsche's aphorisms from seven books, among them Daybreak and Twilight of the Idols: fresh paraphrases Dialogos draws on, plus free original texts.",
+        "intro": "This page gathers passages from several of Nietzsche's books into one <em>Selected Aphorisms and Prose</em>. From <em>Human, All Too Human</em> (1878) to <em>Ecce Homo</em>, the autobiography he wrote in 1888, Dialogos quotes only one to three passages per book, so rather than give each book its own page we have collected them here, together with the 1874 essay \"Schopenhauer as Educator.\" Every passage is labeled with its book and section number (for example, Daybreak 376), and the sections below follow the order of publication. The conversations you have with Nietzsche in Dialogos are grounded in these books and his other works.",
+        "context": "<p>In 1874, as full professor of classical philology at the University of Basel, Nietzsche published \"Schopenhauer as Educator\" as the third of his Untimely Meditations. <em>Human, All Too Human</em>, written in Sorrento over the winter of 1876–77, came out in 1878 with the subtitle \"A Book for Free Spirits,\" followed in 1880 by its second and last supplement, <em>The Wanderer and His Shadow</em>. Then came <em>Daybreak</em> (1881), <em>Beyond Good and Evil</em> (1886), and <em>Twilight of the Idols</em> (1889). He wrote the autobiography <em>Ecce Homo</em> between October 15 and November 4, 1888, but it was not published until 1908. Most of these books are made of short numbered sections, from a single line to a few pages, so a single section can be read as a complete thought; \"Schopenhauer as Educator\" is the exception, a continuous essay.</p>",
+        "sections": [
+          {
+            "anchor": "human-all-too-human",
+            "title": "Human, All Too Human (1878)",
+            "body": "His first book of aphorisms, subtitled \"A Book for Free Spirits\" and written in Sorrento over the winter of 1876–77. We chose the diagnosis that busy people are active only in their roles, not as individuals (283), and the one-line definition of what makes a friend (499). (283, 499)"
+          },
+          {
+            "anchor": "wanderer",
+            "title": "The Wanderer and His Shadow (1880)",
+            "body": "Published as the second and last supplement to Human, All Too Human, and bound into that book as its second volume in the new edition of 1886. We chose section 16, on becoming good neighbors to the nearest things, and section 29, on how envy splits into dragging others down or lifting yourself up. Section 192, which sums up Epicurus's luxury as \"a little garden, figs, small cheeses, and three or four good friends,\" is also in this book. (16, 29)"
+          },
+          {
+            "anchor": "daybreak",
+            "title": "Daybreak (1881)",
+            "body": "A book of aphorisms subtitled \"Thoughts on Moral Prejudices.\" We chose 317 (the evening's verdict comes from fatigue), 376 (when tired, sleep a lot), and 534 (give change in small doses over a long time). Section 450, which quotes Marcus Aurelius, and section 546, which praises Epictetus, are also in this book. (317, 376, 534)"
+          },
+          {
+            "anchor": "beyond-good-and-evil",
+            "title": "Beyond Good and Evil (1886)",
+            "body": "Subtitled \"Prelude to a Philosophy of the Future.\" Of its nine chapters we drew two passages from chapter 4, \"Maxims and Interludes\" (sections 63–185). That chapter also contains maxims that are hard to accept today, so Dialogos quotes it only section by section. (70, 183)"
+          },
+          {
+            "anchor": "twilight",
+            "title": "Twilight of the Idols · Maxims and Arrows (1889)",
+            "body": "Subtitled \"How to Philosophize with a Hammer.\" From the 44 short maxims of its first chapter, \"Maxims and Arrows,\" we chose number 12, on having a why that lets you get along with almost any how, and number 34, on thoughts that come from walking. (12, 34)"
+          },
+          {
+            "anchor": "ecce-homo",
+            "title": "Ecce Homo · Why I Am So Clever (written 1888)",
+            "body": "An autobiography subtitled \"How One Becomes What One Is.\" In section 9 of \"Why I Am So Clever,\" Nietzsche looks back and says that because he did not know in advance what he was, even his missteps, side paths, and delays had their own meaning. (9)"
+          },
+          {
+            "anchor": "schopenhauer-as-educator",
+            "title": "Untimely Meditations · Schopenhauer as Educator (1874)",
+            "body": "The third of the Untimely Meditations. Its first section says that each of us knows we exist only once in the world, yet hides it out of fear of the neighbors, and calls true educators liberators. The passage about building your own bridge across the river of life is here. (1)"
+          }
+        ],
+        "quotes": [
+          {
+            "text": "Anyone without two-thirds of the day to call their own is not free, whether statesman, merchant, official, or scholar.",
+            "cite": "283",
+            "gloss": "When your calendar is full and you still feel empty: a question about how much of the day you get as yourself, not as your job title. Not a reproach to anyone who cannot cut their hours.",
+            "book": "Human, All Too Human",
+            "bookId": "ma"
+          },
+          {
+            "text": "What makes a friend is shared joy, not shared suffering.",
+            "cite": "499",
+            "gloss": "When you share good news and the reply is lukewarm: the test of a friendship is whether someone can be glad with you. It does not say sorrow should not be shared.",
+            "book": "Human, All Too Human",
+            "bookId": "ma"
+          },
+          {
+            "text": "We do not need certainty about the farthest horizons to live a full and capable human life. We have to become good neighbors to the nearest things again.",
+            "cite": "16",
+            "gloss": "When the big questions about life have no answers and that unsettles you: come back to the near things first, meals, sleep, a walk.",
+            "book": "The Wanderer and His Shadow",
+            "bookId": "ws"
+          },
+          {
+            "text": "The envious person feels it whenever someone rises above the common measure, and wants either to push them back down to it or to lift himself up to it. Here two ways of acting part, which Hesiod called the bad Eris and the good.",
+            "cite": "29",
+            "gloss": "When a colleague's win stings: notice that the feeling can go two ways, dragging them down or climbing up to meet them.",
+            "book": "The Wanderer and His Shadow",
+            "bookId": "ws"
+          },
+          {
+            "text": "Whoever looks back on the day's work and on life's work at the end of the day, tired out, usually arrives at a gloomy view. But the day and life are not to blame for that; tiredness is.",
+            "cite": "317",
+            "gloss": "Lying awake at 11 p.m. tallying your life's failures: that verdict comes from fatigue, not from your life, so look again in the morning. It is not a way to brush off a low mood that lasts.",
+            "book": "Daybreak",
+            "bookId": "m"
+          },
+          {
+            "text": "What can you do to revive yourself when you are tired and sick of yourself? The best thing, now as ever, is plenty of sleep, in the literal sense and the figurative one. Then your morning will come back to you.",
+            "cite": "376",
+            "gloss": "When you are drained and reaching for one more productivity hack: rest before stimulation, an unexpectedly gentle prescription. Not medical advice about sleep.",
+            "book": "Daybreak",
+            "bookId": "m"
+          },
+          {
+            "text": "If a change is to reach as deep as possible, give the remedy in the smallest doses, but without a break and over long stretches of time. Who can create anything great in one stroke?",
+            "cite": "534",
+            "gloss": "When January's resolutions are gone by February: deep change comes in small doses kept up over a long time, not in one heroic push.",
+            "book": "Daybreak",
+            "bookId": "m"
+          },
+          {
+            "text": "If you have character, you also have your typical experience, the one that keeps coming back.",
+            "cite": "70",
+            "gloss": "When you keep ending up in the same kind of conflict with the same kind of person: a pattern to read for clues, not a curse.",
+            "book": "Beyond Good and Evil",
+            "bookId": "jgb"
+          },
+          {
+            "text": "\"What shook me was not that you lied to me, but that I can no longer believe you.\"",
+            "cite": "183",
+            "gloss": "When you have found out that someone you trusted lied: the deeper wound is often the trust you cannot get back, more than the lie itself.",
+            "book": "Beyond Good and Evil",
+            "bookId": "jgb"
+          },
+          {
+            "text": "If you have your own why of life, you can get along with almost any how.",
+            "cite": "12",
+            "gloss": "Going through a grueling stretch, like studying at night or caring for a parent: the strength to carry it comes from a why. It does not mean you are obliged to endure anything at all.",
+            "book": "Twilight of the Idols · Maxims and Arrows",
+            "bookId": "gd"
+          },
+          {
+            "text": "Staying in your seat is the real sin against the spirit. Only thoughts you have walked your way into are worth anything.",
+            "cite": "34",
+            "gloss": "Stuck at the desk, rereading the same paragraph: get up and walk. A philosophy you practice with your legs.",
+            "book": "Twilight of the Idols · Maxims and Arrows",
+            "bookId": "gd"
+          },
+          {
+            "text": "Becoming what you are presupposes that you have not the faintest idea what you are. Seen this way, even life's missteps have their own sense and worth: the side paths and wrong turns for a while, the delays.",
+            "cite": "9",
+            "gloss": "When you switched majors, changed careers, or started later than everyone else: detours and delays can turn out to have been part of becoming yourself.",
+            "book": "Ecce Homo · Why I Am So Clever",
+            "bookId": "eh"
+          },
+          {
+            "text": "No one can build the bridge on which you, and only you, must cross the river of life; no one but you. There is one path in the world that no one but you can walk. Where does it lead? Do not ask. Walk it.",
+            "cite": "1",
+            "gloss": "When advice from parents, mentors, and the internet has drowned out your own voice: not \"ignore everyone,\" but the last bridge is one only you can build.",
+            "book": "Untimely Meditations · Schopenhauer as Educator",
+            "bookId": "se"
+          }
+        ],
+        "concepts": [
+          {
+            "term": "aphorism",
+            "def": "A short numbered piece of writing, from one line to a few pages. Most of Nietzsche's middle-period books take this form, so a single section can be read as a complete thought."
+          },
+          {
+            "term": "free spirit (freier Geist)",
+            "def": "From the subtitle of Human, All Too Human, \"A Book for Free Spirits.\" Nietzsche calls a free spirit someone who thinks differently from what would be expected given their origins, surroundings, class, occupation, or the prevailing views of the time (225)."
+          },
+          {
+            "term": "shared joy (Mitfreude)",
+            "def": "The counterpart of \"shared suffering\" (Mitleiden). Nietzsche wrote that it is shared joy that makes a friend (Human, All Too Human 499)."
+          },
+          {
+            "term": "good Eris and bad Eris",
+            "def": "Eris is the Greek goddess of strife. Drawing on Hesiod, Nietzsche says envy splits into a bad strife that drags others down and a good strife that lifts you up (The Wanderer and His Shadow 29)."
+          },
+          {
+            "term": "be yourself",
+            "def": "What conscience calls out in the first section of \"Schopenhauer as Educator,\" and the question that runs on to the subtitle of Ecce Homo, \"How One Becomes What One Is.\""
+          }
+        ],
+        "apply": "<p>Tonight, if you feel the urge to pass judgment on your day before sleep, remember Daybreak 317 and postpone the verdict until morning. If you are badly worn out, follow 376 and sleep first.</p><p>If there is a habit you want to change, design it the way 534 suggests: tiny doses, kept up for a long time. Five minutes a day, one sentence, one stop's worth of walking, and just log the dates. Then write down the question the first section of \"Schopenhauer as Educator\" recommends: \"What have I truly loved so far?\" Set those things side by side, and you start to see who you are becoming.</p>",
+        "provenance": "Dialogos's replies and the passages on this page are fresh paraphrases into modern English, checked directly against Nietzsche's German text (eKGWB); they do not reproduce the wording of any copyrighted modern translation. Each citation gives the book and the section number (for example, Daybreak 376 means section 376 of Daybreak).",
+        "faq": [
+          {
+            "q": "Why are several books gathered on one page?",
+            "a": "Most of the Nietzsche passages Dialogos quotes come from The Gay Science and Thus Spoke Zarathustra; from the other seven books it uses only one to three passages each. So those seven books share this page, and every passage carries its book title and section number."
+          },
+          {
+            "q": "Which of Nietzsche's books are written as aphorisms?",
+            "a": "Human, All Too Human (1878) and its supplement The Wanderer and His Shadow (1880), Daybreak (1881), and The Gay Science (1882, enlarged 1887) are the main ones. Chapter 4 of Beyond Good and Evil and the first chapter of Twilight of the Idols, \"Maxims and Arrows,\" are also collections of short maxims."
+          },
+          {
+            "q": "Where does the line about having a \"why\" that lets you bear almost any \"how\" come from?",
+            "a": "It is number 12 of \"Maxims and Arrows\" in Twilight of the Idols. The German is closer to \"If you have your own why of life, you can get along with almost any how,\" and it includes the qualifier \"almost\" (fast). It is an observation about where the strength to endure comes from, not an order to endure."
+          },
+          {
+            "q": "Did Nietzsche say \"Those who were seen dancing were thought to be insane by those who could not hear the music\"?",
+            "a": "It circulates widely under his name, but the sentence does not appear in the German text of the major works Nietzsche published (as searched in eKGWB). Since its source cannot be confirmed, Dialogos does not present it as Nietzsche's."
+          },
+          {
+            "q": "Are there uncomfortable passages in Nietzsche's books?",
+            "a": "Yes. In places such as chapter 4 of Beyond Good and Evil, good maxims sit next to lines that demean women or particular groups. Dialogos quotes only passages it has checked section by section and does not reproduce those lines. It is worth reading Nietzsche with a critical eye on his limits as well."
+          },
+          {
+            "q": "Where is \"shared joy, not shared suffering, makes a friend\"?",
+            "a": "In section 499 of Human, All Too Human, titled \"Friend.\" The original is a single sentence. It does not say sorrow should not be shared; it notes that being glad at someone else's joy is the rarer gift."
+          },
+          {
+            "q": "Can I read these books for free?",
+            "a": "Yes. The German text of all seven books is on eKGWB, and Project Gutenberg has English translations of Human, All Too Human I and Beyond Good and Evil (Helen Zimmern) and of Daybreak (J. M. Kennedy)."
+          },
+          {
+            "q": "How does Dialogos quote these books?",
+            "a": "Dialogos paraphrases afresh from Nietzsche's German and does not use the wording of copyrighted modern translations. Each citation carries the book and section number, for example \"Daybreak 376.\""
+          }
+        ],
+        "pdIntro": "Nietzsche (1844–1900) wrote in German, and his texts are out of copyright. eKGWB is the digital version of the critical edition edited by Giorgio Colli and Mazzino Montinari, and it has all seven books on this page in German, free to read. As public-domain English translations we link Helen Zimmern's (1846–1934) Human, All-Too-Human I (1909) and Beyond Good and Evil, and J. M. Kennedy's (1886–1918) The Dawn of Day (1911). The older English versions of The Wanderer and His Shadow, Twilight of the Idols, Ecce Homo, and \"Schopenhauer as Educator\" are left out because their translators' dates of death could not be confirmed or because they are public domain only in the United States; for those books we point to the German text on eKGWB.",
+        "pdLinks": [
+          {
+            "label": "eKGWB — Nietzsche's works in the German original (digital Colli–Montinari critical edition)",
+            "url": "https://www.nietzschesource.org/#eKGWB"
+          },
+          {
+            "label": "Project Gutenberg — Human, All-Too-Human I (trans. Helen Zimmern, 1909, English)",
+            "url": "https://www.gutenberg.org/ebooks/51935"
+          },
+          {
+            "label": "Project Gutenberg — The Dawn of Day (trans. J. M. Kennedy, 1911, English)",
+            "url": "https://www.gutenberg.org/ebooks/39955"
+          },
+          {
+            "label": "Project Gutenberg — Beyond Good and Evil (trans. Helen Zimmern, Levy edition, English)",
+            "url": "https://www.gutenberg.org/ebooks/4363"
+          }
+        ],
+        "related": [
+          {
+            "slug": "nietzsche-gay-science",
+            "label": "The Gay Science · Nietzsche"
+          },
+          {
+            "slug": "nietzsche-zarathustra",
+            "label": "Thus Spoke Zarathustra · Nietzsche"
+          },
+          {
+            "slug": "meditations",
+            "label": "Meditations · Marcus Aurelius"
+          },
+          {
+            "slug": "enchiridion",
+            "label": "Enchiridion · Epictetus"
+          },
+          {
+            "slug": "epicurus-sayings",
+            "label": "Principal Doctrines and Sayings · Epicurus"
+          }
+        ],
+        "editions": [
+          {
+            "title": "Beyond Good and Evil (Penguin Classics)",
+            "translator": "R. J. Hollingdale (introduction by Michael Tanner)",
+            "publisher": "Penguin Classics",
+            "note": "Hollingdale's translation of the whole book, including chapter 4, \"Maxims and Interludes,\" from which this page draws two passages.",
+            "verifiedSource": "https://www.penguin.co.uk/books/35479/beyond-good-and-evil-by-friedrich-nietzsche-trans--r-j-hollingdale-intro-michael-tanner/9780140449235"
+          },
+          {
+            "title": "Ecce Homo: How One Becomes What One Is (Penguin Classics)",
+            "translator": "R. J. Hollingdale (introduction by Michael Tanner)",
+            "publisher": "Penguin Classics",
+            "note": "Hollingdale's translation of Nietzsche's autobiography, including the chapter \"Why I Am So Clever.\"",
+            "verifiedSource": "https://penguin.co.uk/books/35143/ecce-homo-by-friedrich-nietzsche-trans-rj-hollingdale-new-intromichael-tanner/9780140445152"
+          }
+        ]
+      }
+    }
   }
 }
