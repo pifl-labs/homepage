@@ -62,6 +62,15 @@ const alternates = [
 const titleWord = { ko: '출처', ja: '出典', en: 'Source' }[lang];
 const title = `${c.workName} · ${c.mentorName} — Dialogos ${titleWord} | PiFl Labs`;
 
+// 모음 페이지(구절마다 book이 있는 쪽)는 실제 책들을, 나머지는 그 작품 하나를 다룬다 —
+// '잠언과 산문 선집' 같은 쪽 이름을 실재하는 책처럼 단언하지 않는다.
+const collectionBooks = [...new Set((c.quotes ?? []).map((q) => q.book).filter((b): b is string => Boolean(b)))];
+const author = { '@type': 'Person', name: c.mentorName };
+const about =
+  collectionBooks.length > 0
+    ? collectionBooks.map((name) => ({ '@type': 'Book', name, author }))
+    : { '@type': 'Book', name: c.workName, author };
+
 // AEO — Article + BreadcrumbList + FAQPage 구조화 데이터
 const jsonLd = [
   {
@@ -74,7 +83,7 @@ const jsonLd = [
     mainEntityOfPage: selfUrl,
     author: { '@type': 'Organization', name: 'PiFl Labs', url: 'https://pifl-labs.com' },
     publisher: { '@type': 'Organization', name: 'PiFl Labs', url: 'https://pifl-labs.com' },
-    about: { '@type': 'Book', name: c.workName, author: { '@type': 'Person', name: c.mentorName } },
+    about,
   },
   {
     '@context': 'https://schema.org',
