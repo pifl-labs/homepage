@@ -6,6 +6,7 @@ import {apps,appList,displayVersion,releaseVersionLabel} from '../src/data/apps.
 import {onRequest} from '../functions/_middleware.ts';
 const read=p=>readFileSync(new URL(p,import.meta.url),'utf8');
 const receipt=JSON.parse(read('../docs/release/bridge-ios-public-20261111.json'));
+const laterVoyageAndroid=JSON.parse(read('../docs/release/voyage-android-public-20261113.json'));
 const bridge=apps['pipi-bridge'];
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 
@@ -31,7 +32,9 @@ test('every other app source block stays byte-identical to current main',()=>{
   const source=read('../src/data/apps.ts');
   for(const [name,hash] of Object.entries(receipt.unchangedOtherAppBlocksSHA256)){
     const block=source.match(new RegExp(`const ${name}: AppMeta = \\{[\\s\\S]*?\\n\\};`))?.[0];
-    assert.ok(block,name);assert.equal(sha(block),hash,name);
+    assert.ok(block,name);
+    if(name==='wordVoyage')assert.equal(hash,laterVoyageAndroid.originalBlockSHA256,'dated Voyage receipt preserves the prior invariant');
+    assert.equal(sha(block),name==='wordVoyage'?laterVoyageAndroid.expectedBlockSHA256:hash,name);
   }
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; submitted 1.0.2 screenshots remain historical`,()=>{
@@ -44,7 +47,8 @@ for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; su
   const home=read(`../dist/${lang}/index.html`);
   const row=[...home.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m=>m[1]).find(s=>s.includes(`href="/${lang}/apps/pipi-bridge/"`));
   assert.ok(row);assert.match(row,/iOS v1\.0\.3/);assert.match(row,/Android v1\.0\.2/);
-  assert.match(home,/<time datetime="2026-11-11"/);
+  // The fleet's latest observation advances for Voyage Android; Bridge's own Nov11 receipt stays above.
+  assert.ok(home.includes(`<time datetime="${laterVoyageAndroid.observedAt}"`));
   assert.match(read('../src/components/FleetLog.astro'),/\.fleet-log-section \.fleet-note \{ color: var\(--text-secondary\); \}/);
 });
 test('small light metadata uses the established foreground; only short version units stay intact',()=>{

@@ -131,7 +131,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : []), ...(focusWebTrial ? ['/styles-focus-web-trial.css?v=a75176d23d53'] : []), ...(wordsWebTrial ? ['/styles-words-web-trial.css?v=33d77faa265c'] : []), ...(voyageWebTrial ? ['/styles-voyage-web-trial.css?v=4be9af8c35cf'] : []), ...(ddayDateHelp ? ['/styles-dday-date-help.css?v=de5bbc3a688c'] : [])]}
+  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-word-voyage' ? ['/styles-voyage-release-version.css?v=e0c8f0bda2fd'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : []), ...(focusWebTrial ? ['/styles-focus-web-trial.css?v=a75176d23d53'] : []), ...(wordsWebTrial ? ['/styles-words-web-trial.css?v=33d77faa265c'] : []), ...(voyageWebTrial ? ['/styles-voyage-web-trial.css?v=4be9af8c35cf'] : []), ...(ddayDateHelp ? ['/styles-dday-date-help.css?v=de5bbc3a688c'] : [])]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -204,7 +204,9 @@ const jsonLd = {
               <time datetime={latestUpdate(app)}>{relUpdated} {ul.updated}</time>
               {relSince && (app.slug === 'pipi-focus'
                 ? <span class="app-rel-since-group"><span class="app-rel-sep" aria-hidden="true">·</span> <span>{ul.since} <span class="app-rel-since-date" style="white-space: nowrap">{relSince}</span></span></span>
-                : <><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} {relSince}</span></>)}
+                : app.slug === 'pipi-word-voyage'
+                  ? <><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} <time datetime={rel.since} class="voyage-release-since-date">{relSince}</time></span></>
+                  : <><span class="app-rel-sep" aria-hidden="true">·</span><span>{ul.since} {relSince}</span></>)}
             </p>
           )}
         </div>

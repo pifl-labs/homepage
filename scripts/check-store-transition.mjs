@@ -12,19 +12,22 @@ const receipt = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-au
 const seen = (slug) => receipt.find((a) => a.slug === slug);
 const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
 const laterBridgeIOS = JSON.parse(readFileSync(new URL('../docs/release/bridge-ios-public-20261111.json', import.meta.url), 'utf8'));
+const laterVoyageAndroid = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json', import.meta.url), 'utf8'));
 const laterIOS = { 'pipi-log': laterLogIOS, 'pipi-bridge': laterBridgeIOS };
+const laterAndroid = { 'pipi-word-voyage': laterVoyageAndroid };
 const iosRecord = slug => laterIOS[slug]?.apps.find(r=>r.lang==='en').app ?? seen(slug).ios.en;
+const androidRecord = slug => laterAndroid[slug]?.apps.find(r=>r.lang==='en').app ?? seen(slug).android.en;
 const iosVersion = (slug) => iosRecord(slug).version;
-const androidVersion = (slug) => seen(slug).android.en.version;
+const androidVersion = (slug) => androidRecord(slug).version;
 const shared = (slug) => (iosVersion(slug) === androidVersion(slug) ? iosVersion(slug) : undefined);
 const iosDay = (slug) => iosRecord(slug).currentVersionReleaseDate.slice(0, 10);
-const playDay = (slug) => new Date(`${seen(slug).android.en.updatedDisplay} UTC`).toISOString().slice(0, 10);
+const playDay = (slug) => new Date(`${androidRecord(slug).updatedDisplay} UTC`).toISOString().slice(0, 10);
 const latestDay = (slug) => [iosDay(slug), playDay(slug)].sort().at(-1);
 const { liveApps, formatDate } = await import('../src/data/apps.ts');
 // Expected observation days come from the receipt, so a wrong checkedAt in apps.ts cannot set its own expectation.
 const observationDates = [...new Set(liveApps.filter(app=>app.release).flatMap((app) => {
   assert.ok(seen(app.slug), `${app.slug}: versioned app requires its own receipt`);
-  return [seen(app.slug).observedAt, ...(laterIOS[app.slug] ? [laterIOS[app.slug].observedAt] : [])];
+  return [seen(app.slug).observedAt, ...(laterIOS[app.slug] ? [laterIOS[app.slug].observedAt] : []), ...(laterAndroid[app.slug] ? [laterAndroid[app.slug].observedAt] : [])];
 }))].sort();
 const observationRange = [observationDates[0], observationDates.at(-1)].filter((d, i, all) => i === 0 || d !== all[0]);
 const versionToken = (prefix, version) => new RegExp(`(?:^|[^\\w.])${prefix}v${version.replace(/\./g, '\\.')}(?![\\w.])`);
