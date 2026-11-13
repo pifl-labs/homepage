@@ -20,8 +20,16 @@ const KANA_PAPER_RESOURCES = new Map([
 const SUPPORTED = ['ko', 'en', 'ja'] as const;
 type Locale = (typeof SUPPORTED)[number];
 const DEFAULT_LOCALE: Locale = 'ko';
+// The Log Play Website is a shared entry for KO/JA/EN readers. Only this
+// introduction falls back to English when no supported preference is found;
+// localized page content, privacy pages and other entry defaults are unchanged.
+const LOG_INTRO_PATHS = new Set(['/apps/pipi-log', '/apps/pipi-log/']);
 const COOKIE_NAME = 'pref-lang';
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1년
+
+function preferenceCookie(locale: Locale): string {
+  return `${COOKIE_NAME}=${locale}; Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`;
+}
 
 function isLocale(value: string): value is Locale {
   return (SUPPORTED as readonly string[]).includes(value);
@@ -101,6 +109,15 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
   // 1) 이미 언어 prefix가 있으면 통과
   for (const loc of SUPPORTED) {
     if (path === `/${loc}` || path.startsWith(`/${loc}/`)) {
+      // On this introduction only, a chosen language URL also updates the
+      // existing preference. Otherwise a previous automatic KO cookie would
+      // undo an explicit EN/JA selection on the next neutral Website visit.
+      if (LOG_INTRO_PATHS.has(path.slice(loc.length + 1))) {
+        const response = await next();
+        const localized = new Response(response.body, response);
+        localized.headers.append('Set-Cookie', preferenceCookie(loc));
+        return localized;
+      }
       return next();
     }
   }
@@ -119,15 +136,16 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
   //    path 를 보존해 /terms → /ko/terms 처럼 deep link 도 올바르게 라우팅.
   const cookieLang = readCookie(request.headers.get('cookie'), COOKIE_NAME);
   const fromCookie = cookieLang && isLocale(cookieLang) ? cookieLang : null;
+  const fallbackLocale: Locale = LOG_INTRO_PATHS.has(path) ? 'en' : DEFAULT_LOCALE;
   const detected =
-    fromCookie ?? detectFromAcceptLanguage(request.headers.get('accept-language')) ?? DEFAULT_LOCALE;
+    fromCookie ?? detectFromAcceptLanguage(request.headers.get('accept-language')) ?? fallbackLocale;
 
   const target = `${url.origin}/${detected}${path}${url.search}${url.hash}`;
   return new Response(null, {
     status: 302,
     headers: {
       Location: target,
-      'Set-Cookie': `${COOKIE_NAME}=${detected}; Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`,
+      'Set-Cookie': preferenceCookie(detected),
       'Cache-Control': 'no-store',
     },
   });
