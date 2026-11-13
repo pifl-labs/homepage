@@ -8,6 +8,7 @@ import { appSlugs, builtAppLandingFiles } from './built-app-pages.mjs';
 import { focusWebTrialFor } from '../src/data/focus-web-trial.mjs';
 import { wordsWebTrialFor } from '../src/data/words-web-trial.mjs';
 import { voyageWebTrialFor } from '../src/data/voyage-web-trial.mjs';
+import { ddayDateHelpFor } from '../src/data/dday-date-help.mjs';
 import { createHash } from 'node:crypto';
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
@@ -20,6 +21,9 @@ assert.deepEqual(readFileSync(join(dist, 'styles-words-web-trial.css')), wordsCs
 const voyageCss = readFileSync(new URL('../public/styles-voyage-web-trial.css', import.meta.url));
 const voyageCssUrl = `/styles-voyage-web-trial.css?v=${createHash('sha256').update(voyageCss).digest('hex').slice(0, 12)}`;
 assert.deepEqual(readFileSync(join(dist, 'styles-voyage-web-trial.css')), voyageCss, 'Voyage stylesheet built bytes match source');
+const ddayCss = readFileSync(new URL('../public/styles-dday-date-help.css', import.meta.url));
+const ddayCssUrl = `/styles-dday-date-help.css?v=${createHash('sha256').update(ddayCss).digest('hex').slice(0, 12)}`;
+assert.deepEqual(readFileSync(join(dist, 'styles-dday-date-help.css')), ddayCss, 'D-Day stylesheet built bytes match source');
 const expected = {
   ko: { note: ['하루 2회 무료', '인터넷', '광고', '선택형 변환권 구매'], styles: ['원본 느낌', '동화풍', '꼬마 캐릭터', '만화풍'], sample: '예시 도안', direct: 'AI 변환 횟수를 쓰지 않는 무료 기능' },
   ja: { note: ['1日2回無料', 'インターネット', '広告', '任意の変換チケット購入'], styles: ['写真らしく', '絵本風', 'ちびキャラ', 'マンガ風'], sample: 'サンプル図案', direct: 'AI変換の回数を使わない無料機能' },
@@ -31,6 +35,7 @@ for (const [lang, checks] of Object.entries(expected)) {
   assert.ok(!html.includes('styles-focus-web-trial.css'), `${lang}: Focus-only CSS does not leak to Draw`);
   assert.ok(!html.includes('styles-words-web-trial.css'), `${lang}: Words-only CSS does not leak to Draw`);
   assert.ok(!html.includes('styles-voyage-web-trial.css'), `${lang}: Voyage-only CSS does not leak to Draw`);
+  assert.ok(!html.includes('styles-dday-date-help.css') && !html.includes('data-date-help="dday"'), `${lang}: D-Day help does not leak to Draw`);
   const photoGuides = [...html.matchAll(/<section\b[^>]*id="draw-ja-photo-guide"[^>]*>(.*?)<\/section>/gs)];
   assert.equal(photoGuides.length, lang === 'ja' ? 1 : 0, `${lang}: photo guide is Japanese Draw only`);
   if (lang === 'ja') {
@@ -73,6 +78,7 @@ for (const [lang, checks] of Object.entries(expected)) {
     if (!file.includes('/pipi-focus/')) assert.ok(!other.includes('styles-focus-web-trial.css'), `${file}: Focus-only CSS does not leak`);
     if (!file.includes('/pipi-words/')) assert.ok(!other.includes('styles-words-web-trial.css'), `${file}: Words-only CSS does not leak`);
     if (!file.includes('/pipi-word-voyage/') || lang === 'ja') assert.ok(!other.includes('styles-voyage-web-trial.css'), `${file}: Voyage-only CSS does not leak`);
+    if (!file.includes('/pipi-dday/') || lang !== 'ko') assert.ok(!other.includes('styles-dday-date-help.css') && !other.includes('data-date-help="dday"'), `${file}: Korean D-Day-only help does not leak`);
     if(file.includes('/pipi-spend/')) {
       const ownNote=other.match(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/s)?.[1];
       assert.ok(ownNote, `${file}: Spend must disclose its own cost`);
@@ -133,6 +139,22 @@ for (const [lang, checks] of Object.entries(expected)) {
       assert.equal(notes[0][1].replace(links[0][0], '').replace(paragraphs[0][0], '').trim(), '', `${file}: no inline boundary text or other content`);
       const styleLinks = [...other.matchAll(/<link\b[^>]*href="(\/styles-voyage-web-trial\.css[^\"]*)"[^>]*>/g)];
       assert.deepEqual(styleLinks.map(match => match[1]), [voyageCssUrl], `${file}: exact content-versioned Voyage stylesheet`);
+      for (const text of [checks.note[0], checks.note[3]]) assert.ok(!notes[0][1].includes(text), `${file}: Draw-specific conversion claim leaked`);
+    } else if (file.includes('/pipi-dday/') && lang === 'ko') {
+      const notes = [...other.matchAll(/<div\b[^>]*class="app-download-note"[^>]*>(.*?)<\/div>/gs)];
+      const help = ddayDateHelpFor({ slug: 'pipi-dday', status: 'live', lang });
+      assert.equal(notes.length, 1, `${file}: one Korean date-help note`);
+      assert.match(notes[0][0], /data-date-help="dday"/, `${file}: explicit date-help marker`);
+      assert.equal((other.match(/class="app-download-note"/g) ?? []).length, 1, `${file}: no additional disclosure`);
+      const links = [...notes[0][1].matchAll(/<a\b[^>]*href="([^"]+)"[^>]*hreflang="([^"]+)"[^>]*>(.*?)<\/a>/gs)];
+      assert.equal(links.length, 1, `${file}: one exact date-guide link`);
+      assert.deepEqual(links[0].slice(1), [help.href, 'ko', help.label], `${file}: exact target, language and label`);
+      const paragraphs = [...notes[0][1].matchAll(/<p\b[^>]*>(.*?)<\/p>/gs)];
+      assert.equal(paragraphs.length, 1, `${file}: one boundary paragraph`);
+      assert.equal(paragraphs[0][1], help.note, `${file}: exact separate-web and transfer boundary`);
+      assert.equal(notes[0][1].replace(links[0][0], '').replace(paragraphs[0][0], '').trim(), '', `${file}: no extra content`);
+      const styleLinks = [...other.matchAll(/<link\b[^>]*href="(\/styles-dday-date-help\.css[^\"]*)"[^>]*>/g)];
+      assert.deepEqual(styleLinks.map(match => match[1]), [ddayCssUrl], `${file}: exact content-hashed stylesheet`);
       for (const text of [checks.note[0], checks.note[3]]) assert.ok(!notes[0][1].includes(text), `${file}: Draw-specific conversion claim leaked`);
     } else assert.doesNotMatch(other, /class="app-download-note"/, `${file}: Draw disclosure leaked`);
   }

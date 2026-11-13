@@ -1,0 +1,43 @@
+{
+  "observedAt": "2026-11-13",
+  "baseCommit": "592ab396d73b8424c4ef21d9ea78b1da28dec937",
+  "scope": "KO live D-Day secondary entry to an existing independent date calculator; no native app setting preview or automatic transfer",
+  "source": "https://pipi-worlds.com/ko/world/hundredth-day/",
+  "actualSyntheticExample": {
+    "start": "2026-11-13",
+    "hundredthDay": "2027-02-20",
+    "hundredDaysLater": "2027-02-21",
+    "realPersonDate": false,
+    "clipboardWrite": false
+  },
+  "koOnlyReason": "The existing guide is Korean only; no invented translation routes",
+  "body": "설치·가입 없는 별도 웹 계산기입니다. 앱의 계산 설정과는 별개이며 결과도 자동으로 옮겨지지 않습니다.",
+  "unchangedAppsSHA256": "b133441711375f28eab44ce2a9f851310c6d3d1fb0168c703eeb8c40c3dc9e80",
+  "originalLandingSHA256": "32427e6aba88447c6f67284d2d79518713d5acfc30c0701f8b9f63c171906a4d",
+  "localChangedBlockMatrix": {
+    "widths": [
+      320,
+      375,
+      768,
+      1280,
+      1920
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "rootTextScale": [
+      1,
+      2
+    ],
+    "cells": 20,
+    "notNativeBrowserZoom": true,
+    "motionDisabledForStillMatrixOnly": true,
+    "nativeKeyboardFlowOnUnmodifiedBuild": true
+  },
+  "notClaimed": [
+    "Native iOS/Android device QA",
+    "Whole-site scanner PASS",
+    "Install, revenue, guaranteed effect or public deployment before same-source readback"
+  ]
+}

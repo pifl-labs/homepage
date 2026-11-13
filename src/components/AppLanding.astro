@@ -4,6 +4,7 @@ import { appIconSrc } from "../data/app-icons.mjs";
 import { focusWebTrialFor } from '../data/focus-web-trial.mjs';
 import { wordsWebTrialFor } from '../data/words-web-trial.mjs';
 import { voyageWebTrialFor } from '../data/voyage-web-trial.mjs';
+import { ddayDateHelpFor } from '../data/dday-date-help.mjs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreNameNotice from './StoreNameNotice.astro';
 import DrawPhotoChecklist from './DrawPhotoChecklist.astro';
@@ -23,6 +24,7 @@ const c = app.content[lang];
 const focusWebTrial = focusWebTrialFor({ slug: app.slug, status: app.status, lang });
 const wordsWebTrial = wordsWebTrialFor({ slug: app.slug, status: app.status, lang });
 const voyageWebTrial = voyageWebTrialFor({ slug: app.slug, status: app.status, lang });
+const ddayDateHelp = ddayDateHelpFor({ slug: app.slug, status: app.status, lang });
 const submitted = submissionMedia(slug);
 const mediaCopy = submissionCopy[lang];
 const shots = submitted ? submitted.shots.map(s => ({ src: s.src, label: s.label[lang], desc: "" })) : c.shots.map(s => ({ ...s, src: `/assets/apps/${slug}/${lang}/${s.file}.webp` }));
@@ -129,7 +131,7 @@ const jsonLd = {
   canonical={canonical}
   alternates={alternates}
   ogImage={heroSrc ? `https://pifl-labs.com${heroSrc}` : undefined}
-  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : []), ...(focusWebTrial ? ['/styles-focus-web-trial.css?v=a75176d23d53'] : []), ...(wordsWebTrial ? ['/styles-words-web-trial.css?v=33d77faa265c'] : []), ...(voyageWebTrial ? ['/styles-voyage-web-trial.css?v=4be9af8c35cf'] : [])]}
+  extraCss={['/styles-app-landing.css?v=3c959067f5f7', ...(app.slug === 'pipi-words' && lang === 'en' ? ['/styles-words-recall-resource.css?v=315a553bde2e'] : []), ...(app.slug === 'pipi-log' ? ['/styles-log-release-version.css?v=c7dc11a0479f'] : []), ...(app.slug === 'pipi-bridge' ? ['/styles-bridge-release-version.css?v=e9e6bf2815cc'] : []), ...(focusWebTrial ? ['/styles-focus-web-trial.css?v=a75176d23d53'] : []), ...(wordsWebTrial ? ['/styles-words-web-trial.css?v=33d77faa265c'] : []), ...(voyageWebTrial ? ['/styles-voyage-web-trial.css?v=4be9af8c35cf'] : []), ...(ddayDateHelp ? ['/styles-dday-date-help.css?v=de5bbc3a688c'] : [])]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -188,6 +190,9 @@ const jsonLd = {
           </div>}{voyageWebTrial && <div class="app-download-note" data-web-trial="voyage">
             <a class="app-bridge-resource-link" href={voyageWebTrial.href} hreflang={lang}>{voyageWebTrial.label}</a>
             <p>{voyageWebTrial.note}</p>
+          </div>}{ddayDateHelp && <div class="app-download-note" data-date-help="dday">
+            <a class="app-bridge-resource-link" href={ddayDateHelp.href} hreflang="ko">{ddayDateHelp.label}</a>
+            <p>{ddayDateHelp.note}</p>
           </div>}
 
           {rel && (
