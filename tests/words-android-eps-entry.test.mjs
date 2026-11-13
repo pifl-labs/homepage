@@ -26,7 +26,7 @@ test('no other locale or app receives the Korean Android-only section', () => {
     if (slug==='pipi-words' && lang==='ko') continue;
     assert.doesNotMatch(read(`dist/${lang}/apps/${slug}/index.html`), /id="android-eps-topik"/); seen++;
   }
-  assert.equal(seen,44);
+  assert.equal(seen,47);
 });
 test('new copy uses available width and existing tokens, not a fake preview or truncated text', () => {
   const source=read('src/components/WordsAndroidEps.astro');

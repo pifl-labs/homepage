@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { Lang } from '../../i18n/ui';
+import { policyParts } from './policy.mjs';
+import ko from './policy/ko.html?raw';
+import en from './policy/en.html?raw';
+import ja from './policy/ja.html?raw';
+import zhHans from './policy/zh-Hans.html?raw';
+import zhHant from './policy/zh-Hant.html?raw';
+
+// 간밤(Yesternight) 개인정보처리방침. 본문은 앱 저장소가 만든 공개 쪽 그대로다(policy.mjs 머리말).
+// 앱 안 주소(pipi_dream AppInfo.privacyPolicyUrls)와 스토어 콘솔이 아래 다섯 직접 주소를 쓴다 — 바꾸지 않는다.
+//   ko·en·ja → /<언어>/apps/pipi-dream/privacy/
+//   zh-Hans·zh-Hant → /en/apps/pipi-dream/privacy/zh-hans/·zh-hant/ (사이트 로케일 밖이라 en 아래, noindex)
+// 중국어 두 판은 Korean Bridge 의 zh·vi 판처럼 사이트맵에서 빼고(astro.config) 자기 canonical 만 둔다.
+type PolicyLang = 'ko' | 'en' | 'ja' | 'zh-Hans' | 'zh-Hant';
+interface Props { lang: PolicyLang }
+const { lang } = Astro.props;
+
+const SOURCE: Record<PolicyLang, string> = { ko, en, ja, 'zh-Hans': zhHans, 'zh-Hant': zhHant };
+// 앱 홈 화면 이름(pipi_dream ARB appTitle) — 앱 소개 쪽으로 돌아가는 링크 글.
+const APP_TITLE: Record<PolicyLang, string> = { ko: '간밤', en: 'Yesternight', ja: 'ゆうべ', 'zh-Hans': '昨夜', 'zh-Hant': '昨夜' };
+
+const { title, heading, body, description } = policyParts(lang, SOURCE[lang]);
+
+const BASE = 'https://pifl-labs.com';
+const isIndexed = lang === 'ko' || lang === 'en' || lang === 'ja';
+const baseLang: Lang = isIndexed ? (lang as Lang) : 'en';
+const canonical = isIndexed
+  ? `${BASE}/${lang}/apps/pipi-dream/privacy/`
+  : `${BASE}/en/apps/pipi-dream/privacy/${lang.toLowerCase()}/`;
+const alternates = isIndexed
+  ? [
+      { hreflang: 'ko', href: `${BASE}/ko/apps/pipi-dream/privacy/` },
+      { hreflang: 'en', href: `${BASE}/en/apps/pipi-dream/privacy/` },
+      { hreflang: 'ja', href: `${BASE}/ja/apps/pipi-dream/privacy/` },
+      { hreflang: 'x-default', href: `${BASE}/ko/apps/pipi-dream/privacy/` },
+    ]
+  : [{ hreflang: lang, href: canonical }];
+const robots = isIndexed ? undefined : 'noindex,follow';
+// 사이트 크롬(<html lang>·네비)은 baseLang, 방침 글은 원본 언어로 표기한다.
+const docLang = isIndexed ? undefined : lang;
+---
+<BaseLayout
+  lang={baseLang}
+  title={`${title} - PiFl Labs`}
+  description={description}
+  canonical={canonical}
+  alternates={alternates}
+  robots={robots}
+  extraCss={["/styles.css"]}
+>
+  <section class="legal-hero dream-policy-hero" lang={docLang}>
+    <div class="container">
+      <a href={`/${baseLang}/apps/pipi-dream/`} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {APP_TITLE[lang]}</a>
+      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">{heading}</span></h1>
+    </div>
+  </section>
+
+  <main id="main" class="legal-page dream-policy" lang={docLang}>
+    <div class="container">
+      <article class="legal-card">
+        <Fragment set:html={body} />
+      </article>
+    </div>
+  </main>
+
+  <style>
+    /* 제목은 낱말(띄어쓰기) 단위로 줄바꿈 — "プライバシーポリシ / ー" 처럼 글자 하나가 넘어가지 않게. */
+    .dream-policy-hero h1 { word-break: keep-all; overflow-wrap: anywhere; }
+    .dream-policy :global(.dream-policy-langs) { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin-bottom: var(--s-sm); font-size: 0.9rem; }
+    .dream-policy :global(.dream-policy-langs a[aria-current]) { color: var(--text-primary); font-weight: 700; }
+    .dream-policy :global(.meta) { border: 1px solid var(--border-default); border-radius: 10px; padding: 0.85rem 1rem; color: var(--text-primary); }
+  </style>
+</BaseLayout>
