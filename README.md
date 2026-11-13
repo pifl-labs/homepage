@@ -174,6 +174,12 @@ Noto Sans JP is embedded under the [SIL Open Font License 1.1](https://pifl-labs
 같은 세 모양을 한국어 설명으로 함께 찾아보세요. 앱·가입·구매가 필요 없고, 발음·획순·쓰기 채점이나 학습 효과를 약속하는 자료는 아닙니다.
 별도 선택 앱 [말놀이 새싹: 어린이 일본어](https://apps.apple.com/kr/app/id6777299814)에는 무료 콘텐츠와 연간 자동갱신 구독이 있습니다. AI 작성·배치 보조, 교사·실제 인쇄 검수 전 자료이며 나눔고딕·Noto Sans JP의 [OFL 원문](https://pifl-labs.com/assets/printables/first-kana-shape-match-ko-OFL.txt)을 동봉했습니다.
 
+
+**日本語でハングルの形あそび:** [同じハングルを見つけよう（A4 PDF）](https://pifl-labs.com/assets/printables/first-hangul-shape-match-ja-a4.pdf) · [テキスト版](https://pifl-labs.com/assets/printables/first-hangul-shape-match-ja.txt)。
+四つの形を見比べて指さす、PiFl Labsのオリジナル紙あそびです。アプリ・登録・購入は不要。発音・書き順・書く練習・採点は扱いません。
+任意の[ハングルの芽：子どもの韓国語 Androidアプリ](https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ja&gl=JP)は最初の3島が無料、残りは年額の自動更新サブスクリプションです（日本の公開説明を2026年11月13日に確認）。
+AIによる文章・配置補助。教育専門家・実際の印刷での確認は未実施、学習効果の保証はありません。Noto Sans JP・Nanum Gothicの[SIL OFL 1.1原文](https://pifl-labs.com/assets/printables/first-hangul-shape-match-ja-OFL.txt)を添付しています。
+
 ## 스택
 
 - **Astro 5** static site
