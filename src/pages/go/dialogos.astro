@@ -1,0 +1,175 @@
+---
+import { appIconSrc } from '../../data/app-icons.mjs';
+import { appName, apps } from '../../data/apps';
+
+// /go/dialogos — Dialogos 앱의 '사색 카드' 공유 링크가 가리키는 착지 페이지 (noindex).
+// 카드를 받은 사람이 어느 휴대폰이든 자기 스토어로 가게 하고, 캠페인 표시로
+// 카드를 거쳐 온 설치를 따로 센다:
+//   iOS  → App Store campaign token(pt=ASC provider ID, ct=share_card) — ASC 앱 분석 '캠페인'(캠페인당 5다운로드+부터 표시)
+//   AOS  → 최상위 utm_source·utm_medium·utm_campaign(Play Console 스토어 등록정보 보고서가 읽는 값)
+//          + 같은 값을 install referrer 에도 — public/store-attribution.mjs storeUrl() 과 같은 방식
+// 스토어 주소는 src/data/apps.ts(SSOT)에서 파생. OS·언어 감지는 /go-dialogos.js
+// (CSP script-src 'self', head 동기 실행). 스크립트가 없으면 영어 문구와 두 스토어 버튼이 모두 보인다.
+// 앱 쪽 링크 상수: pipi_thus lib/features/share_card/data/share_card_exporter.dart shareCardLink.
+
+// App Store Connect provider ID(공개 식별자, 인증정보 아님) — 같은 개발자 계정의 캠페인에 재사용한다
+// (docs/apple-campaign-provider-20261019.md). Dialogos 가 그 계정 소속인 근거: iTunes 공개 조회에서
+// Dialogos(6780508628)와 Focus(6762258878)의 판매자가 같다 — artistId 1893574694 PiFl Labs Co., Ltd.(2026-11-13).
+const APPLE_PT = '128720089';
+const CAMPAIGN = 'share_card';
+
+const app = apps['dialogos'];
+const iosId = app.stores.ios?.match(/id(\d+)/)?.[1] ?? '';
+const pkg = app.stores.android?.match(/id=([\w.]+)/)?.[1] ?? '';
+const ios = iosId ? `https://apps.apple.com/app/id${iosId}?pt=${APPLE_PT}&ct=${CAMPAIGN}&mt=8` : null;
+const utm = `utm_source=${CAMPAIGN}&utm_medium=social&utm_campaign=${CAMPAIGN}`;
+const android = pkg
+  ? `https://play.google.com/store/apps/details?id=${pkg}&${utm}&referrer=${encodeURIComponent(utm)}`
+  : null;
+
+const LANGS = ['en', 'ko', 'ja'] as const;
+const copy = {
+  en: { lead: 'This card came from a conversation with an AI philosopher.', more: 'About the app' },
+  ko: { lead: '이 카드는 AI 철학자와 나눈 대화에서 왔어요.', more: '앱 소개 보기' },
+  ja: { lead: 'このカードは、AI哲学者との対話から生まれました。', more: 'アプリについて' },
+};
+const blocks = LANGS.map((lang) => ({
+  lang,
+  name: appName(app, lang),
+  tagline: app.content[lang].tagline.replace(/\n/g, ' '),
+  lead: copy[lang].lead,
+  more: copy[lang].more,
+  landing: `/${lang}/apps/dialogos/`,
+}));
+---
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Dialogos — PiFl Labs</title>
+    <meta name="description" content="Dialogos — talk one-to-one with Marcus Aurelius, Seneca, Epictetus and Socrates. iOS / Android." />
+    <meta property="og:title" content="Dialogos — PiFl Labs" />
+    <meta property="og:image" content="https://pifl-labs.com/pifl-ship-og.jpg" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+    <link rel="stylesheet" href="/colors_and_type.css" />
+    <script is:inline src="/go-dialogos.js"></script>
+  </head>
+  <body>
+    <main class="go">
+      <img src={appIconSrc('dialogos')} alt="" class="go-icon" width="88" height="88" />
+      {blocks.map((b) => (
+        <section class={`go-copy go-${b.lang}`} lang={b.lang}>
+          <h1>{b.name}</h1>
+          <p class="go-tagline">{b.tagline}</p>
+          <p class="go-lead">{b.lead}</p>
+        </section>
+      ))}
+      <div class="go-stores">
+        {ios && (
+          <a class="store-btn store-ios" href={ios} rel="noopener">
+             App Store
+          </a>
+        )}
+        {android && (
+          <a class="store-btn store-android" href={android} rel="noopener">
+            ▶ Google Play
+          </a>
+        )}
+      </div>
+      {blocks.map((b) => (
+        <p class={`go-more go-${b.lang}`} lang={b.lang}>
+          <a href={b.landing}>{b.more}</a>
+        </p>
+      ))}
+    </main>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-base, #020617);
+    color: var(--text-primary, #f1f5ff);
+    font-family:
+      'Pretendard Variable',
+      Pretendard,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Hiragino Kaku Gothic ProN',
+      'Noto Sans JP',
+      sans-serif;
+  }
+  .go {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  .go-icon {
+    border-radius: 20px;
+  }
+  .go-copy h1 {
+    margin: 16px 0 6px;
+    font-size: 1.45rem;
+  }
+  .go-tagline {
+    margin: 0;
+    color: var(--text-secondary, #c0c9dd);
+    font-size: 0.95rem;
+  }
+  .go-lead {
+    margin: 18px 0 0;
+    color: var(--text-muted, #7a869f);
+    font-size: 0.85rem;
+  }
+  .go-stores {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .store-btn {
+    flex: 1;
+    display: block;
+    padding: 13px 0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent-cta, #6366f1);
+  }
+  .store-btn.store-android {
+    background: var(--bg-raised, #0b1426);
+    border: 1px solid rgba(34, 211, 238, 0.4);
+    color: var(--neon-teal, #22d3ee);
+  }
+  .go-more {
+    margin-top: 22px;
+  }
+  .go-more a {
+    color: var(--text-muted, #7a869f);
+    font-size: 0.82rem;
+  }
+  /* 언어 감지(go-dialogos.js): 방문자 언어 문구만. 스크립트가 없으면 영어. */
+  .go-ko,
+  .go-ja {
+    display: none;
+  }
+  :global(html.lang-ko) .go-en,
+  :global(html.lang-ja) .go-en {
+    display: none;
+  }
+  :global(html.lang-ko) .go-ko,
+  :global(html.lang-ja) .go-ja {
+    display: block;
+  }
+  /* OS 감지: 해당 OS 스토어만 노출 */
+  :global(html.os-ios) .store-android,
+  :global(html.os-android) .store-ios {
+    display: none;
+  }
+</style>
