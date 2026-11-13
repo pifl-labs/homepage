@@ -11,7 +11,9 @@ test('/go/dialogos marks both stores with the share_card campaign', () => {
   assert.match(page, /const APPLE_PT = '128720089'/);
   assert.match(page, /const CAMPAIGN = 'share_card'/);
   assert.match(page, /pt=\$\{APPLE_PT\}&ct=\$\{CAMPAIGN\}&mt=8/);
-  assert.match(page, /utm_source=\$\{CAMPAIGN\}&utm_medium=social&utm_campaign=\$\{CAMPAIGN\}/);
+  assert.match(page, /const utm = `utm_source=\$\{CAMPAIGN\}&utm_medium=social&utm_campaign=\$\{CAMPAIGN\}`/);
+  // Play Console 은 최상위 utm_* 를 읽는다 — referrer 안에만 두면 카드 유입을 세지 못한다.
+  assert.match(page, /details\?id=\$\{pkg\}&\$\{utm\}&referrer=\$\{encodeURIComponent\(utm\)\}/);
   assert.match(page, /apps\['dialogos'\]/);
 });
 
@@ -52,4 +54,15 @@ test('picks the visitor\'s store and language', () => {
 
   const desktopFr = run('Mozilla/5.0 (Windows NT 10.0)', ['fr-FR', 'ja'], 'Win32', 0);
   assert.ok(desktopFr.classes.has('lang-ja'));
+});
+
+test('an Android emulated on a touch Mac is Android, and look-alike language codes are not ko/ja', () => {
+  const emulated = run('Mozilla/5.0 (Linux; Android 14; Pixel 8)', ['en-US'], 'MacIntel', 5);
+  assert.ok(emulated.classes.has('os-android'));
+  assert.ok(!emulated.classes.has('os-ios'));
+
+  const konkani = run('Mozilla/5.0 (Windows NT 10.0)', ['kok-IN', 'jam'], 'Win32', 0);
+  assert.ok(!konkani.classes.has('lang-ko'));
+  assert.ok(!konkani.classes.has('lang-ja'));
+  assert.equal(konkani.lang, undefined);
 });
