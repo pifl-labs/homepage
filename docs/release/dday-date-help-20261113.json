@@ -12,7 +12,8 @@
   },
   "koOnlyReason": "The existing guide is Korean only; no invented translation routes",
   "body": "설치·가입 없는 별도 웹 계산기입니다. 앱의 계산 설정과는 별개이며 결과도 자동으로 옮겨지지 않습니다.",
-  "unchangedAppsSHA256": "b133441711375f28eab44ce2a9f851310c6d3d1fb0168c703eeb8c40c3dc9e80",
+  "unchangedAppsSHA256": "77edb819755b81978cc583d855945c03d7403c763fc417ec7e8b30e231babf27",
+  "unchangedAppsNote": "apps.ts 는 2026-11-13 간밤(pipi-dream) 스토어 제출 준비로 그 앱 블록과 apps 등록 한 줄을 더해 해시를 갱신했다(D-Day 항목과 무관 — dday 블록은 바뀌지 않음).",
   "originalLandingSHA256": "32427e6aba88447c6f67284d2d79518713d5acfc30c0701f8b9f63c171906a4d",
   "localChangedBlockMatrix": {
     "widths": [

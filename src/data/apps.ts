@@ -1375,7 +1375,71 @@ const sky: AppMeta = {
   "previousName": "PiPi Sky"
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky, 'pipi-spend': spend };
+// 간밤(com.pifl.pipi.dream) — 스토어 첫 제출 준비(2026-11-13). 이 랜딩은 App Store 지원·마케팅 URL이고
+// 처리방침 다섯 쪽은 components/pipi-dream/ 이 원본 그대로 서빙한다. 두 주소 모두 앱·콘솔에 박혀 있다.
+// 이름 = App Store 이름 = Play 제목(pipi_dream docs/store/<lang>/appstore/name.txt), 카피는 같은 폴더의 스토어 글 근거.
+// 홈 카탈로그(appList)·아카이브에는 아직 올리지 않는다 — 공개 출시 때 카탈로그 카피와 함께 정한다.
+const dream: AppMeta = {
+  slug: 'pipi-dream',
+  name: 'Yesternight: Dream Journal',
+  nameByLang: { ko: '간밤: 말로 남기는 꿈 일기', ja: 'ゆうべ：話して残す夢日記' },
+  status: 'soon',
+  category: { ko: '라이프스타일 · 꿈 일기', ja: 'ライフスタイル · 夢日記', en: 'Lifestyle · Dream journal' },
+  schemaCategory: 'LifestyleApplication',
+  stores: {},
+  content: {
+    ko: {
+      tagline: '말하면 기기 안에서 글이 돼요',
+      lede: '간밤은 아침에 말로 남기는 꿈 일기예요. 깨자마자 버튼 하나를 누르고 생각나는 대로 말한 뒤 녹음을 끝내면, 휴대폰 안에서 글로 받아써요. 글을 확인하고 저장하면 기록장에 쌓여요. 공개 출시를 준비하고 있어요.',
+      metaDesc: '말로 남기는 꿈 일기. 녹음을 휴대폰 안에서 글로 받아쓰고, 목록·달력·통계와 상징 120개 사전으로 돌아봐요. 계정·광고·분석이 없고, 앱은 꿈을 어디로도 보내지 않아요.',
+      shotsTitle: '',
+      featuresTitle: '앱 소개',
+      ctaTitle: '공개 출시 준비 중',
+      ctaSub: 'iPhone·Android 공개 출시를 준비하고 있어요. 계정도 광고도 없고, 앱은 꿈을 어디로도 보내지 않아요.',
+      shots: [],
+      features: [
+        { icon: 'fa-microphone', title: '눌러서 바로 말하기', desc: "'꿈 남기기'를 누르면 바로 녹음이 시작돼요. 화면을 꺼도 녹음은 이어지고, 한 번에 10분까지 녹음할 수 있어요. 말하기 어려운 아침에는 글로 써도 돼요." },
+        { icon: 'fa-file-lines', title: '휴대폰 안에서 받아쓰기', desc: '녹음을 끝내면 휴대폰 안에서 글로 받아써요. 받아쓰기는 iOS 26 이상(iOS 16~25는 iPhone 기종과 언어에 따라 달라요)과 Android 13 이상(되는 언어는 휴대폰에 따라 달라요)에서 돼요. 받아쓰기가 안 되는 기기에서도 녹음은 남아요.' },
+        { icon: 'fa-book-open', title: '기록장과 상징 풀이', desc: '감정·생생함과 자각몽·되풀이되는 꿈·악몽 표시를 함께 남기고, 목록·달력·통계로 모아 봐요. 꿈에 자주 나오는 상징 120개를 8가지 분류로 담은 사전이 있어요. 풀이는 전해 오는 이야기와 해석이에요. 앞일을 알려 주지 않아요.' },
+        { icon: 'fa-lock', title: '꿈은 내 기기에', desc: '꿈 글·녹음·받아쓴 글은 휴대폰 안에 저장되고, 앱은 꿈을 어디로도 보내지 않아요. 계정·광고·분석·오류 보고가 없어요. 앱 잠금을 켜면 잠금을 풀어야 꿈을 볼 수 있어요.' },
+      ],
+    },
+    ja: {
+      tagline: '録音を端末の中で文字起こし',
+      lede: 'ゆうべは、朝に声で残す夢日記です。目が覚めたらボタンをひとつ押して、思い出したことを話してください。録音を終えるとスマホの中で文字起こしをするので、文字を確かめて保存すれば記録に残ります。一般公開の準備中です。',
+      metaDesc: '声で残す夢日記。録音をスマホの中で文字起こしし、一覧・カレンダー・統計と120個のシンボル辞典でふり返れます。アカウント・広告・分析はなく、アプリが夢をどこかへ送ることはありません。',
+      shotsTitle: '',
+      featuresTitle: 'アプリについて',
+      ctaTitle: '一般公開の準備中',
+      ctaSub: 'iPhone・Androidでの一般公開を準備しています。アカウントも広告もなく、アプリが夢をどこかへ送ることはありません。',
+      shots: [],
+      features: [
+        { icon: 'fa-microphone', title: 'ワンタップですぐ話せる', desc: '「夢を残す」を押すと、すぐに録音が始まります。画面を消しても録音は続き、1回に10分まで録音できます。話しにくい朝は、文字で書いてもかまいません。' },
+        { icon: 'fa-file-lines', title: 'スマホの中で文字起こし', desc: '録音を終えると、スマホの中で文字起こしをします。文字起こしはiOS 26以降（iOS 16〜25はiPhoneの機種と言語によって異なります）とAndroid 13以降（使える言語はスマホによって異なります）で使えます。文字起こしを使えない端末でも録音は残ります。' },
+        { icon: 'fa-book-open', title: '記録とシンボルの読み解き', desc: '気持ち・鮮明さ、明晰夢・繰り返し見る夢・悪夢の印をいっしょに残し、一覧・カレンダー・統計でふり返れます。夢によく出てくるシンボル120個を8つの分類にまとめた辞典があります。読み解きは言い伝えと解釈です。これから起こることを知らせるものではありません。' },
+        { icon: 'fa-lock', title: '夢はあなたの端末に', desc: '夢の記録・録音・文字起こしはスマホの中に保存され、アプリが夢をどこかへ送ることはありません。アカウント・広告・分析・エラー報告はありません。アプリのロックをオンにすると、解除しないと夢の記録を見られません。' },
+      ],
+    },
+    en: {
+      tagline: 'On-device speech to text',
+      lede: 'Yesternight is a dream journal you keep by voice. Tap one button when you wake up and say whatever you remember. When you finish, the recording is turned into text on your phone for you to check and save in your journal. Preparing for public release.',
+      metaDesc: 'A dream journal you keep by voice. Recordings are transcribed on your phone; look back with a list, a calendar, stats and a dictionary of 120 dream symbols. No account, ads or analytics.',
+      shotsTitle: '',
+      featuresTitle: 'About the app',
+      ctaTitle: 'Preparing for public release',
+      ctaSub: 'Preparing for public release on iPhone and Android. No account, no ads, and the app never sends your dreams anywhere.',
+      shots: [],
+      features: [
+        { icon: 'fa-microphone', title: 'Record in one tap', desc: 'Tap "Record" and recording starts right away. It keeps going if you turn off the screen, for up to 10 minutes at a time. Don\'t feel like talking? Write it down instead.' },
+        { icon: 'fa-file-lines', title: 'Transcribed on your phone', desc: 'When you finish, the recording is transcribed on your phone. Transcription works on iOS 26 or later (on iOS 16 to 25 it depends on your iPhone model and the language) and Android 13 or later (languages depend on your phone). Where it isn\'t available, the recording is still kept.' },
+        { icon: 'fa-book-open', title: 'A journal and dream symbols', desc: 'Add your feelings, how vivid it was, and whether it was lucid, recurring or a nightmare, then look back with a list, a calendar and stats. A dictionary of 120 common dream symbols in 8 categories. Readings are folklore and interpretation; they don\'t tell the future.' },
+        { icon: 'fa-lock', title: 'Your dreams stay yours', desc: 'Dream entries, recordings and transcripts are stored on your phone, and the app never sends your dreams anywhere. No accounts, ads, analytics or crash reports. Turn on the app lock to require unlocking before your dreams are shown.' },
+      ],
+    },
+  },
+};
+
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky, 'pipi-spend': spend, 'pipi-dream': dream };
 // 출시 앱을 먼저, 출시 예정 앱을 뒤에 둔다. Bridge는 공개 앱이다.
 export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, spend, sky, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */

@@ -24,7 +24,7 @@ test('English addition never appears on another locale, app or legacy route', ()
     if (!existsSync(p) || (slug==='pipi-words' && lang==='en')) continue;
     assert.doesNotMatch(read(p), /id="android-eps-topik-en"/); seen++;
   }
-  assert.equal(seen, 44);
+  assert.equal(seen, 47);
   // Legacy /apps/pipi-words is privacy-only, not a product landing.
   for (const relative of readdirSync('dist', {recursive: true})) {
     if (!relative.endsWith('.html') || relative==='en/apps/pipi-words/index.html') continue;

@@ -38,6 +38,8 @@ export default defineConfig({
         // Korean Bridge 개인정보처리방침의 zh·vi 판은 사이트 색인 로케일(en/ko/ja) 밖의
         // 보호자 언어 전용 noindex 페이지 — 앱 설명 페이지에서만 링크한다.
         if (/\/apps\/pipi-bridge\/privacy\/(zh|vi)\/?$/.test(pathname)) return false;
+        // 간밤 개인정보처리방침의 중국어 두 판(zh-hans·zh-hant)도 같은 이유의 noindex 페이지 — 앱 안 주소에 박힌 경로다.
+        if (/\/apps\/pipi-dream\/privacy\/zh-han[st]\/?$/.test(pathname)) return false;
         return true;
       },
       // 언어별 대체 URL(xhtml:link)을 사이트맵이 직접 선언하게 한다 — 3언어가 1:1 미러라 안전.
