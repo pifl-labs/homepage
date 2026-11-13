@@ -13,19 +13,19 @@ const { lang } = Astro.props;
 const labels = {
   ko: {
     title: '출처 라이브러리',
-    lede: 'Dialogos의 철학자들이 답할 때 인용하는 퍼블릭 도메인 고대 원전 모음. 각 작품의 해설과 무료 원문 링크를 제공합니다.',
+    lede: 'Dialogos의 철학자들이 답할 때 인용하는 퍼블릭 도메인 원전 모음. 각 작품의 해설과 무료 원문 링크를 제공합니다.',
     intro: 'Dialogos는 저작권이 만료된 원전(퍼블릭 도메인)만을 출처로 인용합니다. 아래는 멘토별 인용 원전 목록입니다.',
     toApp: 'Dialogos 앱 보기', read: '자세히 보기',
   },
   ja: {
     title: '出典ライブラリ',
-    lede: 'Dialogos の賢者たちが答える際に引用するパブリックドメインの古典原典の一覧。各作品の解説と無料原文へのリンクを提供します。',
+    lede: 'Dialogos の賢者たちが答える際に引用するパブリックドメインの原典の一覧。各作品の解説と無料原文へのリンクを提供します。',
     intro: 'Dialogos は著作権が切れた原典(パブリックドメイン)のみを出典として引用します。以下はメンター別の引用原典一覧です。',
     toApp: 'Dialogos アプリを見る', read: '詳しく見る',
   },
   en: {
     title: 'Source Library',
-    lede: 'The public-domain ancient texts the sages of Dialogos cite when they answer you. Each work includes an overview and links to the free original.',
+    lede: 'The public-domain texts the sages of Dialogos cite when they answer you. Each work includes an overview and links to the free original.',
     intro: 'Dialogos cites only public-domain originals (out of copyright). Below are the cited works, grouped by mentor.',
     toApp: 'View the Dialogos app', read: 'Read more',
   },
@@ -36,7 +36,7 @@ const labels = {
 const readingPath = {
   ko: {
     title: '어디서부터 읽을까 — 스토아 입문 순서',
-    intro: '여덟 권을 다 읽을 필요는 없습니다. 처음이라면 이 순서를 권합니다.',
+    intro: '모두 읽을 필요는 없습니다. 처음이라면 이 순서를 권합니다.',
     steps: [
       { slug: 'enchiridion', why: '가장 짧고 실천적인 한 권. “내가 통제할 수 있는 것”이라는 스토아의 핵심을 단숨에 잡습니다.' },
       { slug: 'meditations', why: '로마 황제가 자신에게 쓴 일기. 가장 널리 사랑받는 입문서입니다.' },
@@ -47,7 +47,7 @@ const readingPath = {
   },
   ja: {
     title: 'どこから読むか — ストア哲学 入門の順番',
-    intro: '八冊すべてを読む必要はありません。初めてなら、この順番をおすすめします。',
+    intro: 'すべてを読む必要はありません。初めてなら、この順番をおすすめします。',
     steps: [
       { slug: 'enchiridion', why: '最も短く実践的な一冊。「自分に統制できるもの」というストアの核心を一気につかめます。' },
       { slug: 'meditations', why: 'ローマ皇帝が自らに書いた日記。最も広く愛される入門書です。' },
@@ -58,7 +58,7 @@ const readingPath = {
   },
   en: {
     title: 'Where to start — a reading path into Stoicism',
-    intro: 'You do not need to read all eight. If you are new, this is the order we suggest.',
+    intro: 'You do not need to read them all. If you are new, this is the order we suggest.',
     steps: [
       { slug: 'enchiridion', why: 'The shortest, most practical book — the Stoic core of “what is up to you,” in one sitting.' },
       { slug: 'meditations', why: 'A Roman emperor’s diary to himself. The most widely loved entry point.' },
@@ -75,7 +75,7 @@ const appHref = `${base}/apps/dialogos/`;
 const homeHref = `${base}/`;
 const selfUrl = `https://pifl-labs.com${base}${selfPath}`;
 
-const mentorOrder = ['marcus', 'seneca', 'epictetus', 'socrates'];
+const mentorOrder = ['marcus', 'seneca', 'epictetus', 'socrates', 'epicurus', 'nietzsche'];
 const groups = mentorOrder
   .map((mid) => ({ mid, works: sourceList.filter((w) => w.mentorId === mid) }))
   .filter((g) => g.works.length > 0)

@@ -101,8 +101,8 @@ const jsonLd = [
     '@type': 'Quotation',
     text: q.text,
     spokenByCharacter: { '@type': 'Person', name: c.mentorName },
-    isPartOf: { '@type': 'Book', name: c.workName, author: { '@type': 'Person', name: c.mentorName } },
-    citation: `${c.workName} ${q.cite}`,
+    isPartOf: { '@type': 'Book', name: q.book ?? c.workName, author: { '@type': 'Person', name: c.mentorName } },
+    citation: `${q.book ?? c.workName} ${q.cite}`,
   }))),
 ];
 ---
@@ -155,7 +155,7 @@ const jsonLd = [
               {c.quotes.map((q) => (
                 <li class="src-quote">
                   <blockquote set:html={q.text} />
-                  <span class="src-quote-cite">{c.workName} · {q.cite}</span>
+                  <span class="src-quote-cite">{q.book ?? c.workName} · {q.cite}</span>
                   <p class="src-quote-gloss" set:html={q.gloss} />
                 </li>
               ))}

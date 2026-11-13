@@ -13,6 +13,9 @@
 import type { Lang } from '../i18n/ui';
 // 7저작(세네카·에픽테토스·플라톤)은 Workflow로 PD 검증 + 3언어 작성 + 적대 검증을
 // 거쳐 생성/패치된 데이터. 명상록은 아래에 직접 유지(첫 템플릿).
+// 2026-11-13 에피쿠로스 2쪽·니체 3쪽(Dialogos 1.1.0)도 같은 절차: 원어(그리스어·라틴어·
+// eKGWB 독일어)와 대조 → 3언어 의역 → 별도 에이전트 적대 검증(영어 구절의 기존 번역
+// 연속 일치까지). 책마다 한두 구절이라 '모음 페이지'(quote의 book·bookId)로 묶었다.
 import generatedWorks from './dialogos-sources.generated.json';
 
 export interface SourceFaq {
@@ -37,6 +40,14 @@ export interface SourceQuote {
   text: string; // 우리 고유 의역 (현대 번역본 무단전재 금지)
   cite: string; // '5.1' / 'Letter 1' — 코퍼스의 검증된 절 표기
   gloss: string; // 1문장 의미 풀이 (언어별 각도 차등)
+  /**
+   * 모음 페이지(여러 책에서 고른 구절을 한 쪽에 모은 항목)에서만: 이 구절이 실린 책의
+   * 언어별 표시 제목('아침놀', '우상의 황혼 · 잠언과 화살'). 화면은 "book · cite"로 쓴다.
+   * 책마다 한두 구절뿐이라 책마다 쪽을 나누면 지나치게 잘게 쪼개지는 경우에 쓴다.
+   */
+  book?: string;
+  /** 모음 페이지에서만: 책 식별자(세 언어 동일, 'm'·'kd'). 앱·서버 구절 id = `${bookId}-${cite}`. */
+  bookId?: string;
 }
 
 /** 핵심 개념 용어풀이 — <dl> 정의 리스트로 렌더(AI 청킹 친화). */
@@ -86,7 +97,7 @@ export interface SourceContent {
 
 export interface SourceWork {
   slug: string;
-  mentorId: 'marcus' | 'seneca' | 'epictetus' | 'socrates';
+  mentorId: 'marcus' | 'seneca' | 'epictetus' | 'socrates' | 'epicurus' | 'nietzsche';
   icon: string; // Font Awesome 클래스
   /** ISO 날짜 — JSON-LD dateModified (AEO 신선도 신호). */
   updated: string;
