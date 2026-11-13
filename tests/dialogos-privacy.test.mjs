@@ -83,7 +83,7 @@ const ko = {
   statute: /「개인정보 보호법」 제30조|제17조 및 제18조/g,
   maxBlock: 320,
   hero: {
-    effective: '시행일: 2026년 10월 18일',
+    effective: '시행일: 2026년 11월 13일',
     firstEffective: '최초 시행: 2026년 6월 14일',
     provider: '제공자: PiFl Labs',
     name: 'Dialogos',
@@ -180,7 +180,10 @@ const ko = {
       '분석/광고 SDK 없음(제2조의 서비스 개선 통계는 앱의 SDK가 아니라 당사 서버가 기록합니다)', '광고식별자(IDFA/GAID) 없음', '다른 앱·웹사이트에 걸친 추적 없음',
       'App Tracking Transparency(ATT) 동의창도 표시하지 않습니다',
     ],
-    [A.permissions]: ['카메라·사진·마이크·위치·연락처·알림·추적 등)을 요청하지 않습니다', '네트워크 연결과, 구매를 위한 각 스토어의 결제 기능만 사용합니다'],
+    [A.permissions]: [
+      '사색 카드를 사진 앱에 저장하기로 고를 때에만', '사진 보관함에 추가하는 권한(추가 전용)', '앱은 사진을 읽거나 당사로 보내지 않습니다',
+      '그 밖에 허용이 필요한 권한(카메라·마이크·위치·연락처·알림·추적 등)은 요청하지 않습니다', '네트워크 연결과, 구매를 위한 각 스토어의 결제 기능만 사용합니다',
+    ],
     [A.destruction]: ['별도의 수작업 없이 기간이 끝나는 때 자동으로 삭제됩니다', '전자적 파일은 복원이 불가능한 방법으로 영구 삭제합니다'],
     [A.rights]: [
       '개인정보의 처리 정지, 정정·삭제 및 파기를 요구할 권리',
@@ -218,7 +221,8 @@ const ko = {
     [A.officer]: ['회사명: 주식회사 피플랩스 (PiFl Labs Co., Ltd.)'],
     [A.changes]: [
       '변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다',
-      ['2026년 10월 18일 개정', '두 번째 AI 제공자로 Anthropic을 추가했습니다', '서비스 개선 통계와 청소년 안전 조치를 추가했습니다',
+      ['2026년 11월 13일 개정', '사색 카드를 사진 앱에 저장할 때 iOS가 묻는 사진 추가 권한(추가 전용)을 앱 권한 안내에 추가했습니다',
+        '2026년 10월 18일 개정', '두 번째 AI 제공자로 Anthropic을 추가했습니다', '서비스 개선 통계와 청소년 안전 조치를 추가했습니다',
         '두 제공자를 모두 적은 AI 대화 동의를 다시 받도록 했습니다', '2026년 10월 1일 개정', 'AI 제공자를 Anthropic에서 OpenAI로 변경했습니다'],
     ],
   },
@@ -238,7 +242,7 @@ const ja = {
   statute: /(?!)/g,
   maxBlock: 220,
   hero: {
-    effective: '施行日: 2026年10月18日',
+    effective: '施行日: 2026年11月13日',
     firstEffective: '初版施行: 2026年6月14日',
     provider: '提供者: PiFl Labs',
     name: 'Dialogos',
@@ -335,7 +339,10 @@ const ja = {
       '分析/広告SDKなし(第2条のサービス改善のための統計は、アプリのSDKではなく当社サーバーが記録します)', '広告識別子(IDFA/GAID)なし', '他のアプリ・ウェブサイトをまたぐトラッキングなし',
       'App Tracking Transparency(ATT)同意ダイアログも表示しません',
     ],
-    [A.permissions]: ['カメラ・写真・マイク・位置情報・連絡先・通知・トラッキングなど)を要求しません', 'ネットワーク接続と、購入のための各ストアの決済機能のみを使用します'],
+    [A.permissions]: [
+      '思索カードを写真に保存することを利用者が選んだときにだけ', '写真ライブラリへの追加(追加のみ)の許可', 'アプリが写真を読み取ったり当社へ送ったりすることはありません',
+      'そのほか許可が必要な権限(カメラ・マイク・位置情報・連絡先・通知・トラッキングなど)は求めません', 'ネットワーク接続と、購入のための各ストアの決済機能のみを使用します',
+    ],
     [A.destruction]: ['手作業を介さず、期間の終了時に自動的に削除されます', '電子ファイルは復元不可能な方法で完全に削除します'],
     [A.rights]: [
       '個人情報の訂正、削除、処理停止、破棄を要求する権利',
@@ -374,7 +381,8 @@ const ja = {
     [A.regional]: ['日本の個人情報保護法(APPI)に基づき、日本のユーザーは個人情報の開示、訂正、利用停止を請求する権利を有します'],
     [A.changes]: [
       '更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します',
-      ['2026年10月18日改定', '2つ目の AI 提供者として Anthropic を追加しました', 'サービス改善のための統計と10代の利用者の安全措置を追加しました',
+      ['2026年11月13日改定', '思索カードを写真に保存するときに iOS が求める写真への追加の許可(追加のみ)を、アプリ権限に追加しました',
+        '2026年10月18日改定', '2つ目の AI 提供者として Anthropic を追加しました', 'サービス改善のための統計と10代の利用者の安全措置を追加しました',
         '両方の提供者を記載したAI対話への同意をあらためていただくようにしました', '2026年10月1日改定', 'AI 提供者を Anthropic から OpenAI に変更しました'],
     ],
   },
@@ -394,7 +402,7 @@ const en = {
   statute: /(?!)/g,
   maxBlock: 380,
   hero: {
-    effective: 'Effective date: October 18, 2026',
+    effective: 'Effective date: November 13, 2026',
     firstEffective: 'First effective: June 14, 2026',
     provider: 'Provider: PiFl Labs',
     name: 'Dialogos',
@@ -495,7 +503,11 @@ const en = {
       'No advertising identifier (IDFA/GAID)', 'No tracking across other apps or websites',
       'shows no App Tracking Transparency prompt because it does not track you',
     ],
-    [A.permissions]: ['(such as camera, photos, microphone, location, contacts, notifications, or tracking)', "only uses the network connection to reach our server and each store's payment system for purchases"],
+    [A.permissions]: [
+      'Only when you choose to save a reflection card to Photos', 'permission to add to your photo library (add-only)', 'The app never reads your photos or sends them to us',
+      'any other permission that needs your approval (such as camera, microphone, location, contacts, notifications, or tracking)',
+      "only uses the network connection to reach our server and each store's payment system for purchases",
+    ],
     [A.destruction]: ['deleted automatically when it ends, with no manual step', 'Electronic files are permanently deleted using non-recoverable methods'],
     [A.rights]: [
       'The right to request suspension of processing, correction, deletion, and destruction',
@@ -534,7 +546,8 @@ const en = {
     [A.regional]: ['If you are located in the EEA, you have additional rights under the General Data Protection Regulation'],
     [A.changes]: [
       'we will revise the effective date above and, for material changes, surface a notice in the app',
-      ['Revised October 18, 2026', 'Anthropic was added as a second AI provider', 'The service-improvement statistics and the safety measures for teenagers were added',
+      ['Revised November 13, 2026', 'The permission iOS asks for when you choose to save a reflection card to Photos (add-only) was added to App Permissions',
+        'Revised October 18, 2026', 'Anthropic was added as a second AI provider', 'The service-improvement statistics and the safety measures for teenagers were added',
         'The AI conversation consent was renewed to name both providers', 'Revised October 1, 2026', 'Our AI provider changed from Anthropic to OpenAI'],
     ],
   },
