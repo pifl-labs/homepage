@@ -5,6 +5,7 @@ const source=readFileSync(new URL('../src/data/apps.ts',import.meta.url),'utf8')
 const receipt=JSON.parse(readFileSync(new URL('../docs/release/public-facts-20261008.json',import.meta.url),'utf8'));
 const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps;
 const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json',import.meta.url),'utf8'));
+const laterVoyageAndroid = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json',import.meta.url),'utf8'));
 const variables={'com.pifl.pipi.wordvoyage':'wordVoyage','com.pifl.pipi.hello':'hello','com.pifl.pipi.words':'words','com.pifl.pipi.log':'log'};
 const slugs={'com.pifl.pipi.wordvoyage':'pipi-word-voyage','com.pifl.pipi.hello':'pipi-hello','com.pifl.pipi.words':'pipi-words','com.pifl.pipi.log':'pipi-log'};
 const playDay=text=>new Date(`${text} UTC`).toISOString().slice(0,10);
@@ -24,7 +25,10 @@ test('Android versions and different update dates keep independent dated evidenc
  for(const [bundle,v] of Object.entries(variables)){
   const a=current.find(x=>x.slug===slugs[bundle]);
   assert.deepEqual(a.playProduction.map(r=>r.name),[a.android.en.version],`${bundle}: public listing matches the production track`);
-  assert.ok(block(v).includes(`android: { version: '${a.android.en.version}', updated: '${playDay(a.android.en.updatedDisplay)}', checkedAt: '2026-11-02' }`));
+  const newer = bundle==='com.pifl.pipi.wordvoyage' ? laterVoyageAndroid : null;
+  const observed = newer ? newer.apps.find(r=>r.lang==='en').app : a.android.en;
+  const checkedAt = newer ? newer.observedAt : '2026-11-02';
+  assert.ok(block(v).includes(`android: { version: '${observed.version}', updated: '${playDay(observed.updatedDisplay)}', checkedAt: '${checkedAt}' }`));
  }
  // The 2026-10-08 receipt stays as history; its unverified timezone note is not rewritten.
  assert.equal(receipt.android['com.pifl.pipi.wordvoyage'].timezone,'UNVERIFIED');assert.equal(receipt.android['com.pifl.pipi.log'].updatedCalendar,'2026-10-04');

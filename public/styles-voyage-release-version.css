@@ -1,0 +1,11 @@
+/* Voyage: keep a short first-release date intact, without shrinking text. */
+.app-page--word-voyage .voyage-release-since-date {
+  display: inline-block;
+  white-space: nowrap;
+}
+.app-page--word-voyage .app-rel-line {
+  color: var(--text-secondary);
+}
+html[data-theme="light"] .app-page--word-voyage .app-rel-ver {
+  color: var(--text-primary);
+}

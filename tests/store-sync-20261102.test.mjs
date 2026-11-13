@@ -10,6 +10,7 @@ const current = receipt.apps;
 // Later evidence updates only this platform; the dated baseline receipt remains immutable.
 const laterLogIOS = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
 const laterBridgeIOS = JSON.parse(readFileSync(new URL('../docs/release/bridge-ios-public-20261111.json', import.meta.url), 'utf8'));
+const laterVoyageAndroid = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json', import.meta.url), 'utf8'));
 
 const langs = ['ko', 'ja', 'en'];
 const country = { ko: 'kr', ja: 'jp', en: 'us' };
@@ -85,9 +86,12 @@ for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
         assert.equal(playDay(seen.android[lang].updatedDisplay.replace(/^(\d{4})\D+(\d{1,2})\D+(\d{1,2})\D*$/, (_, y, m, d) => `${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m - 1]} ${d}, ${y}`)), playDay(seen.android.en.updatedDisplay), `${lang} Play date agrees`);
       }
       assert.deepEqual(seen.playProduction.map((r) => r.name), [seen.android.en.version], 'public listing matches production');
-      assert.equal(app.release.android.version, seen.android.en.version);
-      assert.equal(app.release.android.updated, playDay(seen.android.en.updatedDisplay));
-      assert.equal(app.release.android.checkedAt, '2026-11-02');
+      // New public listing evidence does not invent a fresh private production-track observation.
+      const newer = app.slug === 'pipi-word-voyage' ? laterVoyageAndroid : null;
+      const observed = newer?.apps.find(r=>r.lang==='en').app ?? seen.android.en;
+      assert.equal(app.release.android.version, observed.version);
+      assert.equal(app.release.android.updated, playDay(observed.updatedDisplay));
+      assert.equal(app.release.android.checkedAt, newer?.observedAt ?? '2026-11-02');
     } else {
       assert.equal(app.release?.android, undefined);
     }
