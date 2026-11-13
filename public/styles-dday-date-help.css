@@ -1,0 +1,17 @@
+/* Keep this separate date guide secondary to the app store actions. */
+.app-page [data-date-help="dday"] {
+  box-sizing: border-box;
+  width: min(100%, 65ch);
+  max-width: 100%;
+  padding-inline: .25rem;
+}
+.app-page [data-date-help="dday"] p {
+  margin: .4em 0 0;
+  text-wrap: balance;
+}
+.app-page [data-date-help="dday"] a {
+  scroll-margin-block: 8rem;
+}
+html[data-theme="light"] .app-page [data-date-help="dday"] a:hover {
+  color: var(--text-primary);
+}
