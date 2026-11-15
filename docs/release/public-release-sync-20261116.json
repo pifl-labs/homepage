@@ -1,0 +1,926 @@
+{
+  "observedAt": "2026-11-16",
+  "timezone": "Asia/Seoul",
+  "datePolicy": "Apple version dates use UTC YYYY-MM-DD; Android uses the displayed public date. Observation day is KST.",
+  "websiteBase": "8f67c122de4dd9eb290681dde50b31002b08d4df",
+  "approval": "2026-11-16 exact homepage sync scope approved",
+  "scope": "Public metadata only. Listing descriptions are developer statements, not independent binary/privacy/health certification.",
+  "android": {
+    "country": "KR",
+    "language": "ko",
+    "developer": "PiFl Labs",
+    "completeNativeInventory": 16,
+    "developerURL": "https://play.google.com/store/apps/dev?id=8852533891626306957",
+    "apps": [
+      {
+        "package": "com.pifl.pipi.focus",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:33:40.093Z",
+        "name": "집중항해: 포모도로 타이머",
+        "version": "1.2.3",
+        "updated": "2026. 10. 24.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 5. 15.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.words",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:33:54.257Z",
+        "name": "단어루틴: JLPT 일본어 단어장",
+        "version": "1.1.0",
+        "updated": "2026. 11. 2.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 5. 29.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.log",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:33:56.006Z",
+        "name": "기분 한 칸: 날씨 감정일기",
+        "version": "1.0.14",
+        "updated": "2026. 11. 4.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 6. 9.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.dday",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:33:57.559Z",
+        "name": "그날까지: 디데이·기념일 위젯",
+        "version": "2.0.2",
+        "updated": "2026. 11. 13.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 6. 2.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.draw",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:33:59.027Z",
+        "name": "밑그림: AI 색칠도안 생성기",
+        "version": "1.2.4",
+        "updated": "2026. 11. 13.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 7. 14.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.hello",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:34:00.452Z",
+        "name": "말놀이 새싹: 어린이 일본어",
+        "version": "1.1.0",
+        "updated": "2026. 10. 25.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 6. 24.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.bridge",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:34:01.852Z",
+        "name": "Korean Bridge - 어린이 한국어·한글·수학",
+        "version": "1.0.3",
+        "updated": "2026. 11. 10.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 9. 9.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.wordvoyage",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:34:54.158Z",
+        "name": "낱말항해: 한글 단어 퍼즐",
+        "version": "1.4.1",
+        "updated": "2026. 11. 4.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 7. 13.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.tide",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:34:55.624Z",
+        "name": "물시계 - 바닷길·갯벌 물때 타이머",
+        "version": "1.2.0",
+        "updated": "2026. 10. 31.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 10. 11.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.thus",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:34:57.056Z",
+        "name": "Dialogos: 철학자와의 대화",
+        "version": "1.0.4",
+        "updated": "2026. 11. 13.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 10. 1.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.spend",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:34:59.103Z",
+        "name": "가계부: 매일 지출 기록",
+        "version": "1.0.0",
+        "updated": "2026. 10. 28.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 10. 28.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.kkachi",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:35:00.540Z",
+        "name": "까치: 나만의 민화",
+        "version": "1.1.0",
+        "updated": "2026. 10. 31.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 10. 21.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.sudoku",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:35:02.630Z",
+        "name": "한칸씩 스도쿠",
+        "version": "1.0.2",
+        "updated": "2026. 10. 29.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 10. 19.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.bp",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:35:05.524Z",
+        "name": "혈압 기록: 혈압 수첩·심박",
+        "version": "1.0.0",
+        "updated": "2026. 10. 27.",
+        "requiresAndroid": "8.0 이상",
+        "released": "2026. 10. 26.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.dream",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:35:21.665Z",
+        "name": "간밤: 말로 남기는 꿈 일기",
+        "version": "1.0.0",
+        "updated": "2026. 11. 13.",
+        "requiresAndroid": "8.0 이상",
+        "released": "2026. 11. 12.",
+        "developer": "PiFl Labs"
+      },
+      {
+        "package": "com.pifl.pipi.sky",
+        "country": "KR",
+        "language": "ko",
+        "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+        "observedAt": "2026-11-15T21:35:23.124Z",
+        "name": "하늘멍 - 구름층에서 우주까지",
+        "version": "1.0.0",
+        "updated": "2026. 11. 16.",
+        "requiresAndroid": "7.0 이상",
+        "released": "2026. 11. 12.",
+        "developer": "PiFl Labs"
+      }
+    ]
+  },
+  "ios": {
+    "KR": {
+      "country": "KR",
+      "sourceURL": "https://itunes.apple.com/lookup?id=1893574694&entity=software&country=kr&limit=200",
+      "observedAt": "2026-11-15T21:38:28.055006+00:00",
+      "HTTP": 200,
+      "apps": [
+        {
+          "trackId": 6801205183,
+          "bundleId": "com.pifl.pipi.bridge",
+          "trackName": "Korean Bridge - 어린이 한국어·한글·수학",
+          "version": "1.0.3",
+          "releaseDate": "2026-09-16T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4"
+        },
+        {
+          "trackId": 6788949612,
+          "bundleId": "com.pifl.pipi.wordvoyage",
+          "trackName": "낱말항해: 한글 단어 퍼즐",
+          "version": "1.4.1",
+          "releaseDate": "2026-07-26T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T17:28:31Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612?uo=4"
+        },
+        {
+          "trackId": 6779071131,
+          "bundleId": "com.pifl.pipi.draw",
+          "trackName": "밑그림: 사진으로 만드는 색칠공부",
+          "version": "1.2.4",
+          "releaseDate": "2026-07-26T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:29:42Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131?uo=4"
+        },
+        {
+          "trackId": 6770268950,
+          "bundleId": "com.pifl.pipi.dday",
+          "trackName": "그날까지: 디데이·기념일 위젯",
+          "version": "2.0.2",
+          "releaseDate": "2026-06-10T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:18:19Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4"
+        },
+        {
+          "trackId": 6777299814,
+          "bundleId": "com.pifl.pipi.hello",
+          "trackName": "말놀이 새싹: 어린이 일본어",
+          "version": "1.1.0",
+          "releaseDate": "2026-06-30T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-25T19:54:01Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814?uo=4"
+        },
+        {
+          "trackId": 6770267735,
+          "bundleId": "com.pifl.pipi.words",
+          "trackName": "단어루틴: JLPT 일본어 단어장",
+          "version": "1.1.0",
+          "releaseDate": "2026-06-01T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T13:39:43Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-%EC%9D%BC%EB%B3%B8%EC%96%B4-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4"
+        },
+        {
+          "trackId": 6762258878,
+          "bundleId": "com.pifl.pipi.focus",
+          "trackName": "집중항해: 포모도로 타이머",
+          "version": "1.2.3",
+          "releaseDate": "2026-05-21T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-24T15:17:49Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878?uo=4"
+        },
+        {
+          "trackId": 6770272665,
+          "bundleId": "com.pifl.pipi.log",
+          "trackName": "기분 한 칸: 날씨 감정일기",
+          "version": "1.0.14",
+          "releaseDate": "2026-06-18T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T17:21:03Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665?uo=4"
+        },
+        {
+          "trackId": 6820125053,
+          "bundleId": "com.pifl.pipi.sudoku",
+          "trackName": "한칸씩 스도쿠",
+          "version": "1.0.2",
+          "releaseDate": "2026-10-28T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-31T16:42:26Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%ED%95%9C%EC%B9%B8%EC%94%A9-%EC%8A%A4%EB%8F%84%EC%BF%A0/id6820125053?uo=4"
+        },
+        {
+          "trackId": 6820126418,
+          "bundleId": "com.pifl.pipi.tide",
+          "trackName": "물시계 - 바닷길·갯벌 물때 타이머",
+          "version": "1.2.0",
+          "releaseDate": "2026-11-13T08:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:10:31Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/%EB%AC%BC%EC%8B%9C%EA%B3%84-%EB%B0%94%EB%8B%B7%EA%B8%B8-%EA%B0%AF%EB%B2%8C-%EB%AC%BC%EB%95%8C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6820126418?uo=4"
+        },
+        {
+          "trackId": 6780508628,
+          "bundleId": "com.pifl.pipi.thus",
+          "trackName": "Dialogos: 철학자와의 대화",
+          "version": "1.0.4",
+          "releaseDate": "2026-10-20T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T10:52:44Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628?uo=4"
+        }
+      ],
+      "state": "PUBLIC_PUBLISHER_EXACT_SELLER",
+      "responseSHA256": "fe8b97fe1e9c52bbe2acb20172822bea610f9e136197375a2c5182f1af981abb"
+    },
+    "JP": {
+      "country": "JP",
+      "sourceURL": "https://itunes.apple.com/lookup?id=1893574694&entity=software&country=jp&limit=200",
+      "observedAt": "2026-11-15T21:38:28.663732+00:00",
+      "HTTP": 200,
+      "apps": [
+        {
+          "trackId": 6777299814,
+          "bundleId": "com.pifl.pipi.hello",
+          "trackName": "ハングルの芽：子どもの韓国語",
+          "version": "1.1.0",
+          "releaseDate": "2026-06-30T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-25T19:54:01Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB%E3%81%AE%E8%8A%BD-%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E9%9F%93%E5%9B%BD%E8%AA%9E/id6777299814?uo=4"
+        },
+        {
+          "trackId": 6770268950,
+          "bundleId": "com.pifl.pipi.dday",
+          "trackName": "その日まで：カウントダウン",
+          "version": "2.0.2",
+          "releaseDate": "2026-06-10T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:18:19Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E3%81%9D%E3%81%AE%E6%97%A5%E3%81%BE%E3%81%A7-%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%83%80%E3%82%A6%E3%83%B3/id6770268950?uo=4"
+        },
+        {
+          "trackId": 6779071131,
+          "bundleId": "com.pifl.pipi.draw",
+          "trackName": "下絵づくり：写真をぬりえに変換",
+          "version": "1.2.4",
+          "releaseDate": "2026-07-26T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:29:42Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E4%B8%8B%E7%B5%B5%E3%81%A5%E3%81%8F%E3%82%8A-%E5%86%99%E7%9C%9F%E3%82%92%E3%81%AC%E3%82%8A%E3%81%88%E3%81%AB%E5%A4%89%E6%8F%9B/id6779071131?uo=4"
+        },
+        {
+          "trackId": 6770267735,
+          "bundleId": "com.pifl.pipi.words",
+          "trackName": "ことば習慣：TOPIK韓国語単語帳",
+          "version": "1.1.0",
+          "releaseDate": "2026-06-01T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T13:39:43Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E3%81%93%E3%81%A8%E3%81%B0%E7%BF%92%E6%85%A3-topik%E9%9F%93%E5%9B%BD%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3/id6770267735?uo=4"
+        },
+        {
+          "trackId": 6801205183,
+          "bundleId": "com.pifl.pipi.bridge",
+          "trackName": "Korean Bridge - 子どもハングル・算数",
+          "version": "1.0.3",
+          "releaseDate": "2026-09-16T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/korean-bridge-%E5%AD%90%E3%81%A9%E3%82%82%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB-%E7%AE%97%E6%95%B0/id6801205183?uo=4"
+        },
+        {
+          "trackId": 6788949612,
+          "bundleId": "com.pifl.pipi.wordvoyage",
+          "trackName": "ハングル航海：韓国語の単語パズル",
+          "version": "1.4.1",
+          "releaseDate": "2026-07-26T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T17:28:31Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB%E8%88%AA%E6%B5%B7-%E9%9F%93%E5%9B%BD%E8%AA%9E%E3%81%AE%E5%8D%98%E8%AA%9E%E3%83%91%E3%82%BA%E3%83%AB/id6788949612?uo=4"
+        },
+        {
+          "trackId": 6762258878,
+          "bundleId": "com.pifl.pipi.focus",
+          "trackName": "集中航海：ポモドーロタイマー",
+          "version": "1.2.3",
+          "releaseDate": "2026-05-21T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-24T15:17:49Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E9%9B%86%E4%B8%AD%E8%88%AA%E6%B5%B7-%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/id6762258878?uo=4"
+        },
+        {
+          "trackId": 6780508628,
+          "bundleId": "com.pifl.pipi.thus",
+          "trackName": "Dialogos: 賢者との対話",
+          "version": "1.0.4",
+          "releaseDate": "2026-10-20T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T10:52:44Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/dialogos-%E8%B3%A2%E8%80%85%E3%81%A8%E3%81%AE%E5%AF%BE%E8%A9%B1/id6780508628?uo=4"
+        },
+        {
+          "trackId": 6820125053,
+          "bundleId": "com.pifl.pipi.sudoku",
+          "trackName": "ひとマスずつナンプレ",
+          "version": "1.0.2",
+          "releaseDate": "2026-10-28T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-31T16:42:26Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E3%81%B2%E3%81%A8%E3%83%9E%E3%82%B9%E3%81%9A%E3%81%A4%E3%83%8A%E3%83%B3%E3%83%97%E3%83%AC/id6820125053?uo=4"
+        },
+        {
+          "trackId": 6770272665,
+          "bundleId": "com.pifl.pipi.log",
+          "trackName": "気分のひとこま：感情日記",
+          "version": "1.0.14",
+          "releaseDate": "2026-06-18T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T17:21:03Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/jp/app/%E6%B0%97%E5%88%86%E3%81%AE%E3%81%B2%E3%81%A8%E3%81%93%E3%81%BE-%E6%84%9F%E6%83%85%E6%97%A5%E8%A8%98/id6770272665?uo=4"
+        }
+      ],
+      "state": "PUBLIC_PUBLISHER_EXACT_SELLER",
+      "responseSHA256": "a7791bb12b64a690bb6a80edb0905bbe72269df813263ff403f984d4c3d1ff2b"
+    },
+    "US": {
+      "country": "US",
+      "sourceURL": "https://itunes.apple.com/lookup?id=1893574694&entity=software&country=us&limit=200",
+      "observedAt": "2026-11-15T21:38:29.365202+00:00",
+      "HTTP": 200,
+      "apps": [
+        {
+          "trackId": 6779071131,
+          "bundleId": "com.pifl.pipi.draw",
+          "trackName": "Photo Outlines: Coloring Book",
+          "version": "1.2.4",
+          "releaseDate": "2026-07-26T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:29:42Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/photo-outlines-coloring-book/id6779071131?uo=4"
+        },
+        {
+          "trackId": 6801205183,
+          "bundleId": "com.pifl.pipi.bridge",
+          "trackName": "Korean Bridge: Hangul for Kids",
+          "version": "1.0.3",
+          "releaseDate": "2026-09-16T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/korean-bridge-hangul-for-kids/id6801205183?uo=4"
+        },
+        {
+          "trackId": 6777299814,
+          "bundleId": "com.pifl.pipi.hello",
+          "trackName": "KanaSprout: Japanese for Kids",
+          "version": "1.1.0",
+          "releaseDate": "2026-06-30T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-25T19:54:01Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/kanasprout-japanese-for-kids/id6777299814?uo=4"
+        },
+        {
+          "trackId": 6788949612,
+          "bundleId": "com.pifl.pipi.wordvoyage",
+          "trackName": "Hangul Voyage: Korean Puzzle",
+          "version": "1.4.1",
+          "releaseDate": "2026-07-26T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T17:28:31Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/hangul-voyage-korean-puzzle/id6788949612?uo=4"
+        },
+        {
+          "trackId": 6770268950,
+          "bundleId": "com.pifl.pipi.dday",
+          "trackName": "Until That Day: Countdown",
+          "version": "2.0.2",
+          "releaseDate": "2026-06-10T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T20:18:19Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/until-that-day-countdown/id6770268950?uo=4"
+        },
+        {
+          "trackId": 6770267735,
+          "bundleId": "com.pifl.pipi.words",
+          "trackName": "Vocab Routine: JLPT & TOPIK",
+          "version": "1.1.0",
+          "releaseDate": "2026-06-01T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T13:39:43Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/vocab-routine-jlpt-topik/id6770267735?uo=4"
+        },
+        {
+          "trackId": 6762258878,
+          "bundleId": "com.pifl.pipi.focus",
+          "trackName": "Pomodoro at Sea: Focus Timer",
+          "version": "1.2.3",
+          "releaseDate": "2026-05-21T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-24T15:17:49Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/pomodoro-at-sea-focus-timer/id6762258878?uo=4"
+        },
+        {
+          "trackId": 6770272665,
+          "bundleId": "com.pifl.pipi.log",
+          "trackName": "Mood Tile: Daily Journal",
+          "version": "1.0.14",
+          "releaseDate": "2026-06-18T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-04T17:21:03Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/mood-tile-daily-journal/id6770272665?uo=4"
+        },
+        {
+          "trackId": 6820125053,
+          "bundleId": "com.pifl.pipi.sudoku",
+          "trackName": "Cell by Cell Sudoku",
+          "version": "1.0.2",
+          "releaseDate": "2026-10-28T07:00:00Z",
+          "currentVersionReleaseDate": "2026-10-31T16:42:26Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/cell-by-cell-sudoku/id6820125053?uo=4"
+        },
+        {
+          "trackId": 6780508628,
+          "bundleId": "com.pifl.pipi.thus",
+          "trackName": "Dialogos: Stoic Dialogues",
+          "version": "1.0.4",
+          "releaseDate": "2026-10-20T07:00:00Z",
+          "currentVersionReleaseDate": "2026-11-13T10:52:44Z",
+          "sellerName": "PiFl Labs Co., Ltd.",
+          "artistId": 1893574694,
+          "trackViewUrl": "https://apps.apple.com/us/app/dialogos-stoic-dialogues/id6780508628?uo=4"
+        }
+      ],
+      "state": "PUBLIC_PUBLISHER_EXACT_SELLER",
+      "responseSHA256": "2a2ba0b50cf5c5032bc9b678b7244a1f4dd73ab83cf66149b8acfdcd249721d0"
+    }
+  },
+  "anonymousAndroidInventory": {
+    "KR": {
+      "country": "KR",
+      "sourceURL": "https://play.google.com/store/apps/dev?id=8852533891626306957&hl=ko&gl=KR",
+      "observedAt": "2026-11-15T21:40:14.485339+00:00",
+      "HTTP": 200,
+      "apps": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream",
+          "package": "com.pifl.pipi.dream",
+          "name": "간밤: 말로 남기는 꿈 일기"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky",
+          "package": "com.pifl.pipi.sky",
+          "name": "하늘멍 - 구름층에서 우주까지"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend",
+          "package": "com.pifl.pipi.spend",
+          "name": "가계부: 매일 지출 기록"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp",
+          "package": "com.pifl.pipi.bp",
+          "name": "혈압 기록: 혈압 수첩·심박"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi",
+          "package": "com.pifl.pipi.kkachi",
+          "name": "까치: 나만의 민화"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku",
+          "package": "com.pifl.pipi.sudoku",
+          "name": "한칸씩 스도쿠"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide",
+          "package": "com.pifl.pipi.tide",
+          "name": "물시계 - 바닷길·갯벌 물때 타이머"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus",
+          "package": "com.pifl.pipi.thus",
+          "name": "Dialogos: 철학자와의 대화"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge",
+          "package": "com.pifl.pipi.bridge",
+          "name": "Korean Bridge - 어린이 한국어·한글·수학"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw",
+          "package": "com.pifl.pipi.draw",
+          "name": "밑그림: AI 색칠도안 생성기"
+        }
+      ],
+      "state": "ANONYMOUS_PUBLIC_DEVELOPER_CARDS",
+      "responseSHA256": "d1b0c920045a5eb0631ca28668b9e0db9b5ca0df18e72983713e960fe3af3311",
+      "notPrivateConsoleTrackVerification": true
+    },
+    "JP": {
+      "country": "JP",
+      "sourceURL": "https://play.google.com/store/apps/dev?id=8852533891626306957&hl=ja&gl=JP",
+      "observedAt": "2026-11-15T21:40:14.981468+00:00",
+      "HTTP": 200,
+      "apps": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream",
+          "package": "com.pifl.pipi.dream",
+          "name": "ゆうべ：話して残す夢日記"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky",
+          "package": "com.pifl.pipi.sky",
+          "name": "Skylayer - 雲の層から宇宙へ"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend",
+          "package": "com.pifl.pipi.spend",
+          "name": "家計簿：毎日の支出記録"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp",
+          "package": "com.pifl.pipi.bp",
+          "name": "血圧記録：血圧手帳・脈拍"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi",
+          "package": "com.pifl.pipi.kkachi",
+          "name": "カチ：わたしの民画"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku",
+          "package": "com.pifl.pipi.sudoku",
+          "name": "ひとマスずつナンプレ"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus",
+          "package": "com.pifl.pipi.thus",
+          "name": "Dialogos: 賢者との対話"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge",
+          "package": "com.pifl.pipi.bridge",
+          "name": "Korean Bridge - 子どもハングル・算数"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw",
+          "package": "com.pifl.pipi.draw",
+          "name": "下絵づくり：AIぬりえジェネレーター"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage",
+          "package": "com.pifl.pipi.wordvoyage",
+          "name": "ハングル航海：韓国語の単語パズル"
+        }
+      ],
+      "state": "ANONYMOUS_PUBLIC_DEVELOPER_CARDS",
+      "responseSHA256": "3aa473dcf7a59e0c094f05ed4e3680f741d03a64594e68f844872b2eb65f3e5c",
+      "notPrivateConsoleTrackVerification": true
+    },
+    "US": {
+      "country": "US",
+      "sourceURL": "https://play.google.com/store/apps/dev?id=8852533891626306957&hl=en&gl=US",
+      "observedAt": "2026-11-15T21:40:15.492014+00:00",
+      "HTTP": 200,
+      "apps": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream",
+          "package": "com.pifl.pipi.dream",
+          "name": "Yesternight: Dream Journal"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky",
+          "package": "com.pifl.pipi.sky",
+          "name": "Skylayer: Clouds to Space"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend",
+          "package": "com.pifl.pipi.spend",
+          "name": "Spending Log: Expense Tracker"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp",
+          "package": "com.pifl.pipi.bp",
+          "name": "BP Diary & Blood Pressure Log"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi",
+          "package": "com.pifl.pipi.kkachi",
+          "name": "Kkachi: Your Folk Painting"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku",
+          "package": "com.pifl.pipi.sudoku",
+          "name": "Cell by Cell Sudoku"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus",
+          "package": "com.pifl.pipi.thus",
+          "name": "Dialogos: Stoic Dialogues"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge",
+          "package": "com.pifl.pipi.bridge",
+          "name": "Korean Bridge: Hangul for Kids"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw",
+          "package": "com.pifl.pipi.draw",
+          "name": "Photo Outlines: Coloring Book"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage",
+          "package": "com.pifl.pipi.wordvoyage",
+          "name": "Hangul Voyage: Korean Puzzle"
+        }
+      ],
+      "state": "ANONYMOUS_PUBLIC_DEVELOPER_CARDS",
+      "responseSHA256": "23eeab182821bbe9b23e399900198c8a7916fc0fc2edaa154dbf106ad379dee6",
+      "notPrivateConsoleTrackVerification": true
+    }
+  },
+  "limits": [
+    "Anonymous initial HTML card arrays contain ten products, not a complete developer inventory.",
+    "Tide iOS observed in KR; not present in queried JP/US publisher metadata. No worldwide absence claim.",
+    "No public iOS entry for BP/Spend/Sky/Dream/Kkachi in these queried storefronts.",
+    "Old submitted screenshots are not relabeled as current binary captures.",
+    "Historical receipts are immutable. Existing shared observation dates remain; changed platforms are dated separately.",
+    "Current native developer inventory lists 15 products in JP and US, versus16 in KR. Tide is not present in the JP/US developer rosters; no worldwide absence conclusion.",
+    "Words current iOS JP title differs from current Android JP title; destination labels remain separate."
+  ],
+  "nativeAndroidNames": {
+    "JP": {
+      "observedAt": "2026-11-15T22:05:16.740Z",
+      "url": "https://play.google.com/store/apps/dev?id=8852533891626306957&hl=ja&gl=JP",
+      "apps": [
+        {
+          "name": "ゆうべ：話して残す夢日記",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream"
+        },
+        {
+          "name": "Skylayer - 雲の層から宇宙へ",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky"
+        },
+        {
+          "name": "家計簿：毎日の支出記録",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend"
+        },
+        {
+          "name": "血圧記録：血圧手帳・脈拍",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp"
+        },
+        {
+          "name": "カチ：わたしの民画",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi"
+        },
+        {
+          "name": "ひとマスずつナンプレ",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku"
+        },
+        {
+          "name": "Dialogos: 賢者との対話",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus"
+        },
+        {
+          "name": "Korean Bridge - 子どもハングル・算数",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge"
+        },
+        {
+          "name": "下絵づくり：AIぬりえジェネレーター",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw"
+        },
+        {
+          "name": "ハングル航海：韓国語の単語パズル",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage"
+        },
+        {
+          "name": "ハングルの芽：子どもの韓国語",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello"
+        },
+        {
+          "name": "気分のひとこま：感情日記",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log"
+        },
+        {
+          "name": "その日まで：カウントダウン",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday"
+        },
+        {
+          "name": "ことば習慣：韓国語・TOPIK単語帳",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words"
+        },
+        {
+          "name": "集中航海：ポモドーロタイマー",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus"
+        }
+      ]
+    },
+    "US": {
+      "observedAt": "2026-11-15T22:05:30.980Z",
+      "url": "https://play.google.com/store/apps/dev?id=8852533891626306957&hl=en&gl=US",
+      "apps": [
+        {
+          "name": "Yesternight: Dream Journal",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream"
+        },
+        {
+          "name": "Skylayer: Clouds to Space",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky"
+        },
+        {
+          "name": "Spending Log: Expense Tracker",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend"
+        },
+        {
+          "name": "BP Diary & Blood Pressure Log",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp"
+        },
+        {
+          "name": "Kkachi: Your Folk Painting",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi"
+        },
+        {
+          "name": "Cell by Cell Sudoku",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku"
+        },
+        {
+          "name": "Dialogos: Stoic Dialogues",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus"
+        },
+        {
+          "name": "Korean Bridge: Hangul for Kids",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge"
+        },
+        {
+          "name": "Photo Outlines: Coloring Book",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw"
+        },
+        {
+          "name": "Hangul Voyage: Korean Puzzle",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage"
+        },
+        {
+          "name": "KanaSprout: Japanese for Kids",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello"
+        },
+        {
+          "name": "Mood Tile: Daily Journal",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log"
+        },
+        {
+          "name": "Until That Day: Countdown",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday"
+        },
+        {
+          "name": "Vocab Routine: JLPT & TOPIK",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words"
+        },
+        {
+          "name": "Pomodoro at Sea: Focus Timer",
+          "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus"
+        }
+      ]
+    }
+  }
+}

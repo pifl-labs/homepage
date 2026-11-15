@@ -22,6 +22,40 @@ audit or learning-outcome study.
 For our current product information and store links, see
 [the official KanaSprout page](https://pifl-labs.com/en/apps/pipi-hello/).
 
+### Current public apps — checked 16 November 2026 (KST)
+
+The current Korean storefront evidence contains **16 Android apps and 11 iOS apps**.
+The Japanese and US publisher lookups each contain ten iOS apps. Availability is
+storefront-specific: Tidewalk’s iOS link below is explicitly for Korea. This is
+public listing metadata, not proof of identical platform features or a device test.
+The dated ten-app snapshot below remains historical rather than the current count.
+
+| Current Korean name / purpose | Official Korean store links |
+| --- | --- |
+| 집중항해: 포모도로 타이머 — Pomodoro focus timer | [App Store (KR)](https://apps.apple.com/kr/app/%EC%A7%91%EC%A4%91%ED%95%AD%ED%95%B4-%ED%8F%AC%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6762258878) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR) |
+| 단어루틴: JLPT 일본어 단어장 — Vocabulary review | [App Store (KR)](https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-%EC%9D%BC%EB%B3%B8%EC%96%B4-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR) |
+| 기분 한 칸: 날씨 감정일기 — Mood journal | [App Store (KR)](https://apps.apple.com/kr/app/%EA%B8%B0%EB%B6%84-%ED%95%9C-%EC%B9%B8-%EB%82%A0%EC%94%A8-%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0/id6770272665) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR) |
+| 그날까지: 디데이·기념일 위젯 — Countdown and anniversary widgets | [App Store (KR)](https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR) |
+| 밑그림: AI 색칠도안 생성기 — Photo-to-coloring outlines | [App Store (KR)](https://apps.apple.com/kr/app/%EB%B0%91%EA%B7%B8%EB%A6%BC-%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80/id6779071131) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR) |
+| 말놀이 새싹: 어린이 일본어 — Language activities for children | [App Store (KR)](https://apps.apple.com/kr/app/%EB%A7%90%EB%86%80%EC%9D%B4-%EC%83%88%EC%8B%B9-%EC%96%B4%EB%A6%B0%EC%9D%B4-%EC%9D%BC%EB%B3%B8%EC%96%B4/id6777299814) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR) |
+| Korean Bridge - 어린이 한국어·한글·수학 — Korean and Hangul activities for children | [App Store (KR)](https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR) |
+| 낱말항해: 한글 단어 퍼즐 — Hangul word puzzles | [App Store (KR)](https://apps.apple.com/kr/app/%EB%82%B1%EB%A7%90%ED%95%AD%ED%95%B4-%ED%95%9C%EA%B8%80-%EB%8B%A8%EC%96%B4-%ED%8D%BC%EC%A6%90/id6788949612) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR) |
+| 물시계 - 바닷길·갯벌 물때 타이머 — Korean tide timer | [App Store (KR)](https://apps.apple.com/kr/app/%EB%AC%BC%EC%8B%9C%EA%B3%84-%EB%B0%94%EB%8B%B7%EA%B8%B8-%EA%B0%AF%EB%B2%8C-%EB%AC%BC%EB%95%8C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6820126418) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR) |
+| Dialogos: 철학자와의 대화 — Philosophical dialogue | [App Store (KR)](https://apps.apple.com/kr/app/dialogos-%EC%B2%A0%ED%95%99%EC%9E%90%EC%99%80%EC%9D%98-%EB%8C%80%ED%99%94/id6780508628) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR) |
+| 가계부: 매일 지출 기록 — Manual expense records | [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR) |
+| 까치: 나만의 민화 — Korean folk-art experience | [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR) |
+| 한칸씩 스도쿠 — Sudoku puzzles | [App Store (KR)](https://apps.apple.com/kr/app/%ED%95%9C%EC%B9%B8%EC%94%A9-%EC%8A%A4%EB%8F%84%EC%BF%A0/id6820125053) · [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR) |
+| 혈압 기록: 혈압 수첩·심박 — Manual blood-pressure diary | [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR) |
+| 간밤: 말로 남기는 꿈 일기 — Voice or text dream journal | [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR) |
+| 하늘멍 - 구름층에서 우주까지 — Model-based virtual sky | [Google Play (KR)](https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR) |
+
+Blood-pressure records are entered from an external monitor: the app does not
+measure blood pressure or provide diagnosis or treatment. Dream-symbol readings
+are interpretation, not predictions or diagnoses. Sky imagery is model-based,
+not a live camera feed or a forecast.
+
+Evidence: [dated public metadata](docs/release/public-release-sync-20261116.json).
+
 ### Ten apps: official store links
 
 The original ten-product Korean-storefront snapshot was checked on 17 October
