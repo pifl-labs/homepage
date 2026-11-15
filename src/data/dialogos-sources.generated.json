@@ -6169,14 +6169,14 @@
     "slug": "nietzsche-aphorisms",
     "mentorId": "nietzsche",
     "icon": "fa-scroll",
-    "updated": "2026-11-13",
+    "updated": "2026-11-15",
     "content": {
       "ko": {
         "workName": "잠언과 산문 선집",
         "mentorName": "프리드리히 니체",
-        "lede": "니체 잠언과 산문 선집 — 『인간적인, 너무나 인간적인』『아침놀』『선악의 저편』『우상의 황혼』 등 일곱 책에서 고른 구절의 우리말 의역과 무료 원문 안내.",
-        "intro": "이 쪽은 니체의 여러 책에서 고른 구절을 한데 모은 <em>잠언과 산문 선집</em>입니다. 『인간적인, 너무나 인간적인』(1878)부터 1888년에 쓴 자서전 『이 사람을 보라』까지, Dialogos가 인용하는 구절이 책마다 한두 개, 많아야 세 개라서 책마다 따로 쪽을 만들지 않고 한 쪽에 모았습니다. 1874년의 「교육자로서의 쇼펜하우어」도 함께 실었습니다. 구절마다 어느 책의 몇 번 절인지 적었고(예: 『아침놀』 376), 아래 절은 책이 나온 순서대로 정리했습니다. Dialogos에서 니체와 나누는 대화는 이 책들을 비롯한 그의 저작을 바탕으로 합니다.",
-        "context": "<p>1874년 니체는 바젤 대학의 고전문헌학 정교수로서 「교육자로서의 쇼펜하우어」를 '반시대적 고찰'의 세 번째 편으로 냈습니다. 1876~77년 겨울 소렌토에서 쓴 『인간적인, 너무나 인간적인』은 1878년 '자유정신을 위한 책'이라는 부제를 달고 나왔고, 1880년에는 그 두 번째이자 마지막 보유인 『방랑자와 그의 그림자』가 뒤따랐습니다. 이어 1881년 『아침놀』, 1886년 『선악의 저편』, 1889년 『우상의 황혼』이 나왔습니다. 자서전 『이 사람을 보라』는 1888년 10월 15일부터 11월 4일 사이에 썼지만 1908년에야 출간되었습니다. 이 책들의 대부분은 한 줄에서 몇 쪽에 이르는 번호 붙은 짧은 절로 이루어져 있어 한 절만 떼어 읽어도 하나의 생각이 됩니다. 「교육자로서의 쇼펜하우어」만은 여러 절로 이어지는 긴 글입니다.</p>",
+        "lede": "니체 잠언과 산문 선집 — 『인간적인, 너무나 인간적인』『아침놀』『선악의 저편』『우상의 황혼』 등 여섯 책에서 고른 구절의 우리말 의역과 무료 원문 안내.",
+        "intro": "이 쪽은 니체의 여러 책에서 고른 구절을 한데 모은 <em>잠언과 산문 선집</em>입니다. 『인간적인, 너무나 인간적인』(1878)부터 1888년에 쓴 자서전 『이 사람을 보라』까지, Dialogos가 인용하는 구절이 책마다 한두 개, 많아야 세 개라서 책마다 따로 쪽을 만들지 않고 한 쪽에 모았습니다. 구절마다 어느 책의 몇 번 절인지 적었고(예: 『아침놀』 376), 아래 절은 책이 나온 순서대로 정리했습니다. Dialogos에서 니체와 나누는 대화는 이 책들을 비롯한 그의 저작을 바탕으로 합니다.",
+        "context": "<p>1876~77년 겨울 소렌토에서 쓴 『인간적인, 너무나 인간적인』은 1878년 '자유정신을 위한 책'이라는 부제를 달고 나왔고, 1880년에는 그 두 번째이자 마지막 보유인 『방랑자와 그의 그림자』가 뒤따랐습니다. 이어 1881년 『아침놀』, 1886년 『선악의 저편』, 1889년 『우상의 황혼』이 나왔습니다. 자서전 『이 사람을 보라』는 1888년 10월 15일부터 11월 4일 사이에 썼지만 1908년에야 출간되었습니다. 이 책들의 대부분은 한 줄에서 몇 쪽에 이르는 번호 붙은 짧은 절로 이루어져 있어 한 절만 떼어 읽어도 하나의 생각이 됩니다.</p>",
         "sections": [
           {
             "anchor": "human-all-too-human",
@@ -6207,11 +6207,6 @@
             "anchor": "ecce-homo",
             "title": "이 사람을 보라 · 나는 왜 이렇게 영리한가 (1888년 집필)",
             "body": "'사람은 어떻게 자기 자신이 되는가'라는 부제의 자서전입니다. 「나는 왜 이렇게 영리한가」 9절에서 니체는 자기가 무엇인지 미리 알지 못했기에 헛디딤과 샛길, 늦어짐까지 저마다 뜻이 있었다고 돌아봅니다. (9)"
-          },
-          {
-            "anchor": "schopenhauer-as-educator",
-            "title": "반시대적 고찰 · 교육자로서의 쇼펜하우어 (1874)",
-            "body": "'반시대적 고찰'의 세 번째 편입니다. 첫 절은 사람마다 세상에 단 한 번뿐인 존재라는 사실을 알면서도 남의 눈이 두려워 숨기며 산다고 말하고, 참된 교육자는 우리를 풀어 주는 해방자라고 말합니다. 삶의 강을 건널 다리는 스스로 놓아야 한다는 구절이 여기 있습니다. (1)"
           }
         ],
         "quotes": [
@@ -6298,13 +6293,6 @@
             "gloss": "전공과 다른 일을 하거나 남보다 늦게 출발해 초조할 때 — 돌아간 길과 머뭇거림도 나를 만드는 과정이었다는 회고.",
             "book": "이 사람을 보라 · 나는 왜 이렇게 영리한가",
             "bookId": "eh"
-          },
-          {
-            "text": "네가 삶의 강을 건너야 할 그 다리는 너 말고는 아무도 놓아 줄 수 없다. 세상에는 너 말고는 아무도 걸을 수 없는 길이 하나 있다. 어디로 가느냐고? 묻지 말고, 걸어라.",
-            "cite": "1",
-            "gloss": "진로를 두고 부모·선배·유튜브 조언 사이에서 내 목소리를 잃었을 때 — 조언을 다 버리라는 게 아니라, 마지막 다리는 내가 놓아야 한다는 구절.",
-            "book": "반시대적 고찰 · 교육자로서의 쇼펜하우어",
-            "bookId": "se"
           }
         ],
         "concepts": [
@@ -6326,15 +6314,15 @@
           },
           {
             "term": "너 자신이 되어라",
-            "def": "「교육자로서의 쇼펜하우어」 첫 절에서 양심이 외치는 말이자, 『이 사람을 보라』의 부제 '사람은 어떻게 자기 자신이 되는가'로 이어지는 니체의 오랜 물음입니다."
+            "def": "『즐거운 학문』 270에서 양심이 하는 말이자, 『이 사람을 보라』의 부제 '사람은 어떻게 자기 자신이 되는가'로 이어지는 니체의 오랜 물음입니다."
           }
         ],
-        "apply": "<p>오늘 밤 잠들기 전 하루를 판정하고 싶어지면 『아침놀』 317을 떠올리고 판단을 내일 아침으로 미뤄 보세요. 몹시 지쳐 있다면 376의 처방대로 먼저 자는 것이 순서입니다.</p><p>바꾸고 싶은 습관이 있다면 534처럼 '아주 적은 양을, 오래' 설계하세요. 하루 5분, 한 문장, 한 정거장 걷기처럼 작게 정하고 날짜만 적어 두는 겁니다. 그리고 「교육자로서의 쇼펜하우어」 첫 절이 권하는 질문을 하나 적어 보세요. '지금까지 내가 진심으로 사랑한 것은 무엇이었나?' 그것들을 나란히 놓으면 내가 어떤 사람이 되어 가고 있는지가 조금 보입니다.</p>",
+        "apply": "<p>오늘 밤 잠들기 전 하루를 판정하고 싶어지면 『아침놀』 317을 떠올리고 판단을 내일 아침으로 미뤄 보세요. 몹시 지쳐 있다면 376의 처방대로 먼저 자는 것이 순서입니다.</p><p>바꾸고 싶은 습관이 있다면 534처럼 '아주 적은 양을, 오래' 설계하세요. 하루 5분, 한 문장, 한 정거장 걷기처럼 작게 정하고 날짜만 적어 두는 겁니다.</p>",
         "provenance": "Dialogos의 답변과 이 쪽의 구절은 니체의 독일어 원문(eKGWB)과 직접 대조해 현대 한국어로 새로 의역한 것이며, 저작권이 남아 있는 현대 번역본의 문장을 옮기지 않습니다. 출처 표기는 책 이름과 절 번호를 함께 가리킵니다(예: 『아침놀』 376 = 『아침놀』 376절).",
         "faq": [
           {
             "q": "이 쪽은 왜 여러 책을 한 쪽에 모았나요?",
-            "a": "Dialogos가 인용하는 니체 구절은 『즐거운 학문』과 『차라투스트라는 이렇게 말했다』에 가장 많고, 나머지 일곱 책에서는 책마다 한두 개, 많아야 세 개입니다. 그래서 그 일곱 책의 구절을 한 쪽에 모으고, 구절마다 책 이름과 절 번호를 함께 적었습니다."
+            "a": "Dialogos가 인용하는 니체 구절은 『즐거운 학문』과 『차라투스트라는 이렇게 말했다』에 가장 많고, 나머지 여섯 책에서는 책마다 한두 개, 많아야 세 개입니다. 그래서 그 여섯 책의 구절을 한 쪽에 모으고, 구절마다 책 이름과 절 번호를 함께 적었습니다."
           },
           {
             "q": "니체가 잠언 형식으로 쓴 책은 무엇인가요?",
@@ -6358,14 +6346,14 @@
           },
           {
             "q": "원문을 무료로 읽을 수 있나요?",
-            "a": "네. 일곱 책 모두 독일어 원문을 eKGWB에서 읽을 수 있고, 영어로는 Project Gutenberg의 『인간적인, 너무나 인간적인』 I·『선악의 저편』(헬렌 지먼 역), 『아침놀』(J. M. 케네디 역)을 읽을 수 있습니다."
+            "a": "네. 여섯 책 모두 독일어 원문을 eKGWB에서 읽을 수 있고, 영어로는 Project Gutenberg의 『인간적인, 너무나 인간적인』 I·『선악의 저편』(헬렌 지먼 역), 『아침놀』(J. M. 케네디 역)을 읽을 수 있습니다."
           },
           {
             "q": "Dialogos는 이 책들을 어떻게 인용하나요?",
             "a": "Dialogos는 니체의 독일어 원문을 직접 대조해 우리말로 새로 풀어 쓰며, 저작권이 있는 현대 번역본의 문장을 쓰지 않습니다. 답변에는 '『아침놀』 376'처럼 책 이름과 절 번호를 함께 붙입니다."
           }
         ],
-        "pdIntro": "니체(1844–1900)의 독일어 원문은 저작권이 소멸했습니다. eKGWB는 조르조 콜리와 마치노 몬티나리가 엮은 비판 전집의 디지털판으로, 이 쪽의 일곱 책을 모두 독일어로 무료로 읽을 수 있습니다. 영어 퍼블릭 도메인 번역으로는 헬렌 지먼(1846–1934)이 옮긴 『인간적인, 너무나 인간적인』 I(1909)과 『선악의 저편』, J. M. 케네디(1886–1918)가 옮긴 『아침놀』(1911)을 안내합니다. 『방랑자와 그의 그림자』·『우상의 황혼』·『이 사람을 보라』·「교육자로서의 쇼펜하우어」의 옛 영역본은 역자의 사망 연도를 확인하지 못했거나 미국에서만 퍼블릭 도메인이어서 싣지 않았고, 이 책들은 eKGWB 독일어 원문으로 안내합니다.",
+        "pdIntro": "니체(1844–1900)의 독일어 원문은 저작권이 소멸했습니다. eKGWB는 조르조 콜리와 마치노 몬티나리가 엮은 비판 전집의 디지털판으로, 이 쪽의 여섯 책을 모두 독일어로 무료로 읽을 수 있습니다. 영어 퍼블릭 도메인 번역으로는 헬렌 지먼(1846–1934)이 옮긴 『인간적인, 너무나 인간적인』 I(1909)과 『선악의 저편』, J. M. 케네디(1886–1918)가 옮긴 『아침놀』(1911)을 안내합니다. 『방랑자와 그의 그림자』·『우상의 황혼』·『이 사람을 보라』의 옛 영역본은 역자의 사망 연도를 확인하지 못했거나 미국에서만 퍼블릭 도메인이어서 싣지 않았고, 이 책들은 eKGWB 독일어 원문으로 안내합니다.",
         "pdLinks": [
           {
             "label": "eKGWB — 니체 저작 독일어 원문 (콜리·몬티나리 비판판 디지털본)",
@@ -6426,9 +6414,9 @@
       "ja": {
         "workName": "箴言と散文選",
         "mentorName": "フリードリヒ・ニーチェ",
-        "lede": "ニーチェ 箴言と散文選――『人間的、あまりに人間的』『曙光』『善悪の彼岸』『偶像の黄昏』など七つの著作から選んだ一節の意訳と、無料で読める原文への案内。",
-        "intro": "このページは、ニーチェのいくつもの著作から選んだ一節をひとつにまとめた<em>箴言と散文選</em>です。『人間的、あまりに人間的』(1878)から1888年に書かれた自伝『この人を見よ』まで、Dialogosが引用する一節は一冊につき一つか二つ、多くても三つなので、本ごとに別のページを立てず一か所に集めました。1874年の「教育者としてのショーペンハウアー」もあわせて収めています。一節ごとにどの本の何番の節かを記し(例:『曙光』376)、下の各節は刊行順に並べています。Dialogosでニーチェと交わす対話は、これらの本をはじめとする彼の著作にもとづいています。",
-        "context": "<p>1874年、ニーチェはバーゼル大学の古典文献学正教授として「教育者としてのショーペンハウアー」を『反時代的考察』の第三篇として刊行しました。1876〜77年の冬にソレントで書いた『人間的、あまりに人間的』は1878年に「自由精神のための書」という副題で出版され、1880年にはその第二の、そして最後の補遺である『漂泊者とその影』が続きました。さらに1881年に『曙光』、1886年に『善悪の彼岸』、1889年に『偶像の黄昏』が出ています。自伝『この人を見よ』は1888年10月15日から11月4日にかけて書かれましたが、出版は1908年でした。これらの本の多くは一行から数ページの番号つきの短い節でできており、一節だけ取り出しても一つの考えとして読めます。日本では、ちくま学芸文庫『ニーチェ全集』に『人間的、あまりに人間的』『曙光』『善悪の彼岸』『偶像の黄昏』『この人を見よ』などが収められています。</p>",
+        "lede": "ニーチェ 箴言と散文選――『人間的、あまりに人間的』『曙光』『善悪の彼岸』『偶像の黄昏』など六つの著作から選んだ一節の意訳と、無料で読める原文への案内。",
+        "intro": "このページは、ニーチェのいくつもの著作から選んだ一節をひとつにまとめた<em>箴言と散文選</em>です。『人間的、あまりに人間的』(1878)から1888年に書かれた自伝『この人を見よ』まで、Dialogosが引用する一節は一冊につき一つか二つ、多くても三つなので、本ごとに別のページを立てず一か所に集めました。一節ごとにどの本の何番の節かを記し(例:『曙光』376)、下の各節は刊行順に並べています。Dialogosでニーチェと交わす対話は、これらの本をはじめとする彼の著作にもとづいています。",
+        "context": "<p>1876〜77年の冬にソレントで書いた『人間的、あまりに人間的』は1878年に「自由精神のための書」という副題で出版され、1880年にはその第二の、そして最後の補遺である『漂泊者とその影』が続きました。さらに1881年に『曙光』、1886年に『善悪の彼岸』、1889年に『偶像の黄昏』が出ています。自伝『この人を見よ』は1888年10月15日から11月4日にかけて書かれましたが、出版は1908年でした。これらの本の多くは一行から数ページの番号つきの短い節でできており、一節だけ取り出しても一つの考えとして読めます。日本では、ちくま学芸文庫『ニーチェ全集』に『人間的、あまりに人間的』『曙光』『善悪の彼岸』『偶像の黄昏』『この人を見よ』などが収められています。</p>",
         "sections": [
           {
             "anchor": "human-all-too-human",
@@ -6459,11 +6447,6 @@
             "anchor": "ecce-homo",
             "title": "この人を見よ · なぜ私はこんなに利口なのか(1888年執筆)",
             "body": "「人はいかにして自分であるところのものになるか」という副題の自伝です。「なぜ私はこんなに利口なのか」第9節でニーチェは、自分が何者かを前もって知らなかったからこそ、踏み外しや脇道、遅れにまでそれぞれ意味があったと振り返ります。(9)"
-          },
-          {
-            "anchor": "schopenhauer-as-educator",
-            "title": "反時代的考察 · 教育者としてのショーペンハウアー(1874)",
-            "body": "『反時代的考察』の第三篇です。第1節は、人は誰もがこの世に一度きりの存在だと知りながら、隣人の目を恐れてそれを隠して生きていると語り、真の教育者とは私たちを解き放つ解放者だと述べます。人生の川を渡る橋は自分でかけるしかないという一節はここにあります。(1)"
           }
         ],
         "quotes": [
@@ -6550,13 +6533,6 @@
             "gloss": "回り道をして就職が遅れた、専攻と違う仕事をしている――そんな焦りに、寄り道や足踏みも自分をつくる過程だったという回想。",
             "book": "この人を見よ · なぜ私はこんなに利口なのか",
             "bookId": "eh"
-          },
-          {
-            "text": "君がまさに人生の川を渡るための橋は、誰も君の代わりにかけてはくれない。君自身のほかには誰も。世界には、君のほかには誰も歩けない、ただ一つの道がある。どこへ通じているのか? 問うな、歩め。",
-            "cite": "1",
-            "gloss": "進路について親や先輩やネットの助言に囲まれて、自分の声が聞こえなくなったとき――助言を捨てろではなく、最後の橋は自分でかけるしかないという一節。",
-            "book": "反時代的考察 · 教育者としてのショーペンハウアー",
-            "bookId": "se"
           }
         ],
         "concepts": [
@@ -6577,16 +6553,16 @@
             "def": "エリスはギリシア神話の争いの女神です。ニーチェはヘシオドスを引きながら、嫉妬は他人を引きずり下ろす悪い争いと、自分を引き上げる善い争いに分かれると語ります(『漂泊者とその影』29)。"
           },
           {
-            "term": "汝自身であれ",
-            "def": "「教育者としてのショーペンハウアー」第1節で良心が呼びかける言葉であり、『この人を見よ』の副題「人はいかにして自分であるところのものになるか」へとつながる、ニーチェの長年の問いです。"
+            "term": "本来の自分になれ",
+            "def": "『悦ばしき知識』270で良心が語る言葉であり、『この人を見よ』の副題「人はいかにして自分であるところのものになるか」へとつながる、ニーチェの長年の問いです。"
           }
         ],
-        "apply": "<p>今夜、眠る前に一日を裁きたくなったら、『曙光』317を思い出して判断を明日の朝に回してみましょう。ひどく疲れているなら、376の処方どおり、まず眠るのが先です。</p><p>変えたい習慣があるなら、534のように「ごく少量を、長く」設計しましょう。一日5分、一文、ひと駅歩くといった小さな単位に決め、日付だけを記録します。そして「教育者としてのショーペンハウアー」第1節がすすめる問いを一つ書いてみてください。「これまで自分が本当に愛してきたものは何だったか」。それらを並べてみると、自分がどんな人になりつつあるのかが少し見えてきます。</p>",
+        "apply": "<p>今夜、眠る前に一日を裁きたくなったら、『曙光』317を思い出して判断を明日の朝に回してみましょう。ひどく疲れているなら、376の処方どおり、まず眠るのが先です。</p><p>変えたい習慣があるなら、534のように「ごく少量を、長く」設計しましょう。一日5分、一文、ひと駅歩くといった小さな単位に決め、日付だけを記録します。</p>",
         "provenance": "Dialogosの応答とこのページの引用は、ニーチェのドイツ語原文(eKGWB)と直接照らし合わせて現代日本語に新たに意訳したものであり、著作権の残る現代訳の文章を引き写すことはしません。出典表記は書名と節番号をあわせて示しています(例:『曙光』376=『曙光』第376節)。",
         "faq": [
           {
             "q": "なぜ複数の本を一つのページにまとめているのですか?",
-            "a": "Dialogosが引用するニーチェの一節は『悦ばしき知識』と『ツァラトゥストラはこう言った』に最も多く、残る七つの本からは一冊につき一つか二つ、多くても三つです。そこでその七冊の一節を一つのページに集め、一節ごとに書名と節番号を記しました。"
+            "a": "Dialogosが引用するニーチェの一節は『悦ばしき知識』と『ツァラトゥストラはこう言った』に最も多く、残る六つの本からは一冊につき一つか二つ、多くても三つです。そこでその六冊の一節を一つのページに集め、一節ごとに書名と節番号を記しました。"
           },
           {
             "q": "ニーチェがアフォリズムの形で書いた本はどれですか?",
@@ -6610,14 +6586,14 @@
           },
           {
             "q": "原文を無料で読めますか?",
-            "a": "はい。七冊すべてのドイツ語原文をeKGWBで読めます。英語ではProject Gutenbergで『人間的、あまりに人間的』I・『善悪の彼岸』(ヘレン・ジマーン訳)と『曙光』(J・M・ケネディ訳)が読めます。"
+            "a": "はい。六冊すべてのドイツ語原文をeKGWBで読めます。英語ではProject Gutenbergで『人間的、あまりに人間的』I・『善悪の彼岸』(ヘレン・ジマーン訳)と『曙光』(J・M・ケネディ訳)が読めます。"
           },
           {
             "q": "Dialogosはこれらの本をどのように引用していますか?",
             "a": "Dialogosはニーチェのドイツ語原文と直接照らし合わせて新たに日本語で言い直しており、著作権のある現代訳の文章は使いません。応答には「『曙光』376」のように書名と節番号をあわせて付けます。"
           }
         ],
-        "pdIntro": "ニーチェ(1844–1900)のドイツ語原文は著作権が消滅しています。eKGWBはジョルジョ・コッリとマッツィーノ・モンティナーリが編んだ批判版全集のデジタル版で、このページの七冊すべてをドイツ語で無料で読めます。英語のパブリックドメイン訳としては、ヘレン・ジマーン(1846–1934)訳の『人間的、あまりに人間的』I(1909年)と『善悪の彼岸』、J・M・ケネディ(1886–1918)訳の『曙光』(1911年)を案内します。『漂泊者とその影』『偶像の黄昏』『この人を見よ』「教育者としてのショーペンハウアー」の古い英訳は、訳者の没年が確認できないか米国でのみパブリックドメインであるため載せず、これらはeKGWBのドイツ語原文で案内します。",
+        "pdIntro": "ニーチェ(1844–1900)のドイツ語原文は著作権が消滅しています。eKGWBはジョルジョ・コッリとマッツィーノ・モンティナーリが編んだ批判版全集のデジタル版で、このページの六冊すべてをドイツ語で無料で読めます。英語のパブリックドメイン訳としては、ヘレン・ジマーン(1846–1934)訳の『人間的、あまりに人間的』I(1909年)と『善悪の彼岸』、J・M・ケネディ(1886–1918)訳の『曙光』(1911年)を案内します。『漂泊者とその影』『偶像の黄昏』『この人を見よ』の古い英訳は、訳者の没年が確認できないか米国でのみパブリックドメインであるため載せず、これらはeKGWBのドイツ語原文で案内します。",
         "pdLinks": [
           {
             "label": "eKGWB — ニーチェ著作のドイツ語原文(コッリ/モンティナーリ批判版デジタル版)",
@@ -6685,9 +6661,9 @@
       "en": {
         "workName": "Selected Aphorisms and Prose",
         "mentorName": "Friedrich Nietzsche",
-        "lede": "Nietzsche's aphorisms from seven books, among them Daybreak and Twilight of the Idols: fresh paraphrases Dialogos draws on, plus free original texts.",
-        "intro": "This page gathers passages from several of Nietzsche's books into one <em>Selected Aphorisms and Prose</em>. From <em>Human, All Too Human</em> (1878) to <em>Ecce Homo</em>, the autobiography he wrote in 1888, Dialogos quotes only one to three passages per book, so rather than give each book its own page we have collected them here, together with the 1874 essay \"Schopenhauer as Educator.\" Every passage is labeled with its book and section number (for example, Daybreak 376), and the sections below follow the order of publication. The conversations you have with Nietzsche in Dialogos are grounded in these books and his other works.",
-        "context": "<p>In 1874, as full professor of classical philology at the University of Basel, Nietzsche published \"Schopenhauer as Educator\" as the third of his Untimely Meditations. <em>Human, All Too Human</em>, written in Sorrento over the winter of 1876–77, came out in 1878 with the subtitle \"A Book for Free Spirits,\" followed in 1880 by its second and last supplement, <em>The Wanderer and His Shadow</em>. Then came <em>Daybreak</em> (1881), <em>Beyond Good and Evil</em> (1886), and <em>Twilight of the Idols</em> (1889). He wrote the autobiography <em>Ecce Homo</em> between October 15 and November 4, 1888, but it was not published until 1908. Most of these books are made of short numbered sections, from a single line to a few pages, so a single section can be read as a complete thought; \"Schopenhauer as Educator\" is the exception, a continuous essay.</p>",
+        "lede": "Nietzsche's aphorisms from six books, among them Daybreak and Twilight of the Idols: fresh paraphrases Dialogos draws on, plus free original texts.",
+        "intro": "This page gathers passages from several of Nietzsche's books into one <em>Selected Aphorisms and Prose</em>. From <em>Human, All Too Human</em> (1878) to <em>Ecce Homo</em>, the autobiography he wrote in 1888, Dialogos quotes only one to three passages per book, so rather than give each book its own page we have collected them here. Every passage is labeled with its book and section number (for example, Daybreak 376), and the sections below follow the order of publication. The conversations you have with Nietzsche in Dialogos are grounded in these books and his other works.",
+        "context": "<p><em>Human, All Too Human</em>, written in Sorrento over the winter of 1876–77, came out in 1878 with the subtitle \"A Book for Free Spirits,\" followed in 1880 by its second and last supplement, <em>The Wanderer and His Shadow</em>. Then came <em>Daybreak</em> (1881), <em>Beyond Good and Evil</em> (1886), and <em>Twilight of the Idols</em> (1889). He wrote the autobiography <em>Ecce Homo</em> between October 15 and November 4, 1888, but it was not published until 1908. Most of these books are made of short numbered sections, from a single line to a few pages, so a single section can be read as a complete thought.</p>",
         "sections": [
           {
             "anchor": "human-all-too-human",
@@ -6718,11 +6694,6 @@
             "anchor": "ecce-homo",
             "title": "Ecce Homo · Why I Am So Clever (written 1888)",
             "body": "An autobiography subtitled \"How One Becomes What One Is.\" In section 9 of \"Why I Am So Clever,\" Nietzsche looks back and says that because he did not know in advance what he was, even his missteps, side paths, and delays had their own meaning. (9)"
-          },
-          {
-            "anchor": "schopenhauer-as-educator",
-            "title": "Untimely Meditations · Schopenhauer as Educator (1874)",
-            "body": "The third of the Untimely Meditations. Its first section says that each of us knows we exist only once in the world, yet hides it out of fear of the neighbors, and calls true educators liberators. The passage about building your own bridge across the river of life is here. (1)"
           }
         ],
         "quotes": [
@@ -6809,13 +6780,6 @@
             "gloss": "When you switched majors, changed careers, or started later than everyone else: detours and delays can turn out to have been part of becoming yourself.",
             "book": "Ecce Homo · Why I Am So Clever",
             "bookId": "eh"
-          },
-          {
-            "text": "No one can build the bridge on which you, and only you, must cross the river of life; no one but you. There is one path in the world that no one but you can walk. Where does it lead? Do not ask. Walk it.",
-            "cite": "1",
-            "gloss": "When advice from parents, mentors, and the internet has drowned out your own voice: not \"ignore everyone,\" but the last bridge is one only you can build.",
-            "book": "Untimely Meditations · Schopenhauer as Educator",
-            "bookId": "se"
           }
         ],
         "concepts": [
@@ -6836,16 +6800,16 @@
             "def": "Eris is the Greek goddess of strife. Drawing on Hesiod, Nietzsche says envy splits into a bad strife that drags others down and a good strife that lifts you up (The Wanderer and His Shadow 29)."
           },
           {
-            "term": "be yourself",
-            "def": "What conscience calls out in the first section of \"Schopenhauer as Educator,\" and the question that runs on to the subtitle of Ecce Homo, \"How One Becomes What One Is.\""
+            "term": "become who you are",
+            "def": "What conscience says in The Gay Science 270, and the question that runs on to the subtitle of Ecce Homo, \"How One Becomes What One Is.\""
           }
         ],
-        "apply": "<p>Tonight, if you feel the urge to pass judgment on your day before sleep, remember Daybreak 317 and postpone the verdict until morning. If you are badly worn out, follow 376 and sleep first.</p><p>If there is a habit you want to change, design it the way 534 suggests: tiny doses, kept up for a long time. Five minutes a day, one sentence, one stop's worth of walking, and just log the dates. Then write down the question the first section of \"Schopenhauer as Educator\" recommends: \"What have I truly loved so far?\" Set those things side by side, and you start to see who you are becoming.</p>",
+        "apply": "<p>Tonight, if you feel the urge to pass judgment on your day before sleep, remember Daybreak 317 and postpone the verdict until morning. If you are badly worn out, follow 376 and sleep first.</p><p>If there is a habit you want to change, design it the way 534 suggests: tiny doses, kept up for a long time. Five minutes a day, one sentence, one stop's worth of walking, and just log the dates.</p>",
         "provenance": "Dialogos's replies and the passages on this page are fresh paraphrases into modern English, checked directly against Nietzsche's German text (eKGWB); they do not reproduce the wording of any copyrighted modern translation. Each citation gives the book and the section number (for example, Daybreak 376 means section 376 of Daybreak).",
         "faq": [
           {
             "q": "Why are several books gathered on one page?",
-            "a": "Most of the Nietzsche passages Dialogos quotes come from The Gay Science and Thus Spoke Zarathustra; from the other seven books it uses only one to three passages each. So those seven books share this page, and every passage carries its book title and section number."
+            "a": "Most of the Nietzsche passages Dialogos quotes come from The Gay Science and Thus Spoke Zarathustra; from the other six books it uses only one to three passages each. So those six books share this page, and every passage carries its book title and section number."
           },
           {
             "q": "Which of Nietzsche's books are written as aphorisms?",
@@ -6869,14 +6833,14 @@
           },
           {
             "q": "Can I read these books for free?",
-            "a": "Yes. The German text of all seven books is on eKGWB, and Project Gutenberg has English translations of Human, All Too Human I and Beyond Good and Evil (Helen Zimmern) and of Daybreak (J. M. Kennedy)."
+            "a": "Yes. The German text of all six books is on eKGWB, and Project Gutenberg has English translations of Human, All Too Human I and Beyond Good and Evil (Helen Zimmern) and of Daybreak (J. M. Kennedy)."
           },
           {
             "q": "How does Dialogos quote these books?",
             "a": "Dialogos paraphrases afresh from Nietzsche's German and does not use the wording of copyrighted modern translations. Each citation carries the book and section number, for example \"Daybreak 376.\""
           }
         ],
-        "pdIntro": "Nietzsche (1844–1900) wrote in German, and his texts are out of copyright. eKGWB is the digital version of the critical edition edited by Giorgio Colli and Mazzino Montinari, and it has all seven books on this page in German, free to read. As public-domain English translations we link Helen Zimmern's (1846–1934) Human, All-Too-Human I (1909) and Beyond Good and Evil, and J. M. Kennedy's (1886–1918) The Dawn of Day (1911). The older English versions of The Wanderer and His Shadow, Twilight of the Idols, Ecce Homo, and \"Schopenhauer as Educator\" are left out because their translators' dates of death could not be confirmed or because they are public domain only in the United States; for those books we point to the German text on eKGWB.",
+        "pdIntro": "Nietzsche (1844–1900) wrote in German, and his texts are out of copyright. eKGWB is the digital version of the critical edition edited by Giorgio Colli and Mazzino Montinari, and it has all six books on this page in German, free to read. As public-domain English translations we link Helen Zimmern's (1846–1934) Human, All-Too-Human I (1909) and Beyond Good and Evil, and J. M. Kennedy's (1886–1918) The Dawn of Day (1911). The older English versions of The Wanderer and His Shadow, Twilight of the Idols, and Ecce Homo are left out because their translators' dates of death could not be confirmed or because they are public domain only in the United States; for those books we point to the German text on eKGWB.",
         "pdLinks": [
           {
             "label": "eKGWB — Nietzsche's works in the German original (digital Colli–Montinari critical edition)",
