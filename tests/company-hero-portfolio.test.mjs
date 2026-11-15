@@ -26,11 +26,11 @@ for (const lang of ['ko', 'ja', 'en']) {
 }
 
 test('newcomer genres refer to verified public Android products, not internal tests', () => {
-  for (const suffix of ['sudoku', 'kkachi', 'spend']) {
+  for (const suffix of ['sudoku', 'kkachi', 'spend', 'sky', 'dream', 'bp']) {
     assert.ok(publicPortfolioEvidence.packages.includes(`com.pifl.pipi.${suffix}`));
   }
   assert.equal(publicPortfolioEvidence.platform, 'Android');
-  assert.ok(!publicPortfolioEvidence.packages.some(p => /sky|legion/.test(p)));
+  assert.ok(!publicPortfolioEvidence.packages.some(p => /legion/.test(p)));
 });
 
 test('Korean in-app term stays together without changing or hiding the pricing statement', () => {

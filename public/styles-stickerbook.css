@@ -687,6 +687,10 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.4rem;
   padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-subtle);
 }
+/* Current app names must fit the existing footer tracks at enlarged text sizes. */
+.footer-grid > * { min-width: 0; }
+.footer-col a { overflow-wrap: anywhere; }
+
 .footer-brand { max-width: 380px; }
 .footer-tagline { font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; font-weight: 400; margin: .8rem 0 1rem; color: var(--text-secondary); font-variation-settings: 'opsz' 144; }
 .footer-desc { color: var(--text-muted); font-size:.9rem; line-height: 1.6; }
@@ -1039,8 +1043,8 @@ html[lang^="ja"] .app-id-cat { word-break: normal; line-break: strict; overflow-
 
   .sticker { opacity: 0; animation: stickIn .6s var(--ease) forwards; }
   @keyframes stickIn {
-    0% { opacity: 0; transform: scale(.6) rotate(-20deg); }
-    70% { transform: scale(1.05) rotate(3deg); }
+    0% { opacity: 0; transform: scale(.6) rotate(0); }
+    70% { transform: scale(1) rotate(0); }
     100% { opacity: 1; transform: scale(1) rotate(0); }
   }
   .sticker:nth-child(1) { animation-delay: 0s; }

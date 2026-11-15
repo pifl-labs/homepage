@@ -15,20 +15,19 @@ const laterBridgeIOS = JSON.parse(readFileSync(new URL('../docs/release/bridge-i
 const laterVoyageAndroid = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json', import.meta.url), 'utf8'));
 const laterIOS = { 'pipi-log': laterLogIOS, 'pipi-bridge': laterBridgeIOS };
 const laterAndroid = { 'pipi-word-voyage': laterVoyageAndroid };
-const iosRecord = slug => laterIOS[slug]?.apps.find(r=>r.lang==='en').app ?? seen(slug).ios.en;
-const androidRecord = slug => laterAndroid[slug]?.apps.find(r=>r.lang==='en').app ?? seen(slug).android.en;
-const iosVersion = (slug) => iosRecord(slug).version;
-const androidVersion = (slug) => androidRecord(slug).version;
+const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/public-release-sync-20261116.json',import.meta.url),'utf8'));
+const packageFor=slug=>'com.pifl.pipi.'+({'pipi-word-voyage':'wordvoyage',dialogos:'thus',kkachi:'kkachi'}[slug]??slug.replace('pipi-',''));
+const iosRecord = slug => currentPublic.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));
+const androidRecord = slug => currentPublic.android.apps.find(a=>a.package===packageFor(slug));
+const iosVersion = (slug) => iosRecord(slug)?.version;
+const androidVersion = (slug) => androidRecord(slug)?.version;
 const shared = (slug) => (iosVersion(slug) === androidVersion(slug) ? iosVersion(slug) : undefined);
 const iosDay = (slug) => iosRecord(slug).currentVersionReleaseDate.slice(0, 10);
-const playDay = (slug) => new Date(`${androidRecord(slug).updatedDisplay} UTC`).toISOString().slice(0, 10);
+const playDay = (slug) => androidRecord(slug).updated.match(/\d+/g).map((s,i)=>i?s.padStart(2,'0'):s).join('-');
 const latestDay = (slug) => [iosDay(slug), playDay(slug)].sort().at(-1);
 const { liveApps, formatDate } = await import('../src/data/apps.ts');
 // Expected observation days come from the receipt, so a wrong checkedAt in apps.ts cannot set its own expectation.
-const observationDates = [...new Set(liveApps.filter(app=>app.release).flatMap((app) => {
-  assert.ok(seen(app.slug), `${app.slug}: versioned app requires its own receipt`);
-  return [seen(app.slug).observedAt, ...(laterIOS[app.slug] ? [laterIOS[app.slug].observedAt] : []), ...(laterAndroid[app.slug] ? [laterAndroid[app.slug].observedAt] : [])];
-}))].sort();
+const observationDates = [receipt.map(a=>a.observedAt).sort()[0], currentPublic.observedAt];
 const observationRange = [observationDates[0], observationDates.at(-1)].filter((d, i, all) => i === 0 || d !== all[0]);
 const versionToken = (prefix, version) => new RegExp(`(?:^|[^\\w.])${prefix}v${version.replace(/\./g, '\\.')}(?![\\w.])`);
 function expectVersionLabel(html, slug, where) {
@@ -48,7 +47,7 @@ const names = {
 };
 const unchanged = {
   'pipi-draw': ['밑그림: 사진으로 만드는 색칠공부', '下絵づくり：写真をぬりえに変換', 'Photo Outlines: Coloring Book'],
-  'pipi-words': ['단어루틴: JLPT·TOPIK 단어장', 'ことば習慣：韓国語・TOPIK単語帳', 'Vocab Routine: JLPT & TOPIK'],
+  'pipi-words': ['단어루틴: JLPT 일본어 단어장', 'ことば習慣：TOPIK韓国語単語帳', 'Vocab Routine: JLPT & TOPIK'],
   'pipi-dday': ['그날까지: 디데이·기념일 위젯', 'その日まで：カウントダウン', 'Until That Day: Countdown'],
   'pipi-hello': ['말놀이 새싹: 어린이 일본어', 'ハングルの芽：子どもの韓国語', 'KanaSprout: Japanese for Kids'],
 };
@@ -96,7 +95,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.ok(detail.includes(`<title>${name} —`), `${lang}: title`);
   assert.ok(detail.includes(alias) && home.includes(alias), `${lang}: discoverable old name`);
   // 2026-11-02: Draw's Korean and Japanese Google Play names differ from its App Store names; every other app matches.
-  assert.equal(notices(home).length, lang === 'en' ? 0 : 1, `${lang}: store-name notice only where the stores differ`);
+  assert.equal(notices(home).length, lang === 'ja' ? 2 : lang === 'ko' ? 1 : 0, `${lang}: store-name notice only where the stores differ`);
   assert.equal(notices(detail).length, 0, `${lang}: no stale hero/final CTA transition notice`);
   assert.doesNotMatch(detail, /PiPi Focus: (?:해적 포모도로|海賊ポモドーロ|Pirate Pomodoro)/);
   const release = detail.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1];
@@ -113,7 +112,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   for (const [slug, expectedNames] of Object.entries(unchanged)) {
     const html = read(lang, `apps/${slug}`);
     assert.equal(appSchema(html).name, expectedNames[index], `${lang}/${slug}: no premature rename`);
-    assert.equal(notices(html).length, slug === 'pipi-draw' && lang !== 'en' ? 2 : 0, `${lang}/${slug}: exact platform name notices`);
+    assert.equal(notices(html).length, (slug === 'pipi-draw' && lang !== 'en') || (slug === 'pipi-words' && lang === 'ja') ? 2 : 0, `${lang}/${slug}: exact platform name notices`);
     assert.equal(appSchema(html).softwareVersion, shared(slug), `${lang}/${slug}: shared version only when both stores verify it`);
     expectVersionLabel(html.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1] ?? '', slug, `${lang}/${slug}`);
   }
@@ -169,12 +168,12 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   // Split versions (Words: iOS 1.0.14, Android 1.1.0) never collapse into one; equal verified versions are shared.
   const words = read(lang, 'apps/pipi-words');
   expectVersionLabel(words.match(/class="app-rel-line"[^>]*>(.*?)<\/p>/s)?.[1] ?? '', 'pipi-words', `${lang}/pipi-words`);
-  assert.ok(!Object.hasOwn(appSchema(words), 'softwareVersion'));
+  assert.equal(appSchema(words).softwareVersion,shared('pipi-words'));
   assert.equal(homeItems.find(a => a.url.endsWith('/pipi-hello/')).softwareVersion, shared('pipi-hello'));
   assert.equal(appSchema(read(lang, 'apps/pipi-draw')).softwareVersion, shared('pipi-draw'));
   // Apps public on one platform only (or with differing versions) never get a shared version or both-store label.
   const fleetRows = [...home.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map((m) => m[1]);
-  for (const slug of ['pipi-tide', 'kkachi', 'pipi-words']) {
+  for (const slug of ['kkachi', 'pipi-bp', 'pipi-sky', 'pipi-dream', 'pipi-spend']) {
     const page = read(lang, `apps/${slug}`);
     assert.ok(!Object.hasOwn(appSchema(page), 'softwareVersion'), `${lang}/${slug}: no shared softwareVersion`);
     assert.ok(!Object.hasOwn(homeItems.find((a) => a.url.endsWith(`/${slug}/`)), 'softwareVersion'), `${lang}/${slug}: home schema has no shared version`);

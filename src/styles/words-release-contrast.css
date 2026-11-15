@@ -1,0 +1,5 @@
+/* Words only: readable release information without changing layout or type. */
+.app-page--words .app-rel-line,
+.fleet-link[href$="/apps/pipi-words/"] .fleet-both { color: var(--text-secondary); }
+html[data-theme="light"] .app-page--words .app-rel-ver,
+html[data-theme="light"] .fleet-link[href$="/apps/pipi-words/"] .fleet-chip--solo { color: var(--text-primary); }

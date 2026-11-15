@@ -1123,11 +1123,13 @@
     "pipi-words": {
       "ko": [
         "PiPi Words",
-        "단어루틴: JLPT·TOPIK 단어장"
+        "단어루틴: JLPT·TOPIK 단어장",
+        "단어루틴: JLPT 일본어 단어장"
       ],
       "ja": [
         "PiPi Words",
-        "ことば習慣：韓国語・TOPIK単語帳"
+        "ことば習慣：韓国語・TOPIK単語帳",
+        "ことば習慣：TOPIK韓国語単語帳"
       ],
       "en": [
         "PiPi Words",
@@ -1215,15 +1217,18 @@
     "pipi-sky": {
       "ko": [
         "PiPi Sky - 구름 너머 하늘",
-        "하늘멍 - 구름 위 하늘·별자리·밤하늘"
+        "하늘멍 - 구름 위 하늘·별자리·밤하늘",
+        "하늘멍 - 구름층에서 우주까지"
       ],
       "ja": [
         "PiPi Sky",
-        "Skydaze - 雲の上の空と星空・星座"
+        "Skydaze - 雲の上の空と星空・星座",
+        "Skylayer - 雲の層から宇宙へ"
       ],
       "en": [
         "PiPi Sky - 구름 너머 하늘",
-        "Skydaze: Cloud & Star Gazing"
+        "Skydaze: Cloud & Star Gazing",
+        "Skylayer: Clouds to Space"
       ]
     },
     "pipi-legion": {

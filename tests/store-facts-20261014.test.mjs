@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName} from './helpers/release-sync-20261116.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
@@ -15,8 +16,8 @@ for (const [bundle, v] of Object.entries(variables)) {
   test(`${bundle}: current iOS version and UTC release day follow dated public receipts; 2026-10-14 release bounds stay intact`, () => {
     const r = receipt.ios[bundle];
     assert.ok(block(v), `${v} block exists`);
-    const latest = v === 'bridge' ? laterBridge.apps.find(a => a.lang === 'ko').app : current.find(a => a.slug === slugs[bundle]).ios.ko;
-    const observed = v === 'bridge' ? laterBridge.observedAt : '2026-11-02';
+    const latest = currentIOS(slugs[bundle]);
+    const observed = checkedAtFor(slugs[bundle],'ios');
     assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '${observed}' }`));
     for (const bound of r.releaseBoundsUTC) assert.ok(bound.startsWith(r.updatedUTC), `${bundle}: every release bound stays on ${r.updatedUTC} UTC`);
   });
@@ -63,7 +64,7 @@ test('Android versions appear only when a later observation shows them', () => {
   for (const [bundle, v] of Object.entries(variables)) {
     const a = current.find(x => x.slug === slugs[bundle]);
     assert.deepEqual(a.playProduction.map(r => r.name), [a.android.en.version], `${bundle}: listing matches production`);
-    assert.ok(block(v).includes(`android: { version: '${a.android.en.version}', updated: '${playDay(a.android.en.updatedDisplay)}', checkedAt: '2026-11-02' }`));
+    assert.ok(block(v).includes(`android: { version: '${currentAndroid(slugs[bundle]).version}', updated: '${androidDay(currentAndroid(slugs[bundle]))}', checkedAt: '${checkedAtFor(slugs[bundle],'android')}' }`));
   }
 });
 

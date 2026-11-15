@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -18,8 +19,8 @@ test('feature section uses the current product name, while previous-name notice 
   assert.equal(words.name, 'Vocab Routine: JLPT & TOPIK');
   assert.equal(words.previousName, 'PiPi Words');
 });
-test('iOS-qualified manual comparison is not recast as cross-platform handwriting or automatic grading', () => {
-  assert.ok(words.content.en.lede.includes('On iOS'));
+test('Public iOS and Android handwriting remains manual self-comparison, never automatic grading', () => {
+  assert.ok(words.content.en.lede.includes('On iOS and Android'));
   assert.ok(words.content.en.lede.includes('compare your answer'));
   assert.ok(words.content.en.lede.includes('No automatic grading'));
   assert.ok(words.content.en.features[0].desc.includes('No automatic grading or stroke-order checks'));
@@ -27,7 +28,7 @@ test('iOS-qualified manual comparison is not recast as cross-platform handwritin
 });
 test('real destinations, release and screenshots remain the current verified product rather than a new app build', () => {
   const current = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(a => a.slug === 'pipi-words');
-  assert.equal(words.release.ios.version, current.ios.en.version);
+  assert.equal(words.release.ios.version, currentIOS('pipi-words').version);
   assert.ok(words.stores.ios.endsWith('/id6770267735'));
   assert.equal(new URL(words.stores.android).searchParams.get('id'), 'com.pifl.pipi.words');
   assert.equal(words.content.en.shots.map(s => s.file).join(','), 'home,study,flashcard,voyage,achievements');

@@ -17,7 +17,7 @@ test('archive preserves distinct events, unknown versions and sanitized provenan
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: archive includes 15 registered apps, all events and accessible filter controls`,()=>{
  const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
- assert.equal((html.match(/data-app-summary=/g)||[]).length,15);
+ assert.equal((html.match(/data-app-summary=/g)||[]).length,17);
  assert.equal((html.match(/data-event /g)||[]).length,archiveEvents.length);
  assert.ok(html.includes('aria-live="polite"'));assert.ok(html.includes('type="reset"'));
  assert.ok(html.includes(`https://pifl-labs.com/${lang}/archive/`));
@@ -36,7 +36,7 @@ test('archive browser logic is external under the production self-only script po
 test('all 14 canonical apps have representative records and no fabricated beta releases',()=>{
  assert.equal(new Set(archiveEvents.map(e=>e.app)).size,14);
  assert.equal(Object.keys(archiveMedia).length,14);
- for(const slug of ['pipi-sky','pipi-legion']){
+ for(const slug of ['pipi-legion']){
   assert.ok(archiveEvents.filter(e=>e.app===slug).every(e=>e.kind==='asset'&&e.version===null));
   assert.equal(archiveMedia[slug].upcoming,true);
  }

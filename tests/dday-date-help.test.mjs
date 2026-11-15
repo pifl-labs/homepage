@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -73,7 +74,7 @@ test('dated evidence preserves exact shared source outside the optional D-Day en
   assert.deepEqual(receipt.actualSyntheticExample,{start:'2026-11-13',hundredthDay:'2027-02-20',hundredDaysLater:'2027-02-21',realPersonDate:false,clipboardWrite:false});
   const laterVoyage = JSON.parse(read('../docs/release/voyage-android-public-20261113.json'));
   assert.equal(receipt.unchangedAppsSHA256, laterVoyage.originalAppsFileSHA256, 'original D-Day baseline remains immutable');
-  assert.equal(sha(read('../src/data/apps.ts')),laterVoyage.expectedAppsFileSHA256);
+  assert.equal(sha(beforeReleaseSync('src/data/apps.ts',read('../src/data/apps.ts'))),laterVoyage.expectedAppsFileSHA256);
   const block=`{ddayDateHelp && <div class="app-download-note" data-date-help="dday">\n            <a class="app-bridge-resource-link" href={ddayDateHelp.href} hreflang="ko">{ddayDateHelp.label}</a>\n            <p>{ddayDateHelp.note}</p>\n          </div>}`;
   const edits=[
     "\nimport { ddayDateHelpFor } from '../data/dday-date-help.mjs';",
@@ -81,7 +82,7 @@ test('dated evidence preserves exact shared source outside the optional D-Day en
     `, ...(ddayDateHelp ? ['/styles-dday-date-help.css?v=${sha(read('../public/styles-dday-date-help.css')).slice(0,12)}'] : [])`,
     block,
   ];
-  let projected=landing;
+  let projected=beforeReleaseSync('src/components/AppLanding.astro',landing);
   for(const delta of laterVoyage.landingSourceDeltas){
     assert.equal(projected.split(delta.new).length-1,1,'exact dated Voyage-only edit once');
     projected=projected.replace(delta.new,delta.old);

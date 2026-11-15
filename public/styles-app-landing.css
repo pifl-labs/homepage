@@ -404,12 +404,13 @@
 .app-rel-line {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem;
   margin-top: 1.1rem;
-  font-family: var(--font-code); font-size: .74rem; color: var(--text-muted);
+  font-family: var(--font-code); font-size: .74rem; color: var(--text-secondary);
 }
 .app-rel-ver {
   font-weight: 600; padding: 3px 10px; border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--neon-teal) 14%, transparent); color: var(--neon-teal);
 }
+html[data-theme="light"] .app-page .app-rel-ver { color: var(--text-primary); }
 .app-rel-sep { opacity: .5; }
 
 /* 앱 랜딩 — 신뢰 링크 행(방침·문의) */

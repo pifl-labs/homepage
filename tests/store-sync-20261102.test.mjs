@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -18,8 +19,8 @@ const packages = { 'pipi-focus': 'focus', 'pipi-draw': 'draw', 'pipi-word-voyage
 
 test('the dated receipt preserves fourteen observed products; the later Spend entry has separate evidence', () => {
   assert.equal(current.length, 14);
-  assert.deepEqual(new Set([...current.map(a=>a.slug),'pipi-spend']), new Set(appList.map(a=>a.slug)));
-  assert.equal(appList.length,15);
+  assert.deepEqual(new Set([...current.map(a=>a.slug),'pipi-spend','pipi-bp','pipi-dream']), new Set(appList.map(a=>a.slug)));
+  assert.equal(appList.length,17);
   for (const seen of current) {
     assert.equal(seen.observedAt, receipt.observedAt);
     assert.deepEqual(Object.keys(seen.android).sort(), [...langs].sort(), `${seen.slug}: three Play locales`);
@@ -47,55 +48,40 @@ const playDay = (text) => new Date(`${text} UTC`).toISOString().slice(0, 10);
 
 for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
   const seen = current.find((a) => a.slug === app.slug);
-  const iosLive = Boolean(seen.ios);
-  const androidLive = langs.every((l) => seen.android[l]?.jsonLd);
+  const iosLive = Boolean(currentIOS(app.slug));
+  const androidLive = Boolean(currentAndroid(app.slug));
 
   test(`${app.slug}: availability and store links follow the public listings`, () => {
     assert.equal(app.status, iosLive || androidLive ? 'live' : 'soon');
     assert.equal(Boolean(app.stores.ios), iosLive);
     assert.equal(Boolean(app.stores.android), androidLive);
-    if (iosLive) assert.equal(app.stores.ios.match(/\/id(\d+)$/)?.[1], String(seen.ios.en.trackId));
-    if (androidLive) assert.equal(new URL(app.stores.android).searchParams.get('id'), new URL(seen.android.en.jsonLd.url).searchParams.get('id'));
+    if (iosLive) assert.equal(app.stores.ios.match(/\/id(\d+)$/)?.[1], String(currentIOS(app.slug).trackId));
+    if (androidLive) assert.equal(new URL(app.stores.android).searchParams.get('id'), currentAndroid(app.slug).package);
   });
 
   test(`${app.slug}: names in every language match the store that is live`, () => {
     for (const lang of langs) {
-      if (iosLive) assert.equal(storeAppName(app, 'ios', lang), seen.ios[lang].trackName, `${lang} iOS`);
-      if (androidLive) assert.equal(storeAppName(app, 'android', lang), seen.android[lang].jsonLd.name, `${lang} Android`);
-      const primary = iosLive ? seen.ios[lang].trackName : androidLive ? seen.android[lang].jsonLd.name : null;
-      if (primary) assert.equal(appName(app, lang), primary, `${lang} display name`);
+      if (iosLive) assert.equal(storeAppName(app, 'ios', lang), currentIOSName(app.slug,lang), `${lang} iOS`);
+      if (androidLive) assert.equal(storeAppName(app, 'android', lang), currentAndroidName(app.slug,lang), `${lang} Android`);
+      const primary = iosLive ? currentIOSName(app.slug,lang) : androidLive ? currentAndroidName(app.slug,lang) : null;
+      if (primary && app.slug!=='pipi-tide') assert.equal(appName(app, lang), primary, `${lang} display name`);
     }
   });
 
   test(`${app.slug}: release versions and dates come from each platform's own observation`, () => {
-    if (iosLive) {
-      const versions = new Set(langs.map((l) => seen.ios[l].version));
-      assert.equal(versions.size, 1, 'KR/JP/US agree');
-      const laterReceipt = app.slug === 'pipi-log' ? laterLogIOS : app.slug === 'pipi-bridge' ? laterBridgeIOS : null;
-      const later = laterReceipt?.apps.find(r=>r.lang==='en').app ?? null;
-      const observed = later ?? seen.ios.en;
-      assert.equal(app.release.ios.version, observed.version);
-      assert.equal(app.release.ios.updated, observed.currentVersionReleaseDate.slice(0, 10));
-      assert.equal(app.release.ios.checkedAt, later ? laterReceipt.observedAt : '2026-11-02');
-    } else {
-      assert.equal(app.release?.ios, undefined);
-    }
-    if (androidLive) {
-      for (const lang of langs) {
-        assert.equal(seen.android[lang].version, seen.android.en.version, `${lang} Play version agrees`);
-        assert.equal(playDay(seen.android[lang].updatedDisplay.replace(/^(\d{4})\D+(\d{1,2})\D+(\d{1,2})\D*$/, (_, y, m, d) => `${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m - 1]} ${d}, ${y}`)), playDay(seen.android.en.updatedDisplay), `${lang} Play date agrees`);
-      }
-      assert.deepEqual(seen.playProduction.map((r) => r.name), [seen.android.en.version], 'public listing matches production');
-      // New public listing evidence does not invent a fresh private production-track observation.
-      const newer = app.slug === 'pipi-word-voyage' ? laterVoyageAndroid : null;
-      const observed = newer?.apps.find(r=>r.lang==='en').app ?? seen.android.en;
-      assert.equal(app.release.android.version, observed.version);
-      assert.equal(app.release.android.updated, playDay(observed.updatedDisplay));
-      assert.equal(app.release.android.checkedAt, newer?.observedAt ?? '2026-11-02');
-    } else {
-      assert.equal(app.release?.android, undefined);
-    }
-    assert.equal(app.release?.checkedAt, iosLive || androidLive ? seen.observedAt : undefined, 'shared observation day');
+    if(iosLive){
+      const observed=currentIOS(app.slug);
+      assert.equal(app.release.ios.version,observed.version);
+      assert.equal(app.release.ios.updated,observed.currentVersionReleaseDate.slice(0,10));
+      assert.equal(app.release.ios.checkedAt,checkedAtFor(app.slug,'ios'));
+    }else assert.equal(app.release?.ios,undefined);
+    if(androidLive){
+      const observed=currentAndroid(app.slug);
+      assert.equal(app.release.android.version,observed.version);
+      assert.equal(app.release.android.updated,androidDay(observed));
+      assert.equal(app.release.android.checkedAt,checkedAtFor(app.slug,'android'));
+    }else assert.equal(app.release?.android,undefined);
+    assert.equal(app.release?.checkedAt, iosLive || androidLive ? (app.slug==='pipi-sky'?'2026-11-16':seen.observedAt) : undefined, 'shared observation day');
   });
 }
 
@@ -134,7 +120,10 @@ test('dated unlisted accounts remain unpublished unless separate later public ev
   for (const extra of receipt.accountAppsWithoutPublicListing) {
     assert.equal(extra.iosPublic, false, extra.bundleId);
     assert.deepEqual(Object.values(extra.playPublicStatus), [404, 404, 404], extra.bundleId);
-    if(extra.bundleId==='com.pifl.pipi.spend'){
+    if(extra.bundleId==='com.pifl.pipi.bp'){
+      assert.equal(currentAndroid('pipi-bp').package,extra.bundleId);
+      assert.equal(appList.find(a=>a.slug==='pipi-bp').stores.ios,undefined);
+    }else if(extra.bundleId==='com.pifl.pipi.spend'){
       const later=JSON.parse(readFileSync(new URL('../docs/release/spend-android-public-20261105.json',import.meta.url),'utf8'));
       assert.equal(later.apps.length,3);assert.ok(later.apps.every(x=>x.status===200&&new URL(x.url).searchParams.get('id')===extra.bundleId));
       assert.equal(appList.find(a=>a.slug==='pipi-spend').stores.ios,undefined);

@@ -112,24 +112,24 @@ test('sitemap lists the indexed pages and leaves out the two Chinese policies', 
 });
 
 for (const [lang, path] of Object.entries(LANDINGS)) {
-  test(`${lang} landing: unreleased app with its store name, policy link and support contact`, { skip }, () => {
+  test(`${lang} landing: Android public app with its store name, policy link and support contact`, { skip }, () => {
     const html = built(path);
     assert.ok(html.includes(NAMES[lang]));
-    assert.match(html, /class="app-soon-pill"/);
-    assert.doesNotMatch(html, /data-store-link=/);
+    assert.doesNotMatch(html, /class="app-soon-pill"/);
+    assert.match(html, /data-store-link="https:\/\/play.google.com\/store\/apps\/details\?id=com.pifl.pipi.dream"/);
     assert.ok(html.includes(`href="/${lang}/apps/pipi-dream/privacy/"`));
     assert.match(html, /data-email-user="support" data-email-domain="pifl-labs\.com"/);
     assert.doesNotMatch(html, /mailto:/i);
     const app = JSON.parse(html.match(/<script type="application\/ld\+json">(\{"@context":"https:\/\/schema\.org","@type":"SoftwareApplication"[\s\S]*?)<\/script>/)[1]);
     assert.equal(app.name, NAMES[lang]);
-    assert.equal(app.offers, undefined);
-    assert.equal(app.installUrl, undefined);
+    assert.equal(app.offers.price, '0');
+    assert.deepEqual(app.installUrl, ['https://play.google.com/store/apps/details?id=com.pifl.pipi.dream']);
   });
 }
 
 test('registered for its landing only; not yet in the homepage catalog', () => {
   const dream = apps['pipi-dream'];
-  assert.equal(dream.status, 'soon');
-  assert.deepEqual(dream.stores, {});
-  assert.equal(appList.some((a) => a.slug === 'pipi-dream'), false);
+  assert.equal(dream.status, 'live');
+  assert.deepEqual(dream.stores, {android:'https://play.google.com/store/apps/details?id=com.pifl.pipi.dream'});
+  assert.equal(appList.some((a) => a.slug === 'pipi-dream'), true);
 });
