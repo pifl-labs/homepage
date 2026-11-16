@@ -4,7 +4,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {appList,apps,appName,storeAppName,liveAppCount} from '../src/data/apps.ts';
 import {publicPortfolioEvidence} from '../src/data/public-portfolio.ts';
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,beforeLaterEdits,laterDeltas,syncDeltas,packageFor,currentAndroidName,currentIOSName} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,beforeLaterEdits,laterLayers,syncDeltas,packageFor,currentAndroidName,currentIOSName} from './helpers/release-sync-20261116.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const schema=h=>[...h.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1])).find(x=>x['@type']==='SoftwareApplication');
@@ -44,7 +44,9 @@ test('BP and Dream public descriptions retain medical and transcription boundari
  assert.match(sky.ctaSub,/not a live camera feed or a weather forecast/);assert.match(sky.features[0].desc,/requires internet/);
 });
 test('exact current source deltas restore historical hashes but reject unknown source edits',()=>{
- for(const[file,row]of Object.entries(laterDeltas)){const s=read(file);assert.equal(sha(s),row.afterSHA256);assert.equal(sha(beforeLaterEdits(file,s)),row.beforeSHA256);assert.equal(row.beforeSHA256,syncDeltas[file].afterSHA256);assert.throws(()=>beforeLaterEdits(file,s+'\nUNAPPROVED'),/unrecorded source edit/);}
+ // Later layers, newest first: a layer's after-bytes are the current file with every newer layer reversed,
+ // and its before-bytes are what the next older layer (or the sync) ends with.
+ for(const[i,layer]of laterLayers.entries())for(const[file,row]of Object.entries(layer)){const s=beforeLaterEdits(file,read(file),{through:i});assert.equal(sha(s),row.afterSHA256);assert.equal(sha(beforeLaterEdits(file,read(file),{through:i+1})),row.beforeSHA256);const older=laterLayers.slice(i+1).find(l=>l[file])?.[file]??syncDeltas[file];assert.equal(row.beforeSHA256,older.afterSHA256);assert.throws(()=>beforeLaterEdits(file,read(file)+'\nUNAPPROVED',{through:i+1}),/unrecorded source edit/);}
  for(const[file,row]of Object.entries(syncDeltas)){const s=beforeLaterEdits(file,read(file));assert.equal(sha(s),row.afterSHA256);assert.equal(sha(beforeReleaseSync(file,s)),row.beforeSHA256);assert.throws(()=>beforeReleaseSync(file,s+'\nUNAPPROVED'),/unrecorded source edit/);}
 });
 test('minimum entrance fix removes the cause, not text size, layout or overflow by concealment',()=>{

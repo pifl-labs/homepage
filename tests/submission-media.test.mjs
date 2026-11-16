@@ -16,14 +16,17 @@ test('submission images have exact official sources, localized labels and no inv
   }
  }
  // Every record matches the 2026-11-02 App Store Connect listing snapshot: version (build), review state, image sources.
+ // Dialogos 1.1.0 (20) was submitted 2026-11-16; its record follows that day's read-only App Store Connect receipt.
  const current=JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json',import.meta.url))).apps;
+ const later={dialogos:JSON.parse(readFileSync(new URL('../docs/release/dialogos-110-listing-media-20261116.json',import.meta.url))).listingMedia};
  const token=u=>u.match(/\/thumb\/([^/]+)\//)[1];
  for(const [slug,item] of Object.entries(media)){
-  const seen=current.find(a=>a.slug===slug).listingMedia;
+  const seen=later[slug]??current.find(a=>a.slug===slug).listingMedia;
   assert.equal(item.version,`${seen.version} (${seen.build})`,slug);
   assert.equal(item.pending,seen.state!=='READY_FOR_DISTRIBUTION',slug);
   assert.deepEqual(item.shots.map(s=>token(s.source)),seen.firstThree.map(token),slug);
  }
  assert.equal(media['pipi-sudoku'].pending,false,'Sudoku iOS 1.0.2 is public');
  for(const slug of ['pipi-tide','kkachi'])assert.equal(media[slug].pending,true,`${slug} iOS is still in review`);
+ assert.equal(media.dialogos.pending,true,'Dialogos iOS 1.1.0 (20) is waiting for review');
 });

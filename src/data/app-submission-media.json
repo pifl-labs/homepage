@@ -76,16 +76,16 @@
     "previewIndex": 0
   },
   "dialogos": {
-    "version": "1.0.3 (18)",
-    "pending": false,
+    "version": "1.1.0 (20)",
+    "pending": true,
     "source": "https://appstoreconnect.apple.com/apps/6780508628/distribution/ios/version/deliverable",
-    "observedAt": "2026-11-02",
+    "observedAt": "2026-11-16",
     "language": "en",
     "buildVisualVerified": false,
     "shots": [
       {
-        "src": "/assets/apps/dialogos/submission/20261023-1.webp",
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/EhaW4DeUh4rv_3mjlpIynQ/331x720bb.png",
+        "src": "/assets/apps/dialogos/submission/20261116-1.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/lt7qOr_XJdM_I1LFmjywyg/331x720bb.png",
         "label": {
           "ko": "대화할 철학자 선택",
           "ja": "対話する哲学者を選ぶ",
@@ -93,8 +93,8 @@
         }
       },
       {
-        "src": "/assets/apps/dialogos/submission/20261023-2.webp",
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/9rCIcdpOULZPXj5C0YnYZg/331x720bb.png",
+        "src": "/assets/apps/dialogos/submission/20261116-2.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/WmTuqAabS0tpsGb9WsieEw/331x720bb.png",
         "label": {
           "ko": "원전과 함께 읽기",
           "ja": "原典とともに読む",
@@ -102,12 +102,12 @@
         }
       },
       {
-        "src": "/assets/apps/dialogos/submission/20261023-3.webp",
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/b0AEzrPHQJWmjGFUB9r35Q/331x720bb.png",
+        "src": "/assets/apps/dialogos/submission/20261116-3.webp",
+        "source": "https://is1-ssl.mzstatic.com/image/thumb/licF7CE6FYj6bBdBClEnew/331x720bb.png",
         "label": {
-          "ko": "질문으로 이어지는 대화",
-          "ja": "問いかけから続く対話",
-          "en": "A dialogue through questions"
+          "ko": "향연, 두 철학자와 한자리에서",
+          "ja": "饗宴、二人の哲学者と同じ席で",
+          "en": "Symposium: two philosophers at one table"
         }
       }
     ],
