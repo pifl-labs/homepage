@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { runInNewContext } from 'node:vm';
 import { apps } from '../src/data/apps.ts';
 
 // Dialogos 1.1.0 (owner's decision 2026-11-15): Epicurus and Nietzsche join, so the landing names the philosophers
@@ -42,5 +43,26 @@ for (const lang of ['ko', 'ja', 'en']) {
     const html = read(`dist/${lang}/apps/dialogos/index.html`);
     assert.ok(html.includes(c.lede), `${lang}: lede not rendered`);
     assert.doesNotMatch(html, /고대의 현자|古代の賢者|ancient sages|Four sages|네 명의 현자|四人の賢者/);
+  });
+}
+
+// The home catalog card (src/data/app-catalog.ts) follows the same rule: the philosophers by name, in order, no count.
+const catalogSrc = read('src/data/app-catalog.ts');
+const catalog = runInNewContext(catalogSrc.slice(catalogSrc.indexOf('export const catalogCopy')).replace(/export const catalogCopy: [^=]+=/, 'const copy =') + '\ncopy');
+const count = /네 철학자|여섯 철학자|네 명|여섯 명|[0-9]人の|四人|六人|\b(four|six|[0-9]) (philosophers|sages)/i;
+
+for (const lang of ['ko', 'ja', 'en']) {
+  const card = catalog.dialogos[lang];
+
+  test(`Dialogos ${lang} catalog card names the philosophers in order, with no count or "ancient"`, () => {
+    assert.doesNotMatch(card, stale);
+    assert.doesNotMatch(card, count);
+    assert.ok(inOrder(card, names[lang]), `${lang}: card`);
+  });
+
+  test(`Dialogos ${lang} built home catalog shows the new card and none of the old`, () => {
+    const html = read(`dist/${lang}/index.html`);
+    assert.ok(html.includes(card), `${lang}: card not rendered`);
+    assert.doesNotMatch(html, /네 철학자의 관점|4人の哲学者の視点|with four philosophers/);
   });
 }

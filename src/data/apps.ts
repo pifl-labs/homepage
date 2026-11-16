@@ -588,7 +588,7 @@ const dialogos: AppMeta = {
     android: { version: '1.0.4', updated: '2026-11-13', checkedAt: '2026-11-16' },
     checkedAt: '2026-11-02',
   },
-  heroShot: 'home',
+  heroShot: 'home-20261116',
   content: {
     ko: {
       tagline: '철학자와\n마주 앉다',
@@ -599,10 +599,10 @@ const dialogos: AppMeta = {
       ctaTitle: '오늘의 질문으로 시작하세요',
       ctaSub: '하루 30회 무료 대화. 추가 깊은 대화와 Pro 구독은 선택 구매.',
       shots: [
-        { file: 'home',          label: '철학자와 마주 앉다', desc: '철학자 가운데 오늘의 대화 상대를 고릅니다.' },
-        { file: 'chat_marcus',   label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
-        { file: 'chat_socrates', label: '답을 주지 않고 되묻는다',   desc: '소크라테스는 결론 대신 당신을 다시 생각하게 합니다.' },
-        { file: 'onboarding',    label: '매일 무료로, 광고 없이',     desc: '계정 가입 없이 매일 무료로 대화를 시작합니다. 하루 대화량을 늘리려면 Dialogos Pro(자동 갱신 구독)를 선택할 수 있습니다.' },
+        { file: 'home-20261116',         label: '철학자와 마주 앉다', desc: '철학자마다 말하는 방식과 이야기하기 좋은 고민을 보고, 오늘의 대화 상대를 고릅니다.' },
+        { file: 'chat_marcus-20261116',  label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
+        { file: 'symposium-20261116',    label: '한 고민에 두 철학자가 답하다', desc: '향연에서는 두 철학자가 같은 고민에 각자 자기 원전을 근거로 답하고, 한 사람이 상대의 말에 응수합니다.' },
+        { file: 'mentor_sheet-20261116', label: '대화 전에, 그 사람을 먼저 만나다', desc: '철학자를 누르면 다른 철학자와의 관계를 근거가 된 책·절과 함께 볼 수 있습니다.' },
       ],
       features: [
         { icon: 'fa-feather',     title: '철학자마다 다른 목소리', desc: '플라톤 대화편의 소크라테스, 에피쿠로스와 세네카의 편지, 에픽테토스의 엥케이리디온, 마르쿠스의 명상록, 니체의 『차라투스트라는 이렇게 말했다』 — 저마다의 목소리로 답합니다.' },
@@ -620,10 +620,10 @@ const dialogos: AppMeta = {
       ctaTitle: '今日の問いから始めよう',
       ctaSub: '1日30回まで無料。深い対話の追加購入とProの購読は任意。',
       shots: [
-        { file: 'home',          label: '賢者と向き合う', desc: '賢者たちの中から今日の相手を選ぶ。' },
-        { file: 'chat_marcus',   label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
-        { file: 'chat_socrates', label: '答えを与えず、問い返す',   desc: 'ソクラテスは結論ではなく、あなたに問い返します。' },
-        { file: 'onboarding',    label: '毎日無料、広告なし',       desc: 'アカウント登録なしで毎日無料で対話を始められます。1日の対話量を増やしたい場合は Dialogos Pro(自動更新サブスクリプション)を選べます。' },
+        { file: 'home-20261116',         label: '賢者と向き合う', desc: '哲学者ごとの語り口と、どんな悩みに向いているかを見て、今日の相手を選ぶ。' },
+        { file: 'chat_marcus-20261116',  label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
+        { file: 'symposium-20261116',    label: 'ひとつの悩みに、二人の哲学者が答える', desc: '饗宴では、二人の哲学者が同じ悩みにそれぞれの原典をもとに答え、一人が相手の言葉に応じます。' },
+        { file: 'mentor_sheet-20261116', label: '話す前に、その人に出会う', desc: '哲学者をタップすると、ほかの哲学者との関係を、根拠となる書物と節とあわせて確かめられます。' },
       ],
       features: [
         { icon: 'fa-feather',     title: '賢者ごとの声',     desc: 'プラトン対話篇のソクラテス、エピクロスとセネカの手紙、エピクテトスの提要、マルクスの自省録、ニーチェの『ツァラトゥストラはこう言った』——それぞれの声で答えます。' },
@@ -641,10 +641,10 @@ const dialogos: AppMeta = {
       ctaTitle: 'Start with a question',
       ctaSub: 'Free up to 30 messages a day. Optional deep-reply packs and Pro subscriptions.',
       shots: [
-        { file: 'home',          label: 'Sit down with a philosopher', desc: "Choose today's mentor from the philosophers." },
-        { file: 'chat_marcus',   label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
-        { file: 'chat_socrates', label: "He doesn't answer — he asks",  desc: 'Socrates makes you think again instead of handing you a conclusion.' },
-        { file: 'onboarding',    label: 'Free every day, no ads',       desc: 'Start talking for free every day with no account; Dialogos Pro (an auto-renewing subscription) raises the daily limit.' },
+        { file: 'home-20261116',         label: 'Sit down with a philosopher', desc: "See how each philosopher talks and which worries suit them, then choose today's mentor." },
+        { file: 'chat_marcus-20261116',  label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
+        { file: 'symposium-20261116',    label: 'Two philosophers, one question', desc: 'In the Symposium, two philosophers answer the same worry from their own works, then one responds to the other.' },
+        { file: 'mentor_sheet-20261116', label: 'Meet them before you talk',    desc: 'Tap a philosopher to see how they relate to the others, with the book and section behind it.' },
       ],
       features: [
         { icon: 'fa-feather',     title: 'A voice for each philosopher', desc: "Plato's dialogues for Socrates, the letters of Epicurus and Seneca, Epictetus's Enchiridion, Marcus's Meditations, Nietzsche's Thus Spoke Zarathustra — each in their own voice." },

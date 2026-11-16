@@ -5,19 +5,27 @@ export const syncReceipt=JSON.parse(readFileSync(new URL('../../docs/release/pub
 export const syncDeltas=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-source-deltas-20261116.json',import.meta.url),'utf8'));
 /** Approved source edits made after the 2026-11-16 sync (Dialogos 1.1.0 copy: philosophers, no numbers). */
 export const laterDeltas=JSON.parse(readFileSync(new URL('../../docs/release/dialogos-110-copy-source-deltas-20261116.json',import.meta.url),'utf8'));
+/** Approved source edits made after the copy layer (Dialogos 1.1.0 screenshots: submitted 2026-11-16 listing set). */
+export const screenshotDeltas=JSON.parse(readFileSync(new URL('../../docs/release/dialogos-110-screenshots-source-deltas-20261116.json',import.meta.url),'utf8'));
+/** Later layers, newest first. Each layer starts from the bytes the next (older) layer ends with. */
+export const laterLayers=[screenshotDeltas,laterDeltas];
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const reverseRow=(row,file,text)=>{
  for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
  assert.equal(sha(text),row.beforeSHA256,`historical source restored: ${file}`);return text;
 };
-/** Current bytes back to the synced bytes: only the exact approved later edit reverses. */
-export function beforeLaterEdits(file,text){
- const row=laterDeltas[file];if(!row)return text;
- assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);return reverseRow(row,file,text);
+/** Current bytes back to the synced bytes: only the exact approved later edits reverse, newest first.
+ *  `through` stops after that many layers (0 = none), so each layer can be checked on its own bytes. */
+export function beforeLaterEdits(file,text,{through=laterLayers.length}={}){
+ for(const layer of laterLayers.slice(0,through)){
+  const row=layer[file];if(!row)continue;
+  assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);text=reverseRow(row,file,text);
+ }
+ return text;
 }
 /** Only exact approved bytes reverse to history. Missing/unknown edits are failures, not exemptions. */
 export function beforeReleaseSync(file,text){
- const later=laterDeltas[file];if(later&&sha(text)===later.afterSHA256)text=reverseRow(later,file,text);
+ for(const layer of laterLayers){const later=layer[file];if(later&&sha(text)===later.afterSHA256)text=reverseRow(later,file,text);}
  const row=syncDeltas[file];assert.ok(row,file);assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);
  for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
  assert.equal(sha(text),row.beforeSHA256,`historical source restored: ${file}`);return text;
