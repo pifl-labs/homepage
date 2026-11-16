@@ -4,7 +4,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {appList,apps,appName,storeAppName,liveAppCount} from '../src/data/apps.ts';
 import {publicPortfolioEvidence} from '../src/data/public-portfolio.ts';
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,syncDeltas,packageFor,currentAndroidName,currentIOSName} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,beforeLaterEdits,laterDeltas,syncDeltas,packageFor,currentAndroidName,currentIOSName} from './helpers/release-sync-20261116.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const schema=h=>[...h.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1])).find(x=>x['@type']==='SoftwareApplication');
@@ -44,7 +44,8 @@ test('BP and Dream public descriptions retain medical and transcription boundari
  assert.match(sky.ctaSub,/not a live camera feed or a weather forecast/);assert.match(sky.features[0].desc,/requires internet/);
 });
 test('exact current source deltas restore historical hashes but reject unknown source edits',()=>{
- for(const[file,row]of Object.entries(syncDeltas)){const s=read(file);assert.equal(sha(s),row.afterSHA256);assert.equal(sha(beforeReleaseSync(file,s)),row.beforeSHA256);assert.throws(()=>beforeReleaseSync(file,s+'\nUNAPPROVED'),/unrecorded source edit/);}
+ for(const[file,row]of Object.entries(laterDeltas)){const s=read(file);assert.equal(sha(s),row.afterSHA256);assert.equal(sha(beforeLaterEdits(file,s)),row.beforeSHA256);assert.equal(row.beforeSHA256,syncDeltas[file].afterSHA256);assert.throws(()=>beforeLaterEdits(file,s+'\nUNAPPROVED'),/unrecorded source edit/);}
+ for(const[file,row]of Object.entries(syncDeltas)){const s=beforeLaterEdits(file,read(file));assert.equal(sha(s),row.afterSHA256);assert.equal(sha(beforeReleaseSync(file,s)),row.beforeSHA256);assert.throws(()=>beforeReleaseSync(file,s+'\nUNAPPROVED'),/unrecorded source edit/);}
 });
 test('minimum entrance fix removes the cause, not text size, layout or overflow by concealment',()=>{
  const css=read('public/styles-stickerbook.css');const frames=css.match(/@keyframes stickIn \{([^}]*\}[^}]*\}[^}]*\})/s)?.[1];assert.ok(frames);assert.doesNotMatch(frames,/1\.05|rotate\(-20deg\)|rotate\(3deg\)|overflow|font-size/);assert.match(frames,/scale\(\.6\) rotate\(0\)/);assert.match(frames,/70% \{ transform: scale\(1\) rotate\(0\)/);

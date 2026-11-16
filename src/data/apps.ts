@@ -573,7 +573,7 @@ const log: AppMeta = {
   },
 };
 
-// Dialogos — 스토아 철학 대화 앱 (PiPi 라인과 별개 브랜드). 콘텐츠 SSOT = pipi_thus/docs/{SPEC,release/STORE-METADATA,legal/*}.
+// Dialogos — 철학자와 대화하는 앱 (PiPi 라인과 별개 브랜드). 콘텐츠 SSOT = pipi_thus/docs/{SPEC,release/STORE-METADATA,legal/*}.
 // Public Apple KR/JP/US and Google Play KO/JA/EN verified 2026-10-23.
 const dialogos: AppMeta = {
   slug: 'dialogos',
@@ -591,63 +591,63 @@ const dialogos: AppMeta = {
   heroShot: 'home',
   content: {
     ko: {
-      tagline: '고대의 현자와\n마주 앉다',
-      lede: '마르쿠스 아우렐리우스·세네카·에픽테토스·소크라테스와 1:1로 대화하세요. 일의 불안, 관계의 고민, 선택의 망설임 — 당신의 물음에 네 현자가 각자의 목소리로, 퍼블릭 도메인 원전에 근거해 답합니다. 광고도 계정도 없이.',
-      metaDesc: '스토아 철학자와 1:1로 대화하는 앱. 마르쿠스·세네카·에픽테토스·소크라테스가 원전에 근거해 답하고 출처를 함께 보여줍니다. 광고·계정 없음.',
+      tagline: '철학자와\n마주 앉다',
+      lede: '소크라테스·에피쿠로스·세네카·에픽테토스·마르쿠스 아우렐리우스·니체와 1:1로 대화하세요. 일의 불안, 관계의 고민, 선택의 망설임 — 당신의 물음에 철학자마다 각자의 목소리로, 퍼블릭 도메인 원전에 근거해 답합니다. 광고도 계정도 없이.',
+      metaDesc: '철학자와 1:1로 대화하는 앱. 소크라테스·에피쿠로스·세네카·에픽테토스·마르쿠스 아우렐리우스·니체가 원전에 근거해 답하고 출처를 함께 보여줍니다. 광고·계정 없음.',
       shotsTitle: '현자와 마주 앉는 순간',
       featuresTitle: '왜 Dialogos 인가',
       ctaTitle: '오늘의 질문으로 시작하세요',
       ctaSub: '하루 30회 무료 대화. 추가 깊은 대화와 Pro 구독은 선택 구매.',
       shots: [
-        { file: 'home',          label: '고대의 현자와 마주 앉다', desc: '마르쿠스·세네카·에픽테토스·소크라테스 중 오늘의 상대를 고릅니다.' },
+        { file: 'home',          label: '철학자와 마주 앉다', desc: '철학자 가운데 오늘의 대화 상대를 고릅니다.' },
         { file: 'chat_marcus',   label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
         { file: 'chat_socrates', label: '답을 주지 않고 되묻는다',   desc: '소크라테스는 결론 대신 당신을 다시 생각하게 합니다.' },
         { file: 'onboarding',    label: '매일 무료로, 광고 없이',     desc: '계정 가입 없이 매일 무료로 대화를 시작합니다. 하루 대화량을 늘리려면 Dialogos Pro(자동 갱신 구독)를 선택할 수 있습니다.' },
       ],
       features: [
-        { icon: 'fa-feather',     title: '네 명의 현자',     desc: '명상록·편지·엥케이리디온·대화편 — 각자의 목소리로 답합니다.' },
+        { icon: 'fa-feather',     title: '철학자마다 다른 목소리', desc: '플라톤 대화편의 소크라테스, 에피쿠로스와 세네카의 편지, 에픽테토스의 엥케이리디온, 마르쿠스의 명상록, 니체의 『차라투스트라는 이렇게 말했다』 — 저마다의 목소리로 답합니다.' },
         { icon: 'fa-quote-right', title: '원전 근거 인용',   desc: '명언 붙여넣기가 아니라, 답변마다 퍼블릭 도메인 출처를 표기.' },
         { icon: 'fa-ban',         title: '광고·계정 없음',   desc: '대화 기록은 기기에 저장됩니다. AI 답변에는 인터넷과 외부 처리가 필요합니다.' },
         { icon: 'fa-language',    title: 'ja · ko · en 네이티브', desc: '번역이 아닌 시장별 네이티브 톤으로 대화합니다.' },
       ],
     },
     ja: {
-      tagline: '古代の賢者と\n向き合う',
-      lede: 'マルクス・アウレリウス、セネカ、エピクテトス、ソクラテスと一対一で対話。仕事の不安、人間関係、選択の迷い——あなたの問いに、四人の賢者がそれぞれの声で、パブリックドメインの原典に基づいて答えます。広告もアカウントもなし。',
-      metaDesc: 'ストア派の賢者と一対一で対話するアプリ。マルクス・セネカ・エピクテトス・ソクラテスが原典に基づいて答え、出典を添えて示します。広告・アカウントなし。',
+      tagline: '賢者と\n向き合う',
+      lede: 'ソクラテス、エピクロス、セネカ、エピクテトス、マルクス・アウレリウス、ニーチェと一対一で対話。仕事の不安、人間関係、選択の迷い——あなたの問いに、賢者たちがそれぞれの声で、パブリックドメインの原典に基づいて答えます。広告もアカウントもなし。',
+      metaDesc: '哲学者と一対一で対話するアプリ。ソクラテス、エピクロス、セネカ、エピクテトス、マルクス・アウレリウス、ニーチェが原典に基づいて答え、出典を添えて示します。広告・アカウントなし。',
       shotsTitle: '賢者と向き合う瞬間',
       featuresTitle: 'Dialogos を選ぶ理由',
       ctaTitle: '今日の問いから始めよう',
       ctaSub: '1日30回まで無料。深い対話の追加購入とProの購読は任意。',
       shots: [
-        { file: 'home',          label: '古代の賢者と向き合う', desc: 'マルクス・セネカ・エピクテトス・ソクラテスから今日の相手を選ぶ。' },
+        { file: 'home',          label: '賢者と向き合う', desc: '賢者たちの中から今日の相手を選ぶ。' },
         { file: 'chat_marcus',   label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
         { file: 'chat_socrates', label: '答えを与えず、問い返す',   desc: 'ソクラテスは結論ではなく、あなたに問い返します。' },
         { file: 'onboarding',    label: '毎日無料、広告なし',       desc: 'アカウント登録なしで毎日無料で対話を始められます。1日の対話量を増やしたい場合は Dialogos Pro(自動更新サブスクリプション)を選べます。' },
       ],
       features: [
-        { icon: 'fa-feather',     title: '四人の賢者',       desc: '自省録・手紙・提要・対話篇——それぞれの声で答えます。' },
+        { icon: 'fa-feather',     title: '賢者ごとの声',     desc: 'プラトン対話篇のソクラテス、エピクロスとセネカの手紙、エピクテトスの提要、マルクスの自省録、ニーチェの『ツァラトゥストラはこう言った』——それぞれの声で答えます。' },
         { icon: 'fa-quote-right', title: '原典に基づく出典', desc: '名言の貼り付けではなく、返答ごとにパブリックドメインの出典を表示。' },
         { icon: 'fa-ban',         title: '広告・アカウントなし', desc: '履歴は端末に保存。AIの返答にはインターネット接続と外部処理が必要です。' },
         { icon: 'fa-language',    title: 'ja · ko · en ネイティブ', desc: '翻訳ではなく市場ごとのネイティブなトーンで対話します。' },
       ],
     },
     en: {
-      tagline: 'Sit with the\nancient sages',
-      lede: "Talk one-on-one with Marcus Aurelius, Seneca, Epictetus, and Socrates. Anxiety about work, a difficult relationship, a hard decision — bring your question, and four sages answer in their own voice, grounded in public-domain sources. No ads, no account.",
-      metaDesc: 'Talk one-on-one with Marcus Aurelius, Seneca, Epictetus and Socrates. Every reply is grounded in public-domain sources, with citations. No ads, no account.',
+      tagline: 'Sit down with\na philosopher',
+      lede: "Talk one-on-one with Socrates, Epicurus, Seneca, Epictetus, Marcus Aurelius, and Nietzsche. Anxiety about work, a difficult relationship, a hard decision — bring your question, and each philosopher answers in their own voice, grounded in public-domain sources. No ads, no account.",
+      metaDesc: 'Talk one-on-one with Socrates, Epicurus, Seneca, Epictetus, Marcus Aurelius and Nietzsche. Every reply is grounded in public-domain sources, with citations. No ads, no account.',
       shotsTitle: 'The moment you sit with a sage',
       featuresTitle: 'Why Dialogos',
       ctaTitle: 'Start with a question',
       ctaSub: 'Free up to 30 messages a day. Optional deep-reply packs and Pro subscriptions.',
       shots: [
-        { file: 'home',          label: 'Sit with the ancient sages',  desc: "Choose today's mentor from Marcus, Seneca, Epictetus and Socrates." },
+        { file: 'home',          label: 'Sit down with a philosopher', desc: "Choose today's mentor from the philosophers." },
         { file: 'chat_marcus',   label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
         { file: 'chat_socrates', label: "He doesn't answer — he asks",  desc: 'Socrates makes you think again instead of handing you a conclusion.' },
         { file: 'onboarding',    label: 'Free every day, no ads',       desc: 'Start talking for free every day with no account; Dialogos Pro (an auto-renewing subscription) raises the daily limit.' },
       ],
       features: [
-        { icon: 'fa-feather',     title: 'Four sages',         desc: 'Meditations, Letters, Enchiridion, Dialogues — each in their own voice.' },
+        { icon: 'fa-feather',     title: 'A voice for each philosopher', desc: "Plato's dialogues for Socrates, the letters of Epicurus and Seneca, Epictetus's Enchiridion, Marcus's Meditations, Nietzsche's Thus Spoke Zarathustra — each in their own voice." },
         { icon: 'fa-quote-right', title: 'Grounded in sources', desc: 'Not quote-wallpaper — every reply shows its public-domain source.' },
         { icon: 'fa-ban',         title: 'No ads, no account', desc: 'History stays on your device. AI replies require internet access and external processing.' },
         { icon: 'fa-language',    title: 'Native in ja · ko · en', desc: 'Not translated — a native tone written for each market.' },

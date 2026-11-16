@@ -3,9 +3,21 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 export const syncReceipt=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-20261116.json',import.meta.url),'utf8'));
 export const syncDeltas=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-source-deltas-20261116.json',import.meta.url),'utf8'));
+/** Approved source edits made after the 2026-11-16 sync (Dialogos 1.1.0 copy: philosophers, no numbers). */
+export const laterDeltas=JSON.parse(readFileSync(new URL('../../docs/release/dialogos-110-copy-source-deltas-20261116.json',import.meta.url),'utf8'));
 const sha=s=>createHash('sha256').update(s).digest('hex');
+const reverseRow=(row,file,text)=>{
+ for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
+ assert.equal(sha(text),row.beforeSHA256,`historical source restored: ${file}`);return text;
+};
+/** Current bytes back to the synced bytes: only the exact approved later edit reverses. */
+export function beforeLaterEdits(file,text){
+ const row=laterDeltas[file];if(!row)return text;
+ assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);return reverseRow(row,file,text);
+}
 /** Only exact approved bytes reverse to history. Missing/unknown edits are failures, not exemptions. */
 export function beforeReleaseSync(file,text){
+ const later=laterDeltas[file];if(later&&sha(text)===later.afterSHA256)text=reverseRow(later,file,text);
  const row=syncDeltas[file];assert.ok(row,file);assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);
  for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
  assert.equal(sha(text),row.beforeSHA256,`historical source restored: ${file}`);return text;
