@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -14,13 +15,13 @@ test('English Draw lead explains the actual task and qualifies AI results', () =
 
 test('Draw follows the current KR/JP/US public release, with Android from its own listing, without changing limits', () => {
   const a = JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(x => x.slug === 'pipi-draw');
-  assert.equal(draw.release.ios.version, a.ios.en.version);
-  assert.equal(draw.release.ios.updated, a.ios.en.currentVersionReleaseDate.slice(0, 10));
+  assert.equal(draw.release.ios.version, currentIOS('pipi-draw').version);
+  assert.equal(draw.release.ios.updated, currentIOS('pipi-draw').currentVersionReleaseDate.slice(0, 10));
   assert.equal(draw.release.since, undefined, 'review/submission date must not masquerade as first release');
   assert.equal(draw.release.checkedAt, '2026-11-02');
   assert.deepEqual(a.playProduction.map(r => r.name), [a.android.en.version]);
-  assert.equal(draw.release.android.version, a.android.en.version);
-  assert.equal(draw.release.android.updated, new Date(`${a.android.en.updatedDisplay} UTC`).toISOString().slice(0, 10));
+  assert.equal(draw.release.android.version, currentAndroid('pipi-draw').version);
+  assert.equal(draw.release.android.updated, androidDay(currentAndroid('pipi-draw')));
   assert.equal(draw.content.en.downloadNote, '2 free AI conversions a day; internet required. Contains ads and optional conversion-ticket purchases. No ads inside the coloring screen.');
   assert.equal(draw.content.en.shots.length, 4);
   assert.equal(draw.content.en.features.length, 4);

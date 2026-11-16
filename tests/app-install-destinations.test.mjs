@@ -22,13 +22,13 @@ for (const locale of ['ko', 'ja', 'en']) {
       for (const url of data.installUrl) {
         const host = new URL(url).hostname;
         assert.ok(['apps.apple.com', 'play.google.com'].includes(host));
-        assert.ok(html.includes(`data-store-link="${url}"`), 'metadata destination must already be visible');
+        assert.ok(html.replaceAll('&amp;','&').includes(`data-store-link="${url}"`), 'metadata destination must already be visible');
       }
     }
   });
 
   test(`${locale}: Android-only apps do not omit Play or invent iOS`, () => {
-    for (const slug of ['pipi-tide', 'kkachi', 'pipi-spend']) {
+    for (const slug of ['kkachi', 'pipi-spend', 'pipi-bp', 'pipi-sky', 'pipi-dream']) {
       const app = appList.find((app) => app.slug === slug);
       const data = schema(readFileSync(new URL(`../dist/${locale}/apps/${slug}/index.html`, import.meta.url), 'utf8'));
       assert.deepEqual(data.installUrl, [app.stores.android]);

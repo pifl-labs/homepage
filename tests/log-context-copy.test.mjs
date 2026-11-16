@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -39,7 +40,7 @@ test('the factual-copy change keeps the actual release, store destinations and s
   const later = JSON.parse(readFileSync(new URL('../docs/release/log-ios-public-20261106.json', import.meta.url), 'utf8'));
   assert.equal(current.ios.en.version, '1.0.13', 'dated baseline stays historical');
   assert.equal(log.release.ios.version, later.apps.find(r=>r.lang==='en').app.version);
-  assert.equal(log.release.android.version, current.android.en.version);
+  assert.equal(log.release.android.version, currentAndroid('pipi-log').version);
   assert.equal(log.stores.ios, 'https://apps.apple.com/app/pipi-log/id6770272665');
   assert.equal(new URL(log.stores.android).searchParams.get('id'), 'com.pifl.pipi.log');
   assert.equal(log.content.en.shots.map(s => s.file).join(','), 'home,calendar,analytics,monthly-map,collection');

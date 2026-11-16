@@ -36,3 +36,14 @@ export const archiveNames={...extraNames,
  'pipi-focus':{ko:['PiPi Focus','PiPi Focus: 해적 포모도로','집중항해: 포모도로 타이머'],ja:['PiPi Focus','PiPi Focus: 海賊ポモドーロ','集中航海：ポモドーロタイマー'],en:['PiPi Focus','PiPi Focus: Pirate Pomodoro','Pomodoro at Sea: Focus Timer']},
  'pipi-draw':{ko:['PiPi Draw','밑그림: 사진으로 만드는 색칠공부'],ja:['PiPi Draw','下絵づくり：写真をぬりえに変換'],en:['PiPi Draw','PiPi Draw - AI Sketch Coloring','Photo Outlines: Coloring Book']}
 };
+
+// Current Android name observed 2026-11-16; old events and their dates stay unchanged.
+archiveNames['pipi-sky'] = {
+  ko: [...archiveNames['pipi-sky'].ko, '하늘멍 - 구름층에서 우주까지'],
+  ja: [...archiveNames['pipi-sky'].ja, 'Skylayer - 雲の層から宇宙へ'],
+  en: [...archiveNames['pipi-sky'].en, 'Skylayer: Clouds to Space'],
+};
+archiveMedia['pipi-sky'].upcoming = false;
+
+archiveNames['pipi-words'].ko.push('단어루틴: JLPT 일본어 단어장');
+archiveNames['pipi-words'].ja.push('ことば習慣：TOPIK韓国語単語帳');

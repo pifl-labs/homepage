@@ -73,5 +73,10 @@
     "file": "icon-c4b888ad7d10.webp",
     "sourceSha256": "c4b888ad7d1060d38c446b7b60c73a9b995493d75e34fc1826ab46be2a979d09",
     "webpSha256": "b60553cb7311b5cf11f156f60a184726021ca8d5aa94eb36d4bb6ff6ee54894b"
+  },
+  "pipi-bp": {
+    "file": "icon-abd1b332d593.webp",
+    "sourceSha256": "abd1b332d5938449b21fdbd1d30231c304425ceee50ef910458ad3bdd6cfe6f2",
+    "webpSha256": "190842e8530f79a0a61fbb5636bfc6cb7ce22bb0faca3009b09cf55971011bc9"
   }
 }

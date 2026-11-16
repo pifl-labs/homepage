@@ -11,6 +11,8 @@ import { voyageWebTrialFor } from '../src/data/voyage-web-trial.mjs';
 import { ddayDateHelpFor } from '../src/data/dday-date-help.mjs';
 import { createHash } from 'node:crypto';
 
+const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/public-release-sync-20261116.json', import.meta.url), 'utf8'));
+const currentDraw = currentPublic.ios.KR.apps.find(a=>a.bundleId==='com.pifl.pipi.draw');
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const focusCss = readFileSync(new URL('../public/styles-focus-web-trial.css', import.meta.url));
 const focusCssUrl = `/styles-focus-web-trial.css?v=${createHash('sha256').update(focusCss).digest('hex').slice(0, 12)}`;
@@ -66,10 +68,10 @@ for (const [lang, checks] of Object.entries(expected)) {
   const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)]
     .map((match) => JSON.parse(match[1])).find((value) => value['@type'] === 'SoftwareApplication');
   // 2026-11-02: both stores publish 1.2.3, so one shared version is shown.
-  assert.equal(jsonLd.softwareVersion, '1.2.3');
-  assert.ok(html.includes('v1.2.3'));
+  assert.equal(jsonLd.softwareVersion, currentDraw.version);
+  assert.ok(html.includes(`v${currentDraw.version}`));
   assert.ok(!html.includes('iOS v') && !html.includes('Android v'));
-  assert.equal(jsonLd.dateModified, '2026-10-31');
+  assert.equal(jsonLd.dateModified, currentDraw.currentVersionReleaseDate.slice(0,10));
   assert.equal(jsonLd.datePublished, undefined);
   for (const file of builtAppLandingFiles(dist, lang, appSlugs)) {
     if (file === join(dist, lang, 'apps', 'pipi-draw', 'index.html')) continue;
@@ -79,7 +81,12 @@ for (const [lang, checks] of Object.entries(expected)) {
     if (!file.includes('/pipi-words/')) assert.ok(!other.includes('styles-words-web-trial.css'), `${file}: Words-only CSS does not leak`);
     if (!file.includes('/pipi-word-voyage/') || lang === 'ja') assert.ok(!other.includes('styles-voyage-web-trial.css'), `${file}: Voyage-only CSS does not leak`);
     if (!file.includes('/pipi-dday/') || lang !== 'ko') assert.ok(!other.includes('styles-dday-date-help.css') && !other.includes('data-date-help="dday"'), `${file}: Korean D-Day-only help does not leak`);
-    if(file.includes('/pipi-spend/')) {
+    if(file.includes('/pipi-bp/') || file.includes('/pipi-dream/')) {
+      const ownNotes=[...other.matchAll(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/gs)];
+      assert.equal(ownNotes.length,1,`${file}: one own factual boundary note`);
+      assert.match(ownNotes[0][1],file.includes('/pipi-bp/')?/Pro/:/Android 13/);
+      for(const text of [checks.note[0],checks.note[3]])assert.ok(!ownNotes[0][1].includes(text),`${file}: Draw-specific conversion claim leaked`);
+    } else if(file.includes('/pipi-spend/')) {
       const ownNote=other.match(/<p\b[^>]*class="app-download-note"[^>]*>(.*?)<\/p>/s)?.[1];
       assert.ok(ownNote, `${file}: Spend must disclose its own cost`);
       assert.match(ownNote,/Pro/);

@@ -17,7 +17,7 @@ for(const lang of ['ko','ja','en']){
   assert.equal((catalog.match(/class="app-card-main"/g)||[]).length,appList.length);
   assert.equal((catalog.match(/class="app-card-stores"/g)||[]).length,appList.filter(a=>a.status==='live'&&(a.stores.ios||a.stores.android)).length);
   for(const app of appList.filter(a=>a.status==='soon'))assert.deepEqual(app.stores,{});
-  assert.equal(appList.some(a=>a.slug==='pipi-bp'),false,'general publisher link must not start held BP page work');
+  assert.equal(appList.some(a=>a.slug==='pipi-bp'),true,'Nov16 exact homepage sync scope resumes BP factual entry');
  });
 }
 
