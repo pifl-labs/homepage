@@ -32,6 +32,8 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Reports and safety</strong>: review reports of AI replies and keep the app safe</li>
                     <li><strong>Support</strong>: answer the messages you send us</li>
                     <li><strong>Provider comparison</strong>: compare and improve the replies of the two AI providers we compared until November 13, 2026 — their quality, safety, speed, and cost, and whether conversations go on, people come back, and choose Pro — using the pseudonymous statistics in section 2 recorded until then</li>
+                    <li><strong>Symposium usage</strong>: see how the Symposium is used, through its usage totals in section 2 (day totals not tied to anyone)</li>
+                    <li><strong>Crisis-support country</strong>: suggest which country's crisis-support contacts to show first</li>
                 </ul>
                 <p>We do not sell or rent any data, and we do not use it for advertising.</p>
 
@@ -51,8 +53,8 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li>The messages you write and the ongoing conversation are sent over an encrypted connection to our backend (a Cloudflare Worker). The app sends at most the most recent 40 messages, about 22,000 characters.</li>
                     <li>Our backend passes on only the most recent part, up to 24 messages and 12,000 characters, together with our instructions for the mentor, to our AI provider, <strong>OpenAI OpCo, LLC</strong> (United States; "OpenAI" below), for the sole purpose of generating the philosopher's reply.</li>
                     <li>In the Symposium, where two philosophers answer together, the room's conversation is sent the same way to generate each philosopher's reply.</li>
-                    <li>From October 2026 until November 13, 2026, while we compared two AI providers, some messages from devices that had agreed to the AI conversation consent naming both were answered by <strong>Anthropic, PBC</strong> (United States; "Anthropic" below).</li>
-                    <li>We no longer send conversations to Anthropic, and before we send conversations to any other AI provider we will first update this policy.</li>
+                    <li>From October 2026 until November 13, 2026, while we compared two AI providers, some messages from devices that had agreed to the AI conversation consent naming both were sent to <strong>Anthropic, PBC</strong> (United States; "Anthropic" below) to answer (when Anthropic could not answer, OpenAI answered instead).</li>
+                    <li>We no longer send conversations to Anthropic. Before we send conversations to any AI provider other than OpenAI (Anthropic included), we will first update and publish this policy.</li>
                     <li><strong>We do not store your conversation content on our servers</strong>, except a reply you report and the message right before it (see "Reports of AI replies" below).</li>
                     <li>By default OpenAI does not use the conversations we send to train its models, and we do not opt in to sharing data for training.</li>
                     <li>We call OpenAI with storage turned off (store: false), so OpenAI does not keep the conversation as application state.</li>
@@ -97,7 +99,8 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Service-wide daily spend total</strong>: To keep costs and abuse in check, our server also keeps a service-wide counter per day of the total AI spend with each AI provider. These are not tied to any device or person, contain no personal data, and expire automatically within about two days.</li>
                     <li><strong>Rate limiting</strong>: To slow down abusive traffic, our server uses Cloudflare's rate-limiting feature, which counts requests per IP address over a short window. Cloudflare uses the IP address only transiently, as the key of that counter, and we do not store it in our own records.</li>
                     <li><strong>Operational logs</strong>: Our operational logs record the first 8 characters of the device identifier and usage details (such as plan, type of answer, which AI provider and model answered, token counts, how the reply ended, whether it was handled as a crisis, and the platform, product and result of a purchase check) — never message content.</li>
-                    <li><strong>Cloudflare request logs</strong>: Cloudflare's request logs for our server may also include connection information such as IP addresses.</li>
+                    <li><strong>Symposium operational logs</strong>: In the Symposium, our operational logs also record the pair of philosophers, the round number, how the round was played (including the answer button you tapped and whether only one philosopher answered because the topic was sensitive) and the topic card (when your words touched the pair's issue).</li>
+                    <li><strong>Cloudflare request logs</strong>: Cloudflare's request logs for our server (Workers invocation logs) may also include connection information such as IP addresses and the estimated country, and are deleted automatically within 7 days.</li>
                 </ul>
 
                 <h3>Symposium usage totals</h3>
@@ -110,7 +113,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h3>Suggesting crisis-support contacts for your country</h3>
                 <ul>
                     <li>When the app shows crisis-support contacts, it asks our server — without the device identifier or any conversation — which country's contacts to suggest first, and our server reads only the country that Cloudflare estimates from the connection's IP address and returns it.</li>
-                    <li>We do not store the estimated country or the IP address, and a country you choose yourself is not kept after the app restarts (Cloudflare's request logs may include connection information, as above).</li>
+                    <li>We do not store the estimated country or the IP address in our records, and a country you choose yourself is not kept after the app restarts (Cloudflare's request logs may keep them for up to 7 days, as above).</li>
                 </ul>
 
                 <h3>Service-improvement statistics</h3>
@@ -173,7 +176,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Service-improvement statistics:</strong> no longer recorded since November 13, 2026; what was recorded is deleted automatically 3 months after it was recorded.</li>
                     <li><strong>Symposium usage totals:</strong> each day's totals are deleted automatically about 120 days later.</li>
                     <li><strong>Daily counters, token totals, and the service-wide daily spend total:</strong> expire automatically within about two days.</li>
-                    <li><strong>Operational logs:</strong> deleted automatically within 7 days.</li>
+                    <li><strong>Operational logs and Cloudflare's request logs:</strong> deleted automatically within 7 days.</li>
                     <li><strong>Purchase-verification records:</strong> deleted automatically 5 years (1,830 days) after the transaction date.
                         <ul>
                             <li>For a subscription, the 5 years run from the end of its latest subscription period.</li>
@@ -184,7 +187,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Report records:</strong> kept for 90 days, then deleted automatically.</li>
                     <li><strong>Messages you send us by email:</strong> kept for 3 years after we have dealt with them, then deleted.</li>
                     <li><strong>On-device settings:</strong> remain until you delete the app, which removes all local data.</li>
-                    <li><strong>Conversation history on your device:</strong> the most recent 200 messages with each mentor, until you clear it in Settings or delete the app.</li>
+                    <li><strong>Conversation history on your device:</strong> the most recent 200 messages with each mentor (in the Symposium, with each pair of philosophers), until you clear it in Settings or delete the app.</li>
                 </ul>
 
                 <h2>4. Disclosure to Third Parties</h2>
@@ -227,7 +230,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 </ScrollableLegalTable>
 
                 <h2>6. What We Do Not Collect, Advertising and Tracking</h2>
-                <p>The app itself collects no name, email, account, location, contacts, photos, health data, or biometric data (if you write to us by email, see section 2).</p>
+                <p>The app itself collects no name, email, account, location (the country estimate in section 2 comes only from the connection's IP address and is not stored in our records), contacts, photos, health data, or biometric data (if you write to us by email, see section 2).</p>
                 <ul>
                     <li>No analytics or advertising SDKs (the statistics and totals in section 2 are recorded by our own server, not by an SDK in the app)</li>
                     <li>No advertising identifier (IDFA/GAID)</li>
