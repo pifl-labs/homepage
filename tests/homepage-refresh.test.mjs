@@ -5,7 +5,7 @@ import {apps,liveApps,displayVersion} from '../src/data/apps.ts';
 import {archiveEvents,archiveApps,archiveCheckedAt} from '../src/data/archive.mjs';
 import {publicArchiveEvidence} from '../src/data/archive-public.mjs';
 import {refreshedEvents} from '../src/data/archive-refresh-20261117.mjs';
-import {refreshReceipt,packageFor,expectedRelease} from './helpers/release-sync-20261116.mjs';
+import {refreshReceipt,packageFor,expectedRelease,androidDay} from './helpers/release-sync-20261116.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 test('every live platform matches its independently rechecked public metadata',()=>{
  assert.equal(refreshReceipt.android.length,16);
@@ -20,7 +20,7 @@ test('27 observation records retain independent public URLs, versions and date s
  for(const e of refreshedEvents){
   const row=e.platform==='ios'?refreshReceipt.ios.KR.apps.find(a=>a.bundleId===packageFor(e.app)):refreshReceipt.android.find(a=>a.package===packageFor(e.app));
   assert.ok(row);assert.equal(e.version,row.version);assert.equal(e.date,refreshReceipt.observedAt);assert.equal(e.kind,'observed');
-  assert.equal(e.storeUpdated,expectedRelease(e.app,e.platform).updated);
+  assert.equal(e.storeUpdated,e.platform==='ios'?row.currentVersionReleaseDate.slice(0,10):androidDay(row));
   assert.ok(['apps.apple.com','play.google.com'].includes(new URL(e.url).hostname));
   const actual=archiveEvents.find(a=>a.id===e.id);assert.equal(actual.timeBasis,'observation-date');
   for(const lang of ['ko','ja','en'])assert.ok(e.summary[lang]&&e.title[lang]);
@@ -32,7 +32,7 @@ test('archive adds to the prior 41 records without manufacturing releases for th
  const old=archiveEvents.filter(e=>!e.id.endsWith('-observed-20261117'));
  assert.equal(old.length,41);assert.equal(archiveEvents.length,68);
  assert.ok(archiveEvents.filter(e=>e.app==='pipi-legion').every(e=>e.kind==='asset'&&e.version===null));
- const published=JSON.parse(read('public/archive-evidence.json'));assert.equal(published.checkedAt,archiveCheckedAt);assert.deepEqual(published,publicArchiveEvidence);
+ const published=JSON.parse(read('public/archive-evidence.json'));assert.equal(published.checkedAt,'2026-11-18');assert.deepEqual(published,publicArchiveEvidence);
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: crew stays complete and public archive starts with actual release records`,()=>{
  const home=read(`dist/${lang}/index.html`),archive=read(`dist/${lang}/archive/index.html`);

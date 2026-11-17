@@ -1,0 +1,14 @@
+{
+  "records": [
+    {
+      "id": "pipi-dday-android-203",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "2.0.3",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "checkedAt": "2026-11-18",
+      "notes": "그날까지 2.0.3\n• 그날이 되면 홈에 '오늘이 그날이에요'가 뜨고, 그 자리에서 바로 공유할 수 있어요.\n• 날짜를 직접 입력하다 틀리면, 입력 형식 예시와 고를 수 있는 날짜 범위를 알려 줘요.\n• 다른 시간대로 여행한 뒤 앱을 열면 알림을 그곳 시각에 맞춰 다시 걸어요.",
+      "notesSha256": "aa8548aba0422a997c2e3890483f0e1cced45d2ffa009dedc8ac06db4b872c8b"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import {readApps,matchesRecord,writeQuery} from './archive-filters.mjs';
+import {readApps,matchesRecord,writeQuery} from './archive-filters.mjs?v=2';
 const root=document.querySelector('[data-archive]');
 if(root){
  const form=root.querySelector('form');

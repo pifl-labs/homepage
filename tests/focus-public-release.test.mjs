@@ -72,11 +72,11 @@ for (const lang of ['ko', 'ja', 'en']) {
     }
     const rows = [...catalog.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
     const focusRow = rows.find(row => row.includes(`href="/${lang}/apps/pipi-focus/"`));
-    const observedDates = rows.map(row=>row.match(/datetime="([^"]+)"/)?.[1]);
+    const observedDates = rows.map(row=>[...row.matchAll(/datetime="([^"]+)"/g)].map(m=>m[1]).sort().at(-1));
     const latest = liveApps.map(latestUpdate).filter(Boolean).sort().at(-1);
     assert.equal(observedDates[0], latest, 'latest independently observed app update sorts first');
     assert.deepEqual(observedDates, [...observedDates].sort().reverse(), 'all fleet rows remain newest-first');
-    assert.ok(focusRow.includes(`v${expected.version}`) && focusRow.includes(`datetime="${expected.currentVersionReleaseDate.slice(0,10)}"`));
+    assert.match(focusRow, /iOS v1\.2\.4.*datetime="2026-11-17".*Android v1\.2\.4.*datetime="2026-11-16"/s);
     const observation = catalog.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
     assert.ok(observation?.includes('datetime="2026-11-02"'));
   });

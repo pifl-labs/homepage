@@ -2,23 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import {appList,appName} from '../data/apps';
 import {appIconSrc} from '../data/app-icons.mjs';
-import {publicArchiveEvents as archiveEvents,publicArchiveApps,publicArchiveEvidence,releaseDate,displayKind} from '../data/archive-public.mjs';
+import {publicArchiveApps} from '../data/archive-public.mjs';
+import {archiveReleaseCards} from '../data/archive-release-cards.mjs';
 import {archiveCopy} from '../data/archive-copy';
 import type {Lang} from '../i18n/ui';
 const {lang}=Astro.props as {lang:Lang};
 const c=archiveCopy[lang];
 const archiveApps=appList.filter(app=>publicArchiveApps.includes(app.slug));
-const years=[...new Set(archiveEvents.map(e=>releaseDate(e).slice(0,4)))].sort().reverse();
+const years=[...new Set(archiveReleaseCards.map(card=>card.sortDate.slice(0,4)))].sort().reverse();
 const platforms={ios:'iOS',android:'Android'};
 const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/archive/`}));
 ---
-<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=e1cc9b528998']}>
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=79eea83c518d']}>
 <main id="main" class="archive" data-archive data-count-label={c.results} data-all-label={c.all}>
  <div class="container">
   <header class="archive-hero">
    <p class="archive-eyebrow">{c.title}</p>
    <h1>{c.intro}</h1><p class="archive-lede">{c.desc}</p>
-   <p class="archive-meta">{c.manual} <time datetime={publicArchiveEvidence.checkedAt}>{publicArchiveEvidence.checkedAt}</time> <span aria-hidden="true">·</span> {archiveApps.length} {c.app} <span aria-hidden="true">·</span> {archiveEvents.length} {c.results}</p>
+   <p class="archive-meta">{archiveApps.length} {c.app} <span aria-hidden="true">·</span> {archiveReleaseCards.length} {c.results}</p>
   </header>
   <fieldset class="archive-app-picker">
    <legend>{c.chooseApps}</legend><p class="archive-picker-help">{c.multiHelp}</p>
@@ -34,25 +35,32 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
   {archiveApps.map(app=><section class="archive-app-summary" data-app-summary={app.slug} hidden>
    <img src={appIconSrc(app.slug)} width="56" height="56" alt=""/><div><h2>{appName(app,lang)}</h2><a href={`/${lang}/apps/${app.slug}/`}>{c.product} →</a></div>
   </section>)}
-  <div class="archive-status"><p role="status" aria-live="polite" data-result-count>{archiveEvents.length} {c.results}</p><a href="/archive-evidence.json" download>{c.evidence} ↓</a></div>
+  <div class="archive-status"><p role="status" aria-live="polite" data-result-count>{archiveReleaseCards.length} {c.results}</p><a href="/archive-evidence.json" download>{c.evidence} ↓</a></div>
   <p class="archive-date-note">{c.dateNote}</p>
    <section class="archive-history" aria-label={c.timeline}>
     <p data-empty hidden class="archive-empty">{c.empty}</p>
     {years.map(year=><section data-year-group={year} class="archive-year"><h2>{year}</h2><ol>
-     {archiveEvents.filter(e=>releaseDate(e).startsWith(year)).map(e=>{
-      const app=appList.find(a=>a.slug===e.app)!;
-      return <li data-event data-event-id={e.id} data-app={e.app} data-year={year} data-platform={e.platform} data-kind={displayKind(e)}>
-       <div class="archive-date"><time datetime={e.timestamp||releaseDate(e)}>{releaseDate(e)}</time><span class={`archive-kind archive-kind--${displayKind(e)}`}>{c.types[displayKind(e)]}</span></div>
-       <article><div class="archive-record-meta"><img src={appIconSrc(e.app)} width="24" height="24" alt=""/><a href={`?app=${e.app}`} data-archive-app={e.app}>{appName(app,lang)}</a><span>{platforms[e.platform]}{e.version&&` · ${e.version}`}</span></div>
-        <h3>{e.title[lang]}</h3><p>{e.summary[lang]}</p>
-        <details><summary>{c.source}</summary><dl>
-         <div><dt>{c.publicBasis}</dt><dd>{c.sources[e.source]}{e.url&&<> · <a href={e.url}>{c.storeLink}</a></>}</dd></div>
-         {e.contentEvidence&&<div><dt>{c.detailSource}</dt><dd>{c.sources[e.contentEvidence.kind]} · {e.version}<br/><a href={e.contentEvidence.url}>{c.saved}</a> · <time datetime={e.contentEvidence.checkedAt}>{e.contentEvidence.checkedAt}</time></dd></div>}
-         {e.releaseNotesReference&&<div><dt>{c.detailSource}</dt><dd>{c.sources['version-release-document']} · {e.releaseNotesReference.commit.slice(0,8)}</dd></div>}
-         <div><dt>{c.checked}</dt><dd><time datetime={e.observedAt}>{e.observedAt}</time></dd></div>
-         {e.timestamp&&<div><dt>{c.updated} (UTC)</dt><dd><time datetime={e.timestamp}>{e.timestamp.slice(0,10)} {e.timestamp.slice(11,19)}</time></dd></div>}
-         {e.region&&<div><dt>{c.region}</dt><dd>{e.region}</dd></div>}
-        </dl></details>
+     {archiveReleaseCards.filter(card=>card.sortDate.startsWith(year)).map(card=>{
+      const app=appList.find(a=>a.slug===card.app)!;
+      return <li data-event data-event-id={card.id} data-app={card.app} data-year={year} data-platform={card.releases.map(r=>r.platform).join(' ')} data-kind={card.kind}>
+       <article><div class="archive-record-meta"><img src={appIconSrc(card.app)} width="24" height="24" alt=""/><a href={`?app=${card.app}`} data-archive-app={card.app}>{appName(app,lang)}</a><span class="archive-version">v{card.version}</span></div>
+        <h3>{card.title[lang]}</h3><p>{card.summary[lang]}</p>
+        <div class="archive-platform-dates">{card.releases.map(r=><div data-release-platform={r.platform} class="archive-platform-date">
+         <span>{c.dates[r.publication.basis]}</span> <time datetime={r.publication.date}>{r.publication.date}</time>
+        </div>)}</div>
+        <details><summary>{c.source}</summary>
+         {card.releases.map(r=><div class="archive-platform-source">
+          <h4>{platforms[r.platform]}</h4><dl>
+           <div><dt>{c.publicBasis}</dt><dd>{c.sources[r.source]}{r.url&&<> · <a href={r.url}>{c.storeLink}</a></>}</dd></div>
+           {r.contentEvidence&&<div><dt>{c.detailSource}</dt><dd>{c.sources[r.contentEvidence.kind]} · {r.version}<br/><a href={r.contentEvidence.url}>{c.saved}</a></dd></div>}
+           {r.releaseNotesReference&&<div><dt>{c.detailSource}</dt><dd>{c.sources['version-release-document']} · {r.releaseNotesReference.commit.slice(0,8)}</dd></div>}
+           {r.publication.reference&&<div><dt>{c.dates['play-production']}</dt><dd>Git {r.publication.reference}</dd></div>}
+           {r.publication.timestamp&&<div><dt>{c.updated} (UTC)</dt><dd><time datetime={r.publication.timestamp}>{r.publication.timestamp.slice(0,10)} {r.publication.timestamp.slice(11,19)}</time></dd></div>}
+           {r.region&&<div><dt>{c.region}</dt><dd>{r.region}</dd></div>}
+           <div><dt>{c.checked}</dt><dd><time datetime={r.observedAt}>{r.observedAt}</time></dd></div>
+          </dl>
+         </div>)}
+        </details>
        </article>
       </li>
      })}
@@ -61,5 +69,5 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
 
  </div>
 </main>
-<script is:inline type="module" src="/archive-client.js?v=5"></script>
+<script is:inline type="module" src="/archive-client.js?v=6"></script>
 </BaseLayout>

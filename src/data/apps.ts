@@ -402,7 +402,7 @@ const dday: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
     ios: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
-    android: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
+    android: { version: '2.0.3', updated: '2026-11-18', checkedAt: '2026-11-18' },
     since: '2026-06-02',
     checkedAt: '2026-11-02',
   },
@@ -1587,6 +1587,11 @@ export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */
 export const liveApps: AppMeta[] = appList.filter((a) => a.status === 'live');
+
+/** Home only promotes store-listed apps with at least one verified public version. */
+export const homeReleaseApps = liveApps.filter(app =>
+  Boolean((app.stores.ios && app.release?.ios?.version) || (app.stores.android && app.release?.android?.version)),
+);
 
 /** 앱의 최신 스토어 업데이트일(양 스토어 중 늦은 쪽). 릴리스 정보 없으면 빈 문자열. */
 export function latestUpdate(app: AppMeta): string {

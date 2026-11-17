@@ -3,7 +3,7 @@ export function readApps(params, valid) {
   return new Set(params.getAll('app').flatMap(value=>value.split(',')).filter(value=>valid.includes(value)));
 }
 export function matchesRecord(row, selected, filters) {
-  return (!selected.size||selected.has(row.app))&&Object.entries(filters).every(([key,value])=>value==='all'||row[key]===value);
+  return (!selected.size||selected.has(row.app))&&Object.entries(filters).every(([key,value])=>value==='all'||(key==='platform'?row.platform?.split(' ').includes(value):row[key]===value));
 }
 export function writeQuery(selected, order, filters) {
   const params=new URLSearchParams();

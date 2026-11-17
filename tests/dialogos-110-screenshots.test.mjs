@@ -94,7 +94,7 @@ for (const lang of ['ko', 'ja', 'en']) test(`${lang}: built landing and catalog 
   assert.ok(home.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: catalog card`);
   const archive = bytes(`dist/${lang}/archive/index.html`).toString('utf8');
   assert.ok(!archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: submission image stays out of the release timeline`);
-  assert.match(archive,/data-event-id="dialogos-ios-observed-20261117"/);
+  assert.match(archive,/data-event-id="dialogos-shared-1.1.0"/);
 });
 
 test('no built page points at a missing Dialogos image', () => {

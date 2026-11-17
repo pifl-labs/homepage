@@ -1,7 +1,7 @@
 ---
 // 홈 앱 목록 구조화 데이터 — 검색엔진이 "이 회사가 어떤 앱을 냈는지"를 목록으로 읽게 한다.
 // 버전·업데이트일은 apps.ts 실측 release 값에서 파생(수기 입력 금지).
-import { appList, appName, displayVersion, latestUpdate, previousNameOf } from '../data/apps';
+import { homeReleaseApps, appName, displayVersion, latestUpdate, previousNameOf } from '../data/apps';
 import type { Lang } from '../i18n/ui';
 
 interface Props { lang: Lang }
@@ -11,8 +11,8 @@ const itemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: lang === 'ko' ? 'PiFl Labs 앱' : lang === 'ja' ? 'PiFl Labs アプリ' : 'PiFl Labs apps',
-  numberOfItems: appList.length,
-  itemListElement: appList.map((app, i) => ({
+  numberOfItems: homeReleaseApps.length,
+  itemListElement: homeReleaseApps.map((app, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     item: {

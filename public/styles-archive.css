@@ -17,13 +17,11 @@
 .archive-app-summary{display:flex;gap:1rem;margin-top:1.5rem;padding:1.2rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:16px}.archive-app-summary img{flex:none;border-radius:14px}.archive-app-summary div{min-width:0}.archive-app-summary p{max-width:65ch}.archive-app-summary a{display:inline-block;margin-top:.6rem;min-height:44px;padding-top:.5rem}
 .archive-status{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:1.5rem}.archive-status p{font-weight:700}.archive-status a{min-height:44px;display:flex;align-items:center}
 .archive-date-note{font-size:.9rem;color:var(--text-muted);max-width:80ch;margin:.5rem 0 1.5rem}
-.archive-year>h2{font-size:2.8rem;margin:0 0 1rem;letter-spacing:-.03em}.archive-year ol{list-style:none;padding:0;margin:0}.archive-year li{display:grid;grid-template-columns:7.3rem minmax(0,1fr);gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border-default)}
-.archive-date{font-size:.85rem;display:flex;align-items:start;flex-direction:column;gap:.5rem}.archive-date time{font-variant-numeric:tabular-nums}
-.archive-kind{font-size:.8rem;font-weight:600;color:var(--text-secondary);border-inline-start:3px solid var(--text-muted);padding-inline-start:.5rem}.archive-kind--released{border-color:var(--accent-warm)}
-.archive-record-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;font-size:.8rem;color:var(--text-muted);margin-bottom:.65rem}.archive-record-meta img{border-radius:5px;flex:none}.archive-record-meta a{font-weight:600}.archive-record-meta>span{flex-basis:100%}
+.archive-year>h2{font-size:2.8rem;margin:0 0 1rem;letter-spacing:-.03em}.archive-year ol{list-style:none;padding:0;margin:0}.archive-year ol>li{padding:1.25rem 0;border-top:1px solid var(--border-default)}
+.archive-record-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;font-size:.8rem;color:var(--text-muted);margin-bottom:.65rem}.archive-record-meta img{border-radius:5px;flex:none}.archive-record-meta a{font-weight:600}.archive-version{color:var(--text-secondary);white-space:nowrap}
 .archive-history article>p{margin:.6rem 0;color:var(--text-secondary)}.archive summary{cursor:pointer;min-height:44px;padding:.65rem 0;font-size:.9rem}.archive dl{font-size:.85rem;margin:0;padding:.8rem;background:var(--bg-surface);border-radius:8px}.archive dl div{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:.5rem;margin:.4rem 0}.archive dd{margin:0;color:var(--text-secondary)}
 .archive-empty{padding:1.25rem;border:1px dashed var(--border-strong);border-radius:12px}
-@media(max-width:600px){.archive{padding-top:2.5rem}.archive-year li{grid-template-columns:minmax(0,1fr);gap:.65rem}.archive-date{flex-direction:row;flex-wrap:wrap}.archive-app-summary{padding:1rem}.archive-app-summary h2{font-size:1.35rem}}
+@media(max-width:600px){.archive{padding-top:2.5rem}.archive-app-summary{padding:1rem}.archive-app-summary h2{font-size:1.35rem}}
 @media(max-width:340px){.archive-filters{grid-template-columns:minmax(0,1fr)}}
 
 /* Same compact chevron on native filters and disclosure controls. */
@@ -64,3 +62,8 @@
 /* On narrow filters, the app name and explicit selected check take priority
    over a decorative icon. Keep the compact two-column name list. */
 @media (max-width: 550px) { .archive-app-buttons img { display: none; } }
+
+.archive-platform-dates { display: flex; flex-wrap: wrap; align-items: start; gap: .4rem 1.2rem; margin: .8rem 0 .3rem; }
+.archive-platform-date { display: flex; flex-wrap: wrap; align-items: baseline; gap: .08rem .45rem; font-size: .85rem; color: var(--text-secondary); }
+.archive-platform-date time { color: var(--text-primary); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.archive-platform-source h4 { margin: .65rem 0 .3rem; font-size: .85rem; }

@@ -1,0 +1,190 @@
+{
+  "observedAt": "2026-11-18",
+  "region": "KR",
+  "ios": {
+    "observedAt": "2026-11-17T22:30:55.661Z",
+    "apps": [
+      {
+        "bundleId": "com.pifl.pipi.bridge",
+        "version": "1.0.3",
+        "currentVersionReleaseDate": "2026-11-10T20:04:55Z",
+        "trackId": 6801205183
+      },
+      {
+        "bundleId": "com.pifl.pipi.draw",
+        "version": "1.2.5",
+        "currentVersionReleaseDate": "2026-11-16T19:49:15Z",
+        "trackId": 6779071131
+      },
+      {
+        "bundleId": "com.pifl.pipi.wordvoyage",
+        "version": "1.4.2",
+        "currentVersionReleaseDate": "2026-11-16T17:51:15Z",
+        "trackId": 6788949612
+      },
+      {
+        "bundleId": "com.pifl.pipi.dday",
+        "version": "2.0.2",
+        "currentVersionReleaseDate": "2026-11-13T20:18:19Z",
+        "trackId": 6770268950
+      },
+      {
+        "bundleId": "com.pifl.pipi.hello",
+        "version": "1.1.1",
+        "currentVersionReleaseDate": "2026-11-16T20:17:05Z",
+        "trackId": 6777299814
+      },
+      {
+        "bundleId": "com.pifl.pipi.words",
+        "version": "1.1.1",
+        "currentVersionReleaseDate": "2026-11-16T20:07:41Z",
+        "trackId": 6770267735
+      },
+      {
+        "bundleId": "com.pifl.pipi.focus",
+        "version": "1.2.4",
+        "currentVersionReleaseDate": "2026-11-16T17:48:07Z",
+        "trackId": 6762258878
+      },
+      {
+        "bundleId": "com.pifl.pipi.log",
+        "version": "1.0.15",
+        "currentVersionReleaseDate": "2026-11-16T20:07:52Z",
+        "trackId": 6770272665
+      },
+      {
+        "bundleId": "com.pifl.pipi.tide",
+        "version": "1.2.0",
+        "currentVersionReleaseDate": "2026-11-13T20:10:31Z",
+        "trackId": 6820126418
+      },
+      {
+        "bundleId": "com.pifl.pipi.sudoku",
+        "version": "1.0.2",
+        "currentVersionReleaseDate": "2026-10-31T16:42:26Z",
+        "trackId": 6820125053
+      },
+      {
+        "bundleId": "com.pifl.pipi.thus",
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-11-16T20:21:14Z",
+        "trackId": 6780508628
+      }
+    ]
+  },
+  "android": [
+    {
+      "package": "com.pifl.pipi.focus",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "version": "1.2.4",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:56.726Z"
+    },
+    {
+      "package": "com.pifl.pipi.draw",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "version": "1.2.5",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:58.018Z"
+    },
+    {
+      "package": "com.pifl.pipi.tide",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "version": "1.2.0",
+      "updated": "2026. 10. 31.",
+      "at": "2026-11-17T22:30:58.867Z"
+    },
+    {
+      "package": "com.pifl.pipi.sudoku",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+      "version": "1.0.2",
+      "updated": "2026. 10. 29.",
+      "at": "2026-11-17T22:30:59.716Z"
+    },
+    {
+      "package": "com.pifl.pipi.words",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "version": "1.1.1",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:56.725Z"
+    },
+    {
+      "package": "com.pifl.pipi.hello",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "version": "1.1.0",
+      "updated": "2026. 10. 25.",
+      "at": "2026-11-17T22:30:57.838Z"
+    },
+    {
+      "package": "com.pifl.pipi.thus",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "version": "1.1.0",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:58.647Z"
+    },
+    {
+      "package": "com.pifl.pipi.bp",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR",
+      "version": "1.0.0",
+      "updated": "2026. 10. 27.",
+      "at": "2026-11-17T22:31:00.004Z"
+    },
+    {
+      "package": "com.pifl.pipi.log",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "version": "1.0.15",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:56.725Z"
+    },
+    {
+      "package": "com.pifl.pipi.bridge",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "version": "1.0.3",
+      "updated": "2026. 11. 10.",
+      "at": "2026-11-17T22:30:57.892Z"
+    },
+    {
+      "package": "com.pifl.pipi.spend",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
+      "version": "1.0.0",
+      "updated": "2026. 10. 28.",
+      "at": "2026-11-17T22:30:58.800Z"
+    },
+    {
+      "package": "com.pifl.pipi.dream",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
+      "version": "1.0.0",
+      "updated": "2026. 11. 13.",
+      "at": "2026-11-17T22:30:59.614Z"
+    },
+    {
+      "package": "com.pifl.pipi.dday",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "version": "2.0.3",
+      "updated": "2026. 11. 18.",
+      "at": "2026-11-17T22:30:56.554Z"
+    },
+    {
+      "package": "com.pifl.pipi.wordvoyage",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "version": "1.4.2",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:58.201Z"
+    },
+    {
+      "package": "com.pifl.pipi.kkachi",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "version": "1.1.0",
+      "updated": "2026. 10. 31.",
+      "at": "2026-11-17T22:30:59.187Z"
+    },
+    {
+      "package": "com.pifl.pipi.sky",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+      "version": "1.0.0",
+      "updated": "2026. 11. 16.",
+      "at": "2026-11-17T22:30:59.952Z"
+    }
+  ],
+  "androidDday203Notes": "그날까지 2.0.3\n• 그날이 되면 홈에 '오늘이 그날이에요'가 뜨고, 그 자리에서 바로 공유할 수 있어요.\n• 날짜를 직접 입력하다 틀리면, 입력 형식 예시와 고를 수 있는 날짜 범위를 알려 줘요.\n• 다른 시간대로 여행한 뒤 앱을 열면 알림을 그곳 시각에 맞춰 다시 걸어요."
+}

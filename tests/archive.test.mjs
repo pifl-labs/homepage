@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {archiveEvents,archiveMedia} from '../src/data/archive.mjs';
-import {publicArchiveApps,publicArchiveEvents,publicArchiveEvidence} from '../src/data/archive-public.mjs';
+import {publicArchiveApps,publicArchiveEvidence} from '../src/data/archive-public.mjs';
+import {archiveReleaseCards} from '../src/data/archive-release-cards.mjs';
 test('historical input preserves distinct source timestamps behind the public projection',()=>{
  assert.equal(new Set(archiveEvents.map(e=>e.id)).size,archiveEvents.length);
  const first=archiveEvents.find(e=>e.id==='focus-first-approval');
@@ -19,7 +20,7 @@ test('historical input preserves distinct source timestamps behind the public pr
 for(const lang of ['ko','ja','en'])test(`${lang}: archive lists only released apps and records and accessible filter controls`,()=>{
  const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
  assert.equal((html.match(/data-app-summary=/g)||[]).length,publicArchiveApps.length);
- assert.equal((html.match(/data-event /g)||[]).length,publicArchiveEvents.length);
+ assert.equal((html.match(/data-event /g)||[]).length,archiveReleaseCards.length);
  assert.doesNotMatch(html, /pipi-legion|data-journey-app|data-media-app|class="archive-exhibits"|\/submission\//);
  assert.ok(html.includes('aria-live="polite"'));assert.ok(html.includes('type="reset"'));
  assert.ok(html.includes(`https://pifl-labs.com/${lang}/archive/`));
@@ -30,7 +31,7 @@ test('archive browser logic is external under the production self-only script po
  assert.deepEqual(headers.match(/script-src ([^;]+);/)[1].trim().split(/\s+/),["'self'",'https://static.cloudflareinsights.com/beacon.min.js','https://static.cloudflareinsights.com/beacon.min.js/']);
  for(const lang of ['ko','ja','en']){
   const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
-  assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=5"/);
+  assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=6"/);
   const scripts=[...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)];
   assert.equal(scripts.filter(([,attrs,body])=>!attrs.includes('application/ld+json')&&body.trim()).length,0,'executable inline JS would be blocked by deployed CSP');
  }

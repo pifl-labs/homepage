@@ -4,9 +4,11 @@ import { appIconSrc } from "../data/app-icons.mjs";
 // 함대 정비 기록 — 홈 #log 아래에 붙는 "실제로 지금 스토어에 올라간 버전" 섹션.
 // 모든 숫자·날짜는 src/data/apps.ts 의 실측 release 데이터에서 파생한다(하드코딩 금지).
 import {
-  appName, displayVersion, formatDate, fleetSince,
-  latestUpdate, liveApps, liveAppCount, releaseObservationDates,
+  appName, formatDate,
+  latestUpdate, liveApps, homeReleaseApps, releaseObservationDates,
 } from '../data/apps';
+import { publicArchiveEvents } from '../data/archive-public.mjs';
+import { archiveCopy } from '../data/archive-copy';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import type { Lang } from '../i18n/ui';
 
@@ -14,7 +16,10 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 
 // 최신 정비 순 정렬 — "지금 무엇이 움직이고 있나"가 먼저 보이도록.
-const rows = liveApps.filter(app => app.release).sort((a, b) => latestUpdate(b).localeCompare(latestUpdate(a)));
+const publicDate = (app, platform) =>
+  publicArchiveEvents.find(e => e.app===app.slug && e.platform===platform && e.version===app.release?.[platform]?.version)?.publication;
+const latestDisplayed = app => ['ios','android'].map(platform=>publicDate(app,platform)?.date).filter(Boolean).sort().at(-1) || latestUpdate(app);
+const rows = [...homeReleaseApps].sort((a, b) => latestDisplayed(b).localeCompare(latestDisplayed(a)));
 
 // 서로 다른 앱의 관측일을 모두 오늘 확인한 것처럼 보이지 않게 범위로 표시한다.
 const checkedDates = [...new Set(liveApps.flatMap(releaseObservationDates))].sort();
@@ -24,30 +29,12 @@ const rangeDates = checkedDates.length
 
 const copy = {
   ko: {
-    kicker: '01 / 정비 기록',
-    title: '출항이 끝이 아니라,',
-    titleEm: '거기서 시작입니다.',
-    sub: `첫 배가 바다에 나간 건 ${formatDate(fleetSince, 'ko')}. 지금은 ${liveAppCount}개 앱을 서비스합니다. 아래는 마지막으로 확인한 플랫폼별 버전과 업데이트 기록입니다.`,
-    updated: '업데이트',
-    both: '양 스토어 동일',
     noteBefore: '스토어 실측 · ', noteAfter: ' 확인',
   },
   ja: {
-    kicker: '01 / 整備記録',
-    title: '就航は終わりではなく、',
-    titleEm: 'そこからが始まり。',
-    sub: `最初のアプリを公開したのは ${formatDate(fleetSince, 'ja')}。現在は${liveAppCount}本を配信中です。以下は最後に確認したストア別のバージョンと更新記録です。`,
-    updated: '更新',
-    both: '両ストア同一',
     noteBefore: 'ストア実測 · ', noteAfter: ' 確認',
   },
   en: {
-    kicker: '01 / Maintenance log',
-    title: 'Shipping is the start,',
-    titleEm: 'not the finish line.',
-    sub: `The first app launched on ${formatDate(fleetSince, 'en')}. We now offer ${liveAppCount} apps. Below are the last verified versions and update dates by store.`,
-    updated: 'updated',
-    both: 'same on both stores',
     noteBefore: 'Checked against the stores on ', noteAfter: '',
   },
 }[lang];
@@ -61,7 +48,8 @@ const copy = {
     <ol class="fleet-log">
       {rows.map((app) => {
         const r = app.release!;
-        const common = Boolean(r.ios && r.android && r.ios.version === r.android.version);
+        const platforms = (['ios','android'] as const).filter(platform => app.stores[platform] && r[platform]?.version);
+        const dates = archiveCopy[lang].dates;
         return (
           <li class="fleet-row">
             <a class="fleet-link" href={`/${lang}/apps/${app.slug}/`}>
@@ -71,18 +59,14 @@ const copy = {
                 <span class="fleet-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
               </span>
               <span class="fleet-meta">
-                {!common ? (
-                  <span class="fleet-ver">
-                    {r.ios && <span class="fleet-chip" style="color: var(--text-primary)"><i class="fab fa-apple" aria-hidden="true"></i> iOS v{r.ios.version}</span>}
-                    {r.android && <span class="fleet-chip" style="color: var(--text-primary)"><i class="fab fa-google-play" aria-hidden="true"></i> Android v{r.android.version}</span>}
-                  </span>
-                ) : (
-                  <span class="fleet-ver">
-                    <span class="fleet-chip fleet-chip--solo">v{displayVersion(app)}</span>
-                    <span class="fleet-both">{copy.both}</span>
-                  </span>
-                )}
-                <time class="fleet-date" datetime={latestUpdate(app)}>{formatDate(latestUpdate(app), lang)} {copy.updated}</time>
+                {platforms.map(platform => {
+                  const version = r[platform]!.version;
+                  const published = publicDate(app,platform);
+                  return <span class="fleet-store-version" data-fleet-platform={platform}>
+                    <span class="fleet-chip" style="color: var(--text-primary)">{platform==='ios'?'iOS':'Android'} v{version}</span>
+                    {published && <span class="fleet-date">{dates[published.basis].replace(/^iOS|^Android · /,'').trim()} <time datetime={published.date}>{published.date}</time></span>}
+                  </span>;
+                })}
               </span>
             </a>
           </li>
@@ -96,6 +80,8 @@ const copy = {
 </section>
 
 <style is:global>
+  .fleet-store-version { display: flex; align-items: baseline; flex-wrap: wrap; justify-content: inherit; gap: .2rem .45rem; min-width: 0; }
+  .fleet-store-version .fleet-date time { white-space: nowrap; }
   /* Keep the shared dated observation readable in both supported themes. */
   .fleet-log-section .fleet-note { color: var(--text-secondary); }
 </style>
