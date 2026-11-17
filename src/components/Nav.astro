@@ -1,8 +1,12 @@
 ---
 import { ui, localeBase, type Lang } from '../i18n/ui';
 
-interface Props { lang: Lang }
-const { lang } = Astro.props;
+interface Props {
+  lang: Lang;
+  /** 다른 언어판이 없는 단일 언어 페이지만 지정 — 그 언어 링크를 404 대신 이 주소로 보낸다. 미지정 언어는 기존 규칙. */
+  langHrefs?: Partial<Record<Lang, string>>;
+}
+const { lang, langHrefs } = Astro.props;
 const t = ui[lang];
 const base = localeBase(lang); // '' | '/ko' | '/ja'
 const home = `${base}/`;
@@ -11,7 +15,7 @@ const home = `${base}/`;
 // 대부분의 경로는 en/ko/ja 3언어 mirror. 신규 페이지를 만들 때 3언어를 함께 만들지 않으면
 // 언어 전환이 404 가 된다(과거 pipi-legion 사례) — 페이지 추가 시 3언어 동시 생성이 규칙.
 const rest = Astro.url.pathname.replace(/^\/(en|ko|ja)(?=\/|$)/, '') || '/';
-const langHref = (l: Lang) => `/${l}${rest}`;
+const langHref = (l: Lang) => langHrefs?.[l] ?? `/${l}${rest}`;
 ---
 <nav class="nav">
   <div class="nav-inner">

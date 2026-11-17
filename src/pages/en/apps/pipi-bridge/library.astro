@@ -22,7 +22,7 @@ const stores = [
 ].filter((s): s is typeof s & { href: string } => Boolean(s.href));
 
 const phrases = [
-  { ko: '안녕하세요', meaning: 'Hello', gesture: 'Bow from the waist and wave.' },
+  { ko: '안녕하세요', meaning: 'Hello', gesture: 'A small bow.' },
   { ko: '고마워요', meaning: 'Thank you', gesture: 'Take something with both hands.' },
   { ko: '도와주세요', meaning: 'Please help me', gesture: 'Raise a hand.' },
   { ko: '잘 모르겠어요', meaning: "I don't understand", gesture: 'Tilt your head.' },
@@ -36,6 +36,7 @@ const phrases = [
   canonical={canonical}
   alternates={[{ hreflang: 'en', href: canonical }]}
   extraCss={['/styles.css']}
+  langHrefs={{ ko: '/ko/apps/pipi-bridge/', ja: '/ja/apps/pipi-bridge/' }}
 >
   <main id="main" tabindex="-1" class="bl-page">
     <section class="legal-hero bl-hero">
@@ -43,9 +44,9 @@ const phrases = [
         <a href="/en/apps/pipi-bridge/" class="legal-back bl-no-print"><i class="fas fa-arrow-left" aria-hidden="true"></i> Korean Bridge</a>
         <p class="bl-kicker">Korean Bridge · Libraries and classrooms</p>
         <h1><span class="text-gradient">Korean Bridge for libraries and classrooms</span></h1>
-        <p class="bl-lede">Korean Bridge is a free app for children ages 4–8 (roughly PreK to grade 2) who are beginning Korean or learning it as a heritage language. Its Library &amp; classroom mode lets a grown-up run a short shared session on one tablet, child after child, without changing the learning record saved on that device.</p>
+        <p class="bl-lede">Korean Bridge is a free app for children ages 4–8 beginning Korean, including heritage learners (roughly PreK–grade 2). Its Library &amp; classroom mode lets a grown-up run a short shared session on one tablet, child after child, without changing the learning record saved on that device.</p>
         <ul class="bl-facts" aria-label="What the app does not include">
-          <li>No ads</li><li>No purchases</li><li>No accounts</li><li>No student names</li><li>No recordings</li><li>No analytics</li>
+          <li>No ads</li><li>No purchases</li><li>No accounts</li><li>No student names</li><li>No voice recording</li><li>No analytics</li>
         </ul>
         <div class="bl-actions">
           {stores.map((s) => (
@@ -55,7 +56,7 @@ const phrases = [
           ))}
           <a class="bl-btn bl-btn--primary bl-no-print" href="/en/apps/pipi-bridge/library/cards/"><i class="fas fa-print" aria-hidden="true"></i> Printable topic cards</a>
         </div>
-        <p class="bl-note">Library &amp; classroom mode is in version 1.1.0 and later. Lessons play recorded Korean audio that ships inside the app, so they work offline. Only when a bundled recording is missing does the app use the device's own text-to-speech voice, which may need a download depending on the operating system's settings.</p>
+        <p class="bl-note">Library &amp; classroom mode is in version 1.1.0 and later. Lessons play Korean audio generated before release and included in the app. Only when a bundled audio file is missing or cannot be played does the app use the device's own text-to-speech voice, which may need a download depending on the operating system.</p>
       </div>
     </section>
 
@@ -162,7 +163,7 @@ const phrases = [
 
         <section class="legal-card" aria-labelledby="bl-privacy">
           <h2 id="bl-privacy">Privacy</h2>
-          <p>When a grown-up starts a shared session, its progress is kept only in temporary memory, separate from the learning record saved on the device. Closing the session or ending the app discards it; switching to another app alone does not. A shared session does not read or change the learning record saved on the device. No student names, accounts or recordings are requested.</p>
+          <p>When a grown-up starts a shared session, its progress is kept only in temporary memory, separate from the learning record saved on the device. Closing the session or ending the app discards it; switching to another app alone does not. A shared session starts with the device's grown-up language and sound setting, and does not read or change the progress saved on the device. No student names, accounts or recordings are requested.</p>
           <p>Korean Bridge has no ads, purchases, accounts or analytics. <a href="/en/apps/pipi-bridge/privacy/">Read the privacy policy</a>.</p>
         </section>
 
@@ -172,7 +173,7 @@ const phrases = [
             <li>Korean Bridge has not yet been tried in real school or library lessons.</li>
             <li>A session is not a student assessment, and the app is not a school-certified curriculum.</li>
             <li>A grown-up needs to lead each session.</li>
-            <li>The in-app guidance in languages other than English is still being reviewed by native speakers.</li>
+            <li>The in-app guidance in languages other than English has not yet been reviewed by native speakers.</li>
           </ul>
         </section>
 

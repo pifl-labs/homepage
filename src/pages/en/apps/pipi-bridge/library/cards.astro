@@ -34,7 +34,7 @@ const WORLDS = [
 
 const QUICK_ID = 'school_greetings_help';
 const GESTURES: Record<string, string> = {
-  '안녕하세요': 'Bow from the waist and wave.',
+  '안녕하세요': 'A small bow.',
   '고마워요': 'Take something with both hands.',
   '도와주세요': 'Raise a hand.',
   '잘 모르겠어요': 'Tilt your head.',
@@ -76,6 +76,7 @@ const worlds = WORLDS.map((w) => ({ ...w, topics: all.filter((t) => t.world === 
   canonical={canonical}
   alternates={[{ hreflang: 'en', href: canonical }]}
   extraCss={['/styles.css']}
+  langHrefs={{ ko: '/ko/apps/pipi-bridge/', ja: '/ja/apps/pipi-bridge/' }}
 >
   <main id="main" tabindex="-1" class="bl-page bl-wide">
     <section class="legal-hero bl-hero">

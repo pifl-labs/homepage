@@ -30,7 +30,8 @@
 }
 .bl-btn:hover { border-color: var(--accent-cta); }
 .bl-btn:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 3px; }
-.bl-btn--primary { background: var(--gradient-cta); border-color: transparent; color: #fff; }
+/* Same dark ink as the site .btn-primary (styles-stickerbook.css) for contrast on the gradient. */
+.bl-btn--primary { background: var(--gradient-cta); border-color: transparent; color: #020617; }
 .bl-note { color: var(--text-secondary); font-size: .88rem; line-height: 1.65; margin-top: .75rem; }
 
 .bl-stack { display: grid; gap: 1.25rem; }
