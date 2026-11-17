@@ -43,11 +43,13 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
     {years.map(year=><section data-year-group={year} class="archive-year"><h2>{year}</h2><ol>
      {archiveEvents.filter(e=>e.date.startsWith(year)).map(e=>{
       const app=appList.find(a=>a.slug===e.app)!;
-      return <li data-event data-app={e.app} data-year={year} data-platform={e.platform} data-kind={e.kind}>
+      return <li data-event data-event-id={e.id} data-app={e.app} data-year={year} data-platform={e.platform} data-kind={e.kind}>
        <div class="archive-date"><time datetime={e.timestamp||e.date}>{e.date}</time><span class={`archive-kind archive-kind--${e.kind}`}>{c.types[e.kind]}</span></div>
        <article><div class="archive-record-meta"><img src={appIconSrc(e.app)} width="24" height="24" alt=""/><a href={`?app=${e.app}`} data-archive-app={e.app}>{appName(app,lang)}</a><span>{platforms[e.platform]||c.sharedAsset}{e.version&&` · ${e.version}`}</span></div>
         <h3>{e.title[lang]}</h3>{e.storeUpdated&&<p class="archive-store-update">{({ko:"스토어 업데이트",ja:"ストア更新日",en:"Store updated"})[lang]} <time datetime={e.storeUpdated}>{e.storeUpdated}</time></p>}<p>{e.summary[lang]}</p>
-        <details><summary>{c.source}</summary><dl><div><dt>{c.source}</dt><dd>{c.sources[e.source]}{e.reference&&` · ${e.reference.slice(0,8)}`}{e.url&&<> · <a href={e.url}>{({ko:'스토어에서 보기',ja:'ストアで見る',en:'View on store'})[lang]}</a></>}</dd></div><div><dt>{c.checked}</dt><dd><time datetime={e.observedAt}>{e.observedAt}</time></dd></div>{e.timestamp&&<div><dt>UTC</dt><dd>{e.timestamp}</dd></div>}{e.milestones&&Object.entries(e.milestones).map(([key,value])=><div><dt>{key==='submittedAt'?c.types.submitted:c.types.approved} (UTC)</dt><dd><time datetime={value}>{value}</time></dd></div>)}{e.region&&<div><dt>{c.platform}</dt><dd>{e.region}</dd></div>}</dl></details>
+        <details><summary>{c.source}</summary><dl><div><dt>{c.source}</dt><dd>{c.sources[e.source]}{e.reference&&` · ${e.reference.slice(0,8)}`}{e.url&&<> · <a href={e.url}>{({ko:'스토어에서 보기',ja:'ストアで見る',en:'View on store'})[lang]}</a></>}</dd></div>
+         {e.contentEvidence&&<div><dt>{({ko:'변경 내용 근거',ja:'変更内容の根拠',en:'Change details source'})[lang]}</dt><dd>{e.contentEvidence.kind==='store-release-notes'?({ko:'스토어 출시 노트',ja:'ストアのリリースノート',en:'Store release notes'})[lang]:({ko:'버전별 Git 출시 문서',ja:'バージョン別のGitリリース文書',en:'Version-specific Git release document'})[lang]} · {e.version}<br/><a href={e.contentEvidence.url}>{({ko:'보관 근거 (JSON)',ja:'保存した根拠 (JSON)',en:'Saved evidence (JSON)'})[lang]}</a> · <time datetime={e.contentEvidence.checkedAt}>{e.contentEvidence.checkedAt}</time></dd></div>}
+         <div><dt>{c.checked}</dt><dd><time datetime={e.observedAt}>{e.observedAt}</time></dd></div>{e.timestamp&&<div><dt>UTC</dt><dd>{e.timestamp}</dd></div>}{e.milestones&&Object.entries(e.milestones).map(([key,value])=><div><dt>{key==='submittedAt'?c.types.submitted:c.types.approved} (UTC)</dt><dd><time datetime={value}>{value}</time></dd></div>)}{e.region&&<div><dt>{c.platform}</dt><dd>{e.region}</dd></div>}</dl></details>
        </article>
       </li>
      })}

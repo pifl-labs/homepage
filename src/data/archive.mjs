@@ -1,5 +1,6 @@
 import {refreshedEvents} from './archive-refresh-20261117.mjs';
 import {extraEvents,extraMedia,extraNames} from './archive-extra.mjs';
+import {releaseHighlights} from './archive-release-highlights-20261117.mjs';
 // Public, manually curated archive. Never import console exports or email bodies.
 const l=(ko,ja,en)=>({ko,ja,en});
 export const archiveEvents=[...refreshedEvents,...extraEvents,
@@ -29,7 +30,23 @@ const milestones={
  'focus-120':{submittedAt:'2026-10-18T14:32:00Z',approvalNotifiedAt:'2026-10-19T13:21:50Z'},
  'focus-121':{submittedAt:'2026-10-22T02:53:00Z',approvalNotifiedAt:'2026-10-22T17:02:24Z'}
 };
+const enrichedHistoricalIds = new Set([
+ 'dialogos-public','pipi-bridge-public','pipi-word-voyage-public','pipi-log-public',
+ 'pipi-hello-public','pipi-dday-public','pipi-words-public','focus-1016','focus-120','focus-121',
+]);
 for(const event of archiveEvents){
+ const key = `${event.app}@${event.version}`;
+ const highlight = releaseHighlights[`${key}@${event.platform}`] || releaseHighlights[key];
+ if(highlight && (event.id.endsWith('-observed-20261117') || enrichedHistoricalIds.has(event.id))) {
+  event.title = highlight.title;
+  event.summary = highlight.summary;
+  event.contentEvidence = {
+   id: event.id,
+   kind: event.id.endsWith('-observed-20261117') && !(event.app==='pipi-tide' && event.platform==='ios') ? 'store-release-notes' : 'version-release-document',
+   checkedAt: '2026-11-17',
+   url: '/archive-release-notes-20261117.json',
+  };
+ }
  event.timeBasis=event.kind==='released'?'public-store-update':event.kind==='approved'?'notification-date':event.kind==='submitted'?'submission-time':event.kind==='asset'?'git-record-date':'observation-date';
  if(milestones[event.id])event.milestones=milestones[event.id];
 }

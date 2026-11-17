@@ -1,0 +1,1001 @@
+[
+  {
+    "lang": "ko",
+    "eventId": "dialogos-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1907,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "dialogos-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1281,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "kkachi-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-bp-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1351,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-bridge-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1376,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-bridge-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1376,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-dday-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1227,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-dday-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1227,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-draw-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1050,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-draw-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1050,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-dream-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-focus-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1243,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-focus-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1243,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-hello-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-hello-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1351,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-log-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-log-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-sky-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1329,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-spend-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1243,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-sudoku-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-sudoku-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-tide-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1431,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-tide-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1322,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-word-voyage-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1188,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-word-voyage-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1188,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-words-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1390,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-words-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1390,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "dialogos-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 2155,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "focus-121",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1236,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-bridge-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1267,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-word-voyage-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1188,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "focus-120",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-log-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1188,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-hello-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1242,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-dday-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1281,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "focus-1016",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1297,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ko",
+    "eventId": "pipi-words-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1226,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "dialogos-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1920,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "dialogos-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1251,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "kkachi-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1251,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-bp-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1398,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-bridge-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1330,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-bridge-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1330,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-dday-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1337,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-dday-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1337,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-draw-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1052,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-draw-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1052,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-dream-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1344,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-focus-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1378,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-focus-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1378,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-hello-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1439,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-hello-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1385,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-log-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1344,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-log-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1344,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-sky-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1330,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-spend-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1353,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-sudoku-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1360,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-sudoku-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1360,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-tide-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1439,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-tide-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1330,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-word-voyage-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1167,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-word-voyage-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1167,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-words-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1385,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-words-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1385,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "dialogos-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 2103,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "focus-121",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1367,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-bridge-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1265,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-word-voyage-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1319,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "focus-120",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1319,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-log-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1326,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-hello-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1265,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-dday-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1381,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "focus-1016",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1319,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "ja",
+    "eventId": "pipi-words-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1319,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "dialogos-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 2352,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "dialogos-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1595,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "kkachi-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1595,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-bp-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1793,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-bridge-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1739,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-bridge-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1739,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-dday-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1527,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-dday-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1527,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-draw-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1364,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-draw-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1364,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-dream-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1684,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-focus-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1684,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-focus-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1684,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-hello-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1739,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-hello-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1691,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-log-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1698,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-log-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1698,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-sky-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1650,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-spend-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1739,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-sudoku-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1611,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-sudoku-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1611,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-tide-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1745,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-tide-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1691,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-word-voyage-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1364,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-word-voyage-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1364,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-words-android-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1793,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-words-ios-observed-20261117",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1793,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "dialogos-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 2689,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "focus-121",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1681,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-bridge-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1470,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-word-voyage-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1681,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "focus-120",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1579,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-log-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1538,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-hello-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1525,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-dday-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1579,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "focus-1016",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1633,
+    "sameTextGeometry": true
+  },
+  {
+    "lang": "en",
+    "eventId": "pipi-words-public",
+    "width": 320,
+    "textScale": 2,
+    "interactionHeight": 900,
+    "captureHeight": 1579,
+    "sameTextGeometry": true
+  }
+]
