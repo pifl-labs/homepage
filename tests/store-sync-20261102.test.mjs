@@ -100,7 +100,7 @@ test('apps without a public listing use their App Store Connect registered name 
   }
 });
 
-test('archive names over time are per language and end with that language\'s current name', async () => {
+test('preserved names over time are per language and end with that language\'s current name', async () => {
   const { archiveNames } = await import('../src/data/archive.mjs');
   for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
     for (const lang of langs) {
@@ -111,7 +111,8 @@ test('archive names over time are per language and end with that language\'s cur
     }
   }
   const html = readFileSync(new URL('../dist/ko/archive/index.html', import.meta.url), 'utf8');
-  assert.ok(html.includes('<li>PiPi Focus: 해적 포모도로</li><li>집중항해: 포모도로 타이머</li>'), 'ko archive shows Korean store names');
+  assert.ok(html.includes('집중항해: 포모도로 타이머'), 'ko release entries show the current Korean store name');
+  assert.ok(!html.includes('<li>PiPi Focus: 해적 포모도로</li>'), 'name-only exhibits stay outside the release archive');
   assert.ok(!html.includes('<li>Pomodoro at Sea: Focus Timer</li>'), 'ko archive does not list the English-only name');
 });
 

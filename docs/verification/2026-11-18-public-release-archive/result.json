@@ -1,0 +1,657 @@
+{
+  "checkedAt": "2026-11-17T22:03:23.338Z",
+  "local": "http://127.0.0.1:4332",
+  "results": [
+    {
+      "id": "ko-320-light-1",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 1,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-320-light-2",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-320-dark-1",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 1,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-320-dark-2",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-375-light-1",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-375-light-2",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 40,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-375-dark-1",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-375-dark-2",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 40,
+      "unsupported": 987
+    },
+    {
+      "id": "ko-768-light-1",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 990
+    },
+    {
+      "id": "ko-768-light-2",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 40,
+      "unsupported": 990
+    },
+    {
+      "id": "ko-768-dark-1",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 990
+    },
+    {
+      "id": "ko-768-dark-2",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 40,
+      "unsupported": 990
+    },
+    {
+      "id": "ko-1280-light-1",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 1,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1280-light-2",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1280-dark-1",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 1,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1280-dark-2",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1920-light-1",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 1,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1920-light-2",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1920-dark-1",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 1,
+      "unsupported": 994
+    },
+    {
+      "id": "ko-1920-dark-2",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-320-light-1",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-320-light-2",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-320-dark-1",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-320-dark-2",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-375-light-1",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-375-light-2",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-375-dark-1",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-375-dark-2",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 987
+    },
+    {
+      "id": "ja-768-light-1",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 990
+    },
+    {
+      "id": "ja-768-light-2",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 990
+    },
+    {
+      "id": "ja-768-dark-1",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 990
+    },
+    {
+      "id": "ja-768-dark-2",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 990
+    },
+    {
+      "id": "ja-1280-light-1",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1280-light-2",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1280-dark-1",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1280-dark-2",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1920-light-1",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1920-light-2",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1920-dark-1",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "ja-1920-dark-2",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 0,
+      "unsupported": 994
+    },
+    {
+      "id": "en-320-light-1",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 5,
+      "unsupported": 987
+    },
+    {
+      "id": "en-320-light-2",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 23,
+      "unsupported": 987
+    },
+    {
+      "id": "en-320-dark-1",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 5,
+      "unsupported": 987
+    },
+    {
+      "id": "en-320-dark-2",
+      "scrollWidth": 320,
+      "viewport": 320,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 23,
+      "unsupported": 987
+    },
+    {
+      "id": "en-375-light-1",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 3,
+      "unsupported": 987
+    },
+    {
+      "id": "en-375-light-2",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 12,
+      "unsupported": 987
+    },
+    {
+      "id": "en-375-dark-1",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 3,
+      "unsupported": 987
+    },
+    {
+      "id": "en-375-dark-2",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 12,
+      "unsupported": 987
+    },
+    {
+      "id": "en-768-light-1",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 3,
+      "unsupported": 990
+    },
+    {
+      "id": "en-768-light-2",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 59,
+      "unsupported": 990
+    },
+    {
+      "id": "en-768-dark-1",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 3,
+      "unsupported": 990
+    },
+    {
+      "id": "en-768-dark-2",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 59,
+      "unsupported": 990
+    },
+    {
+      "id": "en-1280-light-1",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1280-light-2",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 8,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1280-dark-1",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1280-dark-2",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 8,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1920-light-1",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1920-light-2",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 8,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1920-dark-1",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 4,
+      "unsupported": 994
+    },
+    {
+      "id": "en-1920-dark-2",
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "clipped": [],
+      "boxes": 316,
+      "diagnosticStatus": "UNVERIFIED",
+      "findings": 8,
+      "unsupported": 994
+    }
+  ],
+  "flows": [
+    {
+      "lang": "ko",
+      "legacyUnreleasedURL": true,
+      "multiSelect": true,
+      "platformKind": true,
+      "empty": true,
+      "keyboardNotes": true,
+      "back": true,
+      "reset": true,
+      "sourceLink": true,
+      "download": true
+    },
+    {
+      "lang": "ja",
+      "legacyUnreleasedURL": true,
+      "multiSelect": true,
+      "platformKind": true,
+      "empty": true,
+      "keyboardNotes": true,
+      "back": true,
+      "reset": true,
+      "sourceLink": true,
+      "download": true
+    },
+    {
+      "lang": "en",
+      "legacyUnreleasedURL": true,
+      "multiSelect": true,
+      "platformKind": true,
+      "empty": true,
+      "keyboardNotes": true,
+      "back": true,
+      "reset": true,
+      "sourceLink": true,
+      "download": true
+    }
+  ],
+  "errors": [],
+  "assets": [],
+  "fingerprints": {
+    "src/components/Archive.astro": "aa6058702659bc36965dca6780ed01a1355f2c141a28aa588c016f5f88ce422f",
+    "src/data/archive-public.mjs": "c4ca41f5ad8ea6ea8695800a0f4d462a7328e6d6d3115ef2b5d2441674d2c346",
+    "src/data/archive-copy.ts": "3c65a21dfe237ecd03b8511c1547847e9c1809a33d9ed4ba50b6bb196068cbc9",
+    "public/archive-evidence.json": "230ccb269c2707e28dc2d883ec9e3ccf93f2f1fabbe9d207f958273065f1ffdd",
+    "public/archive-client.js": "49a7872d0d37741ffab508b4257c64a7d005cd0b401d6abb6a15fa61bd625279",
+    "public/styles-archive.css": "e1cc9b528998a83e57e9fe6e183eab6a7e8c935f87863379c9dff2754600c6cf",
+    "dist/ko/archive/index.html": "cb51e2850ce290ee491692a72076bca5a3103b3fe1d26c90016ebe1f0f8d0500",
+    "dist/ja/archive/index.html": "e720c61365033ba6e594c5818fb32ac42c54061878856de3ab59e62bd0165d57",
+    "dist/en/archive/index.html": "c9f8566b4f1001078b0efe674f74d8a338811313818e1e545cc190b15f429070"
+  }
+}

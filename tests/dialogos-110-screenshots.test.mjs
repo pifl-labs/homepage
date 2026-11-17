@@ -84,7 +84,7 @@ test('dated archive images and the 2026-10-23 store previews keep their recorded
   for (const lang of ['ko', 'ja', 'en']) assert.equal(sha(asset(`/assets/apps/dialogos/${lang}/store-preview.webp`)), preview[lang], lang);
 });
 
-for (const lang of ['ko', 'ja', 'en']) test(`${lang}: built landing, catalog and archive use the right Dialogos images`, () => {
+for (const lang of ['ko', 'ja', 'en']) test(`${lang}: built landing and catalog keep Dialogos images outside release records`, () => {
   const landing = bytes(`dist/${lang}/apps/dialogos/index.html`).toString('utf8');
   for (const i of [1, 2, 3]) assert.ok(landing.includes(`/assets/apps/dialogos/submission/20261116-${i}.webp`), `${lang}: shot ${i}`);
   assert.match(landing, /<meta property="og:image" content="[^"]*\/assets\/apps\/dialogos\/submission\/20261116-1\.webp"/);
@@ -93,7 +93,8 @@ for (const lang of ['ko', 'ja', 'en']) test(`${lang}: built landing, catalog and
   const home = bytes(`dist/${lang}/index.html`).toString('utf8');
   assert.ok(home.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: catalog card`);
   const archive = bytes(`dist/${lang}/archive/index.html`).toString('utf8');
-  assert.ok(archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: dated archive record`);
+  assert.ok(!archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: submission image stays out of the release timeline`);
+  assert.match(archive,/data-event-id="dialogos-ios-observed-20261117"/);
 });
 
 test('no built page points at a missing Dialogos image', () => {

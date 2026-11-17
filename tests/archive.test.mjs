@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
-import {archiveEvents,archiveMedia,archiveNames} from '../src/data/archive.mjs';
-test('archive preserves distinct events, unknown versions and sanitized provenance',()=>{
+import {archiveEvents,archiveMedia} from '../src/data/archive.mjs';
+import {publicArchiveApps,publicArchiveEvents,publicArchiveEvidence} from '../src/data/archive-public.mjs';
+test('historical input preserves distinct source timestamps behind the public projection',()=>{
  assert.equal(new Set(archiveEvents.map(e=>e.id)).size,archiveEvents.length);
  const first=archiveEvents.find(e=>e.id==='focus-first-approval');
  assert.equal(first.version,null);assert.equal(first.timeBasis,'notification-date');
@@ -11,14 +12,15 @@ test('archive preserves distinct events, unknown versions and sanitized provenan
  assert.notEqual(focus.timestamp,focus.milestones.approvalNotifiedAt);
  for(const e of archiveEvents){assert.ok(e.timeBasis);for(const lang of ['ko','ja','en'])assert.ok(e.title[lang]&&e.summary[lang]);}
  const data=JSON.parse(readFileSync('public/archive-evidence.json','utf8'));
- assert.deepEqual(data.events,archiveEvents);assert.deepEqual(data.names,archiveNames);
+ assert.deepEqual(data,publicArchiveEvidence);
  assert.doesNotMatch(JSON.stringify(data),/mail\.google|message_id|@|token|TestFlight/i);
  for(const media of Object.values(archiveMedia))for(const key of ['oldIcon','oldShot','newShot'])if(media[key])assert.ok(existsSync('public'+media[key]));
 });
-for(const lang of ['ko','ja','en'])test(`${lang}: archive includes 15 registered apps, all events and accessible filter controls`,()=>{
+for(const lang of ['ko','ja','en'])test(`${lang}: archive lists only released apps and records and accessible filter controls`,()=>{
  const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
- assert.equal((html.match(/data-app-summary=/g)||[]).length,17);
- assert.equal((html.match(/data-event /g)||[]).length,archiveEvents.length);
+ assert.equal((html.match(/data-app-summary=/g)||[]).length,publicArchiveApps.length);
+ assert.equal((html.match(/data-event /g)||[]).length,publicArchiveEvents.length);
+ assert.doesNotMatch(html, /pipi-legion|data-journey-app|data-media-app|class="archive-exhibits"|\/submission\//);
  assert.ok(html.includes('aria-live="polite"'));assert.ok(html.includes('type="reset"'));
  assert.ok(html.includes(`https://pifl-labs.com/${lang}/archive/`));
 });
@@ -28,12 +30,12 @@ test('archive browser logic is external under the production self-only script po
  assert.deepEqual(headers.match(/script-src ([^;]+);/)[1].trim().split(/\s+/),["'self'",'https://static.cloudflareinsights.com/beacon.min.js','https://static.cloudflareinsights.com/beacon.min.js/']);
  for(const lang of ['ko','ja','en']){
   const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
-  assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=4"/);
+  assert.match(html,/<script[^>]+src="\/archive-client\.js\?v=5"/);
   const scripts=[...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)];
   assert.equal(scripts.filter(([,attrs,body])=>!attrs.includes('application/ld+json')&&body.trim()).length,0,'executable inline JS would be blocked by deployed CSP');
  }
 });
-test('all 17 canonical apps have representative records and no fabricated beta releases',()=>{
+test('legacy input keeps provenance without promoting assets or beta releases',()=>{
  assert.equal(new Set(archiveEvents.map(e=>e.app)).size,17);
  assert.equal(Object.keys(archiveMedia).length,17);
  for(const slug of ['pipi-legion']){

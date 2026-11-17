@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-11-17",
-  "scope": "Partial manually curated public archive. Notifications are not release dates. Internal tests omitted. Asset-to-binary mapping unverified.",
+  "scope": "Public App Store and Google Play releases and updates with documented user-facing changes or maintenance notes.",
   "events": [
     {
       "id": "dialogos-android-observed-20261117",
@@ -56,186 +56,6 @@
       },
       "contentEvidence": {
         "id": "dialogos-ios-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "kkachi-android-observed-20261117",
-      "app": "kkachi",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.1.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-31",
-      "title": {
-        "ko": "첫 화면에 펼쳐지는 나의 민화",
-        "ja": "最初の画面に広がる自分の民画",
-        "en": "Your folk painting on the home screen"
-      },
-      "summary": {
-        "ko": "첫 화면을 나의 민화로 바꿨어요. 사주를 바탕으로 만든 그림을 족자로 보고 그림 읽기에서 소재의 뜻을 살펴볼 수 있어요. 가족, 친구의 그림을 고르고, 위젯을 누르면 오늘로 바로 이동해요.",
-        "ja": "最初の画面を「自分の民画」にしました。四柱推命をもとにした絵を掛け軸で見て、絵の解説からモチーフの意味を読めます。家族や友だちの絵も選べ、ウィジェットから「今日」を直接開けます。",
-        "en": "The home screen now presents your Four Pillars-inspired folk painting as a hanging scroll, with explanations of its motifs. Choose family or friends’ paintings, and open Today directly from the widget."
-      },
-      "contentEvidence": {
-        "id": "kkachi-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-bp-android-observed-20261117",
-      "app": "pipi-bp",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-27",
-      "title": {
-        "ko": "혈압계 수치를 가족별로 기록해요",
-        "ja": "血圧計の数値を家族ごとに記録",
-        "en": "Record blood-pressure readings by family member"
-      },
-      "summary": {
-        "ko": "가정용 혈압계로 잰 수치를 기록하는 첫 버전이에요. 최대 6명의 가족 프로필과 위젯, 알림을 제공하고, 유료 Pro에서 PDF, CSV 보고서를 내보낼 수 있어요. 앱 자체가 혈압을 측정하거나 의료 조언을 하지는 않아요.",
-        "ja": "家庭用血圧計で測った数値を記録する最初のバージョンです。最大6人の家族プロフィール、ウィジェットと通知に対応し、有料ProではPDF・CSVレポートを出力できます。アプリ自体は血圧測定や医療助言を行いません。",
-        "en": "The first version records readings from a home blood-pressure monitor, with up to six family profiles, widgets and reminders. Paid Pro adds PDF and CSV reports. The app does not measure blood pressure or provide medical advice."
-      },
-      "contentEvidence": {
-        "id": "pipi-bp-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-bridge-android-observed-20261117",
-      "app": "pipi-bridge",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.3",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-10",
-      "title": {
-        "ko": "다섯 낱말씩 배우고, 배운 말 노트로 복습",
-        "ja": "5語ずつ学び、覚えた言葉を振り返る",
-        "en": "Five-word groups and a learned-words notebook"
-      },
-      "summary": {
-        "ko": "다섯 낱말 한 묶음을 배우면 곧바로 그 묶음을 연습하고, 며칠 뒤 다시 복습해요. 부모 화면의 배운 말 노트에서는 낱말의 뜻, 성장 단계, 한국어 소리와 집에서 함께 해 볼 일을 볼 수 있어요.",
-        "ja": "5語のまとまりを学ぶとすぐに練習し、数日後にも復習します。保護者画面の「覚えた言葉ノート」では、意味・成長段階・韓国語の音声と、家で一緒にできることを確認できます。",
-        "en": "Practice each group of five words immediately after learning it, then revisit it over the following days. The parent notebook brings together meanings, learning stages, Korean audio and activities to try at home."
-      },
-      "contentEvidence": {
-        "id": "pipi-bridge-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-bridge-ios-observed-20261117",
-      "app": "pipi-bridge",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "ios",
-      "version": "1.0.3",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4",
-      "storeUpdated": "2026-11-10",
-      "title": {
-        "ko": "다섯 낱말씩 배우고, 배운 말 노트로 복습",
-        "ja": "5語ずつ学び、覚えた言葉を振り返る",
-        "en": "Five-word groups and a learned-words notebook"
-      },
-      "summary": {
-        "ko": "다섯 낱말 한 묶음을 배우면 곧바로 그 묶음을 연습하고, 며칠 뒤 다시 복습해요. 부모 화면의 배운 말 노트에서는 낱말의 뜻, 성장 단계, 한국어 소리와 집에서 함께 해 볼 일을 볼 수 있어요.",
-        "ja": "5語のまとまりを学ぶとすぐに練習し、数日後にも復習します。保護者画面の「覚えた言葉ノート」では、意味・成長段階・韓国語の音声と、家で一緒にできることを確認できます。",
-        "en": "Practice each group of five words immediately after learning it, then revisit it over the following days. The parent notebook brings together meanings, learning stages, Korean audio and activities to try at home."
-      },
-      "contentEvidence": {
-        "id": "pipi-bridge-ios-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-dday-android-observed-20261117",
-      "app": "pipi-dday",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "2.0.2",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-13",
-      "title": {
-        "ko": "사진 위젯과 첫돌, 되돌리기까지",
-        "ja": "写真ウィジェットと誕生日、削除の取り消し",
-        "en": "Photo widgets, birthdays and complete undo"
-      },
-      "summary": {
-        "ko": "사진이 위젯을 가득 채우고 이름과 남은 날짜가 그 위에 보여요. 아이 날짜는 첫돌, N번째 생일로 표시하고, 날짜 삭제를 되돌리면 사진과 알림도 함께 복원해요.",
-        "ja": "写真がウィジェットいっぱいに広がり、その上に名前と残り日数を表示します。子どもの日は1歳の誕生日・N歳の誕生日として表示し、日付の削除を取り消すと写真と通知も戻ります。",
-        "en": "Photos fill the widget, with the name and days remaining overlaid. Child dates use birthday labels, and undoing a deleted date restores its photo and reminders too."
-      },
-      "contentEvidence": {
-        "id": "pipi-dday-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-dday-ios-observed-20261117",
-      "app": "pipi-dday",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "ios",
-      "version": "2.0.2",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4",
-      "storeUpdated": "2026-11-13",
-      "title": {
-        "ko": "사진 위젯과 첫돌, 되돌리기까지",
-        "ja": "写真ウィジェットと誕生日、削除の取り消し",
-        "en": "Photo widgets, birthdays and complete undo"
-      },
-      "summary": {
-        "ko": "사진이 위젯을 가득 채우고 이름과 남은 날짜가 그 위에 보여요. 아이 날짜는 첫돌, N번째 생일로 표시하고, 날짜 삭제를 되돌리면 사진과 알림도 함께 복원해요.",
-        "ja": "写真がウィジェットいっぱいに広がり、その上に名前と残り日数を表示します。子どもの日は1歳の誕生日・N歳の誕生日として表示し、日付の削除を取り消すと写真と通知も戻ります。",
-        "en": "Photos fill the widget, with the name and days remaining overlaid. Child dates use birthday labels, and undoing a deleted date restores its photo and reminders too."
-      },
-      "contentEvidence": {
-        "id": "pipi-dday-ios-observed-20261117",
         "kind": "store-release-notes",
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
@@ -303,36 +123,6 @@
       "timeBasis": "observation-date"
     },
     {
-      "id": "pipi-dream-android-observed-20261117",
-      "app": "pipi-dream",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-13",
-      "title": {
-        "ko": "말로 남기는 꿈 일기와 꿈 사전",
-        "ja": "声で残す夢日記と夢の辞典",
-        "en": "Spoken dream entries and a symbol dictionary"
-      },
-      "summary": {
-        "ko": "말로 남기는 꿈 일기와 휴대폰 안 받아쓰기를 담은 첫 버전이에요. 목록, 달력, 통계로 기록을 돌아보고, 상징 120개의 꿈 사전과 아침 알림, 앱 잠금, 내보내기, 가져오기를 사용할 수 있어요.",
-        "ja": "声で残す夢日記と端末内の音声入力を備えた最初のバージョンです。一覧・カレンダー・統計で記録を振り返り、120の象徴を収録した夢の辞典、朝の通知、アプリロック、書き出し・読み込みを利用できます。",
-        "en": "The first version includes spoken dream entries and on-device dictation. Review entries in lists, a calendar and statistics, with a 120-symbol dictionary, morning reminders, app lock, export and import."
-      },
-      "contentEvidence": {
-        "id": "pipi-dream-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
       "id": "pipi-focus-android-observed-20261117",
       "app": "pipi-focus",
       "date": "2026-11-17",
@@ -386,36 +176,6 @@
       },
       "contentEvidence": {
         "id": "pipi-focus-ios-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-hello-android-observed-20261117",
-      "app": "pipi-hello",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.1.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-25",
-      "title": {
-        "ko": "배운 글자로 읽는 첫 그림책",
-        "ja": "習ったひらがなで読む初めての絵本",
-        "en": "A first storybook using learned hiragana"
-      },
-      "summary": {
-        "ko": "일본어 학습에 첫 그림책과 새 상황 레슨 5편을 더했어요. 새 글자는 보고, 듣고, 따라 말하고, 써 본 뒤 문제로 만나며, 보호자 리포트에는 진도에 맞는 다음 단계 안내를 담았어요.",
-        "ja": "日本語学習に初めての絵本「おおきい すいか」と新しい場面レッスン5編を追加しました。新しい文字は見て・聞いて・まねして話し・書いてから問題へ進みます。保護者レポートには進み具合に合った次のステップを加えました。",
-        "en": "Japanese learning adds a first storybook and five new situation lessons. Children see, hear, say and write new characters before answering questions. Parent reports suggest next steps matched to progress."
-      },
-      "contentEvidence": {
-        "id": "pipi-hello-android-observed-20261117",
         "kind": "store-release-notes",
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
@@ -543,156 +303,6 @@
       "timeBasis": "observation-date"
     },
     {
-      "id": "pipi-spend-android-observed-20261117",
-      "app": "pipi-spend",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-28",
-      "title": {
-        "ko": "지출부터 예산, 구독료까지 한곳에",
-        "ja": "支出・予算・定期支払いをひとまとめに",
-        "en": "Expenses, budgets and recurring payments"
-      },
-      "summary": {
-        "ko": "첫 버전은 빠른 지출 입력과 결제 문자 붙여넣기, 월 예산을 담았어요. 구독료를 매달 반복 기록하고, 쓰지 않고 참은 돈을 따로 모으며, 기록을 백업 파일로 보관할 수 있어요.",
-        "ja": "最初のバージョンでは、すばやい支出入力、決済メッセージの貼り付け、月予算に対応しました。定期支払いを毎月記録し、使わずに済んだお金を別にまとめ、記録をバックアップファイルに保存できます。",
-        "en": "The first version includes quick expense entry, pasted payment messages and monthly budgets. Record recurring subscriptions, track money you chose not to spend, and save a backup of your records."
-      },
-      "contentEvidence": {
-        "id": "pipi-spend-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-sudoku-android-observed-20261117",
-      "app": "pipi-sudoku",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.2",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-29",
-      "title": {
-        "ko": "600개 퍼즐과 매일의 도전",
-        "ja": "600問のパズルと毎日の挑戦",
-        "en": "600 puzzles and a daily challenge"
-      },
-      "summary": {
-        "ko": "4개 난이도의 600개 퍼즐에 별, 코스 메달을 더하고, 오늘의 퍼즐과 월간 트로피를 마련했어요. 실력 점수와 업적을 확인하고, 원하면 로그인 없이 익명 별명으로 순위나 친구 방에 참여할 수 있어요.",
-        "ja": "4つの難易度・600問のパズルに星とコースメダルを追加し、毎日のパズルと月ごとのトロフィーを用意しました。実力スコアや実績を確認でき、希望すればログインせず匿名の名前でランキングや友だちの部屋に参加できます。",
-        "en": "Play 600 puzzles across four difficulty courses, earning stars and course medals. Daily puzzles add monthly trophies. Track ratings and achievements, with optional anonymous rankings and friend rooms that need no login."
-      },
-      "contentEvidence": {
-        "id": "pipi-sudoku-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-sudoku-ios-observed-20261117",
-      "app": "pipi-sudoku",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "ios",
-      "version": "1.0.2",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://apps.apple.com/kr/app/%ED%95%9C%EC%B9%B8%EC%94%A9-%EC%8A%A4%EB%8F%84%EC%BF%A0/id6820125053?uo=4",
-      "storeUpdated": "2026-10-31",
-      "title": {
-        "ko": "600개 퍼즐과 매일의 도전",
-        "ja": "600問のパズルと毎日の挑戦",
-        "en": "600 puzzles and a daily challenge"
-      },
-      "summary": {
-        "ko": "4개 난이도의 600개 퍼즐에 별, 코스 메달을 더하고, 오늘의 퍼즐과 월간 트로피를 마련했어요. 실력 점수와 업적을 확인하고, 원하면 로그인 없이 익명 별명으로 순위나 친구 방에 참여할 수 있어요.",
-        "ja": "4つの難易度・600問のパズルに星とコースメダルを追加し、毎日のパズルと月ごとのトロフィーを用意しました。実力スコアや実績を確認でき、希望すればログインせず匿名の名前でランキングや友だちの部屋に参加できます。",
-        "en": "Play 600 puzzles across four difficulty courses, earning stars and course medals. Daily puzzles add monthly trophies. Track ratings and achievements, with optional anonymous rankings and friend rooms that need no login."
-      },
-      "contentEvidence": {
-        "id": "pipi-sudoku-ios-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-tide-android-observed-20261117",
-      "app": "pipi-tide",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.2.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-31",
-      "title": {
-        "ko": "물시계와 바닷길 카운트다운",
-        "ja": "潮の時計と海の道のカウントダウン",
-        "en": "Tidewalk and a countdown for tidal paths"
-      },
-      "summary": {
-        "ko": "이름을 물시계로 바꾸고, 정한 퇴장 시각까지 알림창에서 카운트다운을 보여 줘요. 30분, 15분, 5분 전과 정각에 알리며, 전국 13곳 바닷길 중 표본이 충분한 곳은 새벽, 밤을 포함한 열림 시간을 안내해요.",
-        "ja": "「Tidewalk」に名前を変え、設定した退出時刻まで通知欄にカウントダウンを表示します。30・15・5分前と時刻ちょうどに通知し、全国13か所の海の道ではデータが十分な場所で早朝・夜間を含む開通時間を案内します。",
-        "en": "Renamed Tidewalk, the app shows a notification countdown to the selected exit time, with alerts 30, 15 and 5 minutes before and at that time. For its 13 tidal paths in Korea, locations with enough data include dawn and night opening windows."
-      },
-      "contentEvidence": {
-        "id": "pipi-tide-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-tide-ios-observed-20261117",
-      "app": "pipi-tide",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "ios",
-      "version": "1.2.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://apps.apple.com/kr/app/%EB%AC%BC%EC%8B%9C%EA%B3%84-%EB%B0%94%EB%8B%B7%EA%B8%B8-%EA%B0%AF%EB%B2%8C-%EB%AC%BC%EB%95%8C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6820126418?uo=4",
-      "storeUpdated": "2026-11-13",
-      "title": {
-        "ko": "잠금화면에서 보는 물시계",
-        "ja": "ロック画面で見る潮の時計",
-        "en": "A tidal countdown on the Lock Screen"
-      },
-      "summary": {
-        "ko": "바닷길, 갯벌에서 나올 시각까지 잠금화면과 다이나믹 아일랜드에 카운트다운을 표시해요. 30분, 15분, 5분 전과 정각 알림, 전국 13곳의 바닷길 시간 안내를 담았어요.",
-        "ja": "海の道や干潟から出る時刻まで、ロック画面とDynamic Islandにカウントダウンを表示します。30・15・5分前と時刻ちょうどの通知、全国13か所の海の道の時間案内を備えています。",
-        "en": "A Lock Screen and Dynamic Island countdown tracks the selected time to leave a tidal path or mudflat. The release includes alerts 30, 15 and 5 minutes before and at that time, plus opening-time information for 13 tidal paths in Korea."
-      },
-      "contentEvidence": {
-        "id": "pipi-tide-ios-observed-20261117",
-        "kind": "version-release-document",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
       "id": "pipi-word-voyage-android-observed-20261117",
       "app": "pipi-word-voyage",
       "date": "2026-11-17",
@@ -813,44 +423,182 @@
       "timeBasis": "observation-date"
     },
     {
-      "app": "kkachi",
-      "observedAt": "2026-11-02",
-      "id": "kkachi-android-110",
-      "date": "2026-11-02",
+      "id": "pipi-dday-android-observed-20261117",
+      "app": "pipi-dday",
+      "date": "2026-11-17",
       "kind": "observed",
       "platform": "android",
-      "version": "1.1.0",
-      "source": "store-check",
+      "version": "2.0.2",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-13",
       "title": {
-        "ko": "Google Play 공개 확인",
-        "ja": "Google Playの公開を確認",
-        "en": "Google Play release observed"
+        "ko": "사진 위젯과 첫돌, 되돌리기까지",
+        "ja": "写真ウィジェットと誕生日、削除の取り消し",
+        "en": "Photo widgets, birthdays and complete undo"
       },
       "summary": {
-        "ko": "Google Play 프로덕션의 1.1.0 공개를 확인했습니다. 등록 이름은 '까치: 나만의 민화'입니다. 첫 공개일은 확인하지 않았고, 같은 날 App Store 공개 목록에는 없었습니다.",
-        "ja": "Google Playの本番で1.1.0の公開を確認しました。掲載名は「カチ：わたしの民画」です。初公開日は未確認で、同日のApp Store公開一覧にはありませんでした。",
-        "en": "Google Play production showed 1.1.0 publicly, listed as Kkachi: Your Folk Painting. The first public date is unverified; it was not in the public App Store listings that day."
+        "ko": "사진이 위젯을 가득 채우고 이름과 남은 날짜가 그 위에 보여요. 아이 날짜는 첫돌, N번째 생일로 표시하고, 날짜 삭제를 되돌리면 사진과 알림도 함께 복원해요.",
+        "ja": "写真がウィジェットいっぱいに広がり、その上に名前と残り日数を表示します。子どもの日は1歳の誕生日・N歳の誕生日として表示し、日付の削除を取り消すと写真と通知も戻ります。",
+        "en": "Photos fill the widget, with the name and days remaining overlaid. Child dates use birthday labels, and undoing a deleted date restores its photo and reminders too."
+      },
+      "contentEvidence": {
+        "id": "pipi-dday-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
       },
       "timeBasis": "observation-date"
     },
     {
-      "app": "pipi-tide",
-      "observedAt": "2026-11-02",
-      "id": "pipi-tide-android-120",
-      "date": "2026-11-02",
+      "id": "pipi-dday-ios-observed-20261117",
+      "app": "pipi-dday",
+      "date": "2026-11-17",
       "kind": "observed",
-      "platform": "android",
-      "version": "1.2.0",
-      "source": "store-check",
+      "platform": "ios",
+      "version": "2.0.2",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://apps.apple.com/kr/app/%EA%B7%B8%EB%82%A0%EA%B9%8C%EC%A7%80-%EB%94%94%EB%8D%B0%EC%9D%B4-%EA%B8%B0%EB%85%90%EC%9D%BC-%EC%9C%84%EC%A0%AF/id6770268950?uo=4",
+      "storeUpdated": "2026-11-13",
       "title": {
-        "ko": "물시계로 바뀐 1.2.0",
-        "ja": "Tidewalkになった1.2.0",
-        "en": "1.2.0 as Tidewalk"
+        "ko": "사진 위젯과 첫돌, 되돌리기까지",
+        "ja": "写真ウィジェットと誕生日、削除の取り消し",
+        "en": "Photo widgets, birthdays and complete undo"
       },
       "summary": {
-        "ko": "Google Play 프로덕션의 1.2.0을 확인했습니다. 등록 이름이 물시계(Tidewalk)로 바뀌고 나올 시각 카운트다운을 중심으로 설명합니다. 정확한 이름 변경일은 확인하지 않았고, 같은 날 App Store 공개 목록에는 없었습니다.",
-        "ja": "Google Playの本番で1.2.0を確認しました。掲載名はTidewalkに変わり、戻る時刻のカウントダウンを中心に説明しています。正確な名称変更日は未確認で、同日のApp Store公開一覧にはありませんでした。",
-        "en": "Google Play production showed 1.2.0. The listing is now named Tidewalk and centers on a head-back countdown. The exact rename date is unverified; it was not in the public App Store listings that day."
+        "ko": "사진이 위젯을 가득 채우고 이름과 남은 날짜가 그 위에 보여요. 아이 날짜는 첫돌, N번째 생일로 표시하고, 날짜 삭제를 되돌리면 사진과 알림도 함께 복원해요.",
+        "ja": "写真がウィジェットいっぱいに広がり、その上に名前と残り日数を表示します。子どもの日は1歳の誕生日・N歳の誕生日として表示し、日付の削除を取り消すと写真と通知も戻ります。",
+        "en": "Photos fill the widget, with the name and days remaining overlaid. Child dates use birthday labels, and undoing a deleted date restores its photo and reminders too."
+      },
+      "contentEvidence": {
+        "id": "pipi-dday-ios-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
+    },
+    {
+      "id": "pipi-dream-android-observed-20261117",
+      "app": "pipi-dream",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-13",
+      "title": {
+        "ko": "말로 남기는 꿈 일기와 꿈 사전",
+        "ja": "声で残す夢日記と夢の辞典",
+        "en": "Spoken dream entries and a symbol dictionary"
+      },
+      "summary": {
+        "ko": "말로 남기는 꿈 일기와 휴대폰 안 받아쓰기를 담은 첫 버전이에요. 목록, 달력, 통계로 기록을 돌아보고, 상징 120개의 꿈 사전과 아침 알림, 앱 잠금, 내보내기, 가져오기를 사용할 수 있어요.",
+        "ja": "声で残す夢日記と端末内の音声入力を備えた最初のバージョンです。一覧・カレンダー・統計で記録を振り返り、120の象徴を収録した夢の辞典、朝の通知、アプリロック、書き出し・読み込みを利用できます。",
+        "en": "The first version includes spoken dream entries and on-device dictation. Review entries in lists, a calendar and statistics, with a 120-symbol dictionary, morning reminders, app lock, export and import."
+      },
+      "contentEvidence": {
+        "id": "pipi-dream-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
+    },
+    {
+      "id": "pipi-tide-ios-observed-20261117",
+      "app": "pipi-tide",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "ios",
+      "version": "1.2.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://apps.apple.com/kr/app/%EB%AC%BC%EC%8B%9C%EA%B3%84-%EB%B0%94%EB%8B%B7%EA%B8%B8-%EA%B0%AF%EB%B2%8C-%EB%AC%BC%EB%95%8C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6820126418?uo=4",
+      "storeUpdated": "2026-11-13",
+      "title": {
+        "ko": "잠금화면에서 보는 물시계",
+        "ja": "ロック画面で見る潮の時計",
+        "en": "A tidal countdown on the Lock Screen"
+      },
+      "summary": {
+        "ko": "바닷길, 갯벌에서 나올 시각까지 잠금화면과 다이나믹 아일랜드에 카운트다운을 표시해요. 30분, 15분, 5분 전과 정각 알림, 전국 13곳의 바닷길 시간 안내를 담았어요.",
+        "ja": "海の道や干潟から出る時刻まで、ロック画面とDynamic Islandにカウントダウンを表示します。30・15・5分前と時刻ちょうどの通知、全国13か所の海の道の時間案内を備えています。",
+        "en": "A Lock Screen and Dynamic Island countdown tracks the selected time to leave a tidal path or mudflat. The release includes alerts 30, 15 and 5 minutes before and at that time, plus opening-time information for 13 tidal paths in Korea."
+      },
+      "contentEvidence": {
+        "id": "pipi-tide-ios-observed-20261117",
+        "kind": "version-release-document",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
+    },
+    {
+      "id": "pipi-bridge-android-observed-20261117",
+      "app": "pipi-bridge",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.3",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-10",
+      "title": {
+        "ko": "다섯 낱말씩 배우고, 배운 말 노트로 복습",
+        "ja": "5語ずつ学び、覚えた言葉を振り返る",
+        "en": "Five-word groups and a learned-words notebook"
+      },
+      "summary": {
+        "ko": "다섯 낱말 한 묶음을 배우면 곧바로 그 묶음을 연습하고, 며칠 뒤 다시 복습해요. 부모 화면의 배운 말 노트에서는 낱말의 뜻, 성장 단계, 한국어 소리와 집에서 함께 해 볼 일을 볼 수 있어요.",
+        "ja": "5語のまとまりを学ぶとすぐに練習し、数日後にも復習します。保護者画面の「覚えた言葉ノート」では、意味・成長段階・韓国語の音声と、家で一緒にできることを確認できます。",
+        "en": "Practice each group of five words immediately after learning it, then revisit it over the following days. The parent notebook brings together meanings, learning stages, Korean audio and activities to try at home."
+      },
+      "contentEvidence": {
+        "id": "pipi-bridge-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
+    },
+    {
+      "id": "pipi-bridge-ios-observed-20261117",
+      "app": "pipi-bridge",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "ios",
+      "version": "1.0.3",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://apps.apple.com/kr/app/korean-bridge-%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%95%9C%EA%B8%80-%EC%88%98%ED%95%99/id6801205183?uo=4",
+      "storeUpdated": "2026-11-10",
+      "title": {
+        "ko": "다섯 낱말씩 배우고, 배운 말 노트로 복습",
+        "ja": "5語ずつ学び、覚えた言葉を振り返る",
+        "en": "Five-word groups and a learned-words notebook"
+      },
+      "summary": {
+        "ko": "다섯 낱말 한 묶음을 배우면 곧바로 그 묶음을 연습하고, 며칠 뒤 다시 복습해요. 부모 화면의 배운 말 노트에서는 낱말의 뜻, 성장 단계, 한국어 소리와 집에서 함께 해 볼 일을 볼 수 있어요.",
+        "ja": "5語のまとまりを学ぶとすぐに練習し、数日後にも復習します。保護者画面の「覚えた言葉ノート」では、意味・成長段階・韓国語の音声と、家で一緒にできることを確認できます。",
+        "en": "Practice each group of five words immediately after learning it, then revisit it over the following days. The parent notebook brings together meanings, learning stages, Korean audio and activities to try at home."
+      },
+      "contentEvidence": {
+        "id": "pipi-bridge-ios-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
       },
       "timeBasis": "observation-date"
     },
@@ -864,14 +612,14 @@
       "version": "1.1.0",
       "source": "store-check",
       "title": {
-        "ko": "Android 1.1.0 공개 확인",
-        "ja": "Android 1.1.0の公開を確認",
-        "en": "Android 1.1.0 observed"
+        "ko": "EPS-TOPIK 단어팩과 표시 언어 추가",
+        "ja": "EPS-TOPIK単語パックと表示言語を追加",
+        "en": "EPS-TOPIK decks and more display languages"
       },
       "summary": {
-        "ko": "Google Play 프로덕션의 1.1.0을 확인했습니다. 등록정보에는 EPS-TOPIK 단어팩 7개와 화면·뜻 표시 언어 9개 추가가 적혀 있습니다. 같은 날 iOS 공개 버전은 1.0.14였습니다.",
-        "ja": "Google Playの本番で1.1.0を確認しました。掲載情報にはEPS-TOPIKの単語パック7つと、表示言語9つの追加が書かれています。同日のiOS公開版は1.0.14でした。",
-        "en": "Google Play production showed 1.1.0, whose listing adds seven EPS-TOPIK decks and nine display languages. The public iOS version that day was 1.0.14."
+        "ko": "EPS-TOPIK 단어팩 7개를 추가했어요. 앱 화면과 단어 뜻을 표시할 언어도 9개 늘었어요.",
+        "ja": "EPS-TOPIK単語パックを7つ追加し、アプリ画面と単語の意味を表示する言語を9つ増やしました。",
+        "en": "Seven EPS-TOPIK decks were added, along with nine more languages for the interface and word meanings."
       },
       "timeBasis": "observation-date"
     },
@@ -892,11 +640,41 @@
         "en": "Theme Voyage packs and larger text"
       },
       "summary": {
-        "ko": "공개 스토어의 1.3.1 기록입니다. 테마 항해 팩을 쉬운 음식 팩부터 보여 주고, 큰 글자에서도 판 글자가 칸 안에 들어간다고 적혀 있습니다. 1.2.0·1.3.0의 공개 시점은 따로 기록하지 않았습니다.",
-        "ja": "公開ストアの1.3.1の記録です。テーマ航海のパックをやさしい食べ物から並べ、大きな文字でも盤面の文字がマスに収まると書かれています。1.2.0・1.3.0の公開時期は記録していません。",
-        "en": "Public-store record for 1.3.1: Theme Voyage packs start from the easiest, Food, and board letters fit their squares at larger text sizes. Public timing of 1.2.0 and 1.3.0 is not recorded here."
+        "ko": "테마 항해에서 쉬운 음식 팩을 먼저 보여 줘요. 글자 크기를 키워도 퍼즐의 글자가 칸 안에 들어가도록 개선했어요.",
+        "ja": "テーマ航海ではやさしい食べ物パックを先に表示します。文字を拡大してもパズルのマスに収まるよう改善しました。",
+        "en": "Theme voyages show the easy food pack first. Puzzle letters stay inside their tiles at larger text sizes."
       },
       "timeBasis": "public-store-update"
+    },
+    {
+      "id": "kkachi-android-observed-20261117",
+      "app": "kkachi",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.1.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-31",
+      "title": {
+        "ko": "첫 화면에 펼쳐지는 나의 민화",
+        "ja": "最初の画面に広がる自分の民画",
+        "en": "Your folk painting on the home screen"
+      },
+      "summary": {
+        "ko": "첫 화면을 나의 민화로 바꿨어요. 사주를 바탕으로 만든 그림을 족자로 보고 그림 읽기에서 소재의 뜻을 살펴볼 수 있어요. 가족, 친구의 그림을 고르고, 위젯을 누르면 오늘로 바로 이동해요.",
+        "ja": "最初の画面を「自分の民画」にしました。四柱推命をもとにした絵を掛け軸で見て、絵の解説からモチーフの意味を読めます。家族や友だちの絵も選べ、ウィジェットから「今日」を直接開けます。",
+        "en": "The home screen now presents your Four Pillars-inspired folk painting as a hanging scroll, with explanations of its motifs. Choose family or friends’ paintings, and open Today directly from the widget."
+      },
+      "contentEvidence": {
+        "id": "kkachi-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
     },
     {
       "app": "pipi-sudoku",
@@ -910,16 +688,53 @@
       "source": "public-store",
       "region": "KR · JP · US",
       "title": {
-        "ko": "코스 4개와 퍼즐 600개",
-        "ja": "4つのコースと600問",
-        "en": "Four courses and 600 puzzles"
+        "ko": "600개 퍼즐과 매일의 도전",
+        "ja": "600問のパズルと毎日の挑戦",
+        "en": "600 puzzles and a daily challenge"
       },
       "summary": {
-        "ko": "공개 스토어의 1.0.2 기록입니다. App Store 조회의 첫 공개일은 2026-10-28입니다. 릴리스노트에는 코스 4개·퍼즐 600개, 오늘의 퍼즐, 선택형 순위가 적혀 있습니다.",
-        "ja": "公開ストアの1.0.2の記録です。App Storeの照会では初公開日は2026-10-28です。リリースノートには4コース・600問、今日のパズル、任意の順位が書かれています。",
-        "en": "Public-store record for 1.0.2. The App Store lookup gives 2026-10-28 as the first iOS release. Notes list four courses, 600 puzzles, a daily puzzle and optional rankings."
+        "ko": "4개 난이도의 600개 퍼즐에 별, 코스 메달을 더하고, 오늘의 퍼즐과 월간 트로피를 마련했어요. 실력 점수와 업적을 확인하고, 원하면 로그인 없이 익명 별명으로 순위나 친구 방에 참여할 수 있어요.",
+        "ja": "4つの難易度・600問のパズルに星とコースメダルを追加し、毎日のパズルと月ごとのトロフィーを用意しました。実力スコアや実績を確認でき、希望すればログインせず匿名の名前でランキングや友だちの部屋に参加できます。",
+        "en": "Play 600 puzzles across four difficulty courses, earning stars and course medals. Daily puzzles add monthly trophies. Track ratings and achievements, with optional anonymous rankings and friend rooms that need no login."
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "contentEvidence": {
+        "id": "pipi-sudoku-ios-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "url": "https://apps.apple.com/kr/app/%ED%95%9C%EC%B9%B8%EC%94%A9-%EC%8A%A4%EB%8F%84%EC%BF%A0/id6820125053?uo=4"
+    },
+    {
+      "id": "pipi-tide-android-observed-20261117",
+      "app": "pipi-tide",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.2.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-31",
+      "title": {
+        "ko": "물시계와 바닷길 카운트다운",
+        "ja": "潮の時計と海の道のカウントダウン",
+        "en": "Tidewalk and a countdown for tidal paths"
+      },
+      "summary": {
+        "ko": "이름을 물시계로 바꾸고, 정한 퇴장 시각까지 알림창에서 카운트다운을 보여 줘요. 30분, 15분, 5분 전과 정각에 알리며, 전국 13곳 바닷길 중 표본이 충분한 곳은 새벽, 밤을 포함한 열림 시간을 안내해요.",
+        "ja": "「Tidewalk」に名前を変え、設定した退出時刻まで通知欄にカウントダウンを表示します。30・15・5分前と時刻ちょうどに通知し、全国13か所の海の道ではデータが十分な場所で早朝・夜間を含む開通時間を案内します。",
+        "en": "Renamed Tidewalk, the app shows a notification countdown to the selected exit time, with alerts 30, 15 and 5 minutes before and at that time. For its 13 tidal paths in Korea, locations with enough data include dawn and night opening windows."
+      },
+      "contentEvidence": {
+        "id": "pipi-tide-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
     },
     {
       "app": "pipi-draw",
@@ -938,11 +753,101 @@
         "en": "Bigger tools for drawing together"
       },
       "summary": {
-        "ko": "공개 스토어의 1.2.3 기록입니다. 릴리스노트에는 도구와 색을 크게 보여 주는 '크게', 두 손가락 확대·이동, 그릴 부분 먼저 고르기가 적혀 있습니다. 등록 화면에는 이전 화면이 남아 있습니다.",
-        "ja": "公開ストアの1.2.3の記録です。リリースノートには、道具と色を大きく表示する機能、二本指の拡大・移動、描く部分を先に選ぶ流れが書かれています。掲載画像には以前の画面が残っています。",
-        "en": "Public-store record for 1.2.3. Its notes describe a larger tools-and-colors mode, two-finger zoom and pan, and choosing the area to draw first. Listing images still include earlier screens."
+        "ko": "크게 모드에서 도구와 색을 더 크게 볼 수 있어요. 두 손가락으로 확대하거나 움직이고, 색칠할 부분을 먼저 고를 수 있어요.",
+        "ja": "大きく表示するモードで道具と色が見やすくなりました。二本指で拡大・移動し、先に塗る場所を選べます。",
+        "en": "A larger mode makes tools and colors easier to see. Zoom and pan with two fingers, and choose an area before coloring."
       },
       "timeBasis": "public-store-update"
+    },
+    {
+      "id": "pipi-sudoku-android-observed-20261117",
+      "app": "pipi-sudoku",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.2",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-29",
+      "title": {
+        "ko": "600개 퍼즐과 매일의 도전",
+        "ja": "600問のパズルと毎日の挑戦",
+        "en": "600 puzzles and a daily challenge"
+      },
+      "summary": {
+        "ko": "4개 난이도의 600개 퍼즐에 별, 코스 메달을 더하고, 오늘의 퍼즐과 월간 트로피를 마련했어요. 실력 점수와 업적을 확인하고, 원하면 로그인 없이 익명 별명으로 순위나 친구 방에 참여할 수 있어요.",
+        "ja": "4つの難易度・600問のパズルに星とコースメダルを追加し、毎日のパズルと月ごとのトロフィーを用意しました。実力スコアや実績を確認でき、希望すればログインせず匿名の名前でランキングや友だちの部屋に参加できます。",
+        "en": "Play 600 puzzles across four difficulty courses, earning stars and course medals. Daily puzzles add monthly trophies. Track ratings and achievements, with optional anonymous rankings and friend rooms that need no login."
+      },
+      "contentEvidence": {
+        "id": "pipi-sudoku-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
+    },
+    {
+      "id": "pipi-spend-android-observed-20261117",
+      "app": "pipi-spend",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-28",
+      "title": {
+        "ko": "지출부터 예산, 구독료까지 한곳에",
+        "ja": "支出・予算・定期支払いをひとまとめに",
+        "en": "Expenses, budgets and recurring payments"
+      },
+      "summary": {
+        "ko": "첫 버전은 빠른 지출 입력과 결제 문자 붙여넣기, 월 예산을 담았어요. 구독료를 매달 반복 기록하고, 쓰지 않고 참은 돈을 따로 모으며, 기록을 백업 파일로 보관할 수 있어요.",
+        "ja": "最初のバージョンでは、すばやい支出入力、決済メッセージの貼り付け、月予算に対応しました。定期支払いを毎月記録し、使わずに済んだお金を別にまとめ、記録をバックアップファイルに保存できます。",
+        "en": "The first version includes quick expense entry, pasted payment messages and monthly budgets. Record recurring subscriptions, track money you chose not to spend, and save a backup of your records."
+      },
+      "contentEvidence": {
+        "id": "pipi-spend-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
+    },
+    {
+      "id": "pipi-bp-android-observed-20261117",
+      "app": "pipi-bp",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-27",
+      "title": {
+        "ko": "혈압계 수치를 가족별로 기록해요",
+        "ja": "血圧計の数値を家族ごとに記録",
+        "en": "Record blood-pressure readings by family member"
+      },
+      "summary": {
+        "ko": "가정용 혈압계로 잰 수치를 기록하는 첫 버전이에요. 최대 6명의 가족 프로필과 위젯, 알림을 제공하고, 유료 Pro에서 PDF, CSV 보고서를 내보낼 수 있어요. 앱 자체가 혈압을 측정하거나 의료 조언을 하지는 않아요.",
+        "ja": "家庭用血圧計で測った数値を記録する最初のバージョンです。最大6人の家族プロフィール、ウィジェットと通知に対応し、有料ProではPDF・CSVレポートを出力できます。アプリ自体は血圧測定や医療助言を行いません。",
+        "en": "The first version records readings from a home blood-pressure monitor, with up to six family profiles, widgets and reminders. Paid Pro adds PDF and CSV reports. The app does not measure blood pressure or provide medical advice."
+      },
+      "contentEvidence": {
+        "id": "pipi-bp-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
     },
     {
       "app": "pipi-hello",
@@ -961,11 +866,41 @@
         "en": "Eight situation lessons"
       },
       "summary": {
-        "ko": "한국 스토어의 1.1.0 릴리스노트에는 배운 히라가나로 읽는 첫 그림책과 상황 레슨 8편이 적혀 있습니다. 배우는 언어와 내용은 기기 언어에 따라 다릅니다.",
-        "ja": "日本ストアの1.1.0のリリースノートには、習ったハングルで読む初めての絵本と、場面レッスンの追加が書かれています。学ぶ言語と内容は端末の言語で変わります。",
-        "en": "The US 1.1.0 notes list eight situation lessons, five of them new, each with a scene picture. The language learned and the content depend on the device language."
+        "ko": "일본어 과정에 배운 히라가나로 읽는 첫 그림책과 상황 레슨 8편을 담았어요. 기기 언어에 따라 배우는 언어와 내용이 달라져요.",
+        "ja": "習ったハングルで読める初めての絵本と、場面レッスンが加わりました。端末の言語によって学ぶ言語と内容が変わります。",
+        "en": "The app offers eight illustrated situation lessons, five of them new. The language and lesson content depend on your device language."
       },
       "timeBasis": "public-store-update"
+    },
+    {
+      "id": "pipi-hello-android-observed-20261117",
+      "app": "pipi-hello",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.1.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-25",
+      "title": {
+        "ko": "배운 글자로 읽는 첫 그림책",
+        "ja": "習ったひらがなで読む初めての絵本",
+        "en": "A first storybook using learned hiragana"
+      },
+      "summary": {
+        "ko": "일본어 학습에 첫 그림책과 새 상황 레슨 5편을 더했어요. 새 글자는 보고, 듣고, 따라 말하고, 써 본 뒤 문제로 만나며, 보호자 리포트에는 진도에 맞는 다음 단계 안내를 담았어요.",
+        "ja": "日本語学習に初めての絵本「おおきい すいか」と新しい場面レッスン5編を追加しました。新しい文字は見て・聞いて・まねして話し・書いてから問題へ進みます。保護者レポートには進み具合に合った次のステップを加えました。",
+        "en": "Japanese learning adds a first storybook and five new situation lessons. Children see, hear, say and write new characters before answering questions. Parent reports suggest next steps matched to progress."
+      },
+      "contentEvidence": {
+        "id": "pipi-hello-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date"
     },
     {
       "app": "pipi-focus",
@@ -984,9 +919,9 @@
         "en": "Treasure for longer focus"
       },
       "summary": {
-        "ko": "공개 스토어의 1.2.3 기록입니다. 릴리스노트에는 25분마다 보물 1개를 받고 남은 시간은 다음 항해로 이어진다고 적혀 있습니다.",
-        "ja": "公開ストアの1.2.3の記録です。リリースノートには、25分ごとに宝物が1つ、残り時間は次の航海に繰り越されると書かれています。",
-        "en": "Public-store record for 1.2.3. Its release notes say every 25 minutes earns one treasure and leftover time carries into the next voyage."
+        "ko": "집중 시간 25분마다 보물 하나를 받아요. 25분에 못 미친 나머지 시간은 다음 항해로 이어져요.",
+        "ja": "集中時間25分ごとに宝物を1つ獲得し、残りの時間は次の航海に持ち越します。",
+        "en": "Earn a treasure for every 25 minutes of focus. Leftover minutes carry over to the next voyage."
       },
       "timeBasis": "public-store-update"
     },
@@ -1002,14 +937,14 @@
       "source": "public-store",
       "region": "KR · JP · US",
       "title": {
-        "ko": "그날까지 2.0",
-        "ja": "その日まで 2.0",
-        "en": "Until That Day 2.0"
+        "ko": "iOS 26 위젯 날짜 선택 수정",
+        "ja": "iOS 26ウィジェットの日付選択を修正",
+        "en": "Widget date selection fixed for iOS 26"
       },
       "summary": {
-        "ko": "공개 스토어의 2.0.1 기록입니다. 현재 등록정보는 아이·커플·월급날 같은 카테고리, 날짜별 사진, 위젯 모양 선택을 설명합니다. 2.0.0 자체의 공개 시각은 기록하지 않았습니다.",
-        "ja": "公開ストアの2.0.1の記録です。現在の掲載情報は、子ども・カップル・給料日などのカテゴリー、日付ごとの写真、ウィジェットの選択を説明しています。2.0.0自体の公開時刻は記録していません。",
-        "en": "Public-store record for 2.0.1. The current listing describes categories such as babies, couples and paydays, a photo per date and widget layouts. The 2.0.0 publication time is not recorded."
+        "ko": "위젯 편집에서 선택한 날짜가 iOS 26에서도 표시돼요. 앱 대표 날짜를 선택하면 위젯이 앱의 대표 날짜를 따라가요.",
+        "ja": "ウィジェット編集で選んだ日付がiOS 26でも表示されます。アプリのメイン日付を選ぶと、ウィジェットがその日付に連動します。",
+        "en": "The date chosen in Edit Widget now appears on iOS 26. Select the app’s main date to keep the widget in sync with it."
       },
       "timeBasis": "public-store-update"
     },
@@ -1023,58 +958,21 @@
       "observedAt": "2026-10-23",
       "source": "store-check",
       "title": {
-        "ko": "Android 공개 배포 확인",
-        "ja": "Androidの公開配信を確認",
-        "en": "Android public release observed"
+        "ko": "변환 뒤 선 굵기와 밑그림 다듬기",
+        "ja": "変換後に線の太さを調整・修正",
+        "en": "Adjust and clean up outlines after conversion"
       },
       "summary": {
-        "ko": "공개 프로덕션 배포를 확인한 날짜입니다. 현재 등록정보의 이전 화면을 새 빌드의 캡처라고 단정하지 않습니다.",
-        "ja": "公開プロダクション配信を確認した日です。掲載中の以前の画像を新ビルドのキャプチャとは断定しません。",
-        "en": "This is the date public production availability was checked. Older listing images are not presented as captures of the new build."
+        "ko": "그림체와 배경을 고른 뒤 변환해요. 결과 화면에서 다시 변환하지 않고 선 굵기를 바꾸거나, 필요 없는 선을 손가락으로 지울 수 있어요.",
+        "ja": "画風と背景を選んで変換します。結果画面で再変換せずに線の太さを変え、不要な線を指で消せます。",
+        "en": "Choose a style and background before conversion. On the result screen, change line thickness without reconverting or erase unwanted lines with your finger."
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "app": "kkachi",
-      "observedAt": "2026-10-23",
-      "id": "kkachi-materials",
-      "date": "2026-10-23",
-      "kind": "asset",
-      "platform": null,
-      "version": null,
-      "source": "git",
-      "title": {
-        "ko": "공개 전 공식 자료",
-        "ja": "公開前の公式資料",
-        "en": "Official materials before release"
-      },
-      "summary": {
-        "ko": "공식 아이콘 자료를 보관했습니다. 2026-10-23 기준 앱은 공개 출시 전이었고, 이후 Google Play 공개는 별도 기록입니다. 제출·업로드·내부 테스트를 출시 이력으로 표시하지 않습니다.",
-        "ja": "公式アイコン資料を保存。2026-10-23時点でアプリは公開前で、その後のGoogle Play公開は別の記録です。提出・アップロード・内部テストを公開履歴として扱いません。",
-        "en": "Official icon material is preserved. As of 2026-10-23 the app was unreleased; its later Google Play release is a separate record. Submissions, uploads and internal testing are not presented as release history."
-      },
-      "timeBasis": "git-record-date"
-    },
-    {
-      "app": "pipi-legion",
-      "observedAt": "2026-10-23",
-      "id": "pipi-legion-materials",
-      "date": "2026-10-23",
-      "kind": "asset",
-      "platform": null,
-      "version": null,
-      "source": "git",
-      "title": {
-        "ko": "준비 중인 앱의 공식 자료",
-        "ja": "準備中アプリの公式資料",
-        "en": "Official materials for an upcoming app"
-      },
-      "summary": {
-        "ko": "공식 아이콘 자료를 보관했습니다. 앱은 공개 출시 전입니다. 제출·업로드·내부 테스트를 출시 이력으로 표시하지 않습니다.",
-        "ja": "公式アイコン資料を保存。アプリは公開前です。提出・アップロード・内部テストを公開履歴として扱いません。",
-        "en": "Official icon material is preserved. The app remains unreleased. Submissions, uploads and internal testing are not presented as release history."
-      },
-      "timeBasis": "git-record-date"
+      "timeBasis": "observation-date",
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-draw",
+        "commit": "8ffd56e27820e958a32fb96ff7cb940f9e47767c",
+        "path": "android/fastlane/metadata/android/ko-KR/changelogs/52.txt"
+      }
     },
     {
       "app": "pipi-log",
@@ -1093,74 +991,11 @@
         "en": "Send today’s mood"
       },
       "summary": {
-        "ko": "공개 스토어의 1.0.13 기록입니다. 기분과 날짜만 담은 이미지로 오늘 기분을 보내는 기능과 저장 오류 수정이 릴리스노트에 적혀 있습니다.",
-        "ja": "公開ストアの1.0.13の記録です。気分と日付だけを入れた画像で今日の気分を送る機能と、保存の不具合修正が書かれています。",
-        "en": "Public-store record for 1.0.13: send today’s mood as an image with only the mood and date, plus saving fixes."
+        "ko": "기분과 날짜만 담은 이미지로 오늘의 기분을 보낼 수 있어요. 기록을 저장할 때 생기던 오류도 고쳤어요.",
+        "ja": "気分と日付だけを載せた画像で、今日の気分を送れます。記録を保存するときの不具合も修正しました。",
+        "en": "Share today’s mood in an image with just the mood and date. This update also fixes errors when saving entries."
       },
       "timeBasis": "public-store-update"
-    },
-    {
-      "app": "pipi-sky",
-      "observedAt": "2026-10-23",
-      "id": "pipi-sky-materials",
-      "date": "2026-10-23",
-      "kind": "asset",
-      "platform": null,
-      "version": null,
-      "source": "git",
-      "title": {
-        "ko": "준비 중인 앱의 공식 자료",
-        "ja": "準備中アプリの公式資料",
-        "en": "Official materials for an upcoming app"
-      },
-      "summary": {
-        "ko": "공식 아이콘 자료를 보관했습니다. 앱은 공개 출시 전입니다. 제출·업로드·내부 테스트를 출시 이력으로 표시하지 않습니다.",
-        "ja": "公式アイコン資料を保存。アプリは公開前です。提出・アップロード・内部テストを公開履歴として扱いません。",
-        "en": "Official icon material is preserved. The app remains unreleased. Submissions, uploads and internal testing are not presented as release history."
-      },
-      "timeBasis": "git-record-date"
-    },
-    {
-      "app": "pipi-sudoku",
-      "observedAt": "2026-10-23",
-      "id": "pipi-sudoku-availability",
-      "date": "2026-10-23",
-      "kind": "observed",
-      "platform": "android",
-      "version": null,
-      "source": "store-check",
-      "title": {
-        "ko": "Android 공개 배포 확인",
-        "ja": "Androidの公開配信を確認",
-        "en": "Android public availability checked"
-      },
-      "summary": {
-        "ko": "공식 콘솔의 프로덕션 상태와 공개 등록정보를 확인했습니다. 이 날짜는 확인일이며 출시일이 아닙니다. 검증된 과거 버전별 연혁은 아직 없습니다.",
-        "ja": "公式コンソールのプロダクション状態と公開掲載情報を確認。この日は確認日であり公開日ではありません。過去のバージョン履歴は未確認です。",
-        "en": "Production status and the public listing were checked. This is an observation date, not a launch date. Historical version records remain unverified."
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "app": "pipi-tide",
-      "observedAt": "2026-10-23",
-      "id": "pipi-tide-availability",
-      "date": "2026-10-23",
-      "kind": "observed",
-      "platform": "android",
-      "version": null,
-      "source": "store-check",
-      "title": {
-        "ko": "Android 공개 배포 확인",
-        "ja": "Androidの公開配信を確認",
-        "en": "Android public availability checked"
-      },
-      "summary": {
-        "ko": "공식 콘솔의 프로덕션 상태와 공개 등록정보를 확인했습니다. 이 날짜는 확인일이며 출시일이 아닙니다. 검증된 과거 버전별 연혁은 아직 없습니다.",
-        "ja": "公式コンソールのプロダクション状態と公開掲載情報を確認。この日は確認日であり公開日ではありません。過去のバージョン履歴は未確認です。",
-        "en": "Production status and the public listing were checked. This is an observation date, not a launch date. Historical version records remain unverified."
-      },
-      "timeBasis": "observation-date"
     },
     {
       "app": "pipi-words",
@@ -1179,9 +1014,9 @@
         "en": "Quiz fixes and next review dates"
       },
       "summary": {
-        "ko": "공개 스토어의 1.0.14 기록입니다. 타이핑 퀴즈 결과 멈춤과 TOPIK II 단어팩 열림 문제를 고치고, 카드 뒷면에 다음 복습일을 보여 준다고 적혀 있습니다.",
-        "ja": "公開ストアの1.0.14の記録です。入力クイズの結果画面が止まる問題などを直し、カードの裏に次の復習日を表示すると書かれています。",
-        "en": "Public-store record for 1.0.14: fixes for the typing-quiz results and a TOPIK II pack, and next review dates on card backs."
+        "ko": "타이핑 퀴즈 결과가 멈추던 오류와 TOPIK II 단어팩 열기 문제를 고쳤어요. 카드 뒷면에서 다음 복습일을 볼 수 있어요.",
+        "ja": "入力クイズの結果画面が止まる問題と、TOPIK II単語パックを開くときの問題を修正しました。カードの裏面に次の復習日が表示されます。",
+        "en": "Typing quiz results no longer freeze, and an issue opening TOPIK II decks was fixed. Card backs show the next review date."
       },
       "timeBasis": "public-store-update"
     },
@@ -1196,9 +1031,6 @@
       "version": "1.0.3",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-22T17:05:33Z"
-      },
       "title": {
         "ko": "상담 창구의 국가를 직접 선택해요",
         "ja": "相談窓口の国を自分で選択",
@@ -1244,11 +1076,7 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update",
-      "milestones": {
-        "submittedAt": "2026-10-22T02:53:00Z",
-        "approvalNotifiedAt": "2026-10-22T17:02:24Z"
-      }
+      "timeBasis": "public-store-update"
     },
     {
       "app": "pipi-bridge",
@@ -1261,9 +1089,6 @@
       "version": "1.0.2",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-22T00:00:44Z"
-      },
       "title": {
         "ko": "문장 속에서 배운 낱말을 다시 만나요",
         "ja": "文の中で覚えた言葉に再会",
@@ -1293,9 +1118,6 @@
       "version": "1.1.0",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-21T20:37:32Z"
-      },
       "title": {
         "ko": "네 가지 놀이를 그림 카드로 골라요",
         "ja": "4つの遊びをイラストカードで選ぶ",
@@ -1313,28 +1135,6 @@
         "url": "/archive-release-notes-20261117.json"
       },
       "timeBasis": "public-store-update"
-    },
-    {
-      "app": "dialogos",
-      "observedAt": "2026-10-23",
-      "id": "dialogos-approval",
-      "date": "2026-10-20",
-      "timestamp": "2026-10-20T18:10:13Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0.2",
-      "source": "notification",
-      "title": {
-        "ko": "1.0.2 승인 알림",
-        "ja": "1.0.2の承認通知",
-        "en": "Version 1.0.2 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
     },
     {
       "id": "focus-120",
@@ -1363,11 +1163,7 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update",
-      "milestones": {
-        "submittedAt": "2026-10-18T14:32:00Z",
-        "approvalNotifiedAt": "2026-10-19T13:21:50Z"
-      }
+      "timeBasis": "public-store-update"
     },
     {
       "app": "pipi-log",
@@ -1380,9 +1176,6 @@
       "version": "1.0.12",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-19T00:54:06Z"
-      },
       "title": {
         "ko": "광고, 추적 없이, 일기 잠금도 무료로",
         "ja": "広告・追跡をなくし、日記ロックを無料に",
@@ -1412,9 +1205,6 @@
       "version": "1.0.10",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-18T17:20:34Z"
-      },
       "title": {
         "ko": "듣기 표시와 겹치지 않는 발음",
         "ja": "再生中の表示と、重ならない発音",
@@ -1450,15 +1240,11 @@
         "en": "Cabin Radio"
       },
       "summary": {
-        "ko": "로파이와 빗소리를 겹치고 음량을 따로 조절합니다. 항해 중에도 소리를 바꿀 수 있는 공개 기능을 확인했습니다.",
-        "ja": "ローファイと雨音を重ね、音量を別々に調整。航海中の音の切り替えも公開機能として確認しました。",
-        "en": "Layer lo-fi with rain, adjust volumes independently and change sounds during a voyage. Confirmed in the public iOS listing."
+        "ko": "로파이 음악과 빗소리를 함께 틀고 각각의 음량을 조절할 수 있어요. 항해 중에도 소리를 바꿀 수 있어요.",
+        "ja": "ローファイ音楽と雨音を重ねて、それぞれの音量を調整できます。航海中も音を切り替えられます。",
+        "en": "Layer lo-fi music with rain sounds, adjust volumes independently and switch sounds during a voyage."
       },
-      "timeBasis": "public-store-update",
-      "milestones": {
-        "submittedAt": "2026-10-14T23:39:00Z",
-        "approvalNotifiedAt": "2026-10-15T19:04:25Z"
-      }
+      "timeBasis": "public-store-update"
     },
     {
       "id": "draw-112",
@@ -1477,15 +1263,11 @@
         "en": "Printing and more colors"
       },
       "summary": {
-        "ko": "공개 스토어의 1.1.2 기록과 Git 릴리스노트를 대조했습니다. 인쇄·PDF 저장, 팔레트와 색상 선택 개선을 담았습니다.",
-        "ja": "公開ストアの1.1.2とGitのリリースノートを照合。印刷・PDF保存、パレットや色選択の改善を含みます。",
-        "en": "Public-store version 1.1.2 is paired with its Git release notes: printing, PDF export, palettes and improved color selection."
+        "ko": "색칠한 그림을 인쇄하거나 PDF로 저장할 수 있어요. 팔레트와 색상 선택도 개선했어요.",
+        "ja": "ぬりえを印刷したりPDFに保存したりできます。パレットと色の選び方も改善しました。",
+        "en": "Print your coloring pages or save them as PDFs. Palettes and color selection were improved."
       },
-      "timeBasis": "public-store-update",
-      "milestones": {
-        "submittedAt": "2026-10-13T07:38:00Z",
-        "approvalNotifiedAt": "2026-10-13T16:42:32Z"
-      }
+      "timeBasis": "public-store-update"
     },
     {
       "app": "pipi-dday",
@@ -1498,9 +1280,6 @@
       "version": "1.1.5",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-13T18:16:10Z"
-      },
       "title": {
         "ko": "그날까지, 새 이름과 대표 디데이",
         "ja": "新しい名前とメインのカウントダウン",
@@ -1558,9 +1337,6 @@
       "version": "1.0.12",
       "source": "public-store",
       "region": "US",
-      "milestones": {
-        "approvalNotifiedAt": "2026-10-05T14:49:37Z"
-      },
       "title": {
         "ko": "새 이름과 손글씨 복습",
         "ja": "新しい名前と手書きの復習",
@@ -1578,626 +1354,6 @@
         "url": "/archive-release-notes-20261117.json"
       },
       "timeBasis": "public-store-update"
-    },
-    {
-      "id": "draw-assets-20261001",
-      "app": "pipi-draw",
-      "date": "2026-10-01",
-      "kind": "asset",
-      "platform": "ios",
-      "version": null,
-      "observedAt": "2026-10-23",
-      "source": "git",
-      "reference": "101d79e4",
-      "title": {
-        "ko": "공식 화면 세트 보관",
-        "ja": "公式画面セットを保存",
-        "en": "Official screenshot set preserved"
-      },
-      "summary": {
-        "ko": "20260930 폴더의 공식 화면이 Git에 기록되었습니다. 폴더명·커밋일을 스토어 게시일로 해석하지 않습니다.",
-        "ja": "20260930フォルダーの公式画像がGitに記録されました。フォルダー名やコミット日はストア掲載日ではありません。",
-        "en": "Official images in the 20260930 folder were recorded in Git. Folder and commit dates are not store publication dates."
-      },
-      "timeBasis": "git-record-date"
-    },
-    {
-      "app": "pipi-bridge",
-      "observedAt": "2026-10-23",
-      "id": "pipi-bridge-approval",
-      "date": "2026-09-16",
-      "timestamp": "2026-09-16T23:10:10Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0.0",
-      "source": "notification",
-      "title": {
-        "ko": "1.0.0 승인 알림",
-        "ja": "1.0.0の承認通知",
-        "en": "Version 1.0.0 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
-    },
-    {
-      "id": "draw-approved-10",
-      "app": "pipi-draw",
-      "date": "2026-07-21",
-      "timestamp": "2026-07-21T16:53:39Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0",
-      "observedAt": "2026-10-23",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 승인 알림",
-        "ja": "1.0の承認通知",
-        "en": "Version 1.0 approval"
-      },
-      "summary": {
-        "ko": "승인 알림을 확인했습니다. 실제 공개일은 이 알림만으로 확정할 수 없습니다.",
-        "ja": "承認通知を確認しました。この通知だけでは実際の公開日は確定できません。",
-        "en": "The approval notification is verified. It does not by itself establish when the app became public."
-      },
-      "timeBasis": "notification-date",
-      "milestones": {
-        "submittedAt": "2026-07-14T08:30:00Z",
-        "approvalNotifiedAt": "2026-07-21T16:53:39Z"
-      }
-    },
-    {
-      "app": "pipi-word-voyage",
-      "observedAt": "2026-10-23",
-      "id": "pipi-word-voyage-approval",
-      "date": "2026-07-21",
-      "timestamp": "2026-07-21T12:47:43Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 승인 알림",
-        "ja": "1.0の承認通知",
-        "en": "Version 1.0 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
-    },
-    {
-      "id": "draw-submitted-10",
-      "app": "pipi-draw",
-      "date": "2026-07-14",
-      "timestamp": "2026-07-14T08:30:00Z",
-      "kind": "submitted",
-      "platform": "ios",
-      "version": "1.0",
-      "observedAt": "2026-10-23",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 심사 제출",
-        "ja": "1.0を審査に提出",
-        "en": "Version 1.0 submitted"
-      },
-      "summary": {
-        "ko": "스토어 알림으로 심사 제출을 확인했습니다. 제출은 공개 출시가 아닙니다.",
-        "ja": "ストア通知で審査提出を確認しました。提出は公開を意味しません。",
-        "en": "A store notification confirms review submission. Submission does not establish public availability."
-      },
-      "timeBasis": "submission-time"
-    },
-    {
-      "app": "pipi-hello",
-      "observedAt": "2026-10-23",
-      "id": "pipi-hello-approval",
-      "date": "2026-07-01",
-      "timestamp": "2026-07-01T01:54:51Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 승인 알림",
-        "ja": "1.0の承認通知",
-        "en": "Version 1.0 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
-    },
-    {
-      "app": "pipi-log",
-      "observedAt": "2026-10-23",
-      "id": "pipi-log-approval",
-      "date": "2026-06-18",
-      "timestamp": "2026-06-18T12:30:13Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 승인 알림",
-        "ja": "1.0の承認通知",
-        "en": "Version 1.0 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
-    },
-    {
-      "app": "pipi-dday",
-      "observedAt": "2026-10-23",
-      "id": "pipi-dday-approval",
-      "date": "2026-06-10",
-      "timestamp": "2026-06-10T12:17:27Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 승인 알림",
-        "ja": "1.0の承認通知",
-        "en": "Version 1.0 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
-    },
-    {
-      "app": "pipi-words",
-      "observedAt": "2026-10-23",
-      "id": "pipi-words-approval",
-      "date": "2026-06-01",
-      "timestamp": "2026-06-01T19:01:15Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": "1.0",
-      "source": "notification",
-      "title": {
-        "ko": "1.0 승인 알림",
-        "ja": "1.0の承認通知",
-        "en": "Version 1.0 approval notice"
-      },
-      "summary": {
-        "ko": "검증한 승인 알림입니다. 최초 출시를 뜻하지 않으며, 빌드 번호와 실제 공개일은 이 알림만으로 확인할 수 없습니다.",
-        "ja": "確認済みの承認通知です。初公開を意味せず、ビルド番号や実際の公開日はこの通知だけでは確認できません。",
-        "en": "A verified approval notification, not evidence of a first launch. It does not establish a build number or the actual publication date."
-      },
-      "timeBasis": "notification-date"
-    },
-    {
-      "id": "focus-web-20260529",
-      "app": "pipi-focus",
-      "date": "2026-05-29",
-      "kind": "asset",
-      "platform": null,
-      "version": null,
-      "observedAt": "2026-10-23",
-      "source": "git",
-      "reference": "0253ac3366b0c9bdda94c417deb6d2c53d2f56bb",
-      "title": {
-        "ko": "초기 앱 소개 자산",
-        "ja": "初期のアプリ紹介資料",
-        "en": "Early app presentation assets"
-      },
-      "summary": {
-        "ko": "웹 저장소에 아이콘과 항해 화면이 남아 있습니다. 이 날짜는 Git 기록일이며 앱 공개일이 아닙니다.",
-        "ja": "アイコンと航海画面がウェブの履歴に残っています。Gitの記録日であり、アプリの公開日ではありません。",
-        "en": "The website history preserves an icon and voyage screen. This is a Git record date, not the app’s launch date."
-      },
-      "timeBasis": "git-record-date"
-    },
-    {
-      "id": "focus-first-approval",
-      "app": "pipi-focus",
-      "date": "2026-05-21",
-      "timestamp": "2026-05-21T09:41:05Z",
-      "kind": "approved",
-      "platform": "ios",
-      "version": null,
-      "observedAt": "2026-10-23",
-      "source": "notification",
-      "title": {
-        "ko": "첫 배포 승인 알림",
-        "ja": "最初の配信承認通知",
-        "en": "First distribution approval notice"
-      },
-      "summary": {
-        "ko": "당시 PiPi Focus의 승인 알림입니다. 버전은 기재되지 않았으며 실제 첫 공개일은 확인되지 않았습니다.",
-        "ja": "当時のPiPi Focusの承認通知です。バージョンは未記載で、実際の初公開日は未確認です。",
-        "en": "Approval notification for the app then named PiPi Focus. No version was stated; its actual first public release date remains unverified."
-      },
-      "timeBasis": "notification-date"
     }
-  ],
-  "media": {
-    "pipi-bridge": {
-      "oldIcon": "/assets/apps/pipi-bridge/icon.webp",
-      "oldDate": "2026-08-24",
-      "oldReference": "f2a052d87e3b242c5e8174b6fe86e3d802af3074",
-      "oldShot": null,
-      "newShot": "/assets/apps/pipi-bridge/submission/20261023-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "pipi-word-voyage": {
-      "oldIcon": "/assets/apps/pipi-word-voyage/icon.webp",
-      "oldDate": "2026-07-14",
-      "oldReference": "303b9f3b4dafa4076e3f15c406d80616e14d5159",
-      "oldShot": "/assets/apps/pipi-word-voyage/en/game.webp",
-      "newShot": "/assets/apps/pipi-word-voyage/submission/20261023-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "pipi-hello": {
-      "oldIcon": "/assets/apps/pipi-hello/icon.webp",
-      "oldDate": "2026-06-23",
-      "oldReference": "40b7c73c1b5c54e66be3e2e6230d40da40efdf5d",
-      "oldShot": "/assets/apps/pipi-hello/en/home.webp",
-      "newShot": "/assets/apps/pipi-hello/submission/20261023-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "pipi-words": {
-      "oldIcon": "/assets/apps/pipi-words/icon.webp",
-      "oldDate": "2026-05-29",
-      "oldReference": "0253ac3366b0c9bdda94c417deb6d2c53d2f56bb",
-      "oldShot": "/assets/apps/pipi-words/en/home.webp",
-      "newShot": "/assets/apps/pipi-words/submission/20261023-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "pipi-dday": {
-      "oldIcon": "/assets/apps/pipi-dday/icon.webp",
-      "oldDate": "2026-06-02",
-      "oldReference": "002c63e87cf88a2acf1efbd9dd5afec5f005d623",
-      "oldShot": "/assets/apps/pipi-dday/en/home.webp",
-      "newShot": "/assets/apps/pipi-dday/submission/20261102-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "pipi-log": {
-      "oldIcon": "/assets/apps/pipi-log/icon.webp",
-      "oldDate": "2026-06-02",
-      "oldReference": "002c63e87cf88a2acf1efbd9dd5afec5f005d623",
-      "oldShot": "/assets/apps/pipi-log/en/home.webp",
-      "newShot": "/assets/apps/pipi-log/submission/20261023-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "dialogos": {
-      "oldIcon": "/assets/apps/dialogos/icon.webp",
-      "oldDate": "2026-06-15",
-      "oldReference": "160e836abade9eda4a5e918eea90baeddfa2e534",
-      "oldShot": "/assets/apps/dialogos/en/home.webp",
-      "newShot": "/assets/apps/dialogos/submission/20261116-1.webp",
-      "upcoming": false,
-      "pending": true,
-      "screenObservedAt": "2026-11-16"
-    },
-    "pipi-tide": {
-      "oldIcon": null,
-      "oldDate": null,
-      "oldReference": null,
-      "oldShot": null,
-      "newShot": "/assets/apps/pipi-tide/submission/20261102-1.webp",
-      "upcoming": false,
-      "pending": true
-    },
-    "pipi-sudoku": {
-      "oldIcon": null,
-      "oldDate": null,
-      "oldReference": null,
-      "oldShot": null,
-      "newShot": "/assets/apps/pipi-sudoku/submission/20261102-1.webp",
-      "upcoming": false,
-      "pending": false
-    },
-    "kkachi": {
-      "oldIcon": null,
-      "oldDate": null,
-      "oldReference": null,
-      "oldShot": null,
-      "newShot": "/assets/apps/kkachi/submission/20261102-1.webp",
-      "upcoming": false,
-      "pending": true
-    },
-    "pipi-sky": {
-      "oldIcon": null,
-      "oldDate": null,
-      "oldReference": null,
-      "oldShot": null,
-      "newShot": null,
-      "upcoming": false,
-      "pending": false
-    },
-    "pipi-legion": {
-      "oldIcon": "/assets/apps/pipi-legion/icon.webp",
-      "oldDate": "2026-08-24",
-      "oldReference": "f2a052d87e3b242c5e8174b6fe86e3d802af3074",
-      "oldShot": null,
-      "newShot": null,
-      "upcoming": true,
-      "pending": false
-    },
-    "pipi-focus": {
-      "oldIcon": "/assets/apps/pipi-focus/icon.webp",
-      "oldDate": "2026-05-29",
-      "oldShot": "/assets/apps/pipi-focus/en/sail.webp",
-      "newShot": "/assets/apps/pipi-focus/submission/20261023-1.webp"
-    },
-    "pipi-draw": {
-      "oldIcon": "/assets/apps/pipi-draw/icon.webp",
-      "oldDate": "2026-06-19",
-      "oldShot": "/assets/archive/draw-20260930.webp",
-      "newShot": "/assets/apps/pipi-draw/submission/20261023-1.webp"
-    },
-    "pipi-spend": {
-      "oldIcon": null,
-      "oldShot": null,
-      "newShot": null,
-      "upcoming": false,
-      "iconSource": "repository"
-    },
-    "pipi-bp": {
-      "oldIcon": null,
-      "oldShot": null,
-      "newShot": null,
-      "upcoming": false,
-      "iconSource": "repository"
-    },
-    "pipi-dream": {
-      "oldIcon": null,
-      "oldShot": null,
-      "newShot": null,
-      "upcoming": false,
-      "iconSource": "repository"
-    }
-  },
-  "names": {
-    "pipi-bridge": {
-      "ko": [
-        "Korean Bridge - 어린이 한국어·한글·수학"
-      ],
-      "ja": [
-        "Korean Bridge - 子どもハングル・算数"
-      ],
-      "en": [
-        "Korean Bridge: Hangul for Kids"
-      ]
-    },
-    "pipi-word-voyage": {
-      "ko": [
-        "PiPi Word Voyage",
-        "피피 낱말항해",
-        "낱말항해: 한글 단어 퍼즐"
-      ],
-      "ja": [
-        "PiPi Word Voyage",
-        "ピピ ことばの航海",
-        "ハングル航海：韓国語の単語パズル"
-      ],
-      "en": [
-        "PiPi Word Voyage",
-        "Hangul Voyage: Korean Puzzle"
-      ]
-    },
-    "pipi-hello": {
-      "ko": [
-        "PiPi Hello",
-        "말놀이 새싹: 어린이 일본어"
-      ],
-      "ja": [
-        "PiPi Hello",
-        "ハングルの芽：子どもの韓国語"
-      ],
-      "en": [
-        "PiPi Hello: Japanese for Kids",
-        "KanaSprout: Japanese for Kids"
-      ]
-    },
-    "pipi-words": {
-      "ko": [
-        "PiPi Words",
-        "단어루틴: JLPT·TOPIK 단어장",
-        "단어루틴: JLPT 일본어 단어장"
-      ],
-      "ja": [
-        "PiPi Words",
-        "ことば習慣：韓国語・TOPIK単語帳",
-        "ことば習慣：TOPIK韓国語単語帳"
-      ],
-      "en": [
-        "PiPi Words",
-        "Vocab Routine: JLPT & TOPIK"
-      ]
-    },
-    "pipi-dday": {
-      "ko": [
-        "PiPi D-Day - 해적의 항해 디데이",
-        "그날까지: 디데이·기념일 위젯"
-      ],
-      "ja": [
-        "PiPi D-Day（ピピディーデイ）",
-        "その日まで：カウントダウン"
-      ],
-      "en": [
-        "PiPi D-Day",
-        "Until That Day: Countdown"
-      ]
-    },
-    "pipi-log": {
-      "ko": [
-        "PiPi Log",
-        "기분 한 칸: 날씨 감정일기"
-      ],
-      "ja": [
-        "PiPi Log",
-        "気分のひとこま：感情日記"
-      ],
-      "en": [
-        "PiPi Log",
-        "Mood Tile: Daily Journal"
-      ]
-    },
-    "dialogos": {
-      "ko": [
-        "Dialogos: 철학자와의 대화"
-      ],
-      "ja": [
-        "Dialogos: 賢者との対話"
-      ],
-      "en": [
-        "Dialogos: Stoic Dialogues"
-      ]
-    },
-    "pipi-tide": {
-      "ko": [
-        "물때친구 - 만조 간조 물때표 위젯",
-        "물시계 - 바닷길·갯벌 물때 타이머"
-      ],
-      "ja": [
-        "Tide Friend: Korea Tide Times",
-        "Tidewalk: Korea Tide Timer"
-      ],
-      "en": [
-        "Tide Friend: Korea Tide Times",
-        "Tidewalk: Korea Tide Timer"
-      ]
-    },
-    "pipi-sudoku": {
-      "ko": [
-        "한칸씩 스도쿠"
-      ],
-      "ja": [
-        "ひとマスずつナンプレ"
-      ],
-      "en": [
-        "Cell by Cell Sudoku"
-      ]
-    },
-    "kkachi": {
-      "ko": [
-        "까치사주",
-        "까치: 나만의 민화"
-      ],
-      "ja": [
-        "Kkachi: Korean Saju",
-        "カチ：わたしの民画"
-      ],
-      "en": [
-        "Kkachi: Korean Saju",
-        "Kkachi: Your Folk Painting"
-      ]
-    },
-    "pipi-sky": {
-      "ko": [
-        "PiPi Sky - 구름 너머 하늘",
-        "하늘멍 - 구름 위 하늘·별자리·밤하늘",
-        "하늘멍 - 구름층에서 우주까지"
-      ],
-      "ja": [
-        "PiPi Sky",
-        "Skydaze - 雲の上の空と星空・星座",
-        "Skylayer - 雲の層から宇宙へ"
-      ],
-      "en": [
-        "PiPi Sky - 구름 너머 하늘",
-        "Skydaze: Cloud & Star Gazing",
-        "Skylayer: Clouds to Space"
-      ]
-    },
-    "pipi-legion": {
-      "ko": [
-        "피피 군단전기"
-      ],
-      "ja": [
-        "ピピ軍団戦記"
-      ],
-      "en": [
-        "PiPi Legion Chronicle"
-      ]
-    },
-    "pipi-focus": {
-      "ko": [
-        "PiPi Focus",
-        "PiPi Focus: 해적 포모도로",
-        "집중항해: 포모도로 타이머"
-      ],
-      "ja": [
-        "PiPi Focus",
-        "PiPi Focus: 海賊ポモドーロ",
-        "集中航海：ポモドーロタイマー"
-      ],
-      "en": [
-        "PiPi Focus",
-        "PiPi Focus: Pirate Pomodoro",
-        "Pomodoro at Sea: Focus Timer"
-      ]
-    },
-    "pipi-draw": {
-      "ko": [
-        "PiPi Draw",
-        "밑그림: 사진으로 만드는 색칠공부"
-      ],
-      "ja": [
-        "PiPi Draw",
-        "下絵づくり：写真をぬりえに変換"
-      ],
-      "en": [
-        "PiPi Draw",
-        "PiPi Draw - AI Sketch Coloring",
-        "Photo Outlines: Coloring Book"
-      ]
-    },
-    "pipi-spend": {
-      "ko": [
-        "가계부: 매일 지출 기록"
-      ],
-      "ja": [
-        "家計簿：毎日の支出記録"
-      ],
-      "en": [
-        "Spending Log: Expense Tracker"
-      ]
-    },
-    "pipi-bp": {
-      "ko": [
-        "혈압 기록: 혈압 수첩·심박"
-      ],
-      "ja": [
-        "血圧記録：血圧手帳・脈拍"
-      ],
-      "en": [
-        "BP Diary & Blood Pressure Log"
-      ]
-    },
-    "pipi-dream": {
-      "ko": [
-        "간밤: 말로 남기는 꿈 일기"
-      ],
-      "ja": [
-        "ゆうべ：話して残す夢日記"
-      ],
-      "en": [
-        "Yesternight: Dream Journal"
-      ]
-    }
-  }
+  ]
 }
