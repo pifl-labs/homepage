@@ -1,0 +1,3405 @@
+{
+  "flow": [
+    {
+      "lang": "ko",
+      "keyboardJourney": true,
+      "multiSelect": true,
+      "emptyState": true,
+      "reset": true,
+      "browserBack": true,
+      "localePreservesFilter": true,
+      "sourceLink": true,
+      "latestImage": true,
+      "themeButtons": true,
+      "fleetToApp": true
+    },
+    {
+      "lang": "ja",
+      "keyboardJourney": true,
+      "multiSelect": true,
+      "emptyState": true,
+      "reset": true,
+      "browserBack": true,
+      "localePreservesFilter": true,
+      "sourceLink": true,
+      "latestImage": true,
+      "themeButtons": true,
+      "fleetToApp": true
+    },
+    {
+      "lang": "en",
+      "keyboardJourney": true,
+      "multiSelect": true,
+      "emptyState": true,
+      "reset": true,
+      "browserBack": true,
+      "localePreservesFilter": true,
+      "sourceLink": true,
+      "latestImage": true,
+      "themeButtons": true,
+      "fleetToApp": true
+    }
+  ],
+  "results": [
+    {
+      "id": "pipi-focus-ko-320-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-320-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-ko-320-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-320-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-ko-375-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-375-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-ko-375-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-375-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-ko-768-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-768-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ko-768-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-768-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ko-1280-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-1280-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ko-1280-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-1280-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ko-1920-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-1920-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ko-1920-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ko-1920-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-320-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-320-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-ja-320-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-320-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-ja-375-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-375-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-375-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-375-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-768-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-768-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-768-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-768-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-1280-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-1280-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-1280-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-1280-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-1920-light-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-1920-light-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-ja-1920-dark-1",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-ja-1920-dark-2",
+      "text": "v1.2.4\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-en-320-light-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-320-light-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-en-320-dark-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-320-dark-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-en-375-light-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-375-light-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-en-375-dark-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-375-dark-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-focus-en-768-light-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-768-light-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-en-768-dark-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-768-dark-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-en-1280-light-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-1280-light-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-en-1280-dark-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-1280-dark-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-en-1920-light-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-1920-light-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-focus-en-1920-dark-1",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-focus-en-1920-dark-2",
+      "text": "v1.2.4\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ko-320-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-320-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-ko-320-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-320-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-ko-375-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-375-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-ko-375-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-375-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-ko-768-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-768-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ko-768-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-768-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ko-1280-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-1280-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ko-1280-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-1280-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ko-1920-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-1920-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ko-1920-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ko-1920-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-320-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-320-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-ja-320-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-320-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-ja-375-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-375-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-375-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-375-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-768-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-768-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-768-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-768-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-1280-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-1280-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-1280-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-1280-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-1920-light-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-1920-light-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-ja-1920-dark-1",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-ja-1920-dark-2",
+      "text": "v1.2.5\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-en-320-light-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-320-light-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-en-320-dark-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-320-dark-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-en-375-light-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-375-light-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-en-375-dark-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-375-dark-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-draw-en-768-light-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-768-light-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-en-768-dark-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-768-dark-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-en-1280-light-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-1280-light-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-en-1280-dark-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-1280-dark-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-en-1920-light-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-1920-light-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-draw-en-1920-dark-1",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "pipi-draw-en-1920-dark-2",
+      "text": "v1.2.5\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ko-320-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-ko-320-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-ko-320-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-ko-320-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-ko-375-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-ko-375-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-ko-375-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-ko-375-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-ko-768-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ko-768-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-word-voyage-ko-768-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ko-768-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-word-voyage-ko-1280-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ko-1280-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ko-1280-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ko-1280-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ko-1920-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ko-1920-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ko-1920-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ko-1920-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ja-320-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-ja-320-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-ja-320-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-ja-320-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-ja-375-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-375-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-word-voyage-ja-375-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-375-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-word-voyage-ja-768-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-768-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ja-768-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-768-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ja-1280-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-1280-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ja-1280-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-1280-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ja-1920-light-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-1920-light-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-ja-1920-dark-1",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-ja-1920-dark-2",
+      "text": "v1.4.2\n·\n2026.11.16 更新\n·\n初就航 2026.07.13",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-en-320-light-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-en-320-light-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 243
+    },
+    {
+      "id": "pipi-word-voyage-en-320-dark-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-en-320-dark-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 243
+    },
+    {
+      "id": "pipi-word-voyage-en-375-light-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-en-375-light-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-en-375-dark-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-word-voyage-en-375-dark-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-word-voyage-en-768-light-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-en-768-light-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-word-voyage-en-768-dark-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-en-768-dark-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-word-voyage-en-1280-light-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-en-1280-light-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-en-1280-dark-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-en-1280-dark-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-en-1920-light-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-en-1920-light-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-word-voyage-en-1920-dark-1",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-word-voyage-en-1920-dark-2",
+      "text": "v1.4.2\n·\nNov 16, 2026 updated\n·\nfirst launch Jul 13, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ko-320-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ko-320-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ko-320-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ko-320-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ko-375-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ko-375-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ko-375-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ko-375-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ko-768-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 504,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ko-768-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-hello-ko-768-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 504,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ko-768-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-hello-ko-1280-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 504,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ko-1280-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 989,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ko-1280-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 504,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ko-1280-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 989,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ko-1920-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 504,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ko-1920-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 989,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ko-1920-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 504,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ko-1920-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 989,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ja-320-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ja-320-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ja-320-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ja-320-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ja-375-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ja-375-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ja-375-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-hello-ja-375-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-ja-768-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 474,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ja-768-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-hello-ja-768-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 474,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ja-768-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-hello-ja-1280-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 474,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ja-1280-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 927,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ja-1280-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 474,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ja-1280-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 927,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ja-1920-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 474,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ja-1920-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 927,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-ja-1920-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 474,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-ja-1920-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\n2026.11.16 更新\n·\n初就航 2026.06.24",
+      "overflow": false,
+      "clipped": false,
+      "width": 927,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-en-320-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 79
+    },
+    {
+      "id": "pipi-hello-en-320-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 335
+    },
+    {
+      "id": "pipi-hello-en-320-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 79
+    },
+    {
+      "id": "pipi-hello-en-320-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 335
+    },
+    {
+      "id": "pipi-hello-en-375-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 79
+    },
+    {
+      "id": "pipi-hello-en-375-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-en-375-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 79
+    },
+    {
+      "id": "pipi-hello-en-375-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 190
+    },
+    {
+      "id": "pipi-hello-en-768-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 578,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-en-768-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 152
+    },
+    {
+      "id": "pipi-hello-en-768-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 578,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-en-768-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 152
+    },
+    {
+      "id": "pipi-hello-en-1280-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 578,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-en-1280-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 1135,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-en-1280-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 578,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-en-1280-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 1135,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-en-1920-light-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 578,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-en-1920-light-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 1135,
+      "height": 44
+    },
+    {
+      "id": "pipi-hello-en-1920-dark-1",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 578,
+      "height": 25
+    },
+    {
+      "id": "pipi-hello-en-1920-dark-2",
+      "text": "iOS v1.1.1 · Android v1.1.0\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 24, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 1135,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ko-320-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-ko-320-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-ko-320-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-ko-320-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-ko-375-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-ko-375-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-ko-375-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-ko-375-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-ko-768-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ko-768-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-words-ko-768-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ko-768-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-words-ko-1280-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ko-1280-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ko-1280-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ko-1280-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ko-1920-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ko-1920-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ko-1920-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ko-1920-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 690,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ja-320-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-ja-320-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-ja-320-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-ja-320-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-ja-375-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-375-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-words-ja-375-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-375-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "pipi-words-ja-768-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-768-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ja-768-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-768-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ja-1280-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-1280-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ja-1280-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-1280-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ja-1920-light-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-1920-light-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-ja-1920-dark-1",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 324,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-ja-1920-dark-2",
+      "text": "v1.1.1\n·\n2026.11.16 更新\n·\n初就航 2026.05.29",
+      "overflow": false,
+      "clipped": false,
+      "width": 629,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-en-320-light-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-en-320-light-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 243
+    },
+    {
+      "id": "pipi-words-en-320-dark-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-en-320-dark-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 243
+    },
+    {
+      "id": "pipi-words-en-375-light-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-en-375-light-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-en-375-dark-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-words-en-375-dark-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-words-en-768-light-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-en-768-light-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-words-en-768-dark-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-en-768-dark-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-words-en-1280-light-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-en-1280-light-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-en-1280-dark-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-en-1280-dark-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-en-1920-light-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-en-1920-light-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-words-en-1920-dark-1",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-words-en-1920-dark-2",
+      "text": "v1.1.1\n·\nNov 16, 2026 updated\n·\nfirst launch May 29, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ko-320-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-ko-320-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ko-320-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-ko-320-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ko-375-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-ko-375-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ko-375-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-ko-375-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ko-768-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 362,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ko-768-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-log-ko-768-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 362,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ko-768-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-log-ko-1280-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 362,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ko-1280-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 704,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ko-1280-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 362,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ko-1280-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 704,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ko-1920-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 362,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ko-1920-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 704,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ko-1920-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 362,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ko-1920-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 업데이트\n·\n첫 출항 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 704,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ja-320-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-ja-320-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ja-320-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-ja-320-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ja-375-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-375-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ja-375-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-375-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-ja-768-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-768-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 643,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ja-768-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-768-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 643,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ja-1280-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-1280-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 643,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ja-1280-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-1280-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 643,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ja-1920-light-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-1920-light-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 643,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-ja-1920-dark-1",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 331,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-ja-1920-dark-2",
+      "text": "v1.0.15\n·\n2026.11.16 更新\n·\n初就航 2026.06.09",
+      "overflow": false,
+      "clipped": false,
+      "width": 643,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-en-320-light-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-en-320-light-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 243
+    },
+    {
+      "id": "pipi-log-en-320-dark-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 288,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-en-320-dark-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 243
+    },
+    {
+      "id": "pipi-log-en-375-light-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-en-375-light-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-en-375-dark-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 332,
+      "height": 52
+    },
+    {
+      "id": "pipi-log-en-375-dark-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 152
+    },
+    {
+      "id": "pipi-log-en-768-light-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-en-768-light-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-log-en-768-dark-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-en-768-dark-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 678,
+      "height": 98
+    },
+    {
+      "id": "pipi-log-en-1280-light-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-en-1280-light-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-en-1280-dark-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-en-1280-dark-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-en-1920-light-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-en-1920-light-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "pipi-log-en-1920-dark-1",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 429,
+      "height": 25
+    },
+    {
+      "id": "pipi-log-en-1920-dark-2",
+      "text": "v1.0.15\n·\nNov 16, 2026 updated\n·\nfirst launch Jun 9, 2026",
+      "overflow": false,
+      "clipped": false,
+      "width": 837,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ko-320-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-320-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "dialogos-ko-320-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-320-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "dialogos-ko-375-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-375-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "dialogos-ko-375-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-375-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "dialogos-ko-768-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-768-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ko-768-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-768-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ko-1280-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-1280-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ko-1280-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-1280-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ko-1920-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-1920-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ko-1920-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 211,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ko-1920-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 업데이트",
+      "overflow": false,
+      "clipped": false,
+      "width": 402,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-320-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-320-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "dialogos-ja-320-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-320-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "dialogos-ja-375-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-375-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-375-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-375-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-768-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-768-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-768-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-768-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-1280-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-1280-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-1280-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-1280-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-1920-light-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-1920-light-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-ja-1920-dark-1",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 188,
+      "height": 25
+    },
+    {
+      "id": "dialogos-ja-1920-dark-2",
+      "text": "v1.1.0\n·\n2026.11.16 更新",
+      "overflow": false,
+      "clipped": false,
+      "width": 355,
+      "height": 44
+    },
+    {
+      "id": "dialogos-en-320-light-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-320-light-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "dialogos-en-320-dark-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-320-dark-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 312,
+      "height": 98
+    },
+    {
+      "id": "dialogos-en-375-light-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-375-light-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "dialogos-en-375-dark-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-375-dark-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 364,
+      "height": 98
+    },
+    {
+      "id": "dialogos-en-768-light-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-768-light-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "dialogos-en-768-dark-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-768-dark-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "dialogos-en-1280-light-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-1280-light-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "dialogos-en-1280-dark-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-1280-dark-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "dialogos-en-1920-light-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-1920-light-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    },
+    {
+      "id": "dialogos-en-1920-dark-1",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 228,
+      "height": 25
+    },
+    {
+      "id": "dialogos-en-1920-dark-2",
+      "text": "v1.1.0\n·\nNov 16, 2026 updated",
+      "overflow": false,
+      "clipped": false,
+      "width": 436,
+      "height": 44
+    }
+  ]
+}

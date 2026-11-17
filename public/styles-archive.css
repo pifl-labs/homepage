@@ -85,3 +85,21 @@
 .journey-sources{font-size:.8rem;color:var(--text-secondary);margin-bottom:.6rem}
 .journey-sources ul{padding-inline-start:1.2rem;line-height:1.7;overflow-wrap:anywhere}
 @media(max-width:650px){.journey-stages{grid-template-columns:minmax(0,1fr);gap:1rem}.archive-journey>summary{flex-wrap:wrap}.archive-journey>summary>small{display:none}}
+
+/* Keep the dated timeline reachable without seventeen expanded index rows. */
+.archive-journey-index > summary { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.archive-journey-index[open] > summary { margin-bottom: .75rem; }
+
+.archive-store-update { font-size: .85rem; }
+.archive-store-update time { display: inline-block; white-space: nowrap; }
+@media (max-width: 600px) { .archive dl div { grid-template-columns: minmax(0, 1fr); gap: .25rem; } }
+
+/* Comparisons adapt to enlarged captions instead of cutting English words. */
+.archive-exhibit { padding: clamp(.75rem, 3vw, 1.25rem); }
+.archive-icon-pair, .archive-screen-pair {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr));
+}
+.archive figcaption { overflow-wrap: normal; }
+/* On narrow filters, the app name and explicit selected check take priority
+   over a decorative icon. Keep the compact two-column name list. */
+@media (max-width: 550px) { .archive-app-buttons img { display: none; } }

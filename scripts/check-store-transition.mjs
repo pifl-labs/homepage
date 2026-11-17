@@ -15,10 +15,10 @@ const laterBridgeIOS = JSON.parse(readFileSync(new URL('../docs/release/bridge-i
 const laterVoyageAndroid = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json', import.meta.url), 'utf8'));
 const laterIOS = { 'pipi-log': laterLogIOS, 'pipi-bridge': laterBridgeIOS };
 const laterAndroid = { 'pipi-word-voyage': laterVoyageAndroid };
-const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/public-release-sync-20261116.json',import.meta.url),'utf8'));
+const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/homepage-refresh-public-20261117.json',import.meta.url),'utf8'));
 const packageFor=slug=>'com.pifl.pipi.'+({'pipi-word-voyage':'wordvoyage',dialogos:'thus',kkachi:'kkachi'}[slug]??slug.replace('pipi-',''));
 const iosRecord = slug => currentPublic.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));
-const androidRecord = slug => currentPublic.android.apps.find(a=>a.package===packageFor(slug));
+const androidRecord = slug => currentPublic.android.find(a=>a.package===packageFor(slug));
 const iosVersion = (slug) => iosRecord(slug)?.version;
 const androidVersion = (slug) => androidRecord(slug)?.version;
 const shared = (slug) => (iosVersion(slug) === androidVersion(slug) ? iosVersion(slug) : undefined);

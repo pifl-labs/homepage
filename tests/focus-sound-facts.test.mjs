@@ -1,3 +1,4 @@
+import {currentIOS,currentAndroid,refreshReceipt} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -7,13 +8,13 @@ const focusText = source.slice(source.indexOf('const focus: AppMeta = '), source
 const focus = runInNewContext(focusText.replace('const focus: AppMeta = ','const focus = ')+'\nfocus');
 test('Focus release label follows the current KR/JP/US public release and UTC release date',()=>{
  const a=JSON.parse(readFileSync(new URL('../docs/release/homepage-app-audit-20261102.json', import.meta.url), 'utf8')).apps.find(x=>x.slug==='pipi-focus');
- assert.equal(focus.release.ios.version,a.ios.en.version);
- assert.equal(focus.release.ios.updated,a.ios.en.currentVersionReleaseDate.slice(0,10));
- assert.equal(focus.release.ios.checkedAt,'2026-11-02');
+ assert.equal(focus.release.ios.version,currentIOS('pipi-focus').version);
+ assert.equal(focus.release.ios.updated,currentIOS('pipi-focus').currentVersionReleaseDate.slice(0,10));
+ assert.equal(focus.release.ios.checkedAt,refreshReceipt.observedAt);
  assert.equal(focus.release.checkedAt,'2026-11-02');
  // Android comes from its own public listing and production track, never from iOS.
  assert.deepEqual(a.playProduction.map(r=>r.name),[a.android.en.version]);
- assert.equal(focus.release.android.version,a.android.en.version);
+ assert.equal(focus.release.android.version,currentAndroid('pipi-focus').version);
 });
 test('English differentiated feature describes current public iOS1.1.0 Cabin Radio',()=>{
  const cards=focus.content.en.features;

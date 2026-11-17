@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,refreshReceipt,expectedRelease} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -22,9 +22,9 @@ test('Bridge current iOS evidence is public and agrees in KR/JP/US',()=>{
     assert.equal(u.searchParams.get('id'),'6801205183');assert.equal(u.searchParams.get('country'),row.country);
   }
 });
-test('only Bridge iOS advances; Android, shared snapshot and earliest date are not invented',()=>{
-  assert.deepEqual(bridge.release.ios,{version:'1.0.3',updated:'2026-11-10',checkedAt:'2026-11-11'});
-  assert.deepEqual(bridge.release.android,{version:'1.0.3',updated:'2026-11-10',checkedAt:'2026-11-16'});
+test('Bridge uses independent latest platform observations; shared history and earliest date are not invented',()=>{
+  assert.deepEqual(bridge.release.ios,expectedRelease('pipi-bridge','ios'));
+  assert.deepEqual(bridge.release.android,expectedRelease('pipi-bridge','android'));
   assert.equal(bridge.release.checkedAt,receipt.originalSharedObservation);
   assert.equal(bridge.release.since,undefined);assert.equal(displayVersion(bridge),'1.0.3');
   assert.equal(releaseVersionLabel(bridge),'v1.0.3');
@@ -49,7 +49,7 @@ for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; su
   const row=[...home.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m=>m[1]).find(s=>s.includes(`href="/${lang}/apps/pipi-bridge/"`));
   assert.ok(row);assert.match(row,/v1\.0\.3/);
   // The fleet's latest observation advances for Voyage Android; Bridge's own Nov11 receipt stays above.
-  assert.ok(home.includes(`<time datetime="${syncReceipt.observedAt}"`));
+  assert.ok(home.includes(`<time datetime="${refreshReceipt.observedAt}"`));
   assert.match(read('../src/components/FleetLog.astro'),/\.fleet-log-section \.fleet-note \{ color: var\(--text-secondary\); \}/);
 });
 test('small light metadata uses the established foreground; only short version units stay intact',()=>{

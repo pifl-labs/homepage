@@ -1,0 +1,19 @@
+{
+  "viewport": 375,
+  "locale": "ko",
+  "theme": "light",
+  "textScale": 1,
+  "baseline": {
+    "sourceCommit": "32c8d1dd2374f2b739bf601cbb6ef3b084f5b463",
+    "crewHeight": 4995,
+    "wallHeight": 4312,
+    "columns": 1,
+    "measurementSource": "Initial browser baseline observation; one final lazy image not decoded in baseline screenshot, so use geometry rather than that empty image for comparison."
+  },
+  "current": {
+    "crewHeight": 1703,
+    "wallHeight": 1270.25,
+    "columns": 2
+  },
+  "sectionReductionPercent": 65.9
+}

@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,expectedRelease} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -27,9 +27,9 @@ test('later Log iOS receipt identifies the same public app in all three markets'
   }
 });
 
-test('only the observed Log iOS release advances, not Android or shared history', () => {
-  assert.deepEqual(log.release.ios, {version:'1.0.14',updated:'2026-11-04',checkedAt:'2026-11-06'});
-  assert.deepEqual(log.release.android, {version:'1.0.14',updated:'2026-11-04',checkedAt:'2026-11-16'});
+test('Log follows current platform receipts without rewriting shared history', () => {
+  assert.deepEqual(log.release.ios, expectedRelease('pipi-log','ios'));
+  assert.deepEqual(log.release.android, expectedRelease('pipi-log','android'));
   assert.equal(log.release.checkedAt, receipt.originalSharedObservation);
   assert.equal(log.release.since, receipt.originalSince);
   const old = read('../docs/release/homepage-app-audit-20261102.json').apps.find(a=>a.slug==='pipi-log');
@@ -37,19 +37,19 @@ test('only the observed Log iOS release advances, not Android or shared history'
 });
 
 test('different public platform versions are labeled separately, never combined', () => {
-  assert.equal(displayVersion(log), '1.0.14');
-  assert.equal(releaseVersionLabel(log), 'v1.0.14');
+  assert.equal(displayVersion(log), currentIOS('pipi-log').version);
+  assert.equal(releaseVersionLabel(log), `v${currentIOS('pipi-log').version}`);
 });
 
 for (const lang of ['ko','ja','en']) test(`${lang}: built Log entry has current platform labels and retains archival screen scope`, () => {
   const html = readFileSync(new URL(`../dist/${lang}/apps/pipi-log/index.html`, import.meta.url), 'utf8');
-  assert.ok(html.includes('v1.0.14'));
+  assert.ok(html.includes(`v${currentIOS('pipi-log').version}`));
   assert.ok(html.includes('iOS 1.0.13 (27)'), 'old submitted screenshot label is not upgraded');
-  assert.ok(html.includes('datetime="2026-11-04"'));
+  assert.ok(html.includes(`datetime="${expectedRelease('pipi-log','ios').updated}"`));
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
   const software = schemas.find(s=>s['@type']==='SoftwareApplication');
   assert.ok(software);
-  assert.equal(software.softwareVersion, '1.0.14', 'verified common version across platforms');
+  assert.equal(software.softwareVersion, currentIOS('pipi-log').version, 'verified common version across platforms');
 });
 
 test('Log small release text uses the existing legible light token without changing size or overflow', () => {
@@ -74,7 +74,7 @@ test('home links name the platform rather than relying on hidden decorative glyp
     const html = readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url), 'utf8');
     const row = [...html.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m=>m[1]).find(r=>r.includes(`href="/${lang}/apps/pipi-log/"`));
     assert.ok(row);
-    assert.match(row, /v1\.0\.14/);
+    assert.ok(row.includes(`v${currentIOS('pipi-log').version}`));
     assert.doesNotMatch(row, /Android v1\.0\.13/);
     assert.equal((row.match(/color: var\(--text-primary\)/g)??[]).length, 0);
   }

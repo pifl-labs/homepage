@@ -76,8 +76,10 @@ for (const lang of ['ko', 'ja', 'en']) test(`${lang}: landing fallback shots and
 test('dated archive images and the 2026-10-23 store previews keep their recorded bytes', () => {
   const recorded = Object.fromEntries(json('docs/verification/2026-10-23-archive/asset-hashes.json').map(a => [a.path, a.sha256]));
   const { oldShot, newShot } = archiveMedia.dialogos;
-  assert.deepEqual([oldShot, newShot], ['/assets/apps/dialogos/en/home.webp', '/assets/apps/dialogos/submission/20261023-1.webp']);
-  for (const p of [oldShot, newShot]) assert.equal(sha(asset(p)), recorded[p], p);
+  assert.equal(newShot, '/assets/apps/dialogos/submission/20261116-1.webp');
+  assert.equal(archiveMedia.dialogos.screenObservedAt, '2026-11-16');
+  assert.equal(oldShot, '/assets/apps/dialogos/en/home.webp');
+  for (const p of [oldShot, '/assets/apps/dialogos/submission/20261023-1.webp']) assert.equal(sha(asset(p)), recorded[p], p);
   const preview = json('docs/release/homepage-app-audit-20261023.json').find(a => a.slug === 'dialogos').previewSha256;
   for (const lang of ['ko', 'ja', 'en']) assert.equal(sha(asset(`/assets/apps/dialogos/${lang}/store-preview.webp`)), preview[lang], lang);
 });
@@ -91,7 +93,7 @@ for (const lang of ['ko', 'ja', 'en']) test(`${lang}: built landing, catalog and
   const home = bytes(`dist/${lang}/index.html`).toString('utf8');
   assert.ok(home.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: catalog card`);
   const archive = bytes(`dist/${lang}/archive/index.html`).toString('utf8');
-  assert.ok(archive.includes('/assets/apps/dialogos/submission/20261023-1.webp'), `${lang}: dated archive record`);
+  assert.ok(archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: dated archive record`);
 });
 
 test('no built page points at a missing Dialogos image', () => {

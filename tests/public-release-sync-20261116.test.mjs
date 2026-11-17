@@ -19,7 +19,7 @@ test('all sixteen observed Android products appear exactly once; Legion alone st
  assert.equal(appList.length,17);assert.equal(liveAppCount,16);assert.equal(new Set(appList.map(a=>a.slug)).size,17);
  assert.deepEqual(appList.filter(a=>a.status==='soon').map(a=>a.slug),['pipi-legion']);
  assert.deepEqual(new Set(publicPortfolioEvidence.packages),new Set(syncReceipt.android.apps.map(a=>a.package)));
- for(const row of syncReceipt.android.apps){const app=appList.find(a=>packageFor(a.slug)===row.package);assert.ok(app,row.package);assert.equal(app.status,'live');assert.equal(new URL(app.stores.android).searchParams.get('id'),row.package);assert.equal(app.release.android.version,row.version);assert.equal(app.release.android.updated,androidDay(row));}
+ for(const row of syncReceipt.android.apps){const app=appList.find(a=>packageFor(a.slug)===row.package);assert.ok(app,row.package);assert.equal(app.status,'live');assert.equal(new URL(app.stores.android).searchParams.get('id'),row.package);assert.equal(app.release.android.version,currentAndroid(app.slug).version);assert.equal(app.release.android.updated,androidDay(currentAndroid(app.slug)));}
 });
 test('each published iOS version is sourced from its own current public response',()=>{
  for(const app of appList){const seen=currentIOS(app.slug);assert.equal(Boolean(app.stores.ios),Boolean(seen),app.slug);if(seen){assert.equal(app.release.ios.version,seen.version);assert.equal(app.release.ios.updated,seen.currentVersionReleaseDate.slice(0,10));assert.equal(app.stores.ios.match(/id(\d+)$/)[1],String(seen.trackId));}}

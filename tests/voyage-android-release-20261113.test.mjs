@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,expectedRelease,refreshReceipt} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -25,14 +25,14 @@ test('Voyage Android receipt comes from the actual public KO/KR JA/JP EN/US Abou
   }
 });
 
-test('only observed Android facts advance; iOS and the original shared observation do not', () => {
-  assert.deepEqual(voyage.release.android, {version:'1.4.1',updated:'2026-11-04',checkedAt:'2026-11-13'});
-  assert.deepEqual(voyage.release.ios, {version:'1.4.1',updated:'2026-11-04',checkedAt:'2026-11-16'});
+test('Voyage uses current independent platform receipts and preserves shared history', () => {
+  assert.deepEqual(voyage.release.android, expectedRelease('pipi-word-voyage','android'));
+  assert.deepEqual(voyage.release.ios, expectedRelease('pipi-word-voyage','ios'));
   assert.equal(voyage.release.checkedAt, receipt.originalSharedObservation);
   assert.equal(voyage.release.since, '2026-07-13');
-  assert.equal(displayVersion(voyage), '1.4.1');
-  assert.equal(releaseVersionLabel(voyage), 'v1.4.1');
-  assert.deepEqual(releaseObservationDates(voyage), ['2026-11-02','2026-11-13','2026-11-16']);
+  assert.equal(displayVersion(voyage), currentIOS('pipi-word-voyage').version);
+  assert.equal(releaseVersionLabel(voyage), `v${currentIOS('pipi-word-voyage').version}`);
+  assert.deepEqual(releaseObservationDates(voyage), ['2026-11-02',refreshReceipt.observedAt]);
 });
 
 test('reversing the exact dated Android-field delta restores all original app data bytes', () => {
@@ -71,17 +71,17 @@ test('only Voyage receives its dated release stylesheet in every site language',
 
 for (const lang of ['en','ko','ja']) test(`${lang}: current Android and prior iOS labels stay separate; old submitted images are not relabeled`, () => {
   const html = read(`../dist/${lang}/apps/pipi-word-voyage/index.html`);
-  assert.match(html, /class="app-rel-ver"[^>]*>v1\.4\.1/);
+  assert.ok(html.includes(`v${currentIOS('pipi-word-voyage').version}`));
   assert.doesNotMatch(html, /iOS v1\.3\.1/);
-  assert.match(html, /datetime="2026-11-04"/);
+  assert.ok(html.includes(`datetime="${expectedRelease('pipi-word-voyage','ios').updated}"`));
   assert.ok(html.includes('iOS 1.3.1 (34)'));
   assert.match(html, /datetime="2026-07-13" class="voyage-release-since-date"/);
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
   const app = schemas.find(s => s['@type'] === 'SoftwareApplication');
   assert.ok(app);
-  assert.equal(app.softwareVersion, '1.4.1');
-  assert.equal(app.dateModified, '2026-11-04');
+  assert.equal(app.softwareVersion, currentIOS('pipi-word-voyage').version);
+  assert.equal(app.dateModified, expectedRelease('pipi-word-voyage','ios').updated);
   const home = read(`../dist/${lang}/index.html`);
-  assert.match(home, /v1\.4\.1/);
+  assert.ok(home.includes(`v${currentIOS('pipi-word-voyage').version}`));
   assert.match(home, /datetime="2026-11-16"/);
 });

@@ -1,0 +1,21 @@
+const {chromium} = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+import {mkdirSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const root=process.env.QA_OUTPUT || '/tmp/pifl-home-qa';mkdirSync(root,{recursive:true});const b=await chromium.launch({channel:'chrome',headless:true});const results=[],flow=[];
+try{const ctx=await b.newContext({viewport:{width:375,height:900},reducedMotion:'reduce'}),p=await ctx.newPage();
+for(const lang of ['ko','ja','en']){
+ await p.goto(`http://127.0.0.1:4327/${lang}/archive/`);const index=p.locator('.archive-journey-index');assert.equal(await index.getAttribute('open'),null);await index.locator(':scope > summary').focus();await p.keyboard.press('Enter');assert.notEqual(await index.getAttribute('open'),null);await p.keyboard.press('Enter');assert.equal(await index.getAttribute('open'),null);
+ await p.locator('[data-app-toggle="pipi-dream"]').click();assert.equal(await p.locator('[data-event]:visible').count(),1);assert.match(p.url(),/app=pipi-dream/);await p.locator('[data-event]:visible details > summary').click();assert.equal(await p.locator('[data-event]:visible details[open] a').getAttribute('href'),'https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR');
+ await p.locator('[data-app-toggle="pipi-bp"]').click();assert.equal(await p.locator('[data-event]:visible').count(),2);await p.locator('select[name=platform]').selectOption('ios');assert.equal(await p.locator('[data-event]:visible').count(),0);assert.equal(await p.locator('[data-empty]').isVisible(),true);await p.goBack();assert.equal(await p.locator('[data-event]:visible').count(),2);
+ await p.locator('button[type=reset]').click();assert.equal(await p.locator('[data-event]:visible').count(),68);assert.equal(await p.locator('[data-clear-apps]').isDisabled(),true);
+ await p.locator('[data-app-toggle="dialogos"]').click();await p.locator('[data-media-app="dialogos"] .archive-screen-details[open] img').last().scrollIntoViewIfNeeded();assert.equal(await p.locator('[data-media-app="dialogos"] img').last().getAttribute('src'),'/assets/apps/dialogos/submission/20261116-1.webp');
+ await p.locator(`.lang-pill a:not([href^="/${lang}/"])`).first().click();assert.match(p.url(),/app=dialogos/);await p.locator('[data-app-toggle="dialogos"][aria-pressed="true"]').waitFor();assert.equal(await p.locator('[data-app-toggle="dialogos"]').getAttribute('aria-pressed'),'true');
+ await p.goto(`http://127.0.0.1:4327/${lang}/`);await p.locator('[data-theme-btn="dark"]').click();assert.equal(await p.locator('html').getAttribute('data-theme'),'dark');await p.locator('[data-theme-btn="light"]').click();assert.equal(await p.locator('html').getAttribute('data-theme'),'light');
+ await p.locator('.fleet-disclosure > summary').click();assert.equal(await p.locator('.fleet-row:visible').count(),16);await p.locator(`.fleet-link[href="/${lang}/apps/pipi-hello/"]`).click();assert.match(await p.locator('.app-rel-line').innerText(),/iOS v1.1.1.*Android v1.1.0/s);
+ flow.push({lang,keyboardJourney:true,multiSelect:true,emptyState:true,reset:true,browserBack:true,localePreservesFilter:true,sourceLink:true,latestImage:true,themeButtons:true,fleetToApp:true});
+}
+for(const slug of ['pipi-focus','pipi-draw','pipi-word-voyage','pipi-hello','pipi-words','pipi-log','dialogos'])for(const lang of ['ko','ja','en'])for(const width of [320,375,768,1280,1920])for(const theme of ['light','dark'])for(const scale of [1,2]){
+ const id=[slug,lang,width,theme,scale].join('-');await p.setViewportSize({width,height:900});await p.goto(`http://127.0.0.1:4327/${lang}/apps/${slug}/`);await p.evaluate(async ({theme,scale})=>{document.documentElement.dataset.theme=theme;document.documentElement.style.fontSize=`${scale*100}%`;await document.fonts.ready;},{theme,scale});
+ const row=p.locator('.app-rel-line');await row.scrollIntoViewIfNeeded();const measured=await row.evaluate(el=>({text:el.innerText,overflow:document.documentElement.scrollWidth>innerWidth,clipped:el.scrollWidth>el.clientWidth+1,width:el.clientWidth,height:el.clientHeight}));await row.screenshot({path:`${root}/${id}-release.png`});results.push({id,...measured});writeFileSync(`${root}/app-matrix.json`,JSON.stringify({flow,results},null,2));console.log(id,measured.overflow||measured.clipped?'FAIL':'ok');
+}
+}finally{await b.close();}

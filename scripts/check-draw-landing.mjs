@@ -11,7 +11,7 @@ import { voyageWebTrialFor } from '../src/data/voyage-web-trial.mjs';
 import { ddayDateHelpFor } from '../src/data/dday-date-help.mjs';
 import { createHash } from 'node:crypto';
 
-const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/public-release-sync-20261116.json', import.meta.url), 'utf8'));
+const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/homepage-refresh-public-20261117.json', import.meta.url), 'utf8'));
 const currentDraw = currentPublic.ios.KR.apps.find(a=>a.bundleId==='com.pifl.pipi.draw');
 const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const focusCss = readFileSync(new URL('../public/styles-focus-web-trial.css', import.meta.url));
