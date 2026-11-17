@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { apps } from '../../../../data/apps';
+import { storeUrl, websiteCampaign } from '../../../../../public/store-attribution.mjs';
+import '../../../../components/pipi-bridge/library.css';
+
+// Korean Bridge 도서관·교실 모드(앱 1.1.0+) 사서·교사용 안내 — 영어 전용 페이지.
+// 색인 대상(자기 canonical, alternate 는 en 하나). ko/ja 판은 없다.
+// 사실 근거: code/pipi_bridge/lib/features/library/(화면 문구·세션 길이·공용 활동 패널),
+// lib/domain/library/library_session.dart(새 항목 5개 + 연습 최대 5개, 소리 끔 시 소리 전용 연습 제외),
+// lib/features/parent_gate.dart(오답 3회 → 30초, 잠김마다 두 배, 최대 5분, 정답 시 초기화),
+// 개인정보 문단 = src/components/pipi-bridge/PrivacyPolicy.astro 버전 1.3(2026-11-18).
+// 과장 금지: 협업 게임·학습 효과·연구 기반·인증·추천·'fully offline'·접근성 준수 표현을 쓰지 않는다.
+
+const bridge = apps['pipi-bridge'];
+const campaign = websiteCampaign('en');
+const BASE = 'https://pifl-labs.com';
+const canonical = `${BASE}/en/apps/pipi-bridge/library/`;
+const stores = [
+  { label: 'App Store', icon: 'fab fa-apple', href: bridge.stores.ios, plain: 'apps.apple.com/app/id6801205183' },
+  { label: 'Google Play', icon: 'fab fa-google-play', href: bridge.stores.android, plain: 'play.google.com/store/apps/details?id=com.pifl.pipi.bridge' },
+].filter((s): s is typeof s & { href: string } => Boolean(s.href));
+
+const phrases = [
+  { ko: '안녕하세요', meaning: 'Hello', gesture: 'Bow from the waist and wave.' },
+  { ko: '고마워요', meaning: 'Thank you', gesture: 'Take something with both hands.' },
+  { ko: '도와주세요', meaning: 'Please help me', gesture: 'Raise a hand.' },
+  { ko: '잘 모르겠어요', meaning: "I don't understand", gesture: 'Tilt your head.' },
+  { ko: '다시 말해 주세요', meaning: 'Please say it again', gesture: 'Cup a hand to your ear.' },
+];
+---
+<BaseLayout
+  lang="en"
+  title="Korean Bridge for libraries and classrooms · PiFl Labs"
+  description="Run a short, shared Korean Bridge session on a library or classroom tablet: setup checklist, handing over between children, a 15-minute plan and printable cards."
+  canonical={canonical}
+  alternates={[{ hreflang: 'en', href: canonical }]}
+  extraCss={['/styles.css']}
+>
+  <main id="main" tabindex="-1" class="bl-page">
+    <section class="legal-hero bl-hero">
+      <div class="container">
+        <a href="/en/apps/pipi-bridge/" class="legal-back bl-no-print"><i class="fas fa-arrow-left" aria-hidden="true"></i> Korean Bridge</a>
+        <p class="bl-kicker">Korean Bridge · Libraries and classrooms</p>
+        <h1><span class="text-gradient">Korean Bridge for libraries and classrooms</span></h1>
+        <p class="bl-lede">Korean Bridge is a free app for children ages 4–8 (roughly PreK to grade 2) who are beginning Korean or learning it as a heritage language. Its Library &amp; classroom mode lets a grown-up run a short shared session on one tablet, child after child, without changing the learning record saved on that device.</p>
+        <ul class="bl-facts" aria-label="What the app does not include">
+          <li>No ads</li><li>No purchases</li><li>No accounts</li><li>No student names</li><li>No recordings</li><li>No analytics</li>
+        </ul>
+        <div class="bl-actions">
+          {stores.map((s) => (
+            <a class="bl-btn" href={storeUrl(s.href, campaign)} data-store-link={s.href} target="_blank" rel="noopener">
+              <i class={s.icon} aria-hidden="true"></i> {s.label}<span class="bl-print-only">: {s.plain}</span>
+            </a>
+          ))}
+          <a class="bl-btn bl-btn--primary bl-no-print" href="/en/apps/pipi-bridge/library/cards/"><i class="fas fa-print" aria-hidden="true"></i> Printable topic cards</a>
+        </div>
+        <p class="bl-note">Library &amp; classroom mode is in version 1.1.0 and later. Lessons play recorded Korean audio that ships inside the app, so they work offline. Only when a bundled recording is missing does the app use the device's own text-to-speech voice, which may need a download depending on the operating system's settings.</p>
+      </div>
+    </section>
+
+    <div class="legal-page">
+      <div class="container bl-stack">
+        <section class="legal-card" aria-labelledby="bl-setup">
+          <h2 id="bl-setup">Prepare the tablet</h2>
+          <ol class="bl-steps">
+            <li>Install Korean Bridge (version 1.1.0 or later) from the App Store or Google Play.</li>
+            <li>Open the app. On first launch, choose <span class="bl-ui">English</span>. Any starting path is fine.</li>
+            <li>On the home screen, tap the grown-up (family) button in the top-right corner.</li>
+            <li>Answer the grown-up check: a two-digit addition.</li>
+            <li>In the <span class="bl-ui">Grown-up dashboard</span>, tap <span class="bl-ui">Library &amp; classroom</span> at the top.</li>
+            <li>Choose <span class="bl-ui">Start here: greetings and asking for help</span>, or one of the 60 topics across four learning areas.</li>
+            <li>Under <span class="bl-ui">Session length</span>, choose <span class="bl-ui">5 new items only</span> or <span class="bl-ui">5 new items + practice</span>.</li>
+            <li>Tap <span class="bl-ui">Start a fresh shared session</span>.</li>
+          </ol>
+          <div class="bl-callout">
+            <p><strong>Keep sound on.</strong> With sound off, practice that works only by sound is left out, and some questions show their choices as text instead.</p>
+          </div>
+          <h3>Optional</h3>
+          <ul>
+            <li>To keep a child inside the app, use an operating-system feature: <strong>Guided Access</strong> on iPad (Settings › Accessibility) or <strong>App pinning</strong> (also called Screen pinning) on Android. Where to find it varies by device.</li>
+            <li>A headphone splitter, if two children share one tablet.</li>
+          </ul>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-handover">
+          <h2 id="bl-handover">Pass the tablet to the next child</h2>
+          <ol class="bl-steps">
+            <li>Tap the <span class="bl-ui">X</span> at the top right of the session. The system Back button or gesture, or <span class="bl-ui">Close</span> on the final screen, also works.</li>
+            <li>Answer the grown-up check (a two-digit addition).</li>
+            <li>Look for <span class="bl-ui">Session closed. Temporary progress cleared.</span></li>
+            <li>Tap <span class="bl-ui">Start a fresh shared session</span> for the next child.</li>
+          </ol>
+          <div class="bl-callout">
+            <p>Three wrong answers pause the grown-up check for 30 seconds. If it locks again, the pause doubles each time, up to 5 minutes. A correct answer resets it. You can wait, or fully close and reopen the app.</p>
+            <p>Switching to another app does not clear a session, so it is not a way to hand over to the next child.</p>
+          </div>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-plan">
+          <h2 id="bl-plan">A 15-minute starter plan: greetings and asking for help</h2>
+          <h3>Before the children arrive</h3>
+          <ul>
+            <li>In <span class="bl-ui">Library &amp; classroom</span>, choose <span class="bl-ui">Start here: greetings and asking for help</span> and <span class="bl-ui">5 new items only</span>.</li>
+            <li>Keep sound on.</li>
+            <li>On the preparation screen, use <span class="bl-ui">Hear Korean</span> to listen to the five phrases.</li>
+          </ul>
+          <ol class="bl-timeline">
+            <li>
+              <span class="bl-time">3 min</span>
+              <div>
+                <h3>Warm-up</h3>
+                <p>Introduce each phrase with a gesture.</p>
+                <table class="bl-phrases">
+                  <thead><tr><th scope="col">Korean</th><th scope="col">Meaning</th><th scope="col">Gesture</th></tr></thead>
+                  <tbody>
+                    {phrases.map((p) => (
+                      <tr><td class="bl-ko" lang="ko">{p.ko}</td><td>{p.meaning}</td><td>{p.gesture}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </li>
+            <li>
+              <span class="bl-time">5 min</span>
+              <div>
+                <h3>On the tablet</h3>
+                <p>Look at the picture, listen to all three choices, then choose. Children working in pairs take turns.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bl-time">4 min</span>
+              <div>
+                <h3>Partner role-play</h3>
+                <p>Open the app's <span class="bl-ui">Talk and explore together</span> panel and choose the <span class="bl-ui">Find a book</span> or <span class="bl-ui">Open a pencil case</span> scene. One child asks and the other helps; then <span class="bl-ui">Swap roles</span>.</p>
+                <p>A conversation chain to try:</p>
+                <p class="bl-chain"><span class="bl-ko" lang="ko">안녕하세요</span> → <span class="bl-ko" lang="ko">도와주세요</span> → <span class="bl-ko" lang="ko">잘 모르겠어요</span> or <span class="bl-ko" lang="ko">다시 말해 주세요</span> → <span class="bl-ko" lang="ko">고마워요</span></p>
+              </div>
+            </li>
+            <li>
+              <span class="bl-time">3 min</span>
+              <div>
+                <h3>Off the screen</h3>
+                <p>Put the device down and act out the situation together.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="bl-callout">
+            <p>Children can take part by pointing, gesturing or using their own language. Speaking is optional.</p>
+            <p>If a child needs real, urgent help, get an adult right away instead of practicing a phrase.</p>
+          </div>
+          <h3>A note on polite forms</h3>
+          <p>With teachers, Korean speakers often use <span class="bl-ko" lang="ko">감사합니다</span> (thank you) and <span class="bl-ko" lang="ko">다시 말씀해 주세요</span> (please say it again). The app's audio uses the everyday polite forms <span class="bl-ko" lang="ko">고마워요</span> and <span class="bl-ko" lang="ko">다시 말해 주세요</span>.</p>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-cards-title">
+          <h2 id="bl-cards-title">Printable topic cards</h2>
+          <p>Cards for all 60 topics, with the Korean, an English meaning, a grown-up tip and an off-screen mission for each item, plus a quick-start set for the five greeting and help phrases.</p>
+          <p class="bl-no-print"><a href="/en/apps/pipi-bridge/library/cards/">Open the printable topic cards</a></p>
+          <p class="bl-print-only">pifl-labs.com/en/apps/pipi-bridge/library/cards/</p>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-privacy">
+          <h2 id="bl-privacy">Privacy</h2>
+          <p>When a grown-up starts a shared session, its progress is kept only in temporary memory, separate from the learning record saved on the device. Closing the session or ending the app discards it; switching to another app alone does not. A shared session does not read or change the learning record saved on the device. No student names, accounts or recordings are requested.</p>
+          <p>Korean Bridge has no ads, purchases, accounts or analytics. <a href="/en/apps/pipi-bridge/privacy/">Read the privacy policy</a>.</p>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-limits">
+          <h2 id="bl-limits">Limits to know</h2>
+          <ul>
+            <li>Korean Bridge has not yet been tried in real school or library lessons.</li>
+            <li>A session is not a student assessment, and the app is not a school-certified curriculum.</li>
+            <li>A grown-up needs to lead each session.</li>
+            <li>The in-app guidance in languages other than English is still being reviewed by native speakers.</li>
+          </ul>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-contact">
+          <h2 id="bl-contact">Contact</h2>
+          <p>Questions or corrections: <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

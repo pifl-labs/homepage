@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import topics from '../../../../../data/bridge-library-cards.json';
+import '../../../../../components/pipi-bridge/library.css';
+
+// Korean Bridge 도서관·교실 인쇄용 주제 카드 — 영어 전용 페이지.
+// 데이터 출처: Korean Bridge 1.1.0 커리큘럼(code/pipi_bridge/lib/data/)에서 2026-11-18 추출한
+// 60개 주제(src/data/bridge-library-cards.json). 연습 클래스 이름은 화면에 내지 않고 요약만 한다.
+// 세션 규칙(lib/domain/library/library_session.dart): 새 항목 5개 + 연습 최대 5개.
+// 소리를 켜면 practiceWithSound, 끄면 practiceWithoutSound 목록이 쓰인다.
+
+interface Lesson { korean: string; meaning: string; tip: string; mission: string }
+interface Topic {
+  id: string;
+  world: string;
+  title: string;
+  description: string;
+  practiceWithSound: string[];
+  practiceWithoutSound: string[];
+  lessons: Lesson[];
+}
+
+const all = topics as Topic[];
+const BASE = 'https://pifl-labs.com';
+const canonical = `${BASE}/en/apps/pipi-bridge/library/cards/`;
+
+// 앱 화면의 영역 이름 그대로.
+const WORLDS = [
+  { key: 'korean', name: 'Korean Bridge' },
+  { key: 'math', name: 'Math Playground' },
+  { key: 'school', name: 'School-life Island' },
+  { key: 'explore', name: 'Feelings & Nature' },
+] as const;
+
+const QUICK_ID = 'school_greetings_help';
+const GESTURES: Record<string, string> = {
+  '안녕하세요': 'Bow from the waist and wave.',
+  '고마워요': 'Take something with both hands.',
+  '도와주세요': 'Raise a hand.',
+  '잘 모르겠어요': 'Tilt your head.',
+  '다시 말해 주세요': 'Cup a hand to your ear.',
+};
+
+// 데이터가 바뀌면 조용히 틀린 카드를 찍지 않도록 빌드에서 멈춘다.
+if (all.length !== 60) throw new Error(`Expected 60 Bridge topics, got ${all.length}`);
+for (const t of all) {
+  if (!WORLDS.some((w) => w.key === t.world)) throw new Error(`Unknown world ${t.world} in ${t.id}`);
+  if (t.lessons.length !== 5) throw new Error(`${t.id} must have 5 lessons`);
+}
+const quick = all.find((t) => t.id === QUICK_ID);
+if (!quick) throw new Error(`Missing quick-start topic ${QUICK_ID}`);
+for (const l of quick.lessons) {
+  if (!GESTURES[l.korean]) throw new Error(`Missing gesture for ${l.korean}`);
+}
+
+const plural = (n: number) => (n === 1 ? 'activity' : 'activities');
+function sessionTags(t: Topic): string[] {
+  const n = t.practiceWithSound.length;
+  const tags = [`5 new items + up to ${n} practice ${plural(n)}`];
+  if ([...t.practiceWithSound, ...t.practiceWithoutSound].includes('LetterTracePractice')) tags.push('Includes letter tracing');
+  const same = t.practiceWithSound.length === t.practiceWithoutSound.length
+    && t.practiceWithSound.every((p, i) => p === t.practiceWithoutSound[i]);
+  if (!same) tags.push('Needs sound for some practice');
+  return tags;
+}
+const sharedMission = (t: Topic) => {
+  const missions = new Set(t.lessons.map((l) => l.mission));
+  return missions.size === 1 ? t.lessons[0].mission : null;
+};
+
+const worlds = WORLDS.map((w) => ({ ...w, topics: all.filter((t) => t.world === w.key) }));
+---
+<BaseLayout
+  lang="en"
+  title="Korean Bridge printable topic cards · PiFl Labs"
+  description="Printable cards for the 60 topics in Korean Bridge's Library & classroom mode: Korean, English meaning, grown-up tip and off-screen mission, plus a greetings quick-start set."
+  canonical={canonical}
+  alternates={[{ hreflang: 'en', href: canonical }]}
+  extraCss={['/styles.css']}
+>
+  <main id="main" tabindex="-1" class="bl-page bl-wide">
+    <section class="legal-hero bl-hero">
+      <div class="container">
+        <a href="/en/apps/pipi-bridge/library/" class="legal-back bl-no-print"><i class="fas fa-arrow-left" aria-hidden="true"></i> Library &amp; classroom guide</a>
+        <p class="bl-kicker">Korean Bridge · Printable topic cards</p>
+        <h1><span class="text-gradient">Korean Bridge topic cards</span></h1>
+        <p class="bl-lede">Cards for the 60 topics in Library &amp; classroom mode, with a quick-start set first. Use your browser's Print command; each card is kept on one page.</p>
+        <p class="bl-note">Tags describe a <span class="bl-ui">5 new items + practice</span> session; a <span class="bl-ui">5 new items only</span> session has no practice. “Needs sound for some practice” means some practice is left out or replaced when sound is off. In topics with letter tracing, that practice moves on only after a trace, so trace together or end the session if it does not suit the child.</p>
+        <p class="bl-note">Content from the Korean Bridge 1.1.0 curriculum, shown with the app's English guidance.</p>
+        <nav aria-label="Card sections" class="bl-no-print">
+          <ul class="bl-toc">
+            <li><a href="#quick-start">Quick start</a></li>
+            {worlds.map((w) => <li><a href={`#world-${w.key}`}>{w.name} ({w.topics.length})</a></li>)}
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="legal-page">
+      <div class="container">
+        <section class="bl-world bl-world--first" id="quick-start" aria-labelledby="quick-start-title">
+          <div class="bl-world-head">
+            <h2 id="quick-start-title">Quick start: greetings and asking for help</h2>
+            <p>{quick.title} · School-life Island</p>
+          </div>
+          <div class="bl-quick-grid">
+            {quick.lessons.map((l) => (
+              <article class="bl-phrase-card">
+                <p class="bl-ko" lang="ko">{l.korean}</p>
+                <p class="bl-phrase-meaning">{l.meaning}</p>
+                <dl>
+                  <dt>Gesture</dt><dd>{GESTURES[l.korean]}</dd>
+                  <dt>Off-screen mission</dt><dd>{l.mission}</dd>
+                </dl>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {worlds.map((w) => (
+          <section class="bl-world" id={`world-${w.key}`} aria-labelledby={`world-${w.key}-title`}>
+            <div class="bl-world-head">
+              <h2 id={`world-${w.key}-title`}>{w.name}</h2>
+              <p>{w.topics.length} topics</p>
+            </div>
+            <div class="bl-cards">
+              {w.topics.map((t) => {
+                const shared = sharedMission(t);
+                return (
+                  <article class="bl-card" id={t.id} aria-labelledby={`${t.id}-title`}>
+                    <p class="bl-card-world">{w.name}</p>
+                    <h3 id={`${t.id}-title`}>{t.title}</h3>
+                    <p class="bl-card-desc">{t.description}</p>
+                    <ul class="bl-tags">
+                      {sessionTags(t).map((tag) => <li>{tag}</li>)}
+                    </ul>
+                    <ol class="bl-items">
+                      {t.lessons.map((l) => (
+                        <li class="bl-item">
+                          <p class="bl-ko" lang="ko">{l.korean}</p>
+                          <p class="bl-item-meaning">{l.meaning}</p>
+                          {(l.tip !== l.meaning || !shared) && (
+                            <dl>
+                              {l.tip !== l.meaning && <><dt>Grown-up tip</dt><dd>{l.tip}</dd></>}
+                              {!shared && <><dt>Off-screen mission</dt><dd>{l.mission}</dd></>}
+                            </dl>
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                    {shared && <p class="bl-shared-mission"><strong>Off-screen mission:</strong> {shared}</p>}
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+
+        <p class="bl-note bl-no-print"><a href="/en/apps/pipi-bridge/library/">Back to the library &amp; classroom guide</a> · <a href="/en/apps/pipi-bridge/privacy/">Privacy policy</a></p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
