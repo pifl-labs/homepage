@@ -17,7 +17,7 @@ test('archive preserves distinct events, unknown versions and sanitized provenan
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: archive includes 15 registered apps, all events and accessible filter controls`,()=>{
  const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
- assert.equal((html.match(/data-app-summary=/g)||[]).length,15);
+ assert.equal((html.match(/data-app-summary=/g)||[]).length,17);
  assert.equal((html.match(/data-event /g)||[]).length,archiveEvents.length);
  assert.ok(html.includes('aria-live="polite"'));assert.ok(html.includes('type="reset"'));
  assert.ok(html.includes(`https://pifl-labs.com/${lang}/archive/`));
@@ -33,20 +33,20 @@ test('archive browser logic is external under the production self-only script po
   assert.equal(scripts.filter(([,attrs,body])=>!attrs.includes('application/ld+json')&&body.trim()).length,0,'executable inline JS would be blocked by deployed CSP');
  }
 });
-test('all 14 canonical apps have representative records and no fabricated beta releases',()=>{
- assert.equal(new Set(archiveEvents.map(e=>e.app)).size,14);
- assert.equal(Object.keys(archiveMedia).length,14);
- for(const slug of ['pipi-sky','pipi-legion']){
+test('all 17 canonical apps have representative records and no fabricated beta releases',()=>{
+ assert.equal(new Set(archiveEvents.map(e=>e.app)).size,17);
+ assert.equal(Object.keys(archiveMedia).length,17);
+ for(const slug of ['pipi-legion']){
   assert.ok(archiveEvents.filter(e=>e.app===slug).every(e=>e.kind==='asset'&&e.version===null));
   assert.equal(archiveMedia[slug].upcoming,true);
  }
  // 2026-11-02: Kkachi and Tide have dated Android production observations only; Sudoku has its first public iOS record.
  for(const slug of ['kkachi','pipi-tide']){
   assert.equal(archiveMedia[slug].upcoming,false);
-  assert.ok(archiveEvents.filter(e=>e.app===slug).every(e=>e.platform!=='ios'&&e.kind!=='released'));
+  assert.ok(archiveEvents.filter(e=>e.app===slug&&e.observedAt<='2026-11-02').every(e=>e.platform!=='ios'&&e.kind!=='released'));
   assert.ok(archiveEvents.some(e=>e.app===slug&&e.kind==='observed'&&e.platform==='android'&&e.version&&e.timeBasis==='observation-date'));
  }
- const sudokuIos=archiveEvents.filter(e=>e.app==='pipi-sudoku'&&e.platform==='ios');
+ const sudokuIos=archiveEvents.filter(e=>e.app==='pipi-sudoku'&&e.platform==='ios'&&e.kind==='released');
  assert.deepEqual(sudokuIos.map(e=>[e.kind,e.version,e.timestamp]),[['released','1.0.2','2026-10-31T16:42:26Z']]);
- assert.ok(archiveEvents.filter(e=>e.app==='pipi-sudoku'&&e.platform==='android').every(e=>e.kind==='observed'&&e.version===null));
+ assert.ok(archiveEvents.filter(e=>e.app==='pipi-sudoku'&&e.platform==='android'&&e.observedAt<='2026-11-02').every(e=>e.kind==='observed'&&e.version===null));
 });

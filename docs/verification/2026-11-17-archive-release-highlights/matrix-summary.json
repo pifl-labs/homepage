@@ -1,0 +1,486 @@
+{
+  "cells": 60,
+  "errors": [],
+  "results": [
+    {
+      "id": "ko-320-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-320-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-320-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-320-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-375-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-375-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-375-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-375-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-768-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-768-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-768-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-768-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1280-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1280-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1280-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1280-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1920-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1920-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1920-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ko-1920-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-320-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-320-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-320-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-320-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-375-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-375-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-375-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-375-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-768-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-768-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-768-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-768-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1280-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1280-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1280-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1280-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1920-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1920-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1920-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "ja-1920-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-320-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-320-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-320-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-320-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-375-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-375-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-375-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-375-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-768-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-768-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-768-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-768-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1280-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1280-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1280-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1280-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1920-light-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1920-light-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1920-dark-1",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    },
+    {
+      "id": "en-1920-dark-2",
+      "overflow": false,
+      "brokenImages": [],
+      "changedCards": 37,
+      "allChangedTextFits": true,
+      "diagnosticStatus": "UNVERIFIED"
+    }
+  ]
+}

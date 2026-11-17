@@ -1,6 +1,38 @@
 // Manually reviewed version documents; document versions are not release dates.
 export const archiveJourneys = [
 {
+  "app": "pipi-dream",
+  "stages": [],
+  "limit": {
+    "ko": "2026년 11월 16일 Android 공개 목록과 버전을 확인했습니다. 이전 버전별 변화와 iOS 공개는 이 기록에서 확인하지 않았습니다.",
+    "ja": "2026年11月16日にAndroidの公開掲載とバージョンを確認。以前のバージョンごとの変化とiOS公開は、この記録では確認していません。",
+    "en": "Android public listing and version checked on November 16, 2026. Earlier version-by-version changes and an iOS release are not established by this record."
+  },
+  "sources": [
+    {
+      "path": "docs/release/public-release-sync-20261116.json",
+      "commit": null,
+      "sha256": "109e76e3493ae29a570f14cac5da1c2fb94238fe0b417ab8bea6e3a5d779e744"
+    }
+  ]
+},
+{
+  "app": "pipi-bp",
+  "stages": [],
+  "limit": {
+    "ko": "2026년 11월 16일 Android 공개 목록과 버전을 확인했습니다. 이전 버전별 변화와 iOS 공개는 이 기록에서 확인하지 않았습니다.",
+    "ja": "2026年11月16日にAndroidの公開掲載とバージョンを確認。以前のバージョンごとの変化とiOS公開は、この記録では確認していません。",
+    "en": "Android public listing and version checked on November 16, 2026. Earlier version-by-version changes and an iOS release are not established by this record."
+  },
+  "sources": [
+    {
+      "path": "docs/release/public-release-sync-20261116.json",
+      "commit": null,
+      "sha256": "109e76e3493ae29a570f14cac5da1c2fb94238fe0b417ab8bea6e3a5d779e744"
+    }
+  ]
+},
+{
   "app": "pipi-spend",
   "stages": [],
   "limit": {

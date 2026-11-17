@@ -68,7 +68,7 @@ const copy = {
         const name = appName(app, lang);
         const submitted = submissionMedia(app.slug);
         return (
-          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class:list={["app-card", { "app-card--soon": app.status === "soon" }]}>
+          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class:list={["app-card", { "app-card--soon": app.status === "soon", "app-card--text-only": app.catalogPreview === false }]}>
             <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
               <img class="app-card-icon" src={appIconSrc(app.slug)} alt="" width="64" height="64" loading="lazy" />
               <div class="app-card-head">
@@ -90,13 +90,13 @@ const copy = {
             {app.status === 'live' && (app.stores.ios || app.stores.android) && (
               <div class="app-card-stores">
                 {app.stores.ios && (
-                  <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'ios', lang)} — ${sl.onIos}`}>
-                    <i class="fab fa-apple" aria-hidden="true"></i> {sl.ios}
+                  <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'ios', lang)} — ${sl.onIos}${app.iosStorefront ? ` (${app.iosStorefront})` : ''}`}>
+                    <i class="fab fa-apple" aria-hidden="true"></i> {sl.ios}{app.iosStorefront && ` (${app.iosStorefront})`}
                   </a>
                 )}
                 {app.stores.android && (
-                  <a class="app-card-store" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'android', lang)} — ${sl.onAndroid}`}>
-                    <i class="fab fa-google-play" aria-hidden="true"></i> {sl.android}
+                  <a class="app-card-store" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'android', lang)} — ${sl.onAndroid}${app.androidStorefront ? ` (${app.androidStorefront})` : ''}`}>
+                    <i class="fab fa-google-play" aria-hidden="true"></i> {sl.android}{app.androidStorefront && ` (${app.androidStorefront})`}
                   </a>
                 )}
               </div>
@@ -113,5 +113,5 @@ const copy = {
 <style>
   /* This entry has no verified screenshot: do not reserve an empty preview column. */
   #app-pipi-spend { scroll-margin-top: 6rem; }
-  #app-pipi-spend .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
+  .app-card--text-only .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
 </style>

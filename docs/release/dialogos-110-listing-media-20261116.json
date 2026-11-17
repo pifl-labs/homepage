@@ -1,0 +1,297 @@
+{
+  "observedAt": "2026-11-16",
+  "slug": "dialogos",
+  "note": "App Store Connect API, GET only (appStoreVersions, appStoreVersionLocalizations, appScreenshotSets, appScreenshots). Nothing was changed in App Store Connect and no image was downloaded: each local store_assets PNG has the MD5 that App Store Connect reports as sourceFileChecksum, so the WebP files are made from the exact uploaded bytes. 1.1.0 (20) is in review, so the homepage marks these images as a submitted listing, not the public version.",
+  "source": "https://appstoreconnect.apple.com/apps/6780508628/distribution/ios/version/deliverable",
+  "appStoreConnectVersions": [
+    {
+      "versionString": "1.1.0",
+      "appStoreState": "WAITING_FOR_REVIEW",
+      "appVersionState": "WAITING_FOR_REVIEW",
+      "build": "20"
+    },
+    {
+      "versionString": "1.0.4",
+      "appStoreState": "READY_FOR_SALE",
+      "appVersionState": "READY_FOR_DISTRIBUTION",
+      "build": "19"
+    },
+    {
+      "versionString": "1.0.3",
+      "appStoreState": "READY_FOR_SALE",
+      "appVersionState": "READY_FOR_DISTRIBUTION",
+      "build": "18"
+    },
+    {
+      "versionString": "1.0.2",
+      "appStoreState": "READY_FOR_SALE",
+      "appVersionState": "READY_FOR_DISTRIBUTION",
+      "build": "17"
+    }
+  ],
+  "listingMedia": {
+    "version": "1.1.0",
+    "build": "20",
+    "state": "WAITING_FOR_REVIEW",
+    "displayType": "APP_IPHONE_67",
+    "firstThree": [
+      "https://is1-ssl.mzstatic.com/image/thumb/lt7qOr_XJdM_I1LFmjywyg/{w}x{h}bb.{f}",
+      "https://is1-ssl.mzstatic.com/image/thumb/WmTuqAabS0tpsGb9WsieEw/{w}x{h}bb.{f}",
+      "https://is1-ssl.mzstatic.com/image/thumb/licF7CE6FYj6bBdBClEnew/{w}x{h}bb.{f}"
+    ]
+  },
+  "screenshots": {
+    "ko": [
+      {
+        "fileName": "iphone_0_home.png",
+        "sourceFileChecksum": "4bd9ec3a7e184577b388192c2fd6c023",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/4ZM8F2kyGix0OeSmCg7a5g/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ko/01_home.png",
+        "localMd5": "4bd9ec3a7e184577b388192c2fd6c023"
+      },
+      {
+        "fileName": "iphone_1_chat_marcus.png",
+        "sourceFileChecksum": "ce7612740bcb8871ca07cc840321f48c",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/t3rVJA_resUx9bteHTuCgw/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ko/02_chat_marcus.png",
+        "localMd5": "ce7612740bcb8871ca07cc840321f48c"
+      },
+      {
+        "fileName": "iphone_2_symposium.png",
+        "sourceFileChecksum": "6baaa4aa41d7c539729d7fd8df810a2a",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/cmpvdlkh7RfslrKPAgSxfw/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ko/03_symposium.png",
+        "localMd5": "6baaa4aa41d7c539729d7fd8df810a2a"
+      },
+      {
+        "fileName": "iphone_3_mentor_sheet.png",
+        "sourceFileChecksum": "5eeb80d5a829a9a98316193c3f41baf7",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/IzuqAg-hovTIEohaognVCg/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ko/04_mentor_sheet.png",
+        "localMd5": "5eeb80d5a829a9a98316193c3f41baf7"
+      }
+    ],
+    "ja": [
+      {
+        "fileName": "iphone_0_home.png",
+        "sourceFileChecksum": "dd4a078e97841e436625aa3e1201b617",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/D3GBy-_dBkDCidXTa0oSBw/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ja/01_home.png",
+        "localMd5": "dd4a078e97841e436625aa3e1201b617"
+      },
+      {
+        "fileName": "iphone_1_chat_marcus.png",
+        "sourceFileChecksum": "7cf235f6944bfcda3eaf949ee6a2377e",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/TnOUIA68oeMnG3tBEEeePA/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ja/02_chat_marcus.png",
+        "localMd5": "7cf235f6944bfcda3eaf949ee6a2377e"
+      },
+      {
+        "fileName": "iphone_2_symposium.png",
+        "sourceFileChecksum": "b609afe536710bbb4a0a906f30f161ff",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/S34nrfe_uc6Fs0cDGklneg/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ja/03_symposium.png",
+        "localMd5": "b609afe536710bbb4a0a906f30f161ff"
+      },
+      {
+        "fileName": "iphone_3_mentor_sheet.png",
+        "sourceFileChecksum": "b08340d6435c228350ac6fef20f2b1ab",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/jkZKji47_EqxjYfvyY9Rvg/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/ja/04_mentor_sheet.png",
+        "localMd5": "b08340d6435c228350ac6fef20f2b1ab"
+      }
+    ],
+    "en-US": [
+      {
+        "fileName": "iphone_0_home.png",
+        "sourceFileChecksum": "d5f909ef14c0bed40962f0c0dc21583d",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/lt7qOr_XJdM_I1LFmjywyg/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/en/01_home.png",
+        "localMd5": "d5f909ef14c0bed40962f0c0dc21583d"
+      },
+      {
+        "fileName": "iphone_1_chat_marcus.png",
+        "sourceFileChecksum": "11daa7f65b4868e02986e78fb5ac046a",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/WmTuqAabS0tpsGb9WsieEw/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/en/02_chat_marcus.png",
+        "localMd5": "11daa7f65b4868e02986e78fb5ac046a"
+      },
+      {
+        "fileName": "iphone_2_symposium.png",
+        "sourceFileChecksum": "7fff16c17b2e69551fb2d8527959cb38",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/licF7CE6FYj6bBdBClEnew/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/en/03_symposium.png",
+        "localMd5": "7fff16c17b2e69551fb2d8527959cb38"
+      },
+      {
+        "fileName": "iphone_3_mentor_sheet.png",
+        "sourceFileChecksum": "e9145a673d40975a412e2e6204a4d52c",
+        "templateUrl": "https://is1-ssl.mzstatic.com/image/thumb/gw-uUe2DwLPne5pgvzecHA/{w}x{h}bb.{f}",
+        "width": 1320,
+        "height": 2868,
+        "localSource": "store_assets/screenshots/20261116/ios/en/04_mentor_sheet.png",
+        "localMd5": "e9145a673d40975a412e2e6204a4d52c"
+      }
+    ]
+  },
+  "pipiThusCommit": "57932b017f676fa24133a8e75e55bb761953ec26",
+  "derived": {
+    "/assets/apps/dialogos/ko/home-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ko/01_home.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "7428525a00169fdfae226af2c45dd34f4a6dd8ed14a611621510dc5e4f36cc5e"
+    },
+    "/assets/apps/dialogos/ko/chat_marcus-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ko/02_chat_marcus.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "7aea760ae3c1daaffc75ae4ae5263ff2aae8b297dbd64c85a80cbdea61d0add6"
+    },
+    "/assets/apps/dialogos/ko/symposium-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ko/03_symposium.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "7f1e3ed301f0f49863fa1f9c8b06b3e37ee21b12827f9f4d2cd871b5fe28c55d"
+    },
+    "/assets/apps/dialogos/ko/mentor_sheet-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ko/04_mentor_sheet.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "8674499dcdb7422a0d3651405a238f7a8c030bfa03cf58f3154d977e2bc31efb"
+    },
+    "/assets/apps/dialogos/ja/home-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ja/01_home.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "d89c3e3b7cfe3b03179424f55589b1b579bdb6b92888d407a93f1a300a123fc0"
+    },
+    "/assets/apps/dialogos/ja/chat_marcus-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ja/02_chat_marcus.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "15c1559e83bf6ef97823127ce6fce408fecdb55bb469cc8dfa27a3bd2bb95d23"
+    },
+    "/assets/apps/dialogos/ja/symposium-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ja/03_symposium.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "95806f7b03e6bfb936618edb91a0e0b58e7a5184ff1abddc12e2fcc6f8fc701a"
+    },
+    "/assets/apps/dialogos/ja/mentor_sheet-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/ja/04_mentor_sheet.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "8d59c32edd39bd9b9415f80b712bbc652dfbdc80892194caeb78e07ec29dd72c"
+    },
+    "/assets/apps/dialogos/en/home-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/01_home.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "c5d168a30ceea4c32bcf0d535908365c2b29acd2c972b947771c16114016fe8e"
+    },
+    "/assets/apps/dialogos/en/chat_marcus-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/02_chat_marcus.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "8204493824e7f5e017a27c377bf41cd086151f4e58d91f9963f1584874ebbb79"
+    },
+    "/assets/apps/dialogos/en/symposium-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/03_symposium.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "8e42220b3424ce0e3bbdcba9b3a9d31290f3f1ffff34a541135f8a5936a72edd"
+    },
+    "/assets/apps/dialogos/en/mentor_sheet-20261116.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/04_mentor_sheet.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "240c64ca21a185d5344aec8f576fc2c6cd6ae0986de160b11f20911943b8be39"
+    },
+    "/assets/apps/dialogos/submission/20261116-1.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/01_home.png",
+      "size": [
+        331,
+        719
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 1 1320 2867 -resize 331 719",
+      "sha256": "4d9307c5d015be73e177be92209bb5f9f20a5a263b71352d16e333cd046365bb"
+    },
+    "/assets/apps/dialogos/submission/20261116-2.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/02_chat_marcus.png",
+      "size": [
+        331,
+        719
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 1 1320 2867 -resize 331 719",
+      "sha256": "0676042c4be3db9bff2f8b7b3d7b290b28262d92052e195814268158cd2aa1ce"
+    },
+    "/assets/apps/dialogos/submission/20261116-3.webp": {
+      "from": "store_assets/screenshots/20261116/ios/en/03_symposium.png",
+      "size": [
+        331,
+        719
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 1 1320 2867 -resize 331 719",
+      "sha256": "dd734962121bfd106511188427b855d3c2c8cf469ca824cda810e460f1d63273"
+    }
+  }
+}

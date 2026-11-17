@@ -58,9 +58,13 @@ export interface AppMeta {
   previousNameByLang?: Partial<Record<Lang, string>>;
   /** 스토어별 공개 표시명 스냅샷. 변경 출처는 docs/release의 날짜별 공개 근거, 이전 관측일은 release.checkedAt. */
   storeNames?: Record<'ios' | 'android', Record<Lang, string>>;
+  storeNamesCheckedAt?: string;
   status: 'live' | 'soon';
   category: Record<Lang, string>;
   stores: StoreLinks;
+  /** Country-qualified iOS destination; never infer availability from page language. */
+  iosStorefront?: 'KR';
+  androidStorefront?: 'KR';
   /** Google 지원 applicationCategory. 알려진 분류만 출력하며 미지정은 생략한다. */
   schemaCategory?: GoogleApplicationCategory;
   /** 출시 앱만 — 스토어 실측 버전·업데이트일. 카드/랜딩/구조화 데이터가 공유하는 SSOT. */
@@ -109,8 +113,8 @@ const focus: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.2.3', updated: '2026-10-24', checkedAt: '2026-11-02' },
-    android: { version: '1.2.3', updated: '2026-10-24', checkedAt: '2026-11-02' },
+    ios: { version: '1.2.4', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.2.4', updated: '2026-11-16', checkedAt: '2026-11-17' },
     // First release date unverified: May 15 was a review receipt, not launch.
     checkedAt: '2026-11-02',
   },
@@ -206,8 +210,8 @@ const hello: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-02' },
-    android: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-02' },
+    ios: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-17' },
     since: '2026-06-24',
     checkedAt: '2026-11-02',
   },
@@ -286,11 +290,12 @@ const words: AppMeta = {
   slug: 'pipi-words',
   schemaCategory: 'EducationalApplication',
   name: 'Vocab Routine: JLPT & TOPIK',
-  nameByLang: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳' },
+  nameByLang: { ko: '단어루틴: JLPT 일본어 단어장', ja: 'ことば習慣：TOPIK韓国語単語帳' },
   previousName: 'PiPi Words',
+  storeNamesCheckedAt: '2026-11-16',
   storeNames: {
-    ios: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
-    android: { ko: '단어루틴: JLPT·TOPIK 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
+    ios: { ko: '단어루틴: JLPT 일본어 단어장', ja: 'ことば習慣：TOPIK韓国語単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
+    android: { ko: '단어루틴: JLPT 일본어 단어장', ja: 'ことば習慣：韓国語・TOPIK単語帳', en: 'Vocab Routine: JLPT & TOPIK' },
   },
   status: 'live',
   category: { ko: '교육 · 어휘', ja: '教育 · 語彙', en: 'Education · Vocabulary' },
@@ -299,10 +304,10 @@ const words: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
-  // iOS 1.1.0 was still waiting for review, so the public versions differ by platform.
+  // 2026-11-16 public metadata: iOS and Android are both 1.1.0; retain dated platform evidence.
   release: {
-    ios: { version: '1.0.14', updated: '2026-10-23', checkedAt: '2026-11-02' },
-    android: { version: '1.1.0', updated: '2026-11-02', checkedAt: '2026-11-02' },
+    ios: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
     since: '2026-05-29',
     checkedAt: '2026-11-02',
   },
@@ -310,8 +315,8 @@ const words: AppMeta = {
   content: {
     ko: {
       tagline: '바다를 건너, 말을 잇다',
-      lede: 'JLPT N5~N1·TOPIK 1~6급 어휘를 카드와 퀴즈로 복습하세요. iOS 손글씨에서는 뜻을 보고 직접 쓴 뒤 정답과 비교합니다. 자동 채점은 하지 않습니다.',
-      metaDesc: 'JLPT·TOPIK 한일 단어장, 카드·퀴즈·SM-2 복습 일정. iOS 손글씨는 학습한 단어를 직접 쓰고 자체 비교합니다. 자동 채점 없음. 무료 설치·앱 내 구매.',
+      lede: 'JLPT N5~N1·TOPIK 1~6급 어휘를 카드와 퀴즈로 복습하세요. iOS와 Android에서 뜻을 보고 손글씨로 쓴 뒤 정답과 직접 비교합니다. 자동 채점은 하지 않습니다.',
+      metaDesc: 'JLPT·TOPIK 한일 단어장, 카드·퀴즈·SM-2 복습 일정. iOS·Android 손글씨로 학습한 단어를 쓰고 정답과 직접 비교합니다. 자동 채점 없음. 무료 설치·앱 내 구매.',
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
       featuresTitle: '왜 단어루틴인가',
       ctaTitle: '오늘 단어 학습을 시작하세요',
@@ -324,7 +329,7 @@ const words: AppMeta = {
         { file: 'achievements', label: '업적으로 쌓이는 습관', desc: '연속 학습일과 업적이 매일의 학습을 보상.' },
       ],
       features: [
-        { icon: 'fa-pen',        title: 'iOS 손글씨 복습', desc: '배운 단어의 뜻을 보고 쓰고 정답과 직접 비교합니다. 자동 채점과 획순 평가는 없습니다.' },
+        { icon: 'fa-pen',        title: '손글씨 복습', desc: '배운 단어의 뜻을 보고 쓰고 정답과 직접 비교합니다. 자동 채점과 획순 평가는 없습니다.' },
         { icon: 'fa-rotate',    title: 'SM-2 간격 반복',     desc: '학습 응답에 따라 단어별 다음 복습 날짜를 정합니다.' },
         { icon: 'fa-language',  title: '한일 양방향',        desc: '한국인은 일본어, 일본인은 한국어 — 한 앱에서.' },
         { icon: 'fa-wifi',      title: '오프라인 학습',       desc: '학습 기록은 기기에 저장합니다. 광고와 스토어 이용, 구매 복원에는 네트워크가 사용됩니다.' },
@@ -332,8 +337,8 @@ const words: AppMeta = {
     },
     ja: {
       tagline: '海を越えて、言葉をつなぐ',
-      lede: 'JLPT N5〜N1・TOPIK 1〜6級の単語をカードとクイズで復習。iOSの手書きは意味を見て書き、正解と自分で比べます。自動採点はありません。',
-      metaDesc: 'JLPT・TOPIK韓日単語帳、カード・クイズとSM-2復習予定。iOSでは学習した単語を手書きで思い出し、自分で比較。自動採点なし。無料ダウンロード・アプリ内課金あり。',
+      lede: 'JLPT N5〜N1・TOPIK 1〜6級の語彙をカードとクイズで復習。iOSとAndroidで意味を見て手書きし、自分で正解と比べます。自動採点なし。',
+      metaDesc: 'JLPT・TOPIK韓日単語帳、カード・クイズとSM-2復習予定。iOS・Androidで学習済みの単語を手書きし、自分で正解と比較。自動採点なし。無料ダウンロード・アプリ内課金あり。',
       shotsTitle: '航海のように積み上がる語彙学習',
       featuresTitle: 'ことば習慣を選ぶ理由',
       ctaTitle: '今日から単語学習を始めよう',
@@ -346,7 +351,7 @@ const words: AppMeta = {
         { file: 'achievements', label: '実績で続く習慣',       desc: '連続学習日と実績が毎日の学習にごほうびを。' },
       ],
       features: [
-        { icon: 'fa-pen',        title: 'iOSの手書き',   desc: '意味を見て書き、正解と自分で比べます。自動採点や筆順評価はしません。' },
+        { icon: 'fa-pen',        title: '手書きで復習',   desc: '意味を見て書き、正解と自分で比べます。自動採点や筆順評価はしません。' },
         { icon: 'fa-rotate',    title: 'SM-2 間隔反復',      desc: '学習の回答に応じて、単語ごとの次の復習日を決めます。' },
         { icon: 'fa-language',  title: '韓日双方向',         desc: '日本人は韓国語、韓国人は日本語 — 一つのアプリで。' },
         { icon: 'fa-wifi',      title: 'オフライン学習',      desc: '学習記録は端末に保存。広告・ストア・購入の復元にはネット接続を使います。' },
@@ -354,8 +359,8 @@ const words: AppMeta = {
     },
     en: {
       tagline: 'Cross the sea, connect words.',
-      lede: 'Review JLPT N5–N1 and TOPIK 1–6 vocabulary with cards and quizzes. On iOS, recall learned words by writing, then compare your answer. No automatic grading.',
-      metaDesc: 'JLPT/TOPIK Korean–Japanese cards, quizzes and SM-2 review dates. On iOS, write learned words and compare; no automatic grading. Free download; in-app purchases.',
+      lede: 'Review JLPT N5–N1 and TOPIK 1–6 vocabulary with cards and quizzes. On iOS and Android, write learned words from their meanings, then compare your answer. No automatic grading.',
+      metaDesc: 'JLPT/TOPIK cards, quizzes and SM-2 review. iOS & Android handwriting with self-comparison, not automatic grading. Ads, limits and optional purchases.',
       shotsTitle: 'Words, card by card',
       featuresTitle: 'Why Vocab Routine',
       ctaTitle: 'Start studying today',
@@ -368,7 +373,7 @@ const words: AppMeta = {
         { file: 'achievements', label: 'A habit that adds up',      desc: 'Streaks and achievements reward your daily study.' },
       ],
       features: [
-        { icon: 'fa-pen',        title: 'iOS writing practice', desc: 'Write learned words from their meanings, then compare answers yourself. No automatic grading or stroke-order checks.' },
+        { icon: 'fa-pen',        title: 'Handwriting review', desc: 'Write learned words from their meanings, then compare answers yourself. No automatic grading or stroke-order checks.' },
         { icon: 'fa-rotate',    title: 'SM-2 spaced repetition', desc: 'Sets each word’s next review date from your study responses.' },
         { icon: 'fa-language',  title: 'Two-way Korean–Japanese', desc: 'Learn Japanese or Korean — both directions, one app.' },
         { icon: 'fa-wifi',      title: 'Study offline',      desc: 'Study records stay on your device. Ads, stores and purchase restoration use the network.' },
@@ -396,8 +401,8 @@ const dday: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '2.0.1', updated: '2026-10-24', checkedAt: '2026-11-02' },
-    android: { version: '2.0.1', updated: '2026-10-24', checkedAt: '2026-11-02' },
+    ios: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
+    android: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
     since: '2026-06-02',
     checkedAt: '2026-11-02',
   },
@@ -492,8 +497,8 @@ const log: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
     // 2026-11-06: KR/JP/US iOS only; Android keeps its own 2026-11-02 observation.
-    ios: { version: '1.0.14', updated: '2026-11-04', checkedAt: '2026-11-06' },
-    android: { version: '1.0.13', updated: '2026-10-23', checkedAt: '2026-11-02' },
+    ios: { version: '1.0.15', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.0.15', updated: '2026-11-16', checkedAt: '2026-11-17' },
     since: '2026-06-09',
     checkedAt: '2026-11-02',
   },
@@ -568,7 +573,7 @@ const log: AppMeta = {
   },
 };
 
-// Dialogos — 스토아 철학 대화 앱 (PiPi 라인과 별개 브랜드). 콘텐츠 SSOT = pipi_thus/docs/{SPEC,release/STORE-METADATA,legal/*}.
+// Dialogos — 철학자와 대화하는 앱 (PiPi 라인과 별개 브랜드). 콘텐츠 SSOT = pipi_thus/docs/{SPEC,release/STORE-METADATA,legal/*}.
 // Public Apple KR/JP/US and Google Play KO/JA/EN verified 2026-10-23.
 const dialogos: AppMeta = {
   slug: 'dialogos',
@@ -579,70 +584,70 @@ const dialogos: AppMeta = {
   category: { ko: '라이프스타일 · 철학', ja: 'ライフスタイル · 哲学', en: 'Lifestyle · Philosophy' },
   stores: { ios: 'https://apps.apple.com/app/id6780508628', android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.thus' },
   release: {
-    ios: { version: '1.0.3', updated: '2026-10-22', checkedAt: '2026-11-02' },
-    android: { version: '1.0.3', updated: '2026-10-22', checkedAt: '2026-11-02' },
+    ios: { version: '1.1.0', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.1.0', updated: '2026-11-16', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
-  heroShot: 'home',
+  heroShot: 'home-20261116',
   content: {
     ko: {
-      tagline: '고대의 현자와\n마주 앉다',
-      lede: '마르쿠스 아우렐리우스·세네카·에픽테토스·소크라테스와 1:1로 대화하세요. 일의 불안, 관계의 고민, 선택의 망설임 — 당신의 물음에 네 현자가 각자의 목소리로, 퍼블릭 도메인 원전에 근거해 답합니다. 광고도 계정도 없이.',
-      metaDesc: '스토아 철학자와 1:1로 대화하는 앱. 마르쿠스·세네카·에픽테토스·소크라테스가 원전에 근거해 답하고 출처를 함께 보여줍니다. 광고·계정 없음.',
+      tagline: '철학자와\n마주 앉다',
+      lede: '소크라테스·에피쿠로스·세네카·에픽테토스·마르쿠스 아우렐리우스·니체와 1:1로 대화하세요. 일의 불안, 관계의 고민, 선택의 망설임 — 당신의 물음에 철학자마다 각자의 목소리로, 퍼블릭 도메인 원전에 근거해 답합니다. 광고도 계정도 없이.',
+      metaDesc: '철학자와 1:1로 대화하는 앱. 소크라테스·에피쿠로스·세네카·에픽테토스·마르쿠스 아우렐리우스·니체가 원전에 근거해 답하고 출처를 함께 보여줍니다. 광고·계정 없음.',
       shotsTitle: '현자와 마주 앉는 순간',
       featuresTitle: '왜 Dialogos 인가',
       ctaTitle: '오늘의 질문으로 시작하세요',
       ctaSub: '하루 30회 무료 대화. 추가 깊은 대화와 Pro 구독은 선택 구매.',
       shots: [
-        { file: 'home',          label: '고대의 현자와 마주 앉다', desc: '마르쿠스·세네카·에픽테토스·소크라테스 중 오늘의 상대를 고릅니다.' },
-        { file: 'chat_marcus',   label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
-        { file: 'chat_socrates', label: '답을 주지 않고 되묻는다',   desc: '소크라테스는 결론 대신 당신을 다시 생각하게 합니다.' },
-        { file: 'onboarding',    label: '매일 무료로, 광고 없이',     desc: '계정 가입 없이 매일 무료로 대화를 시작합니다. 하루 대화량을 늘리려면 Dialogos Pro(자동 갱신 구독)를 선택할 수 있습니다.' },
+        { file: 'home-20261116',         label: '철학자와 마주 앉다', desc: '철학자마다 말하는 방식과 이야기하기 좋은 고민을 보고, 오늘의 대화 상대를 고릅니다.' },
+        { file: 'chat_marcus-20261116',  label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
+        { file: 'symposium-20261116',    label: '한 고민에 두 철학자가 답하다', desc: '향연에서는 두 철학자가 같은 고민에 각자 자기 원전을 근거로 답하고, 한 사람이 상대의 말에 응수합니다.' },
+        { file: 'mentor_sheet-20261116', label: '대화 전에, 그 사람을 먼저 만나다', desc: '철학자를 누르면 다른 철학자와의 관계를 근거가 된 책·절과 함께 볼 수 있습니다.' },
       ],
       features: [
-        { icon: 'fa-feather',     title: '네 명의 현자',     desc: '명상록·편지·엥케이리디온·대화편 — 각자의 목소리로 답합니다.' },
+        { icon: 'fa-feather',     title: '철학자마다 다른 목소리', desc: '플라톤 대화편의 소크라테스, 에피쿠로스와 세네카의 편지, 에픽테토스의 엥케이리디온, 마르쿠스의 명상록, 니체의 『차라투스트라는 이렇게 말했다』 — 저마다의 목소리로 답합니다.' },
         { icon: 'fa-quote-right', title: '원전 근거 인용',   desc: '명언 붙여넣기가 아니라, 답변마다 퍼블릭 도메인 출처를 표기.' },
         { icon: 'fa-ban',         title: '광고·계정 없음',   desc: '대화 기록은 기기에 저장됩니다. AI 답변에는 인터넷과 외부 처리가 필요합니다.' },
         { icon: 'fa-language',    title: 'ja · ko · en 네이티브', desc: '번역이 아닌 시장별 네이티브 톤으로 대화합니다.' },
       ],
     },
     ja: {
-      tagline: '古代の賢者と\n向き合う',
-      lede: 'マルクス・アウレリウス、セネカ、エピクテトス、ソクラテスと一対一で対話。仕事の不安、人間関係、選択の迷い——あなたの問いに、四人の賢者がそれぞれの声で、パブリックドメインの原典に基づいて答えます。広告もアカウントもなし。',
-      metaDesc: 'ストア派の賢者と一対一で対話するアプリ。マルクス・セネカ・エピクテトス・ソクラテスが原典に基づいて答え、出典を添えて示します。広告・アカウントなし。',
+      tagline: '賢者と\n向き合う',
+      lede: 'ソクラテス、エピクロス、セネカ、エピクテトス、マルクス・アウレリウス、ニーチェと一対一で対話。仕事の不安、人間関係、選択の迷い——あなたの問いに、賢者たちがそれぞれの声で、パブリックドメインの原典に基づいて答えます。広告もアカウントもなし。',
+      metaDesc: '哲学者と一対一で対話するアプリ。ソクラテス、エピクロス、セネカ、エピクテトス、マルクス・アウレリウス、ニーチェが原典に基づいて答え、出典を添えて示します。広告・アカウントなし。',
       shotsTitle: '賢者と向き合う瞬間',
       featuresTitle: 'Dialogos を選ぶ理由',
       ctaTitle: '今日の問いから始めよう',
       ctaSub: '1日30回まで無料。深い対話の追加購入とProの購読は任意。',
       shots: [
-        { file: 'home',          label: '古代の賢者と向き合う', desc: 'マルクス・セネカ・エピクテトス・ソクラテスから今日の相手を選ぶ。' },
-        { file: 'chat_marcus',   label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
-        { file: 'chat_socrates', label: '答えを与えず、問い返す',   desc: 'ソクラテスは結論ではなく、あなたに問い返します。' },
-        { file: 'onboarding',    label: '毎日無料、広告なし',       desc: 'アカウント登録なしで毎日無料で対話を始められます。1日の対話量を増やしたい場合は Dialogos Pro(自動更新サブスクリプション)を選べます。' },
+        { file: 'home-20261116',         label: '賢者と向き合う', desc: '哲学者ごとの語り口と、どんな悩みに向いているかを見て、今日の相手を選ぶ。' },
+        { file: 'chat_marcus-20261116',  label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
+        { file: 'symposium-20261116',    label: 'ひとつの悩みに、二人の哲学者が答える', desc: '饗宴では、二人の哲学者が同じ悩みにそれぞれの原典をもとに答え、一人が相手の言葉に応じます。' },
+        { file: 'mentor_sheet-20261116', label: '話す前に、その人に出会う', desc: '哲学者をタップすると、ほかの哲学者との関係を、根拠となる書物と節とあわせて確かめられます。' },
       ],
       features: [
-        { icon: 'fa-feather',     title: '四人の賢者',       desc: '自省録・手紙・提要・対話篇——それぞれの声で答えます。' },
+        { icon: 'fa-feather',     title: '賢者ごとの声',     desc: 'プラトン対話篇のソクラテス、エピクロスとセネカの手紙、エピクテトスの提要、マルクスの自省録、ニーチェの『ツァラトゥストラはこう言った』——それぞれの声で答えます。' },
         { icon: 'fa-quote-right', title: '原典に基づく出典', desc: '名言の貼り付けではなく、返答ごとにパブリックドメインの出典を表示。' },
         { icon: 'fa-ban',         title: '広告・アカウントなし', desc: '履歴は端末に保存。AIの返答にはインターネット接続と外部処理が必要です。' },
         { icon: 'fa-language',    title: 'ja · ko · en ネイティブ', desc: '翻訳ではなく市場ごとのネイティブなトーンで対話します。' },
       ],
     },
     en: {
-      tagline: 'Sit with the\nancient sages',
-      lede: "Talk one-on-one with Marcus Aurelius, Seneca, Epictetus, and Socrates. Anxiety about work, a difficult relationship, a hard decision — bring your question, and four sages answer in their own voice, grounded in public-domain sources. No ads, no account.",
-      metaDesc: 'Talk one-on-one with Marcus Aurelius, Seneca, Epictetus and Socrates. Every reply is grounded in public-domain sources, with citations. No ads, no account.',
+      tagline: 'Sit down with\na philosopher',
+      lede: "Talk one-on-one with Socrates, Epicurus, Seneca, Epictetus, Marcus Aurelius, and Nietzsche. Anxiety about work, a difficult relationship, a hard decision — bring your question, and each philosopher answers in their own voice, grounded in public-domain sources. No ads, no account.",
+      metaDesc: 'Talk one-on-one with Socrates, Epicurus, Seneca, Epictetus, Marcus Aurelius and Nietzsche. Every reply is grounded in public-domain sources, with citations. No ads, no account.',
       shotsTitle: 'The moment you sit with a sage',
       featuresTitle: 'Why Dialogos',
       ctaTitle: 'Start with a question',
       ctaSub: 'Free up to 30 messages a day. Optional deep-reply packs and Pro subscriptions.',
       shots: [
-        { file: 'home',          label: 'Sit with the ancient sages',  desc: "Choose today's mentor from Marcus, Seneca, Epictetus and Socrates." },
-        { file: 'chat_marcus',   label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
-        { file: 'chat_socrates', label: "He doesn't answer — he asks",  desc: 'Socrates makes you think again instead of handing you a conclusion.' },
-        { file: 'onboarding',    label: 'Free every day, no ads',       desc: 'Start talking for free every day with no account; Dialogos Pro (an auto-renewing subscription) raises the daily limit.' },
+        { file: 'home-20261116',         label: 'Sit down with a philosopher', desc: "See how each philosopher talks and which worries suit them, then choose today's mentor." },
+        { file: 'chat_marcus-20261116',  label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
+        { file: 'symposium-20261116',    label: 'Two philosophers, one question', desc: 'In the Symposium, two philosophers answer the same worry from their own works, then one responds to the other.' },
+        { file: 'mentor_sheet-20261116', label: 'Meet them before you talk',    desc: 'Tap a philosopher to see how they relate to the others, with the book and section behind it.' },
       ],
       features: [
-        { icon: 'fa-feather',     title: 'Four sages',         desc: 'Meditations, Letters, Enchiridion, Dialogues — each in their own voice.' },
+        { icon: 'fa-feather',     title: 'A voice for each philosopher', desc: "Plato's dialogues for Socrates, the letters of Epicurus and Seneca, Epictetus's Enchiridion, Marcus's Meditations, Nietzsche's Thus Spoke Zarathustra — each in their own voice." },
         { icon: 'fa-quote-right', title: 'Grounded in sources', desc: 'Not quote-wallpaper — every reply shows its public-domain source.' },
         { icon: 'fa-ban',         title: 'No ads, no account', desc: 'History stays on your device. AI replies require internet access and external processing.' },
         { icon: 'fa-language',    title: 'Native in ja · ko · en', desc: 'Not translated — a native tone written for each market.' },
@@ -672,8 +677,8 @@ const draw: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
     // updated는 iOS 공식 출시 시각의 UTC 날짜, Android는 Google Play 표시 날짜.
-    ios: { version: '1.2.3', updated: '2026-10-30', checkedAt: '2026-11-02' },
-    android: { version: '1.2.3', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    ios: { version: '1.2.5', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.2.5', updated: '2026-11-16', checkedAt: '2026-11-17' },
     // July 14 was version 1.0 submission, not a verified first release.
     checkedAt: '2026-11-02',
   },
@@ -770,9 +775,9 @@ const wordVoyage: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.3.1', updated: '2026-11-01', checkedAt: '2026-11-02' },
+    ios: { version: '1.4.2', updated: '2026-11-16', checkedAt: '2026-11-17' },
     // 2026-11-13: visible Google Play About dialogs agree in KR/JP/US; iOS observation is unchanged.
-    android: { version: '1.4.1', updated: '2026-11-04', checkedAt: '2026-11-13' },
+    android: { version: '1.4.2', updated: '2026-11-16', checkedAt: '2026-11-17' },
     since: '2026-07-13',
     checkedAt: '2026-11-02',
   },
@@ -862,8 +867,8 @@ const bridge: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   // 2026-11-11: Apple KR/JP/US 1.0.3 재관측만 반영. Android와 공통 확인일은 기존 근거를 보존한다.
   release: {
-    ios: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-11' },
-    android: { version: '1.0.2', updated: '2026-10-22', checkedAt: '2026-11-02' },
+    ios: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-17' },
+    android: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-17' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
     checkedAt: '2026-11-02',
   },
@@ -998,42 +1003,51 @@ const tide: AppMeta = {
     "ja": "天気 · 潮汐",
     "en": "Weather · Tides"
   },
-  "stores": {
-    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide"
+  iosStorefront: 'KR',
+  androidStorefront: 'KR',
+  storeNamesCheckedAt: '2026-11-16',
+  storeNames: {
+    ios: { ko: '물시계 - 바닷길·갯벌 물때 타이머', ja: '물시계 - 바닷길·갯벌 물때 타이머', en: '물시계 - 바닷길·갯벌 물때 타이머' },
+    android: { ko: '물시계 - 바닷길·갯벌 물때 타이머', ja: '물시계 - 바닷길·갯벌 물때 타이머', en: '물시계 - 바닷길·갯벌 물때 타이머' },
   },
-  // Android public listing + production track 2026-11-02. iOS 1.2.0 was waiting for review.
+  "stores": {
+    "ios": "https://apps.apple.com/kr/app/%EB%AC%BC%EC%8B%9C%EA%B3%84-%EB%B0%94%EB%8B%B7%EA%B8%B8-%EA%B0%AF%EB%B2%8C-%EB%AC%BC%EB%95%8C-%ED%83%80%EC%9D%B4%EB%A8%B8/id6820126418",
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR"
+  },
+  // iOS public KR lookup 2026-11-16; absent in queried JP/US storefronts. Android observation remains independent.
   release: {
-    android: { version: '1.2.0', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    ios: { version: '1.2.0', updated: '2026-11-13', checkedAt: '2026-11-17' },
+    android: { version: '1.2.0', updated: '2026-10-31', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   "content": {
     "ko": {
       "tagline": "날씨 · 물때",
-      "lede": "갯벌·바닷길에서 '건너가기 시작'이나 '지금 들어가요'를 누르면 나올 시각까지 남은 시간을 알림창에서 카운트다운해 줘요. 전국 바닷길 13곳의 열림 시간과 물때표, 간조 전 알림도 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "lede": "갯벌·바닷길에서 '건너가기 시작'이나 '지금 들어가요'를 누르면 나올 시각까지 남은 시간을 알림창에서 카운트다운해 줘요. 전국 바닷길 13곳의 열림 시간과 물때표, 간조 전 알림도 확인해요. Android 앱의 기능 안내입니다. Android·iOS 모두 한국 스토어에서 이용할 수 있어요.",
       "shotsTitle": "",
       "featuresTitle": "앱 소개",
-      "ctaTitle": "Google Play에서 만나세요",
-      "ctaSub": "갯벌·바닷길에서 '건너가기 시작'이나 '지금 들어가요'를 누르면 나올 시각까지 남은 시간을 알림창에서 카운트다운해 줘요. 전국 바닷길 13곳의 열림 시간과 물때표, 간조 전 알림도 확인해요. 현재 Android에서 이용할 수 있어요.",
+      "ctaTitle": "공식 스토어에서 만나세요",
+      "ctaSub": "갯벌·바닷길에서 '건너가기 시작'이나 '지금 들어가요'를 누르면 나올 시각까지 남은 시간을 알림창에서 카운트다운해 줘요. 전국 바닷길 13곳의 열림 시간과 물때표, 간조 전 알림도 확인해요. Android 앱의 기능 안내입니다. Android·iOS 모두 한국 스토어에서 이용할 수 있어요.",
       "shots": [],
       "features": []
     },
     "ja": {
       "tagline": "天気 · 潮汐",
-      "lede": "干潟や海の道に入るときにボタンを押すと、戻る時刻までの残り時間を通知でカウントダウンします。韓国の海の道13か所の通れる時間、潮汐表、干潮前の通知も確認できます。現在Androidで利用できます。",
+      "lede": "干潟や海の道に入るときにボタンを押すと、戻る時刻までの残り時間を通知でカウントダウンします。韓国の海の道13か所の通れる時間、潮汐表、干潮前の通知も確認できます。Android版の機能案内です。Android・iOSとも韓国のストアで公開中です。",
       "shotsTitle": "",
       "featuresTitle": "アプリについて",
-      "ctaTitle": "Google Playで入手",
-      "ctaSub": "干潟や海の道に入るときにボタンを押すと、戻る時刻までの残り時間を通知でカウントダウンします。韓国の海の道13か所の通れる時間、潮汐表、干潮前の通知も確認できます。現在Androidで利用できます。",
+      "ctaTitle": "公式ストアで入手",
+      "ctaSub": "干潟や海の道に入るときにボタンを押すと、戻る時刻までの残り時間を通知でカウントダウンします。韓国の海の道13か所の通れる時間、潮汐表、干潮前の通知も確認できます。Android版の機能案内です。Android・iOSとも韓国のストアで公開中です。",
       "shots": [],
       "features": []
     },
     "en": {
       "tagline": "Weather · Tides",
-      "lede": "Tap “Start crossing” or “I’m going in” on a mudflat or sea road and a notification counts down to your head-back time. Check open times for 13 Korean sea roads, tide tables and low-tide alerts. Available on Android.",
+      "lede": "Tap “Start crossing” or “I’m going in” on a mudflat or sea road and a notification counts down to your head-back time. Check open times for 13 Korean sea roads, tide tables and low-tide alerts. This describes the Android app. Android and iOS versions are available in the Korean stores.",
       "shotsTitle": "",
       "featuresTitle": "About the app",
-      "ctaTitle": "Get it on Google Play",
-      "ctaSub": "Tap “Start crossing” or “I’m going in” on a mudflat or sea road and a notification counts down to your head-back time. Check open times for 13 Korean sea roads, tide tables and low-tide alerts. Available on Android.",
+      "ctaTitle": "Find it on the official stores",
+      "ctaSub": "Tap “Start crossing” or “I’m going in” on a mudflat or sea road and a notification counts down to your head-back time. Check open times for 13 Korean sea roads, tide tables and low-tide alerts. This describes the Android app. Android and iOS versions are available in the Korean stores.",
       "shots": [],
       "features": []
     }
@@ -1062,8 +1076,8 @@ const sudoku: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing. iOS first appeared 2026-10-28;
   // the earlier Android launch date is unverified, so since stays empty.
   release: {
-    ios: { version: '1.0.2', updated: '2026-10-31', checkedAt: '2026-11-02' },
-    android: { version: '1.0.2', updated: '2026-10-29', checkedAt: '2026-11-02' },
+    ios: { version: '1.0.2', updated: '2026-10-31', checkedAt: '2026-11-17' },
+    android: { version: '1.0.2', updated: '2026-10-29', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   "content": {
@@ -1122,7 +1136,7 @@ const kkachi: AppMeta = {
   },
   // Android public listing + production track 2026-11-02 (first public date unverified). iOS 1.1.0 was waiting for review.
   release: {
-    android: { version: '1.1.0', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    android: { version: '1.1.0', updated: '2026-10-31', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   content: {
@@ -1189,6 +1203,7 @@ const spend: AppMeta = {
   "stores": {
     "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend"
   },
+  release: { android: { version: '1.0.0', updated: '2026-10-28', checkedAt: '2026-11-17' }, checkedAt: '2026-11-16' },
   "schemaCategory": "FinanceApplication",
   "catalogPreview": false,
   "content": {
@@ -1275,164 +1290,289 @@ const spend: AppMeta = {
     }
   }
 };
+const bp: AppMeta = {
+  slug: 'pipi-bp',
+  "name": "BP Diary & Blood Pressure Log",
+  "nameByLang": {
+    "ko": "혈압 기록: 혈압 수첩·심박",
+    "ja": "血圧記録：血圧手帳・脈拍"
+  },
+  "status": "live",
+  "category": {
+    "ko": "건강 · 수동 혈압 기록",
+    "ja": "健康 · 血圧の手入力",
+    "en": "Health · Manual BP diary"
+  },
+  "schemaCategory": "HealthApplication",
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp"
+  },
+  "release": {
+    "android": {
+      "version": "1.0.0",
+      "updated": "2026-10-27",
+      "checkedAt": "2026-11-17"
+    },
+    "checkedAt": "2026-11-16"
+  },
+  "catalogPreview": false,
+  "content": {
+    "ko": {
+      "tagline": "혈압계 수치를 내 손으로 기록",
+      "lede": "별도 혈압계로 잰 혈압과 선택한 심박을 직접 입력하는 기록장이에요. 기록과 메모를 모아 보고, 의료진과 이야기할 때 참고하세요. 앱이 혈압을 측정하지는 않아요.",
+      "featuresTitle": "수동 기록과 돌아보기",
+      "ctaTitle": "Android에서 기록을 시작해요",
+      "ctaSub": "진단·치료·예방 도구가 아니에요. 혈압에 관한 판단은 의료진과 상의하세요.",
+      "downloadNote": "핵심 기록은 무료. PDF·CSV 내보내기와 긴 기간의 추이는 선택형 일회성 Pro 구매로 이용해요. 구독은 아니에요.",
+      "shotsTitle": "",
+      "shots": [],
+      "features": [
+        {
+          "icon": "fa-pen",
+          "title": "직접 입력하는 수치",
+          "desc": "외부 혈압계의 수치를 입력하고 날짜·태그·메모를 함께 남겨요. 카메라나 센서로 혈압을 재지 않아요."
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "기록을 한곳에서",
+          "desc": "7일·30일 추이와 기록을 돌아봐요. 그래프는 진단이나 치료 지시가 아닌 기록 참고용이에요."
+        },
+        {
+          "icon": "fa-user",
+          "title": "내 기기에 보관",
+          "desc": "계정·광고 없이 기록을 기기에 보관해요. 다른 사람의 기록은 그 사람의 동의를 받고 남겨 주세요."
+        }
+      ]
+    },
+    "ja": {
+      "tagline": "血圧計の数値を、自分で記録",
+      "lede": "別の血圧計で測った血圧と任意の脈拍を手入力する記録帳です。記録やメモをまとめ、医療者に相談するときの参考に。アプリが血圧を測ることはありません。",
+      "featuresTitle": "手入力して、ふり返る",
+      "ctaTitle": "Androidで記録を始めよう",
+      "ctaSub": "診断・治療・予防の道具ではありません。血圧についての判断は医療者に相談してください。",
+      "downloadNote": "基本の記録は無料。PDF・CSV出力と長期間の推移は任意の買い切りProで利用できます。定期購入ではありません。",
+      "shotsTitle": "",
+      "shots": [],
+      "features": [
+        {
+          "icon": "fa-pen",
+          "title": "数値を手入力",
+          "desc": "外部の血圧計の数値に、日付・タグ・メモを添えて保存。カメラやセンサーでの血圧測定はしません。"
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "記録をまとめて確認",
+          "desc": "7日・30日の推移と記録をふり返れます。グラフは診断や治療の指示ではなく、記録の参考です。"
+        },
+        {
+          "icon": "fa-user",
+          "title": "記録は端末に",
+          "desc": "アカウント・広告なしで端末に保存。他の方の記録は本人の同意を得てください。"
+        }
+      ]
+    },
+    "en": {
+      "tagline": "Record readings from your own cuff",
+      "lede": "Manually enter blood-pressure readings from a separate monitor, with optional pulse and notes. Keep a record to refer to when talking with a healthcare professional. The app does not measure blood pressure.",
+      "featuresTitle": "Enter readings and look back",
+      "ctaTitle": "Start a record on Android",
+      "ctaSub": "Not a tool for diagnosis, treatment or prevention. Discuss blood-pressure decisions with a healthcare professional.",
+      "downloadNote": "Core recording is free. PDF/CSV exports and longer-term trends are available with optional one-time Pro. No subscription.",
+      "shotsTitle": "",
+      "shots": [],
+      "features": [
+        {
+          "icon": "fa-pen",
+          "title": "Enter readings yourself",
+          "desc": "Add readings from an external blood-pressure monitor, with dates, tags and notes. No camera or sensor measurement."
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "Look back at your records",
+          "desc": "Review 7-day and 30-day trends. Charts are record references, not diagnoses or treatment instructions."
+        },
+        {
+          "icon": "fa-user",
+          "title": "Keep records on your device",
+          "desc": "No account or ads. Keep records on your device, and get permission before recording someone else’s readings."
+        }
+      ]
+    }
+  }
+};
+
 const sky: AppMeta = {
   slug: 'pipi-sky',
-  "name": "Skydaze: Cloud & Star Gazing",
-  // Not public yet: the App Store Connect registered ko/ja names (2026-11-02), not the English fallback.
+  "name": "Skylayer: Clouds to Space",
   "nameByLang": {
+    "ko": "하늘멍 - 구름층에서 우주까지",
+    "ja": "Skylayer - 雲の層から宇宙へ"
+  },
+  "previousName": "Skydaze: Cloud & Star Gazing",
+  "previousNameByLang": {
     "ko": "하늘멍 - 구름 위 하늘·별자리·밤하늘",
     "ja": "Skydaze - 雲の上の空と星空・星座"
   },
-  "status": "soon",
+  "status": "live",
   "category": {
     "ko": "휴식 · 하늘 관찰",
     "ja": "リラックス · 空の観察",
     "en": "Relaxation · Sky gazing"
   },
-  "stores": {},
+  "schemaCategory": "LifestyleApplication",
+  "stores": {
+    "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky"
+  },
+  "release": {
+    "android": {
+      "version": "1.0.0",
+      "updated": "2026-11-16",
+      "checkedAt": "2026-11-17"
+    },
+    "checkedAt": "2026-11-16"
+  },
+  "catalogPreview": false,
   "content": {
     "ko": {
-      "tagline": "휴식 · 하늘 관찰",
-      "lede": "흐린 날에도 구름 위의 하늘은 이어져요. 지역·시간·높이를 골라 그 높이의 하늘을 조용히 바라보는 앱이에요. 공개 출시를 준비하고 있어요.",
+      "tagline": "구름층에서 우주까지",
+      "lede": "NOAA GFS 모델과 주변 공항의 METAR 자료로 그린 가상 하늘을 둘러보세요. 구름층·제트기류·차가운 고도를 살펴보고, 마음에 드는 길목을 기기에 남길 수 있어요. Android에서 이용할 수 있어요.",
+      "featuresTitle": "하늘을 둘러보는 방법",
+      "ctaTitle": "Android에서 하늘을 만나세요",
+      "ctaSub": "실시간 카메라 영상이나 일기예보가 아닌 모델 기반 시각화예요.",
       "shotsTitle": "",
-      "featuresTitle": "앱 소개",
-      "ctaTitle": "공개 출시 준비 중",
-      "ctaSub": "구름과 해·달·별을 가상 하늘에서 바라보는 앱을 준비 중이에요. 내부 테스트 중이며 공개 출시 전이에요.",
       "shots": [],
       "features": [
         {
-          "title": "흐린 날, 구름 위로",
-          "desc": "높이를 올리면 NOAA GFS 모델값으로 그린 구름층 위의 하늘을 볼 수 있어요. 지금 그 높이가 어떤지 데이터와 출처·발표 시각을 함께 보여줘요."
+          "icon": "fa-cloud",
+          "title": "출처가 있는 가상 하늘",
+          "desc": "모델 자료의 출처와 발표 시각을 함께 봐요. 날씨 자료를 새로 받으려면 인터넷이 필요해요."
         },
         {
-          "title": "구름 비행 · 성층권 · 우주",
-          "desc": "발아래가 구름 바다면 손가락 하나로 그 위를 날고, 성층권(약 30km)까지 올라 우주 전망대로 이어갈 수 있어요."
+          "icon": "fa-route",
+          "title": "오늘의 길목과 하늘 기록",
+          "desc": "구름 바닥과 꼭대기, 제트기류와 차가운 층을 골라 높이·장소·시각·출처를 기기에 남겨요."
         },
         {
-          "title": "하늘멍",
-          "desc": "고른 높이에 머물며 별·달과 잔잔한 소리·음악을 들어요. 재촉하는 표시나 연속 출석은 없어요."
-        },
-        {
-          "title": "계정·광고·분석 없음",
-          "desc": "위치는 기기 안에서만 쓰고 좌표를 서버로 보내지 않아요. 한국어·English·日本語·简体中文·繁體中文 지원."
+          "icon": "fa-moon",
+          "title": "잠시 머무는 하늘",
+          "desc": "해·달·별과 잔잔한 소리를 즐기고 수면 타이머를 설정해요. 예보·의료·상담 도구는 아니에요."
         }
       ]
     },
     "ja": {
-      "tagline": "リラックス · 空の観察",
-      "lede": "曇りの日でも、雲の上の空は続いています。場所・時刻・高度を選んで、その高さの空を静かに眺めるアプリです。一般公開の準備中です。",
+      "tagline": "雲の層から宇宙へ",
+      "lede": "NOAA GFSモデルと近くの空港のMETAR資料から描いた仮想の空へ。雲の層、ジェット気流、冷たい高度を眺め、気になる場所を端末に記録できます。Androidで公開中です。",
+      "featuresTitle": "空の楽しみ方",
+      "ctaTitle": "Androidで空を眺めよう",
+      "ctaSub": "ライブカメラや天気予報ではなく、モデルに基づく可視化です。",
       "shotsTitle": "",
-      "featuresTitle": "アプリについて",
-      "ctaTitle": "一般公開の準備中",
-      "ctaSub": "雲や太陽・月・星を仮想の空で眺めるアプリを準備中。内部テスト中で、一般公開前です。",
       "shots": [],
       "features": [
         {
-          "title": "曇りの日は雲の上へ",
-          "desc": "高度を上げると、NOAA GFSのモデル値で描いた雲の上の空が見られます。どの画面にもデータの出典と発表時刻を表示します。"
+          "icon": "fa-cloud",
+          "title": "出典と時刻を確認",
+          "desc": "モデル資料の出典と発表時刻を表示。新しい気象資料の取得には通信が必要です。"
         },
         {
-          "title": "雲の上を飛ぶ · 成層圏 · 宇宙",
-          "desc": "足もとが雲海なら指一本でその上を飛び、成層圏(約30km)まで上がって宇宙展望台へ続けられます。"
+          "icon": "fa-route",
+          "title": "今日の道しるべと空の記録",
+          "desc": "雲底・雲頂、ジェット気流や冷たい層を選び、高度・場所・時刻・出典を端末に残せます。"
         },
         {
-          "title": "空ぼーっと",
-          "desc": "選んだ高度にとどまり、星や月、静かな音と音楽を楽しめます。急かす表示や連続記録はありません。"
-        },
-        {
-          "title": "アカウント・広告・分析なし",
-          "desc": "位置情報は端末内でのみ使い、座標をサーバーへ送りません。日本語・English・한국어・简体中文・繁體中文に対応。"
+          "icon": "fa-moon",
+          "title": "空でひと息",
+          "desc": "太陽・月・星と静かな音を楽しみ、スリープタイマーを設定。予報・医療・相談のための道具ではありません。"
         }
       ]
     },
     "en": {
-      "tagline": "Watch the sky. Take a quiet moment.",
-      "lede": "On a cloudy day, the sky above the clouds is still there. Pick a place, a time and a height, and look at that sky quietly. Preparing for public release.",
+      "tagline": "From cloud layers to space",
+      "lede": "Explore a virtual sky drawn from NOAA GFS model data and nearby airport METAR reports. Look at cloud layers, jet streams and cold altitudes, then save a waypoint on your device. Available on Android.",
+      "featuresTitle": "Ways to explore the sky",
+      "ctaTitle": "Explore the sky on Android",
+      "ctaSub": "A model-based visualization, not a live camera feed or a weather forecast.",
       "shotsTitle": "",
-      "featuresTitle": "About the app",
-      "ctaTitle": "Preparing for public release",
-      "ctaSub": "A quiet virtual sky for watching clouds, the sun, moon and stars. In internal testing; not publicly released.",
       "shots": [],
       "features": [
         {
-          "title": "Above the clouds on a grey day",
-          "desc": "Raise the height to see the sky above the cloud layer, drawn from NOAA GFS model values, with the source and issue time on every screen."
+          "icon": "fa-cloud",
+          "title": "See the source and issue time",
+          "desc": "Check where the model data came from and when it was issued. Getting new weather data requires internet."
         },
         {
-          "title": "Cloud flight · stratosphere · space",
-          "desc": "When a sea of clouds lies below, fly over it with one finger, rise to the stratosphere (about 30 km) and carry on to the space observatory."
+          "icon": "fa-route",
+          "title": "Waypoints and sky records",
+          "desc": "Choose a cloud base or top, jet stream or cold layer to save its altitude, place, time and source on your device."
         },
         {
-          "title": "Sky Gaze",
-          "desc": "Stay at the height you chose with the stars, the Moon and quiet sound and music. No nudges, no streaks."
-        },
-        {
-          "title": "No account, ads or analytics",
-          "desc": "Location is used only on your device and coordinates are never sent to a server. English, Korean, Japanese, Simplified and Traditional Chinese."
+          "icon": "fa-moon",
+          "title": "A quiet place to pause",
+          "desc": "Watch the sun, moon and stars with ambient sound and a sleep timer. Not a forecasting, medical or counseling tool."
         }
       ]
     }
-  },
-  "previousName": "PiPi Sky"
+  }
 };
 
-// 간밤(com.pifl.pipi.dream) — 스토어 첫 제출 준비(2026-11-13). 이 랜딩은 App Store 지원·마케팅 URL이고
-// 처리방침 다섯 쪽은 components/pipi-dream/ 이 원본 그대로 서빙한다. 두 주소 모두 앱·콘솔에 박혀 있다.
-// 이름 = App Store 이름 = Play 제목(pipi_dream docs/store/<lang>/appstore/name.txt), 카피는 같은 폴더의 스토어 글 근거.
-// 홈 카탈로그(appList)·아카이브에는 아직 올리지 않는다 — 공개 출시 때 카탈로그 카피와 함께 정한다.
+// 간밤 — Android 공개 목록·설명 확인 2026-11-16. iOS 공개는 확인한 KR/JP/US에서 미확인.
 const dream: AppMeta = {
   slug: 'pipi-dream',
   name: 'Yesternight: Dream Journal',
   nameByLang: { ko: '간밤: 말로 남기는 꿈 일기', ja: 'ゆうべ：話して残す夢日記' },
-  status: 'soon',
+  status: 'live',
   category: { ko: '라이프스타일 · 꿈 일기', ja: 'ライフスタイル · 夢日記', en: 'Lifestyle · Dream journal' },
   schemaCategory: 'LifestyleApplication',
-  stores: {},
+  stores: { android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dream' },
+  release: { android: { version: '1.0.0', updated: '2026-11-13', checkedAt: '2026-11-17' }, checkedAt: '2026-11-16' },
+  catalogPreview: false,
   content: {
     ko: {
       tagline: '말하면 기기 안에서 글이 돼요',
-      lede: '간밤은 아침에 말로 남기는 꿈 일기예요. 깨자마자 버튼 하나를 누르고 생각나는 대로 말한 뒤 녹음을 끝내면, 휴대폰 안에서 글로 받아써요. 글을 확인하고 저장하면 기록장에 쌓여요. 공개 출시를 준비하고 있어요.',
+      lede: '간밤은 아침에 말로 남기는 꿈 일기예요. 깨자마자 버튼 하나를 누르고 생각나는 대로 말한 뒤 녹음을 끝내면, 휴대폰 안에서 글로 받아써요. 글을 확인하고 저장하면 기록장에 쌓여요. 현재 Android에서 이용할 수 있어요.',
       metaDesc: '말로 남기는 꿈 일기. 녹음을 휴대폰 안에서 글로 받아쓰고, 목록·달력·통계와 상징 120개 사전으로 돌아봐요. 계정·광고·분석이 없고, 앱은 꿈을 어디로도 보내지 않아요.',
       shotsTitle: '',
       featuresTitle: '앱 소개',
-      ctaTitle: '공개 출시 준비 중',
-      ctaSub: 'iPhone·Android 공개 출시를 준비하고 있어요. 계정도 광고도 없고, 앱은 꿈을 어디로도 보내지 않아요.',
+      ctaTitle: 'Android에서 꿈을 남겨요',
+      ctaSub: '현재 Android에서 이용할 수 있어요. 계정도 광고도 없고, 앱은 꿈을 어디로도 보내지 않아요.',
+      downloadNote: "Android 13 이상·지원 언어에서 기기 내 받아쓰기가 가능해요. 첫 음성 모델은 시스템이 인터넷으로 내려받을 수 있어요. 미지원 기기도 녹음과 직접 입력은 가능해요. 꿈 풀이는 예언·진단·상담이 아니에요.",
       shots: [],
       features: [
         { icon: 'fa-microphone', title: '눌러서 바로 말하기', desc: "'꿈 남기기'를 누르면 바로 녹음이 시작돼요. 화면을 꺼도 녹음은 이어지고, 한 번에 10분까지 녹음할 수 있어요. 말하기 어려운 아침에는 글로 써도 돼요." },
-        { icon: 'fa-file-lines', title: '휴대폰 안에서 받아쓰기', desc: '녹음을 끝내면 휴대폰 안에서 글로 받아써요. 받아쓰기는 iOS 26 이상(iOS 16~25는 iPhone 기종과 언어에 따라 달라요)과 Android 13 이상(되는 언어는 휴대폰에 따라 달라요)에서 돼요. 받아쓰기가 안 되는 기기에서도 녹음은 남아요.' },
+        { icon: 'fa-file-lines', title: '휴대폰 안에서 받아쓰기', desc: '녹음을 끝내면 휴대폰 안에서 글로 받아써요. 받아쓰기는 Android 13 이상(되는 언어는 휴대폰에 따라 달라요)에서 돼요. 받아쓰기가 안 되는 기기에서도 녹음은 남아요.' },
         { icon: 'fa-book-open', title: '기록장과 상징 풀이', desc: '감정·생생함과 자각몽·되풀이되는 꿈·악몽 표시를 함께 남기고, 목록·달력·통계로 모아 봐요. 꿈에 자주 나오는 상징 120개를 8가지 분류로 담은 사전이 있어요. 풀이는 전해 오는 이야기와 해석이에요. 앞일을 알려 주지 않아요.' },
         { icon: 'fa-lock', title: '꿈은 내 기기에', desc: '꿈 글·녹음·받아쓴 글은 휴대폰 안에 저장되고, 앱은 꿈을 어디로도 보내지 않아요. 계정·광고·분석·오류 보고가 없어요. 앱 잠금을 켜면 잠금을 풀어야 꿈을 볼 수 있어요.' },
       ],
     },
     ja: {
-      tagline: '録音を端末の中で文字起こし',
-      lede: 'ゆうべは、朝に声で残す夢日記です。目が覚めたらボタンをひとつ押して、思い出したことを話してください。録音を終えるとスマホの中で文字起こしをするので、文字を確かめて保存すれば記録に残ります。一般公開の準備中です。',
+      tagline: '声で残す夢日記',
+      lede: 'ゆうべは、朝に声で残す夢日記です。目が覚めたらボタンをひとつ押して、思い出したことを話してください。録音を終えるとスマホの中で文字起こしをするので、文字を確かめて保存すれば記録に残ります。現在Androidで公開中です。',
       metaDesc: '声で残す夢日記。録音をスマホの中で文字起こしし、一覧・カレンダー・統計と120個のシンボル辞典でふり返れます。アカウント・広告・分析はなく、アプリが夢をどこかへ送ることはありません。',
       shotsTitle: '',
       featuresTitle: 'アプリについて',
-      ctaTitle: '一般公開の準備中',
-      ctaSub: 'iPhone・Androidでの一般公開を準備しています。アカウントも広告もなく、アプリが夢をどこかへ送ることはありません。',
+      ctaTitle: 'Androidで夢を残そう',
+      ctaSub: '現在Androidで公開中です。アカウントも広告もなく、アプリが夢をどこかへ送ることはありません。',
+      downloadNote: "端末内の文字起こしはAndroid 13以降の対応言語で利用可能です。初回の音声モデルはシステムが通信で取得する場合があります。非対応端末でも録音と手入力は可能。夢の読み解きは予言・診断・相談ではありません。",
       shots: [],
       features: [
         { icon: 'fa-microphone', title: 'ワンタップですぐ話せる', desc: '「夢を残す」を押すと、すぐに録音が始まります。画面を消しても録音は続き、1回に10分まで録音できます。話しにくい朝は、文字で書いてもかまいません。' },
-        { icon: 'fa-file-lines', title: 'スマホの中で文字起こし', desc: '録音を終えると、スマホの中で文字起こしをします。文字起こしはiOS 26以降（iOS 16〜25はiPhoneの機種と言語によって異なります）とAndroid 13以降（使える言語はスマホによって異なります）で使えます。文字起こしを使えない端末でも録音は残ります。' },
+        { icon: 'fa-file-lines', title: 'スマホの中で文字起こし', desc: '録音を終えると、スマホの中で文字起こしをします。文字起こしはAndroid 13以降（使える言語はスマホによって異なります）で使えます。文字起こしを使えない端末でも録音は残ります。' },
         { icon: 'fa-book-open', title: '記録とシンボルの読み解き', desc: '気持ち・鮮明さ、明晰夢・繰り返し見る夢・悪夢の印をいっしょに残し、一覧・カレンダー・統計でふり返れます。夢によく出てくるシンボル120個を8つの分類にまとめた辞典があります。読み解きは言い伝えと解釈です。これから起こることを知らせるものではありません。' },
         { icon: 'fa-lock', title: '夢はあなたの端末に', desc: '夢の記録・録音・文字起こしはスマホの中に保存され、アプリが夢をどこかへ送ることはありません。アカウント・広告・分析・エラー報告はありません。アプリのロックをオンにすると、解除しないと夢の記録を見られません。' },
       ],
     },
     en: {
       tagline: 'On-device speech to text',
-      lede: 'Yesternight is a dream journal you keep by voice. Tap one button when you wake up and say whatever you remember. When you finish, the recording is turned into text on your phone for you to check and save in your journal. Preparing for public release.',
+      lede: 'Yesternight is a dream journal you keep by voice. Tap one button when you wake up and say whatever you remember. When you finish, the recording is turned into text on your phone for you to check and save in your journal. Available on Android.',
       metaDesc: 'A dream journal you keep by voice. Recordings are transcribed on your phone; look back with a list, a calendar, stats and a dictionary of 120 dream symbols. No account, ads or analytics.',
       shotsTitle: '',
       featuresTitle: 'About the app',
-      ctaTitle: 'Preparing for public release',
-      ctaSub: 'Preparing for public release on iPhone and Android. No account, no ads, and the app never sends your dreams anywhere.',
+      ctaTitle: 'Keep a dream journal on Android',
+      ctaSub: 'Available on Android. No account, no ads, and the app never sends your dreams anywhere.',
+      downloadNote: "On-device transcription needs Android 13+ and a supported language. The system may download a speech model initially. Recording and manual entry still work where transcription is unavailable. Dream readings are not predictions, diagnosis or counseling.",
       shots: [],
       features: [
         { icon: 'fa-microphone', title: 'Record in one tap', desc: 'Tap "Record" and recording starts right away. It keeps going if you turn off the screen, for up to 10 minutes at a time. Don\'t feel like talking? Write it down instead.' },
-        { icon: 'fa-file-lines', title: 'Transcribed on your phone', desc: 'When you finish, the recording is transcribed on your phone. Transcription works on iOS 26 or later (on iOS 16 to 25 it depends on your iPhone model and the language) and Android 13 or later (languages depend on your phone). Where it isn\'t available, the recording is still kept.' },
+        { icon: 'fa-file-lines', title: 'Transcribed on your phone', desc: 'When you finish, the recording is transcribed on your phone. Transcription works on Android 13 or later (languages depend on your phone). Where it isn\'t available, the recording is still kept.' },
         { icon: 'fa-book-open', title: 'A journal and dream symbols', desc: 'Add your feelings, how vivid it was, and whether it was lucid, recurring or a nightmare, then look back with a list, a calendar and stats. A dictionary of 120 common dream symbols in 8 categories. Readings are folklore and interpretation; they don\'t tell the future.' },
         { icon: 'fa-lock', title: 'Your dreams stay yours', desc: 'Dream entries, recordings and transcripts are stored on your phone, and the app never sends your dreams anywhere. No accounts, ads, analytics or crash reports. Turn on the app lock to require unlocking before your dreams are shown.' },
       ],
@@ -1440,9 +1580,9 @@ const dream: AppMeta = {
   },
 };
 
-export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky, 'pipi-spend': spend, 'pipi-dream': dream };
+export const apps: Record<string, AppMeta> = { 'pipi-focus': focus, 'pipi-draw': draw, 'pipi-word-voyage': wordVoyage, 'pipi-hello': hello, 'pipi-words': words, 'pipi-dday': dday, 'pipi-log': log, 'dialogos': dialogos, 'pipi-bridge': bridge, 'pipi-legion': legion, 'pipi-tide': tide, 'pipi-sudoku': sudoku, 'kkachi': kkachi, 'pipi-sky': sky, 'pipi-spend': spend, 'pipi-dream': dream, 'pipi-bp': bp };
 // 출시 앱을 먼저, 출시 예정 앱을 뒤에 둔다. Bridge는 공개 앱이다.
-export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, spend, sky, legion];
+export const appList: AppMeta[] = [bridge, focus, draw, wordVoyage, hello, words, dday, log, dialogos, tide, sudoku, kkachi, spend, bp, sky, dream, legion];
 /** 출시 완료 앱 수 — 카피·구조화 데이터가 수동 숫자를 들고 있지 않게 파생시킨다. */
 export const liveAppCount: number = appList.filter((a) => a.status === 'live').length;
 /** 출시 완료 앱만 — 함대 정비 기록·구조화 데이터가 공유한다. */

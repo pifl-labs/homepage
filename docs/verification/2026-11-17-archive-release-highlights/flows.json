@@ -1,0 +1,29 @@
+[
+  {
+    "lang": "ko",
+    "mobileFilter": true,
+    "platformFilter": true,
+    "keyboardDetails": true,
+    "evidenceLink": true,
+    "backPreservesFilters": true,
+    "reset": true
+  },
+  {
+    "lang": "ja",
+    "mobileFilter": true,
+    "platformFilter": true,
+    "keyboardDetails": true,
+    "evidenceLink": true,
+    "backPreservesFilters": true,
+    "reset": true
+  },
+  {
+    "lang": "en",
+    "mobileFilter": true,
+    "platformFilter": true,
+    "keyboardDetails": true,
+    "evidenceLink": true,
+    "backPreservesFilters": true,
+    "reset": true
+  }
+]

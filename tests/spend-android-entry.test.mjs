@@ -5,11 +5,11 @@ import {appList,apps,liveAppCount} from '../src/data/apps.ts';
 import {archiveJourneys} from '../src/data/archive-journeys.mjs';
 const evidence=JSON.parse(readFileSync('docs/release/spend-android-public-20261105.json','utf8'));
 test('Spend joins the original fourteen without inventing an iOS launch or binary version',()=>{
- assert.equal(appList.length,15);assert.equal(liveAppCount,13);
+ assert.equal(appList.length,17);assert.equal(liveAppCount,16);
  assert.equal(appList.find(a=>a.slug==='pipi-spend'),apps['pipi-spend']);
  const app=apps['pipi-spend'];assert.equal(app.status,'live');assert.deepEqual(app.stores,{android:'https://play.google.com/store/apps/details?id=com.pifl.pipi.spend'});
- assert.equal(app.release,undefined);assert.equal(app.catalogPreview,false);assert.equal(app.heroShot,undefined);
- assert.deepEqual(appList.filter(a=>a.status==='soon').map(a=>a.slug),['pipi-sky','pipi-legion']);
+ assert.deepEqual(app.release,{android:{version:'1.0.0',updated:'2026-10-28',checkedAt:'2026-11-17'},checkedAt:'2026-11-16'});assert.equal(app.catalogPreview,false);assert.equal(app.heroShot,undefined);
+ assert.deepEqual(appList.filter(a=>a.status==='soon').map(a=>a.slug),['pipi-legion']);
 });
 test('all three source markets verify package, actual name, developer and Android',()=>{
  for(const a of evidence.apps){assert.equal(a.status,200);assert.equal(new URL(a.url).searchParams.get('id'),'com.pifl.pipi.spend');assert.equal(a.schema.author.name,'PiFl Labs');assert.equal(a.schema.operatingSystem.toLowerCase(),'android');assert.equal(String(a.schema.offers[0].price),'0');assert.equal(apps['pipi-spend'].nameByLang?.[a.locale]??apps['pipi-spend'].name,a.schema.name);}
@@ -20,8 +20,8 @@ test('Spend history limit is explicit; no fabricated version stages',()=>{
 });
 for(const lang of ['en','ko','ja'])test(`${lang}: truthful landing, existing privacy route and home install entry`,()=>{
  const app=readFileSync(`dist/${lang}/apps/pipi-spend/index.html`,'utf8');const home=readFileSync(`dist/${lang}/index.html`,'utf8');
- assert.match(app,/"operatingSystem":"Android"/);assert.match(app,/"applicationCategory":"FinanceApplication"/);
- assert.doesNotMatch(app,/"softwareVersion"|"datePublished"|"dateModified"|class="app-rel-line"|class="app-shots-scroll"/);
+ assert.match(app,/"operatingSystem":"Android"/);assert.match(app,/"dateModified":"2026-10-28"/);assert.match(app,/Android v1\.0\.0/);assert.match(app,/"applicationCategory":"FinanceApplication"/);
+ assert.doesNotMatch(app,/"softwareVersion"|"datePublished"|class="app-shots-scroll"/);
  assert.match(app,/data-store-link="https:\/\/play.google.com\/store\/apps\/details\?id=com.pifl.pipi.spend"/);
  const main=app.match(/<main[\s\S]*?<\/main>/)[0];assert.doesNotMatch(main,/apps.apple.com|store-badge--soon/);
  assert.ok(existsSync(`dist/${lang}/apps/pipi-spend/privacy/index.html`));

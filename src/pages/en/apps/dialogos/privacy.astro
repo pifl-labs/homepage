@@ -5,7 +5,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 <BaseLayout
   lang="en"
   title={"Dialogos Privacy Policy - PiFl Labs"}
-  description={"Privacy policy for the Dialogos app by PiFl Labs — a Stoic-philosophy dialogue app with no accounts, no ads, and no tracking."}
+  description={"Privacy policy for the Dialogos app by PiFl Labs — an app for conversations with philosophers, with no accounts, no ads, and no tracking."}
   canonical="https://pifl-labs.com/en/apps/dialogos/privacy/"
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/dialogos/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/dialogos/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"}]}
   extraCss={["/styles.css", "/styles-log-policy.css?v=e176a37f7a6f"]}
@@ -14,14 +14,14 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
         <div class="container">
             <a href="/en/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Dialogos</a>
             <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name">Dialogos</span> <span class="log-policy-type">Privacy Policy</span></span></h1>
-            <p class="legal-date">Effective date: November 13, 2026 <span class="legal-revised">First effective: June 14, 2026 · Provider: PiFl Labs</span></p>
+            <p class="legal-date">Effective date: November 16, 2026 <span class="legal-revised">First effective: June 14, 2026 · Provider: PiFl Labs</span></p>
         </div>
     </section>
 
     <main class="legal-page">
         <div class="container">
             <div class="legal-card">
-                <p>Dialogos ("the app", "we") is a Stoic-philosophy dialogue app published by PiFl Labs. We designed Dialogos to collect as little as possible. We have <strong>no user accounts, no advertising, no analytics SDKs, and no cross-app or cross-site tracking.</strong></p>
+                <p>Dialogos ("the app", "we") is an app for conversations with philosophers, published by PiFl Labs. We designed Dialogos to collect as little as possible. We have <strong>no user accounts, no advertising, no analytics SDKs, and no cross-app or cross-site tracking.</strong></p>
 
                 <h2>1. Purpose of Processing</h2>
                 <p>We use information solely to:</p>
@@ -31,7 +31,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Purchases</strong>: verify and apply your purchases</li>
                     <li><strong>Reports and safety</strong>: review reports of AI replies and keep the app safe</li>
                     <li><strong>Support</strong>: answer the messages you send us</li>
-                    <li><strong>Provider comparison</strong>: compare and improve the replies of our two AI providers — their quality, safety, speed, and cost, and whether conversations go on, people come back, and choose Pro — using the pseudonymous statistics in section 2</li>
+                    <li><strong>Provider comparison</strong>: compare and improve the replies of the two AI providers we compared until November 13, 2026 — their quality, safety, speed, and cost, and whether conversations go on, people come back, and choose Pro — using the pseudonymous statistics in section 2 recorded until then</li>
+                    <li><strong>Symposium usage</strong>: see how the Symposium is used, through its usage totals in section 2 (day totals not tied to anyone)</li>
+                    <li><strong>Crisis-support country</strong>: suggest which country's crisis-support contacts to show first</li>
                 </ul>
                 <p>We do not sell or rent any data, and we do not use it for advertising.</p>
 
@@ -41,23 +43,23 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h3>Anonymous device identifier</h3>
                 <ul>
                     <li>On first launch the app generates a random token stored on your device.</li>
-                    <li>It is sent with each request to our server <strong>only</strong> to apply the daily limits fairly, to apply your purchases if you buy something, and — while we compare our two AI providers — to decide which of them answers the device and to derive the pseudonymous key of the service-improvement statistics (below).</li>
+                    <li>It is sent with each request to our server <strong>only</strong> to apply the daily limits fairly and to apply your purchases if you buy something.</li>
                     <li>It is not your name, email, phone number, or an advertising identifier, and it is not linked to your identity.</li>
-                    <li>It is not sent to our AI providers.</li>
+                    <li>It is not sent to our AI provider.</li>
                 </ul>
 
                 <h3>Conversation content</h3>
                 <ul>
                     <li>The messages you write and the ongoing conversation are sent over an encrypted connection to our backend (a Cloudflare Worker). The app sends at most the most recent 40 messages, about 22,000 characters.</li>
-                    <li>Our backend passes on only the most recent part, up to 24 messages and 12,000 characters, together with our instructions for the mentor, to one of our AI providers — <strong>Anthropic, PBC</strong> or <strong>OpenAI OpCo, LLC</strong> (both in the United States; "Anthropic" and "OpenAI" below) — for the sole purpose of generating the philosopher's reply.</li>
-                    <li>Our server decides which provider answers: while we compare the two (from October 2026), each device that has agreed to the current AI conversation consent is assigned to one of them, and if that provider cannot answer, the other may answer that message instead.</li>
-                    <li>A device that agreed only to the earlier consent, which named OpenAI alone, is answered by OpenAI only, and so are messages sent from countries or regions where Anthropic does not offer its service.</li>
+                    <li>Our backend passes on only the most recent part, up to 24 messages and 12,000 characters, together with our instructions for the mentor, to our AI provider, <strong>OpenAI OpCo, LLC</strong> (United States; "OpenAI" below), for the sole purpose of generating the philosopher's reply.</li>
+                    <li>In the Symposium, where two philosophers answer together, the room's conversation is sent the same way to generate each philosopher's reply.</li>
+                    <li>From October 2026 until November 13, 2026, while we compared two AI providers, some messages from devices that had agreed to the AI conversation consent naming both were sent to <strong>Anthropic, PBC</strong> (United States; "Anthropic" below) to answer (when Anthropic could not answer, OpenAI answered instead).</li>
+                    <li>We no longer send conversations to Anthropic. Before we send conversations to any AI provider other than OpenAI (Anthropic included), we will first update and publish this policy.</li>
                     <li><strong>We do not store your conversation content on our servers</strong>, except a reply you report and the message right before it (see "Reports of AI replies" below).</li>
-                    <li>By default neither provider uses the conversations we send to train its models, and we do not opt in to sharing data for training.</li>
+                    <li>By default OpenAI does not use the conversations we send to train its models, and we do not opt in to sharing data for training.</li>
                     <li>We call OpenAI with storage turned off (store: false), so OpenAI does not keep the conversation as application state.</li>
                     <li>OpenAI does keep abuse-monitoring logs, which may include your messages and the replies, for up to 30 days, and may keep an encrypted prompt cache for up to 24 hours.</li>
-                    <li>Anthropic deletes the conversations it receives within 30 days, except that a conversation its automated trust-and-safety systems flag as a possible violation of its Usage Policy may be kept for up to 2 years (its classification scores for up to 7 years).</li>
-                    <li>Anthropic also keeps the request (our instructions and the conversation we sent) in a prompt cache for up to 5 minutes after it was last used, to answer the next message faster (see sections 3 and 12).</li>
+                    <li>Anthropic does not use the conversations it received for model training and deletes them within 30 days, except that a conversation its automated trust-and-safety systems flagged as a possible violation of its Usage Policy may be kept for up to 2 years (its classification scores for up to 7 years) (see sections 3 and 12).</li>
                 </ul>
 
                 <h3>Purchases and purchase verification</h3>
@@ -96,13 +98,27 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li>Only the daily number of reports filed is counted by a one-way hash of the identifier instead (it expires on the same schedule).</li>
                     <li><strong>Service-wide daily spend total</strong>: To keep costs and abuse in check, our server also keeps a service-wide counter per day of the total AI spend with each AI provider. These are not tied to any device or person, contain no personal data, and expire automatically within about two days.</li>
                     <li><strong>Rate limiting</strong>: To slow down abusive traffic, our server uses Cloudflare's rate-limiting feature, which counts requests per IP address over a short window. Cloudflare uses the IP address only transiently, as the key of that counter, and we do not store it in our own records.</li>
-                    <li><strong>Operational logs</strong>: Our operational logs record the first 8 characters of the device identifier and usage details (such as plan, type of answer, which AI provider answered and why, token counts, how the reply ended, whether it was handled as a crisis, and the platform, product and result of a purchase check) — never message content.</li>
-                    <li><strong>Cloudflare request logs</strong>: Cloudflare's request logs for our server may also include connection information such as IP addresses.</li>
+                    <li><strong>Operational logs</strong>: Our operational logs record the first 8 characters of the device identifier and usage details (such as plan, type of answer, which AI provider and model answered, token counts, how the reply ended, whether it was handled as a crisis, and the platform, product and result of a purchase check) — never message content.</li>
+                    <li><strong>Symposium operational logs</strong>: In the Symposium, our operational logs also record the pair of philosophers, the round number, how the round was played (including the answer button you tapped and whether only one philosopher answered because the topic was sensitive) and the topic card (when your words touched the pair's issue).</li>
+                    <li><strong>Cloudflare request logs</strong>: Cloudflare's request logs for our server (Workers invocation logs) may also include connection information such as IP addresses and the estimated country, and are deleted automatically within 7 days.</li>
+                </ul>
+
+                <h3>Symposium usage totals</h3>
+                <ul>
+                    <li>To see how the Symposium is used, our server keeps only day totals: rounds played, rooms that reached a second round, rounds for each pair of philosophers, how often each answer button was tapped (and whether a reason was added), rounds that turned to crisis support, and philosopher replies that failed.</li>
+                    <li>They contain no device identifier, IP address, or conversation content, so they cannot be tied to any device or person.</li>
+                    <li>Each day's totals are deleted automatically about 120 days later.</li>
+                </ul>
+
+                <h3>Suggesting crisis-support contacts for your country</h3>
+                <ul>
+                    <li>When the app shows crisis-support contacts, it asks our server — without the device identifier or any conversation — which country's contacts to suggest first, and our server reads only the country that Cloudflare estimates from the connection's IP address and returns it.</li>
+                    <li>We do not store the estimated country or the IP address in our records, and a country you choose yourself is not kept after the app restarts (Cloudflare's request logs may keep them for up to 7 days, as above).</li>
                 </ul>
 
                 <h3>Service-improvement statistics</h3>
                 <ul>
-                    <li>While we compare our two AI providers (from October 2026), for each message from a device that has agreed to the current AI conversation consent our server records:
+                    <li>While we compared two AI providers (from October 2026 until November 13, 2026), for each message from a device that had agreed to the AI conversation consent naming both providers our server recorded:
                         <ul>
                             <li>the time</li>
                             <li>a pseudonymous experiment key (derived from the device identifier by a one-way hash, so it does not reveal the identifier and cannot be matched with our purchase records)</li>
@@ -114,9 +130,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                             <li>token counts, cost, response times, and the length of the reply</li>
                         </ul>
                     </li>
-                    <li>These statistics never include the content of messages or replies, and nothing about purchases beyond the plan.</li>
-                    <li>We use them only to compare and improve the two providers' replies: their quality, safety, speed, and cost, and how they affect whether a conversation goes on, whether people come back within a week, and whether they choose Pro.</li>
-                    <li>They are kept in Cloudflare's analytics service and deleted automatically after 3 months, and we stop recording them when the comparison ends.</li>
+                    <li>These statistics never included the content of messages or replies, and nothing about purchases beyond the plan.</li>
+                    <li>We stopped recording them when the comparison ended on November 13, 2026.</li>
+                    <li>What was recorded is kept in Cloudflare's analytics service, used only to compare and improve the two providers' replies (their quality, safety, speed, and cost, and how they affect whether a conversation goes on, whether people come back within a week, and whether they choose Pro), and deleted automatically 3 months after it was recorded.</li>
                 </ul>
 
                 <h3>Reports of AI replies</h3>
@@ -141,9 +157,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h3>Conversation history on your device</h3>
                 <ul>
-                    <li>So that you can come back to them, your conversations with the mentors (your messages and their replies) are kept on your device only, up to the most recent 200 messages with each mentor.</li>
+                    <li>So that you can come back to them, your conversations with the mentors (your messages and their replies) are kept on your device only, up to the most recent 200 messages with each mentor, and with each pair of philosophers in the Symposium.</li>
                     <li>We do not receive or store this history. Only the conversation under way is sent to generate a reply, as described above.</li>
-                    <li>You can clear it at any time with "Clear conversation history" in Settings, and deleting the app removes it.</li>
+                    <li>You can clear it at any time with "Clear conversation history" in Settings (Symposium conversations are cleared too), and deleting the app removes it.</li>
                     <li>Your device's own backup (such as iCloud or Google backup) may include it, as with other app data.</li>
                 </ul>
 
@@ -154,13 +170,13 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                             <li>OpenAI does not keep it as application state (store: false).</li>
                             <li>OpenAI's abuse-monitoring logs are kept for up to 30 days (longer only where required by law or reasonably necessary to protect OpenAI's services or others from harm).</li>
                             <li>OpenAI's encrypted prompt cache is kept for no more than 24 hours.</li>
-                            <li>Anthropic deletes it within 30 days (a conversation flagged as a possible Usage Policy violation: up to 2 years, classification scores up to 7 years; longer where required by law).</li>
-                            <li>Anthropic's prompt cache is deleted within 5 minutes of last use.</li>
+                            <li>Anthropic deletes what it received until November 13, 2026 within 30 days (a conversation flagged as a possible Usage Policy violation: up to 2 years, classification scores up to 7 years; longer where required by law).</li>
                         </ul>
                     </li>
-                    <li><strong>Service-improvement statistics:</strong> deleted automatically 3 months after they are recorded.</li>
+                    <li><strong>Service-improvement statistics:</strong> no longer recorded since November 13, 2026; what was recorded is deleted automatically 3 months after it was recorded.</li>
+                    <li><strong>Symposium usage totals:</strong> each day's totals are deleted automatically about 120 days later.</li>
                     <li><strong>Daily counters, token totals, and the service-wide daily spend total:</strong> expire automatically within about two days.</li>
-                    <li><strong>Operational logs:</strong> deleted automatically within 7 days.</li>
+                    <li><strong>Operational logs and Cloudflare's request logs:</strong> deleted automatically within 7 days.</li>
                     <li><strong>Purchase-verification records:</strong> deleted automatically 5 years (1,830 days) after the transaction date.
                         <ul>
                             <li>For a subscription, the 5 years run from the end of its latest subscription period.</li>
@@ -171,7 +187,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>Report records:</strong> kept for 90 days, then deleted automatically.</li>
                     <li><strong>Messages you send us by email:</strong> kept for 3 years after we have dealt with them, then deleted.</li>
                     <li><strong>On-device settings:</strong> remain until you delete the app, which removes all local data.</li>
-                    <li><strong>Conversation history on your device:</strong> the most recent 200 messages with each mentor, until you clear it in Settings or delete the app.</li>
+                    <li><strong>Conversation history on your device:</strong> the most recent 200 messages with each mentor (in the Symposium, with each pair of philosophers), until you clear it in Settings or delete the app.</li>
                 </ul>
 
                 <h2>4. Disclosure to Third Parties</h2>
@@ -190,18 +206,18 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Anthropic, PBC</td>
-                            <td>AI processing of your messages to generate replies</td>
-                            <td>Processor</td>
-                        </tr>
-                        <tr>
                             <td>OpenAI OpCo, LLC</td>
                             <td>AI processing of your messages to generate replies</td>
                             <td>Processor</td>
                         </tr>
                         <tr>
+                            <td>Anthropic, PBC</td>
+                            <td>AI processing of some messages to generate replies from October 2026 until November 13, 2026 (we no longer send it conversations)</td>
+                            <td>Processor</td>
+                        </tr>
+                        <tr>
                             <td>Cloudflare</td>
-                            <td>Hosting of our backend, including the daily counters, purchase-verification records, report records, and the service-improvement statistics</td>
+                            <td>Hosting of our backend, including the daily counters, purchase-verification records, report records, the service-improvement statistics, and the Symposium usage totals</td>
                             <td>Processor</td>
                         </tr>
                         <tr>
@@ -214,9 +230,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 </ScrollableLegalTable>
 
                 <h2>6. What We Do Not Collect, Advertising and Tracking</h2>
-                <p>The app itself collects no name, email, account, location, contacts, photos, health data, or biometric data (if you write to us by email, see section 2).</p>
+                <p>The app itself collects no name, email, account, location (the country estimate in section 2 comes only from the connection's IP address and is not stored in our records), contacts, photos, health data, or biometric data (if you write to us by email, see section 2).</p>
                 <ul>
-                    <li>No analytics or advertising SDKs (the service-improvement statistics in section 2 are recorded by our own server, not by an SDK in the app)</li>
+                    <li>No analytics or advertising SDKs (the statistics and totals in section 2 are recorded by our own server, not by an SDK in the app)</li>
                     <li>No advertising identifier (IDFA/GAID)</li>
                     <li>No tracking across other apps or websites</li>
                 </ul>
@@ -268,7 +284,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h2>11. Children's Privacy</h2>
                 <p>Dialogos is not directed at children under 13 (or the minimum age required in your country — 14 in the Republic of Korea) and we do not knowingly collect personal information from children. If we find that we have, we will delete it immediately, as far as we can identify it. A parent or guardian can ask for deletion at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
-                <p>Teenagers may use the app. For their safety, in line with our AI providers' guidelines for services that teenagers may use:</p>
+                <p>Teenagers may use the app. For their safety:</p>
                 <ul>
                     <li>the app always tells you that the mentors' replies are written by AI</li>
                     <li>the mentors are instructed to keep conversations safe and supportive</li>
@@ -279,26 +295,11 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h2>12. International Data Transfers</h2>
                 <p>To provide the app, we transfer information outside your country (entrusting its processing or storage) as follows.</p>
 
-                <h3>Anthropic, PBC</h3>
-                <p>United States · 548 Market St, PMB 90375, San Francisco, CA 94104 · privacy contact: <a href="#" data-email-user="privacy" data-email-domain="anthropic.com"><span class="email-text">privacy (at) anthropic.com</span></a></p>
-                <ul>
-                    <li><strong>Items</strong>: your messages and the ongoing conversation (up to the 24 most recent messages / 12,000 characters) and our instructions for the mentor. The device identifier is not sent.</li>
-                    <li><strong>When and how</strong>: each time our server sends your message to Anthropic to answer (section 2) — including when Anthropic then cannot answer and OpenAI answers instead — through our server over an encrypted connection (HTTPS/TLS).</li>
-                    <li><strong>Purpose</strong>: generating the mentor's reply.</li>
-                    <li><strong>Retention</strong>
-                        <ul>
-                            <li>deleted within 30 days (a conversation flagged as a possible Usage Policy violation: up to 2 years, classification scores up to 7 years)</li>
-                            <li>prompt cache within 5 minutes of last use</li>
-                            <li>not used for model training</li>
-                        </ul>
-                    </li>
-                </ul>
-
                 <h3>OpenAI OpCo, LLC</h3>
                 <p>United States · 1455 3rd Street, San Francisco, CA 94158 · privacy contact: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a></p>
                 <ul>
-                    <li><strong>Items</strong>: your messages and the ongoing conversation (up to the 24 most recent messages / 12,000 characters) and our instructions for the mentor. The device identifier is not sent.</li>
-                    <li><strong>When and how</strong>: each time our server has OpenAI answer your message (section 2), through our server over an encrypted connection (HTTPS/TLS).</li>
+                    <li><strong>Items</strong>: your messages and the ongoing conversation (in the Symposium, the room's conversation; up to the 24 most recent messages / 12,000 characters) and our instructions for the mentor. The device identifier is not sent.</li>
+                    <li><strong>When and how</strong>: each time our server sends your message to OpenAI to answer (section 2), through our server over an encrypted connection (HTTPS/TLS).</li>
                     <li><strong>Purpose</strong>: generating the mentor's reply.</li>
                     <li><strong>Retention</strong>
                         <ul>
@@ -322,17 +323,19 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                             <li>daily counters, token totals and the service-wide daily spend total</li>
                             <li>purchase-verification records</li>
                             <li>operational logs</li>
-                            <li>service-improvement statistics (pseudonymous experiment key and the reply details in section 2, never message content)</li>
-                            <li>connection information such as IP addresses (in request logs; also used transiently for rate limiting)</li>
+                            <li>service-improvement statistics (recorded until November 13, 2026: pseudonymous experiment key and the reply details in section 2, never message content)</li>
+                            <li>Symposium usage totals (day totals not tied to any device)</li>
+                            <li>connection information such as IP addresses (in request logs; also used transiently for rate limiting and to suggest crisis-support contacts for your country)</li>
                         </ul>
                     </li>
-                    <li><strong>When and how</strong>: each time the app contacts our server (messages, purchase checks, reports), over HTTPS/TLS.</li>
-                    <li><strong>Purpose</strong>: hosting our backend (relaying the conversation, applying daily limits, verifying purchases, receiving reports, limiting abusive requests, keeping the service-improvement statistics).</li>
+                    <li><strong>When and how</strong>: each time the app contacts our server (messages, purchase checks, reports, the crisis-support country), over HTTPS/TLS.</li>
+                    <li><strong>Purpose</strong>: hosting our backend (relaying the conversation, applying daily limits, verifying purchases, receiving reports, limiting abusive requests, suggesting crisis-support contacts, keeping the service-improvement statistics and the Symposium usage totals).</li>
                     <li><strong>Retention</strong>: as in section 3
                         <ul>
                             <li>purchase-verification records: 5 years from the transaction date — for a subscription, from the end of its latest period; a pack with answers left is kept until they are used up or refunded</li>
                             <li>report records: 90 days</li>
                             <li>service-improvement statistics: 3 months</li>
+                            <li>Symposium usage totals: about 120 days</li>
                         </ul>
                     </li>
                 </ul>
@@ -344,6 +347,21 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>When and how</strong>: when you buy or restore a purchase — and, if you already have one, when the app starts or the store reports a change such as a renewal — our server sends it to the store's server API over HTTPS/TLS.</li>
                     <li><strong>Purpose</strong>: confirming that the purchase is valid.</li>
                     <li><strong>Retention</strong>: under each company's own privacy policy, as the payment processor.</li>
+                </ul>
+
+                <h3>Anthropic, PBC (until November 13, 2026)</h3>
+                <p>United States · 548 Market St, PMB 90375, San Francisco, CA 94104 · privacy contact: <a href="#" data-email-user="privacy" data-email-domain="anthropic.com"><span class="email-text">privacy (at) anthropic.com</span></a></p>
+                <p>We transferred information to Anthropic only from October 2026 until November 13, 2026, and no longer do.</p>
+                <ul>
+                    <li><strong>Items</strong>: messages and the ongoing conversation (up to the 24 most recent messages / 12,000 characters) from devices that had agreed to the AI conversation consent naming both providers, and our instructions for the mentor. The device identifier was not sent.</li>
+                    <li><strong>When and how</strong>: each time our server sent such a message to Anthropic to answer, through our server over an encrypted connection (HTTPS/TLS).</li>
+                    <li><strong>Purpose</strong>: generating the mentor's reply.</li>
+                    <li><strong>Retention</strong>
+                        <ul>
+                            <li>deleted within 30 days (a conversation flagged as a possible Usage Policy violation: up to 2 years, classification scores up to 7 years)</li>
+                            <li>not used for model training</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h3>If you do not want these transfers</h3>
@@ -365,6 +383,13 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h2>15. Changes to this Policy</h2>
                 <p>We may update this policy; we will revise the effective date above and, for material changes, surface a notice in the app.</p>
+                <p><strong>Revised November 16, 2026</strong></p>
+                <ul>
+                    <li>Replies are now generated by OpenAI alone. Anthropic answered some messages only while we compared the two providers, until November 13, 2026; how long it keeps what it received stays in this policy.</li>
+                    <li>The service-improvement statistics are no longer recorded.</li>
+                    <li>The Symposium, its usage totals, and how the app suggests crisis-support contacts for your country were added.</li>
+                    <li>The description of the app now covers all of its philosophers.</li>
+                </ul>
                 <p><strong>Revised November 13, 2026</strong></p>
                 <ul>
                     <li>The permission iOS asks for when you choose to save a reflection card to Photos (add-only) was added to App Permissions.</li>

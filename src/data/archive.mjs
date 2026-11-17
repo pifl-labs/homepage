@@ -1,7 +1,9 @@
+import {refreshedEvents} from './archive-refresh-20261117.mjs';
 import {extraEvents,extraMedia,extraNames} from './archive-extra.mjs';
+import {releaseHighlights} from './archive-release-highlights-20261117.mjs';
 // Public, manually curated archive. Never import console exports or email bodies.
 const l=(ko,ja,en)=>({ko,ja,en});
-export const archiveEvents=[...extraEvents,
+export const archiveEvents=[...refreshedEvents,...extraEvents,
  {id:'focus-first-approval',app:'pipi-focus',date:'2026-05-21',timestamp:'2026-05-21T09:41:05Z',kind:'approved',platform:'ios',version:null,observedAt:'2026-10-23',source:'notification',title:l('첫 배포 승인 알림','最初の配信承認通知','First distribution approval notice'),summary:l('당시 PiPi Focus의 승인 알림입니다. 버전은 기재되지 않았으며 실제 첫 공개일은 확인되지 않았습니다.','当時のPiPi Focusの承認通知です。バージョンは未記載で、実際の初公開日は未確認です。','Approval notification for the app then named PiPi Focus. No version was stated; its actual first public release date remains unverified.')},
  {id:'focus-web-20260529',app:'pipi-focus',date:'2026-05-29',kind:'asset',platform:null,version:null,observedAt:'2026-10-23',source:'git',reference:'0253ac3366b0c9bdda94c417deb6d2c53d2f56bb',title:l('초기 앱 소개 자산','初期のアプリ紹介資料','Early app presentation assets'),summary:l('웹 저장소에 아이콘과 항해 화면이 남아 있습니다. 이 날짜는 Git 기록일이며 앱 공개일이 아닙니다.','アイコンと航海画面がウェブの履歴に残っています。Gitの記録日であり、アプリの公開日ではありません。','The website history preserves an icon and voyage screen. This is a Git record date, not the app’s launch date.')},
  {id:'draw-submitted-10',app:'pipi-draw',date:'2026-07-14',timestamp:'2026-07-14T08:30:00Z',kind:'submitted',platform:'ios',version:'1.0',observedAt:'2026-10-23',source:'notification',title:l('1.0 심사 제출','1.0を審査に提出','Version 1.0 submitted'),summary:l('스토어 알림으로 심사 제출을 확인했습니다. 제출은 공개 출시가 아닙니다.','ストア通知で審査提出を確認しました。提出は公開を意味しません。','A store notification confirms review submission. Submission does not establish public availability.')},
@@ -28,7 +30,23 @@ const milestones={
  'focus-120':{submittedAt:'2026-10-18T14:32:00Z',approvalNotifiedAt:'2026-10-19T13:21:50Z'},
  'focus-121':{submittedAt:'2026-10-22T02:53:00Z',approvalNotifiedAt:'2026-10-22T17:02:24Z'}
 };
+const enrichedHistoricalIds = new Set([
+ 'dialogos-public','pipi-bridge-public','pipi-word-voyage-public','pipi-log-public',
+ 'pipi-hello-public','pipi-dday-public','pipi-words-public','focus-1016','focus-120','focus-121',
+]);
 for(const event of archiveEvents){
+ const key = `${event.app}@${event.version}`;
+ const highlight = releaseHighlights[`${key}@${event.platform}`] || releaseHighlights[key];
+ if(highlight && (event.id.endsWith('-observed-20261117') || enrichedHistoricalIds.has(event.id))) {
+  event.title = highlight.title;
+  event.summary = highlight.summary;
+  event.contentEvidence = {
+   id: event.id,
+   kind: event.id.endsWith('-observed-20261117') && !(event.app==='pipi-tide' && event.platform==='ios') ? 'store-release-notes' : 'version-release-document',
+   checkedAt: '2026-11-17',
+   url: '/archive-release-notes-20261117.json',
+  };
+ }
  event.timeBasis=event.kind==='released'?'public-store-update':event.kind==='approved'?'notification-date':event.kind==='submitted'?'submission-time':event.kind==='asset'?'git-record-date':'observation-date';
  if(milestones[event.id])event.milestones=milestones[event.id];
 }
@@ -36,3 +54,34 @@ export const archiveNames={...extraNames,
  'pipi-focus':{ko:['PiPi Focus','PiPi Focus: 해적 포모도로','집중항해: 포모도로 타이머'],ja:['PiPi Focus','PiPi Focus: 海賊ポモドーロ','集中航海：ポモドーロタイマー'],en:['PiPi Focus','PiPi Focus: Pirate Pomodoro','Pomodoro at Sea: Focus Timer']},
  'pipi-draw':{ko:['PiPi Draw','밑그림: 사진으로 만드는 색칠공부'],ja:['PiPi Draw','下絵づくり：写真をぬりえに変換'],en:['PiPi Draw','PiPi Draw - AI Sketch Coloring','Photo Outlines: Coloring Book']}
 };
+
+// Current Android name observed 2026-11-16; old events and their dates stay unchanged.
+archiveNames['pipi-sky'] = {
+  ko: [...archiveNames['pipi-sky'].ko, '하늘멍 - 구름층에서 우주까지'],
+  ja: [...archiveNames['pipi-sky'].ja, 'Skylayer - 雲の層から宇宙へ'],
+  en: [...archiveNames['pipi-sky'].en, 'Skylayer: Clouds to Space'],
+};
+archiveMedia['pipi-sky'].upcoming = false;
+
+archiveNames['pipi-words'].ko.push('단어루틴: JLPT 일본어 단어장');
+archiveNames['pipi-words'].ja.push('ことば習慣：TOPIK韓国語単語帳');
+
+/** Freshness belongs to observations, never to build time or historical assets. */
+export const archiveCheckedAt = archiveEvents.map(event => event.observedAt).sort().at(-1);
+
+archiveApps.push('pipi-spend');
+archiveMedia['pipi-spend'] = { oldIcon: null, oldShot: null, newShot: null, upcoming: false, iconSource: 'repository' };
+archiveNames['pipi-spend'] = {"ko":["가계부: 매일 지출 기록"],"ja":["家計簿：毎日の支出記録"],"en":["Spending Log: Expense Tracker"]};
+
+archiveApps.push('pipi-bp');
+archiveMedia['pipi-bp'] = { oldIcon: null, oldShot: null, newShot: null, upcoming: false, iconSource: 'repository' };
+archiveNames['pipi-bp'] = {"ko":["혈압 기록: 혈압 수첩·심박"],"ja":["血圧記録：血圧手帳・脈拍"],"en":["BP Diary & Blood Pressure Log"]};
+
+archiveApps.push('pipi-dream');
+archiveMedia['pipi-dream'] = { oldIcon: null, oldShot: null, newShot: null, upcoming: false, iconSource: 'repository' };
+archiveNames['pipi-dream'] = {"ko":["간밤: 말로 남기는 꿈 일기"],"ja":["ゆうべ：話して残す夢日記"],"en":["Yesternight: Dream Journal"]};
+
+// Keep the older comparison image; label the newer submitted listing by its own date.
+archiveMedia.dialogos.newShot = '/assets/apps/dialogos/submission/20261116-1.webp';
+archiveMedia.dialogos.screenObservedAt = '2026-11-16';
+archiveMedia.dialogos.pending = true;

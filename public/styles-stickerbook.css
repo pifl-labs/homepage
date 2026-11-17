@@ -293,16 +293,17 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
 /* sticker wall */
 .sticker-wall {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
 }
 .sticker {
   position: relative;
-  aspect-ratio: 1/1;
-  padding: 1.2rem;
-  border-radius: 24px;
-  display:flex; align-items:center; justify-content:center;
+  min-width: 0;
+  padding: .8rem;
+  border-radius: 20px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap: .6rem;
   transition: transform .35s var(--ease), box-shadow .35s;
   cursor: default;
 
@@ -379,17 +380,18 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   transition: width .45s var(--ease), opacity .45s, filter .45s;
   pointer-events: none;
 }
+.sticker picture { display: block; width: min(100%, 160px); aspect-ratio: 1; }
 .sticker img {
-  position: relative; z-index: 1; width: 80%; height: 80%; object-fit: contain;
-  /* Slight upward nudge so the post-tape top isn't empty and the label gets a
-     breathing gap underneath — balances the composition without the tape. */
-  margin-top: -8px;
+  position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain;
+  margin: 0;
   transition: transform .4s var(--ease);
 }
 .sticker .label {
-  position:absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
-  font-family: var(--font-code); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
-  color: rgba(var(--sticker-accent), 0.85); z-index: 2;
+  position: relative; width: 100%; text-align: center;
+  font-family: var(--font-code); font-size: .8rem; letter-spacing: .04em; line-height: 1.5; text-transform: uppercase;
+  color: var(--text-secondary); z-index: 2;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
   transition: color .35s;
 }
 .sticker:hover,
@@ -401,6 +403,19 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   width: 90%;
   opacity: 1;
   filter: blur(10px);
+}
+
+/* A contact sheet, not twelve full-width posters. Labels stay in normal flow
+   so larger text never overlaps a bird or another role. */
+@media (max-width: 960px) {
+  .sticker-wall { grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+}
+@media (max-width: 600px) {
+  .crew-section { padding: 3rem 0; }
+  .crew-section .section-head { margin-bottom: 1.25rem; }
+  .sticker-wall { grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: .75rem; }
+  .sticker { padding: .7rem; }
+  .crew-section .annotation-strip { margin-top: 1.25rem; padding: 1rem; }
 }
 
 /* "meet the crew" annotations */
@@ -687,6 +702,10 @@ h2.section-title .italic { font-style:italic; color: var(--accent-highlight); fo
   display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.4rem;
   padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-subtle);
 }
+/* Current app names must fit the existing footer tracks at enlarged text sizes. */
+.footer-grid > * { min-width: 0; }
+.footer-col a { overflow-wrap: anywhere; }
+
 .footer-brand { max-width: 380px; }
 .footer-tagline { font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; font-weight: 400; margin: .8rem 0 1rem; color: var(--text-secondary); font-variation-settings: 'opsz' 144; }
 .footer-desc { color: var(--text-muted); font-size:.9rem; line-height: 1.6; }
@@ -1039,8 +1058,8 @@ html[lang^="ja"] .app-id-cat { word-break: normal; line-break: strict; overflow-
 
   .sticker { opacity: 0; animation: stickIn .6s var(--ease) forwards; }
   @keyframes stickIn {
-    0% { opacity: 0; transform: scale(.6) rotate(-20deg); }
-    70% { transform: scale(1.05) rotate(3deg); }
+    0% { opacity: 0; transform: scale(.6) rotate(0); }
+    70% { transform: scale(1) rotate(0); }
     100% { opacity: 1; transform: scale(1) rotate(0); }
   }
   .sticker:nth-child(1) { animation-delay: 0s; }
@@ -1175,4 +1194,19 @@ html[lang^="ko"] .slot-role { word-break: keep-all; }
 /* logbook 카드 — 다크 패널 → 흰 카드 */
 :root[data-theme="light"] .logbook-card {
   background: linear-gradient(180deg, #ffffff, #f7f9fc);
+}
+
+/* Short store labels wrap as whole words; enlarged text may take its own row. */
+.apps-home .app-card .app-card-store { flex: 1 1 8.5em; overflow-wrap: normal; word-break: normal; }
+.apps-home .app-card .app-card-preview figcaption { word-break: keep-all; overflow-wrap: normal; }
+
+/* Supporting copy needs the same readable word boundaries as primary copy.
+   Keep ordinary wrapping; neither fixed line breaks nor reduced type sizes. */
+.apps-home .app-media-footnote { text-wrap: pretty; }
+html[lang^="ko"] :is(.app-media-footnote, .app-store-name-note, .app-previous-name, .footer, .scribble) {
+  word-break: keep-all;
+}
+html[lang^="ja"] :is(.app-media-footnote, .footer-tagline) {
+  line-break: strict;
+  overflow-wrap: normal;
 }

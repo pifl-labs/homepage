@@ -1,0 +1,110 @@
+[
+  {
+    "lang": "ko",
+    "scale": 1,
+    "app": "pipi-hello",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ko",
+    "scale": 1,
+    "app": "pipi-words",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ko",
+    "scale": 2,
+    "app": "pipi-hello",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ko",
+    "scale": 2,
+    "app": "pipi-words",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ja",
+    "scale": 1,
+    "app": "pipi-hello",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ja",
+    "scale": 1,
+    "app": "pipi-words",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ja",
+    "scale": 2,
+    "app": "pipi-hello",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "ja",
+    "scale": 2,
+    "app": "pipi-words",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "en",
+    "scale": 1,
+    "app": "pipi-hello",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "en",
+    "scale": 1,
+    "app": "pipi-words",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "en",
+    "scale": 2,
+    "app": "pipi-hello",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "lang": "en",
+    "scale": 2,
+    "app": "pipi-words",
+    "noteWordBoundary": true,
+    "selectedCheckVisible": true,
+    "archiveCaptionWordsIntact": true,
+    "noHorizontalOverflow": true
+  }
+]

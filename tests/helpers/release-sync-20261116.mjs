@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+export const syncReceipt=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-20261116.json',import.meta.url),'utf8'));
+export const syncDeltas=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-source-deltas-20261116.json',import.meta.url),'utf8'));
+/** Approved source edits made after the 2026-11-16 sync (Dialogos 1.1.0 copy: philosophers, no numbers). */
+export const laterDeltas=JSON.parse(readFileSync(new URL('../../docs/release/dialogos-110-copy-source-deltas-20261116.json',import.meta.url),'utf8'));
+/** Approved source edits made after the copy layer (Dialogos 1.1.0 screenshots: submitted 2026-11-16 listing set). */
+export const screenshotDeltas=JSON.parse(readFileSync(new URL('../../docs/release/dialogos-110-screenshots-source-deltas-20261116.json',import.meta.url),'utf8'));
+/** Later layers, newest first. Each layer starts from the bytes the next (older) layer ends with. */
+export const refreshReceipt=JSON.parse(readFileSync(new URL('../../docs/release/homepage-refresh-public-20261117.json',import.meta.url),'utf8'));
+const refreshDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-refresh-source-deltas-20261117.json',import.meta.url),'utf8'));
+export const laterLayers=[refreshDeltas,screenshotDeltas,laterDeltas];
+const sha=s=>createHash('sha256').update(s).digest('hex');
+const reverseRow=(row,file,text)=>{
+ for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
+ assert.equal(sha(text),row.beforeSHA256,`historical source restored: ${file}`);return text;
+};
+/** Current bytes back to the synced bytes: only the exact approved later edits reverse, newest first.
+ *  `through` stops after that many layers (0 = none), so each layer can be checked on its own bytes. */
+export function beforeLaterEdits(file,text,{through=laterLayers.length}={}){
+ for(const layer of laterLayers.slice(0,through)){
+  const row=layer[file];if(!row)continue;
+  assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);text=reverseRow(row,file,text);
+ }
+ return text;
+}
+/** Only exact approved bytes reverse to history. Missing/unknown edits are failures, not exemptions. */
+export function beforeReleaseSync(file,text){
+ for(const layer of laterLayers){const later=layer[file];if(later&&sha(text)===later.afterSHA256)text=reverseRow(later,file,text);}
+ const row=syncDeltas[file];assert.ok(row,file);assert.equal(sha(text),row.afterSHA256,`unrecorded source edit: ${file}`);
+ for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
+ assert.equal(sha(text),row.beforeSHA256,`historical source restored: ${file}`);return text;
+}
+const suffixes={'pipi-word-voyage':'wordvoyage',dialogos:'thus',kkachi:'kkachi'};
+export const packageFor=slug=>'com.pifl.pipi.'+(suffixes[slug]??slug.replace('pipi-',''));
+export const currentIOS=slug=>refreshReceipt.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));
+export const currentAndroid=slug=>refreshReceipt.android.find(a=>a.package===packageFor(slug));
+export const androidDay=a=>a.updated.match(/\d+/g).map((s,i)=>i?s.padStart(2,'0'):s).join('-');
+
+export const checkedAtFor=(slug,platform)=>refreshReceipt.observedAt;
+export const currentIOSName=(slug,lang)=>{const C={ko:'KR',ja:'JP',en:'US'}[lang];return syncReceipt.ios[C].apps.find(a=>a.bundleId===packageFor(slug))?.trackName??currentIOS(slug)?.trackName};
+export const currentAndroidName=(slug,lang)=>lang==='ko'||slug==='pipi-tide'?currentAndroid(slug)?.name:syncReceipt.nativeAndroidNames[{ja:'JP',en:'US'}[lang]].apps.find(a=>new URL(a.url).searchParams.get('id')===packageFor(slug))?.name;
+
+export const expectedRelease=(slug,platform)=>{const r=platform==='ios'?currentIOS(slug):currentAndroid(slug);return {version:r.version,updated:platform==='ios'?r.currentVersionReleaseDate.slice(0,10):androidDay(r),checkedAt:refreshReceipt.observedAt};};

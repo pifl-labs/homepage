@@ -5,7 +5,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 <BaseLayout
   lang="ja"
   title={"Dialogos プライバシーポリシー - PiFl Labs"}
-  description={"PiFl Labs Dialogos アプリのプライバシーポリシー — アカウント・広告・トラッキングのないストア哲学の対話アプリ"}
+  description={"PiFl Labs Dialogos アプリのプライバシーポリシー — アカウント・広告・トラッキングなしで哲学者と対話するアプリ"}
   canonical="https://pifl-labs.com/ja/apps/dialogos/privacy/"
   alternates={[{"hreflang":"en","href":"https://pifl-labs.com/en/apps/dialogos/privacy/"},{"hreflang":"ko","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"},{"hreflang":"ja","href":"https://pifl-labs.com/ja/apps/dialogos/privacy/"},{"hreflang":"x-default","href":"https://pifl-labs.com/ko/apps/dialogos/privacy/"}]}
   extraCss={["/styles.css", "/styles-log-policy.css?v=e176a37f7a6f"]}
@@ -14,14 +14,14 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
         <div class="container">
             <a href="/ja/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Dialogos の紹介に戻る</a>
             <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name">Dialogos</span> <span class="log-policy-type"><span class="log-policy-term">プライバシー</span><wbr /><span class="log-policy-term">ポリシー</span></span></span></h1>
-            <p class="legal-date">施行日: 2026年11月13日 <span class="legal-revised">初版施行: 2026年6月14日 · 提供者: PiFl Labs</span></p>
+            <p class="legal-date">施行日: 2026年11月16日 <span class="legal-revised">初版施行: 2026年6月14日 · 提供者: PiFl Labs</span></p>
         </div>
     </section>
 
     <main class="legal-page">
         <div class="container">
             <div class="legal-card">
-                <p>Dialogos(以下「本アプリ」)は PiFl Labs が提供するストア哲学の対話アプリです。当社は可能な限り少なく収集するよう Dialogos を設計しています。<strong>アカウント・広告・分析SDK・アプリ間/サイト間トラッキングは一切ありません。</strong></p>
+                <p>Dialogos(以下「本アプリ」)は PiFl Labs が提供する、哲学者と対話するアプリです。当社は可能な限り少なく収集するよう Dialogos を設計しています。<strong>アカウント・広告・分析SDK・アプリ間/サイト間トラッキングは一切ありません。</strong></p>
 
                 <h2>第1条 (利用目的)</h2>
                 <p>次の目的のためだけに使用します。</p>
@@ -31,7 +31,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>購入</strong>: 購入の確認と適用</li>
                     <li><strong>報告・安全管理</strong>: 報告の確認とアプリの安全管理</li>
                     <li><strong>お問い合わせ</strong>: お寄せいただいたメールへの返信</li>
-                    <li><strong>AI提供者の比較・改善</strong>: 第2条の仮名の統計による2つの AI 提供者の返答の比較と改善(品質・安全・速さ・費用、対話が続くか・再び訪れるか・Pro を選ぶか)</li>
+                    <li><strong>AI提供者の比較・改善</strong>: 第2条の仮名の統計(2026年11月13日まで記録)による2つの AI 提供者の返答の比較と改善(品質・安全・速さ・費用、対話が続くか・再び訪れるか・Pro を選ぶか)</li>
+                    <li><strong>饗宴の利用の把握</strong>: 第2条の饗宴の利用集計(特定の人と紐づかない日ごとの合計)による饗宴の使われ方の把握</li>
+                    <li><strong>相談窓口の国の提案</strong>: 危機の相談窓口を表示するときに、どの国の窓口を先に示すかの提案</li>
                 </ul>
                 <p>いかなるデータも販売・貸与せず、広告には利用しません。</p>
 
@@ -41,7 +43,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h3>匿名デバイス識別子</h3>
                 <ul>
                     <li>初回起動時に生成されるランダムなトークンで、端末に保存されます。</li>
-                    <li><strong>1日の利用上限の適用、購入内容の適用、そして2つの AI 提供者を比較する間にどちらの提供者がその端末に答えるかを決め、下記のサービス改善のための統計の仮名キーを作るためだけに</strong>サーバーへのリクエストに付与され、使われます。</li>
+                    <li><strong>1日の利用上限の適用と購入内容の適用のためだけに</strong>サーバーへのリクエストに付与され、使われます。</li>
                     <li>氏名・メール・電話番号・広告識別子ではなく、本人と紐づきません。</li>
                     <li>AI 提供者には送信しません。</li>
                 </ul>
@@ -49,15 +51,15 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h3>対話内容</h3>
                 <ul>
                     <li>入力したメッセージと進行中の対話は、暗号化された通信でバックエンド(Cloudflare Worker)へ送信されます。アプリが送るのは直近の最大40件・約22,000字までです。</li>
-                    <li>バックエンドはそのうち直近の部分(最大24件・12,000字)だけを賢者への指示文とともに AI 提供者 <strong>Anthropic, PBC</strong> または <strong>OpenAI OpCo, LLC</strong>(いずれも米国、以下「Anthropic」「OpenAI」)のどちらかへ渡し、<strong>賢者の返答生成のためだけ</strong>に使用します。</li>
-                    <li>どちらが答えるかは当社サーバーが決めます。2つの提供者を比較する間(2026年10月から)、現在のAI対話への同意をした端末はどちらか一方に割り当てられ、その提供者が答えられないときは、もう一方がそのメッセージに代わりに答えることがあります。</li>
-                    <li>OpenAI のみを記載した以前の同意だけをした端末と、Anthropic がサービスを提供していない国・地域から送られたメッセージには、OpenAI のみが答えます。</li>
+                    <li>バックエンドはそのうち直近の部分(最大24件・12,000字)だけを賢者への指示文とともに AI 提供者 <strong>OpenAI OpCo, LLC</strong>(米国、以下「OpenAI」)へ渡し、<strong>賢者の返答生成のためだけ</strong>に使用します。</li>
+                    <li>2人の賢者がともに答える饗宴でも、同じ方法でその部屋の対話を送り、賢者ごとの返答を生成します。</li>
+                    <li>2つの AI 提供者を比較した2026年10月から11月13日までは、両方の提供者を記載したAI対話への同意をした端末のメッセージの一部を <strong>Anthropic, PBC</strong>(米国、以下「Anthropic」)に送って答えさせました(Anthropic が答えられないときは OpenAI が代わりに答えました)。</li>
+                    <li>現在は Anthropic に対話を送っていません。OpenAI 以外の AI 提供者(Anthropic を含む)に対話を送ることになった場合は、その前にまず本ポリシーを改定して掲載します。</li>
                     <li><strong>対話内容は当社サーバーに保存しません。</strong>ただし、報告した回答とその直前のメッセージは、下記「AIの回答の報告」のとおり保管します。</li>
-                    <li>どちらの提供者も、初期設定で当社が送った対話をモデルの学習に使用しません(当社は学習用データの提供にオプトインしません)。</li>
+                    <li>OpenAI は初期設定で当社が送った対話をモデルの学習に使用しません(当社は学習用データの提供にオプトインしません)。</li>
                     <li>保存機能をオフにした呼び出し(store: false)のため OpenAI は対話を応答記録(アプリケーション状態)として保持しません。</li>
                     <li>ただし OpenAI は不正利用監視ログ(メッセージと返答を含む場合があります)を最大30日間、暗号化されたプロンプトキャッシュを最大24時間保持する場合があります。</li>
-                    <li>Anthropic は受け取った対話を30日以内に削除しますが、自動の安全システムが利用ポリシー違反の可能性として検出した対話は最大2年間(分類スコアは最大7年間)保持する場合があります。</li>
-                    <li>また Anthropic は、次の返答を速くするため、リクエスト(指示文と送った対話)を最後の利用から最大5分間プロンプトキャッシュに保持します(第3条・第12条参照)。</li>
+                    <li>Anthropic は受け取った対話をモデルの学習に使わず30日以内に削除しますが、自動の安全システムが利用ポリシー違反の可能性として検出した対話は最大2年間(分類スコアは最大7年間)保持する場合があります(第3条・第12条参照)。</li>
                 </ul>
 
                 <h3>購入と購入確認</h3>
@@ -96,13 +98,27 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li>1日の報告の回数だけは識別子の一方向ハッシュで数えます(同じ期間で失効)。</li>
                     <li><strong>サービス全体の1日分の利用金額の合計</strong>: コストと不正利用を管理するため、サーバーは AI 提供者ごとにサービス全体の1日分の AI 利用金額の合計カウンターも保持します。これらは特定の端末や個人と紐づかず、個人情報を含まず、約2日で自動的に失効します。</li>
                     <li><strong>レート制限</strong>: また、不正なトラフィックを抑えるため、サーバーは Cloudflare のレート制限機能を使います。この機能は短い時間内の IP アドレスごとのリクエスト数を数えますが、Cloudflare は IP アドレスをこのカウンターのキーとして一時的に使うだけで、当社は IP アドレスを当社の記録に保存しません。</li>
-                    <li><strong>運用ログ</strong>: 運用ログには識別子の先頭8文字と利用情報(プラン、回答方式、答えた AI 提供者とその理由、トークン数、返答の終了理由、危機対応として扱ったかどうか、購入確認のプラットフォーム・商品・結果など)のみを記録し、対話内容は記録しません。</li>
-                    <li><strong>Cloudflare リクエストログ</strong>: サーバーの Cloudflare リクエストログには IP アドレスなどの接続情報が含まれる場合があります。</li>
+                    <li><strong>運用ログ</strong>: 運用ログには識別子の先頭8文字と利用情報(プラン、回答方式、答えた AI 提供者・モデル、トークン数、返答の終了理由、危機対応として扱ったかどうか、購入確認のプラットフォーム・商品・結果など)のみを記録し、対話内容は記録しません。</li>
+                    <li><strong>饗宴の運用ログ</strong>: 饗宴では、運用ログに賢者の組み合わせ・ラウンドの番号・ラウンドの進め方(押された回答ボタンと、話題が繊細なため1人の賢者だけが答えたかどうかを含む)・論点カード(言葉がその組み合わせの論点に触れた場合)も記録します。</li>
+                    <li><strong>Cloudflare リクエストログ</strong>: サーバーの Cloudflare リクエストログ(Workers の呼び出しログ)には IP アドレス・推定された国などの接続情報が含まれる場合があり、7日以内に自動的に削除されます。</li>
+                </ul>
+
+                <h3>饗宴の利用集計</h3>
+                <ul>
+                    <li>饗宴がどのように使われているかを見るため、サーバーは日ごとの合計だけを数えます — 行われたラウンドの数、2ラウンド目まで続いた部屋の数、賢者の組み合わせごとのラウンド数、回答ボタンごとの押された回数(理由を書き添えたかどうかを含む)、危機対応に切り替わったラウンドの数、失敗した賢者の返答の数。</li>
+                    <li>デバイス識別子・IP アドレス・対話内容を含まないため、特定の端末や個人と紐づきません。</li>
+                    <li>各日の合計は約120日後に自動的に削除されます。</li>
+                </ul>
+
+                <h3>相談窓口の国の提案</h3>
+                <ul>
+                    <li>危機の相談窓口を表示するとき、本アプリはデバイス識別子や対話内容を含めずに、どの国の窓口を先に示すかを当社サーバーに問い合わせます。サーバーは Cloudflare が接続元の IP アドレスから推定した国だけを読み取って返します。</li>
+                    <li>当社は推定した国と IP アドレスを当社の記録に保存せず、ご自身で選んだ国もアプリを再起動すると残りません(Cloudflare のリクエストログには上記のとおり最大7日間残る場合があります)。</li>
                 </ul>
 
                 <h3>サービス改善のための統計</h3>
                 <ul>
-                    <li>2つの AI 提供者を比較する間(2026年10月から)、サーバーは現在のAI対話への同意をした端末のメッセージごとに次を記録します。
+                    <li>2つの AI 提供者を比較した期間(2026年10月から11月13日まで)、サーバーは両方の提供者を記載したAI対話への同意をした端末のメッセージごとに次を記録しました。
                         <ul>
                             <li>時刻</li>
                             <li>仮名の実験キー(デバイス識別子を一方向ハッシュで変換した値で、識別子を明かさず、購入記録と照合できません)</li>
@@ -114,9 +130,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                             <li>トークン数、費用、応答時間、返答の長さ</li>
                         </ul>
                     </li>
-                    <li>メッセージと返答の内容は記録せず、購入についてはプラン以外を記録しません。</li>
-                    <li>2つの提供者の返答を比較し改善するためだけに使います — 品質・安全・速さ・費用、そして対話が続くか、1週間以内に再び訪れるか、Pro を選ぶか。</li>
-                    <li>Cloudflare の分析サービスに保管して3か月後に自動的に削除し、比較が終われば記録をやめます。</li>
+                    <li>メッセージと返答の内容は記録せず、購入についてはプラン以外を記録しませんでした。</li>
+                    <li>比較が終わった2026年11月13日に記録をやめました。</li>
+                    <li>記録済みの統計は Cloudflare の分析サービスに保管し、2つの提供者の返答を比較し改善するためだけに使い(品質・安全・速さ・費用、そして対話が続くか、1週間以内に再び訪れるか、Pro を選ぶか)、記録から3か月後に自動的に削除します。</li>
                 </ul>
 
                 <h3>AIの回答の報告</h3>
@@ -141,9 +157,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h3>端末内の対話の記録</h3>
                 <ul>
-                    <li>あとで読み返せるよう、賢者との対話(あなたのメッセージと賢者の返答)を賢者ごとに直近200件まで端末内にのみ保存します。</li>
+                    <li>あとで読み返せるよう、賢者との対話(あなたのメッセージと賢者の返答)を賢者ごと(饗宴では賢者の組み合わせごと)に直近200件まで端末内にのみ保存します。</li>
                     <li>当社はこの記録を受け取らず、保管もしません。返答を生成する際は、上記のとおり進行中の対話だけを送ります。</li>
-                    <li>設定の「対話の記録を消す」でいつでも消すことができ、アプリを削除すると一緒に消去されます。</li>
+                    <li>設定の「対話の記録を消す」でいつでも消すことができ(饗宴の対話も一緒に消えます)、アプリを削除すると一緒に消去されます。</li>
                     <li>ほかのアプリデータと同様に、端末自体のバックアップ(iCloud・Google バックアップなど)に含まれる場合があります。</li>
                 </ul>
 
@@ -154,13 +170,13 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                             <li>OpenAI は応答記録として保持しません(store: false)。</li>
                             <li>不正利用監視ログは最大30日間保持します(法令上より長い保持が必要な場合や、OpenAI のサービス・第三者を害から守るために合理的に必要な場合を除く)。</li>
                             <li>暗号化されたプロンプトキャッシュは24時間を超えて保持しません。</li>
-                            <li>Anthropic は30日以内に削除します。利用ポリシー違反の可能性として検出された対話は最大2年間、分類スコアは最大7年間保持する場合があります(法令上必要な場合はより長くなることがあります)。</li>
-                            <li>Anthropic のプロンプトキャッシュは最後の利用から5分以内です。</li>
+                            <li>Anthropic は2026年11月13日までに受け取った対話を30日以内に削除します。利用ポリシー違反の可能性として検出された対話は最大2年間、分類スコアは最大7年間保持する場合があります(法令上必要な場合はより長くなることがあります)。</li>
                         </ul>
                     </li>
-                    <li><strong>サービス改善のための統計</strong>: 記録から3か月が過ぎると自動削除されます。</li>
+                    <li><strong>サービス改善のための統計</strong>: 2026年11月13日から記録しておらず、記録済みのものは記録から3か月が過ぎると自動削除されます。</li>
+                    <li><strong>饗宴の利用集計</strong>: 各日の合計は約120日後に自動削除されます。</li>
                     <li><strong>日次カウンター・トークン合計・サービス全体の1日分の利用金額の合計</strong>: 約2日で自動失効します。</li>
-                    <li><strong>運用ログ</strong>: 7日以内に自動削除されます。</li>
+                    <li><strong>運用ログと Cloudflare のリクエストログ</strong>: 7日以内に自動削除されます。</li>
                     <li><strong>購入確認記録</strong>: 取引日から5年(1,830日)が過ぎると自動的に削除します。
                         <ul>
                             <li>サブスクリプションは最後の契約期間が終了した日から5年です。</li>
@@ -171,7 +187,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>報告記録</strong>: 90日間保持した後、自動的に削除されます。</li>
                     <li><strong>お問い合わせメール</strong>: 対応完了後3年間保管し、その後削除します。</li>
                     <li><strong>端末内設定</strong>: アプリを削除するまで保持され、削除時にすべてのローカルデータが消去されます。</li>
-                    <li><strong>端末内の対話の記録</strong>: 賢者ごとに直近200件まで、設定で消すかアプリを削除するまで残ります。</li>
+                    <li><strong>端末内の対話の記録</strong>: 賢者ごと(饗宴では賢者の組み合わせごと)に直近200件まで、設定で消すかアプリを削除するまで残ります。</li>
                 </ul>
 
                 <h2>第4条 (第三者提供)</h2>
@@ -190,18 +206,18 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Anthropic, PBC</td>
-                            <td>返答生成のためのメッセージ AI 処理</td>
-                            <td>処理者</td>
-                        </tr>
-                        <tr>
                             <td>OpenAI OpCo, LLC</td>
                             <td>返答生成のためのメッセージ AI 処理</td>
                             <td>処理者</td>
                         </tr>
                         <tr>
+                            <td>Anthropic, PBC</td>
+                            <td>2026年10月から11月13日までの一部のメッセージの返答生成のための AI 処理(現在は対話を送っていません)</td>
+                            <td>処理者</td>
+                        </tr>
+                        <tr>
                             <td>Cloudflare</td>
-                            <td>バックエンドのホスティング、日次カウンター・購入確認記録・報告記録・サービス改善のための統計の保管を含む</td>
+                            <td>バックエンドのホスティング、日次カウンター・購入確認記録・報告記録・サービス改善のための統計・饗宴の利用集計の保管を含む</td>
                             <td>処理者</td>
                         </tr>
                         <tr>
@@ -214,9 +230,9 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 </ScrollableLegalTable>
 
                 <h2>第6条 (収集しない情報、広告およびトラッキング)</h2>
-                <p>本アプリ自体は氏名・メール・アカウント・位置・連絡先・写真・健康/生体情報を収集しません(当社へ直接メールを送る場合は第2条参照)。</p>
+                <p>本アプリ自体は氏名・メール・アカウント・位置(第2条の相談窓口の国の推定は接続元の IP アドレスだけで行い、当社の記録に保存しません)・連絡先・写真・健康/生体情報を収集しません(当社へ直接メールを送る場合は第2条参照)。</p>
                 <ul>
-                    <li>分析/広告SDKなし(第2条のサービス改善のための統計は、アプリのSDKではなく当社サーバーが記録します)</li>
+                    <li>分析/広告SDKなし(第2条の統計と集計は、アプリのSDKではなく当社サーバーが記録します)</li>
                     <li>広告識別子(IDFA/GAID)なし</li>
                     <li>他のアプリ・ウェブサイトをまたぐトラッキングなし</li>
                 </ul>
@@ -268,7 +284,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h2>第11条 (子どものプライバシー)</h2>
                 <p>Dialogos は13歳(または居住国で求められる最低年齢。韓国では14歳)未満の子どもを対象とせず、子どもの個人情報を故意に収集しません。収集が確認された場合は、特定できる範囲で直ちに削除します。保護者は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> に削除をリクエストできます。</p>
-                <p>10代の方も本アプリを利用できます。10代が利用できるサービスに関する AI 提供者のガイドラインに沿って、安全のため本アプリは次のようにしています。</p>
+                <p>10代の方も本アプリを利用できます。安全のため本アプリは次のようにしています。</p>
                 <ul>
                     <li>賢者の答えを AI が書いていることを常に示します。</li>
                     <li>賢者が安全で支えとなる対話をするよう指示します。</li>
@@ -279,26 +295,11 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                 <h2>第12条 (国外移転)</h2>
                 <p>当社はサービス提供のため、次のとおり情報を国外へ移転(取扱いの委託・保管)します。</p>
 
-                <h3>Anthropic, PBC</h3>
-                <p>米国 · 548 Market St, PMB 90375, San Francisco, CA 94104 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="anthropic.com"><span class="email-text">privacy (at) anthropic.com</span></a></p>
-                <ul>
-                    <li><strong>移転する項目</strong>: 入力したメッセージと進行中の対話(直近最大24件・12,000字)、賢者への指示文。デバイス識別子は送信しません。</li>
-                    <li><strong>時期・方法</strong>: 当社サーバーがメッセージを Anthropic に送って答えさせるたびに(第2条 — Anthropic が答えられず OpenAI が代わりに答える場合を含む)、当社サーバーを経由して暗号化された通信(HTTPS/TLS)で送信</li>
-                    <li><strong>利用目的</strong>: 賢者の返答生成</li>
-                    <li><strong>保持期間</strong>
-                        <ul>
-                            <li>30日以内に削除(利用ポリシー違反の可能性として検出された対話は最大2年、分類スコアは最大7年)</li>
-                            <li>プロンプトキャッシュは最後の利用から5分以内</li>
-                            <li>モデルの学習に使用しない</li>
-                        </ul>
-                    </li>
-                </ul>
-
                 <h3>OpenAI OpCo, LLC</h3>
                 <p>米国 · 1455 3rd Street, San Francisco, CA 94158 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="openai.com"><span class="email-text">privacy (at) openai.com</span></a></p>
                 <ul>
-                    <li><strong>移転する項目</strong>: 入力したメッセージと進行中の対話(直近最大24件・12,000字)、賢者への指示文。デバイス識別子は送信しません。</li>
-                    <li><strong>時期・方法</strong>: 当社サーバーがメッセージに OpenAI を答えさせるたびに(第2条)、当社サーバーを経由して暗号化された通信(HTTPS/TLS)で送信</li>
+                    <li><strong>移転する項目</strong>: 入力したメッセージと進行中の対話(饗宴ではその部屋の対話、直近最大24件・12,000字)、賢者への指示文。デバイス識別子は送信しません。</li>
+                    <li><strong>時期・方法</strong>: 当社サーバーがメッセージを OpenAI に送って答えさせるたびに(第2条)、当社サーバーを経由して暗号化された通信(HTTPS/TLS)で送信</li>
                     <li><strong>利用目的</strong>: 賢者の返答生成</li>
                     <li><strong>保持期間</strong>
                         <ul>
@@ -322,17 +323,19 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                             <li>日次カウンター・トークン合計・サービス全体の1日分の利用金額の合計</li>
                             <li>購入確認記録</li>
                             <li>運用ログ</li>
-                            <li>サービス改善のための統計(仮名の実験キーと第2条の返答の情報。対話内容は含まない)</li>
-                            <li>IP アドレスなどの接続情報(リクエストログ。レート制限にも一時的に使用)</li>
+                            <li>サービス改善のための統計(2026年11月13日まで記録 — 仮名の実験キーと第2条の返答の情報。対話内容は含まない)</li>
+                            <li>饗宴の利用集計(日ごとの合計。端末と紐づかない)</li>
+                            <li>IP アドレスなどの接続情報(リクエストログ。レート制限と相談窓口の国の提案にも一時的に使用)</li>
                         </ul>
                     </li>
-                    <li><strong>時期・方法</strong>: 本アプリがサーバーにリクエストするたび(対話、購入確認、報告)、HTTPS/TLS で送信</li>
-                    <li><strong>利用目的</strong>: バックエンドのホスティング(対話の中継、1日の上限の適用、購入確認、報告の受付、不正なリクエストの制限、サービス改善のための統計の保管)</li>
+                    <li><strong>時期・方法</strong>: 本アプリがサーバーにリクエストするたび(対話、購入確認、報告、相談窓口の国の問い合わせ)、HTTPS/TLS で送信</li>
+                    <li><strong>利用目的</strong>: バックエンドのホスティング(対話の中継、1日の上限の適用、購入確認、報告の受付、不正なリクエストの制限、相談窓口の国の提案、サービス改善のための統計・饗宴の利用集計の保管)</li>
                     <li><strong>保持期間</strong>: 第3条のとおり
                         <ul>
                             <li>購入確認記録は取引日から5年 — サブスクリプションは最後の契約期間の終了日から、未使用の回答が残る深い対話パックは使い切るか返金されるまで保持</li>
                             <li>報告記録は90日間</li>
                             <li>サービス改善のための統計は3か月</li>
+                            <li>饗宴の利用集計は約120日</li>
                         </ul>
                     </li>
                 </ul>
@@ -344,6 +347,21 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>時期・方法</strong>: 購入・復元時、および購入済みの場合は本アプリの起動時やストアが更新などの変更を通知したときに、当社サーバーが各ストアのサーバーAPIへ HTTPS/TLS で送信</li>
                     <li><strong>利用目的</strong>: 購入の有効性の確認</li>
                     <li><strong>保持期間</strong>: 決済処理者である各社のプライバシーポリシーに従う</li>
+                </ul>
+
+                <h3>Anthropic, PBC(2026年11月13日まで)</h3>
+                <p>米国 · 548 Market St, PMB 90375, San Francisco, CA 94104 · プライバシー窓口: <a href="#" data-email-user="privacy" data-email-domain="anthropic.com"><span class="email-text">privacy (at) anthropic.com</span></a></p>
+                <p>2026年10月から11月13日までのみ移転し、現在は移転していません。</p>
+                <ul>
+                    <li><strong>移転した項目</strong>: 両方の提供者を記載したAI対話への同意をした端末のメッセージと進行中の対話(直近最大24件・12,000字)、賢者への指示文。デバイス識別子は送信しませんでした。</li>
+                    <li><strong>時期・方法</strong>: その期間に当社サーバーがメッセージを Anthropic に送って答えさせるたびに、当社サーバーを経由して暗号化された通信(HTTPS/TLS)で送信</li>
+                    <li><strong>利用目的</strong>: 賢者の返答生成</li>
+                    <li><strong>保持期間</strong>
+                        <ul>
+                            <li>30日以内に削除(利用ポリシー違反の可能性として検出された対話は最大2年、分類スコアは最大7年)</li>
+                            <li>モデルの学習に使用しない</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h3>移転を拒否する方法と影響</h3>
@@ -365,6 +383,13 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h2>第15条 (改定)</h2>
                 <p>本ポリシーは更新される場合があり、更新時は上記の施行日を改定し、重要な変更はアプリ内で通知します。</p>
+                <p><strong>2026年11月16日改定</strong></p>
+                <ul>
+                    <li>返答は OpenAI のみが生成するようになりました。Anthropic は2つの提供者を比較した2026年11月13日までに限り一部のメッセージに答えたもので、そのとき受け取った対話の保持期間は本ポリシーに残します。</li>
+                    <li>サービス改善のための統計の記録をやめたことを反映しました。</li>
+                    <li>饗宴と饗宴の利用集計、相談窓口の国の提案を追加しました。</li>
+                    <li>アプリの紹介をすべての哲学者に合うように改めました。</li>
+                </ul>
                 <p><strong>2026年11月13日改定</strong></p>
                 <ul>
                     <li>思索カードを写真に保存するときに iOS が求める写真への追加の許可(追加のみ)を、アプリ権限に追加しました。</li>

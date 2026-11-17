@@ -1,0 +1,62 @@
+{
+  "gitSources": [
+    {
+      "id": "pipi-tide-ios-observed-20261117",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "dialogos-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "focus-121",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "pipi-bridge-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "pipi-word-voyage-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "focus-120",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "pipi-log-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "pipi-hello-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "pipi-dday-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "focus-1016",
+      "documentHashMatches": true,
+      "notesMatched": true
+    },
+    {
+      "id": "pipi-words-public",
+      "documentHashMatches": true,
+      "notesMatched": true
+    }
+  ],
+  "storeSources": 26,
+  "publicApprovalNotUsedAsFeatureProof": true,
+  "historicalMetadataPreserved": 68
+}
