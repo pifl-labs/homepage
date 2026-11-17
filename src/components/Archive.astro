@@ -13,9 +13,10 @@ const years=[...new Set(archiveReleaseCards.map(card=>card.sortDate.slice(0,4)))
 const platforms={ios:'iOS',android:'Android'};
 const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/archive/`}));
 ---
-<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=79eea83c518d']}>
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=b6a37852663f']}>
 <main id="main" class="archive" data-archive data-count-label={c.results} data-all-label={c.all}>
  <div class="container">
+ <div class="archive-column">
   <header class="archive-hero">
    <p class="archive-eyebrow">{c.title}</p>
    <h1>{c.intro}</h1><p class="archive-lede">{c.desc}</p>
@@ -66,7 +67,7 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
      })}
     </ol></section>)}
    </section>
-
+ </div>
  </div>
 </main>
 <script is:inline type="module" src="/archive-client.js?v=6"></script>
