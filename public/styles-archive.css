@@ -1,8 +1,8 @@
 .archive{padding:3rem 0 3rem;color:var(--text-primary)}
-/* One reading column for controls, records, and their dividers. The shared
-   container still supplies the viewport gutters at smaller widths. */
+/* Inherit the homepage container’s content width. Only enforce a safe
+   minimum gutter on narrow screens with enlarged text. */
 .archive > .container{padding-inline:max(16px,var(--page-gutter))}
-.archive-column{max-inline-size:48rem;margin-inline:auto;container-type:inline-size}
+.archive-column{container-type:inline-size}
 .archive [hidden]{display:none!important}
 .archive h1,.archive h2,.archive h3{font-family:var(--font-display);line-height:1.25;text-wrap:balance;overflow-wrap:anywhere}
 .archive h1{font-size:clamp(2rem,4vw,3.8rem);max-width:24ch;margin:.7rem 0 1rem;letter-spacing:-.035em}

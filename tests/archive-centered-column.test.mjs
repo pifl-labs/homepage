@@ -8,12 +8,13 @@ const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8'
 const css = read('public/styles-archive.css');
 const styleHash = createHash('sha256').update(css).digest('hex').slice(0,12);
 
-test('record rows, article bodies and disclosures share the one centered archive column', () => {
-  assert.match(css,/\.archive-column\{max-inline-size:48rem;margin-inline:auto;container-type:inline-size\}/);
+test('archive controls and records use the full homepage container width', () => {
+  assert.match(css,/\.archive-column\{container-type:inline-size\}/);
+  assert.doesNotMatch(css,/\.archive\s*>\s*\.container\s*\{[^}]*max-(?:width|inline-size)/);
   assert.doesNotMatch(css,/\.archive-history article(?:\s*>\s*details)?\s*\{[^}]*max-(?:width|inline-size)/);
 });
 
-for (const locale of ['ko','ja','en']) test(`${locale}: the whole archive is in the centered column with no extra panel`, () => {
+for (const locale of ['ko','ja','en']) test(`${locale}: the whole archive is in the shared container with no extra panel`, () => {
   const page = read(`dist/${locale}/archive/index.html`);
   const column = page.match(/<div class="container">\s*<div class="archive-column">([\s\S]*?)<\/div>\s*<\/div>\s*<\/main>/)?.[1];
   assert.ok(column);

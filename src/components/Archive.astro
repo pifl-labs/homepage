@@ -13,7 +13,7 @@ const years=[...new Set(archiveReleaseCards.map(card=>card.sortDate.slice(0,4)))
 const platforms={ios:'iOS',android:'Android'};
 const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.com/${l}/archive/`}));
 ---
-<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=b6a37852663f']}>
+<BaseLayout lang={lang} title={`${c.title} | PiFl Labs`} description={c.desc} canonical={`https://pifl-labs.com/${lang}/archive/`} alternates={alternates} extraCss={['/styles-archive.css?v=e0f9a08253a8']}>
 <main id="main" class="archive" data-archive data-count-label={c.results} data-all-label={c.all}>
  <div class="container">
  <div class="archive-column">
