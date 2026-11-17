@@ -5,8 +5,8 @@ import { appIconSrc } from "../data/app-icons.mjs";
 // 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
 // 카피는 lang 별 map, 나머지는 전부 apps.ts 파생.
 import {
-  appList, appName, displayVersion, releaseVersionLabel, formatDate, latestUpdate, previousNameLabels, previousNameOf, storeAppName,
-  statusLabels, storeLabels, updatedLabels,
+  homeReleaseApps, appName, previousNameLabels, previousNameOf, storeAppName,
+  statusLabels, storeLabels,
 } from '../data/apps';
 import { catalogCopy } from '../data/app-catalog';
 import StoreNameNotice from './StoreNameNotice.astro';
@@ -19,7 +19,6 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const campaign = websiteCampaign(lang);
 const sl = storeLabels[lang];
-const ul = updatedLabels[lang];
 
 const androidCatalogUrl = companyAndroidCatalogUrl(lang);
 
@@ -64,11 +63,11 @@ const copy = {
     </div>
 
     <div class="app-card-grid">
-      {appList.map((app) => {
+      {homeReleaseApps.map((app) => {
         const name = appName(app, lang);
         const submitted = submissionMedia(app.slug);
         return (
-          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class:list={["app-card", { "app-card--soon": app.status === "soon", "app-card--text-only": app.catalogPreview === false }]}>
+          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class:list={["app-card", { "app-card--text-only": app.catalogPreview === false }]}>
             <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
               <img class="app-card-icon" src={appIconSrc(app.slug)} alt="" width="64" height="64" loading="lazy" />
               <div class="app-card-head">
@@ -81,13 +80,13 @@ const copy = {
                 <p class="app-card-tag">{catalogCopy[app.slug][lang]}</p>
                 <span class="app-card-detail">{({ ko: "앱 자세히 보기", ja: "アプリの詳細", en: "Explore app" })[lang]} <span aria-hidden="true">→</span></span>
               </div>
-              {app.status === 'live' && app.catalogPreview !== false && <figure class="app-card-preview">
+              {app.catalogPreview !== false && <figure class="app-card-preview">
                 <img src={submitted ? submitted.shots[submitted.previewIndex].src : `/assets/apps/${app.slug}/${lang}/store-preview.webp`} alt="" width="480" height="1040" loading="lazy" />
                 <figcaption>{submitted ? (submitted.pending ? submissionCopy[lang].pending : submissionCopy[lang].short) : ({ ko: '공식 스토어 화면', ja: '公式ストアの画面', en: 'Official store preview' })[lang]}</figcaption>
               </figure>}
             </a>
 
-            {app.status === 'live' && (app.stores.ios || app.stores.android) && (
+            {(app.stores.ios || app.stores.android) && (
               <div class="app-card-stores">
                 {app.stores.ios && (
                   <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'ios', lang)} — ${sl.onIos}${app.iosStorefront ? ` (${app.iosStorefront})` : ''}`}>

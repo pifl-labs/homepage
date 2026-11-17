@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {appList} from '../src/data/apps.ts';
+import {appList,homeReleaseApps} from '../src/data/apps.ts';
 const leads={ko:'Android 앱 전체:',ja:'Android版一覧：',en:'All Android apps:'};
 for(const lang of ['ko','ja','en']){
  const html=readFileSync(new URL('../dist/'+lang+'/index.html',import.meta.url),'utf8');
@@ -13,9 +13,10 @@ for(const lang of ['ko','ja','en']){
   assert.equal(u.searchParams.has('gl'),false);assert.equal(text,'Google Play');assert.match(attrs,/target="_blank"/);assert.match(attrs,/rel="noopener"/);assert.match(attrs,/aria-label="[^"]*PiFl Labs[^\"]*"/);
   assert(!attrs.includes('data-store-link'));assert(catalog.indexOf(full)<catalog.indexOf('class="app-card-grid"'));assert(catalog.includes(leads[lang]));
  });
- test(lang+': existing product cards, download groups and two unreleased products remain unchanged',()=>{
-  assert.equal((catalog.match(/class="app-card-main"/g)||[]).length,appList.length);
+ test(lang+': only verified public products are promoted; their download groups are unchanged',()=>{
+  assert.equal((catalog.match(/class="app-card-main"/g)||[]).length,homeReleaseApps.length);
   assert.equal((catalog.match(/class="app-card-stores"/g)||[]).length,appList.filter(a=>a.status==='live'&&(a.stores.ios||a.stores.android)).length);
+  assert.doesNotMatch(catalog,/pipi-legion|app-card--soon/);
   for(const app of appList.filter(a=>a.status==='soon'))assert.deepEqual(app.stores,{});
   assert.equal(appList.some(a=>a.slug==='pipi-bp'),true,'Nov16 exact homepage sync scope resumes BP factual entry');
  });

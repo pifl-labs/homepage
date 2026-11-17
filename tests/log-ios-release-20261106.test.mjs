@@ -76,13 +76,14 @@ test('home links name the platform rather than relying on hidden decorative glyp
     assert.ok(row);
     assert.ok(row.includes(`v${currentIOS('pipi-log').version}`));
     assert.doesNotMatch(row, /Android v1\.0\.13/);
-    assert.equal((row.match(/color: var\(--text-primary\)/g)??[]).length, 0);
+    assert.equal((row.match(/color: var\(--text-primary\)/g)??[]).length, 2);
+    assert.match(row,/iOS v1\.0\.15.*datetime="2026-11-17".*Android v1\.0\.15.*datetime="2026-11-16"/s);
   }
 });
 
 test('every changed non-common platform chip uses the existing readable foreground token', () => {
   const source = readFileSync(new URL('../src/components/FleetLog.astro', import.meta.url), 'utf8');
-  assert.equal((source.match(/class="fleet-chip" style="color: var\(--text-primary\)"/g) ?? []).length, 2);
+  assert.equal((source.match(/class="fleet-chip" style="color: var\(--text-primary\)"/g) ?? []).length, 1);
   for (const lang of ['ko','ja','en']) {
     const html = readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url), 'utf8');
     const rows = [...html.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);

@@ -1,36 +1,41 @@
 {
-  "checkedAt": "2026-11-17",
+  "checkedAt": "2026-11-18",
   "scope": "Public App Store and Google Play releases and updates with documented user-facing changes or maintenance notes.",
   "events": [
     {
-      "id": "dialogos-android-observed-20261117",
-      "app": "dialogos",
-      "date": "2026-11-17",
-      "kind": "observed",
+      "id": "pipi-dday-android-203",
+      "app": "pipi-dday",
       "platform": "android",
-      "version": "1.1.0",
-      "observedAt": "2026-11-17",
+      "kind": "observed",
       "source": "public-store",
+      "version": "2.0.3",
       "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "date": "2026-11-18",
+      "observedAt": "2026-11-18",
+      "timeBasis": "observation-date",
+      "storeUpdated": "2026-11-18",
       "title": {
-        "ko": "니체와 에피쿠로스, 그리고 향연",
-        "ja": "ニーチェとエピクロス、そして饗宴",
-        "en": "New philosophers and Symposium"
+        "ko": "오늘의 기념일 공유와 여행 중 알림",
+        "ja": "当日の記念日を共有、旅行先でも通知",
+        "en": "Share today’s milestone and keep reminders local"
       },
       "summary": {
-        "ko": "니체와 에피쿠로스가 새 대화 상대로 합류했어요. 향연에서는 같은 고민에 두 철학자가 답하고, 한 철학자가 상대의 말에 응수해요. 말하는 방식이나 고민으로 대화 상대를 고를 수도 있어요.",
-        "ja": "ニーチェとエピクロスが新しい対話相手に加わりました。「饗宴」では同じ悩みに二人の哲学者が答え、一人が相手の言葉に応じます。話し方や悩みから相手を選ぶこともできます。",
-        "en": "Nietzsche and Epicurus join the conversation. In Symposium, two philosophers answer the same concern, then one responds to the other. You can also choose a partner by speaking style or topic."
+        "ko": "기념일 당일에 홈에서 바로 공유할 수 있어요. 날짜를 잘못 입력하면 형식과 허용 범위를 안내하고, 다른 시간대에서 앱을 열면 알림이 현지 시각에 맞춰 다시 예약돼요.",
+        "ja": "記念日の当日はホームから共有できます。日付を誤入力したときは形式と範囲を案内し、別の時間帯でアプリを開くと現地時刻に合わせて通知を設定し直します。",
+        "en": "Share a milestone from Home on the day itself. Date entry shows format and range guidance, and reminders reschedule to local time when you open the app in a different time zone."
       },
       "contentEvidence": {
-        "id": "dialogos-android-observed-20261117",
+        "id": "pipi-dday-android-203",
         "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
+        "checkedAt": "2026-11-18",
+        "url": "/archive-release-notes-20261118.json"
       },
-      "timeBasis": "observation-date"
+      "publication": {
+        "date": "2026-11-18",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "dialogos-ios-observed-20261117",
@@ -60,37 +65,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-draw-android-observed-20261117",
-      "app": "pipi-draw",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.2.5",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
-      "title": {
-        "ko": "화면과 사용법은 그대로, 내부 개선",
-        "ja": "画面と使い方はそのまま、内部を改善",
-        "en": "Internal improvements, familiar screens"
-      },
-      "summary": {
-        "ko": "화면과 사용 방법을 바꾸지 않는 내부 개선 업데이트예요.",
-        "ja": "画面や使い方を変えない内部改善のアップデートです。",
-        "en": "This update makes internal improvements without changing screens or how the app works."
-      },
-      "contentEvidence": {
-        "id": "pipi-draw-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T20:21:14Z"
+      }
     },
     {
       "id": "pipi-draw-ios-observed-20261117",
@@ -120,37 +100,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-focus-android-observed-20261117",
-      "app": "pipi-focus",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.2.4",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
-      "title": {
-        "ko": "집중 시간은 빠르게, 보상은 놓치지 않게",
-        "ja": "集中時間をすぐ選び、報酬を見逃さずに",
-        "en": "Quicker timer choices, rewards on return"
-      },
-      "summary": {
-        "ko": "출항 전 타이머 링에서 5분, 15분, 25분, 50분을 바로 고를 수 있어요. 앱을 닫은 동안 끝난 항해도 다시 열면 보상 연출을 보여 주고, 섬 탐험 기록과 보급선 안내도 다듬었어요.",
-        "ja": "出航前のタイマーリングで5・15・25・50分をすぐ選べます。アプリを閉じている間に終わった航海も、戻ると報酬の演出が表示されます。島の探検記録や補給船の案内も整えました。",
-        "en": "Choose 5, 15, 25 or 50 minutes from the timer ring before setting sail. Voyages completed while the app was closed show their rewards when you return. Island records and supply-ship guidance are clearer, too."
-      },
-      "contentEvidence": {
-        "id": "pipi-focus-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T19:49:15Z"
+      }
     },
     {
       "id": "pipi-focus-ios-observed-20261117",
@@ -180,7 +135,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T17:48:07Z"
+      }
     },
     {
       "id": "pipi-hello-ios-observed-20261117",
@@ -210,37 +170,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-log-android-observed-20261117",
-      "app": "pipi-log",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.15",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
-      "title": {
-        "ko": "최고 연속 기록과 쓰던 글을 지켜요",
-        "ja": "最高の連続記録と書きかけの日記",
-        "en": "Personal-best streaks and more reliable editing"
-      },
-      "summary": {
-        "ko": "현재보다 긴 최고 연속 기록을 함께 보여 주고, 같은 기분이 이어진 날수도 14일에서 멈추지 않아요. 잠긴 일기만 있을 때 분석이 비거나, 고치던 글이 사라지거나 덮어써지던 문제를 고쳤어요.",
-        "ja": "現在より長い自己最高の連続記録も表示し、同じ気分が続く日数も14日で止まらなくなりました。日記がすべてロックされていると分析が空になる問題や、編集中の文章が消えたり上書きされたりする問題を直しました。",
-        "en": "See your personal-best streak when it exceeds your current one, and mood streaks no longer stop counting at 14 days. Fixes address empty analysis with locked entries and text disappearing or being overwritten while editing."
-      },
-      "contentEvidence": {
-        "id": "pipi-log-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T20:17:05Z"
+      }
     },
     {
       "id": "pipi-log-ios-observed-20261117",
@@ -270,67 +205,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-sky-android-observed-20261117",
-      "app": "pipi-sky",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
-      "title": {
-        "ko": "하늘 길목의 이름표를 더 또렷하게",
-        "ja": "空の目印を読みやすく",
-        "en": "Clearer labels along the sky journey"
-      },
-      "summary": {
-        "ko": "하늘 길목 이름표에 배경을 더하고, 가장 찬 층과 맨 위 층은 항상 보이게 했어요. 길목으로 이동할 때 높이 수치를 이름표와 맞추고, 하늘멍 버튼의 위치도 정리했어요.",
-        "ja": "空の目印のラベルに背景を付け、最も冷たい層と最上層は常に表示するようにしました。目印へ移動したときの高さ表示をラベルと合わせ、空を眺めるボタンの位置も整えました。",
-        "en": "Sky waypoint labels now have backgrounds, with the coldest and topmost layers always visible. Moving to a waypoint shows the same altitude as its label, and the sky-gazing button has been repositioned."
-      },
-      "contentEvidence": {
-        "id": "pipi-sky-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-word-voyage-android-observed-20261117",
-      "app": "pipi-word-voyage",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.4.2",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
-      "title": {
-        "ko": "긴 화면에서도 퍼즐이 한가운데",
-        "ja": "縦長の画面でもパズルを中央に",
-        "en": "Centered puzzles on taller screens"
-      },
-      "summary": {
-        "ko": "숨은 낱말 찾기에서 격자와 낱말 목록을 세로가 긴 화면의 가운데에 배치했어요. 퍼즐이 위쪽에 몰리지 않도록 화면 구성을 다듬었어요.",
-        "ja": "隠れた言葉探しのマス目と言葉リストを、縦長の画面の中央に配置しました。パズルが画面上部に偏らないよう整えています。",
-        "en": "The word-search grid and word list are now centered vertically on taller screens, instead of clustering near the top."
-      },
-      "contentEvidence": {
-        "id": "pipi-word-voyage-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T20:07:52Z"
+      }
     },
     {
       "id": "pipi-word-voyage-ios-observed-20261117",
@@ -360,37 +240,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-words-android-observed-20261117",
-      "app": "pipi-words",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.1.1",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-16",
-      "title": {
-        "ko": "내 답과 연속 정답을 함께 확인해요",
-        "ja": "自分の答えと連続正解を確認",
-        "en": "See your answers and correct-answer streaks"
-      },
-      "summary": {
-        "ko": "모의고사를 제외한 퀴즈에서 3문제 이상 연속 정답을 표시하고, 해설과 오답 목록에 내가 고른 답도 보여 줘요. 플래시카드를 중간에 나가도 학습 결과를 확인할 수 있고, 큰 글씨에서 뜻이 잘리던 문제도 고쳤어요.",
-        "ja": "模擬試験を除くクイズで3問以上の連続正解を表示し、解説と間違い一覧に自分の答えも出るようになりました。フラッシュカードを途中でやめても学習結果を確認でき、大きな文字で意味が切れる問題も直しました。",
-        "en": "Quizzes (except mock exams) show streaks of three or more correct answers, and explanations and mistake lists include your answer. Leaving flashcards early shows your results. Large-text clipping in typing quizzes is also fixed."
-      },
-      "contentEvidence": {
-        "id": "pipi-words-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T17:51:15Z"
+      }
     },
     {
       "id": "pipi-words-ios-observed-20261117",
@@ -420,37 +275,257 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-17",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-16T20:07:41Z"
+      }
     },
     {
-      "id": "pipi-dday-android-observed-20261117",
-      "app": "pipi-dday",
+      "id": "dialogos-android-observed-20261117",
+      "app": "dialogos",
       "date": "2026-11-17",
       "kind": "observed",
       "platform": "android",
-      "version": "2.0.2",
+      "version": "1.1.0",
       "observedAt": "2026-11-17",
       "source": "public-store",
       "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-13",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
       "title": {
-        "ko": "사진 위젯과 첫돌, 되돌리기까지",
-        "ja": "写真ウィジェットと誕生日、削除の取り消し",
-        "en": "Photo widgets, birthdays and complete undo"
+        "ko": "니체와 에피쿠로스, 그리고 향연",
+        "ja": "ニーチェとエピクロス、そして饗宴",
+        "en": "New philosophers and Symposium"
       },
       "summary": {
-        "ko": "사진이 위젯을 가득 채우고 이름과 남은 날짜가 그 위에 보여요. 아이 날짜는 첫돌, N번째 생일로 표시하고, 날짜 삭제를 되돌리면 사진과 알림도 함께 복원해요.",
-        "ja": "写真がウィジェットいっぱいに広がり、その上に名前と残り日数を表示します。子どもの日は1歳の誕生日・N歳の誕生日として表示し、日付の削除を取り消すと写真と通知も戻ります。",
-        "en": "Photos fill the widget, with the name and days remaining overlaid. Child dates use birthday labels, and undoing a deleted date restores its photo and reminders too."
+        "ko": "니체와 에피쿠로스가 새 대화 상대로 합류했어요. 향연에서는 같은 고민에 두 철학자가 답하고, 한 철학자가 상대의 말에 응수해요. 말하는 방식이나 고민으로 대화 상대를 고를 수도 있어요.",
+        "ja": "ニーチェとエピクロスが新しい対話相手に加わりました。「饗宴」では同じ悩みに二人の哲学者が答え、一人が相手の言葉に応じます。話し方や悩みから相手を選ぶこともできます。",
+        "en": "Nietzsche and Epicurus join the conversation. In Symposium, two philosophers answer the same concern, then one responds to the other. You can also choose a partner by speaking style or topic."
       },
       "contentEvidence": {
-        "id": "pipi-dday-android-observed-20261117",
+        "id": "dialogos-android-observed-20261117",
         "kind": "store-release-notes",
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-draw-android-observed-20261117",
+      "app": "pipi-draw",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.2.5",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
+      "title": {
+        "ko": "화면과 사용법은 그대로, 내부 개선",
+        "ja": "画面と使い方はそのまま、内部を改善",
+        "en": "Internal improvements, familiar screens"
+      },
+      "summary": {
+        "ko": "화면과 사용 방법을 바꾸지 않는 내부 개선 업데이트예요.",
+        "ja": "画面や使い方を変えない内部改善のアップデートです。",
+        "en": "This update makes internal improvements without changing screens or how the app works."
+      },
+      "contentEvidence": {
+        "id": "pipi-draw-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-focus-android-observed-20261117",
+      "app": "pipi-focus",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.2.4",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
+      "title": {
+        "ko": "집중 시간은 빠르게, 보상은 놓치지 않게",
+        "ja": "集中時間をすぐ選び、報酬を見逃さずに",
+        "en": "Quicker timer choices, rewards on return"
+      },
+      "summary": {
+        "ko": "출항 전 타이머 링에서 5분, 15분, 25분, 50분을 바로 고를 수 있어요. 앱을 닫은 동안 끝난 항해도 다시 열면 보상 연출을 보여 주고, 섬 탐험 기록과 보급선 안내도 다듬었어요.",
+        "ja": "出航前のタイマーリングで5・15・25・50分をすぐ選べます。アプリを閉じている間に終わった航海も、戻ると報酬の演出が表示されます。島の探検記録や補給船の案内も整えました。",
+        "en": "Choose 5, 15, 25 or 50 minutes from the timer ring before setting sail. Voyages completed while the app was closed show their rewards when you return. Island records and supply-ship guidance are clearer, too."
+      },
+      "contentEvidence": {
+        "id": "pipi-focus-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-log-android-observed-20261117",
+      "app": "pipi-log",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.15",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
+      "title": {
+        "ko": "최고 연속 기록과 쓰던 글을 지켜요",
+        "ja": "最高の連続記録と書きかけの日記",
+        "en": "Personal-best streaks and more reliable editing"
+      },
+      "summary": {
+        "ko": "현재보다 긴 최고 연속 기록을 함께 보여 주고, 같은 기분이 이어진 날수도 14일에서 멈추지 않아요. 잠긴 일기만 있을 때 분석이 비거나, 고치던 글이 사라지거나 덮어써지던 문제를 고쳤어요.",
+        "ja": "現在より長い自己最高の連続記録も表示し、同じ気分が続く日数も14日で止まらなくなりました。日記がすべてロックされていると分析が空になる問題や、編集中の文章が消えたり上書きされたりする問題を直しました。",
+        "en": "See your personal-best streak when it exceeds your current one, and mood streaks no longer stop counting at 14 days. Fixes address empty analysis with locked entries and text disappearing or being overwritten while editing."
+      },
+      "contentEvidence": {
+        "id": "pipi-log-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-sky-android-observed-20261117",
+      "app": "pipi-sky",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
+      "title": {
+        "ko": "하늘 길목의 이름표를 더 또렷하게",
+        "ja": "空の目印を読みやすく",
+        "en": "Clearer labels along the sky journey"
+      },
+      "summary": {
+        "ko": "하늘 길목 이름표에 배경을 더하고, 가장 찬 층과 맨 위 층은 항상 보이게 했어요. 길목으로 이동할 때 높이 수치를 이름표와 맞추고, 하늘멍 버튼의 위치도 정리했어요.",
+        "ja": "空の目印のラベルに背景を付け、最も冷たい層と最上層は常に表示するようにしました。目印へ移動したときの高さ表示をラベルと合わせ、空を眺めるボタンの位置も整えました。",
+        "en": "Sky waypoint labels now have backgrounds, with the coldest and topmost layers always visible. Moving to a waypoint shows the same altitude as its label, and the sky-gazing button has been repositioned."
+      },
+      "contentEvidence": {
+        "id": "pipi-sky-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-android-observed-20261117",
+      "app": "pipi-word-voyage",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.4.2",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
+      "title": {
+        "ko": "긴 화면에서도 퍼즐이 한가운데",
+        "ja": "縦長の画面でもパズルを中央に",
+        "en": "Centered puzzles on taller screens"
+      },
+      "summary": {
+        "ko": "숨은 낱말 찾기에서 격자와 낱말 목록을 세로가 긴 화면의 가운데에 배치했어요. 퍼즐이 위쪽에 몰리지 않도록 화면 구성을 다듬었어요.",
+        "ja": "隠れた言葉探しのマス目と言葉リストを、縦長の画面の中央に配置しました。パズルが画面上部に偏らないよう整えています。",
+        "en": "The word-search grid and word list are now centered vertically on taller screens, instead of clustering near the top."
+      },
+      "contentEvidence": {
+        "id": "pipi-word-voyage-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-words-android-observed-20261117",
+      "app": "pipi-words",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.1.1",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-16",
+      "title": {
+        "ko": "내 답과 연속 정답을 함께 확인해요",
+        "ja": "自分の答えと連続正解を確認",
+        "en": "See your answers and correct-answer streaks"
+      },
+      "summary": {
+        "ko": "모의고사를 제외한 퀴즈에서 3문제 이상 연속 정답을 표시하고, 해설과 오답 목록에 내가 고른 답도 보여 줘요. 플래시카드를 중간에 나가도 학습 결과를 확인할 수 있고, 큰 글씨에서 뜻이 잘리던 문제도 고쳤어요.",
+        "ja": "模擬試験を除くクイズで3問以上の連続正解を表示し、解説と間違い一覧に自分の答えも出るようになりました。フラッシュカードを途中でやめても学習結果を確認でき、大きな文字で意味が切れる問題も直しました。",
+        "en": "Quizzes (except mock exams) show streaks of three or more correct answers, and explanations and mistake lists include your answer. Leaving flashcards early shows your results. Large-text clipping in typing quizzes is also fixed."
+      },
+      "contentEvidence": {
+        "id": "pipi-words-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-16",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "pipi-dday-ios-observed-20261117",
@@ -470,9 +545,9 @@
         "en": "Photo widgets, birthdays and complete undo"
       },
       "summary": {
-        "ko": "사진이 위젯을 가득 채우고 이름과 남은 날짜가 그 위에 보여요. 아이 날짜는 첫돌, N번째 생일로 표시하고, 날짜 삭제를 되돌리면 사진과 알림도 함께 복원해요.",
-        "ja": "写真がウィジェットいっぱいに広がり、その上に名前と残り日数を表示します。子どもの日は1歳の誕生日・N歳の誕生日として表示し、日付の削除を取り消すと写真と通知も戻ります。",
-        "en": "Photos fill the widget, with the name and days remaining overlaid. Child dates use birthday labels, and undoing a deleted date restores its photo and reminders too."
+        "ko": "사진이 위젯을 가득 채우고, iOS의 틴트·투명 모드에서도 사진이 보이도록 고쳤어요. 날짜 삭제를 되돌리면 사진과 알림도 복원돼요.",
+        "ja": "写真がウィジェット全体を埋め、iOSの色合い・透明表示でも写真が出るように修正しました。日付の削除を取り消すと写真と通知も戻ります。",
+        "en": "Photos fill the widget and remain visible in iOS tinted and clear modes. Undoing a deleted date also restores its photo and reminders."
       },
       "contentEvidence": {
         "id": "pipi-dday-ios-observed-20261117",
@@ -480,37 +555,17 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "id": "pipi-dream-android-observed-20261117",
-      "app": "pipi-dream",
-      "date": "2026-11-17",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.0.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-13",
-      "title": {
-        "ko": "말로 남기는 꿈 일기와 꿈 사전",
-        "ja": "声で残す夢日記と夢の辞典",
-        "en": "Spoken dream entries and a symbol dictionary"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-14",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-13T20:18:19Z"
       },
-      "summary": {
-        "ko": "말로 남기는 꿈 일기와 휴대폰 안 받아쓰기를 담은 첫 버전이에요. 목록, 달력, 통계로 기록을 돌아보고, 상징 120개의 꿈 사전과 아침 알림, 앱 잠금, 내보내기, 가져오기를 사용할 수 있어요.",
-        "ja": "声で残す夢日記と端末内の音声入力を備えた最初のバージョンです。一覧・カレンダー・統計で記録を振り返り、120の象徴を収録した夢の辞典、朝の通知、アプリロック、書き出し・読み込みを利用できます。",
-        "en": "The first version includes spoken dream entries and on-device dictation. Review entries in lists, a calendar and statistics, with a 120-symbol dictionary, morning reminders, app lock, export and import."
-      },
-      "contentEvidence": {
-        "id": "pipi-dream-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-dday",
+        "commit": "18616088370ff055d7c0bd00ace30b98c8cb3cb0",
+        "path": "docs/release/2.0.2+45.md"
+      }
     },
     {
       "id": "pipi-tide-ios-observed-20261117",
@@ -540,37 +595,82 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-14",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-13T20:10:31Z"
+      }
     },
     {
-      "id": "pipi-bridge-android-observed-20261117",
-      "app": "pipi-bridge",
+      "id": "pipi-dday-android-observed-20261117",
+      "app": "pipi-dday",
       "date": "2026-11-17",
       "kind": "observed",
       "platform": "android",
-      "version": "1.0.3",
+      "version": "2.0.2",
       "observedAt": "2026-11-17",
       "source": "public-store",
       "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
-      "storeUpdated": "2026-11-10",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-13",
       "title": {
-        "ko": "다섯 낱말씩 배우고, 배운 말 노트로 복습",
-        "ja": "5語ずつ学び、覚えた言葉を振り返る",
-        "en": "Five-word groups and a learned-words notebook"
+        "ko": "사진 위젯과 첫돌, 되돌리기까지",
+        "ja": "写真ウィジェットと誕生日、削除の取り消し",
+        "en": "Photo widgets, birthdays and complete undo"
       },
       "summary": {
-        "ko": "다섯 낱말 한 묶음을 배우면 곧바로 그 묶음을 연습하고, 며칠 뒤 다시 복습해요. 부모 화면의 배운 말 노트에서는 낱말의 뜻, 성장 단계, 한국어 소리와 집에서 함께 해 볼 일을 볼 수 있어요.",
-        "ja": "5語のまとまりを学ぶとすぐに練習し、数日後にも復習します。保護者画面の「覚えた言葉ノート」では、意味・成長段階・韓国語の音声と、家で一緒にできることを確認できます。",
-        "en": "Practice each group of five words immediately after learning it, then revisit it over the following days. The parent notebook brings together meanings, learning stages, Korean audio and activities to try at home."
+        "ko": "사진이 위젯을 가득 채우고 기본 위젯의 얇은 테두리를 없앴어요. 날짜 삭제를 되돌리면 사진과 알림도 복원돼요.",
+        "ja": "写真がウィジェット全体を埋め、標準ウィジェットの細い枠線をなくしました。日付の削除を取り消すと写真と通知も戻ります。",
+        "en": "Photos fill the widget, and the default Android widget no longer has a thin border. Undoing a deleted date also restores its photo and reminders."
       },
       "contentEvidence": {
-        "id": "pipi-bridge-android-observed-20261117",
+        "id": "pipi-dday-android-observed-20261117",
         "kind": "store-release-notes",
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-13",
+        "basis": "play-updated",
+        "region": "KR"
+      }
+    },
+    {
+      "id": "pipi-dream-android-observed-20261117",
+      "app": "pipi-dream",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.0.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-13",
+      "title": {
+        "ko": "말로 남기는 꿈 일기와 꿈 사전",
+        "ja": "声で残す夢日記と夢の辞典",
+        "en": "Spoken dream entries and a symbol dictionary"
+      },
+      "summary": {
+        "ko": "말로 남기는 꿈 일기와 휴대폰 안 받아쓰기를 담은 첫 버전이에요. 목록, 달력, 통계로 기록을 돌아보고, 상징 120개의 꿈 사전과 아침 알림, 앱 잠금, 내보내기, 가져오기를 사용할 수 있어요.",
+        "ja": "声で残す夢日記と端末内の音声入力を備えた最初のバージョンです。一覧・カレンダー・統計で記録を振り返り、120の象徴を収録した夢の辞典、朝の通知、アプリロック、書き出し・読み込みを利用できます。",
+        "en": "The first version includes spoken dream entries and on-device dictation. Review entries in lists, a calendar and statistics, with a 120-symbol dictionary, morning reminders, app lock, export and import."
+      },
+      "contentEvidence": {
+        "id": "pipi-dream-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-13",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "pipi-bridge-ios-observed-20261117",
@@ -600,28 +700,47 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-11",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-10T20:04:55Z"
+      }
     },
     {
-      "app": "pipi-words",
-      "observedAt": "2026-11-02",
-      "id": "pipi-words-android-110",
-      "date": "2026-11-02",
+      "id": "pipi-bridge-android-observed-20261117",
+      "app": "pipi-bridge",
+      "date": "2026-11-17",
       "kind": "observed",
       "platform": "android",
-      "version": "1.1.0",
-      "source": "store-check",
+      "version": "1.0.3",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "storeUpdated": "2026-11-10",
       "title": {
-        "ko": "EPS-TOPIK 단어팩과 표시 언어 추가",
-        "ja": "EPS-TOPIK単語パックと表示言語を追加",
-        "en": "EPS-TOPIK decks and more display languages"
+        "ko": "다섯 낱말씩 배우고, 배운 말 노트로 복습",
+        "ja": "5語ずつ学び、覚えた言葉を振り返る",
+        "en": "Five-word groups and a learned-words notebook"
       },
       "summary": {
-        "ko": "EPS-TOPIK 단어팩 7개를 추가했어요. 앱 화면과 단어 뜻을 표시할 언어도 9개 늘었어요.",
-        "ja": "EPS-TOPIK単語パックを7つ追加し、アプリ画面と単語の意味を表示する言語を9つ増やしました。",
-        "en": "Seven EPS-TOPIK decks were added, along with nine more languages for the interface and word meanings."
+        "ko": "다섯 낱말 한 묶음을 배우면 곧바로 그 묶음을 연습하고, 며칠 뒤 다시 복습해요. 부모 화면의 배운 말 노트에서는 낱말의 뜻, 성장 단계, 한국어 소리와 집에서 함께 해 볼 일을 볼 수 있어요.",
+        "ja": "5語のまとまりを学ぶとすぐに練習し、数日後にも復習します。保護者画面の「覚えた言葉ノート」では、意味・成長段階・韓国語の音声と、家で一緒にできることを確認できます。",
+        "en": "Practice each group of five words immediately after learning it, then revisit it over the following days. The parent notebook brings together meanings, learning stages, Korean audio and activities to try at home."
       },
-      "timeBasis": "observation-date"
+      "contentEvidence": {
+        "id": "pipi-bridge-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-10",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "app": "pipi-word-voyage",
@@ -644,37 +763,38 @@
         "ja": "テーマ航海ではやさしい食べ物パックを先に表示します。文字を拡大してもパズルのマスに収まるよう改善しました。",
         "en": "Theme voyages show the easy food pack first. Puzzle letters stay inside their tiles at larger text sizes."
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-11-02",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-11-01T20:54:23Z"
+      }
     },
     {
-      "id": "kkachi-android-observed-20261117",
-      "app": "kkachi",
-      "date": "2026-11-17",
+      "app": "pipi-words",
+      "observedAt": "2026-11-02",
+      "id": "pipi-words-android-110",
+      "date": "2026-11-02",
       "kind": "observed",
       "platform": "android",
       "version": "1.1.0",
-      "observedAt": "2026-11-17",
-      "source": "public-store",
-      "region": "KR",
-      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
-      "storeUpdated": "2026-10-31",
+      "source": "store-check",
       "title": {
-        "ko": "첫 화면에 펼쳐지는 나의 민화",
-        "ja": "最初の画面に広がる自分の民画",
-        "en": "Your folk painting on the home screen"
+        "ko": "EPS-TOPIK 단어팩과 표시 언어 추가",
+        "ja": "EPS-TOPIK単語パックと表示言語を追加",
+        "en": "EPS-TOPIK decks and more display languages"
       },
       "summary": {
-        "ko": "첫 화면을 나의 민화로 바꿨어요. 사주를 바탕으로 만든 그림을 족자로 보고 그림 읽기에서 소재의 뜻을 살펴볼 수 있어요. 가족, 친구의 그림을 고르고, 위젯을 누르면 오늘로 바로 이동해요.",
-        "ja": "最初の画面を「自分の民画」にしました。四柱推命をもとにした絵を掛け軸で見て、絵の解説からモチーフの意味を読めます。家族や友だちの絵も選べ、ウィジェットから「今日」を直接開けます。",
-        "en": "The home screen now presents your Four Pillars-inspired folk painting as a hanging scroll, with explanations of its motifs. Choose family or friends’ paintings, and open Today directly from the widget."
+        "ko": "EPS-TOPIK 단어팩 7개를 추가했어요. 앱 화면과 단어 뜻을 표시할 언어도 9개 늘었어요.",
+        "ja": "EPS-TOPIK単語パックを7つ追加し、アプリ画面と単語の意味を表示する言語を9つ増やしました。",
+        "en": "Seven EPS-TOPIK decks were added, along with nine more languages for the interface and word meanings."
       },
-      "contentEvidence": {
-        "id": "kkachi-android-observed-20261117",
-        "kind": "store-release-notes",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-11-02",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "app": "pipi-sudoku",
@@ -704,7 +824,75 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "url": "https://apps.apple.com/kr/app/%ED%95%9C%EC%B9%B8%EC%94%A9-%EC%8A%A4%EB%8F%84%EC%BF%A0/id6820125053?uo=4"
+      "url": "https://apps.apple.com/kr/app/%ED%95%9C%EC%B9%B8%EC%94%A9-%EC%8A%A4%EB%8F%84%EC%BF%A0/id6820125053?uo=4",
+      "publication": {
+        "date": "2026-11-01",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-31T16:42:26Z"
+      }
+    },
+    {
+      "app": "pipi-draw",
+      "observedAt": "2026-11-02",
+      "id": "draw-123",
+      "date": "2026-10-30",
+      "timestamp": "2026-10-30T19:56:44Z",
+      "kind": "released",
+      "platform": "ios",
+      "version": "1.2.3",
+      "source": "public-store",
+      "region": "KR · JP · US",
+      "title": {
+        "ko": "아이와 함께 크게",
+        "ja": "子どもと一緒に大きく",
+        "en": "Bigger tools for drawing together"
+      },
+      "summary": {
+        "ko": "크게 모드에서 도구와 색을 더 크게 볼 수 있어요. 두 손가락으로 확대하거나 움직이고, 색칠할 부분을 먼저 고를 수 있어요.",
+        "ja": "大きく表示するモードで道具と色が見やすくなりました。二本指で拡大・移動し、先に塗る場所を選べます。",
+        "en": "A larger mode makes tools and colors easier to see. Zoom and pan with two fingers, and choose an area before coloring."
+      },
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-31",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-30T19:56:44Z"
+      }
+    },
+    {
+      "id": "kkachi-android-observed-20261117",
+      "app": "kkachi",
+      "date": "2026-11-17",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.1.0",
+      "observedAt": "2026-11-17",
+      "source": "public-store",
+      "region": "KR",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "storeUpdated": "2026-10-31",
+      "title": {
+        "ko": "첫 화면에 펼쳐지는 나의 민화",
+        "ja": "最初の画面に広がる自分の民画",
+        "en": "Your folk painting on the home screen"
+      },
+      "summary": {
+        "ko": "첫 화면을 나의 민화로 바꿨어요. 사주를 바탕으로 만든 그림을 족자로 보고 그림 읽기에서 소재의 뜻을 살펴볼 수 있어요. 가족, 친구의 그림을 고르고, 위젯을 누르면 오늘로 바로 이동해요.",
+        "ja": "最初の画面を「自分の民画」にしました。四柱推命をもとにした絵を掛け軸で見て、絵の解説からモチーフの意味を読めます。家族や友だちの絵も選べ、ウィジェットから「今日」を直接開けます。",
+        "en": "The home screen now presents your Four Pillars-inspired folk painting as a hanging scroll, with explanations of its motifs. Choose family or friends’ paintings, and open Today directly from the widget."
+      },
+      "contentEvidence": {
+        "id": "kkachi-android-observed-20261117",
+        "kind": "store-release-notes",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-10-31",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "pipi-tide-android-observed-20261117",
@@ -734,30 +922,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "app": "pipi-draw",
-      "observedAt": "2026-11-02",
-      "id": "draw-123",
-      "date": "2026-10-30",
-      "timestamp": "2026-10-30T19:56:44Z",
-      "kind": "released",
-      "platform": "ios",
-      "version": "1.2.3",
-      "source": "public-store",
-      "region": "KR · JP · US",
-      "title": {
-        "ko": "아이와 함께 크게",
-        "ja": "子どもと一緒に大きく",
-        "en": "Bigger tools for drawing together"
-      },
-      "summary": {
-        "ko": "크게 모드에서 도구와 색을 더 크게 볼 수 있어요. 두 손가락으로 확대하거나 움직이고, 색칠할 부분을 먼저 고를 수 있어요.",
-        "ja": "大きく表示するモードで道具と色が見やすくなりました。二本指で拡大・移動し、先に塗る場所を選べます。",
-        "en": "A larger mode makes tools and colors easier to see. Zoom and pan with two fingers, and choose an area before coloring."
-      },
-      "timeBasis": "public-store-update"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-10-31",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "pipi-sudoku-android-observed-20261117",
@@ -787,7 +957,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-10-29",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "pipi-spend-android-observed-20261117",
@@ -817,7 +992,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-10-28",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "id": "pipi-bp-android-observed-20261117",
@@ -847,7 +1027,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-10-27",
+        "basis": "play-updated",
+        "region": "KR"
+      }
     },
     {
       "app": "pipi-hello",
@@ -870,7 +1055,68 @@
         "ja": "習ったハングルで読める初めての絵本と、場面レッスンが加わりました。端末の言語によって学ぶ言語と内容が変わります。",
         "en": "The app offers eight illustrated situation lessons, five of them new. The language and lesson content depend on your device language."
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-26",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-25T19:54:01Z"
+      }
+    },
+    {
+      "app": "pipi-focus",
+      "observedAt": "2026-11-02",
+      "id": "focus-123",
+      "date": "2026-10-24",
+      "timestamp": "2026-10-24T15:17:49Z",
+      "kind": "released",
+      "platform": "ios",
+      "version": "1.2.3",
+      "source": "public-store",
+      "region": "KR · JP · US",
+      "title": {
+        "ko": "오래 집중한 만큼 보물",
+        "ja": "長く集中した分だけ宝物",
+        "en": "Treasure for longer focus"
+      },
+      "summary": {
+        "ko": "집중 시간 25분마다 보물 하나를 받아요. 25분에 못 미친 나머지 시간은 다음 항해로 이어져요.",
+        "ja": "集中時間25分ごとに宝物を1つ獲得し、残りの時間は次の航海に持ち越します。",
+        "en": "Earn a treasure for every 25 minutes of focus. Leftover minutes carry over to the next voyage."
+      },
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-25",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-24T15:17:49Z"
+      }
+    },
+    {
+      "app": "pipi-dday",
+      "observedAt": "2026-11-02",
+      "id": "pipi-dday-201",
+      "date": "2026-10-24",
+      "timestamp": "2026-10-24T16:05:29Z",
+      "kind": "released",
+      "platform": "ios",
+      "version": "2.0.1",
+      "source": "public-store",
+      "region": "KR · JP · US",
+      "title": {
+        "ko": "iOS 26 위젯 날짜 선택 수정",
+        "ja": "iOS 26ウィジェットの日付選択を修正",
+        "en": "Widget date selection fixed for iOS 26"
+      },
+      "summary": {
+        "ko": "위젯 편집에서 선택한 날짜가 iOS 26에서도 표시돼요. 앱 대표 날짜를 선택하면 위젯이 앱의 대표 날짜를 따라가요.",
+        "ja": "ウィジェット編集で選んだ日付がiOS 26でも表示されます。アプリのメイン日付を選ぶと、ウィジェットがその日付に連動します。",
+        "en": "The date chosen in Edit Widget now appears on iOS 26. Select the app’s main date to keep the widget in sync with it."
+      },
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-25",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-24T16:05:29Z"
+      }
     },
     {
       "id": "pipi-hello-android-observed-20261117",
@@ -900,78 +1146,11 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "observation-date"
-    },
-    {
-      "app": "pipi-focus",
-      "observedAt": "2026-11-02",
-      "id": "focus-123",
-      "date": "2026-10-24",
-      "timestamp": "2026-10-24T15:17:49Z",
-      "kind": "released",
-      "platform": "ios",
-      "version": "1.2.3",
-      "source": "public-store",
-      "region": "KR · JP · US",
-      "title": {
-        "ko": "오래 집중한 만큼 보물",
-        "ja": "長く集中した分だけ宝物",
-        "en": "Treasure for longer focus"
-      },
-      "summary": {
-        "ko": "집중 시간 25분마다 보물 하나를 받아요. 25분에 못 미친 나머지 시간은 다음 항해로 이어져요.",
-        "ja": "集中時間25分ごとに宝物を1つ獲得し、残りの時間は次の航海に持ち越します。",
-        "en": "Earn a treasure for every 25 minutes of focus. Leftover minutes carry over to the next voyage."
-      },
-      "timeBasis": "public-store-update"
-    },
-    {
-      "app": "pipi-dday",
-      "observedAt": "2026-11-02",
-      "id": "pipi-dday-201",
-      "date": "2026-10-24",
-      "timestamp": "2026-10-24T16:05:29Z",
-      "kind": "released",
-      "platform": "ios",
-      "version": "2.0.1",
-      "source": "public-store",
-      "region": "KR · JP · US",
-      "title": {
-        "ko": "iOS 26 위젯 날짜 선택 수정",
-        "ja": "iOS 26ウィジェットの日付選択を修正",
-        "en": "Widget date selection fixed for iOS 26"
-      },
-      "summary": {
-        "ko": "위젯 편집에서 선택한 날짜가 iOS 26에서도 표시돼요. 앱 대표 날짜를 선택하면 위젯이 앱의 대표 날짜를 따라가요.",
-        "ja": "ウィジェット編集で選んだ日付がiOS 26でも表示されます。アプリのメイン日付を選ぶと、ウィジェットがその日付に連動します。",
-        "en": "The date chosen in Edit Widget now appears on iOS 26. Select the app’s main date to keep the widget in sync with it."
-      },
-      "timeBasis": "public-store-update"
-    },
-    {
-      "id": "draw-android-122",
-      "app": "pipi-draw",
-      "date": "2026-10-23",
-      "kind": "observed",
-      "platform": "android",
-      "version": "1.2.2 (52)",
-      "observedAt": "2026-10-23",
-      "source": "store-check",
-      "title": {
-        "ko": "변환 뒤 선 굵기와 밑그림 다듬기",
-        "ja": "変換後に線の太さを調整・修正",
-        "en": "Adjust and clean up outlines after conversion"
-      },
-      "summary": {
-        "ko": "그림체와 배경을 고른 뒤 변환해요. 결과 화면에서 다시 변환하지 않고 선 굵기를 바꾸거나, 필요 없는 선을 손가락으로 지울 수 있어요.",
-        "ja": "画風と背景を選んで変換します。結果画面で再変換せずに線の太さを変え、不要な線を指で消せます。",
-        "en": "Choose a style and background before conversion. On the result screen, change line thickness without reconverting or erase unwanted lines with your finger."
-      },
       "timeBasis": "observation-date",
-      "releaseNotesReference": {
-        "repository": "pifl-labs/pipi-draw",
-        "commit": "8ffd56e27820e958a32fb96ff7cb940f9e47767c",
-        "path": "android/fastlane/metadata/android/ko-KR/changelogs/52.txt"
+      "publication": {
+        "date": "2026-10-25",
+        "basis": "play-updated",
+        "region": "KR"
       }
     },
     {
@@ -995,30 +1174,12 @@
         "ja": "気分と日付だけを載せた画像で、今日の気分を送れます。記録を保存するときの不具合も修正しました。",
         "en": "Share today’s mood in an image with just the mood and date. This update also fixes errors when saving entries."
       },
-      "timeBasis": "public-store-update"
-    },
-    {
-      "app": "pipi-words",
-      "observedAt": "2026-11-02",
-      "id": "pipi-words-1014",
-      "date": "2026-10-23",
-      "timestamp": "2026-10-23T02:25:35Z",
-      "kind": "released",
-      "platform": "ios",
-      "version": "1.0.14",
-      "source": "public-store",
-      "region": "KR · JP · US",
-      "title": {
-        "ko": "퀴즈 수정과 다음 복습일",
-        "ja": "クイズの修正と次の復習日",
-        "en": "Quiz fixes and next review dates"
-      },
-      "summary": {
-        "ko": "타이핑 퀴즈 결과가 멈추던 오류와 TOPIK II 단어팩 열기 문제를 고쳤어요. 카드 뒷면에서 다음 복습일을 볼 수 있어요.",
-        "ja": "入力クイズの結果画面が止まる問題と、TOPIK II単語パックを開くときの問題を修正しました。カードの裏面に次の復習日が表示されます。",
-        "en": "Typing quiz results no longer freeze, and an issue opening TOPIK II decks was fixed. Card backs show the next review date."
-      },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-24",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-23T15:39:10Z"
+      }
     },
     {
       "app": "dialogos",
@@ -1047,7 +1208,43 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-23",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-22T17:12:06Z"
+      }
+    },
+    {
+      "id": "draw-android-122",
+      "app": "pipi-draw",
+      "date": "2026-10-23",
+      "kind": "observed",
+      "platform": "android",
+      "version": "1.2.2 (52)",
+      "observedAt": "2026-10-23",
+      "source": "store-check",
+      "title": {
+        "ko": "변환 뒤 선 굵기와 밑그림 다듬기",
+        "ja": "変換後に線の太さを調整・修正",
+        "en": "Adjust and clean up outlines after conversion"
+      },
+      "summary": {
+        "ko": "그림체와 배경을 고른 뒤 변환해요. 결과 화면에서 다시 변환하지 않고 선 굵기를 바꾸거나, 필요 없는 선을 손가락으로 지울 수 있어요.",
+        "ja": "画風と背景を選んで変換します。結果画面で再変換せずに線の太さを変え、不要な線を指で消せます。",
+        "en": "Choose a style and background before conversion. On the result screen, change line thickness without reconverting or erase unwanted lines with your finger."
+      },
+      "timeBasis": "observation-date",
+      "publication": {
+        "date": "2026-10-23",
+        "basis": "play-production",
+        "reference": "8b527a31"
+      },
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-draw",
+        "commit": "8ffd56e27820e958a32fb96ff7cb940f9e47767c",
+        "path": "android/fastlane/metadata/android/ko-KR/changelogs/52.txt"
+      }
     },
     {
       "id": "focus-121",
@@ -1076,7 +1273,40 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-23",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-22T17:04:30Z"
+      }
+    },
+    {
+      "app": "pipi-words",
+      "observedAt": "2026-11-02",
+      "id": "pipi-words-1014",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T02:25:35Z",
+      "kind": "released",
+      "platform": "ios",
+      "version": "1.0.14",
+      "source": "public-store",
+      "region": "KR · JP · US",
+      "title": {
+        "ko": "퀴즈 수정과 다음 복습일",
+        "ja": "クイズの修正と次の復習日",
+        "en": "Quiz fixes and next review dates"
+      },
+      "summary": {
+        "ko": "타이핑 퀴즈 결과가 멈추던 오류와 TOPIK II 단어팩 열기 문제를 고쳤어요. 카드 뒷면에서 다음 복습일을 볼 수 있어요.",
+        "ja": "入力クイズの結果画面が止まる問題と、TOPIK II単語パックを開くときの問題を修正しました。カードの裏面に次の復習日が表示されます。",
+        "en": "Typing quiz results no longer freeze, and an issue opening TOPIK II decks was fixed. Card backs show the next review date."
+      },
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-23",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-23T02:25:35Z"
+      }
     },
     {
       "app": "pipi-bridge",
@@ -1105,7 +1335,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-22",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-21T23:59:22Z"
+      }
     },
     {
       "app": "pipi-word-voyage",
@@ -1134,7 +1369,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-22",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-21T20:54:32Z"
+      }
     },
     {
       "id": "focus-120",
@@ -1163,36 +1403,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
-    },
-    {
-      "app": "pipi-log",
-      "observedAt": "2026-10-23",
-      "id": "pipi-log-public",
-      "date": "2026-10-19",
-      "timestamp": "2026-10-19T00:54:35Z",
-      "kind": "released",
-      "platform": "ios",
-      "version": "1.0.12",
-      "source": "public-store",
-      "region": "US",
-      "title": {
-        "ko": "광고, 추적 없이, 일기 잠금도 무료로",
-        "ja": "広告・追跡をなくし、日記ロックを無料に",
-        "en": "No ads or tracking, free entry locking"
-      },
-      "summary": {
-        "ko": "광고와 추적을 없애고 일기 잠금을 모두에게 무료로 열었어요. 날씨, 표정 기분 아이콘과 밝고 어두운 테마로 화면을 다듬고, 일기, 사진 백업과 복원, 쓰던 글 복구를 더했어요.",
-        "ja": "広告と追跡をなくし、日記ロックを誰でも無料で使えるようにしました。天気と表情の気分アイコン、明るい・暗いテーマで画面を整え、日記と写真のバックアップ・復元、書きかけの文章の復元を加えました。",
-        "en": "Ads and tracking were removed, and entry locking became free for everyone. Weather-and-face mood icons and light and dark themes refresh the design, alongside entry-and-photo backups, import and draft recovery."
-      },
-      "contentEvidence": {
-        "id": "pipi-log-public",
-        "kind": "version-release-document",
-        "checkedAt": "2026-11-17",
-        "url": "/archive-release-notes-20261117.json"
-      },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-19",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-19T13:21:10Z"
+      }
     },
     {
       "app": "pipi-hello",
@@ -1221,7 +1437,46 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-19",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-18T17:25:15Z"
+      }
+    },
+    {
+      "app": "pipi-log",
+      "observedAt": "2026-10-23",
+      "id": "pipi-log-public",
+      "date": "2026-10-19",
+      "timestamp": "2026-10-19T00:54:35Z",
+      "kind": "released",
+      "platform": "ios",
+      "version": "1.0.12",
+      "source": "public-store",
+      "region": "US",
+      "title": {
+        "ko": "광고, 추적 없이, 일기 잠금도 무료로",
+        "ja": "広告・追跡をなくし、日記ロックを無料に",
+        "en": "No ads or tracking, free entry locking"
+      },
+      "summary": {
+        "ko": "광고와 추적을 없애고 일기 잠금을 모두에게 무료로 열었어요. 날씨, 표정 기분 아이콘과 밝고 어두운 테마로 화면을 다듬고, 일기, 사진 백업과 복원, 쓰던 글 복구를 더했어요.",
+        "ja": "広告と追跡をなくし、日記ロックを誰でも無料で使えるようにしました。天気と表情の気分アイコン、明るい・暗いテーマで画面を整え、日記と写真のバックアップ・復元、書きかけの文章の復元を加えました。",
+        "en": "Ads and tracking were removed, and entry locking became free for everyone. Weather-and-face mood icons and light and dark themes refresh the design, alongside entry-and-photo backups, import and draft recovery."
+      },
+      "contentEvidence": {
+        "id": "pipi-log-public",
+        "kind": "version-release-document",
+        "checkedAt": "2026-11-17",
+        "url": "/archive-release-notes-20261117.json"
+      },
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-19",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-19T00:54:35Z"
+      }
     },
     {
       "id": "focus-radio",
@@ -1244,7 +1499,12 @@
         "ja": "ローファイ音楽と雨音を重ねて、それぞれの音量を調整できます。航海中も音を切り替えられます。",
         "en": "Layer lo-fi music with rain sounds, adjust volumes independently and switch sounds during a voyage."
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-16",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-15T19:05:28Z"
+      }
     },
     {
       "id": "draw-112",
@@ -1267,7 +1527,12 @@
         "ja": "ぬりえを印刷したりPDFに保存したりできます。パレットと色の選び方も改善しました。",
         "en": "Print your coloring pages or save them as PDFs. Palettes and color selection were improved."
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-14",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-13T16:44:19Z"
+      }
     },
     {
       "app": "pipi-dday",
@@ -1296,7 +1561,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-14",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-13T18:17:45Z"
+      }
     },
     {
       "id": "focus-1016",
@@ -1324,7 +1594,11 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-05",
+        "basis": "ios-store-date"
+      }
     },
     {
       "app": "pipi-words",
@@ -1353,7 +1627,12 @@
         "checkedAt": "2026-11-17",
         "url": "/archive-release-notes-20261117.json"
       },
-      "timeBasis": "public-store-update"
+      "timeBasis": "public-store-update",
+      "publication": {
+        "date": "2026-10-05",
+        "basis": "ios-released-kst",
+        "timestamp": "2026-10-05T14:50:25Z"
+      }
     }
   ]
 }

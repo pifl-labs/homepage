@@ -1,0 +1,1147 @@
+{
+  "base": "http://127.0.0.1:4334",
+  "checkedAt": "2026-11-17T22:42:01.057Z",
+  "cells": [
+    {
+      "id": "ja-home-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-home-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-home-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-home-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-home-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-home-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-home-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-home-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-home-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-home-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-home-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-home-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-home-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-home-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-home-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-home-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-archive-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-archive-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-archive-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-320-light-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-320-light-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-320-dark-1",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-320-dark-2",
+      "width": 320,
+      "scroll": 320,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-375-light-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-375-light-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-375-dark-1",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-375-dark-2",
+      "width": 375,
+      "scroll": 375,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-768-light-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-768-light-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-768-dark-1",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-768-dark-2",
+      "width": 768,
+      "scroll": 768,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1280-light-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1280-light-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1280-dark-1",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "en-dday-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ko-dday-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1280-dark-2",
+      "width": 1280,
+      "scroll": 1280,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1920-light-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1920-light-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1920-dark-1",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    },
+    {
+      "id": "ja-dday-1920-dark-2",
+      "width": 1920,
+      "scroll": 1920,
+      "clipped": []
+    }
+  ],
+  "flows": [
+    {
+      "lang": "en",
+      "orphanQueryRemoved": true,
+      "keyboardSelection": true,
+      "bothPlatformFilters": true,
+      "back": true,
+      "details": true,
+      "evidenceLink": true,
+      "reset": true,
+      "homeArchiveLink": true
+    },
+    {
+      "lang": "ko",
+      "orphanQueryRemoved": true,
+      "keyboardSelection": true,
+      "bothPlatformFilters": true,
+      "back": true,
+      "details": true,
+      "evidenceLink": true,
+      "reset": true,
+      "homeArchiveLink": true
+    },
+    {
+      "lang": "ja",
+      "orphanQueryRemoved": true,
+      "keyboardSelection": true,
+      "bothPlatformFilters": true,
+      "back": true,
+      "details": true,
+      "evidenceLink": true,
+      "reset": true,
+      "homeArchiveLink": true
+    }
+  ],
+  "errors": [],
+  "assets": [],
+  "fingerprints": {
+    "src/components/Archive.astro": "5c439141e4a5cb7535d01a076188fb838b4854dc47e59d89083a419fcc7cf8a0",
+    "src/components/FleetLog.astro": "043866561ee05410a4eaf80d2678a05e6bccea2b8d80d5fecaf60f762d281dbc",
+    "src/components/AppCatalog.astro": "58eb1c408847014df32a6659ffe165548b6c55c6cdb248dd62fe21fac64c2604",
+    "src/components/AppsJsonLd.astro": "a97ad618558191dbce247a62b6ba3c31b286f0be523c0e02ef761daa607aae35",
+    "src/data/archive-public.mjs": "bcd81a22c385a85c6efd7db59eec84fdc0d0c74ae1280e5ef470959bab763d05",
+    "src/data/archive-release-cards.mjs": "fd1878f688680833dbb2b2b5315a162dffccdb72bc56fddca54324729a9999de",
+    "src/data/apps.ts": "781fdd64a3b0b49bde4574105c13e84c1bff7b460a7193978b11b633ef0eeca2",
+    "src/data/archive-copy.ts": "443041503f3b25b7a844b83ec18796356a41404eae1b62a32eed576144952354",
+    "public/styles-archive.css": "79eea83c518d34caea89e2044b9d1cbf4269c37c84439549a68658c8e97df398",
+    "public/archive-client.js": "454c328d7c6a279410fb63335ad550613c09549e1a7892880c169f09fd6519c7",
+    "public/archive-filters.mjs": "f07d217f9bf92089f15fd8d3ccaa0e35e99bde03dec9a135c5557ed57819bfbe",
+    "public/archive-evidence.json": "c79568d5677766d425659561dc016ed357bfe133c5a50e0ce5408d7e72c449ff",
+    "public/archive-release-notes-20261118.json": "e415259221f1726f7a05c2472eebc374d61d15b787ad2d0aa4e6f1e1522c9143",
+    "dist/ko/index.html": "07e0070b9911a2bf76dd04fa0d210c37f015c241af138f45591aa117610ea423",
+    "dist/ko/archive/index.html": "a796c272f86c807b9207ad8cd3cd81136abb3600706d5e4775c3814a377968d8",
+    "dist/ko/apps/pipi-dday/index.html": "5ea2898373e7bd6cbe85f6f014139fe30768974d9c0c744c1991f19d856f4845",
+    "dist/ja/index.html": "7a50fba23606fb8a4089068fcc1f411019a0e621a4ee8638a610d5522dce227d",
+    "dist/ja/archive/index.html": "fae572fd5b6246b34bed2047669a2afa12b4113d31add99e72fc49ed64e233e1",
+    "dist/ja/apps/pipi-dday/index.html": "07a22aaa7191b16f490cdbc8a927bcec50405b587ee1b381180d2c1487c46d92",
+    "dist/en/index.html": "7c6a3f5fcfbcdebf7867658bbeb3058fa4805e29189f7f0ada334baff330053f",
+    "dist/en/archive/index.html": "dd38a2a107d3c31b3042e425e88e1a8de2a3ef18834591ac7362789399da8d3a",
+    "dist/en/apps/pipi-dday/index.html": "26d531500c3ba280ed56adeb1dafc20c39c9fd557d654f9682de36f6ff2f4e62"
+  }
+}

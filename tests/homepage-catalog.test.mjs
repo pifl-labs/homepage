@@ -21,7 +21,7 @@ test('nine public products have official localized screenshot provenance and ass
 });
 for (const lang of ['ko','ja','en']) test(`${lang}: built catalog separates exploration, downloads and optional release history`, () => {
   const html=readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url),'utf8');
-  assert.equal((html.match(/class="app-card-main"/g)||[]).length,17);
+  assert.equal((html.match(/class="app-card-main"/g)||[]).length,16);
   assert.equal((html.match(/class="app-card-preview"/g)||[]).length,12);
   assert.equal((html.match(/class="app-card-stores"/g)||[]).length,16);
   assert.match(html, /<details class="fleet-disclosure">/);

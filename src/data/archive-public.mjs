@@ -1,4 +1,5 @@
 import {archiveEvents} from './archive.mjs';
+import storeReceipt from '../../docs/release/homepage-store-recheck-20261118.json' with {type:'json'};
 
 const l = (ko, ja, en) => ({ko, ja, en});
 
@@ -7,6 +8,7 @@ const l = (ko, ja, en) => ({ko, ja, en});
 // The original observations and private-workflow milestones remain in Git.
 const historicalHighlights = {
  'pipi-words-android-110': {
+  publication: {date:'2026-11-02',basis:'play-updated',region:'KR'},
   title: l('EPS-TOPIK 단어팩과 표시 언어 추가', 'EPS-TOPIK単語パックと表示言語を追加', 'EPS-TOPIK decks and more display languages'),
   summary: l('EPS-TOPIK 단어팩 7개를 추가했어요. 앱 화면과 단어 뜻을 표시할 언어도 9개 늘었어요.', 'EPS-TOPIK単語パックを7つ追加し、アプリ画面と単語の意味を表示する言語を9つ増やしました。', 'Seven EPS-TOPIK decks were added, along with nine more languages for the interface and word meanings.'),
  },
@@ -29,6 +31,7 @@ const historicalHighlights = {
  'draw-android-122': {
   title: l('변환 뒤 선 굵기와 밑그림 다듬기', '変換後に線の太さを調整・修正', 'Adjust and clean up outlines after conversion'),
   summary: l('그림체와 배경을 고른 뒤 변환해요. 결과 화면에서 다시 변환하지 않고 선 굵기를 바꾸거나, 필요 없는 선을 손가락으로 지울 수 있어요.', '画風と背景を選んで変換します。結果画面で再変換せずに線の太さを変え、不要な線を指で消せます。', 'Choose a style and background before conversion. On the result screen, change line thickness without reconverting or erase unwanted lines with your finger.'),
+  publication: {date:'2026-10-23',basis:'play-production',reference:'8b527a31'},
   releaseNotesReference: {repository:'pifl-labs/pipi-draw', commit:'8ffd56e27820e958a32fb96ff7cb940f9e47767c', path:'android/fastlane/metadata/android/ko-KR/changelogs/52.txt'},
  },
  'pipi-log-1013': {
@@ -45,12 +48,24 @@ const historicalHighlights = {
  },
 };
 
+const koreaDay = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'});
+export function publicationFor(event) {
+ if(event.publication) return event.publication;
+ if(event.platform==='android' && event.storeUpdated) return {date:event.storeUpdated,basis:'play-updated',region:event.region};
+ if(event.platform!=='ios') return null;
+ const id=event.url?.match(/\/id(\d+)/)?.[1];
+ const receipt=id && storeReceipt.ios.apps.find(a=>String(a.trackId)===id && a.version===event.version);
+ const timestamp=event.timestamp || receipt?.currentVersionReleaseDate;
+ if(timestamp) return {date:koreaDay.format(new Date(timestamp)),basis:'ios-released-kst',timestamp};
+ if(event.timeBasis==='public-store-update') return {date:event.date,basis:'ios-store-date'};
+ return null;
+}
 export function releaseDate(event) {
- return event.storeUpdated || event.date;
+ return event.publication?.date ?? null;
 }
 
 export function displayKind(event) {
- return event.storeUpdated ? 'released' : event.kind;
+ return event.publication?.basis==='play-production' ? 'observed' : 'released';
 }
 
 const sudokuNotes = archiveEvents.find(e => e.id === 'pipi-sudoku-ios-observed-20261117');
@@ -66,13 +81,38 @@ const publicHighlights = {
  },
 };
 
-export const publicArchiveEvents = archiveEvents
+const ddayAndroid = storeReceipt.android.find(e=>e.package==='com.pifl.pipi.dday'&&e.version==='2.0.3');
+const dday203 = {
+ id:'pipi-dday-android-203',app:'pipi-dday',platform:'android',kind:'observed',source:'public-store',
+ version:ddayAndroid.version, region:storeReceipt.region, url:ddayAndroid.url,
+ date:storeReceipt.observedAt, observedAt:storeReceipt.observedAt, timeBasis:'observation-date',
+ storeUpdated:ddayAndroid.updated.match(/\d+/g).map((x,i)=>i?x.padStart(2,'0'):x).join('-'),
+ title:l('오늘의 기념일 공유와 여행 중 알림','当日の記念日を共有、旅行先でも通知','Share today’s milestone and keep reminders local'),
+ summary:l('기념일 당일에 홈에서 바로 공유할 수 있어요. 날짜를 잘못 입력하면 형식과 허용 범위를 안내하고, 다른 시간대에서 앱을 열면 알림이 현지 시각에 맞춰 다시 예약돼요.','記念日の当日はホームから共有できます。日付を誤入力したときは形式と範囲を案内し、別の時間帯でアプリを開くと現地時刻に合わせて通知を設定し直します。','Share a milestone from Home on the day itself. Date entry shows format and range guidance, and reminders reschedule to local time when you open the app in a different time zone.'),
+ contentEvidence:{id:'pipi-dday-android-203',kind:'store-release-notes',checkedAt:storeReceipt.observedAt,url:'/archive-release-notes-20261118.json'},
+};
+
+export const publicArchiveEvents = [...archiveEvents,dday203]
  .filter(e => ['released', 'observed'].includes(e.kind)
    && ['ios', 'android'].includes(e.platform) && e.version
    && ['public-store', 'store-check'].includes(e.source)
    && (e.contentEvidence || Object.hasOwn(publicHighlights, e.id))
    && e.id !== sudokuNotes.id)
  .map(({milestones, ...e}) => ({...e, ...publicHighlights[e.id]}))
+ .map(e => {
+  const publication=publicationFor(e);
+  if(e.app==='pipi-dday'&&e.version==='2.0.2') {
+   const summary=e.platform==='ios'
+    ? l('사진이 위젯을 가득 채우고, iOS의 틴트·투명 모드에서도 사진이 보이도록 고쳤어요. 날짜 삭제를 되돌리면 사진과 알림도 복원돼요.','写真がウィジェット全体を埋め、iOSの色合い・透明表示でも写真が出るように修正しました。日付の削除を取り消すと写真と通知も戻ります。','Photos fill the widget and remain visible in iOS tinted and clear modes. Undoing a deleted date also restores its photo and reminders.')
+    : l('사진이 위젯을 가득 채우고 기본 위젯의 얇은 테두리를 없앴어요. 날짜 삭제를 되돌리면 사진과 알림도 복원돼요.','写真がウィジェット全体を埋め、標準ウィジェットの細い枠線をなくしました。日付の削除を取り消すと写真と通知も戻ります。','Photos fill the widget, and the default Android widget no longer has a thin border. Undoing a deleted date also restores its photo and reminders.');
+   const releaseNotesReference=e.platform==='ios' ? {
+    repository:'pifl-labs/pipi-dday', commit:'18616088370ff055d7c0bd00ace30b98c8cb3cb0', path:'docs/release/2.0.2+45.md',
+   } : undefined;
+   return {...e,publication,summary,...(releaseNotesReference&&{releaseNotesReference})};
+  }
+  return {...e,publication};
+ })
+ .filter(e=>e.publication)
  .sort((a,b) => releaseDate(b).localeCompare(releaseDate(a)) || a.id.localeCompare(b.id));
 
 export const publicArchiveApps = [...new Set(publicArchiveEvents.map(e => e.app))];
