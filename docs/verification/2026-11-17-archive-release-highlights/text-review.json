@@ -1,0 +1,3470 @@
+{
+  "scope": "Changed event titles and summaries; raw full-page diagnostics retained separately, including unsupported states and unchanged/closed content.",
+  "review": [
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "kkachi-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 334,
+        "lang": "en",
+        "text": "Pillars-inspired",
+        "start": 39
+      },
+      "lines": [
+        "The home screen now",
+        "presents your Four Pillars-",
+        "inspired folk painting as a",
+        "hanging scroll, with",
+        "explanations of its motifs.",
+        "Choose family or friends’",
+        "paintings, and open Today",
+        "directly from the widget."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 349,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 367,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 385,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-dream-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 478,
+        "lang": "en",
+        "text": "120-symbol",
+        "start": 132
+      },
+      "lines": [
+        "The first version includes",
+        "spoken dream entries and",
+        "on-device dictation. Review",
+        "entries in lists, a calendar",
+        "and statistics, with a 120-",
+        "symbol dictionary, morning",
+        "reminders, app lock, export",
+        "and import."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 745,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 763,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1063,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses illustrated",
+        "cards for four puzzle modes",
+        "and your current voyage.",
+        "Learn by following a finger",
+        "demonstration on the first",
+        "island, and solve proverbs",
+        "with a letter wheel. A new",
+        "sailboat icon and puzzle-",
+        "result artwork complete",
+        "the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1118,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry locking",
+        "became free for everyone.",
+        "Weather-and-face mood",
+        "icons and light and dark",
+        "themes refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 331,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 349,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 367,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-hello-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 532,
+        "lang": "en",
+        "text": "writing-progress",
+        "start": 191
+      },
+      "lines": [
+        "After a quiz, retry only",
+        "the characters that were",
+        "tricky. Correct and",
+        "incorrect answers use",
+        "distinct colors and",
+        "shapes, and the current",
+        "question replays when",
+        "you return to the app.",
+        "Units and writing-",
+        "progress markers",
+        "are clearer."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-sky-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 586,
+        "lang": "en",
+        "text": "sky-gazing",
+        "start": 161
+      },
+      "lines": [
+        "Sky waypoint labels now",
+        "have backgrounds, with",
+        "the coldest and topmost",
+        "layers always visible.",
+        "Moving to a waypoint",
+        "shows the same altitude",
+        "as its label, and the sky-",
+        "gazing button has been",
+        "repositioned."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 727,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 745,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry",
+        "locking became free for",
+        "everyone. Weather-and-",
+        "face mood icons and",
+        "light and dark themes",
+        "refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import",
+        "and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry",
+        "locking became free for",
+        "everyone. Weather-and-",
+        "face mood icons and",
+        "light and dark themes",
+        "refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import",
+        "and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include",
+        "brown, pink and white",
+        "noise, a ship’s clock and",
+        "deep-sea binaural audio.",
+        "Switch sounds mid-",
+        "voyage, enable interval",
+        "bells or a 30-second",
+        "breathing pause before",
+        "sailing. Resumed-voyage",
+        "recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-2-text.json.gz",
+      "eventId": "pipi-words-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1214,
+        "lang": "en",
+        "text": "yourself—there",
+        "start": 128
+      },
+      "lines": [
+        "Vocab Routine gains a",
+        "new name and icon, plus",
+        "review by writing words",
+        "from their meanings.",
+        "Compare your writing",
+        "with the answer yourself",
+        "—there is no automatic",
+        "grading. Deck progress,",
+        "large text and statistics",
+        "charts were also",
+        "improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-1-text.json.gz",
+      "eventId": "pipi-hello-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 532,
+        "lang": "en",
+        "text": "writing-progress",
+        "start": 191
+      },
+      "lines": [
+        "After a quiz, retry only the characters",
+        "that were tricky. Correct and incorrect",
+        "answers use distinct colors and shapes,",
+        "and the current question replays when",
+        "you return to the app. Units and writing-",
+        "progress markers are clearer."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-1-text.json.gz",
+      "eventId": "focus-120",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1078,
+        "lang": "en",
+        "text": "Island-conquest",
+        "start": 67
+      },
+      "lines": [
+        "Your sailor grows through six ranks,",
+        "with PiPi cheering alongside. Island-",
+        "conquest voyages and a sailor",
+        "wardrobe let the pair wear matching",
+        "collected outfits. The Start button no",
+        "longer disappears on small screens."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-1-text.json.gz",
+      "eventId": "pipi-dday-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1178,
+        "lang": "en",
+        "text": "large-text",
+        "start": 187
+      },
+      "lines": [
+        "A new name, Until That Day, arrives with",
+        "a new icon and launch screen. Pin a",
+        "countdown as your main one; turning",
+        "notifications back on reschedules saved",
+        "reminders. Shared-card titles and large-",
+        "text readability are improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include brown, pink and",
+        "white noise, a ship’s clock and deep-sea",
+        "binaural audio. Switch sounds mid-",
+        "voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing.",
+        "Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "30-second",
+        "start": 145
+      },
+      "lines": [
+        "New sounds include brown, pink and",
+        "white noise, a ship’s clock and deep-sea",
+        "binaural audio. Switch sounds mid-",
+        "voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing.",
+        "Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-1-text.json.gz",
+      "eventId": "pipi-sky-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 608,
+        "lang": "en",
+        "text": "sky-gazing",
+        "start": 161
+      },
+      "lines": [
+        "Sky waypoint labels now have backgrounds, with the coldest and topmost layers",
+        "always visible. Moving to a waypoint shows the same altitude as its label, and the sky-",
+        "gazing button has been repositioned."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-1-text.json.gz",
+      "eventId": "focus-120",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1096,
+        "lang": "en",
+        "text": "Island-conquest",
+        "start": 67
+      },
+      "lines": [
+        "Your sailor grows through six ranks, with PiPi cheering alongside. Island-",
+        "conquest voyages and a sailor wardrobe let the pair wear matching collected",
+        "outfits. The Start button no longer disappears on small screens."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1216,
+        "lang": "en",
+        "text": "deep-sea",
+        "start": 67
+      },
+      "lines": [
+        "New sounds include brown, pink and white noise, a ship’s clock and deep-",
+        "sea binaural audio. Switch sounds mid-voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing. Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1216,
+        "lang": "en",
+        "text": "30-second",
+        "start": 145
+      },
+      "lines": [
+        "New sounds include brown, pink and white noise, a ship’s clock and deep-",
+        "sea binaural audio. Switch sounds mid-voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing. Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "kkachi-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 338,
+        "lang": "en",
+        "text": "Pillars-inspired",
+        "start": 39
+      },
+      "lines": [
+        "The home screen now",
+        "presents your Four Pillars-",
+        "inspired folk painting as a",
+        "hanging scroll, with",
+        "explanations of its motifs.",
+        "Choose family or friends’",
+        "paintings, and open Today",
+        "directly from the widget."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 353,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 356,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 47
+      },
+      "lines": [
+        "The first version records",
+        "readings from a home blood-",
+        "pressure monitor, with up to",
+        "six family profiles, widgets",
+        "and reminders. Paid Pro adds",
+        "PDF and CSV reports. The",
+        "app does not measure",
+        "blood pressure or provide",
+        "medical advice."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 371,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 389,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 749,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 752,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 767,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 770,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1067,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses illustrated",
+        "cards for four puzzle modes",
+        "and your current voyage.",
+        "Learn by following a finger",
+        "demonstration on the first",
+        "island, and solve proverbs",
+        "with a letter wheel. A new",
+        "sailboat icon and puzzle-",
+        "result artwork complete",
+        "the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry locking",
+        "became free for everyone.",
+        "Weather-and-face mood",
+        "icons and light and dark",
+        "themes refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1220,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include brown,",
+        "pink and white noise, a ship’s",
+        "clock and deep-sea binaural",
+        "audio. Switch sounds mid-",
+        "voyage, enable interval bells",
+        "or a 30-second breathing",
+        "pause before sailing.",
+        "Resumed-voyage recording",
+        "errors were also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-1-text.json.gz",
+      "eventId": "pipi-focus-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 478,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or 50 minutes from the timer",
+        "ring before setting sail. Voyages completed",
+        "while the app was closed show their rewards",
+        "when you return. Island records and supply-",
+        "ship guidance are clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-1-text.json.gz",
+      "eventId": "pipi-focus-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 496,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or 50 minutes from the timer",
+        "ring before setting sail. Voyages completed",
+        "while the app was closed show their rewards",
+        "when you return. Island records and supply-",
+        "ship guidance are clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry",
+        "locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark",
+        "themes refresh the design, alongside",
+        "entry-and-photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-1-text.json.gz",
+      "eventId": "pipi-hello-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 532,
+        "lang": "en",
+        "text": "writing-progress",
+        "start": 191
+      },
+      "lines": [
+        "After a quiz, retry only the characters",
+        "that were tricky. Correct and incorrect",
+        "answers use distinct colors and shapes,",
+        "and the current question replays when",
+        "you return to the app. Units and writing-",
+        "progress markers are clearer."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-1-text.json.gz",
+      "eventId": "focus-120",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1078,
+        "lang": "en",
+        "text": "Island-conquest",
+        "start": 67
+      },
+      "lines": [
+        "Your sailor grows through six ranks,",
+        "with PiPi cheering alongside. Island-",
+        "conquest voyages and a sailor",
+        "wardrobe let the pair wear matching",
+        "collected outfits. The Start button no",
+        "longer disappears on small screens."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-1-text.json.gz",
+      "eventId": "pipi-dday-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1178,
+        "lang": "en",
+        "text": "large-text",
+        "start": 187
+      },
+      "lines": [
+        "A new name, Until That Day, arrives with",
+        "a new icon and launch screen. Pin a",
+        "countdown as your main one; turning",
+        "notifications back on reschedules saved",
+        "reminders. Shared-card titles and large-",
+        "text readability are improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include brown, pink and",
+        "white noise, a ship’s clock and deep-sea",
+        "binaural audio. Switch sounds mid-",
+        "voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing.",
+        "Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "30-second",
+        "start": 145
+      },
+      "lines": [
+        "New sounds include brown, pink and",
+        "white noise, a ship’s clock and deep-sea",
+        "binaural audio. Switch sounds mid-",
+        "voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing.",
+        "Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "kkachi-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 338,
+        "lang": "en",
+        "text": "Pillars-inspired",
+        "start": 39
+      },
+      "lines": [
+        "The home screen now",
+        "presents your Four Pillars-",
+        "inspired folk painting as a",
+        "hanging scroll, with",
+        "explanations of its motifs.",
+        "Choose family or friends’",
+        "paintings, and open Today",
+        "directly from the widget."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 353,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 356,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 47
+      },
+      "lines": [
+        "The first version records",
+        "readings from a home blood-",
+        "pressure monitor, with up to",
+        "six family profiles, widgets",
+        "and reminders. Paid Pro adds",
+        "PDF and CSV reports. The",
+        "app does not measure",
+        "blood pressure or provide",
+        "medical advice."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 371,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 389,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 749,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 752,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 767,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 770,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1067,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses illustrated",
+        "cards for four puzzle modes",
+        "and your current voyage.",
+        "Learn by following a finger",
+        "demonstration on the first",
+        "island, and solve proverbs",
+        "with a letter wheel. A new",
+        "sailboat icon and puzzle-",
+        "result artwork complete",
+        "the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry locking",
+        "became free for everyone.",
+        "Weather-and-face mood",
+        "icons and light and dark",
+        "themes refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1220,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include brown,",
+        "pink and white noise, a ship’s",
+        "clock and deep-sea binaural",
+        "audio. Switch sounds mid-",
+        "voyage, enable interval bells",
+        "or a 30-second breathing",
+        "pause before sailing.",
+        "Resumed-voyage recording",
+        "errors were also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "kkachi-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 338,
+        "lang": "en",
+        "text": "Pillars-inspired",
+        "start": 39
+      },
+      "lines": [
+        "The home screen now",
+        "presents your Four Pillars-",
+        "inspired folk painting as a",
+        "hanging scroll, with",
+        "explanations of its motifs.",
+        "Choose family or friends’",
+        "paintings, and open Today",
+        "directly from the widget."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 353,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 356,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 47
+      },
+      "lines": [
+        "The first version records",
+        "readings from a home blood-",
+        "pressure monitor, with up to",
+        "six family profiles, widgets",
+        "and reminders. Paid Pro adds",
+        "PDF and CSV reports. The",
+        "app does not measure",
+        "blood pressure or provide",
+        "medical advice."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 371,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 389,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 749,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 752,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 767,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 770,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1067,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses illustrated",
+        "cards for four puzzle modes",
+        "and your current voyage.",
+        "Learn by following a finger",
+        "demonstration on the first",
+        "island, and solve proverbs",
+        "with a letter wheel. A new",
+        "sailboat icon and puzzle-",
+        "result artwork complete",
+        "the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry locking",
+        "became free for everyone.",
+        "Weather-and-face mood",
+        "icons and light and dark",
+        "themes refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1220,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include brown,",
+        "pink and white noise, a ship’s",
+        "clock and deep-sea binaural",
+        "audio. Switch sounds mid-",
+        "voyage, enable interval bells",
+        "or a 30-second breathing",
+        "pause before sailing.",
+        "Resumed-voyage recording",
+        "errors were also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 331,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 349,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 367,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-hello-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 532,
+        "lang": "en",
+        "text": "writing-progress",
+        "start": 191
+      },
+      "lines": [
+        "After a quiz, retry only",
+        "the characters that were",
+        "tricky. Correct and",
+        "incorrect answers use",
+        "distinct colors and",
+        "shapes, and the current",
+        "question replays when",
+        "you return to the app.",
+        "Units and writing-",
+        "progress markers",
+        "are clearer."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-sky-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 586,
+        "lang": "en",
+        "text": "sky-gazing",
+        "start": 161
+      },
+      "lines": [
+        "Sky waypoint labels now",
+        "have backgrounds, with",
+        "the coldest and topmost",
+        "layers always visible.",
+        "Moving to a waypoint",
+        "shows the same altitude",
+        "as its label, and the sky-",
+        "gazing button has been",
+        "repositioned."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 727,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 745,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry",
+        "locking became free for",
+        "everyone. Weather-and-",
+        "face mood icons and",
+        "light and dark themes",
+        "refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import",
+        "and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry",
+        "locking became free for",
+        "everyone. Weather-and-",
+        "face mood icons and",
+        "light and dark themes",
+        "refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import",
+        "and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include",
+        "brown, pink and white",
+        "noise, a ship’s clock and",
+        "deep-sea binaural audio.",
+        "Switch sounds mid-",
+        "voyage, enable interval",
+        "bells or a 30-second",
+        "breathing pause before",
+        "sailing. Resumed-voyage",
+        "recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-dark-2-text.json.gz",
+      "eventId": "pipi-words-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1214,
+        "lang": "en",
+        "text": "yourself—there",
+        "start": 128
+      },
+      "lines": [
+        "Vocab Routine gains a",
+        "new name and icon, plus",
+        "review by writing words",
+        "from their meanings.",
+        "Compare your writing",
+        "with the answer yourself",
+        "—there is no automatic",
+        "grading. Deck progress,",
+        "large text and statistics",
+        "charts were also",
+        "improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 331,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure",
+        "readings by",
+        "family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 334,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 47
+      },
+      "lines": [
+        "The first version",
+        "records readings",
+        "from a home blood-",
+        "pressure monitor,",
+        "with up to six family",
+        "profiles, widgets and",
+        "reminders. Paid Pro",
+        "adds PDF and CSV",
+        "reports. The app",
+        "does not measure",
+        "blood pressure",
+        "or provide",
+        "medical advice."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 349,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word",
+        "groups and",
+        "a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 367,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word",
+        "groups and",
+        "a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-dream-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 460,
+        "lang": "en",
+        "text": "120-symbol",
+        "start": 132
+      },
+      "lines": [
+        "The first version",
+        "includes spoken",
+        "dream entries and",
+        "on-device dictation.",
+        "Review entries in",
+        "lists, a calendar and",
+        "statistics, with a 120-",
+        "symbol dictionary,",
+        "morning reminders,",
+        "app lock, export",
+        "and import."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-focus-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 478,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or",
+        "50 minutes from the",
+        "timer ring before",
+        "setting sail. Voyages",
+        "completed while the",
+        "app was closed show",
+        "their rewards when",
+        "you return. Island",
+        "records and supply-",
+        "ship guidance are",
+        "clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-focus-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 496,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or",
+        "50 minutes from the",
+        "timer ring before",
+        "setting sail. Voyages",
+        "completed while the",
+        "app was closed show",
+        "their rewards when",
+        "you return. Island",
+        "records and supply-",
+        "ship guidance are",
+        "clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-log-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 547,
+        "lang": "en",
+        "text": "Personal-best",
+        "start": 0
+      },
+      "lines": [
+        "Personal-",
+        "best streaks",
+        "and more",
+        "reliable editing"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-log-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 550,
+        "lang": "en",
+        "text": "personal-best",
+        "start": 9
+      },
+      "lines": [
+        "See your personal-",
+        "best streak when it",
+        "exceeds your current",
+        "one, and mood",
+        "streaks no longer",
+        "stop counting at 14",
+        "days. Fixes address",
+        "empty analysis with",
+        "locked entries and",
+        "text disappearing or",
+        "being overwritten",
+        "while editing."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-log-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 565,
+        "lang": "en",
+        "text": "Personal-best",
+        "start": 0
+      },
+      "lines": [
+        "Personal-",
+        "best streaks",
+        "and more",
+        "reliable editing"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-log-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 568,
+        "lang": "en",
+        "text": "personal-best",
+        "start": 9
+      },
+      "lines": [
+        "See your personal-",
+        "best streak when it",
+        "exceeds your current",
+        "one, and mood",
+        "streaks no longer",
+        "stop counting at 14",
+        "days. Fixes address",
+        "empty analysis with",
+        "locked entries and",
+        "text disappearing or",
+        "being overwritten",
+        "while editing."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 727,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your",
+        "answers and",
+        "correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 745,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your",
+        "answers and",
+        "correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "focus-121",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1003,
+        "lang": "en",
+        "text": "home-widget",
+        "start": 170
+      },
+      "lines": [
+        "Temporarily mute",
+        "Cabin Radio without",
+        "pausing your voyage.",
+        "The map shows",
+        "progress toward the",
+        "next island, and the",
+        "treasure chest shows",
+        "rarities for",
+        "uncollected items.",
+        "iOS home-",
+        "widget text has",
+        "better contrast in",
+        "light mode."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1045,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses",
+        "illustrated cards for",
+        "four puzzle modes",
+        "and your current",
+        "voyage. Learn by",
+        "following a finger",
+        "demonstration on the",
+        "first island, and solve",
+        "proverbs with a letter",
+        "wheel. A new sailboat",
+        "icon and puzzle-",
+        "result artwork",
+        "complete the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "focus-120",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1078,
+        "lang": "en",
+        "text": "Island-conquest",
+        "start": 67
+      },
+      "lines": [
+        "Your sailor grows",
+        "through six ranks,",
+        "with PiPi cheering",
+        "alongside. Island-",
+        "conquest voyages",
+        "and a sailor wardrobe",
+        "let the pair wear",
+        "matching collected",
+        "outfits. The Start",
+        "button no longer",
+        "disappears on small",
+        "screens."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking",
+        "were removed, and",
+        "entry locking became",
+        "free for everyone.",
+        "Weather-and-face",
+        "mood icons and light",
+        "and dark themes",
+        "refresh the design,",
+        "alongside entry-and-",
+        "photo backups,",
+        "import and draft",
+        "recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-dday-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1178,
+        "lang": "en",
+        "text": "Shared-card",
+        "start": 164
+      },
+      "lines": [
+        "A new name, Until",
+        "That Day, arrives with",
+        "a new icon and",
+        "launch screen. Pin a",
+        "countdown as your",
+        "main one; turning",
+        "notifications back on",
+        "reschedules saved",
+        "reminders. Shared-",
+        "card titles and large-",
+        "text readability are",
+        "improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-dday-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1178,
+        "lang": "en",
+        "text": "large-text",
+        "start": 187
+      },
+      "lines": [
+        "A new name, Until",
+        "That Day, arrives with",
+        "a new icon and",
+        "launch screen. Pin a",
+        "countdown as your",
+        "main one; turning",
+        "notifications back on",
+        "reschedules saved",
+        "reminders. Shared-",
+        "card titles and large-",
+        "text readability are",
+        "improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include",
+        "brown, pink and",
+        "white noise, a ship’s",
+        "clock and deep-sea",
+        "binaural audio.",
+        "Switch sounds mid-",
+        "voyage, enable",
+        "interval bells or a 30-",
+        "second breathing",
+        "pause before sailing.",
+        "Resumed-voyage",
+        "recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "30-second",
+        "start": 145
+      },
+      "lines": [
+        "New sounds include",
+        "brown, pink and",
+        "white noise, a ship’s",
+        "clock and deep-sea",
+        "binaural audio.",
+        "Switch sounds mid-",
+        "voyage, enable",
+        "interval bells or a 30-",
+        "second breathing",
+        "pause before sailing.",
+        "Resumed-voyage",
+        "recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-dark-2-text.json.gz",
+      "eventId": "pipi-words-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1214,
+        "lang": "en",
+        "text": "yourself—there",
+        "start": 128
+      },
+      "lines": [
+        "Vocab Routine gains",
+        "a new name and icon,",
+        "plus review by writing",
+        "words from their",
+        "meanings. Compare",
+        "your writing with the",
+        "answer yourself—",
+        "there is no automatic",
+        "grading. Deck",
+        "progress, large text",
+        "and statistics charts",
+        "were also improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-1-text.json.gz",
+      "eventId": "pipi-sky-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 608,
+        "lang": "en",
+        "text": "sky-gazing",
+        "start": 161
+      },
+      "lines": [
+        "Sky waypoint labels now have backgrounds, with the coldest and topmost layers",
+        "always visible. Moving to a waypoint shows the same altitude as its label, and the sky-",
+        "gazing button has been repositioned."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-dark-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-1-text.json.gz",
+      "eventId": "pipi-sky-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 608,
+        "lang": "en",
+        "text": "sky-gazing",
+        "start": 161
+      },
+      "lines": [
+        "Sky waypoint labels now have backgrounds, with the coldest and topmost layers",
+        "always visible. Moving to a waypoint shows the same altitude as its label, and the sky-",
+        "gazing button has been repositioned."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1280-light-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-1-text.json.gz",
+      "eventId": "pipi-focus-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 478,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or 50 minutes from the timer",
+        "ring before setting sail. Voyages completed",
+        "while the app was closed show their rewards",
+        "when you return. Island records and supply-",
+        "ship guidance are clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-1-text.json.gz",
+      "eventId": "pipi-focus-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 496,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or 50 minutes from the timer",
+        "ring before setting sail. Voyages completed",
+        "while the app was closed show their rewards",
+        "when you return. Island records and supply-",
+        "ship guidance are clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-375-light-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry",
+        "locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark",
+        "themes refresh the design, alongside",
+        "entry-and-photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 331,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure",
+        "readings by",
+        "family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 334,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 47
+      },
+      "lines": [
+        "The first version",
+        "records readings",
+        "from a home blood-",
+        "pressure monitor,",
+        "with up to six family",
+        "profiles, widgets and",
+        "reminders. Paid Pro",
+        "adds PDF and CSV",
+        "reports. The app",
+        "does not measure",
+        "blood pressure",
+        "or provide",
+        "medical advice."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 349,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word",
+        "groups and",
+        "a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 367,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word",
+        "groups and",
+        "a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-dream-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 460,
+        "lang": "en",
+        "text": "120-symbol",
+        "start": 132
+      },
+      "lines": [
+        "The first version",
+        "includes spoken",
+        "dream entries and",
+        "on-device dictation.",
+        "Review entries in",
+        "lists, a calendar and",
+        "statistics, with a 120-",
+        "symbol dictionary,",
+        "morning reminders,",
+        "app lock, export",
+        "and import."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-focus-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 478,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or",
+        "50 minutes from the",
+        "timer ring before",
+        "setting sail. Voyages",
+        "completed while the",
+        "app was closed show",
+        "their rewards when",
+        "you return. Island",
+        "records and supply-",
+        "ship guidance are",
+        "clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-focus-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 496,
+        "lang": "en",
+        "text": "supply-ship",
+        "start": 170
+      },
+      "lines": [
+        "Choose 5, 15, 25 or",
+        "50 minutes from the",
+        "timer ring before",
+        "setting sail. Voyages",
+        "completed while the",
+        "app was closed show",
+        "their rewards when",
+        "you return. Island",
+        "records and supply-",
+        "ship guidance are",
+        "clearer, too."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-log-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 547,
+        "lang": "en",
+        "text": "Personal-best",
+        "start": 0
+      },
+      "lines": [
+        "Personal-",
+        "best streaks",
+        "and more",
+        "reliable editing"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-log-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 550,
+        "lang": "en",
+        "text": "personal-best",
+        "start": 9
+      },
+      "lines": [
+        "See your personal-",
+        "best streak when it",
+        "exceeds your current",
+        "one, and mood",
+        "streaks no longer",
+        "stop counting at 14",
+        "days. Fixes address",
+        "empty analysis with",
+        "locked entries and",
+        "text disappearing or",
+        "being overwritten",
+        "while editing."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-log-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 565,
+        "lang": "en",
+        "text": "Personal-best",
+        "start": 0
+      },
+      "lines": [
+        "Personal-",
+        "best streaks",
+        "and more",
+        "reliable editing"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-log-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 568,
+        "lang": "en",
+        "text": "personal-best",
+        "start": 9
+      },
+      "lines": [
+        "See your personal-",
+        "best streak when it",
+        "exceeds your current",
+        "one, and mood",
+        "streaks no longer",
+        "stop counting at 14",
+        "days. Fixes address",
+        "empty analysis with",
+        "locked entries and",
+        "text disappearing or",
+        "being overwritten",
+        "while editing."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 727,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your",
+        "answers and",
+        "correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 745,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your",
+        "answers and",
+        "correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "focus-121",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1003,
+        "lang": "en",
+        "text": "home-widget",
+        "start": 170
+      },
+      "lines": [
+        "Temporarily mute",
+        "Cabin Radio without",
+        "pausing your voyage.",
+        "The map shows",
+        "progress toward the",
+        "next island, and the",
+        "treasure chest shows",
+        "rarities for",
+        "uncollected items.",
+        "iOS home-",
+        "widget text has",
+        "better contrast in",
+        "light mode."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1045,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses",
+        "illustrated cards for",
+        "four puzzle modes",
+        "and your current",
+        "voyage. Learn by",
+        "following a finger",
+        "demonstration on the",
+        "first island, and solve",
+        "proverbs with a letter",
+        "wheel. A new sailboat",
+        "icon and puzzle-",
+        "result artwork",
+        "complete the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "focus-120",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1078,
+        "lang": "en",
+        "text": "Island-conquest",
+        "start": 67
+      },
+      "lines": [
+        "Your sailor grows",
+        "through six ranks,",
+        "with PiPi cheering",
+        "alongside. Island-",
+        "conquest voyages",
+        "and a sailor wardrobe",
+        "let the pair wear",
+        "matching collected",
+        "outfits. The Start",
+        "button no longer",
+        "disappears on small",
+        "screens."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1100,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking",
+        "were removed, and",
+        "entry locking became",
+        "free for everyone.",
+        "Weather-and-face",
+        "mood icons and light",
+        "and dark themes",
+        "refresh the design,",
+        "alongside entry-and-",
+        "photo backups,",
+        "import and draft",
+        "recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-dday-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1178,
+        "lang": "en",
+        "text": "Shared-card",
+        "start": 164
+      },
+      "lines": [
+        "A new name, Until",
+        "That Day, arrives with",
+        "a new icon and",
+        "launch screen. Pin a",
+        "countdown as your",
+        "main one; turning",
+        "notifications back on",
+        "reschedules saved",
+        "reminders. Shared-",
+        "card titles and large-",
+        "text readability are",
+        "improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-dday-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1178,
+        "lang": "en",
+        "text": "large-text",
+        "start": 187
+      },
+      "lines": [
+        "A new name, Until",
+        "That Day, arrives with",
+        "a new icon and",
+        "launch screen. Pin a",
+        "countdown as your",
+        "main one; turning",
+        "notifications back on",
+        "reschedules saved",
+        "reminders. Shared-",
+        "card titles and large-",
+        "text readability are",
+        "improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include",
+        "brown, pink and",
+        "white noise, a ship’s",
+        "clock and deep-sea",
+        "binaural audio.",
+        "Switch sounds mid-",
+        "voyage, enable",
+        "interval bells or a 30-",
+        "second breathing",
+        "pause before sailing.",
+        "Resumed-voyage",
+        "recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1198,
+        "lang": "en",
+        "text": "30-second",
+        "start": 145
+      },
+      "lines": [
+        "New sounds include",
+        "brown, pink and",
+        "white noise, a ship’s",
+        "clock and deep-sea",
+        "binaural audio.",
+        "Switch sounds mid-",
+        "voyage, enable",
+        "interval bells or a 30-",
+        "second breathing",
+        "pause before sailing.",
+        "Resumed-voyage",
+        "recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-320-light-2-text.json.gz",
+      "eventId": "pipi-words-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1214,
+        "lang": "en",
+        "text": "yourself—there",
+        "start": 128
+      },
+      "lines": [
+        "Vocab Routine gains",
+        "a new name and icon,",
+        "plus review by writing",
+        "words from their",
+        "meanings. Compare",
+        "your writing with the",
+        "answer yourself—",
+        "there is no automatic",
+        "grading. Deck",
+        "progress, large text",
+        "and statistics charts",
+        "were also improved."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-1-text.json.gz",
+      "eventId": "focus-120",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1096,
+        "lang": "en",
+        "text": "Island-conquest",
+        "start": 67
+      },
+      "lines": [
+        "Your sailor grows through six ranks, with PiPi cheering alongside. Island-",
+        "conquest voyages and a sailor wardrobe let the pair wear matching collected",
+        "outfits. The Start button no longer disappears on small screens."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1216,
+        "lang": "en",
+        "text": "deep-sea",
+        "start": 67
+      },
+      "lines": [
+        "New sounds include brown, pink and white noise, a ship’s clock and deep-",
+        "sea binaural audio. Switch sounds mid-voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing. Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-light-1-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1216,
+        "lang": "en",
+        "text": "30-second",
+        "start": 145
+      },
+      "lines": [
+        "New sounds include brown, pink and white noise, a ship’s clock and deep-",
+        "sea binaural audio. Switch sounds mid-voyage, enable interval bells or a 30-",
+        "second breathing pause before sailing. Resumed-voyage recording errors were",
+        "also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "kkachi-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 338,
+        "lang": "en",
+        "text": "Pillars-inspired",
+        "start": 39
+      },
+      "lines": [
+        "The home screen now",
+        "presents your Four Pillars-",
+        "inspired folk painting as a",
+        "hanging scroll, with",
+        "explanations of its motifs.",
+        "Choose family or friends’",
+        "paintings, and open Today",
+        "directly from the widget."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 353,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 356,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 47
+      },
+      "lines": [
+        "The first version records",
+        "readings from a home blood-",
+        "pressure monitor, with up to",
+        "six family profiles, widgets",
+        "and reminders. Paid Pro adds",
+        "PDF and CSV reports. The",
+        "app does not measure",
+        "blood pressure or provide",
+        "medical advice."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 371,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 389,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 749,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 752,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 767,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 770,
+        "lang": "en",
+        "text": "Large-text",
+        "start": 176
+      },
+      "lines": [
+        "Quizzes (except mock",
+        "exams) show streaks of three",
+        "or more correct answers, and",
+        "explanations and mistake",
+        "lists include your answer.",
+        "Leaving flashcards early",
+        "shows your results. Large-",
+        "text clipping in typing quizzes",
+        "is also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1067,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses illustrated",
+        "cards for four puzzle modes",
+        "and your current voyage.",
+        "Learn by following a finger",
+        "demonstration on the first",
+        "island, and solve proverbs",
+        "with a letter wheel. A new",
+        "sailboat icon and puzzle-",
+        "result artwork complete",
+        "the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry locking",
+        "became free for everyone.",
+        "Weather-and-face mood",
+        "icons and light and dark",
+        "themes refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-dark-2-text.json.gz",
+      "eventId": "focus-1016",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1220,
+        "lang": "en",
+        "text": "mid-voyage,",
+        "start": 106
+      },
+      "lines": [
+        "New sounds include brown,",
+        "pink and white noise, a ship’s",
+        "clock and deep-sea binaural",
+        "audio. Switch sounds mid-",
+        "voyage, enable interval bells",
+        "or a 30-second breathing",
+        "pause before sailing.",
+        "Resumed-voyage recording",
+        "errors were also fixed."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "kkachi-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 334,
+        "lang": "en",
+        "text": "Pillars-inspired",
+        "start": 39
+      },
+      "lines": [
+        "The home screen now",
+        "presents your Four Pillars-",
+        "inspired folk painting as a",
+        "hanging scroll, with",
+        "explanations of its motifs.",
+        "Choose family or friends’",
+        "paintings, and open Today",
+        "directly from the widget."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-bp-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 349,
+        "lang": "en",
+        "text": "blood-pressure",
+        "start": 7
+      },
+      "lines": [
+        "Record blood-",
+        "pressure readings",
+        "by family member"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 367,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-bridge-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 385,
+        "lang": "en",
+        "text": "learned-words",
+        "start": 23
+      },
+      "lines": [
+        "Five-word groups",
+        "and a learned-",
+        "words notebook"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-dream-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 478,
+        "lang": "en",
+        "text": "120-symbol",
+        "start": 132
+      },
+      "lines": [
+        "The first version includes",
+        "spoken dream entries and",
+        "on-device dictation. Review",
+        "entries in lists, a calendar",
+        "and statistics, with a 120-",
+        "symbol dictionary, morning",
+        "reminders, app lock, export",
+        "and import."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-words-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 745,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-words-ios-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 763,
+        "lang": "en",
+        "text": "correct-answer",
+        "start": 21
+      },
+      "lines": [
+        "See your answers",
+        "and correct-",
+        "answer streaks"
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-word-voyage-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1063,
+        "lang": "en",
+        "text": "puzzle-result",
+        "start": 206
+      },
+      "lines": [
+        "Home now uses illustrated",
+        "cards for four puzzle modes",
+        "and your current voyage.",
+        "Learn by following a finger",
+        "demonstration on the first",
+        "island, and solve proverbs",
+        "with a letter wheel. A new",
+        "sailboat icon and puzzle-",
+        "result artwork complete",
+        "the update."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-768-dark-2-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1118,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were",
+        "removed, and entry locking",
+        "became free for everyone.",
+        "Weather-and-face mood",
+        "icons and light and dark",
+        "themes refresh the design,",
+        "alongside entry-and-",
+        "photo backups, import and",
+        "draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-1-text.json.gz",
+      "eventId": "pipi-sky-android-observed-20261117",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 608,
+        "lang": "en",
+        "text": "sky-gazing",
+        "start": 161
+      },
+      "lines": [
+        "Sky waypoint labels now have backgrounds, with the coldest and topmost layers",
+        "always visible. Moving to a waypoint shows the same altitude as its label, and the sky-",
+        "gazing button has been repositioned."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "Weather-and-face",
+        "start": 75
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    },
+    {
+      "cell": "en-1920-light-1-text.json.gz",
+      "eventId": "pipi-log-public",
+      "finding": {
+        "code": "WORD_SPLIT",
+        "runId": 1122,
+        "lang": "en",
+        "text": "entry-and-photo",
+        "start": 159
+      },
+      "lines": [
+        "Ads and tracking were removed, and entry locking became free for everyone. Weather-",
+        "and-face mood icons and light and dark themes refresh the design, alongside entry-",
+        "and-photo backups, import and draft recovery."
+      ],
+      "classification": "hyphen/dash line break; reviewed with rendered copy"
+    }
+  ],
+  "unclassified": []
+}

@@ -1,0 +1,10 @@
+{
+  "src/components/Archive.astro": "33de0321484db2997c44dab169c900565a7e458023f78e93eabdf3fafaa61ef9",
+  "src/data/archive.mjs": "94bf63d3dbbebf9499e68e1497eb9c537f124063050d8e735772705166682230",
+  "src/data/archive-release-highlights-20261117.mjs": "369153c8baaa1f222f048c1275dfc8413505d91c60f2784e916709d3b420f2de",
+  "public/archive-evidence.json": "16f9e9915606c51608783facbb6e5413372c5db01b35c9ca439b048b23eb583a",
+  "public/archive-release-notes-20261117.json": "cc113610fc5736538028a805979d88443aa928e9fdb6dbfe4b39d531bb7e5f00",
+  "dist/ko/archive/index.html": "91ecc634cbebb2ae93a5da8793b064f51cbe6b2bb7dbb6508e62324de462935f",
+  "dist/ja/archive/index.html": "539db26807908e6b37d5e6882328d4ed902937bd23d1911193c43d81ffe661ae",
+  "dist/en/archive/index.html": "b5f32369e91e31c105c4e1ed84e1f394ab61f4517822040d08888167130d62a8"
+}

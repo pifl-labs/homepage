@@ -1,0 +1,9 @@
+
+> pifl-labs@2.0.0 test:built
+> node scripts/check-store-links.mjs && node scripts/check-draw-landing.mjs && node scripts/check-store-transition.mjs && node scripts/check-script-cache.mjs && node scripts/check-bridge-landing.mjs
+
+PASS: 54 localized home/app pages, 243 store links; Apple attribution configured.
+PASS: 3 Draw locales — limits, connectivity, optional purchases, current styles, sample provenance, release facts, no other-app leakage.
+PASS: 3 locales — Focus, Word Voyage, and Log public names/versions; aliases, store destinations; 4 additional app identities and receipt-derived version labels checked.
+PASS: 218 shared-layout pages load /script.js?v=f021e6652d8e; built script bytes match source.
+PASS: Japanese Bridge has one exact read-only activity link; other apps and locales have none.
