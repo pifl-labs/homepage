@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor} from './helpers/release-sync-20261116.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
@@ -12,9 +12,9 @@ test('Word Voyage landing is present and names match both public stores in all l
   assert.match(wordVoyage, /nameByLang: \{ ko: '낱말항해: 한글 단어 퍼즐', ja: 'ハングル航海：韓国語の単語パズル' \}/);
   const a = {ios:{en:currentIOS('pipi-word-voyage')}};
   const newer = JSON.parse(readFileSync(new URL('../docs/release/voyage-android-public-20261113.json', import.meta.url), 'utf8'));
-  const android = newer.apps.find(r=>r.lang==='en').app;
-  assert.ok(wordVoyage.includes(`ios: { version: '${a.ios.en.version}', updated: '${a.ios.en.currentVersionReleaseDate.slice(0, 10)}', checkedAt: '2026-11-16' }`));
-  assert.ok(wordVoyage.includes(`android: { version: '${android.version}', updated: '${android.updatedCalendar}', checkedAt: '${newer.observedAt}' }`));
+  const android = currentAndroid('pipi-word-voyage');
+  assert.ok(wordVoyage.includes(`ios: { version: '${a.ios.en.version}', updated: '${a.ios.en.currentVersionReleaseDate.slice(0, 10)}', checkedAt: '${checkedAtFor('pipi-word-voyage','ios')}' }`));
+  assert.ok(wordVoyage.includes(`android: { version: '${android.version}', updated: '${androidDay(android)}', checkedAt: '${checkedAtFor('pipi-word-voyage','android')}' }`));
   assert.match(wordVoyage, /checkedAt: '2026-11-02',\n  \}/);
 });
 

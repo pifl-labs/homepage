@@ -34,7 +34,7 @@ test('Android versions and different update dates keep independent dated evidenc
  assert.equal(receipt.android['com.pifl.pipi.wordvoyage'].timezone,'UNVERIFIED');assert.equal(receipt.android['com.pifl.pipi.log'].updatedCalendar,'2026-10-04');
 });
 test('Platforms keep their own versions when they differ, and observations stay dated',()=>{
- assert.match(block('words'),/ios: \{ version: '1\.1\.0'/);assert.match(block('words'),/android: \{ version: '1\.1\.0'/);
+ assert.ok(block('words').includes(`ios: { version: '${currentIOS('pipi-words').version}'`));assert.ok(block('words').includes(`android: { version: '${currentAndroid('pipi-words').version}'`));
  for(const v of Object.values(variables))assert.match(block(v),/checkedAt: '2026-11-02',\n  \}/);
  const fleet=readFileSync(new URL('../src/components/FleetLog.astro',import.meta.url),'utf8');assert.match(fleet,/liveApps\.flatMap\(releaseObservationDates\)/);
  assert.match(source,/app\.release\?\.checkedAt, app\.release\?\.ios\?\.checkedAt, app\.release\?\.android\?\.checkedAt/);

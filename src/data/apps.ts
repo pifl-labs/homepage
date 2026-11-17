@@ -113,8 +113,8 @@ const focus: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.2.3', updated: '2026-10-24', checkedAt: '2026-11-02' },
-    android: { version: '1.2.3', updated: '2026-10-24', checkedAt: '2026-11-02' },
+    ios: { version: '1.2.4', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.2.4', updated: '2026-11-16', checkedAt: '2026-11-17' },
     // First release date unverified: May 15 was a review receipt, not launch.
     checkedAt: '2026-11-02',
   },
@@ -210,8 +210,8 @@ const hello: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-02' },
-    android: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-02' },
+    ios: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.1.0', updated: '2026-10-25', checkedAt: '2026-11-17' },
     since: '2026-06-24',
     checkedAt: '2026-11-02',
   },
@@ -306,8 +306,8 @@ const words: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   // 2026-11-16 public metadata: iOS and Android are both 1.1.0; retain dated platform evidence.
   release: {
-    ios: { version: '1.1.0', updated: '2026-11-04', checkedAt: '2026-11-16' },
-    android: { version: '1.1.0', updated: '2026-11-02', checkedAt: '2026-11-02' },
+    ios: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
     since: '2026-05-29',
     checkedAt: '2026-11-02',
   },
@@ -401,8 +401,8 @@ const dday: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-16' },
-    android: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-16' },
+    ios: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
+    android: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
     since: '2026-06-02',
     checkedAt: '2026-11-02',
   },
@@ -497,8 +497,8 @@ const log: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
     // 2026-11-06: KR/JP/US iOS only; Android keeps its own 2026-11-02 observation.
-    ios: { version: '1.0.14', updated: '2026-11-04', checkedAt: '2026-11-06' },
-    android: { version: '1.0.14', updated: '2026-11-04', checkedAt: '2026-11-16' },
+    ios: { version: '1.0.15', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.0.15', updated: '2026-11-16', checkedAt: '2026-11-17' },
     since: '2026-06-09',
     checkedAt: '2026-11-02',
   },
@@ -584,8 +584,8 @@ const dialogos: AppMeta = {
   category: { ko: '라이프스타일 · 철학', ja: 'ライフスタイル · 哲学', en: 'Lifestyle · Philosophy' },
   stores: { ios: 'https://apps.apple.com/app/id6780508628', android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.thus' },
   release: {
-    ios: { version: '1.0.4', updated: '2026-11-13', checkedAt: '2026-11-16' },
-    android: { version: '1.0.4', updated: '2026-11-13', checkedAt: '2026-11-16' },
+    ios: { version: '1.1.0', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.1.0', updated: '2026-11-16', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   heroShot: 'home-20261116',
@@ -677,8 +677,8 @@ const draw: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
     // updated는 iOS 공식 출시 시각의 UTC 날짜, Android는 Google Play 표시 날짜.
-    ios: { version: '1.2.4', updated: '2026-11-13', checkedAt: '2026-11-16' },
-    android: { version: '1.2.4', updated: '2026-11-13', checkedAt: '2026-11-16' },
+    ios: { version: '1.2.5', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    android: { version: '1.2.5', updated: '2026-11-16', checkedAt: '2026-11-17' },
     // July 14 was version 1.0 submission, not a verified first release.
     checkedAt: '2026-11-02',
   },
@@ -775,9 +775,9 @@ const wordVoyage: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '1.4.1', updated: '2026-11-04', checkedAt: '2026-11-16' },
+    ios: { version: '1.4.2', updated: '2026-11-16', checkedAt: '2026-11-17' },
     // 2026-11-13: visible Google Play About dialogs agree in KR/JP/US; iOS observation is unchanged.
-    android: { version: '1.4.1', updated: '2026-11-04', checkedAt: '2026-11-13' },
+    android: { version: '1.4.2', updated: '2026-11-16', checkedAt: '2026-11-17' },
     since: '2026-07-13',
     checkedAt: '2026-11-02',
   },
@@ -867,8 +867,8 @@ const bridge: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   // 2026-11-11: Apple KR/JP/US 1.0.3 재관측만 반영. Android와 공통 확인일은 기존 근거를 보존한다.
   release: {
-    ios: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-11' },
-    android: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-16' },
+    ios: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-17' },
+    android: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-17' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
     checkedAt: '2026-11-02',
   },
@@ -1016,8 +1016,8 @@ const tide: AppMeta = {
   },
   // iOS public KR lookup 2026-11-16; absent in queried JP/US storefronts. Android observation remains independent.
   release: {
-    ios: { version: '1.2.0', updated: '2026-11-13', checkedAt: '2026-11-16' },
-    android: { version: '1.2.0', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    ios: { version: '1.2.0', updated: '2026-11-13', checkedAt: '2026-11-17' },
+    android: { version: '1.2.0', updated: '2026-10-31', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   "content": {
@@ -1076,8 +1076,8 @@ const sudoku: AppMeta = {
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing. iOS first appeared 2026-10-28;
   // the earlier Android launch date is unverified, so since stays empty.
   release: {
-    ios: { version: '1.0.2', updated: '2026-10-31', checkedAt: '2026-11-02' },
-    android: { version: '1.0.2', updated: '2026-10-29', checkedAt: '2026-11-02' },
+    ios: { version: '1.0.2', updated: '2026-10-31', checkedAt: '2026-11-17' },
+    android: { version: '1.0.2', updated: '2026-10-29', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   "content": {
@@ -1136,7 +1136,7 @@ const kkachi: AppMeta = {
   },
   // Android public listing + production track 2026-11-02 (first public date unverified). iOS 1.1.0 was waiting for review.
   release: {
-    android: { version: '1.1.0', updated: '2026-10-31', checkedAt: '2026-11-02' },
+    android: { version: '1.1.0', updated: '2026-10-31', checkedAt: '2026-11-17' },
     checkedAt: '2026-11-02',
   },
   content: {
@@ -1203,7 +1203,7 @@ const spend: AppMeta = {
   "stores": {
     "android": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend"
   },
-  release: { android: { version: '1.0.0', updated: '2026-10-28', checkedAt: '2026-11-16' }, checkedAt: '2026-11-16' },
+  release: { android: { version: '1.0.0', updated: '2026-10-28', checkedAt: '2026-11-17' }, checkedAt: '2026-11-16' },
   "schemaCategory": "FinanceApplication",
   "catalogPreview": false,
   "content": {
@@ -1311,7 +1311,7 @@ const bp: AppMeta = {
     "android": {
       "version": "1.0.0",
       "updated": "2026-10-27",
-      "checkedAt": "2026-11-16"
+      "checkedAt": "2026-11-17"
     },
     "checkedAt": "2026-11-16"
   },
@@ -1427,7 +1427,7 @@ const sky: AppMeta = {
     "android": {
       "version": "1.0.0",
       "updated": "2026-11-16",
-      "checkedAt": "2026-11-16"
+      "checkedAt": "2026-11-17"
     },
     "checkedAt": "2026-11-16"
   },
@@ -1523,7 +1523,7 @@ const dream: AppMeta = {
   category: { ko: '라이프스타일 · 꿈 일기', ja: 'ライフスタイル · 夢日記', en: 'Lifestyle · Dream journal' },
   schemaCategory: 'LifestyleApplication',
   stores: { android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.dream' },
-  release: { android: { version: '1.0.0', updated: '2026-11-13', checkedAt: '2026-11-16' }, checkedAt: '2026-11-16' },
+  release: { android: { version: '1.0.0', updated: '2026-11-13', checkedAt: '2026-11-17' }, checkedAt: '2026-11-16' },
   catalogPreview: false,
   content: {
     ko: {

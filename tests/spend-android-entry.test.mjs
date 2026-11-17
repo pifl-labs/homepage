@@ -8,7 +8,7 @@ test('Spend joins the original fourteen without inventing an iOS launch or binar
  assert.equal(appList.length,17);assert.equal(liveAppCount,16);
  assert.equal(appList.find(a=>a.slug==='pipi-spend'),apps['pipi-spend']);
  const app=apps['pipi-spend'];assert.equal(app.status,'live');assert.deepEqual(app.stores,{android:'https://play.google.com/store/apps/details?id=com.pifl.pipi.spend'});
- assert.deepEqual(app.release,{android:{version:'1.0.0',updated:'2026-10-28',checkedAt:'2026-11-16'},checkedAt:'2026-11-16'});assert.equal(app.catalogPreview,false);assert.equal(app.heroShot,undefined);
+ assert.deepEqual(app.release,{android:{version:'1.0.0',updated:'2026-10-28',checkedAt:'2026-11-17'},checkedAt:'2026-11-16'});assert.equal(app.catalogPreview,false);assert.equal(app.heroShot,undefined);
  assert.deepEqual(appList.filter(a=>a.status==='soon').map(a=>a.slug),['pipi-legion']);
 });
 test('all three source markets verify package, actual name, developer and Android',()=>{
