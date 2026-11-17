@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-17",
+  "purpose": "Correct old Android-only website framing of already publicly available iOS EPS-TOPIK support; not a new feature or new release event.",
+  "appID": "6770267735",
+  "bundleID": "com.pifl.pipi.words",
+  "iosPublicEvidence": [
+    {
+      "country": "KR",
+      "version": "1.1.1",
+      "publicProductURL": "https://apps.apple.com/kr/app/%EB%8B%A8%EC%96%B4%EB%A3%A8%ED%8B%B4-jlpt-%EC%9D%BC%EB%B3%B8%EC%96%B4-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6770267735?uo=4",
+      "originalObservationURL": "https://itunes.apple.com/lookup?id=1893574694&entity=software&country=kr&limit=200",
+      "observedAt": "2026-11-17T00:04:24.763848+00:00",
+      "currentDescriptionSHA256": "77d884074b650c4fe60ca41081154a09225f1162f0f558646880ab2a21476737",
+      "publicEPSParagraphs": [
+        "■ 한일 양방향 학습\nJLPT N5~N1, TOPIK 1~6급에 대응하는 단어 덱을 제공합니다. EPS-TOPIK(고용허가제 한국어) 단어팩 7개를 더해 전체 단어팩의 단어 수는 21,932개입니다(유료 단어팩 포함). EPS-1·2는 무료이고, EPS-3~7은 'EPS-3~7 묶음'으로 한 번에 구매하거나 프리미엄 구독·프리미엄 평생 이용으로 이용할 수 있습니다. 한국어로 일본어를, 일본어로 한국어를 공부하는 방향을 선택할 수 있습니다. 앱 화면과 뜻 표시 언어는 한국어·일본어·영어에 중국어(간체·번체)·베트남어·인도네시아어·태국어·미얀마어·네팔어·크메르어·싱할라어 9개 언어를 더해 지원하며(크메르어·싱할라어 뜻은 한국어 학습에서), 번역이 없는 단어는 영어로 보입니다.",
+        "■ 플래시카드, 퀴즈, 간격 반복\n퀴즈는 '기본'과 '더 보기'로 나뉩니다. '기본'은 단어 보고 뜻 고르기, 듣기, 빈칸 채우기, '입력'(뜻을 보고 쓰기와 '입력(소리만)' 받아쓰기)에 JLPT는 한자 읽기, TOPIK·EPS-TOPIK은 뜻 보고 단어 고르기를 더했고, '더 보기'에는 JLPT의 한자 표기·뜻 보고 단어 고르기와 유의어 변별(유의어가 있는 단어를 충분히 배운 뒤)이 있습니다. 틀렸거나 약한 단어는 '오답 복습'에서 다시 풀 수 있으며, 오답 복습은 하루 무료 퀴즈 횟수를 쓰지 않습니다. 발음은 기기 내장 음성으로 듣습니다. 일반 학습에서 평가한 단어는 SM-2 방식의 복습 일정으로 관리됩니다.\n홈의 '오늘의 학습' 카드에서 남은 복습과 새 단어를 확인하고 '이어서 학습'으로 마지막 단어팩을 바로 이어 가세요. 시험일을 정하면 홈에 시험까지 남은 날이 표시됩니다(선택).",
+        "■ 무료 범위를 먼저 확인하세요\nJLPT N5·N4, TOPIK 1·2급, EPS-1·2 단어팩은 무료입니다. 기본 무료 일일 한도는 새 단어 20장·퀴즈 10회이며(이미 배운 단어의 복습은 한도와 상관없이 무제한입니다), 선택한 보상형 광고로 한도를 늘릴 수 있습니다.\n광고와 선택적인 인앱결제가 있습니다. 상위 레벨 팩은 개별 구매 또는 프리미엄으로 이용하며, 프리미엄은 광고 제거와 일일 한도 해제를 제공합니다. 월 구독과 평생 이용권 중 필요한 방식을 선택하세요."
+      ]
+    },
+    {
+      "country": "JP",
+      "version": "1.1.1",
+      "publicProductURL": "https://apps.apple.com/jp/app/%E3%81%93%E3%81%A8%E3%81%B0%E7%BF%92%E6%85%A3-topik%E9%9F%93%E5%9B%BD%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3/id6770267735?uo=4",
+      "originalObservationURL": "https://itunes.apple.com/lookup?id=1893574694&entity=software&country=jp&limit=200",
+      "observedAt": "2026-11-17T00:04:25.356971+00:00",
+      "currentDescriptionSHA256": "25cc209c196d2231ee6a16071a566dfc54839c129c8db72e3ddbc38c6426983f",
+      "publicEPSParagraphs": [
+        "■ 韓日双方向の単語学習\nTOPIK 1〜6級・JLPT N5〜N1に対応する単語デッキを用意しています。EPS-TOPIK（雇用許可制の韓国語）の単語パック7つを加え、全単語パックの収録語数は21,932語です（有料パックを含む）。EPS-1・2は無料で、EPS-3〜7は「EPS-3~7 セット」でまとめて購入するか、プレミアムプラン・プレミアム永久利用で利用できます。日本語で韓国語を学ぶ方向と、韓国語で日本語を学ぶ方向を選べます。アプリの画面と意味の表示言語は、日本語・韓国語・英語に加えて中国語（簡体字・繁体字）・ベトナム語・インドネシア語・タイ語・ミャンマー語・ネパール語・クメール語・シンハラ語の9言語に対応し（クメール語・シンハラ語の意味は韓国語の学習で利用可）、翻訳がない単語は英語で表示します。",
+        "■ カード・クイズ・間隔反復\nクイズは「基本」と「もっと見る」に分かれます。「基本」は単語から意味を選ぶ・リスニング・穴埋め・「入力」（意味を見て書く問題と「入力（音だけ）」の書き取り）に、JLPTでは漢字読み、TOPIK・EPS-TOPIKでは意味から単語を選ぶ形式を加えたもので、「もっと見る」にはJLPTの漢字表記・意味から単語を選ぶ形式と、類義語（類義語のある単語を十分に学習したあと）があります。間違えた単語や苦手な単語は「間違えた単語の復習」で解き直せ、この復習は1日の無料クイズ回数を使いません。発音は端末内蔵の音声で聞けます。通常のカード学習で評価した単語は、SM-2方式の復習予定で管理します。\nホームの「今日の学習」カードで残りの復習と新出単語を確かめ、「続きから学習」で最後の単語パックをすぐに再開できます。試験日を設定すると、ホームに試験までの日数を表示します（任意）。",
+        "■ 無料・有料の範囲\nTOPIK 1・2級、JLPT N5・N4、EPS-1・2の単語パックは無料です。基本の無料枠は1日に新出単語20枚・クイズ10回で（学習済みの単語の復習は枠に関係なく無制限）、任意のリワード広告で枠を増やせます。\n広告と任意のアプリ内課金があります。上位レベルのパックは個別購入またはプレミアムで利用でき、プレミアムでは広告の削除と1日の学習枠の解除ができます。月額プランと買い切りプランから選べます。"
+      ]
+    },
+    {
+      "country": "US",
+      "version": "1.1.1",
+      "publicProductURL": "https://apps.apple.com/us/app/vocab-routine-jlpt-topik/id6770267735?uo=4",
+      "originalObservationURL": "https://itunes.apple.com/lookup?id=1893574694&entity=software&country=us&limit=200",
+      "observedAt": "2026-11-17T00:04:25.844539+00:00",
+      "currentDescriptionSHA256": "28babd68714df7cd6f1b9ef2ccea4ba43847fd6193e64d2803c7ca3acfec619d",
+      "publicEPSParagraphs": [
+        "TWO LEARNING DIRECTIONS\nChoose Korean-to-Japanese or Japanese-to-Korean vocabulary study, with decks for JLPT N5–N1 and TOPIK levels 1–6. There are also 7 EPS-TOPIK (Employment Permit Korean) decks: EPS-1 and EPS-2 are free, and EPS-3 to EPS-7 are unlocked by the EPS-3~7 bundle or included in Premium Plan and Premium Lifetime. All decks together hold 21,932 words (paid packs included). The app interface and meanings are available in Korean, Japanese and English plus 9 more languages: Chinese (Simplified and Traditional), Vietnamese, Indonesian, Thai, Burmese, Nepali, Khmer and Sinhala (Khmer and Sinhala meanings are available when you study Korean). Words without a translation yet appear in English.",
+        "CARDS, QUIZZES AND SCHEDULED REVIEW\nQuizzes come in Basics and More. Basics cover word to meaning, listening, fill in the blank and Type It (writing from the meaning, plus Type It (audio only) dictation), with kanji reading for JLPT or meaning to word for TOPIK and EPS-TOPIK. More holds JLPT kanji writing and meaning to word, and Synonyms once you have learned enough words with synonyms. Missed and weak words come back in Review Mistakes, which does not use your free daily quizzes. Listen with device speech. Words rated in normal flashcard study use an SM-2 review schedule.\nThe Today's study card on Home shows the reviews and new words left, and Continue studying picks up your last deck. Set an optional exam date to see a countdown on Home.",
+        "FREE AND PAID OPTIONS\nJLPT N5/N4, TOPIK levels 1/2 and EPS-1/2 packs are free. The standard daily free allowance is 20 new words and 10 quizzes (reviews of words you have learned are unlimited), with optional rewarded ads to extend it.\nThe app has ads and optional in-app purchases. Higher-level packs are available individually or through premium access. Premium removes ads and daily study limits; monthly and lifetime options are available."
+      ]
+    }
+  ],
+  "existingAndroidScope": {
+    "currentKRVersion": "1.1.1",
+    "alreadyPublishedWebsiteBaseCommit": "64ba0b7997f44220f364242774124a998c6a9e8e",
+    "retainedClaims": "Seven packs; EPS-1/2 free, EPS-3–7 bundle or Premium;20new/10quizzes, unlimited learned reviews, rewarded ads, ads and monthly auto-renew/lifetime purchase. Existing Android text facts are not changed."
+  },
+  "notClaimed": [
+    "New release today",
+    "EPS first introduced in iOS1.1.1",
+    "Worldwide store availability",
+    "Android/iOS native runtime or purchase QA",
+    "Exam pass or learning outcome",
+    "All packs free",
+    "New display-language parity"
+  ],
+  "archiveDecision": "Existing versioned1.1.0/1.1.1 release events remain unchanged; this is a current landing support-scope clarification, not a new version/event."
+}

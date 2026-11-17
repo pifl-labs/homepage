@@ -1,15 +1,16 @@
 ---
-// Current US English Google Play description checked 2026-11-09.
-// Android only; not an iOS feature, exam outcome or new-release claim.
+// Existing Android facts plus public KR/JP/US iOS 1.1.1 descriptions, checked 2026-11-17.
+// Evidence: docs/release/words-eps-public-platforms-20261117.json.
+// Keep the legacy filename/anchor; this is not a new feature or exam-outcome claim.
 ---
 <section class="app-section words-eps-en-section" id="android-eps-topik-en" aria-labelledby="words-eps-en-title">
   <div class="container">
     <div class="words-eps-en">
-      <p class="words-eps-en-eyebrow">Android · EPS-TOPIK</p>
+      <p class="words-eps-en-eyebrow">iOS · Android · EPS-TOPIK</p>
       <h2 id="words-eps-en-title">Try the first two decks free</h2>
-      <p>There are seven EPS-TOPIK (Employment Permit Korean) vocabulary decks. <strong>EPS-1 and EPS-2 are free.</strong> EPS-3–7 need the optional bundle or Premium access.</p>
+      <p>There are seven <span class="words-eps-en-code">EPS-TOPIK</span> (Employment Permit Korean) vocabulary decks. <strong><span class="words-eps-en-code">EPS-1</span> and <span class="words-eps-en-code">EPS-2</span> are free.</strong> <span class="words-eps-en-code">EPS-3–7</span> need the optional bundle or Premium access.</p>
       <p>The standard free allowance is 20 new words and 10 quizzes a day. Reviews of learned words are unlimited. Optional rewarded ads can extend the daily allowance.</p>
-      <p>The app has ads and optional in-app purchases. Premium offers a monthly auto-renewing subscription or a one-time lifetime purchase. Use the Google Play buttons on this page for Android.</p>
+      <p>The app has ads and optional in-app purchases. Premium offers a monthly auto-renewing subscription or a one-time lifetime purchase. Use App Store for iOS or Google Play for Android.</p>
     </div>
   </div>
 </section>
@@ -44,5 +45,7 @@
     text-wrap: pretty;
   }
   .words-eps-en p:last-child { margin-bottom: 0; }
+  /* Only short pack codes are atomic, never full sentences. */
+  .words-eps-en-code { display: inline-block; }
   .words-eps-en strong { color: var(--text-primary); }
 </style>

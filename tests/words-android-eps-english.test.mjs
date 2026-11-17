@@ -6,10 +6,10 @@ const html = read('dist/en/apps/pipi-words/index.html');
 const start = html.indexOf('id="android-eps-topik-en"');
 const section = html.slice(start, html.indexOf('</section>', start));
 const visible = section.replace(/<[^>]*>/g, '');
-test('English Android entry precedes explicitly iOS screenshots without parity or outcome claims', () => {
+test('English EPS entry names both verified platforms without outcomes or a new release', () => {
   assert.ok(start > 0 && start < html.indexOf('class="app-shots-scroll"'));
-  for (const s of ['Android · EPS-TOPIK', 'Try the first two decks free', 'seven EPS-TOPIK (Employment Permit Korean) vocabulary decks']) assert(visible.includes(s), s);
-  assert.doesNotMatch(section, /iOS|App Store|pass the exam|guarantee|new release|official exam/i);
+  for (const s of ['iOS · Android · EPS-TOPIK', 'Try the first two decks free', 'seven EPS-TOPIK (Employment Permit Korean) vocabulary decks', 'Use App Store for iOS or Google Play for Android.']) assert(visible.includes(s), s);
+  assert.doesNotMatch(section, /pass the exam|guarantee|new release|official exam/i);
 });
 test('current US Android free, paid, review, ad and renewal boundaries remain explicit', () => {
   for (const s of ['EPS-1 and EPS-2 are free.', 'EPS-3–7 need the optional bundle or Premium access.', '20 new words and 10 quizzes a day', 'Reviews of learned words are unlimited.', 'Optional rewarded ads', 'ads and optional in-app purchases', 'monthly auto-renewing subscription', 'one-time lifetime purchase']) assert(visible.includes(s), s);
