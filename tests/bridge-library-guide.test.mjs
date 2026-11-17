@@ -64,6 +64,15 @@ test('built cards: quick-start set plus every topic and item, practice classes s
   assert.equal(cards.split('class="bl-card"').length - 1, 60);
   assert.equal(cards.split('class="bl-item"').length - 1, 300);
   assert.equal(cards.split('<li>Includes letter tracing</li>').length - 1, 4);
+  // Only topics that actually lose practice with sound off carry the sound tag.
+  const fewer = topics.filter((t) => t.practiceWithoutSound.length < t.practiceWithSound.length);
+  assert.equal(fewer.length, 12);
+  assert.equal(cards.split('<li>Fewer practice activities with sound off</li>').length - 1, fewer.length);
+  for (const t of fewer) {
+    const card = cards.match(new RegExp(`<article class="bl-card" id="${t.id}"[\\s\\S]*?</article>`))?.[0] ?? '';
+    assert.ok(card.includes('<li>Fewer practice activities with sound off</li>'), t.id);
+  }
+  assert.doesNotMatch(cards, /Needs sound for some practice/);
   assert.doesNotMatch(cards.replace(/<style[\s\S]*?<\/style>/g, ''), /\b[A-Z]\w+Practice\b/);
 });
 

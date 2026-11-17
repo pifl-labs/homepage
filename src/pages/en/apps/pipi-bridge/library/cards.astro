@@ -58,9 +58,8 @@ function sessionTags(t: Topic): string[] {
   const n = t.practiceWithSound.length;
   const tags = [`5 new items + up to ${n} practice ${plural(n)}`];
   if ([...t.practiceWithSound, ...t.practiceWithoutSound].includes('LetterTracePractice')) tags.push('Includes letter tracing');
-  const same = t.practiceWithSound.length === t.practiceWithoutSound.length
-    && t.practiceWithSound.every((p, i) => p === t.practiceWithoutSound[i]);
-  if (!same) tags.push('Needs sound for some practice');
+  // 소리를 끄면 연습 수가 실제로 줄어드는 주제만 표시한다(목록 순서·종류만 바뀌는 주제는 제외).
+  if (t.practiceWithoutSound.length < n) tags.push('Fewer practice activities with sound off');
   return tags;
 }
 const sharedMission = (t: Topic) => {
@@ -85,7 +84,7 @@ const worlds = WORLDS.map((w) => ({ ...w, topics: all.filter((t) => t.world === 
         <p class="bl-kicker">Korean Bridge · Printable topic cards</p>
         <h1><span class="text-gradient">Korean Bridge topic cards</span></h1>
         <p class="bl-lede">Cards for the 60 topics in Library &amp; classroom mode, with a quick-start set first. Use your browser's Print command; each card is kept on one page.</p>
-        <p class="bl-note">Tags describe a <span class="bl-ui">5 new items + practice</span> session; a <span class="bl-ui">5 new items only</span> session has no practice. “Needs sound for some practice” means some practice is left out or replaced when sound is off. In topics with letter tracing, that practice moves on only after a trace, so trace together or end the session if it does not suit the child.</p>
+        <p class="bl-note">Tags describe a <span class="bl-ui">5 new items + practice</span> session; a <span class="bl-ui">5 new items only</span> session has no practice. “Fewer practice activities with sound off” marks topics where turning sound off leaves out some practice. In topics with letter tracing, that practice moves on only after a trace, so trace together or end the session if it does not suit the child.</p>
         <p class="bl-note">Content from the Korean Bridge 1.1.0 curriculum, shown with the app's English guidance.</p>
         <nav aria-label="Card sections" class="bl-no-print">
           <ul class="bl-toc">
