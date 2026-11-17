@@ -11,6 +11,7 @@ export interface UiStrings {
   navCta: string;
   footTagline: string;
   footDesc: string;
+  footCartesiaGrant: string;
   footNavigate: string;
   footHome: string;
   footContact: string;
@@ -36,6 +37,7 @@ export const ui: Record<Lang, UiStrings> = {
     navApps: 'Apps', navCrew: 'Crew', navShip: 'Ship', navLog: 'Log', navCta: 'Get the apps',
     footTagline: 'Code like a pirate. Fly like Flutter.',
     footDesc: 'A Flutter-based cross-platform studio. Sailing the digital seas with a very small, very opinionated parrot.',
+    footCartesiaGrant: 'Voice AI grant recipient',
     footNavigate: 'Navigate', footHome: 'Home', footContact: 'Contact', footTools: 'Free Tools', footWorlds: 'PiPi Worlds',
     copyright: '© 2026 PiFl Labs Co., Ltd.', terms: 'Terms', privacy: 'Privacy',
     theme: 'Theme', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
@@ -47,6 +49,7 @@ export const ui: Record<Lang, UiStrings> = {
     navApps: '앱', navCrew: '크루', navShip: '배', navLog: '항해일지', navCta: '앱 받기',
     footTagline: '해적처럼 코딩, Flutter처럼 비상.',
     footDesc: 'Flutter 기반 크로스플랫폼 스튜디오. 아주 작고, 아주 고집 센 앵무새와 함께 디지털 바다를 건너갑니다.',
+    footCartesiaGrant: '음성 AI 개발 지원 프로그램 선정',
     footNavigate: '둘러보기', footHome: '홈', footContact: '연락처', footTools: '무료 생활 도구', footWorlds: 'PiPi Worlds',
     copyright: '© 2026 주식회사 피플랩스 (PiFl Labs Co., Ltd.)', terms: '이용약관', privacy: '개인정보',
     theme: '테마', themeAuto: '자동', themeLight: '밝게', themeDark: '어둡게',
@@ -58,6 +61,7 @@ export const ui: Record<Lang, UiStrings> = {
     navApps: 'アプリ', navCrew: 'クルー', navShip: '船', navLog: '航海日誌', navCta: 'アプリを入手',
     footTagline: '海賊のようにコード、Flutterのように飛ぶ。',
     footDesc: 'Flutterベースのクロスプラットフォームスタジオ。とても小さくて、とても頑固なオウムと一緒に、デジタルの海を旅しています。',
+    footCartesiaGrant: '音声AI開発支援に採択',
     footNavigate: '案内', footHome: 'ホーム', footContact: '連絡先', footTools: '無料ツール', footWorlds: 'PiPi Worlds',
     copyright: '© 2026 株式会社ピープルラブズ (PiFl Labs Co., Ltd.)', terms: '利用規約', privacy: 'プライバシー',
     theme: 'テーマ', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',

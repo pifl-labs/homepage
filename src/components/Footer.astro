@@ -18,6 +18,12 @@ const home = `${base}/`;
         </a>
         <p class="footer-tagline">{t.footTagline}</p>
         <p class="footer-desc">{t.footDesc}</p>
+        <div class="footer-grant">
+          <a class="cartesia-startups" href="https://www.cartesia.ai/startups" aria-describedby="footer-cartesia-note">
+            <img src="/assets/partners/cartesia-startups-primary.svg" alt="Cartesia Startups Grant" width="604" height="62" loading="lazy" />
+          </a>
+          <p class="footer-grant-note" id="footer-cartesia-note">{t.footCartesiaGrant}</p>
+        </div>
       </div>
       <div class="footer-col">
         <h4>{t.footNavigate}</h4>
@@ -72,3 +78,30 @@ const home = `${base}/`;
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-grant { margin-top: 1rem; }
+  .cartesia-startups {
+    display: inline-flex;
+    align-items: center;
+    width: 15rem;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    /* The official dark wordmark needs a light backplate in both themes. */
+    background: #f4f4f1;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-xs);
+    vertical-align: top;
+  }
+  .cartesia-startups img { display: block; width: 100%; height: auto; }
+  .footer-grant-note {
+    margin: .375rem 0 0;
+    color: var(--text-secondary);
+    font-size: .875rem;
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+  .footer-grant-note:lang(ko) { word-break: keep-all; }
+</style>
