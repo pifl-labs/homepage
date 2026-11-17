@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {apps,liveApps,displayVersion} from '../src/data/apps.ts';
 import {archiveEvents,archiveApps,archiveCheckedAt} from '../src/data/archive.mjs';
+import {publicArchiveEvidence} from '../src/data/archive-public.mjs';
 import {refreshedEvents} from '../src/data/archive-refresh-20261117.mjs';
 import {refreshReceipt,packageFor,expectedRelease} from './helpers/release-sync-20261116.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
@@ -31,16 +32,16 @@ test('archive adds to the prior 41 records without manufacturing releases for th
  const old=archiveEvents.filter(e=>!e.id.endsWith('-observed-20261117'));
  assert.equal(old.length,41);assert.equal(archiveEvents.length,68);
  assert.ok(archiveEvents.filter(e=>e.app==='pipi-legion').every(e=>e.kind==='asset'&&e.version===null));
- const published=JSON.parse(read('public/archive-evidence.json'));assert.equal(published.checkedAt,archiveCheckedAt);assert.deepEqual(published.events,archiveEvents);
+ const published=JSON.parse(read('public/archive-evidence.json'));assert.equal(published.checkedAt,archiveCheckedAt);assert.deepEqual(published,publicArchiveEvidence);
 });
-for(const lang of ['ko','ja','en'])test(`${lang}: crew stays complete and archive journeys no longer precede the timeline as 17 rows`,()=>{
+for(const lang of ['ko','ja','en'])test(`${lang}: crew stays complete and public archive starts with actual release records`,()=>{
  const home=read(`dist/${lang}/index.html`),archive=read(`dist/${lang}/archive/index.html`);
  const crew=home.match(/<section class="crew-section"[\s\S]*?<\/section>/)[0];
  assert.equal((crew.match(/class="sticker sticker--clean"/g)||[]).length,12);
  assert.doesNotMatch(crew,/한 번 눌러|Tap one|タップして/,'noninteractive artwork does not promise an action');
- assert.match(archive,/<details class="archive-journey-index">/);assert.doesNotMatch(archive,/<details class="archive-journey-index" open/);
+ assert.doesNotMatch(archive,/archive-journey-index|archive-exhibits/);
  assert.match(archive,/<time datetime="2026-11-17">2026-11-17<\/time>/);
- assert.ok(archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'));
+ assert.ok(!archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'));
 });
 test('crew contact sheet adapts to text size and keeps captions in flow',()=>{
  const css=read('public/styles-stickerbook.css');
@@ -52,10 +53,8 @@ test('supporting copy preserves Korean words and Japanese strict line boundaries
  assert.match(css,/html\[lang\^="ko"\] :is\(\.app-media-footnote, \.app-store-name-note, \.app-previous-name, \.footer, \.scribble\)\s*\{\s*word-break: keep-all;/);
  assert.match(css,/html\[lang\^="ja"\] :is\(\.app-media-footnote, \.footer-tagline\)\s*\{\s*line-break: strict;\s*overflow-wrap: normal;/);
 });
-test('archive image comparisons reflow with text and compact filters preserve their names',()=>{
+test('archive compact filters preserve their names',()=>{
  const css=read('public/styles-archive.css');
- assert.match(css,/repeat\(auto-fit, minmax\(min\(100%, 7rem\), 1fr\)\)/);
- assert.match(css,/\.archive figcaption \{ overflow-wrap: normal; \}/);
  assert.match(css,/@media \(max-width: 550px\) \{ \.archive-app-buttons img \{ display: none; \} \}/);
  assert.doesNotMatch(css,/\.archive-app-buttons[^}]+text-overflow:\s*ellipsis/);
 });
