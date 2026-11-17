@@ -1,4 +1,8 @@
 .archive{padding:3rem 0 3rem;color:var(--text-primary)}
+/* One reading column for controls, records, and their dividers. The shared
+   container still supplies the viewport gutters at smaller widths. */
+.archive > .container{padding-inline:max(16px,var(--page-gutter))}
+.archive-column{max-inline-size:48rem;margin-inline:auto;container-type:inline-size}
 .archive [hidden]{display:none!important}
 .archive h1,.archive h2,.archive h3{font-family:var(--font-display);line-height:1.25;text-wrap:balance;overflow-wrap:anywhere}
 .archive h1{font-size:clamp(2rem,4vw,3.8rem);max-width:24ch;margin:.7rem 0 1rem;letter-spacing:-.035em}
@@ -8,7 +12,7 @@
 .archive-hero{padding-bottom:1.7rem;border-bottom:1px solid var(--border-default)}
 .archive-eyebrow{font-weight:700;color:var(--accent-warm)}.archive-eyebrow span{margin-inline-start:1rem;color:var(--text-muted)}
 .archive-lede{max-width:65ch;color:var(--text-secondary)}.archive-meta{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.85rem;color:var(--text-muted);margin-top:1rem}
-.archive-filters{display:grid;grid-template-columns:2fr repeat(3,minmax(0,1fr)) auto;gap:.8rem;align-items:end;padding:1.3rem 0 .8rem}
+.archive-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(12.5rem,1.2fr) auto;gap:.8rem;align-items:end;padding:.5rem 0 1rem;border-bottom:1px solid var(--border-default)}
 .archive-filters label{display:flex;flex-direction:column;gap:.4rem;min-width:0;font-weight:600}
 .archive-filters select,.archive-filters button{font:inherit;color:var(--text-primary);background:var(--bg-surface);border:1px solid var(--border-strong);border-radius:10px;min-height:44px;padding:.6rem .7rem;max-width:100%;width:100%}
 .archive-filters option{color:var(--text-primary);background:var(--bg-deep)}.archive button{cursor:pointer}
@@ -22,7 +26,6 @@
 .archive-history article>p{margin:.6rem 0;color:var(--text-secondary)}.archive summary{cursor:pointer;min-height:44px;padding:.65rem 0;font-size:.9rem}.archive dl{font-size:.85rem;margin:0;padding:.8rem;background:var(--bg-surface);border-radius:8px}.archive dl div{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:.5rem;margin:.4rem 0}.archive dd{margin:0;color:var(--text-secondary)}
 .archive-empty{padding:1.25rem;border:1px dashed var(--border-strong);border-radius:12px}
 @media(max-width:600px){.archive{padding-top:2.5rem}.archive-app-summary{padding:1rem}.archive-app-summary h2{font-size:1.35rem}}
-@media(max-width:340px){.archive-filters{grid-template-columns:minmax(0,1fr)}}
 
 /* Same compact chevron on native filters and disclosure controls. */
 .archive-filters select{appearance:none;-webkit-appearance:none;padding-inline-end:2.4rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%239094a9' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .8rem center;background-size:16px 16px}
@@ -49,15 +52,23 @@
 .archive-selection p{font-size:.85rem;color:var(--text-secondary);flex:1;min-width:min(100%,10rem);margin:0}
 .archive-selection button{font:inherit;font-size:.85rem;background:none;color:var(--text-primary);border:0;text-decoration:underline;text-underline-offset:.2em;min-height:44px;padding:.5rem}
 .archive-selection button:disabled{color:var(--text-muted);text-decoration:none;cursor:default}
-.archive-filters{grid-template-columns:repeat(3,minmax(0,1fr)) auto;padding:.5rem 0 1rem;border-bottom:1px solid var(--border-default)}
-.archive-filters label:first-child{grid-column:auto}
-@media(max-width:550px){.archive-app-buttons{grid-template-columns:repeat(auto-fit,minmax(min(100%,8rem),1fr))}.archive-app-buttons button{gap:.4rem;padding:.45rem .5rem}.archive-app-buttons img{width:24px;height:24px}.archive-filters{grid-template-columns:repeat(auto-fit,minmax(min(100%,6rem),1fr));gap:.5rem}.archive-filters button{grid-column:1/-1}.archive-filters label{font-size:.85rem}.archive-filters select{padding-inline-start:.5rem;padding-inline-end:1.5rem;background-position:right .35rem center}}
+@media(max-width:550px){.archive-app-buttons{grid-template-columns:repeat(auto-fit,minmax(min(100%,8rem),1fr))}.archive-app-buttons button{gap:.4rem;padding:.45rem .5rem}.archive-filters label{font-size:.85rem}}
+
+/* Give the longest filter a full row when the reading column narrows,
+   including when text enlargement reduces the available width in rem. */
+@container (width < 39rem) {
+ .archive-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+ .archive-filters label:has([name=kind]),.archive-filters button{grid-column:1/-1}
+ .archive-filters select{padding-inline:.5rem 30px;background-position:right 6px center}
+}
+@container (width < 17rem) {
+ .archive-filters{grid-template-columns:minmax(0,1fr)}
+}
 
 @media (max-width: 600px) { .archive dl div { grid-template-columns: minmax(0, 1fr); gap: .25rem; } }
 
-.archive-history article { min-width: 0; max-width: 68ch; }
+.archive-history article { min-width: 0; }
 .archive-history :is(h3,article > p) { overflow-wrap: break-word; }
-.archive-history article > details { max-width: 38rem; }
 
 /* On narrow filters, the app name and explicit selected check take priority
    over a decorative icon. Keep the compact two-column name list. */
