@@ -19,8 +19,9 @@ const home = `${base}/`;
         <p class="footer-tagline">{t.footTagline}</p>
         <p class="footer-desc">{t.footDesc}</p>
         <div class="footer-grant">
-          <a class="cartesia-startups" href="https://www.cartesia.ai/startups" aria-describedby="footer-cartesia-note">
-            <img src="/assets/partners/cartesia-startups-primary.svg" alt="Cartesia Startups Grant" width="604" height="62" loading="lazy" />
+          <a class="cartesia-startups" href="https://www.cartesia.ai/startups" aria-label="Cartesia Startups Grant" aria-describedby="footer-cartesia-note">
+            <img class="cartesia-startups-light" src="/assets/partners/cartesia-startups-primary.svg" alt="" width="604" height="62" loading="lazy" />
+            <img class="cartesia-startups-dark" src="/assets/partners/cartesia-startups-white.svg" alt="" width="311" height="32" loading="lazy" />
           </a>
           <p class="footer-grant-note" id="footer-cartesia-note">{t.footCartesiaGrant}</p>
         </div>
@@ -80,22 +81,21 @@ const home = `${base}/`;
 </footer>
 
 <style>
-  .footer-grant { margin-top: 1rem; }
+  .footer-grant { margin-top: .75rem; }
   .cartesia-startups {
     display: inline-flex;
     align-items: center;
-    width: 15rem;
+    width: 192px;
     max-width: 100%;
     min-height: 44px;
-    padding: 10px 14px;
-    box-sizing: border-box;
-    /* The official dark wordmark needs a light backplate in both themes. */
-    background: #f4f4f1;
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-xs);
     vertical-align: top;
   }
-  .cartesia-startups img { display: block; width: 100%; height: auto; }
+  .cartesia-startups img { width: 100%; height: auto; }
+  /* Follow the resolved site theme, not the OS preference alone. */
+  .cartesia-startups-light { display: none; }
+  .cartesia-startups-dark { display: block; }
+  :global(html[data-theme="light"]) .cartesia-startups-light { display: block; }
+  :global(html[data-theme="light"]) .cartesia-startups-dark { display: none; }
   .footer-grant-note {
     margin: .375rem 0 0;
     color: var(--text-secondary);
