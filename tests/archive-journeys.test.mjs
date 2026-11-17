@@ -13,11 +13,9 @@ test('every archive app has a localized, sourced journey or explicit evidence li
  }
  for(const slug of ['kkachi','pipi-sky','pipi-legion'])assert.equal(archiveJourneys.find(x=>x.app===slug).stages.length,0);
 });
-test('all locales render native disclosures without changing dated event counts',()=>{
+test('archived version-document comparisons stay out of the public timeline',()=>{
  for(const lang of ['ko','ja','en']){
   const html=readFileSync(`dist/${lang}/archive/index.html`,'utf8');
-  assert.equal((html.match(/data-journey-app=/g)||[]).length,17);
-  assert.equal((html.match(/data-event /g)||[]).length,68);
-  assert.ok(html.includes('journey-sources'));
+  assert.doesNotMatch(html, /data-journey-app|archive-journey-index|journey-sources/);
  }
 });

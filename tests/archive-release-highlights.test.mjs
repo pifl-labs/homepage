@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {archiveEvents} from '../src/data/archive.mjs';
+import {publicArchiveEvents} from '../src/data/archive-public.mjs';
 import {releaseHighlights} from '../src/data/archive-release-highlights-20261117.mjs';
 
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
@@ -67,7 +68,7 @@ test('enrichment never turns submissions and approvals into feature releases', (
   assert.equal(event('focus-121').region, 'JP · US');
   assert.equal(event('focus-120').region, 'KR');
   const publicEvidence = JSON.parse(read('public/archive-evidence.json'));
-  assert.deepEqual(publicEvidence.events, archiveEvents);
+  assert.deepEqual(publicEvidence.events, publicArchiveEvents);
 });
 
 test('public evidence contains no mail bodies, console identifiers or local filesystem paths', () => {
