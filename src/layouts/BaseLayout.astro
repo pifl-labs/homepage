@@ -19,6 +19,8 @@ interface Props {
   extraCss?: string[];
   /** 색인 제외 페이지용 — 예: 'noindex,follow'. astro.config 사이트맵 필터와 짝으로 관리한다. */
   robots?: string;
+  /** 단일 언어 페이지의 언어 전환 대상(Nav 로 전달). 미지정이면 경로 접두만 바꾸는 기존 동작. */
+  langHrefs?: Partial<Record<Lang, string>>;
 }
 
 const {
@@ -27,6 +29,7 @@ const {
   ogImage = DEFAULT_OG,
   extraCss = [],
   robots,
+  langHrefs,
 } = Astro.props;
 
 const ogLocale = lang === 'ko' ? 'ko_KR' : lang === 'ja' ? 'ja_JP' : 'en_US';
@@ -117,7 +120,7 @@ const preloadFont = lang === 'ja' ? '/fonts/PretendardJPVariable.woff2' : '/font
 </head>
 <body>
 <a class="skip-link" href="#main">{skipLabel}</a>
-<Nav lang={lang} />
+<Nav lang={lang} langHrefs={langHrefs} />
 <slot />
 <Footer lang={lang} />
 <script is:inline src="/script.js?v=f021e6652d8e"></script>

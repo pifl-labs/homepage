@@ -1,0 +1,3082 @@
+[
+ {
+  "id": "korean_first_words",
+  "world": "korean",
+  "title": "First Korean words",
+  "description": "Learn hello, water, meal, book and pencil with pictures and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "안녕",
+    "meaning": "hello",
+    "tip": "“안녕” means hello. Point to the picture and say it together twice.",
+    "mission": "Find something related to “hello” and say “안녕” in Korean."
+   },
+   {
+    "korean": "물",
+    "meaning": "water",
+    "tip": "“물” means water. Point to the picture and say it together twice.",
+    "mission": "Find something related to “water” and say “물” in Korean."
+   },
+   {
+    "korean": "밥",
+    "meaning": "meal / rice",
+    "tip": "“밥” means meal / rice. Point to the picture and say it together twice.",
+    "mission": "Find something related to “meal / rice” and say “밥” in Korean."
+   },
+   {
+    "korean": "책",
+    "meaning": "book",
+    "tip": "“책” means book. Point to the picture and say it together twice.",
+    "mission": "Find something related to “book” and say “책” in Korean."
+   },
+   {
+    "korean": "연필",
+    "meaning": "pencil",
+    "tip": "“연필” means pencil. Point to the picture and say it together twice.",
+    "mission": "Find something related to “pencil” and say “연필” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_daily_words",
+  "world": "korean",
+  "title": "Everyday words",
+  "description": "See, hear and choose apple, cat, bus, rain and shoes.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "사과",
+    "meaning": "apple",
+    "tip": "“사과” means apple. Point to the picture and say it together twice.",
+    "mission": "Find something related to “apple” and say “사과” in Korean."
+   },
+   {
+    "korean": "고양이",
+    "meaning": "cat",
+    "tip": "“고양이” means cat. Point to the picture and say it together twice.",
+    "mission": "Find something related to “cat” and say “고양이” in Korean."
+   },
+   {
+    "korean": "버스",
+    "meaning": "bus",
+    "tip": "“버스” means bus. Point to the picture and say it together twice.",
+    "mission": "Find something related to “bus” and say “버스” in Korean."
+   },
+   {
+    "korean": "비",
+    "meaning": "rain",
+    "tip": "“비” means rain. Point to the picture and say it together twice.",
+    "mission": "Find something related to “rain” and say “비” in Korean."
+   },
+   {
+    "korean": "신발",
+    "meaning": "shoes",
+    "tip": "“신발” means shoes. Point to the picture and say it together twice.",
+    "mission": "Find something related to “shoes” and say “신발” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_people_places",
+  "world": "korean",
+  "title": "People and places",
+  "description": "Connect home, school, friend, teacher and restroom to pictures.",
+  "practiceWithSound": [
+   "SortingPractice",
+   "SceneSearchPractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "SortingPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "집",
+    "meaning": "home",
+    "tip": "“집” means home. Point to the picture and say it together twice.",
+    "mission": "Find something related to “home” and say “집” in Korean."
+   },
+   {
+    "korean": "학교",
+    "meaning": "school",
+    "tip": "“학교” means school. Point to the picture and say it together twice.",
+    "mission": "Find something related to “school” and say “학교” in Korean."
+   },
+   {
+    "korean": "친구",
+    "meaning": "friend",
+    "tip": "“친구” means friend. Point to the picture and say it together twice.",
+    "mission": "Find something related to “friend” and say “친구” in Korean."
+   },
+   {
+    "korean": "선생님",
+    "meaning": "teacher",
+    "tip": "“선생님” means teacher. Point to the picture and say it together twice.",
+    "mission": "Find something related to “teacher” and say “선생님” in Korean."
+   },
+   {
+    "korean": "화장실",
+    "meaning": "toilet",
+    "tip": "“화장실” means toilet. Point to the picture and say it together twice.",
+    "mission": "Find something related to “toilet” and say “화장실” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_hangul_sounds",
+  "world": "korean",
+  "title": "First Hangul sounds",
+  "description": "Hear 아, 오, 우, 이 and 가 and match their basic letters.",
+  "practiceWithSound": [
+   "LetterTracePractice"
+  ],
+  "practiceWithoutSound": [
+   "LetterTracePractice"
+  ],
+  "lessons": [
+   {
+    "korean": "아",
+    "meaning": "the vowel in “아”",
+    "tip": "Stretch the sound, then trace ㅏ in the air with a finger.",
+    "mission": "Draw ㅏ in the air three times."
+   },
+   {
+    "korean": "오",
+    "meaning": "the vowel in “오”",
+    "tip": "Stretch the sound, then trace ㅗ in the air with a finger.",
+    "mission": "Draw ㅗ in the air three times."
+   },
+   {
+    "korean": "우",
+    "meaning": "the vowel in “우”",
+    "tip": "Stretch the sound, then trace ㅜ in the air with a finger.",
+    "mission": "Draw ㅜ in the air three times."
+   },
+   {
+    "korean": "이",
+    "meaning": "the vowel in “이”",
+    "tip": "Stretch the sound, then trace ㅣ in the air with a finger.",
+    "mission": "Draw ㅣ in the air three times."
+   },
+   {
+    "korean": "가",
+    "meaning": "ㄱ, the first consonant in “가”",
+    "tip": "Listen to “가” and connect it to the syllable’s first consonant, ㄱ. Repeating and air-tracing are optional.",
+    "mission": "Draw ㄱ in the air three times."
+   }
+  ]
+ },
+ {
+  "id": "korean_sky_weather",
+  "world": "korean",
+  "title": "Sky and weather words",
+  "description": "Learn sun, moon, cloud, tree and rainbow with pictures and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "해",
+    "meaning": "sun",
+    "tip": "“해” means sun. Point to the picture and say it together twice.",
+    "mission": "Find something related to “sun” and say “해” in Korean."
+   },
+   {
+    "korean": "달",
+    "meaning": "moon",
+    "tip": "“달” means moon. Point to the picture and say it together twice.",
+    "mission": "Find something related to “moon” and say “달” in Korean."
+   },
+   {
+    "korean": "구름",
+    "meaning": "cloud",
+    "tip": "“구름” means cloud. Point to the picture and say it together twice.",
+    "mission": "Find something related to “cloud” and say “구름” in Korean."
+   },
+   {
+    "korean": "나무",
+    "meaning": "tree",
+    "tip": "“나무” means tree. Point to the picture and say it together twice.",
+    "mission": "Find something related to “tree” and say “나무” in Korean."
+   },
+   {
+    "korean": "무지개",
+    "meaning": "rainbow",
+    "tip": "“무지개” means rainbow. Point to the picture and say it together twice.",
+    "mission": "Find something related to “rainbow” and say “무지개” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_animals",
+  "world": "korean",
+  "title": "Animal words",
+  "description": "See, hear and choose puppy, elephant, ant, snail and cheetah.",
+  "practiceWithSound": [
+   "SortingPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "SortingPractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "강아지",
+    "meaning": "puppy",
+    "tip": "“강아지” means puppy. Point to the picture and say it together twice.",
+    "mission": "Find something related to “puppy” and say “강아지” in Korean."
+   },
+   {
+    "korean": "코끼리",
+    "meaning": "elephant",
+    "tip": "“코끼리” means elephant. Point to the picture and say it together twice.",
+    "mission": "Find something related to “elephant” and say “코끼리” in Korean."
+   },
+   {
+    "korean": "개미",
+    "meaning": "ant",
+    "tip": "“개미” means ant. Point to the picture and say it together twice.",
+    "mission": "Find something related to “ant” and say “개미” in Korean."
+   },
+   {
+    "korean": "달팽이",
+    "meaning": "snail",
+    "tip": "“달팽이” means snail. Point to the picture and say it together twice.",
+    "mission": "Find something related to “snail” and say “달팽이” in Korean."
+   },
+   {
+    "korean": "치타",
+    "meaning": "cheetah",
+    "tip": "“치타” means cheetah. Point to the picture and say it together twice.",
+    "mission": "Find something related to “cheetah” and say “치타” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_home_town",
+  "world": "korean",
+  "title": "Home and town words",
+  "description": "Connect cook, dining table, bath, car and phone to pictures.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "요리사",
+    "meaning": "cook",
+    "tip": "“요리사” means cook. Point to the picture and say it together twice.",
+    "mission": "Find something related to “cook” and say “요리사” in Korean."
+   },
+   {
+    "korean": "식탁",
+    "meaning": "dining table",
+    "tip": "“식탁” means dining table. Point to the picture and say it together twice.",
+    "mission": "Find something related to “dining table” and say “식탁” in Korean."
+   },
+   {
+    "korean": "목욕",
+    "meaning": "bath",
+    "tip": "“목욕” means bath. Point to the picture and say it together twice.",
+    "mission": "Find something related to “bath” and say “목욕” in Korean."
+   },
+   {
+    "korean": "자동차",
+    "meaning": "car",
+    "tip": "“자동차” means car. Point to the picture and say it together twice.",
+    "mission": "Find something related to “car” and say “자동차” in Korean."
+   },
+   {
+    "korean": "휴대전화",
+    "meaning": "phone",
+    "tip": "“휴대전화” means phone. Point to the picture and say it together twice.",
+    "mission": "Find something related to “phone” and say “휴대전화” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_nature_treasures",
+  "world": "korean",
+  "title": "Nature treasure words",
+  "description": "Meet sprout, spring flower, ice, rock and star through pictures and sound.",
+  "practiceWithSound": [
+   "SortingPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "SortingPractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "새싹",
+    "meaning": "sprout",
+    "tip": "“새싹” means sprout. Point to the picture and say it together twice.",
+    "mission": "Find something related to “sprout” and say “새싹” in Korean."
+   },
+   {
+    "korean": "봄꽃",
+    "meaning": "spring flower",
+    "tip": "“봄꽃” means spring flower. Point to the picture and say it together twice.",
+    "mission": "Find something related to “spring flower” and say “봄꽃” in Korean."
+   },
+   {
+    "korean": "얼음",
+    "meaning": "ice",
+    "tip": "“얼음” means ice. Point to the picture and say it together twice.",
+    "mission": "Find something related to “ice” and say “얼음” in Korean."
+   },
+   {
+    "korean": "돌",
+    "meaning": "rock",
+    "tip": "“돌” means rock. Point to the picture and say it together twice.",
+    "mission": "Find something related to “rock” and say “돌” in Korean."
+   },
+   {
+    "korean": "별",
+    "meaning": "star",
+    "tip": "“별” means star. Point to the picture and say it together twice.",
+    "mission": "Find something related to “star” and say “별” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_first_colors",
+  "world": "korean",
+  "title": "First color words",
+  "description": "Hear red, blue, green, orange and purple and match each color.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "빨강",
+    "meaning": "red",
+    "tip": "“빨강” means red. Point to the picture and say it together twice.",
+    "mission": "Find something related to “red” and say “빨강” in Korean."
+   },
+   {
+    "korean": "파랑",
+    "meaning": "blue",
+    "tip": "“파랑” means blue. Point to the picture and say it together twice.",
+    "mission": "Find something related to “blue” and say “파랑” in Korean."
+   },
+   {
+    "korean": "초록",
+    "meaning": "green",
+    "tip": "“초록” means green. Point to the picture and say it together twice.",
+    "mission": "Find something related to “green” and say “초록” in Korean."
+   },
+   {
+    "korean": "주황",
+    "meaning": "orange",
+    "tip": "“주황” means orange. Point to the picture and say it together twice.",
+    "mission": "Find something related to “orange” and say “주황” in Korean."
+   },
+   {
+    "korean": "보라",
+    "meaning": "purple",
+    "tip": "“보라” means purple. Point to the picture and say it together twice.",
+    "mission": "Find something related to “purple” and say “보라” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_body_parts",
+  "world": "korean",
+  "title": "My body",
+  "description": "Find and point to eyes, ears, nose, mouth and hands with pictures and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "눈",
+    "meaning": "eyes",
+    "tip": "Find the eyes in the picture, point to the same body part, and say “눈” slowly twice.",
+    "mission": "Look in a mirror, point to your eyes, and say “눈” in Korean."
+   },
+   {
+    "korean": "귀",
+    "meaning": "ear",
+    "tip": "Find the ear in the picture, point to the same body part, and say “귀” slowly twice.",
+    "mission": "Look in a mirror, point to your ear, and say “귀” in Korean."
+   },
+   {
+    "korean": "코",
+    "meaning": "nose",
+    "tip": "Find the nose in the picture, point to the same body part, and say “코” slowly twice.",
+    "mission": "Look in a mirror, point to your nose, and say “코” in Korean."
+   },
+   {
+    "korean": "입",
+    "meaning": "mouth",
+    "tip": "Find the mouth in the picture, point to the same body part, and say “입” slowly twice.",
+    "mission": "Look in a mirror, point to your mouth, and say “입” in Korean."
+   },
+   {
+    "korean": "손",
+    "meaning": "hand",
+    "tip": "Find the hand in the picture, point to the same body part, and say “손” slowly twice.",
+    "mission": "Look in a mirror, point to your hand, and say “손” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_home_objects",
+  "world": "korean",
+  "title": "Things at home",
+  "description": "Find door, window, chair, cup and spoon with pictures and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "문",
+    "meaning": "door",
+    "tip": "Point to the picture and the same object at home, then say “문” slowly twice.",
+    "mission": "Find the door at home, point to it, and say “문” in Korean."
+   },
+   {
+    "korean": "창문",
+    "meaning": "window",
+    "tip": "Point to the picture and the same object at home, then say “창문” slowly twice.",
+    "mission": "Find the window at home, point to it, and say “창문” in Korean."
+   },
+   {
+    "korean": "의자",
+    "meaning": "chair",
+    "tip": "Point to the picture and the same object at home, then say “의자” slowly twice.",
+    "mission": "Find the chair at home, point to it, and say “의자” in Korean."
+   },
+   {
+    "korean": "컵",
+    "meaning": "cup",
+    "tip": "Point to the picture and the same object at home, then say “컵” slowly twice.",
+    "mission": "Find the cup at home, point to it, and say “컵” in Korean."
+   },
+   {
+    "korean": "숟가락",
+    "meaning": "spoon",
+    "tip": "Point to the picture and the same object at home, then say “숟가락” slowly twice.",
+    "mission": "Find the spoon at home, point to it, and say “숟가락” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_clothes_bag",
+  "world": "korean",
+  "title": "Clothes and school bag",
+  "description": "Find hat, T-shirt, pants, socks and school bag with pictures and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "모자",
+    "meaning": "hat",
+    "tip": "Point to the picture and the same clothing item, then say “모자” slowly twice.",
+    "mission": "Find the hat, point to it, and say “모자” in Korean."
+   },
+   {
+    "korean": "티셔츠",
+    "meaning": "T-shirt",
+    "tip": "Point to the picture and the same clothing item, then say “티셔츠” slowly twice.",
+    "mission": "Find the T-shirt, point to it, and say “티셔츠” in Korean."
+   },
+   {
+    "korean": "바지",
+    "meaning": "pants",
+    "tip": "Point to the picture and the same clothing item, then say “바지” slowly twice.",
+    "mission": "Find the pants, point to it, and say “바지” in Korean."
+   },
+   {
+    "korean": "양말",
+    "meaning": "socks",
+    "tip": "Point to the picture and the same clothing item, then say “양말” slowly twice.",
+    "mission": "Find the socks, point to it, and say “양말” in Korean."
+   },
+   {
+    "korean": "책가방",
+    "meaning": "school bag",
+    "tip": "Point to the picture and the same clothing item, then say “책가방” slowly twice.",
+    "mission": "Find the school bag, point to it, and say “책가방” in Korean."
+   }
+  ]
+ },
+ {
+  "id": "korean_family_people",
+  "world": "korean",
+  "title": "Family and people",
+  "description": "Meet family, adult, child, baby and doctor through varied pictures and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "가족",
+    "meaning": "family",
+    "tip": "Use the picture to check that “가족” means family. People and families look different, so connect the word to the scene meaning rather than appearance.",
+    "mission": "Turn off the screen and point to a person or scene that matches family in a photo or picture book. It is okay if the picture differs from real life; saying “가족” aloud is optional."
+   },
+   {
+    "korean": "어른",
+    "meaning": "adult",
+    "tip": "Use the picture to check that “어른” means adult. People and families look different, so connect the word to the scene meaning rather than appearance.",
+    "mission": "Turn off the screen and point to a person or scene that matches adult in a photo or picture book. It is okay if the picture differs from real life; saying “어른” aloud is optional."
+   },
+   {
+    "korean": "아이",
+    "meaning": "child",
+    "tip": "Use the picture to check that “아이” means child. People and families look different, so connect the word to the scene meaning rather than appearance.",
+    "mission": "Turn off the screen and point to a person or scene that matches child in a photo or picture book. It is okay if the picture differs from real life; saying “아이” aloud is optional."
+   },
+   {
+    "korean": "아기",
+    "meaning": "baby",
+    "tip": "Use the picture to check that “아기” means baby. People and families look different, so connect the word to the scene meaning rather than appearance.",
+    "mission": "Turn off the screen and point to a person or scene that matches baby in a photo or picture book. It is okay if the picture differs from real life; saying “아기” aloud is optional."
+   },
+   {
+    "korean": "의사",
+    "meaning": "doctor",
+    "tip": "Use the picture to check that “의사” means doctor. People and families look different, so connect the word to the scene meaning rather than appearance.",
+    "mission": "Turn off the screen and point to a person or scene that matches doctor in a photo or picture book. It is okay if the picture differs from real life; saying “의사” aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_food_drinks",
+  "world": "korean",
+  "title": "Food and drinks",
+  "description": "Find milk, juice, banana, bread and egg with pictures and sound, then sort food and drinks.",
+  "practiceWithSound": [
+   "SortingPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "SortingPractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "우유",
+    "meaning": "milk",
+    "tip": "Use the picture to check that “우유” means milk. Follow the family’s allergy and food rules; this is recognition practice, not a tasting or health-rating activity.",
+    "mission": "Turn off the screen and point to milk among toy food, in a photo or in a picture book. No tasting or drinking is needed; saying “우유” aloud is optional."
+   },
+   {
+    "korean": "주스",
+    "meaning": "juice",
+    "tip": "Use the picture to check that “주스” means juice. Follow the family’s allergy and food rules; this is recognition practice, not a tasting or health-rating activity.",
+    "mission": "Turn off the screen and point to juice among toy food, in a photo or in a picture book. No tasting or drinking is needed; saying “주스” aloud is optional."
+   },
+   {
+    "korean": "바나나",
+    "meaning": "banana",
+    "tip": "Use the picture to check that “바나나” means banana. Follow the family’s allergy and food rules; this is recognition practice, not a tasting or health-rating activity.",
+    "mission": "Turn off the screen and point to banana among toy food, in a photo or in a picture book. No tasting or drinking is needed; saying “바나나” aloud is optional."
+   },
+   {
+    "korean": "빵",
+    "meaning": "bread",
+    "tip": "Use the picture to check that “빵” means bread. Follow the family’s allergy and food rules; this is recognition practice, not a tasting or health-rating activity.",
+    "mission": "Turn off the screen and point to bread among toy food, in a photo or in a picture book. No tasting or drinking is needed; saying “빵” aloud is optional."
+   },
+   {
+    "korean": "달걀",
+    "meaning": "egg",
+    "tip": "Use the picture to check that “달걀” means egg. Follow the family’s allergy and food rules; this is recognition practice, not a tasting or health-rating activity.",
+    "mission": "Turn off the screen and point to egg among toy food, in a photo or in a picture book. No tasting or drinking is needed; saying “달걀” aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_neighborhood_transport",
+  "world": "korean",
+  "title": "Town and transport",
+  "description": "Find park, shop, hospital, bicycle and subway with pictures and sound.",
+  "practiceWithSound": [
+   "SortingPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "SortingPractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "공원",
+    "meaning": "park",
+    "tip": "Use the picture to check that “공원” means park. Connect it to a photo or picture-book scene; no trip or road crossing is needed.",
+    "mission": "Turn off the screen and point to a scene that matches park in a photo, toy map or picture book. No trip is needed; saying “공원” aloud is optional."
+   },
+   {
+    "korean": "가게",
+    "meaning": "shop",
+    "tip": "Use the picture to check that “가게” means shop. Connect it to a photo or picture-book scene; no trip or road crossing is needed.",
+    "mission": "Turn off the screen and point to a scene that matches shop in a photo, toy map or picture book. No trip is needed; saying “가게” aloud is optional."
+   },
+   {
+    "korean": "병원",
+    "meaning": "hospital",
+    "tip": "Use the picture to check that “병원” means hospital. Connect it to a photo or picture-book scene; no trip or road crossing is needed.",
+    "mission": "Turn off the screen and point to a scene that matches hospital in a photo, toy map or picture book. No trip is needed; saying “병원” aloud is optional."
+   },
+   {
+    "korean": "자전거",
+    "meaning": "bicycle",
+    "tip": "Use the picture to check that “자전거” means bicycle. Connect it to a photo or picture-book scene; no trip or road crossing is needed.",
+    "mission": "Turn off the screen and point to a scene that matches bicycle in a photo, toy map or picture book. No trip is needed; saying “자전거” aloud is optional."
+   },
+   {
+    "korean": "지하철",
+    "meaning": "subway",
+    "tip": "Use the picture to check that “지하철” means subway. Connect it to a photo or picture-book scene; no trip or road crossing is needed.",
+    "mission": "Turn off the screen and point to a scene that matches subway in a photo, toy map or picture book. No trip is needed; saying “지하철” aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_everyday_actions",
+  "world": "korean",
+  "title": "Everyday actions",
+  "description": "Learn walk, run, sleep, read and draw through scenes and sound.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "SyllableRhythmPractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "걸어요",
+    "meaning": "walk",
+    "tip": "Use the scene to check that “걸어요” means walk. Acting it out or repeating the Korean is optional; connecting the picture and sound is enough.",
+    "mission": "Turn off the screen and point to someone walking in a photo or picture book. No indoor running or pretend sleep is needed; acting it out and saying “걸어요” are optional."
+   },
+   {
+    "korean": "달려요",
+    "meaning": "run",
+    "tip": "Use the scene to check that “달려요” means run. Acting it out or repeating the Korean is optional; connecting the picture and sound is enough.",
+    "mission": "Turn off the screen and point to someone running in a photo or picture book. No indoor running or pretend sleep is needed; acting it out and saying “달려요” are optional."
+   },
+   {
+    "korean": "자요",
+    "meaning": "sleep",
+    "tip": "Use the scene to check that “자요” means sleep. Acting it out or repeating the Korean is optional; connecting the picture and sound is enough.",
+    "mission": "Turn off the screen and point to someone sleeping in a photo or picture book. No indoor running or pretend sleep is needed; acting it out and saying “자요” are optional."
+   },
+   {
+    "korean": "읽어요",
+    "meaning": "read",
+    "tip": "Use the scene to check that “읽어요” means read. Acting it out or repeating the Korean is optional; connecting the picture and sound is enough.",
+    "mission": "Turn off the screen and point to someone reading in a photo or picture book. No indoor running or pretend sleep is needed; acting it out and saying “읽어요” are optional."
+   },
+   {
+    "korean": "그려요",
+    "meaning": "draw",
+    "tip": "Use the scene to check that “그려요” means draw. Acting it out or repeating the Korean is optional; connecting the picture and sound is enough.",
+    "mission": "Turn off the screen and point to someone drawing in a photo or picture book. No indoor running or pretend sleep is needed; acting it out and saying “그려요” are optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_second_vowels",
+  "world": "korean",
+  "title": "More Hangul vowels",
+  "description": "Hear 어, 으, 여, 요 and 유 and connect them to ㅓ, ㅡ, ㅕ, ㅛ and ㅠ.",
+  "practiceWithSound": [
+   "JamoAssemblyPractice",
+   "MatchingPairsPractice",
+   "LetterTracePractice",
+   "SceneSearchPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "LetterTracePractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "어",
+    "meaning": "ㅓ, the vowel in “어”",
+    "tip": "Connect the sound 어 to ㅓ. Repeating or air-tracing is optional; do not grade stroke order or handwriting.",
+    "mission": "Point to ㅓ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "으",
+    "meaning": "ㅡ, the vowel in “으”",
+    "tip": "Connect the sound 으 to ㅡ. Repeating or air-tracing is optional; do not grade stroke order or handwriting.",
+    "mission": "Point to ㅡ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "여",
+    "meaning": "ㅕ, the vowel in “여”",
+    "tip": "Connect the sound 여 to ㅕ. Repeating or air-tracing is optional; do not grade stroke order or handwriting.",
+    "mission": "Point to ㅕ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "요",
+    "meaning": "ㅛ, the vowel in “요”",
+    "tip": "Connect the sound 요 to ㅛ. Repeating or air-tracing is optional; do not grade stroke order or handwriting.",
+    "mission": "Point to ㅛ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "유",
+    "meaning": "ㅠ, the vowel in “유”",
+    "tip": "Connect the sound 유 to ㅠ. Repeating or air-tracing is optional; do not grade stroke order or handwriting.",
+    "mission": "Point to ㅠ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_basic_consonants_1",
+  "world": "korean",
+  "title": "Basic consonants 1",
+  "description": "Hear 나, 다, 라, 마 and 바 and find ㄴ, ㄷ, ㄹ, ㅁ and ㅂ.",
+  "practiceWithSound": [
+   "JamoAssemblyPractice",
+   "MatchingPairsPractice",
+   "LetterTracePractice",
+   "SceneSearchPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "LetterTracePractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "나",
+    "meaning": "ㄴ, the first consonant in “나”",
+    "tip": "Listen to “나” and connect it to the syllable’s first consonant, ㄴ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㄴ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "다",
+    "meaning": "ㄷ, the first consonant in “다”",
+    "tip": "Listen to “다” and connect it to the syllable’s first consonant, ㄷ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㄷ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "라",
+    "meaning": "ㄹ, the first consonant in “라”",
+    "tip": "Listen to “라” and connect it to the syllable’s first consonant, ㄹ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㄹ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "마",
+    "meaning": "ㅁ, the first consonant in “마”",
+    "tip": "Listen to “마” and connect it to the syllable’s first consonant, ㅁ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅁ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "바",
+    "meaning": "ㅂ, the first consonant in “바”",
+    "tip": "Listen to “바” and connect it to the syllable’s first consonant, ㅂ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅂ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_basic_consonants_2",
+  "world": "korean",
+  "title": "Basic consonants 2",
+  "description": "Hear 사, 자, 차, 카 and 하 and find ㅅ, ㅈ, ㅊ, ㅋ and ㅎ.",
+  "practiceWithSound": [
+   "JamoAssemblyPractice",
+   "MatchingPairsPractice",
+   "LetterTracePractice",
+   "SceneSearchPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "LetterTracePractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "사",
+    "meaning": "ㅅ, the first consonant in “사”",
+    "tip": "Listen to “사” and connect it to the syllable’s first consonant, ㅅ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅅ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "자",
+    "meaning": "ㅈ, the first consonant in “자”",
+    "tip": "Listen to “자” and connect it to the syllable’s first consonant, ㅈ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅈ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "차",
+    "meaning": "ㅊ, the first consonant in “차”",
+    "tip": "Listen to “차” and connect it to the syllable’s first consonant, ㅊ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅊ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "카",
+    "meaning": "ㅋ, the first consonant in “카”",
+    "tip": "Listen to “카” and connect it to the syllable’s first consonant, ㅋ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅋ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   },
+   {
+    "korean": "하",
+    "meaning": "ㅎ, the first consonant in “하”",
+    "tip": "Listen to “하” and connect it to the syllable’s first consonant, ㅎ. Repeating or air-tracing is optional; do not grade handwriting.",
+    "mission": "Point to ㅎ among three large letter cards prepared by an adult. No scissors or writing are needed; repeating the sound is optional."
+   }
+  ]
+ },
+ {
+  "id": "korean_first_syllable_building",
+  "world": "korean",
+  "title": "Build first syllables",
+  "description": "Join two jamo pieces to build 야, 너, 도, 무 and 시.",
+  "practiceWithSound": [
+   "JamoAssemblyPractice",
+   "MatchingPairsPractice",
+   "SoundSwapPractice",
+   "SceneSearchPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "야",
+    "meaning": "“야”, made from ㅇ + ㅑ",
+    "tip": "Join ㅇ and ㅑ to build 야. Repeating and writing are optional, and stroke order is not graded. The initial ㅇ fills the first position without its own sound.",
+    "mission": "Turn off the screen and place adult-prepared ㅇ and ㅑ cards together to build 야. Cutting, speaking and writing are optional."
+   },
+   {
+    "korean": "너",
+    "meaning": "“너”, made from ㄴ + ㅓ",
+    "tip": "Join ㄴ and ㅓ to build 너. Repeating and writing are optional, and stroke order is not graded.",
+    "mission": "Turn off the screen and place adult-prepared ㄴ and ㅓ cards together to build 너. Cutting, speaking and writing are optional."
+   },
+   {
+    "korean": "도",
+    "meaning": "“도”, made from ㄷ + ㅗ",
+    "tip": "Join ㄷ and ㅗ to build 도. Repeating and writing are optional, and stroke order is not graded.",
+    "mission": "Turn off the screen and place adult-prepared ㄷ and ㅗ cards together to build 도. Cutting, speaking and writing are optional."
+   },
+   {
+    "korean": "무",
+    "meaning": "“무”, made from ㅁ + ㅜ",
+    "tip": "Join ㅁ and ㅜ to build 무. Repeating and writing are optional, and stroke order is not graded.",
+    "mission": "Turn off the screen and place adult-prepared ㅁ and ㅜ cards together to build 무. Cutting, speaking and writing are optional."
+   },
+   {
+    "korean": "시",
+    "meaning": "“시”, made from ㅅ + ㅣ",
+    "tip": "Join ㅅ and ㅣ to build 시. Repeating and writing are optional, and stroke order is not graded.",
+    "mission": "Turn off the screen and place adult-prepared ㅅ and ㅣ cards together to build 시. Cutting, speaking and writing are optional."
+   }
+  ]
+ },
+ {
+  "id": "math_count_compare",
+  "world": "math",
+  "title": "Count and compare",
+  "description": "Five picture activities for counting, adding, subtracting and comparing.",
+  "practiceWithSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "EqualSharingPractice"
+  ],
+  "practiceWithoutSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "EqualSharingPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "사과가 몇 개예요?",
+    "meaning": "Count three apples.",
+    "tip": "Count three apples.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "별이 몇 개예요?",
+    "meaning": "Count five stars.",
+    "tip": "Count five stars.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "이 더하기 일은 얼마예요?",
+    "meaning": "Use two fingers and add one.",
+    "tip": "Use two fingers and add one.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "사 빼기 일은 얼마예요?",
+    "meaning": "Hide one of four fingers.",
+    "tip": "Hide one of four fingers.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "칠과 오 중 큰 수는 무엇일까요?",
+    "meaning": "Compare 7 and 5.",
+    "tip": "Compare 7 and 5.",
+    "mission": "Re-create the idea once with safe objects at home."
+   }
+  ]
+ },
+ {
+  "id": "math_patterns_shapes",
+  "world": "math",
+  "title": "Patterns and shapes",
+  "description": "Explore number and color patterns, circles and triangles in five activities.",
+  "practiceWithSound": [
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice"
+  ],
+  "practiceWithoutSound": [
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "이 사 육 다음 수는 무엇일까요?",
+    "meaning": "Count by twos.",
+    "tip": "Count by twos.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "빨강 파랑 규칙 다음은 무엇일까요?",
+    "meaning": "Say the repeating color pattern.",
+    "tip": "Say the repeating color pattern.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "세모 동그라미 규칙 다음은 무엇일까요?",
+    "meaning": "Name each shape in the pattern.",
+    "tip": "Name each shape in the pattern.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "동그라미는 어느 모양일까요?",
+    "meaning": "Find the circle.",
+    "tip": "Find the circle.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "세모는 어느 모양일까요?",
+    "meaning": "Find the triangle.",
+    "tip": "Find the triangle.",
+    "mission": "Re-create the idea once with safe objects at home."
+   }
+  ]
+ },
+ {
+  "id": "math_length_time_numbers",
+  "world": "math",
+  "title": "Length, time and bigger numbers",
+  "description": "Practice length, morning time and numbers after ten in five activities.",
+  "practiceWithSound": [
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "practiceWithoutSound": [
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "어느 선이 가장 길까요?",
+    "meaning": "Compare line lengths.",
+    "tip": "Compare line lengths.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "두 시 반을 가리키는 시계를 골라요.",
+    "meaning": "Choose the clock that shows 2:30.",
+    "tip": "Choose the clock that shows 2:30.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "십 다음 수는 무엇일까요?",
+    "meaning": "Say 10, then the next number.",
+    "tip": "Say 10, then the next number.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "십오 앞의 수는 무엇일까요?",
+    "meaning": "Say the number before 15.",
+    "tip": "Say the number before 15.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "오 더하기 오는 얼마예요?",
+    "meaning": "Make two groups of five.",
+    "tip": "Make two groups of five.",
+    "mission": "Re-create the idea once with safe objects at home."
+   }
+  ]
+ },
+ {
+  "id": "math_everyday_challenges",
+  "world": "math",
+  "title": "Everyday math challenges",
+  "description": "Solve subtraction, size, position, halves and coins in everyday scenes.",
+  "practiceWithSound": [
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "EqualSharingPractice"
+  ],
+  "practiceWithoutSound": [
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "EqualSharingPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "십 빼기 이는 얼마예요?",
+    "meaning": "Start at ten and count back two.",
+    "tip": "Start at ten and count back two.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "어느 것이 더 작을까요?",
+    "meaning": "Compare real-world size.",
+    "tip": "Compare real-world size.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "위에 있는 것은 무엇일까요?",
+    "meaning": "Use the Korean position word “위”.",
+    "tip": "Use the Korean position word “위”.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "둘로 똑같이 나눈 모양을 골라요.",
+    "meaning": "Talk about two equal parts.",
+    "tip": "Talk about two equal parts.",
+    "mission": "Re-create the idea once with safe objects at home."
+   },
+   {
+    "korean": "동전 세 개 중 한 개를 쓰면 몇 개 남을까요?",
+    "meaning": "Act it out with three safe objects.",
+    "tip": "Act it out with three safe objects.",
+    "mission": "Re-create the idea once with safe objects at home."
+   }
+  ]
+ },
+ {
+  "id": "math_quantities_6_10",
+  "world": "math",
+  "title": "Quantities six to ten",
+  "description": "Listen, find and manipulate quantities 6–10 on clear ten-frames.",
+  "practiceWithSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "practiceWithoutSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "여섯 개",
+    "meaning": "6 counters",
+    "tip": "Listen for six, then find the ten-frame with six counters.",
+    "mission": "Turn off the screen and line up 6 safe objects."
+   },
+   {
+    "korean": "일곱 개",
+    "meaning": "7 counters",
+    "tip": "Listen for seven, then find the ten-frame with seven counters.",
+    "mission": "Turn off the screen and line up 7 safe objects."
+   },
+   {
+    "korean": "여덟 개",
+    "meaning": "8 counters",
+    "tip": "Listen for eight, then find the ten-frame with eight counters.",
+    "mission": "Turn off the screen and line up 8 safe objects."
+   },
+   {
+    "korean": "아홉 개",
+    "meaning": "9 counters",
+    "tip": "Listen for nine, then find the ten-frame with nine counters.",
+    "mission": "Turn off the screen and line up 9 safe objects."
+   },
+   {
+    "korean": "열 개",
+    "meaning": "10 counters",
+    "tip": "Listen for ten, then find the completely filled ten-frame.",
+    "mission": "Turn off the screen and line up 10 safe objects."
+   }
+  ]
+ },
+ {
+  "id": "math_quantities_11_15",
+  "world": "math",
+  "title": "Quantities eleven to fifteen",
+  "description": "Hear, find and build ten-and-some-more quantities on two ten-frames.",
+  "practiceWithSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "practiceWithoutSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "열한 개",
+    "meaning": "11 counters",
+    "tip": "Listen for eleven, then find ten and one more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 11 safe objects."
+   },
+   {
+    "korean": "열두 개",
+    "meaning": "12 counters",
+    "tip": "Listen for twelve, then find ten and two more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 12 safe objects."
+   },
+   {
+    "korean": "열세 개",
+    "meaning": "13 counters",
+    "tip": "Listen for thirteen, then find ten and three more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 13 safe objects."
+   },
+   {
+    "korean": "열네 개",
+    "meaning": "14 counters",
+    "tip": "Listen for fourteen, then find ten and four more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 14 safe objects."
+   },
+   {
+    "korean": "열다섯 개",
+    "meaning": "15 counters",
+    "tip": "Listen for fifteen, then find a full row after the first ten-frame.",
+    "mission": "Turn off the screen and line up 15 safe objects."
+   }
+  ]
+ },
+ {
+  "id": "math_quantities_16_20",
+  "world": "math",
+  "title": "Quantities sixteen to twenty",
+  "description": "Hear, find and build quantities 16–20 across two complete ten-frames.",
+  "practiceWithSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "practiceWithoutSound": [
+   "QuantityPlacementPractice",
+   "PatternCompletionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "NumberLineHopPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "열여섯 개",
+    "meaning": "16 counters",
+    "tip": "Listen for sixteen, then find ten and six more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 16 safe objects."
+   },
+   {
+    "korean": "열일곱 개",
+    "meaning": "17 counters",
+    "tip": "Listen for seventeen, then find ten and seven more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 17 safe objects."
+   },
+   {
+    "korean": "열여덟 개",
+    "meaning": "18 counters",
+    "tip": "Listen for eighteen, then find ten and eight more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 18 safe objects."
+   },
+   {
+    "korean": "열아홉 개",
+    "meaning": "19 counters",
+    "tip": "Listen for nineteen, then find ten and nine more on the double ten-frame.",
+    "mission": "Turn off the screen and line up 19 safe objects."
+   },
+   {
+    "korean": "스무 개",
+    "meaning": "20 counters",
+    "tip": "Listen for twenty, then find two completely filled ten-frames.",
+    "mission": "Turn off the screen and line up 20 safe objects."
+   }
+  ]
+ },
+ {
+  "id": "math_shapes_positions",
+  "world": "math",
+  "title": "Shapes and positions",
+  "description": "See, hear and distinguish square, rectangle, inside, outside and beside.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SortingPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "ShadowMatchPractice"
+  ],
+  "practiceWithoutSound": [
+   "SortingPractice",
+   "PicturePuzzlePractice",
+   "ShadowMatchPractice",
+   "PatternCompletionPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "네모",
+    "meaning": "square",
+    "tip": "Listen for “square” in Korean and find the shape with four equal sides.",
+    "mission": "Find one square and one rectangle, then place a small object inside, outside and beside a safe container."
+   },
+   {
+    "korean": "긴 네모",
+    "meaning": "rectangle",
+    "tip": "Listen for “rectangle” in Korean and compare its long and short sides.",
+    "mission": "Find one square and one rectangle, then place a small object inside, outside and beside a safe container."
+   },
+   {
+    "korean": "안",
+    "meaning": "inside",
+    "tip": "Listen for “inside” in Korean and find the ball within the boundary.",
+    "mission": "Find one square and one rectangle, then place a small object inside, outside and beside a safe container."
+   },
+   {
+    "korean": "밖",
+    "meaning": "outside",
+    "tip": "Listen for “outside” in Korean and find the ball beyond the boundary.",
+    "mission": "Find one square and one rectangle, then place a small object inside, outside and beside a safe container."
+   },
+   {
+    "korean": "옆",
+    "meaning": "beside",
+    "tip": "Listen for “beside” in Korean and find the ball next to the block.",
+    "mission": "Find one square and one rectangle, then place a small object inside, outside and beside a safe container."
+   }
+  ]
+ },
+ {
+  "id": "math_compare_sort",
+  "world": "math",
+  "title": "Compare and sort",
+  "description": "Compare equal, more and fewer amounts, then sort by color and shape.",
+  "practiceWithSound": [
+   "MathExpansionPractice",
+   "MatchingPairsPractice",
+   "MathExpansionPractice",
+   "SoundPictureCheckPractice",
+   "MissingPicturePractice"
+  ],
+  "practiceWithoutSound": [
+   "MathExpansionPractice",
+   "MathExpansionPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "MathSortBoardPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "같은 수",
+    "meaning": "Same amount",
+    "tip": "Slowly compare the amount, color or shape in the two groups.",
+    "mission": "Turn off the screen and sort five safe objects by color or shape."
+   },
+   {
+    "korean": "더 많아요",
+    "meaning": "More",
+    "tip": "Slowly compare the amount, color or shape in the two groups.",
+    "mission": "Turn off the screen and sort five safe objects by color or shape."
+   },
+   {
+    "korean": "더 적어요",
+    "meaning": "Fewer",
+    "tip": "Slowly compare the amount, color or shape in the two groups.",
+    "mission": "Turn off the screen and sort five safe objects by color or shape."
+   },
+   {
+    "korean": "색으로 모아요",
+    "meaning": "Sort by color",
+    "tip": "Slowly compare the amount, color or shape in the two groups.",
+    "mission": "Turn off the screen and sort five safe objects by color or shape."
+   },
+   {
+    "korean": "모양으로 모아요",
+    "meaning": "Sort by shape",
+    "tip": "Slowly compare the amount, color or shape in the two groups.",
+    "mission": "Turn off the screen and sort five safe objects by color or shape."
+   }
+  ]
+ },
+ {
+  "id": "math_pattern_extensions",
+  "world": "math",
+  "title": "Extend the pattern",
+  "description": "Continue AAB, ABB and ABC repeats and patterns that grow in size or amount.",
+  "practiceWithSound": [
+   "MathExpansionPractice",
+   "MatchingPairsPractice",
+   "PatternCompletionPractice",
+   "SoundPictureCheckPractice",
+   "MathExpansionPractice"
+  ],
+  "practiceWithoutSound": [
+   "MathExpansionPractice",
+   "PatternCompletionPractice",
+   "MathExpansionPractice",
+   "MissingPicturePractice",
+   "MathSortBoardPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "둘, 하나가 반복돼요",
+    "meaning": "AAB pattern",
+    "tip": "Point to each repeating part and say the pattern aloud.",
+    "mission": "Make a three-part repeating pattern with claps and knee taps."
+   },
+   {
+    "korean": "하나, 둘이 반복돼요",
+    "meaning": "ABB pattern",
+    "tip": "Point to each repeating part and say the pattern aloud.",
+    "mission": "Make a three-part repeating pattern with claps and knee taps."
+   },
+   {
+    "korean": "세 가지가 반복돼요",
+    "meaning": "ABC pattern",
+    "tip": "Point to each repeating part and say the pattern aloud.",
+    "mission": "Make a three-part repeating pattern with claps and knee taps."
+   },
+   {
+    "korean": "점점 커져요",
+    "meaning": "Growing-size pattern",
+    "tip": "Point to each repeating part and say the pattern aloud.",
+    "mission": "Make a three-part repeating pattern with claps and knee taps."
+   },
+   {
+    "korean": "하나씩 늘어나요",
+    "meaning": "Growing-quantity pattern",
+    "tip": "Point to each repeating part and say the pattern aloud.",
+    "mission": "Make a three-part repeating pattern with claps and knee taps."
+   }
+  ]
+ },
+ {
+  "id": "math_shapes_space_extended",
+  "world": "math",
+  "title": "More shapes and space",
+  "description": "Find an oval and distinguish below, between, near and far in clear scenes.",
+  "practiceWithSound": [
+   "MathExpansionPractice",
+   "MatchingPairsPractice",
+   "SortingPractice",
+   "SoundPictureCheckPractice",
+   "PicturePuzzlePractice"
+  ],
+  "practiceWithoutSound": [
+   "MathExpansionPractice",
+   "SortingPractice",
+   "PicturePuzzlePractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "타원",
+    "meaning": "Oval",
+    "tip": "Talk about each shape and where objects sit in relation to one another.",
+    "mission": "Place one safe object between, near and far from two other objects."
+   },
+   {
+    "korean": "아래",
+    "meaning": "Below",
+    "tip": "Talk about each shape and where objects sit in relation to one another.",
+    "mission": "Place one safe object between, near and far from two other objects."
+   },
+   {
+    "korean": "사이",
+    "meaning": "Between",
+    "tip": "Talk about each shape and where objects sit in relation to one another.",
+    "mission": "Place one safe object between, near and far from two other objects."
+   },
+   {
+    "korean": "가까이",
+    "meaning": "Near",
+    "tip": "Talk about each shape and where objects sit in relation to one another.",
+    "mission": "Place one safe object between, near and far from two other objects."
+   },
+   {
+    "korean": "멀리",
+    "meaning": "Far",
+    "tip": "Talk about each shape and where objects sit in relation to one another.",
+    "mission": "Place one safe object between, near and far from two other objects."
+   }
+  ]
+ },
+ {
+  "id": "math_informal_measurement",
+  "world": "math",
+  "title": "Measure and compare",
+  "description": "Compare equal length, shorter, taller, heavier and lighter objects.",
+  "practiceWithSound": [
+   "MathExpansionPractice",
+   "MatchingPairsPractice",
+   "MathBalancePractice",
+   "SoundPictureCheckPractice",
+   "MathSortBoardPractice"
+  ],
+  "practiceWithoutSound": [
+   "MathExpansionPractice",
+   "MathBalancePractice",
+   "MathSortBoardPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "길이가 같아요",
+    "meaning": "Same length",
+    "tip": "Line up the ends, then compare one feature: length, height or weight.",
+    "mission": "Line up two pencils and say which one is shorter."
+   },
+   {
+    "korean": "더 짧아요",
+    "meaning": "Shorter",
+    "tip": "Line up the ends, then compare one feature: length, height or weight.",
+    "mission": "Line up two pencils and say which one is shorter."
+   },
+   {
+    "korean": "더 높아요",
+    "meaning": "Taller",
+    "tip": "Line up the ends, then compare one feature: length, height or weight.",
+    "mission": "Line up two pencils and say which one is shorter."
+   },
+   {
+    "korean": "더 무거워요",
+    "meaning": "Heavier",
+    "tip": "Line up the ends, then compare one feature: length, height or weight.",
+    "mission": "Line up two pencils and say which one is shorter."
+   },
+   {
+    "korean": "더 가벼워요",
+    "meaning": "Lighter",
+    "tip": "Line up the ends, then compare one feature: length, height or weight.",
+    "mission": "Line up two pencils and say which one is shorter."
+   }
+  ]
+ },
+ {
+  "id": "math_day_and_clock",
+  "world": "math",
+  "title": "Day and clock",
+  "description": "Connect morning, daytime, evening and night with routines, then read three o’clock.",
+  "practiceWithSound": [
+   "MathExpansionPractice",
+   "MatchingPairsPractice",
+   "MathExpansionPractice",
+   "SoundPictureCheckPractice",
+   "SequencePractice"
+  ],
+  "practiceWithoutSound": [
+   "MathExpansionPractice",
+   "MathExpansionPractice",
+   "SequencePractice",
+   "MissingPicturePractice",
+   "MathSortBoardPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "아침",
+    "meaning": "Morning",
+    "tip": "Connect sky light with daily routines, then inspect the hour and minute hands separately.",
+    "mission": "Look outside and say whether it is morning, daytime, evening or night."
+   },
+   {
+    "korean": "낮",
+    "meaning": "Daytime",
+    "tip": "Connect sky light with daily routines, then inspect the hour and minute hands separately.",
+    "mission": "Look outside and say whether it is morning, daytime, evening or night."
+   },
+   {
+    "korean": "저녁",
+    "meaning": "Evening",
+    "tip": "Connect sky light with daily routines, then inspect the hour and minute hands separately.",
+    "mission": "Look outside and say whether it is morning, daytime, evening or night."
+   },
+   {
+    "korean": "밤",
+    "meaning": "Night",
+    "tip": "Connect sky light with daily routines, then inspect the hour and minute hands separately.",
+    "mission": "Look outside and say whether it is morning, daytime, evening or night."
+   },
+   {
+    "korean": "세 시 정각",
+    "meaning": "Read an exact hour",
+    "tip": "Connect sky light with daily routines, then inspect the hour and minute hands separately.",
+    "mission": "Look outside and say whether it is morning, daytime, evening or night."
+   }
+  ]
+ },
+ {
+  "id": "math_join_take_away_5",
+  "world": "math",
+  "title": "Join and take away within five",
+  "description": "Join and take away visible objects to make amounts within five.",
+  "practiceWithSound": [
+   "MathExpansionPractice",
+   "MatchingPairsPractice",
+   "QuantityPlacementPractice",
+   "SoundPictureCheckPractice",
+   "MathExpansionPractice"
+  ],
+  "practiceWithoutSound": [
+   "MathExpansionPractice",
+   "QuantityPlacementPractice",
+   "MathExpansionPractice",
+   "MathBalancePractice",
+   "NumberLineHopPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "하나와 하나를 합치면 몇 개일까요?",
+    "meaning": "Join 1 and 1 to make 2",
+    "tip": "Join and take away safe small objects, then check the result together.",
+    "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
+   },
+   {
+    "korean": "둘과 둘을 합치면 몇 개일까요?",
+    "meaning": "Join 2 and 2 to make 4",
+    "tip": "Join and take away safe small objects, then check the result together.",
+    "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
+   },
+   {
+    "korean": "셋과 둘을 합치면 몇 개일까요?",
+    "meaning": "Join 3 and 2 to make 5",
+    "tip": "Join and take away safe small objects, then check the result together.",
+    "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
+   },
+   {
+    "korean": "다섯에서 둘을 덜면 몇 개일까요?",
+    "meaning": "Take 2 from 5 to make 3",
+    "tip": "Join and take away safe small objects, then check the result together.",
+    "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
+   },
+   {
+    "korean": "다섯에서 셋을 덜면 몇 개일까요?",
+    "meaning": "Take 3 from 5 to make 2",
+    "tip": "Join and take away safe small objects, then check the result together.",
+    "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
+   }
+  ]
+ },
+ {
+  "id": "school_greetings_help",
+  "world": "school",
+  "title": "Greetings and getting help",
+  "description": "Hear five phrases for greetings and asking for help at school.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "안녕하세요",
+    "meaning": "Hello",
+    "tip": "Act out the situation and say “안녕하세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “안녕하세요” once."
+   },
+   {
+    "korean": "고마워요",
+    "meaning": "Thank you",
+    "tip": "Act out the situation and say “고마워요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “고마워요” once."
+   },
+   {
+    "korean": "도와주세요",
+    "meaning": "Please help me",
+    "tip": "Act out the situation and say “도와주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “도와주세요” once."
+   },
+   {
+    "korean": "잘 모르겠어요",
+    "meaning": "I don't understand",
+    "tip": "Act out the situation and say “잘 모르겠어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “잘 모르겠어요” once."
+   },
+   {
+    "korean": "다시 말해 주세요",
+    "meaning": "Please say it again",
+    "tip": "Act out the situation and say “다시 말해 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “다시 말해 주세요” once."
+   }
+  ]
+ },
+ {
+  "id": "school_needs_wellbeing",
+  "world": "school",
+  "title": "Needs and wellbeing",
+  "description": "Practice five phrases for the restroom, pain, water, play and apologies.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "화장실 가도 돼요?",
+    "meaning": "May I go to the toilet?",
+    "tip": "Act out the situation and say “화장실 가도 돼요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “화장실 가도 돼요?” once."
+   },
+   {
+    "korean": "배가 아파요",
+    "meaning": "My stomach hurts",
+    "tip": "Act out the situation and say “배가 아파요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “배가 아파요” once."
+   },
+   {
+    "korean": "물 주세요",
+    "meaning": "Water, please",
+    "tip": "Act out the situation and say “물 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “물 주세요” once."
+   },
+   {
+    "korean": "같이 놀자",
+    "meaning": "Let's play together",
+    "tip": "Act out the situation and say “같이 놀자” clearly together.",
+    "mission": "Swap roles with a grown-up and use “같이 놀자” once."
+   },
+   {
+    "korean": "미안해",
+    "meaning": "I'm sorry",
+    "tip": "Act out the situation and say “미안해” clearly together.",
+    "mission": "Swap roles with a grown-up and use “미안해” once."
+   }
+  ]
+ },
+ {
+  "id": "school_friends_classroom",
+  "world": "school",
+  "title": "Friends and classroom",
+  "description": "Learn five phrases about turns, sharing, books and lining up.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "괜찮아?",
+    "meaning": "Are you okay?",
+    "tip": "Act out the situation and say “괜찮아?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “괜찮아?” once."
+   },
+   {
+    "korean": "내 차례예요",
+    "meaning": "It's my turn",
+    "tip": "Act out the situation and say “내 차례예요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “내 차례예요” once."
+   },
+   {
+    "korean": "같이 써도 돼?",
+    "meaning": "Can I use it too?",
+    "tip": "Act out the situation and say “같이 써도 돼?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “같이 써도 돼?” once."
+   },
+   {
+    "korean": "책을 펼쳐요",
+    "meaning": "Open the book",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “책을 펼쳐요” and find the matching action.",
+    "mission": "Have a grown-up say “책을 펼쳐요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "줄을 서요",
+    "meaning": "Line up",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “줄을 서요” and find the matching action.",
+    "mission": "Have a grown-up say “줄을 서요”. Let the child show the action; repeating it aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "school_routines_safety",
+  "world": "school",
+  "title": "Routines and safety",
+  "description": "Practice sitting, handwashing, eating slowly, stopping and going home.",
+  "practiceWithSound": [
+   "SequencePractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "SequencePractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "자리에 앉아요",
+    "meaning": "Sit in your seat",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “자리에 앉아요” and find the matching action.",
+    "mission": "Have a grown-up say “자리에 앉아요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "손을 씻어요",
+    "meaning": "Wash your hands",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “손을 씻어요” and find the matching action.",
+    "mission": "Have a grown-up say “손을 씻어요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "천천히 먹어요",
+    "meaning": "Eat slowly",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “천천히 먹어요” and find the matching action.",
+    "mission": "Have a grown-up say “천천히 먹어요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "멈춰요, 위험해요",
+    "meaning": "Stop, it's dangerous",
+    "tip": "Act out the situation and say “멈춰요, 위험해요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “멈춰요, 위험해요” once."
+   },
+   {
+    "korean": "집에 가요",
+    "meaning": "I'm going home",
+    "tip": "Act out the situation and say “집에 가요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “집에 가요” once."
+   }
+  ]
+ },
+ {
+  "id": "school_helpful_requests",
+  "world": "school",
+  "title": "Helpful classroom requests",
+  "description": "Use scenes to ask for slower speech, another look, an explanation, a loan and a moment to wait.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "천천히 말해 주세요",
+    "meaning": "Please speak slowly",
+    "tip": "Act out the situation and say “천천히 말해 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “천천히 말해 주세요” once."
+   },
+   {
+    "korean": "다시 보여 주세요",
+    "meaning": "Please show me again",
+    "tip": "Act out the situation and say “다시 보여 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “다시 보여 주세요” once."
+   },
+   {
+    "korean": "이게 뭐예요?",
+    "meaning": "What is this?",
+    "tip": "Act out the situation and say “이게 뭐예요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “이게 뭐예요?” once."
+   },
+   {
+    "korean": "빌려도 돼요?",
+    "meaning": "May I borrow it?",
+    "tip": "Act out the situation and say “빌려도 돼요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “빌려도 돼요?” once."
+   },
+   {
+    "korean": "기다려 주세요",
+    "meaning": "Please wait",
+    "tip": "Act out the situation and say “기다려 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “기다려 주세요” once."
+   }
+  ]
+ },
+ {
+  "id": "school_safe_help",
+  "world": "school",
+  "title": "Safe words and trusted help",
+  "description": "Use calm scenes to practise stopping, saying no, telling a teacher, being lost and waiting for a grown-up.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "그만해 주세요",
+    "meaning": "Please stop",
+    "tip": "Act out the situation and say “그만해 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “그만해 주세요” once."
+   },
+   {
+    "korean": "싫어요",
+    "meaning": "I don't want that",
+    "tip": "Act out the situation and say “싫어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “싫어요” once."
+   },
+   {
+    "korean": "선생님께 말해요",
+    "meaning": "Tell the teacher",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “선생님께 말해요” and find the matching action.",
+    "mission": "Have a grown-up say “선생님께 말해요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "길을 잃었어요",
+    "meaning": "I'm lost",
+    "tip": "Act out the situation and say “길을 잃었어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “길을 잃었어요” once."
+   },
+   {
+    "korean": "보호자를 기다려요",
+    "meaning": "Wait for my grown-up",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “보호자를 기다려요” and find the matching action.",
+    "mission": "Have a grown-up say “보호자를 기다려요”. Let the child show the action; repeating it aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "school_classroom_actions",
+  "world": "school",
+  "title": "Make and tidy in class",
+  "description": "Use pictures to learn coloring, cutting, gluing, writing and tidying instructions.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "색칠해요",
+    "meaning": "Color it",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “색칠해요” and find the matching action.",
+    "mission": "Have a grown-up say “색칠해요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "가위로 오려요",
+    "meaning": "Cut with scissors",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “가위로 오려요” and find the matching action.",
+    "mission": "Have a grown-up say “가위로 오려요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "풀로 붙여요",
+    "meaning": "Glue it",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “풀로 붙여요” and find the matching action.",
+    "mission": "Have a grown-up say “풀로 붙여요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "여기에 써요",
+    "meaning": "Write here",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “여기에 써요” and find the matching action.",
+    "mission": "Have a grown-up say “여기에 써요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "정리해요",
+    "meaning": "Tidy up",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “정리해요” and find the matching action.",
+    "mission": "Have a grown-up say “정리해요”. Let the child show the action; repeating it aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "school_health_help",
+  "world": "school",
+  "title": "Say when you feel unwell",
+  "description": "Use scenes to report head or throat pain, dizziness, needing rest and asking for the school nurse's office.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "머리가 아파요",
+    "meaning": "My head hurts",
+    "tip": "Act out the situation and say “머리가 아파요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “머리가 아파요” once."
+   },
+   {
+    "korean": "목이 아파요",
+    "meaning": "My throat hurts",
+    "tip": "Act out the situation and say “목이 아파요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “목이 아파요” once."
+   },
+   {
+    "korean": "어지러워요",
+    "meaning": "I feel dizzy",
+    "tip": "Act out the situation and say “어지러워요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “어지러워요” once."
+   },
+   {
+    "korean": "쉬고 싶어요",
+    "meaning": "I need to rest",
+    "tip": "Act out the situation and say “쉬고 싶어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “쉬고 싶어요” once."
+   },
+   {
+    "korean": "보건실 가도 돼요?",
+    "meaning": "May I go to the nurse's office?",
+    "tip": "Act out the situation and say “보건실 가도 돼요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “보건실 가도 돼요?” once."
+   }
+  ]
+ },
+ {
+  "id": "school_places_navigation",
+  "world": "school",
+  "title": "Find places at school",
+  "description": "Ask for the classroom, restroom, cafeteria and library, or ask someone to come with you.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "교실이 어디예요?",
+    "meaning": "Where is the classroom?",
+    "tip": "Act out the situation and say “교실이 어디예요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “교실이 어디예요?” once."
+   },
+   {
+    "korean": "화장실이 어디예요?",
+    "meaning": "Where is the restroom?",
+    "tip": "Act out the situation and say “화장실이 어디예요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “화장실이 어디예요?” once."
+   },
+   {
+    "korean": "급식실이 어디예요?",
+    "meaning": "Where is the cafeteria?",
+    "tip": "Act out the situation and say “급식실이 어디예요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “급식실이 어디예요?” once."
+   },
+   {
+    "korean": "도서관이 어디예요?",
+    "meaning": "Where is the library?",
+    "tip": "Act out the situation and say “도서관이 어디예요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “도서관이 어디예요?” once."
+   },
+   {
+    "korean": "같이 가 주세요",
+    "meaning": "Please come with me",
+    "tip": "Act out the situation and say “같이 가 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “같이 가 주세요” once."
+   }
+  ]
+ },
+ {
+  "id": "school_cafeteria_needs",
+  "world": "school",
+  "title": "Speak at lunchtime",
+  "description": "Practise starting the meal, asking for a little or more, saying what you cannot eat and saying when you are finished.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "잘 먹겠습니다",
+    "meaning": "Thank you for the meal",
+    "tip": "Act out the situation and say “잘 먹겠습니다” clearly together.",
+    "mission": "Swap roles with a grown-up and use “잘 먹겠습니다” once."
+   },
+   {
+    "korean": "조금만 주세요",
+    "meaning": "Just a little, please",
+    "tip": "Act out the situation and say “조금만 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “조금만 주세요” once."
+   },
+   {
+    "korean": "더 주세요",
+    "meaning": "More, please",
+    "tip": "Act out the situation and say “더 주세요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “더 주세요” once."
+   },
+   {
+    "korean": "이건 못 먹어요",
+    "meaning": "I can't eat this",
+    "tip": "Act out the situation and say “이건 못 먹어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “이건 못 먹어요” once."
+   },
+   {
+    "korean": "다 먹었어요",
+    "meaning": "I'm finished",
+    "tip": "Act out the situation and say “다 먹었어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “다 먹었어요” once."
+   }
+  ]
+ },
+ {
+  "id": "school_class_participation",
+  "world": "school",
+  "title": "Join the class",
+  "description": "Use calm scenes to practise getting ready, orienting toward the teacher, listening and raising a hand.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "연필을 꺼내요",
+    "meaning": "Take out your pencil",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “연필을 꺼내요” and find the matching action.",
+    "mission": "Have a grown-up say “연필을 꺼내요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "이름을 써요",
+    "meaning": "Write your name",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “이름을 써요” and find the matching action.",
+    "mission": "Have a grown-up say “이름을 써요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "선생님 쪽을 봐요",
+    "meaning": "Look toward the teacher",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “선생님 쪽을 봐요” and find the matching action.",
+    "mission": "Have a grown-up say “선생님 쪽을 봐요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "잘 들어요",
+    "meaning": "Listen carefully",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “잘 들어요” and find the matching action.",
+    "mission": "Have a grown-up say “잘 들어요”. Let the child show the action; repeating it aloud is optional."
+   },
+   {
+    "korean": "손을 들어요",
+    "meaning": "Raise your hand",
+    "tip": "This is a classroom direction to understand and act on, not a phrase the child must say. Listen to “손을 들어요” and find the matching action.",
+    "mission": "Have a grown-up say “손을 들어요”. Let the child show the action; repeating it aloud is optional."
+   }
+  ]
+ },
+ {
+  "id": "school_learning_voice",
+  "world": "school",
+  "title": "Speak up while learning",
+  "description": "Practise asking a question, saying you are finished, trying again, trying independently and asking for more time.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "ScenePhraseMatchPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "질문이 있어요",
+    "meaning": "I have a question",
+    "tip": "Act out the situation and say “질문이 있어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “질문이 있어요” once."
+   },
+   {
+    "korean": "다 했어요",
+    "meaning": "I finished my work",
+    "tip": "Act out the situation and say “다 했어요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “다 했어요” once."
+   },
+   {
+    "korean": "다시 해도 돼요?",
+    "meaning": "May I try again?",
+    "tip": "Act out the situation and say “다시 해도 돼요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “다시 해도 돼요?” once."
+   },
+   {
+    "korean": "제가 해 볼게요",
+    "meaning": "I'll give it a try",
+    "tip": "Act out the situation and say “제가 해 볼게요” clearly together.",
+    "mission": "Swap roles with a grown-up and use “제가 해 볼게요” once."
+   },
+   {
+    "korean": "천천히 해도 돼요?",
+    "meaning": "May I take my time?",
+    "tip": "Act out the situation and say “천천히 해도 돼요?” clearly together.",
+    "mission": "Swap roles with a grown-up and use “천천히 해도 돼요?” once."
+   }
+  ]
+ },
+ {
+  "id": "explore_feelings_calm",
+  "world": "explore",
+  "title": "Feelings and calm",
+  "description": "Learn happiness, sadness, anger, fear and slow breathing with pictures.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "기뻐요",
+    "meaning": "happy face",
+    "tip": "Ask your child for one real experience about happy face.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to happy face. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "슬퍼요",
+    "meaning": "sad face",
+    "tip": "Ask your child for one real experience about sad face.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to sad face. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "화가 나요",
+    "meaning": "angry face",
+    "tip": "Ask your child for one real experience about angry face.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to angry face. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "무서워요",
+    "meaning": "scared face",
+    "tip": "Ask your child for one real experience about scared face.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to scared face. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "숨을 천천히 쉬어요",
+    "meaning": "slow breathing",
+    "tip": "Ask your child for one real experience about slow breathing.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to slow breathing. Do not touch any unfamiliar object."
+   }
+  ]
+ },
+ {
+  "id": "explore_health_safety",
+  "world": "explore",
+  "title": "Healthy and safe",
+  "description": "Explore hats in strong sun, brushing, crossings, hot objects and spring.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "SortingPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "햇빛이 강하면 모자를 써요",
+    "meaning": "Wear a hat in strong sun",
+    "tip": "On bright days, use a hat and shade together, and remind the child never to look directly at the sun.",
+    "mission": "Turn off the screen and find a hat to try on indoors. There is no need to go outside for this activity."
+   },
+   {
+    "korean": "이를 닦아요",
+    "meaning": "brush teeth",
+    "tip": "Ask your child for one real experience about brush teeth.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to brush teeth. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "횡단보도에서 기다려요",
+    "meaning": "wait and look",
+    "tip": "Ask your child for one real experience about wait and look.",
+    "mission": "Turn off the screen and, with a grown-up, point to a crosswalk in a picture book indoors. Do not go near a road for this activity."
+   },
+   {
+    "korean": "뜨거워요",
+    "meaning": "hot bowl",
+    "tip": "Ask your child for one real experience about hot bowl.",
+    "mission": "Turn off the screen and find a steaming bowl in a picture book. Do not touch hot water or dishes; tell a grown-up if you see one."
+   },
+   {
+    "korean": "봄",
+    "meaning": "spring",
+    "tip": "Ask your child for one real experience about spring.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to spring. Do not touch any unfamiliar object."
+   }
+  ]
+ },
+ {
+  "id": "explore_nature_science",
+  "world": "explore",
+  "title": "Nature discoveries",
+  "description": "Discover rain, plants, animals, floating and shadows through pictures.",
+  "practiceWithSound": [
+   "SequencePractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "SequencePractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "비가 와요",
+    "meaning": "rain",
+    "tip": "Ask your child for one real experience about rain.",
+    "mission": "Turn off the screen and, with a grown-up, look for rain from safely indoors or in a picture book. Do not go outside or watch a lightning storm for this activity."
+   },
+   {
+    "korean": "식물이 자라요",
+    "meaning": "sprout",
+    "tip": "Ask your child for one real experience about sprout.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to sprout. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "동물은 숨을 쉬어요",
+    "meaning": "puppy",
+    "tip": "Ask your child for one real experience about puppy.",
+    "mission": "Turn off the screen and, with a grown-up, point to a puppy in an animal picture book. Do not touch or follow an unfamiliar animal."
+   },
+   {
+    "korean": "물에 떠요",
+    "meaning": "leaf",
+    "tip": "Ask your child for one real experience about leaf.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to leaf. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "그림자를 찾아요",
+    "meaning": "shadow",
+    "tip": "Ask your child for one real experience about shadow.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to shadow. Do not touch any unfamiliar object."
+   }
+  ]
+ },
+ {
+  "id": "explore_art_movement_respect",
+  "world": "explore",
+  "title": "Color, movement and respect",
+  "description": "Explore color mixing, speed, sound, listening and respect in five activities.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "빨강과 노랑",
+    "meaning": "orange",
+    "tip": "Ask your child for one real experience about orange.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to orange. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "빠르게, 느리게",
+    "meaning": "snail",
+    "tip": "Ask your child for one real experience about snail.",
+    "mission": "Turn off the screen and, with a grown-up, find a snail in a picture book and pretend to move slowly. Do not touch real snails or wildlife."
+   },
+   {
+    "korean": "큰 소리, 작은 소리",
+    "meaning": "quiet voice",
+    "tip": "Ask your child for one real experience about quiet voice.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to quiet voice. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "친구의 말을 들어요",
+    "meaning": "look and listen",
+    "tip": "Ask your child for one real experience about look and listen.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to look and listen. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "다름을 존중해요",
+    "meaning": "be kind and include them",
+    "tip": "Ask your child for one real experience about be kind and include them.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to be kind and include them. Do not touch any unfamiliar object."
+   }
+  ]
+ },
+ {
+  "id": "explore_weather_water_changes",
+  "world": "explore",
+  "title": "Weather and water changes",
+  "description": "Observe ice, wind, clouds, steam and sunlight through pictures.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "물이 얼어요",
+    "meaning": "water freezing into ice",
+    "tip": "Ask your child for one real experience about water freezing into ice.",
+    "mission": "Turn off the screen and, with a grown-up, find ice in a picture book. Do not open a freezer alone, hold ice for a long time or taste it for this activity."
+   },
+   {
+    "korean": "바람이 불어요",
+    "meaning": "a leaf moving in the wind",
+    "tip": "Ask your child for one real experience about a leaf moving in the wind.",
+    "mission": "Turn off the screen and, with a grown-up, point to a picture related to a leaf moving in the wind. Do not touch any unfamiliar object."
+   },
+   {
+    "korean": "구름에서 비가 와요",
+    "meaning": "a cloud carrying rain",
+    "tip": "Ask your child for one real experience about a cloud carrying rain.",
+    "mission": "Turn off the screen and, with a grown-up, find a rain cloud in a picture book indoors. During a storm, stay away from windows and do not go outside."
+   },
+   {
+    "korean": "뜨거운 그릇에서 김이 올라와요",
+    "meaning": "a steaming hot bowl",
+    "tip": "Ask your child for one real experience about a steaming hot bowl.",
+    "mission": "Turn off the screen and find a steaming bowl in a picture book. Do not touch hot water or dishes; tell a grown-up if you see one."
+   },
+   {
+    "korean": "햇빛이 비춰요",
+    "meaning": "bright sunlight",
+    "tip": "Ask your child for one real experience about bright sunlight.",
+    "mission": "Turn off the screen and, with a grown-up, point to the sun in a picture book indoors. Never look directly at the real sun."
+   }
+  ]
+ },
+ {
+  "id": "explore_plant_growth",
+  "world": "explore",
+  "title": "From seed to flower",
+  "description": "Observe planting, watering, sprouting, stem growth and blooming in order.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SequencePractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice"
+  ],
+  "practiceWithoutSound": [
+   "SequencePractice",
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "씨앗을 심어요",
+    "meaning": "planting a seed in soil",
+    "tip": "Ask your child to point to what goes into the soil before the plant grows.",
+    "mission": "Turn off the screen and, with a grown-up, point to where a seed could go in a pot or garden bed."
+   },
+   {
+    "korean": "물을 줘요",
+    "meaning": "watering the plant",
+    "tip": "Pretend together to give the plant a little water rather than too much.",
+    "mission": "Turn off the screen and, with a grown-up, give a plant a little water or pretend with an empty cup."
+   },
+   {
+    "korean": "싹이 나요",
+    "meaning": "a sprout emerging from the soil",
+    "tip": "Use your hands to compare the tiny sprout with the taller stem.",
+    "mission": "Turn off the screen and look for a tiny sprout by a window or in a garden bed, then point to it."
+   },
+   {
+    "korean": "줄기가 자라요",
+    "meaning": "a stem growing tall",
+    "tip": "Trace the stem upward and count the leaves together.",
+    "mission": "Turn off the screen, stretch your arms up like a stem and spread your fingers like leaves."
+   },
+   {
+    "korean": "꽃이 피어요",
+    "meaning": "a flower blooming",
+    "tip": "Act out seed, sprout, stem and flower in order.",
+    "mission": "Turn off the screen, curl up like a seed, stand tall like a stem, then open both arms like a flower."
+   }
+  ]
+ },
+ {
+  "id": "explore_animal_places",
+  "world": "explore",
+  "title": "Animals in their places",
+  "description": "Observe five animals pictured in a nest, underwater, by a burrow, in a tree and underground.",
+  "practiceWithSound": [
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PicturePuzzlePractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "PicturePuzzlePractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "새가 둥지에 있어요",
+    "meaning": "a bird in a nest",
+    "tip": "Find the nest and branch in the picture, and explain that this bird can use the nest for its eggs and chicks.",
+    "mission": "Turn off the screen and look for a bird from a distance with a grown-up. If you see a nest, do not touch it or climb the tree."
+   },
+   {
+    "korean": "물고기가 물속에 있어요",
+    "meaning": "a fish underwater",
+    "tip": "Point to the waterline and fins, then talk about how the fish moves underwater.",
+    "mission": "Turn off the screen and observe fish in an aquarium or pond with a grown-up. Do not tap the glass or feed them without permission."
+   },
+   {
+    "korean": "토끼가 굴 옆에 있어요",
+    "meaning": "a rabbit by a burrow",
+    "tip": "Point separately to the burrow entrance and rabbit, then ask where this rabbit is sitting.",
+    "mission": "Turn off the screen, make a pretend burrow entrance with a cushion or blanket, then sit beside it like the rabbit."
+   },
+   {
+    "korean": "다람쥐가 나무에 있어요",
+    "meaning": "a squirrel in a tree",
+    "tip": "Trace the trunk upward and find both the squirrel and the tree hollow.",
+    "mission": "Turn off the screen and look up into a tree for a squirrel with a grown-up while staying on the ground. Do not chase or feed it."
+   },
+   {
+    "korean": "개미가 땅속에 있어요",
+    "meaning": "an ant underground",
+    "tip": "Find the line between above and below ground, then trace the underground tunnel used by the ant.",
+    "mission": "Turn off the screen and observe one ant or an ant trail from a distance with a grown-up. Do not touch the ants or disturb their nest."
+   }
+  ]
+ },
+ {
+  "id": "explore_light_shadow_changes",
+  "world": "explore",
+  "title": "Light and shadow changes",
+  "description": "Use safe pictures to observe clear materials, shadow position and size, two lights and a mirror.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "빛은 투명한 것을 지나가요",
+    "meaning": "Light passes through clear materials",
+    "tip": "Compare the light position and shadow changes in the pictures. Never shine a light into eyes or look directly at the sun.",
+    "mission": "Turn off the screen and find one indoor shadow from a distance with a grown-up. Do not shine light into eyes or look directly at the sun."
+   },
+   {
+    "korean": "그림자는 빛의 반대쪽에 생겨요",
+    "meaning": "A shadow forms opposite the light",
+    "tip": "Compare the light position and shadow changes in the pictures. Never shine a light into eyes or look directly at the sun.",
+    "mission": "Turn off the screen and find one indoor shadow from a distance with a grown-up. Do not shine light into eyes or look directly at the sun."
+   },
+   {
+    "korean": "빛을 가까이하면 그림자가 커져요",
+    "meaning": "Moving the light closer makes the shadow bigger",
+    "tip": "Compare the light position and shadow changes in the pictures. Never shine a light into eyes or look directly at the sun.",
+    "mission": "Turn off the screen and find one indoor shadow from a distance with a grown-up. Do not shine light into eyes or look directly at the sun."
+   },
+   {
+    "korean": "두 빛은 그림자 두 개를 만들 수 있어요",
+    "meaning": "Two lights can make two shadows",
+    "tip": "Compare the light position and shadow changes in the pictures. Never shine a light into eyes or look directly at the sun.",
+    "mission": "Turn off the screen and find one indoor shadow from a distance with a grown-up. Do not shine light into eyes or look directly at the sun."
+   },
+   {
+    "korean": "거울은 빛의 방향을 바꿔요",
+    "meaning": "A mirror changes the direction of light",
+    "tip": "Compare the light position and shadow changes in the pictures. Never shine a light into eyes or look directly at the sun.",
+    "mission": "Turn off the screen and find one indoor shadow from a distance with a grown-up. Do not shine light into eyes or look directly at the sun."
+   }
+  ]
+ },
+ {
+  "id": "explore_float_sink_observations",
+  "world": "explore",
+  "title": "Floating and sinking",
+  "description": "Predict from pictures what cork, stone, air-filled and water-filled bottles, and a clay boat do in water.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "코르크 조각은 물 위에 떠요",
+    "meaning": "A piece of cork floats on water",
+    "tip": "Predict floating and sinking from the pictures first. Any water observation must be together at a shallow basin prepared by a grown-up.",
+    "mission": "Turn off the screen and, without using water, hold two safe objects and only predict with a grown-up which might float."
+   },
+   {
+    "korean": "돌은 물속으로 가라앉아요",
+    "meaning": "A stone sinks in water",
+    "tip": "Predict floating and sinking from the pictures first. Any water observation must be together at a shallow basin prepared by a grown-up.",
+    "mission": "Turn off the screen and, without using water, hold two safe objects and only predict with a grown-up which might float."
+   },
+   {
+    "korean": "공기가 든 닫힌 병은 물에 떠요",
+    "meaning": "A closed bottle with air in it floats",
+    "tip": "Predict floating and sinking from the pictures first. Any water observation must be together at a shallow basin prepared by a grown-up.",
+    "mission": "Turn off the screen and, without using water, hold two safe objects and only predict with a grown-up which might float."
+   },
+   {
+    "korean": "병에 물이 많아지면 더 낮게 떠요",
+    "meaning": "A bottle floats lower as it holds more water",
+    "tip": "Predict floating and sinking from the pictures first. Any water observation must be together at a shallow basin prepared by a grown-up.",
+    "mission": "Turn off the screen and, without using water, hold two safe objects and only predict with a grown-up which might float."
+   },
+   {
+    "korean": "찰흙을 배 모양으로 만들면 뜰 수 있어요",
+    "meaning": "Clay shaped like a boat can float",
+    "tip": "Predict floating and sinking from the pictures first. Any water observation must be together at a shallow basin prepared by a grown-up.",
+    "mission": "Turn off the screen and, without using water, hold two safe objects and only predict with a grown-up which might float."
+   }
+  ]
+ },
+ {
+  "id": "explore_magnet_observations",
+  "world": "explore",
+  "title": "Observe magnets safely",
+  "description": "Observe in pictures how magnets respond to steel and wood, act through paper, and attract or repel by pole.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "자석은 철 클립을 끌어당겨요",
+    "meaning": "A magnet attracts a steel paper clip",
+    "tip": "Observe magnet results only in pictures or a sealed demonstration prepared by a grown-up. Children do not handle loose magnets or clips.",
+    "mission": "Turn off the screen and, without taking out magnets, use hand motions with a grown-up to show pulling together and pushing apart."
+   },
+   {
+    "korean": "자석은 나무 블록을 끌어당기지 않아요",
+    "meaning": "A magnet does not pull a wooden block",
+    "tip": "Observe magnet results only in pictures or a sealed demonstration prepared by a grown-up. Children do not handle loose magnets or clips.",
+    "mission": "Turn off the screen and, without taking out magnets, use hand motions with a grown-up to show pulling together and pushing apart."
+   },
+   {
+    "korean": "얇은 종이 사이에서도 자석이 철 클립을 끌 수 있어요",
+    "meaning": "A magnet can pull a steel paper clip through thin paper",
+    "tip": "Observe magnet results only in pictures or a sealed demonstration prepared by a grown-up. Children do not handle loose magnets or clips.",
+    "mission": "Turn off the screen and, without taking out magnets, use hand motions with a grown-up to show pulling together and pushing apart."
+   },
+   {
+    "korean": "자석의 다른 극끼리는 서로 끌어당겨요",
+    "meaning": "Opposite magnet poles attract",
+    "tip": "Observe magnet results only in pictures or a sealed demonstration prepared by a grown-up. Children do not handle loose magnets or clips.",
+    "mission": "Turn off the screen and, without taking out magnets, use hand motions with a grown-up to show pulling together and pushing apart."
+   },
+   {
+    "korean": "자석의 같은 극끼리는 서로 밀어내요",
+    "meaning": "Like magnet poles repel",
+    "tip": "Observe magnet results only in pictures or a sealed demonstration prepared by a grown-up. Children do not handle loose magnets or clips.",
+    "mission": "Turn off the screen and, without taking out magnets, use hand motions with a grown-up to show pulling together and pushing apart."
+   }
+  ]
+ },
+ {
+  "id": "explore_season_tree_changes",
+  "world": "explore",
+  "title": "One tree through four seasons",
+  "description": "Follow spring buds, summer leaves, autumn color, winter branches and the season cycle of many Korean deciduous trees.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "봄에는 많은 낙엽나무에 새눈이 돋아요",
+    "meaning": "In spring, many deciduous trees grow new buds",
+    "tip": "Explain that seasonal timing and appearance vary by tree and region. The pictures show one common Korean deciduous-tree example.",
+    "mission": "Turn off the screen and observe one tree from a window or safe path with a grown-up while staying on the ground. Do not climb the tree."
+   },
+   {
+    "korean": "여름에는 많은 낙엽나무의 잎이 무성해져요",
+    "meaning": "In summer, many deciduous trees have full leafy crowns",
+    "tip": "Explain that seasonal timing and appearance vary by tree and region. The pictures show one common Korean deciduous-tree example.",
+    "mission": "Turn off the screen and observe one tree from a window or safe path with a grown-up while staying on the ground. Do not climb the tree."
+   },
+   {
+    "korean": "가을에는 많은 낙엽나무의 잎이 색이 바뀌고 떨어져요",
+    "meaning": "In autumn, many deciduous leaves change color and fall",
+    "tip": "Explain that seasonal timing and appearance vary by tree and region. The pictures show one common Korean deciduous-tree example.",
+    "mission": "Turn off the screen and observe one tree from a window or safe path with a grown-up while staying on the ground. Do not climb the tree."
+   },
+   {
+    "korean": "겨울에는 많은 낙엽나무의 가지가 드러나요",
+    "meaning": "In winter, many deciduous trees show their bare branches",
+    "tip": "Explain that seasonal timing and appearance vary by tree and region. The pictures show one common Korean deciduous-tree example.",
+    "mission": "Turn off the screen and observe one tree from a window or safe path with a grown-up while staying on the ground. Do not climb the tree."
+   },
+   {
+    "korean": "한국에서는 봄, 여름, 가을, 겨울이 차례로 이어져요",
+    "meaning": "In Korea, the seasons follow spring, summer, autumn and winter",
+    "tip": "Explain that seasonal timing and appearance vary by tree and region. The pictures show one common Korean deciduous-tree example.",
+    "mission": "Turn off the screen and observe one tree from a window or safe path with a grown-up while staying on the ground. Do not climb the tree."
+   }
+  ]
+ },
+ {
+  "id": "explore_animal_movements",
+  "world": "explore",
+  "title": "How animals move",
+  "description": "Connect the body features of birds, fish, rabbits, snakes and ducks with how they move.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "새는 날개를 움직여 날아요",
+    "meaning": "A bird moves its wings to fly",
+    "tip": "Connect body features with movement in the pictures. Observe real animals from a distance without chasing or touching them.",
+    "mission": "Turn off the screen and, while seated, use small hand motions to imitate flying, swimming or slithering."
+   },
+   {
+    "korean": "물고기는 지느러미와 꼬리로 헤엄쳐요",
+    "meaning": "A fish swims with its fins and tail",
+    "tip": "Connect body features with movement in the pictures. Observe real animals from a distance without chasing or touching them.",
+    "mission": "Turn off the screen and, while seated, use small hand motions to imitate flying, swimming or slithering."
+   },
+   {
+    "korean": "토끼는 뒷다리로 땅을 밀어 뛰어요",
+    "meaning": "A rabbit pushes with its hind legs to hop",
+    "tip": "Connect body features with movement in the pictures. Observe real animals from a distance without chasing or touching them.",
+    "mission": "Turn off the screen and, while seated, use small hand motions to imitate flying, swimming or slithering."
+   },
+   {
+    "korean": "뱀은 몸을 굽히며 기어가요",
+    "meaning": "A snake bends its body to slither",
+    "tip": "Connect body features with movement in the pictures. Observe real animals from a distance without chasing or touching them.",
+    "mission": "Turn off the screen and, while seated, use small hand motions to imitate flying, swimming or slithering."
+   },
+   {
+    "korean": "오리는 물갈퀴 발로 물을 밀며 헤엄쳐요",
+    "meaning": "A duck paddles with its webbed feet",
+    "tip": "Connect body features with movement in the pictures. Observe real animals from a distance without chasing or touching them.",
+    "mission": "Turn off the screen and, while seated, use small hand motions to imitate flying, swimming or slithering."
+   }
+  ]
+ },
+ {
+  "id": "explore_body_signals",
+  "world": "explore",
+  "title": "Feelings and body signals",
+  "description": "Gently notice body signals that may come with surprise, worry, nerves, tiredness and calm.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "놀라면 몸이 잠깐 멈출 수 있어요",
+    "meaning": "When surprised, the body may pause for a moment",
+    "tip": "Explain that body signals differ from person to person and do not always mean the same thing. The child may pass or choose not to talk about feelings.",
+    "mission": "Turn off the screen and quietly notice your shoulders and breathing. It is okay to signal pass with your hand instead of talking."
+   },
+   {
+    "korean": "걱정되면 배가 꽉 조이는 느낌이 들 수 있어요",
+    "meaning": "When worried, the tummy may feel tight",
+    "tip": "Explain that body signals differ from person to person and do not always mean the same thing. The child may pass or choose not to talk about feelings.",
+    "mission": "Turn off the screen and quietly notice your shoulders and breathing. It is okay to signal pass with your hand instead of talking."
+   },
+   {
+    "korean": "긴장하면 심장이 빨리 뛸 수 있어요",
+    "meaning": "When nervous, the heart may beat faster",
+    "tip": "Explain that body signals differ from person to person and do not always mean the same thing. The child may pass or choose not to talk about feelings.",
+    "mission": "Turn off the screen and quietly notice your shoulders and breathing. It is okay to signal pass with your hand instead of talking."
+   },
+   {
+    "korean": "피곤하면 하품이 나고 눈이 무거울 수 있어요",
+    "meaning": "When tired, you may yawn and your eyes may feel heavy",
+    "tip": "Explain that body signals differ from person to person and do not always mean the same thing. The child may pass or choose not to talk about feelings.",
+    "mission": "Turn off the screen and quietly notice your shoulders and breathing. It is okay to signal pass with your hand instead of talking."
+   },
+   {
+    "korean": "편안하면 어깨 힘이 풀리고 숨이 고를 수 있어요",
+    "meaning": "When calm, shoulders may relax and breathing may become steady",
+    "tip": "Explain that body signals differ from person to person and do not always mean the same thing. The child may pass or choose not to talk about feelings.",
+    "mission": "Turn off the screen and quietly notice your shoulders and breathing. It is okay to signal pass with your hand instead of talking."
+   }
+  ]
+ },
+ {
+  "id": "explore_healthy_safe_habits",
+  "world": "explore",
+  "title": "Healthy and safe habits",
+  "description": "Learn cough, screen-break, stair and water safety, and take medicine only from a parent, caregiver or authorized health professional.",
+  "practiceWithSound": [
+   "CauseEffectMatchPractice",
+   "MatchingPairsPractice",
+   "SceneSearchPractice",
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice"
+  ],
+  "practiceWithoutSound": [
+   "CauseEffectMatchPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice"
+  ],
+  "lessons": [
+   {
+    "korean": "기침이나 재채기는 팔꿈치로 가려요",
+    "meaning": "Cover a cough or sneeze with your elbow",
+    "tip": "Use the picture to review covering the mouth and nose with the inside of the elbow for a cough or sneeze.",
+    "mission": "Turn off the screen and, while seated, slowly practise bringing the inside of the elbow toward the mouth and nose. Do not force a cough."
+   },
+   {
+    "korean": "화면을 쉬고 먼 곳을 바라봐요",
+    "meaning": "Take a screen break and look at something far away",
+    "tip": "Practise briefly looking away from the screen toward a distant indoor view; do not present this as eyesight treatment.",
+    "mission": "Turn off the screen and briefly look toward a distant wall or a safe view from indoors. Never look directly at the sun."
+   },
+   {
+    "korean": "계단에서는 난간을 잡고 걸어요",
+    "meaning": "Hold the handrail and walk on stairs",
+    "tip": "Explain that stairs require walking with a grown-up and holding the handrail; do not practise on real stairs for this activity.",
+    "mission": "Turn off the screen and, with a grown-up, point to stairs and a handrail in a picture book. Do not go to real stairs for this activity."
+   },
+   {
+    "korean": "약은 부모·보호자나 허락된 보건 담당자가 줄 때만 먹어요",
+    "meaning": "Take medicine only when a parent, caregiver or authorized health professional gives it to you",
+    "tip": "Never take or share medicine alone; only a parent, caregiver or authorized health professional may give it.",
+    "mission": "Turn off the screen and point to a parent, caregiver or authorized health professional in a photo or picture book. Do not touch, take or share real medicine."
+   },
+   {
+    "korean": "물가에서는 어른과 함께 있어요",
+    "meaning": "Stay with a grown-up near water",
+    "tip": "Near water, stay with a caregiver, keep a safe distance and follow their rules. Use pictures only; do not approach real water for this activity.",
+    "mission": "Turn off the screen and, with a caregiver, point to a safe distance from water in a picture book. Do not approach real water for this activity."
+   }
+  ]
+ }
+]
