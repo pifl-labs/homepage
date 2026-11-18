@@ -7,11 +7,11 @@ const policy = read('src/components/pipi-bridge/PrivacyPolicy.astro');
 const topics = JSON.parse(read('src/data/bridge-library-cards.json'));
 
 const POLICY = {
-  ko: ['시행일: 2026년 11월 18일 · 버전 1.3', '<h3>3. 이용 목적과 보관</h3>', '<h3>4. 제3자 제공과 국외 이전</h3>', '<strong>도서관·교실 공용 활동:</strong> 어른이 공용 활동을 시작하면'],
-  en: ['Effective: November 18, 2026 · Version 1.3', '<h3>3. Purpose and retention</h3>', '<h3>4. Sharing and international transfer</h3>', '<strong>Library and classroom sessions:</strong> when a grown-up starts a shared session'],
-  ja: ['施行日: 2026年11月18日 · バージョン 1.3', '<h3>3. 利用目的と保有期間</h3>', '<h3>4. 第三者提供と国外移転</h3>', '<strong>図書館・教室の共有セッション：</strong>大人が共有セッションを始めると'],
-  zh: ['生效日期：2026年11月18日 · 版本 1.3', '<h3>3. 用途与保留</h3>', '<h3>4. 共享与跨境传输</h3>', '<strong>图书馆与课堂共用活动：</strong>成人开始共用活动后'],
-  vi: ['Hiệu lực: 18 tháng 11, 2026 · Phiên bản 1.3', '<h3>3. Mục đích và thời gian lưu</h3>', '<h3>4. Chia sẻ và chuyển dữ liệu quốc tế</h3>', '<strong>Lượt dùng chung ở thư viện và lớp học:</strong> khi người lớn bắt đầu'],
+  ko: ['시행일: 2026년 11월 18일 · 버전 1.4', '<h3>3. 이용 목적과 보관</h3>', '<h3>4. 제3자 제공과 국외 이전</h3>', '<strong>도서관·교실 공용 활동:</strong> 어른이 공용 활동을 시작하면'],
+  en: ['Effective: November 18, 2026 · Version 1.4', '<h3>3. Purpose and retention</h3>', '<h3>4. Sharing and international transfer</h3>', '<strong>Library and classroom sessions:</strong> when a grown-up starts a shared session'],
+  ja: ['施行日: 2026年11月18日 · バージョン 1.4', '<h3>3. 利用目的と保有期間</h3>', '<h3>4. 第三者提供と国外移転</h3>', '<strong>図書館・教室の共有セッション：</strong>大人が共有セッションを始めると'],
+  zh: ['生效日期：2026年11月18日 · 版本 1.4', '<h3>3. 用途与保留</h3>', '<h3>4. 共享与跨境传输</h3>', '<strong>图书馆与课堂共用活动：</strong>成人开始共用活动后'],
+  vi: ['Hiệu lực: 18 tháng 11, 2026 · Phiên bản 1.4', '<h3>3. Mục đích và thời gian lưu</h3>', '<h3>4. Chia sẻ và chuyển dữ liệu quốc tế</h3>', '<strong>Lượt dùng chung ở thư viện và lớp học:</strong> khi người lớn bắt đầu'],
 };
 
 // A shared session copies only the grown-up language and sound setting (library_session.dart).
@@ -24,7 +24,7 @@ const SETTINGS = {
 };
 
 for (const [lang, [date, section3, section4, paragraph]] of Object.entries(POLICY)) {
-  test(`${lang} policy: version 1.3 adds the shared-session paragraph inside section 3`, () => {
+  test(`${lang} policy: version 1.4 keeps the shared-session paragraph inside section 3`, () => {
     assert.equal(policy.split(date).length - 1, 1, date);
     assert.equal(policy.split(paragraph).length - 1, 1, paragraph);
     const at = policy.indexOf(paragraph);
@@ -33,6 +33,40 @@ for (const [lang, [date, section3, section4, paragraph]] of Object.entries(POLIC
     assert.ok(at < settings && settings < policy.indexOf(section4), `${lang} settings sentence sits in the same paragraph`);
   });
 }
+
+// 1.1.1 device mode stores one setting (library_device.dart `packId|practice|pair`, key library_device_v1).
+// setLibraryDevice(null) removes the key; resetProgress leaves it (library_device_test.dart).
+const DEVICE = {
+  ko: ['<li><strong>도서관·교실 시작 설정(기기 안에만 저장):</strong> 어른이 ‘앱을 열면 이 활동으로 시작’을 켜면', '진도를 초기화해도 남고 어른이 이 설정을 끄거나 앱을 삭제하면 지워집니다.'],
+  en: ['<li><strong>Library and classroom start setting (stored only in app storage):</strong> if a grown-up turns on “Open the app on this activity”', 'resetting progress keeps it, and it is removed when a grown-up turns it off or deletes the app.'],
+  ja: ['<li><strong>図書館・教室の開始設定（端末内にのみ保存）：</strong>大人が「アプリを開くとこの活動から始める」をオンにすると', '進捗をリセットしても残り、大人がこの設定をオフにするか本アプリを削除すると消去されます。'],
+  zh: ['<li><strong>图书馆与课堂开始设置（仅保存在应用本地）：</strong>成人开启“打开应用时从此活动开始”后', '重置进度后仍会保留，成人关闭该设置或删除应用时会被清除。'],
+  vi: ['<li><strong>Cài đặt bắt đầu cho thư viện và lớp học (chỉ lưu trong bộ nhớ ứng dụng):</strong> khi người lớn bật “Mở ứng dụng vào hoạt động này”', 'cài đặt này vẫn còn sau khi đặt lại tiến độ và bị xóa khi người lớn tắt cài đặt hoặc xóa ứng dụng.'],
+};
+const HEADINGS = {
+  ko: ['<h3>1. 앱에서 처리하는 정보</h3>', '<h3>2. 광고·추적·결제·권한</h3>'],
+  en: ['<h3>1. Information handled</h3>', '<h3>2. Ads, tracking, payments and permissions</h3>'],
+  ja: ['<h3>1. 本アプリで取り扱う情報</h3>', '<h3>2. 広告・トラッキング・課金・権限</h3>'],
+  zh: ['<h3>1. 处理的信息</h3>', '<h3>2. 广告、追踪、付费与权限</h3>'],
+  vi: ['<h3>1. Thông tin được xử lý</h3>', '<h3>2. Quảng cáo, theo dõi, thanh toán và quyền truy cập</h3>'],
+};
+
+for (const [lang, [item, retention]] of Object.entries(DEVICE)) {
+  test(`${lang} policy 1.4: the device start setting is listed in section 1 and its retention in section 3`, () => {
+    const [s1, s2] = HEADINGS[lang];
+    const [, section3, section4] = POLICY[lang];
+    assert.equal(policy.split(item).length - 1, 1, item);
+    const at = policy.indexOf(item);
+    assert.ok(policy.indexOf(s1) < at && at < policy.indexOf(s2), `${lang} item sits in section 1`);
+    assert.equal(policy.split(retention).length - 1, 1, retention);
+    const kept = policy.indexOf(retention);
+    assert.ok(policy.indexOf(section3) < kept && kept < policy.indexOf(section4), `${lang} retention sits in section 3`);
+  });
+}
+
+test('no policy version 1.3 label remains', () => {
+  assert.doesNotMatch(policy, /버전 1\.3|Version 1\.3|バージョン 1\.3|版本 1\.3|Phiên bản 1\.3/);
+});
 
 test('policy no longer says a shared session reads nothing from the device', () => {
   assert.doesNotMatch(policy, /학습 기록을 읽거나 바꾸지 않습니다|does not read or change the learning record|学習記録を読み取ったり|不会读取或更改设备上已保存的学习记录|không đọc hay thay đổi hồ sơ học tập/);

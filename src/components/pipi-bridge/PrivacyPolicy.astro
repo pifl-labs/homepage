@@ -45,7 +45,7 @@ const chrome = {
     kicker: 'Korean Bridge · 아동 우선 개인정보',
     back: 'PiFl Labs 홈',
     title: '개인정보처리방침',
-    date: '시행일: 2026년 11월 18일 · 버전 1.3',
+    date: '시행일: 2026년 11월 18일 · 버전 1.4',
     summaryTitle: '하나의 약속',
     summary: '계정 없음 · 광고 없음 · 결제 없음 · 분석 없음 · 학습 기록은 보호자 기기 관리 아래',
   },
@@ -55,7 +55,7 @@ const chrome = {
     kicker: 'Korean Bridge · Child-first privacy',
     back: 'PiFl Labs home',
     title: 'Privacy Policy',
-    date: 'Effective: November 18, 2026 · Version 1.3',
+    date: 'Effective: November 18, 2026 · Version 1.4',
     summaryTitle: 'One promise',
     summary: "No account · No ads · No purchases · No analytics · Learning records stay under the guardian's device control",
   },
@@ -65,7 +65,7 @@ const chrome = {
     kicker: 'Korean Bridge · 子ども優先のプライバシー',
     back: 'PiFl Labs ホーム',
     title: 'プライバシーポリシー',
-    date: '施行日: 2026年11月18日 · バージョン 1.3',
+    date: '施行日: 2026年11月18日 · バージョン 1.4',
     summaryTitle: 'ひとつの約束',
     summary: 'アカウントなし · 広告なし · 課金なし · 分析なし · 学習記録は保護者の端末管理の下に',
   },
@@ -75,7 +75,7 @@ const chrome = {
     kicker: 'Korean Bridge · 儿童优先隐私',
     back: 'PiFl Labs 主页',
     title: '隐私政策',
-    date: '生效日期：2026年11月18日 · 版本 1.3',
+    date: '生效日期：2026年11月18日 · 版本 1.4',
     summaryTitle: '一个承诺',
     summary: '无账号 · 无广告 · 无购买 · 无分析 · 学习记录始终在家长的设备管理之下',
   },
@@ -85,7 +85,7 @@ const chrome = {
     kicker: 'Korean Bridge · Quyền riêng tư ưu tiên trẻ em',
     back: 'Trang chủ PiFl Labs',
     title: 'Chính sách quyền riêng tư',
-    date: 'Hiệu lực: 18 tháng 11, 2026 · Phiên bản 1.3',
+    date: 'Hiệu lực: 18 tháng 11, 2026 · Phiên bản 1.4',
     summaryTitle: 'Một cam kết',
     summary: 'Không tài khoản · Không quảng cáo · Không mua hàng · Không phân tích · Hồ sơ học tập luôn nằm dưới sự quản lý thiết bị của phụ huynh',
   },
@@ -123,13 +123,14 @@ const chrome = {
         <h3>1. 앱에서 처리하는 정보</h3>
         <ul>
           <li><strong>기기 안에만 저장되는 설정:</strong> 보호자 도움말 언어, 학습 시작 경로, 완료한 활동 식별자, 학습한 날짜, 음성 재생 설정</li>
+          <li><strong>도서관·교실 시작 설정(기기 안에만 저장):</strong> 어른이 ‘앱을 열면 이 활동으로 시작’을 켜면 고른 주제, 연습 포함 여부, 참여 인원(아이 한 명 또는 짝 두 명)을 담은 설정 하나를 저장합니다. 아이의 이름이나 다른 개인정보는 담지 않으며 기기 밖으로 보내지 않습니다.</li>
           <li><strong>보호자가 이메일로 문의할 때:</strong> 이메일 주소, 문의 내용, 보호자가 자발적으로 포함한 정보. 이는 앱 안에서 자동 수집하지 않습니다.</li>
         </ul>
         <p>아이의 이름, 생년월일, 사진, 목소리, 연락처, 정확한 위치, 광고 식별자, 결제정보는 앱에서 요구하거나 수집하지 않습니다.</p>
         <h3>2. 광고·추적·결제·권한</h3>
         <p>앱에는 광고, 인앱결제, 구독, 회원가입, 분석 SDK, 행동 추적 SDK가 없습니다. 카메라, 마이크 녹음, 위치, 연락처 권한을 요청하지 않습니다. 한국어 듣기는 출시 전에 합성해 앱에 포함한 음성 파일을 기기에서 재생합니다. 앱 실행 중 외부 음성 API로 텍스트나 데이터를 보내지 않습니다. 포함된 음성 파일이 없거나 재생할 수 없을 때만 운영체제의 음성합성을 안전 폴백으로 사용합니다. 어느 경로도 아이의 목소리를 녹음하지 않습니다.</p>
         <h3>3. 이용 목적과 보관</h3>
-        <p>로컬 설정은 학습 진도 표시, 복습 순서, 보호자 언어와 소리 설정을 유지하는 데만 사용합니다. 보호자가 앱에서 진도를 초기화하거나 앱을 삭제할 때 제거됩니다. 앱은 이 학습 기록을 Android 클라우드·기기 간 백업에서 제외하며 iOS에서도 앱 밖 동기화 기능을 제공하지 않습니다. 이메일 문의 기록은 답변과 분쟁 대응을 위해 처리 종료 후 최대 3년 보관할 수 있습니다.</p>
+        <p>로컬 설정은 학습 진도 표시, 복습 순서, 보호자 언어와 소리 설정을 유지하는 데만 사용합니다. 보호자가 앱에서 진도를 초기화하거나 앱을 삭제할 때 제거됩니다. 도서관·교실 시작 설정은 앱을 고른 주제로 여는 데만 사용하며, 진도를 초기화해도 남고 어른이 이 설정을 끄거나 앱을 삭제하면 지워집니다. 앱은 이 학습 기록을 Android 클라우드·기기 간 백업에서 제외하며 iOS에서도 앱 밖 동기화 기능을 제공하지 않습니다. 이메일 문의 기록은 답변과 분쟁 대응을 위해 처리 종료 후 최대 3년 보관할 수 있습니다.</p>
         <p><strong>도서관·교실 공용 활동:</strong> 어른이 공용 활동을 시작하면 그 진도는 기기에 저장된 학습 기록과 분리된 임시 메모리에만 있습니다. 활동을 닫거나 앱을 종료하면 사라지며, 다른 앱으로 전환하는 것만으로는 사라지지 않습니다. 공용 활동은 기기의 보호자 언어와 소리 설정으로 시작하며, 기기에 저장된 학습 진도를 읽거나 바꾸지 않습니다. 학생 이름, 계정, 녹음은 요구하지 않습니다.</p>
         <h3>4. 제3자 제공과 국외 이전</h3>
         <p>앱 학습정보를 회사 서버나 제3자에게 제공·판매·공유하지 않습니다. 보호자가 이메일을 보내는 경우 이메일 서비스 제공자의 서버를 거칠 수 있으며 해당 제공자의 정책과 보호자 설정이 적용됩니다. 법령상 의무가 있는 경우를 제외하고 문의정보를 다른 목적으로 제공하지 않습니다.</p>
@@ -150,13 +151,14 @@ const chrome = {
         <h3>1. Information handled</h3>
         <ul>
           <li><strong>Stored only in app storage:</strong> grown-up help language, starting path, completed activity identifiers, learning dates and sound setting.</li>
+          <li><strong>Library and classroom start setting (stored only in app storage):</strong> if a grown-up turns on “Open the app on this activity”, one setting records the chosen topic, whether practice is included and whether one learner or a pair is playing. It holds no child's name or other personal information and is not sent off the device.</li>
           <li><strong>If a grown-up emails support:</strong> email address, message and anything the grown-up voluntarily includes. The app does not collect this automatically.</li>
         </ul>
         <p>The app does not ask for or collect a child's name, birth date, photo, voice, contacts, precise location, advertising identifier or payment information.</p>
         <h3>2. Ads, tracking, payments and permissions</h3>
         <p>There are no ads, purchases, subscriptions, accounts, analytics SDKs or behavioral tracking SDKs. The app does not request camera, voice-recording, location or contacts permission. Korean listening plays audio files synthesized before release and included in the app. The running app does not send text or data to an external voice API. The operating system's text-to-speech service is used only as a safety fallback when a bundled file is missing or cannot be played. Neither path records a child's voice.</p>
         <h3>3. Purpose and retention</h3>
-        <p>Local settings are used only to show progress, arrange review, and remember language and sound choices. They are removed when a grown-up resets progress or deletes the app. The app excludes these learning records from Android cloud and device-to-device backup and provides no app-level sync on iOS. Support email records may be retained for up to three years after resolution for support and dispute handling.</p>
+        <p>Local settings are used only to show progress, arrange review, and remember language and sound choices. They are removed when a grown-up resets progress or deletes the app. The library and classroom start setting is used only to open the app on the chosen topic; resetting progress keeps it, and it is removed when a grown-up turns it off or deletes the app. The app excludes these learning records from Android cloud and device-to-device backup and provides no app-level sync on iOS. Support email records may be retained for up to three years after resolution for support and dispute handling.</p>
         <p><strong>Library and classroom sessions:</strong> when a grown-up starts a shared session, its progress is kept only in temporary memory, separate from the learning record saved on the device. Closing the session or ending the app discards it; switching to another app alone does not. A shared session starts with the device's grown-up language and sound setting, and does not read or change the progress saved on the device. No student names, accounts or recordings are requested.</p>
         <h3>4. Sharing and international transfer</h3>
         <p>We do not send, sell or share app learning data with our servers or third parties. A support email may pass through the email provider's servers under that provider's policy and the grown-up's settings. We do not disclose support information for another purpose unless required by law.</p>
@@ -177,13 +179,14 @@ const chrome = {
         <h3>1. 本アプリで取り扱う情報</h3>
         <ul>
           <li><strong>端末内にのみ保存される設定：</strong>保護者向けヘルプの言語、学習のスタート地点、完了した活動の識別子、学習した日付、音声再生の設定</li>
+          <li><strong>図書館・教室の開始設定（端末内にのみ保存）：</strong>大人が「アプリを開くとこの活動から始める」をオンにすると、選んだテーマ、練習を含めるかどうか、参加する人（子ども1人か2人組か）を記録した設定を1つ保存します。子どもの名前やその他の個人情報は含まず、端末の外へ送信しません。</li>
           <li><strong>保護者からメールでお問い合わせいただく場合：</strong>メールアドレス、お問い合わせ内容、保護者が任意で記載した情報。これらを本アプリが自動的に収集することはありません。</li>
         </ul>
         <p>子どもの氏名、生年月日、写真、声、連絡先、正確な位置情報、広告識別子、支払い情報を本アプリが求めたり収集したりすることはありません。</p>
         <h3>2. 広告・トラッキング・課金・権限</h3>
         <p>本アプリには、広告、アプリ内課金、サブスクリプション、アカウント登録、分析SDK、行動トラッキングSDKはありません。カメラ、マイク（録音）、位置情報、連絡先の権限を要求しません。韓国語の聞き取り機能では、リリース前に合成してアプリに同梱した音声ファイルを端末内で再生します。本アプリの使用中に外部の音声APIへテキストやデータを送信することはありません。同梱の音声ファイルがない場合や再生できない場合に限り、代替手段としてOSの音声合成機能を使用します。いずれの方法でも子どもの声を録音することはありません。</p>
         <h3>3. 利用目的と保有期間</h3>
-        <p>端末内の設定は、学習の進捗の表示、復習の順序の決定、保護者向けの言語と音声の設定の保持のためにのみ使用します。保護者が本アプリ内で進捗をリセットしたとき、または本アプリを削除したときに消去されます。本アプリはこれらの学習記録をAndroidのクラウドバックアップおよび端末間バックアップの対象外とし、iOSでもアプリ外への同期機能を提供しません。メールでのお問い合わせ記録は、回答および紛争対応のため、対応完了後最長3年間保有することがあります。</p>
+        <p>端末内の設定は、学習の進捗の表示、復習の順序の決定、保護者向けの言語と音声の設定の保持のためにのみ使用します。保護者が本アプリ内で進捗をリセットしたとき、または本アプリを削除したときに消去されます。図書館・教室の開始設定は、選んだテーマでアプリを開くためにのみ使用します。進捗をリセットしても残り、大人がこの設定をオフにするか本アプリを削除すると消去されます。本アプリはこれらの学習記録をAndroidのクラウドバックアップおよび端末間バックアップの対象外とし、iOSでもアプリ外への同期機能を提供しません。メールでのお問い合わせ記録は、回答および紛争対応のため、対応完了後最長3年間保有することがあります。</p>
         <p><strong>図書館・教室の共有セッション：</strong>大人が共有セッションを始めると、その進捗は端末に保存された学習記録とは別の一時的なメモリにだけ置かれます。セッションを閉じるかアプリを終了すると消え、ほかのアプリに切り替えただけでは消えません。共有セッションは端末の保護者向け言語と音の設定で始まり、端末に保存された学習の進捗を読み取ったり変更したりしません。児童の名前、アカウント、録音は求めません。</p>
         <h3>4. 第三者提供と国外移転</h3>
         <p>本アプリの学習情報を当社のサーバーへ送信したり、第三者に提供・販売・共有したりすることはありません。保護者がメールを送信する場合、メールサービス事業者のサーバーを経由することがあり、当該事業者のポリシーと保護者の設定が適用されます。法令上の義務がある場合を除き、お問い合わせ情報を他の目的で提供することはありません。</p>
@@ -202,12 +205,12 @@ const chrome = {
         <h2>Korean Bridge 隐私政策</h2>
         <p>PiFl Labs Co., Ltd.（“我们”）运营面向4至8岁儿童及家长的教育应用 <strong>Korean Bridge</strong>。应用的设计原则是不在应用之外收集或传输儿童个人信息。</p>
         <h3>1. 处理的信息</h3>
-        <ul><li><strong>仅保存在应用本地：</strong>家长帮助语言、学习起点、已完成活动的标识、学习日期和声音设置。</li><li><strong>家长主动发送支持邮件时：</strong>邮箱地址、邮件内容以及家长自愿提供的信息；应用不会自动收集这些信息。</li></ul>
+        <ul><li><strong>仅保存在应用本地：</strong>家长帮助语言、学习起点、已完成活动的标识、学习日期和声音设置。</li><li><strong>图书馆与课堂开始设置（仅保存在应用本地）：</strong>成人开启“打开应用时从此活动开始”后，会保存一项设置，记录所选主题、是否包含练习，以及参与人数（一个孩子或两人一组）。该设置不含儿童姓名或其他个人信息，也不会发送到设备之外。</li><li><strong>家长主动发送支持邮件时：</strong>邮箱地址、邮件内容以及家长自愿提供的信息；应用不会自动收集这些信息。</li></ul>
         <p>应用不会要求或收集儿童姓名、出生日期、照片、声音、联系人、精确位置、广告标识符或支付信息。</p>
         <h3>2. 广告、追踪、付费与权限</h3>
         <p>应用无广告、购买、订阅、账号、分析SDK或行为追踪SDK。不请求相机、录音、位置或联系人权限。韩语朗读使用发布前合成并随应用提供的音频文件。应用运行时不会向外部语音 API 发送文字或数据。只有在内置音频缺失或无法播放时，才会使用操作系统文字转语音作为安全备用。两种方式都不会录制儿童的声音。</p>
         <h3>3. 用途与保留</h3>
-        <p>本地设置仅用于显示进度、安排复习以及记住语言和声音选择。家长重置进度或删除应用时会清除。应用会将这些学习记录排除在 Android 云备份和设备间备份之外，在 iOS 上也不提供应用级同步。支持邮件记录可在问题解决后最多保留三年，用于支持和争议处理。</p>
+        <p>本地设置仅用于显示进度、安排复习以及记住语言和声音选择。家长重置进度或删除应用时会清除。图书馆与课堂开始设置仅用于让应用打开时进入所选主题；重置进度后仍会保留，成人关闭该设置或删除应用时会被清除。应用会将这些学习记录排除在 Android 云备份和设备间备份之外，在 iOS 上也不提供应用级同步。支持邮件记录可在问题解决后最多保留三年，用于支持和争议处理。</p>
         <p><strong>图书馆与课堂共用活动：</strong>成人开始共用活动后，其进度只保存在与设备上已保存的学习记录分开的临时内存中。关闭活动或退出应用后即被清除；仅切换到其他应用不会清除。共用活动沿用设备的家长语言和声音设置，不会读取或更改设备上保存的学习进度。不要求学生姓名、账号或录音。</p>
         <h3>4. 共享与跨境传输</h3>
         <p>我们不会把应用学习数据发送到公司服务器，也不会出售或分享给第三方。支持邮件可能经过邮件服务商的服务器，适用该服务商的政策及家长设置。除法律要求外，我们不会将邮件信息用于其他披露目的。</p>
@@ -226,12 +229,12 @@ const chrome = {
         <h2>Chính sách quyền riêng tư Korean Bridge</h2>
         <p>PiFl Labs Co., Ltd. ("chúng tôi") vận hành <strong>Korean Bridge</strong>, ứng dụng giáo dục cho trẻ 4–8 tuổi và phụ huynh. Ứng dụng được thiết kế để không thu thập hoặc truyền thông tin cá nhân của trẻ ra ngoài ứng dụng.</p>
         <h3>1. Thông tin được xử lý</h3>
-        <ul><li><strong>Chỉ lưu trong bộ nhớ ứng dụng:</strong> ngôn ngữ trợ giúp cho phụ huynh, lộ trình bắt đầu, mã hoạt động đã hoàn thành, ngày học và cài đặt âm thanh.</li><li><strong>Khi phụ huynh tự gửi email hỗ trợ:</strong> địa chỉ email, nội dung và thông tin tự nguyện cung cấp. Ứng dụng không tự động thu thập các thông tin này.</li></ul>
+        <ul><li><strong>Chỉ lưu trong bộ nhớ ứng dụng:</strong> ngôn ngữ trợ giúp cho phụ huynh, lộ trình bắt đầu, mã hoạt động đã hoàn thành, ngày học và cài đặt âm thanh.</li><li><strong>Cài đặt bắt đầu cho thư viện và lớp học (chỉ lưu trong bộ nhớ ứng dụng):</strong> khi người lớn bật “Mở ứng dụng vào hoạt động này”, ứng dụng lưu một cài đặt ghi chủ đề đã chọn, có kèm luyện tập hay không và số người tham gia (một trẻ hoặc hai bạn). Cài đặt này không chứa tên hay thông tin cá nhân nào khác của trẻ và không được gửi ra khỏi thiết bị.</li><li><strong>Khi phụ huynh tự gửi email hỗ trợ:</strong> địa chỉ email, nội dung và thông tin tự nguyện cung cấp. Ứng dụng không tự động thu thập các thông tin này.</li></ul>
         <p>Ứng dụng không yêu cầu hoặc thu thập tên, ngày sinh, ảnh, giọng nói, danh bạ, vị trí chính xác, mã quảng cáo hoặc thông tin thanh toán của trẻ.</p>
         <h3>2. Quảng cáo, theo dõi, thanh toán và quyền truy cập</h3>
         <p>Không có quảng cáo, mua hàng, thuê bao, tài khoản, SDK phân tích hay theo dõi hành vi. Ứng dụng không yêu cầu quyền camera, ghi âm, vị trí hoặc danh bạ. Chức năng nghe tiếng Hàn phát các tệp âm thanh được tổng hợp trước khi phát hành và đóng gói trong ứng dụng. Khi chạy, ứng dụng không gửi văn bản hoặc dữ liệu đến API giọng nói bên ngoài. Dịch vụ chuyển văn bản thành giọng nói của hệ điều hành chỉ được dùng làm phương án dự phòng khi tệp đóng gói bị thiếu hoặc không phát được. Cả hai cách đều không ghi âm giọng nói của trẻ.</p>
         <h3>3. Mục đích và thời gian lưu</h3>
-        <p>Cài đặt cục bộ chỉ dùng để hiển thị tiến độ, sắp xếp ôn tập và ghi nhớ lựa chọn ngôn ngữ, âm thanh. Dữ liệu bị xóa khi phụ huynh đặt lại tiến độ hoặc xóa ứng dụng. Ứng dụng loại trừ dữ liệu học tập khỏi sao lưu đám mây và chuyển thiết bị trên Android, đồng thời không cung cấp đồng bộ ở cấp ứng dụng trên iOS. Email hỗ trợ có thể được giữ tối đa ba năm sau khi xử lý để hỗ trợ và giải quyết tranh chấp.</p>
+        <p>Cài đặt cục bộ chỉ dùng để hiển thị tiến độ, sắp xếp ôn tập và ghi nhớ lựa chọn ngôn ngữ, âm thanh. Dữ liệu bị xóa khi phụ huynh đặt lại tiến độ hoặc xóa ứng dụng. Cài đặt bắt đầu cho thư viện và lớp học chỉ dùng để mở ứng dụng vào chủ đề đã chọn; cài đặt này vẫn còn sau khi đặt lại tiến độ và bị xóa khi người lớn tắt cài đặt hoặc xóa ứng dụng. Ứng dụng loại trừ dữ liệu học tập khỏi sao lưu đám mây và chuyển thiết bị trên Android, đồng thời không cung cấp đồng bộ ở cấp ứng dụng trên iOS. Email hỗ trợ có thể được giữ tối đa ba năm sau khi xử lý để hỗ trợ và giải quyết tranh chấp.</p>
         <p><strong>Lượt dùng chung ở thư viện và lớp học:</strong> khi người lớn bắt đầu một lượt dùng chung, tiến độ của lượt đó chỉ được giữ tạm trong bộ nhớ, tách khỏi hồ sơ học tập đã lưu trên thiết bị. Đóng lượt hoặc thoát ứng dụng sẽ xóa tiến độ này; chỉ chuyển sang ứng dụng khác thì không xóa. Lượt dùng chung bắt đầu với ngôn ngữ cho người lớn và cài đặt âm thanh của thiết bị, và không đọc hay thay đổi tiến độ học đã lưu trên thiết bị. Ứng dụng không yêu cầu tên học sinh, tài khoản hay ghi âm.</p>
         <h3>4. Chia sẻ và chuyển dữ liệu quốc tế</h3>
         <p>Chúng tôi không gửi, bán hoặc chia sẻ dữ liệu học tập trong ứng dụng với máy chủ của mình hay bên thứ ba. Email hỗ trợ có thể đi qua máy chủ của nhà cung cấp email theo chính sách của họ và cài đặt của phụ huynh. Chúng tôi không tiết lộ thông tin hỗ trợ cho mục đích khác, trừ khi pháp luật yêu cầu.</p>
