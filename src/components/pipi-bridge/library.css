@@ -83,7 +83,7 @@
 .bl-world-head h2 { font-size: 1.45rem; margin: 0; color: var(--text-primary); }
 .bl-world-head p { color: var(--text-muted); font-size: .85rem; }
 
-.bl-quick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.bl-quick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 1rem; }
 .bl-phrase-card {
   border: 2px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg-card);
   padding: 1.25rem; display: grid; gap: .45rem; align-content: start;
@@ -97,7 +97,7 @@
 }
 .bl-phrase-card dd, .bl-item dd { margin: 0 0 .25rem; color: var(--text-secondary); font-size: .9rem; line-height: 1.55; }
 
-.bl-cards { display: grid; gap: 1.25rem; }
+.bl-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
 .bl-card {
   border: 1px solid var(--border-default); border-radius: var(--radius-md);
   background: var(--bg-card); padding: 1.25rem 1.35rem;
@@ -112,7 +112,7 @@
 }
 .bl-items {
   list-style: none; padding: 0; margin: 1rem 0 0;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .75rem;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: .75rem;
 }
 .bl-item { border-top: 1px solid var(--border-subtle); padding-top: .6rem; }
 .bl-item .bl-ko { font-size: 1.5rem; font-weight: 800; line-height: 1.25; color: var(--text-primary); }
@@ -122,6 +122,12 @@
 .bl-shared-mission strong { color: var(--text-primary); }
 
 .bl-print-only { display: none; }
+
+/* Preserve room for enlarged text on narrow screens, without clipping or shrinking it. */
+@media screen and (max-width: 480px) {
+  .bl-wide .container { padding-inline: min(2rem, 5vw); }
+  .bl-phrase-card, .bl-card { padding-inline: min(1.25rem, 5vw); }
+}
 
 @media (max-width: 480px) {
   .bl-timeline > li { grid-template-columns: minmax(0, 1fr); }
