@@ -12,6 +12,7 @@ import '../../../../../components/pipi-bridge/library.css';
 // practicePoolWithSound = 소리 켬 시 고를 수 있는 연습 전부, practicePoolWithoutSound = 소리 끔(requiresAudio 제외).
 // 개수 = min(5, 풀 크기)(practiceCount), 따라 쓰기 = 풀에 LetterTracePractice 존재(includesTracing).
 // 태그 첫 줄은 앱 주제 목록의 요약(packMeta '{lessons} new items · up to {practice} practice')과 같은 문구.
+// 앱은 따라 쓰기를 같은 줄에 ' · includes letter tracing' 으로 붙이고(_packSummary), 카드는 별도 태그로 나눈다.
 
 interface Lesson { korean: string; meaning: string; tip: string; mission: string }
 interface Topic {
@@ -91,7 +92,7 @@ const worlds = WORLDS.map((w) => ({ ...w, topics: all.filter((t) => t.world === 
         <p class="bl-kicker">Korean Bridge · Printable topic cards</p>
         <h1><span class="text-gradient">Korean Bridge topic cards</span></h1>
         <p class="bl-lede">Cards for the 60 topics in Library &amp; classroom mode, with a quick-start set first. Use your browser's Print command; each card is kept on one page.</p>
-        <p class="bl-note">The first tag on each card is the summary the app shows for that topic in its Library &amp; classroom list (with sound on). Tags describe a <span class="bl-ui">5 new items + practice</span> session; a <span class="bl-ui">5 new items only</span> session has no practice. “Fewer practice activities with sound off” marks topics where turning sound off leaves out some practice.</p>
+        <p class="bl-note">The first tag on each card repeats the summary the app shows for that topic in its Library &amp; classroom list (with sound on). For the four topics with letter tracing, the app adds “· includes letter tracing” to the same line; the cards show it as a separate “Includes letter tracing” tag. Tags describe a <span class="bl-ui">5 new items + practice</span> session; a <span class="bl-ui">5 new items only</span> session has no practice. “Fewer practice activities with sound off” marks topics where turning sound off leaves out some practice.</p>
         <p class="bl-note">In version 1.1.2 and later, practice is chosen again on every visit, so a child who comes back meets different practice. Each practice in a session is a different kind of activity, mixing listening and on-screen ones when sound is on. Topics with letter tracing always include it, and a <span class="bl-ui">Skip tracing</span> button lets a child move on without tracing. In earlier versions, tracing moves on only after a trace, so trace together or end the session if it does not suit the child.</p>
         <p class="bl-note">Topic content is the same from version 1.1.0 through 1.1.2 and is shown with the app's English guidance.</p>
         <nav aria-label="Card sections" class="bl-no-print">

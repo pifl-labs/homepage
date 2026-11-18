@@ -257,6 +257,22 @@ test('built guide: device mode is described as device-only and not a lock', () =
   assert.ok(guideText.includes('it does not keep a child inside the app'));
 });
 
+// Review fixes (app main 43042aa): app.dart home switch, library_session_route.dart tooltips and PopScope.
+test('built guide: device mode has no family home, screen readers use the tooltip names, Back on Android', () => {
+  assert.ok(guideText.includes('While the setting is on, the app does not show the family home screen at all'));
+  assert.ok(guideText.includes('To use the app as a family tablet again, turn the setting off.'));
+  assert.doesNotMatch(guideText, /family home screen and the grown-up area stay behind/);
+  assert.ok(guideText.includes('which screen readers announce as Talk and explore together and End shared session (grown-up)'));
+  assert.doesNotMatch(guideText, /keep the same names for screen readers/);
+  assert.ok(guideText.includes('End , or on Android the system Back button or gesture, leads to the same grown-up check'));
+  assert.ok(guideText.includes('on Android, the system Back button or gesture also asks for the check'));
+  assert.doesNotMatch(guideText, /one way out|only way out|; the system Back button or gesture also asks/i);
+});
+
+test('built cards: the note says the app puts letter tracing on the same line', () => {
+  assert.ok(cards.includes('the app adds “· includes letter tracing” to the same line; the cards show it as a separate “Includes letter tracing” tag'));
+});
+
 test('built guide: audio and recording wording match the app', () => {
   assert.ok(guide.includes('<li>No voice recording</li>'));
   assert.ok(guide.includes('Lessons play Korean audio generated before release and included in the app.'));
