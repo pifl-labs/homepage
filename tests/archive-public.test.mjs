@@ -3,10 +3,43 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {liveApps} from '../src/data/apps.ts';
 import {archiveEvents as historicalRecords} from '../src/data/archive.mjs';
+import {archiveReleaseCards} from '../src/data/archive-release-cards.mjs';
 import {publicArchiveApps,publicArchiveEvents,publicArchiveEvidence,releaseDate,displayKind} from '../src/data/archive-public.mjs';
+import storeReceipt from '../docs/release/homepage-store-recheck-20261118.json' with {type:'json'};
 
 const read = path => readFileSync(path,'utf8');
 const vague = /미확인|미정|파악.{0,12}(안|않|못)|확인 중|未確認|未定|不明|unverified|undetermined|unknown|\bTBD\b/i;
+
+test('each verified public store version is findable through its own platform in the archive',()=>{
+ const releases = archiveReleaseCards.flatMap(card=>card.releases);
+ // Read the independently captured store version, not a count inferred from the archive.
+ for(const receipt of storeReceipt.android) {
+  const app = liveApps.find(a=>a.stores.android && new URL(a.stores.android).searchParams.get('id')===receipt.package);
+  assert.ok(app, receipt.package);
+  assert.equal(releases.filter(r=>r.app===app.slug&&r.platform==='android'&&r.version===receipt.version).length,1,`${app.slug} Android ${receipt.version}`);
+ }
+ for(const receipt of storeReceipt.ios.apps) {
+  const app = liveApps.find(a=>a.stores.ios?.match(/\/id(\d+)/)?.[1]===String(receipt.trackId));
+  assert.ok(app, receipt.bundleId);
+  assert.equal(releases.filter(r=>r.app===app.slug&&r.platform==='ios'&&r.version===receipt.version).length,1,`${app.slug} iOS ${receipt.version}`);
+ }
+});
+
+test('Kkachi 1.1.0 is a single Android release with both store notes and build-specific changes',()=>{
+ const cards = archiveReleaseCards.filter(c=>c.app==='kkachi');
+ assert.equal(cards.length,1);
+ const [card] = cards;
+ assert.equal(card.version,'1.1.0');
+ assert.deepEqual(card.releases.map(r=>r.platform),['android']);
+ assert.deepEqual(card.releases[0].publication,{date:'2026-10-31',basis:'play-updated',region:'KR'});
+ assert.equal(card.releases[0].contentEvidence.kind,'store-release-notes');
+ assert.equal(card.releases[0].releaseNotesReference.commit,'68ef75c61089c9c170235b5e0a140baa831e6637');
+ for(const locale of ['ko','ja','en']) {
+  assert.match(card.summary[locale],/Google Play/);
+  assert.match(card.summary[locale],/Android.*2027/);
+ }
+});
+
 test('public archive requires store-backed app, platform, version and concrete change copy',()=>{
  assert.deepEqual([...publicArchiveApps].sort(), liveApps.map(a=>a.slug).sort());
  assert.equal(publicArchiveApps.length,16);

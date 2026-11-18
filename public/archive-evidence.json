@@ -872,14 +872,14 @@
       "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
       "storeUpdated": "2026-10-31",
       "title": {
-        "ko": "첫 화면에 펼쳐지는 나의 민화",
-        "ja": "最初の画面に広がる自分の民画",
-        "en": "Your folk painting on the home screen"
+        "ko": "나의 민화 홈과 2027년 상세 풀이",
+        "ja": "民画と2027年の詳しい読み解き",
+        "en": "Your folk painting at home and a detailed 2027 reading"
       },
       "summary": {
-        "ko": "첫 화면을 나의 민화로 바꿨어요. 사주를 바탕으로 만든 그림을 족자로 보고 그림 읽기에서 소재의 뜻을 살펴볼 수 있어요. 가족, 친구의 그림을 고르고, 위젯을 누르면 오늘로 바로 이동해요.",
-        "ja": "最初の画面を「自分の民画」にしました。四柱推命をもとにした絵を掛け軸で見て、絵の解説からモチーフの意味を読めます。家族や友だちの絵も選べ、ウィジェットから「今日」を直接開けます。",
-        "en": "The home screen now presents your Four Pillars-inspired folk painting as a hanging scroll, with explanations of its motifs. Choose family or friends’ paintings, and open Today directly from the widget."
+        "ko": "Google Play 이름을 ‘까치: 나만의 민화’로 바꿨어요. 첫 화면에서 내 민화를 족자로 펼치고, 그림 읽기에서 소재의 뜻을 보거나 가족·친구의 그림을 고를 수 있어요. 위젯은 ‘오늘’로 바로 열려요. Android에서는 2027년 상세 풀이를 한국어·영어·일본어로 앱 안에서 구매할 수 있어요.",
+        "ja": "Google Playでの名前を「カチ：わたしの民画」に変更しました。ホームで自分の民画を掛け軸で開き、モチーフの意味を読んだり、家族や友だちの絵を選んだりできます。ウィジェットから「今日」を直接開けます。Androidでは2027年の詳しい読み解きを日本語・韓国語・英語で購入できます。",
+        "en": "The Google Play listing is now Kkachi: Your Folk Painting. Open your painting as a hanging scroll, read about its motifs, or choose a family member’s or friend’s painting from Home. The widget opens Today directly. On Android, the detailed 2027 reading is available as an in-app purchase in English, Korean and Japanese."
       },
       "contentEvidence": {
         "id": "kkachi-android-observed-20261117",
@@ -888,6 +888,11 @@
         "url": "/archive-release-notes-20261117.json"
       },
       "timeBasis": "observation-date",
+      "releaseNotesReference": {
+        "repository": "pifl-labs/kkachi-saju",
+        "commit": "68ef75c61089c9c170235b5e0a140baa831e6637",
+        "path": "docs/paid-2027/README.md"
+      },
       "publication": {
         "date": "2026-10-31",
         "basis": "play-updated",

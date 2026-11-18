@@ -71,6 +71,17 @@ export function displayKind(event) {
 const sudokuNotes = archiveEvents.find(e => e.id === 'pipi-sudoku-ios-observed-20261117');
 const publicHighlights = {
  ...historicalHighlights,
+ // The Play notes describe the new home and widget. The matching production
+ // build document also records the Play rename and Android-only purchase.
+ 'kkachi-android-observed-20261117': {
+  title: l('나의 민화 홈과 2027년 상세 풀이', '民画と2027年の詳しい読み解き', 'Your folk painting at home and a detailed 2027 reading'),
+  summary: l(
+   'Google Play 이름을 ‘까치: 나만의 민화’로 바꿨어요. 첫 화면에서 내 민화를 족자로 펼치고, 그림 읽기에서 소재의 뜻을 보거나 가족·친구의 그림을 고를 수 있어요. 위젯은 ‘오늘’로 바로 열려요. Android에서는 2027년 상세 풀이를 한국어·영어·일본어로 앱 안에서 구매할 수 있어요.',
+   'Google Playでの名前を「カチ：わたしの民画」に変更しました。ホームで自分の民画を掛け軸で開き、モチーフの意味を読んだり、家族や友だちの絵を選んだりできます。ウィジェットから「今日」を直接開けます。Androidでは2027年の詳しい読み解きを日本語・韓国語・英語で購入できます。',
+   'The Google Play listing is now Kkachi: Your Folk Painting. Open your painting as a hanging scroll, read about its motifs, or choose a family member’s or friend’s painting from Home. The widget opens Today directly. On Android, the detailed 2027 reading is available as an in-app purchase in English, Korean and Japanese.',
+  ),
+  releaseNotesReference: {repository:'pifl-labs/kkachi-saju', commit:'68ef75c61089c9c170235b5e0a140baa831e6637', path:'docs/paid-2027/README.md'},
+ },
  // One card for this exact iOS version: keep its original store timestamp
  // and regional evidence, with the richer notes confirmed in the KR store.
  'pipi-sudoku-ios-102': {
