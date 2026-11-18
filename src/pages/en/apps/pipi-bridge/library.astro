@@ -4,13 +4,23 @@ import { apps } from '../../../../data/apps';
 import { storeUrl, websiteCampaign } from '../../../../../public/store-attribution.mjs';
 import '../../../../components/pipi-bridge/library.css';
 
-// Korean Bridge 도서관·교실 모드(앱 1.1.0+) 사서·교사용 안내 — 영어 전용 페이지.
+// Korean Bridge 도서관·교실 모드 사서·교사용 안내 — 영어 전용 페이지(최신 앱 기준, 버전별 차이는 버전으로만 표기).
 // 색인 대상(자기 canonical, alternate 는 en 하나). ko/ja 판은 없다.
-// 사실 근거: code/pipi_bridge/lib/features/library/(화면 문구·세션 길이·공용 활동 패널),
-// lib/domain/library/library_session.dart(새 항목 5개 + 연습 최대 5개, 소리 끔 시 소리 전용 연습 제외),
-// lib/features/parent_gate.dart(오답 3회 → 30초, 잠김마다 두 배, 최대 5분, 정답 시 초기화),
-// 개인정보 문단 = src/components/pipi-bridge/PrivacyPolicy.astro 버전 1.3(2026-11-18).
+// 사실 근거(code/pipi_bridge, 1.1.2 = feat/library-112):
+// lib/features/library/library_strings.dart(화면 문구 en 그대로: deviceMode·players·solo·pair·turnA/B·
+//   togetherShort·endShort·packMeta·soundOff·turnSoundOn·grownUps·deviceOff),
+// lib/features/library/library_screen.dart·library_launch_screen.dart·library_session_route.dart
+//   (기기 모드 = 길이·참여 인원과 함께 저장, 시작 화면의 Grown-ups 는 어른 확인, 연습 중엔 Together 숨김,
+//   끝 화면 버튼·End·뒤로가기 모두 어른 확인을 거쳐야 닫힘, 닫히면 시작 화면/준비 화면으로 복귀),
+// lib/domain/library/library_session.dart(새 항목 5개 + 연습 최대 5개, 1.1.2 부터 방문마다 유형별 1개 추첨,
+//   따라 쓰기 항상 포함, 소리 끔 시 소리 전용 연습 제외), lib/domain/library/library_device.dart(기기에만 저장),
+// lib/core/app_strings.dart(en 'sharedDone'·'traceSkip'·'listen'), lib/features/practice/practice_chrome.dart
+//   (1.1.2: 공용 세션 안 연습은 자체 X 없음), lib/features/parent_gate.dart(오답 3회 → 30초, 잠김마다 두 배,
+//   최대 5분, 정답 시 초기화), docs/release/1.1.1.md, docs/library/FACILITATOR-GUIDE.md.
+// 개인정보 문단 = src/components/pipi-bridge/PrivacyPolicy.astro 버전 1.4(2026-11-18, 기기 모드 설정 항목 추가).
 // 과장 금지: 협업 게임·학습 효과·연구 기반·인증·추천·'fully offline'·접근성 준수 표현을 쓰지 않는다.
+// 시간 수치는 수업 제안일 뿐 측정값이 아니다(모의 검토 docs/library/SIMULATED-EDUCATOR-REVIEW-2026-11-18.md 의
+// 준비 시간 추정치는 싣지 않는다).
 
 const bridge = apps['pipi-bridge'];
 const campaign = websiteCampaign('en');
@@ -32,7 +42,7 @@ const phrases = [
 <BaseLayout
   lang="en"
   title="Korean Bridge for libraries and classrooms · PiFl Labs"
-  description="Run a short, shared Korean Bridge session on a library or classroom tablet: setup checklist, handing over between children, a 15-minute plan and printable cards."
+  description="Run a short, shared Korean Bridge session on a library or classroom tablet: a start screen for one topic, pairs taking turns, handing over between children, a 15-minute plan and printable cards."
   canonical={canonical}
   alternates={[{ hreflang: 'en', href: canonical }]}
   extraCss={['/styles.css']}
@@ -56,7 +66,8 @@ const phrases = [
           ))}
           <a class="bl-btn bl-btn--primary bl-no-print" href="/en/apps/pipi-bridge/library/cards/"><i class="fas fa-print" aria-hidden="true"></i> Printable topic cards</a>
         </div>
-        <p class="bl-note">Library &amp; classroom mode is in version 1.1.0 and later. Lessons play Korean audio generated before release and included in the app. Only when a bundled audio file is missing or cannot be played does the app use the device's own text-to-speech voice, which may need a download depending on the operating system.</p>
+        <p class="bl-note">This guide follows the latest version of Korean Bridge. Library &amp; classroom mode needs version 1.1.0 or later. A start screen for one topic, pair turns, the <span class="bl-ui">Together</span> and <span class="bl-ui">End</span> buttons and the phrase list on the finish screen need version 1.1.1 or later. Practice that changes on each visit and <span class="bl-ui">Skip tracing</span> need version 1.1.2 or later. If your tablet does not show something described here, check for an app update.</p>
+        <p class="bl-note">Lessons play Korean audio generated before release and included in the app. Only when a bundled audio file is missing or cannot be played does the app use the device's own text-to-speech voice, which may need a download depending on the operating system.</p>
       </div>
     </section>
 
@@ -65,31 +76,51 @@ const phrases = [
         <section class="legal-card" aria-labelledby="bl-setup">
           <h2 id="bl-setup">Prepare the tablet</h2>
           <ol class="bl-steps">
-            <li>Install Korean Bridge (version 1.1.0 or later) from the App Store or Google Play.</li>
+            <li>Install Korean Bridge from the App Store or Google Play.</li>
             <li>Open the app. On first launch, choose <span class="bl-ui">English</span>. Any starting path is fine.</li>
-            <li>On the home screen, tap the grown-up (family) button in the top-right corner.</li>
-            <li>Answer the grown-up check: a two-digit addition.</li>
+            <li>On the home screen, tap the grown-up (family) button in the top-right corner and answer the grown-up check: a two-digit addition.</li>
             <li>In the <span class="bl-ui">Grown-up dashboard</span>, tap <span class="bl-ui">Library &amp; classroom</span> at the top.</li>
-            <li>Choose <span class="bl-ui">Start here: greetings and asking for help</span>, or one of the 60 topics across four learning areas.</li>
-            <li>Under <span class="bl-ui">Session length</span>, choose <span class="bl-ui">5 new items only</span> or <span class="bl-ui">5 new items + practice</span>.</li>
+            <li>Choose <span class="bl-ui">Start here: greetings and asking for help</span>, or one of the 60 topics across four learning areas. Each topic in the list shows what a session holds, such as <span class="bl-ui">5 new items · up to 5 practice · includes letter tracing</span>.</li>
+            <li>On <span class="bl-ui">Prepare this activity</span>, under <span class="bl-ui">Session length</span>, choose <span class="bl-ui">5 new items only</span> or <span class="bl-ui">5 new items + practice</span>.</li>
+            <li>Under <span class="bl-ui">Who is playing</span>, choose <span class="bl-ui">One learner</span> or <span class="bl-ui">A pair, taking turns</span>.</li>
+            <li>For a tablet that stays at a station, turn on <span class="bl-ui">Open the app on this activity</span>.</li>
             <li>Tap <span class="bl-ui">Start a fresh shared session</span>.</li>
           </ol>
+          <h3>A tablet that opens on one topic</h3>
+          <p>With <span class="bl-ui">Open the app on this activity</span> turned on, Korean Bridge opens on a start screen for that topic. It shows the session length and who is playing, and a large <span class="bl-ui">Start a fresh shared session</span> button, so a child can begin without a grown-up unlocking anything. While the setting is on, the app does not show the family home screen at all: <span class="bl-ui">Grown-ups</span> asks for the grown-up check and opens the <span class="bl-ui">Grown-up dashboard</span>. To use the app as a family tablet again, turn the setting off.</p>
+          <ul>
+            <li>Choose the session length and who is playing first. The tablet keeps the choices that were selected when you turned the setting on; if you change them later, turn it on again.</li>
+            <li>To move the tablet to another topic, turn the setting on from that topic's preparation screen.</li>
+            <li>To turn it off, tap <span class="bl-ui">Grown-ups</span> on the start screen, answer the check, open <span class="bl-ui">Library &amp; classroom</span> and tap <span class="bl-ui">Stop opening on this activity</span>.</li>
+            <li>The setting is stored only on this device. It holds the topic, the session length and whether one learner or a pair is playing, never a child's name.</li>
+          </ul>
           <div class="bl-callout">
-            <p><strong>Keep sound on.</strong> With sound off, practice that works only by sound is left out, and some questions show their choices as text instead.</p>
+            <p><strong>Keep sound on.</strong> Korean Bridge teaches Korean by listening. With sound off, the preparation and start screens show a warning: practice that works only by sound is left out, and listening questions show text instead. <span class="bl-ui">Turn sound on</span> appears only on the preparation screen, which is behind the grown-up check.</p>
           </div>
           <h3>Optional</h3>
           <ul>
-            <li>To keep a child inside the app, use an operating-system feature: <strong>Guided Access</strong> on iPad (Settings › Accessibility) or <strong>App pinning</strong> (also called Screen pinning) on Android. Where to find it varies by device.</li>
+            <li><span class="bl-ui">Open the app on this activity</span> decides where the app opens; it does not keep a child inside the app. For that, use an operating-system feature: <strong>Guided Access</strong> on iPad (Settings › Accessibility) or <strong>App pinning</strong> (also called Screen pinning) on Android. Where to find it varies by device.</li>
             <li>A headphone splitter, if two children share one tablet.</li>
+          </ul>
+        </section>
+
+        <section class="legal-card" aria-labelledby="bl-during">
+          <h2 id="bl-during">During a session</h2>
+          <ul>
+            <li>The top of the screen reads <span class="bl-ui">Shared session · not saved</span>. In a pair session it shows whose turn it is instead, <span class="bl-ui">A's turn · B helps</span> or <span class="bl-ui">B's turn · A helps</span>, switching at each step.</li>
+            <li><span class="bl-ui">Together</span> (top right) opens the <span class="bl-ui">Explore together</span> panel, with partner roles, ideas to try and an off-screen starting point. It is not shown while a practice activity is on screen.</li>
+            <li><span class="bl-ui">End</span> (top right) closes the session after the grown-up check. In version 1.1.2 and later, practice activities inside a shared session have no close button of their own; <span class="bl-ui">End</span>, or on Android the system Back button or gesture, leads to the same grown-up check. On a very narrow screen with enlarged text, <span class="bl-ui">Together</span> and <span class="bl-ui">End</span> become icon buttons, which screen readers announce as <span class="bl-ui">Talk and explore together</span> and <span class="bl-ui">End shared session (grown-up)</span>.</li>
+            <li>With <span class="bl-ui">5 new items + practice</span>, a break screen appears after five activities, and up to five practice activities follow. In version 1.1.2 and later, practice is chosen again on each visit. Each practice in a session is a different kind of activity, mixing listening and on-screen ones when sound is on, and over repeated visits every practice in the topic can appear.</li>
+            <li>Letter tracing practice has a <span class="bl-ui">Skip tracing</span> button in version 1.1.2 and later, so a child who does not want to trace can move on.</li>
           </ul>
         </section>
 
         <section class="legal-card" aria-labelledby="bl-handover">
           <h2 id="bl-handover">Pass the tablet to the next child</h2>
           <ol class="bl-steps">
-            <li>Tap the <span class="bl-ui">X</span> at the top right of the session. The system Back button or gesture, or <span class="bl-ui">Close</span> on the final screen, also works.</li>
-            <li>Answer the grown-up check (a two-digit addition).</li>
-            <li>Look for <span class="bl-ui">Session closed. Temporary progress cleared.</span></li>
+            <li>The finish screen lists every phrase from the session with its meaning, plus an off-screen mission. With sound on, a speaker button next to each phrase plays it again. The child taps <span class="bl-ui">Done! Show a grown-up</span>.</li>
+            <li>Answer the grown-up check (a two-digit addition). To stop early, tap <span class="bl-ui">End</span> instead; on Android, the system Back button or gesture also asks for the check.</li>
+            <li>Look for <span class="bl-ui">Session closed. Temporary progress cleared.</span> The tablet goes back to where the session started: the topic's start screen or the preparation screen.</li>
             <li>Tap <span class="bl-ui">Start a fresh shared session</span> for the next child.</li>
           </ol>
           <div class="bl-callout">
@@ -102,10 +133,12 @@ const phrases = [
           <h2 id="bl-plan">A 15-minute starter plan: greetings and asking for help</h2>
           <h3>Before the children arrive</h3>
           <ul>
-            <li>In <span class="bl-ui">Library &amp; classroom</span>, choose <span class="bl-ui">Start here: greetings and asking for help</span> and <span class="bl-ui">5 new items only</span>.</li>
-            <li>Keep sound on.</li>
-            <li>On the preparation screen, use <span class="bl-ui">Hear Korean</span> to listen to the five phrases.</li>
+            <li>In <span class="bl-ui">Library &amp; classroom</span>, choose <span class="bl-ui">Start here: greetings and asking for help</span>. It opens with <span class="bl-ui">5 new items only</span> selected.</li>
+            <li>If children will share the tablet, choose <span class="bl-ui">A pair, taking turns</span>.</li>
+            <li>Keep sound on. On the preparation screen, use <span class="bl-ui">Hear Korean</span> to listen to the five phrases.</li>
+            <li>To have the tablet ready for each new pair, turn on <span class="bl-ui">Open the app on this activity</span>.</li>
           </ul>
+          <p>The times are a suggested plan, not measurements; children take different amounts of time.</p>
           <ol class="bl-timeline">
             <li>
               <span class="bl-time">3 min</span>
@@ -126,15 +159,15 @@ const phrases = [
               <span class="bl-time">5 min</span>
               <div>
                 <h3>On the tablet</h3>
-                <p>Look at the picture, listen to all three choices, then choose. Children working in pairs take turns.</p>
+                <p>Look at the picture, listen to all three choices, then choose. In a pair session, the top of the screen shows whose turn it is.</p>
               </div>
             </li>
             <li>
               <span class="bl-time">4 min</span>
               <div>
                 <h3>Partner role-play</h3>
-                <p>Open the app's <span class="bl-ui">Talk and explore together</span> panel and choose the <span class="bl-ui">Find a book</span> or <span class="bl-ui">Open a pencil case</span> scene. One child asks and the other helps; then <span class="bl-ui">Swap roles</span>.</p>
-                <p>A conversation chain to try:</p>
+                <p>Tap <span class="bl-ui">Together</span> and choose the <span class="bl-ui">Find a book</span> or <span class="bl-ui">Open a pencil case</span> scene. One child asks and the other helps; then <span class="bl-ui">Swap roles</span>.</p>
+                <p>Under <span class="bl-ui">Try the whole conversation</span>, tap the speaker next to each phrase to hear it first, then act out the chain:</p>
                 <p class="bl-chain"><span class="bl-ko" lang="ko">안녕하세요</span> → <span class="bl-ko" lang="ko">도와주세요</span> → <span class="bl-ko" lang="ko">잘 모르겠어요</span> or <span class="bl-ko" lang="ko">다시 말해 주세요</span> → <span class="bl-ko" lang="ko">고마워요</span></p>
               </div>
             </li>
@@ -142,7 +175,7 @@ const phrases = [
               <span class="bl-time">3 min</span>
               <div>
                 <h3>Off the screen</h3>
-                <p>Put the device down and act out the situation together.</p>
+                <p>On the finish screen, play each phrase once more and read its meaning. After <span class="bl-ui">Done! Show a grown-up</span> and the grown-up check, put the device down and act out the situation together.</p>
               </div>
             </li>
           </ol>
@@ -156,7 +189,7 @@ const phrases = [
 
         <section class="legal-card" aria-labelledby="bl-cards-title">
           <h2 id="bl-cards-title">Printable topic cards</h2>
-          <p>Cards for all 60 topics, with the Korean, an English meaning, a grown-up tip and an off-screen mission for each item, plus a quick-start set for the five greeting and help phrases.</p>
+          <p>Cards for all 60 topics, with the Korean, an English meaning, a grown-up tip and an off-screen mission for each item, and the same session summary the app shows for each topic, plus a quick-start set for the five greeting and help phrases.</p>
           <p class="bl-no-print"><a href="/en/apps/pipi-bridge/library/cards/">Open the printable topic cards</a></p>
           <p class="bl-print-only">pifl-labs.com/en/apps/pipi-bridge/library/cards/</p>
         </section>
@@ -164,6 +197,7 @@ const phrases = [
         <section class="legal-card" aria-labelledby="bl-privacy">
           <h2 id="bl-privacy">Privacy</h2>
           <p>When a grown-up starts a shared session, its progress is kept only in temporary memory, separate from the learning record saved on the device. Closing the session or ending the app discards it; switching to another app alone does not. A shared session starts with the device's grown-up language and sound setting, and does not read or change the progress saved on the device. No student names, accounts or recordings are requested.</p>
+          <p>The <span class="bl-ui">Open the app on this activity</span> setting stays on the device and names no child.</p>
           <p>Korean Bridge has no ads, purchases, accounts or analytics. <a href="/en/apps/pipi-bridge/privacy/">Read the privacy policy</a>.</p>
         </section>
 

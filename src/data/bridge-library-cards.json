@@ -4,19 +4,31 @@
   "world": "korean",
   "title": "First Korean words",
   "description": "Learn hello, water, meal, book and pencil with pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "SyllableRhythmPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
-  ],
-  "practiceWithoutSound": [
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
    "ShadowMatchPractice",
-   "SyllableBuilderPractice"
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
+  ],
+  "practicePoolWithoutSound": [
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -56,19 +68,31 @@
   "world": "korean",
   "title": "Everyday words",
   "description": "See, hear and choose apple, cat, bus, rain and shoes.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "SyllableRhythmPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
-  ],
-  "practiceWithoutSound": [
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
    "ShadowMatchPractice",
-   "SyllableBuilderPractice"
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
+  ],
+  "practicePoolWithoutSound": [
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -108,19 +132,32 @@
   "world": "korean",
   "title": "People and places",
   "description": "Connect home, school, friend, teacher and restroom to pictures.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SortingPractice",
    "SceneSearchPractice",
    "SyllableRhythmPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SortingPractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -160,10 +197,10 @@
   "world": "korean",
   "title": "First Hangul sounds",
   "description": "Hear 아, 오, 우, 이 and 가 and match their basic letters.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "LetterTracePractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "LetterTracePractice"
   ],
   "lessons": [
@@ -204,19 +241,32 @@
   "world": "korean",
   "title": "Sky and weather words",
   "description": "Learn sun, moon, cloud, tree and rainbow with pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -256,19 +306,33 @@
   "world": "korean",
   "title": "Animal words",
   "description": "See, hear and choose puppy, elephant, ant, snail and cheetah.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SortingPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SortingPractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -308,19 +372,32 @@
   "world": "korean",
   "title": "Home and town words",
   "description": "Connect cook, dining table, bath, car and phone to pictures.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -360,19 +437,33 @@
   "world": "korean",
   "title": "Nature treasure words",
   "description": "Meet sprout, spring flower, ice, rock and star through pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SortingPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SortingPractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -412,19 +503,32 @@
   "world": "korean",
   "title": "First color words",
   "description": "Hear red, blue, green, orange and purple and match each color.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -464,19 +568,32 @@
   "world": "korean",
   "title": "My body",
   "description": "Find and point to eyes, ears, nose, mouth and hands with pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -516,19 +633,32 @@
   "world": "korean",
   "title": "Things at home",
   "description": "Find door, window, chair, cup and spoon with pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -568,19 +698,32 @@
   "world": "korean",
   "title": "Clothes and school bag",
   "description": "Find hat, T-shirt, pants, socks and school bag with pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -620,19 +763,32 @@
   "world": "korean",
   "title": "Family and people",
   "description": "Meet family, adult, child, baby and doctor through varied pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -672,19 +828,33 @@
   "world": "korean",
   "title": "Food and drinks",
   "description": "Find milk, juice, banana, bread and egg with pictures and sound, then sort food and drinks.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SortingPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SortingPractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -724,19 +894,33 @@
   "world": "korean",
   "title": "Town and transport",
   "description": "Find park, shop, hospital, bicycle and subway with pictures and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SortingPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SortingPractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -776,19 +960,32 @@
   "world": "korean",
   "title": "Everyday actions",
   "description": "Learn walk, run, sleep, read and draw through scenes and sound.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "SyllableRhythmPractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "SyllableBuilderPractice",
+   "PictureWordPractice"
   ],
   "lessons": [
    {
@@ -828,14 +1025,19 @@
   "world": "korean",
   "title": "More Hangul vowels",
   "description": "Hear 어, 으, 여, 요 and 유 and connect them to ㅓ, ㅡ, ㅕ, ㅛ and ㅠ.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "JamoAssemblyPractice",
    "MatchingPairsPractice",
    "LetterTracePractice",
    "SceneSearchPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "LetterTracePractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -878,14 +1080,19 @@
   "world": "korean",
   "title": "Basic consonants 1",
   "description": "Hear 나, 다, 라, 마 and 바 and find ㄴ, ㄷ, ㄹ, ㅁ and ㅂ.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "JamoAssemblyPractice",
    "MatchingPairsPractice",
    "LetterTracePractice",
    "SceneSearchPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "LetterTracePractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -928,14 +1135,19 @@
   "world": "korean",
   "title": "Basic consonants 2",
   "description": "Hear 사, 자, 차, 카 and 하 and find ㅅ, ㅈ, ㅊ, ㅋ and ㅎ.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "JamoAssemblyPractice",
    "MatchingPairsPractice",
    "LetterTracePractice",
    "SceneSearchPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "LetterTracePractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -978,14 +1190,19 @@
   "world": "korean",
   "title": "Build first syllables",
   "description": "Join two jamo pieces to build 야, 너, 도, 무 and 시.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "JamoAssemblyPractice",
    "MatchingPairsPractice",
    "SoundSwapPractice",
    "SceneSearchPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
   ],
@@ -1027,19 +1244,21 @@
   "world": "math",
   "title": "Count and compare",
   "description": "Five picture activities for counting, adding, subtracting and comparing.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
-   "EqualSharingPractice"
+   "EqualSharingPractice",
+   "NumberLineHopPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
-   "EqualSharingPractice"
+   "EqualSharingPractice",
+   "NumberLineHopPractice"
   ],
   "lessons": [
    {
@@ -1079,12 +1298,12 @@
   "world": "math",
   "title": "Patterns and shapes",
   "description": "Explore number and color patterns, circles and triangles in five activities.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice"
@@ -1127,13 +1346,13 @@
   "world": "math",
   "title": "Length, time and bigger numbers",
   "description": "Practice length, morning time and numbers after ten in five activities.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
    "NumberLineHopPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
@@ -1177,13 +1396,13 @@
   "world": "math",
   "title": "Everyday math challenges",
   "description": "Solve subtraction, size, position, halves and coins in everyday scenes.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
    "EqualSharingPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
@@ -1227,14 +1446,14 @@
   "world": "math",
   "title": "Quantities six to ten",
   "description": "Listen, find and manipulate quantities 6–10 on clear ten-frames.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
    "NumberLineHopPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
@@ -1279,14 +1498,14 @@
   "world": "math",
   "title": "Quantities eleven to fifteen",
   "description": "Hear, find and build ten-and-some-more quantities on two ten-frames.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
    "NumberLineHopPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
@@ -1331,14 +1550,14 @@
   "world": "math",
   "title": "Quantities sixteen to twenty",
   "description": "Hear, find and build quantities 16–20 across two complete ten-frames.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
    "NumberLineHopPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "QuantityPlacementPractice",
    "PatternCompletionPractice",
    "MathBalancePractice",
@@ -1383,14 +1602,15 @@
   "world": "math",
   "title": "Shapes and positions",
   "description": "See, hear and distinguish square, rectangle, inside, outside and beside.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SortingPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "ShadowMatchPractice"
+   "ShadowMatchPractice",
+   "PatternCompletionPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SortingPractice",
    "PicturePuzzlePractice",
    "ShadowMatchPractice",
@@ -1434,14 +1654,19 @@
   "world": "math",
   "title": "Compare and sort",
   "description": "Compare equal, more and fewer amounts, then sort by color and shape.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MathExpansionPractice",
    "MatchingPairsPractice",
    "MathExpansionPractice",
    "SoundPictureCheckPractice",
-   "MissingPicturePractice"
+   "MissingPicturePractice",
+   "ListeningTrailPractice",
+   "ListeningSetPractice",
+   "PictureOrderMemoryPractice",
+   "ListeningOmissionPractice",
+   "MathSortBoardPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MathExpansionPractice",
    "MathExpansionPractice",
    "MissingPicturePractice",
@@ -1486,19 +1711,25 @@
   "world": "math",
   "title": "Extend the pattern",
   "description": "Continue AAB, ABB and ABC repeats and patterns that grow in size or amount.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MathExpansionPractice",
    "MatchingPairsPractice",
    "PatternCompletionPractice",
    "SoundPictureCheckPractice",
-   "MathExpansionPractice"
+   "MathExpansionPractice",
+   "MissingPicturePractice",
+   "MathSortBoardPractice",
+   "ListeningTrailPractice",
+   "PictureOrderMemoryPractice",
+   "ListeningOmissionPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MathExpansionPractice",
    "PatternCompletionPractice",
    "MathExpansionPractice",
    "MissingPicturePractice",
-   "MathSortBoardPractice"
+   "MathSortBoardPractice",
+   "PictureOrderMemoryPractice"
   ],
   "lessons": [
    {
@@ -1538,14 +1769,19 @@
   "world": "math",
   "title": "More shapes and space",
   "description": "Find an oval and distinguish below, between, near and far in clear scenes.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MathExpansionPractice",
    "MatchingPairsPractice",
    "SortingPractice",
    "SoundPictureCheckPractice",
-   "PicturePuzzlePractice"
+   "PicturePuzzlePractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningSetPractice",
+   "ListeningOmissionPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MathExpansionPractice",
    "SortingPractice",
    "PicturePuzzlePractice",
@@ -1590,14 +1826,19 @@
   "world": "math",
   "title": "Measure and compare",
   "description": "Compare equal length, shorter, taller, heavier and lighter objects.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MathExpansionPractice",
    "MatchingPairsPractice",
    "MathBalancePractice",
    "SoundPictureCheckPractice",
-   "MathSortBoardPractice"
+   "MathSortBoardPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningSetPractice",
+   "ListeningOmissionPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MathExpansionPractice",
    "MathBalancePractice",
    "MathSortBoardPractice",
@@ -1642,14 +1883,19 @@
   "world": "math",
   "title": "Day and clock",
   "description": "Connect morning, daytime, evening and night with routines, then read three o’clock.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MathExpansionPractice",
    "MatchingPairsPractice",
    "MathExpansionPractice",
    "SoundPictureCheckPractice",
-   "SequencePractice"
+   "SequencePractice",
+   "MissingPicturePractice",
+   "MathSortBoardPractice",
+   "ListeningTrailPractice",
+   "ListeningSetPractice",
+   "ListeningOmissionPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MathExpansionPractice",
    "MathExpansionPractice",
    "SequencePractice",
@@ -1694,19 +1940,25 @@
   "world": "math",
   "title": "Join and take away within five",
   "description": "Join and take away visible objects to make amounts within five.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MathExpansionPractice",
    "MatchingPairsPractice",
    "QuantityPlacementPractice",
    "SoundPictureCheckPractice",
-   "MathExpansionPractice"
+   "MathExpansionPractice",
+   "MathBalancePractice",
+   "NumberLineHopPractice",
+   "MissingPicturePractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "MathExpansionPractice",
    "QuantityPlacementPractice",
    "MathExpansionPractice",
    "MathBalancePractice",
-   "NumberLineHopPractice"
+   "NumberLineHopPractice",
+   "MissingPicturePractice"
   ],
   "lessons": [
    {
@@ -1746,14 +1998,25 @@
   "world": "school",
   "title": "Greetings and getting help",
   "description": "Hear five phrases for greetings and asking for help at school.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -1798,14 +2061,25 @@
   "world": "school",
   "title": "Needs and wellbeing",
   "description": "Practice five phrases for the restroom, pain, water, play and apologies.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -1850,14 +2124,25 @@
   "world": "school",
   "title": "Friends and classroom",
   "description": "Learn five phrases about turns, sharing, books and lining up.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -1902,19 +2187,31 @@
   "world": "school",
   "title": "Routines and safety",
   "description": "Practice sitting, handwashing, eating slowly, stopping and going home.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SequencePractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SequencePractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
   "lessons": [
    {
@@ -1954,14 +2251,24 @@
   "world": "school",
   "title": "Helpful classroom requests",
   "description": "Use scenes to ask for slower speech, another look, an explanation, a loan and a moment to wait.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2006,14 +2313,24 @@
   "world": "school",
   "title": "Safe words and trusted help",
   "description": "Use calm scenes to practise stopping, saying no, telling a teacher, being lost and waiting for a grown-up.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2058,14 +2375,24 @@
   "world": "school",
   "title": "Make and tidy in class",
   "description": "Use pictures to learn coloring, cutting, gluing, writing and tidying instructions.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2110,14 +2437,24 @@
   "world": "school",
   "title": "Say when you feel unwell",
   "description": "Use scenes to report head or throat pain, dizziness, needing rest and asking for the school nurse's office.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2162,14 +2499,24 @@
   "world": "school",
   "title": "Find places at school",
   "description": "Ask for the classroom, restroom, cafeteria and library, or ask someone to come with you.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2214,14 +2561,24 @@
   "world": "school",
   "title": "Speak at lunchtime",
   "description": "Practise starting the meal, asking for a little or more, saying what you cannot eat and saying when you are finished.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2266,14 +2623,24 @@
   "world": "school",
   "title": "Join the class",
   "description": "Use calm scenes to practise getting ready, orienting toward the teacher, listening and raising a hand.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2318,14 +2685,24 @@
   "world": "school",
   "title": "Speak up while learning",
   "description": "Practise asking a question, saying you are finished, trying again, trying independently and asking for more time.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "ScenePhraseMatchPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2370,14 +2747,24 @@
   "world": "explore",
   "title": "Feelings and calm",
   "description": "Learn happiness, sadness, anger, fear and slow breathing with pictures.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2422,19 +2809,30 @@
   "world": "explore",
   "title": "Healthy and safe",
   "description": "Explore hats in strong sun, brushing, crossings, hot objects and spring.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "SortingPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "SortingPractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
   "lessons": [
    {
@@ -2474,19 +2872,30 @@
   "world": "explore",
   "title": "Nature discoveries",
   "description": "Discover rain, plants, animals, floating and shadows through pictures.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "SequencePractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SequencePractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
   "lessons": [
    {
@@ -2526,14 +2935,24 @@
   "world": "explore",
   "title": "Color, movement and respect",
   "description": "Explore color mixing, speed, sound, listening and respect in five activities.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "InitialConsonantPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2578,14 +2997,23 @@
   "world": "explore",
   "title": "Weather and water changes",
   "description": "Observe ice, wind, clouds, steam and sunlight through pictures.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2630,19 +3058,30 @@
   "world": "explore",
   "title": "From seed to flower",
   "description": "Observe planting, watering, sprouting, stem growth and blooming in order.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SequencePractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
-   "PictureSoundPractice"
+   "PictureSoundPractice",
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "SequencePractice",
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
-   "PictureOrderMemoryPractice"
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
   "lessons": [
    {
@@ -2682,14 +3121,23 @@
   "world": "explore",
   "title": "Animals in their places",
   "description": "Observe five animals pictured in a nest, underwater, by a burrow, in a tree and underground.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PicturePuzzlePractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "ListeningOmissionPractice",
+   "ListeningSetPractice",
+   "SoundSwapPractice",
+   "PictureDetailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ShadowMatchPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "PicturePuzzlePractice",
    "PictureDetailPractice",
    "MissingPicturePractice",
@@ -2734,14 +3182,19 @@
   "world": "explore",
   "title": "Light and shadow changes",
   "description": "Use safe pictures to observe clear materials, shadow position and size, two lights and a mirror.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -2784,14 +3237,19 @@
   "world": "explore",
   "title": "Floating and sinking",
   "description": "Predict from pictures what cork, stone, air-filled and water-filled bottles, and a clay boat do in water.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -2834,14 +3292,19 @@
   "world": "explore",
   "title": "Observe magnets safely",
   "description": "Observe in pictures how magnets respond to steel and wood, act through paper, and attract or repel by pole.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -2884,14 +3347,19 @@
   "world": "explore",
   "title": "One tree through four seasons",
   "description": "Follow spring buds, summer leaves, autumn color, winter branches and the season cycle of many Korean deciduous trees.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -2934,14 +3402,19 @@
   "world": "explore",
   "title": "How animals move",
   "description": "Connect the body features of birds, fish, rabbits, snakes and ducks with how they move.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -2984,14 +3457,19 @@
   "world": "explore",
   "title": "Feelings and body signals",
   "description": "Gently notice body signals that may come with surprise, worry, nerves, tiredness and calm.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
@@ -3034,14 +3512,19 @@
   "world": "explore",
   "title": "Healthy and safe habits",
   "description": "Learn cough, screen-break, stair and water safety, and take medicine only from a parent, caregiver or authorized health professional.",
-  "practiceWithSound": [
+  "practicePoolWithSound": [
    "CauseEffectMatchPractice",
    "MatchingPairsPractice",
    "SceneSearchPractice",
    "PictureSoundPractice",
-   "SoundPictureCheckPractice"
+   "SoundPictureCheckPractice",
+   "ListeningPlaceMemoryPractice",
+   "ListeningTrailPractice",
+   "MissingPicturePractice",
+   "PictureOrderMemoryPractice",
+   "ListeningSetPractice"
   ],
-  "practiceWithoutSound": [
+  "practicePoolWithoutSound": [
    "CauseEffectMatchPractice",
    "MissingPicturePractice",
    "PictureOrderMemoryPractice"
