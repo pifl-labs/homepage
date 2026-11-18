@@ -37,11 +37,11 @@ for (const [lang, [date, section3, section4, paragraph]] of Object.entries(POLIC
 // 1.1.1 device mode stores one setting (library_device.dart `packId|practice|pair`, key library_device_v1).
 // setLibraryDevice(null) removes the key; resetProgress leaves it (library_device_test.dart).
 const DEVICE = {
-  ko: ['<li><strong>도서관·교실 시작 설정(기기 안에만 저장):</strong> 어른이 ‘앱을 열면 이 활동으로 시작’을 켜면', '진도를 초기화해도 남고 어른이 이 설정을 끄거나 앱을 삭제하면 지워집니다.'],
-  en: ['<li><strong>Library and classroom start setting (stored only in app storage):</strong> if a grown-up turns on “Open the app on this activity”', 'resetting progress keeps it, and it is removed when a grown-up turns it off or deletes the app.'],
-  ja: ['<li><strong>図書館・教室の開始設定（端末内にのみ保存）：</strong>大人が「アプリを開くとこの活動から始める」をオンにすると', '進捗をリセットしても残り、大人がこの設定をオフにするか本アプリを削除すると消去されます。'],
-  zh: ['<li><strong>图书馆与课堂开始设置（仅保存在应用本地）：</strong>成人开启“打开应用时从此活动开始”后', '重置进度后仍会保留，成人关闭该设置或删除应用时会被清除。'],
-  vi: ['<li><strong>Cài đặt bắt đầu cho thư viện và lớp học (chỉ lưu trong bộ nhớ ứng dụng):</strong> khi người lớn bật “Mở ứng dụng vào hoạt động này”', 'cài đặt này vẫn còn sau khi đặt lại tiến độ và bị xóa khi người lớn tắt cài đặt hoặc xóa ứng dụng.'],
+  ko: ['<li><strong>도서관·교실 시작 설정(기기 안에만 저장):</strong> 어른이 ‘앱을 열면 이 활동으로 시작’을 켜면', '도서관·교실 시작 설정은 앱을 고른 주제로 여는 데만 사용하며 어른이 이 설정을 끄면 지워집니다.'],
+  en: ['<li><strong>Library and classroom start setting (stored only in app storage):</strong> if a grown-up turns on “Open the app on this activity”', 'The library and classroom start setting is used only to open the app on the chosen topic and is removed when a grown-up turns it off.'],
+  ja: ['<li><strong>図書館・教室の開始設定（端末内にのみ保存）：</strong>大人が「アプリを開くとこの活動から始める」をオンにすると', '図書館・教室の開始設定は、選んだテーマでアプリを開くためにのみ使用し、大人がこの設定をオフにすると消去されます。'],
+  zh: ['<li><strong>图书馆与课堂开始设置（仅保存在应用本地）：</strong>成人开启“打开应用时从此活动开始”后', '图书馆与课堂开始设置仅用于让应用打开时进入所选主题，成人关闭该设置后即被清除。'],
+  vi: ['<li><strong>Cài đặt bắt đầu cho thư viện và lớp học (chỉ lưu trong bộ nhớ ứng dụng):</strong> khi người lớn bật “Mở ứng dụng vào hoạt động này”', 'Cài đặt bắt đầu cho thư viện và lớp học chỉ dùng để mở ứng dụng vào chủ đề đã chọn và bị xóa khi người lớn tắt cài đặt.'],
 };
 const HEADINGS = {
   ko: ['<h3>1. 앱에서 처리하는 정보</h3>', '<h3>2. 광고·추적·결제·권한</h3>'],
@@ -61,6 +61,65 @@ for (const [lang, [item, retention]] of Object.entries(DEVICE)) {
     assert.equal(policy.split(retention).length - 1, 1, retention);
     const kept = policy.indexOf(retention);
     assert.ok(policy.indexOf(section3) < kept && kept < policy.indexOf(section4), `${lang} retention sits in section 3`);
+  });
+}
+
+// resetProgress() (app_controller.dart, feat/library-112) removes 17 learning-record keys and keeps exactly
+// parent_language_v1, learning_path_v1, learning_level_v1, sound_enabled_v1, onboarding_complete_v1 and
+// library_device_v1. Deleting the app removes the app's storage. Section 3 must say exactly that.
+const RESET = {
+  ko: {
+    erases: '‘진도 초기화’는 학습 기록(완료한 활동, 학습한 날짜, 오늘 한 활동 수, 별과 게임 보상, 복습 기록)만 지우고',
+    keeps: '보호자 도움말 언어, 학습 시작 경로, 추천 시작 난이도, 음성 재생 설정, 첫 실행 설정 완료 여부, 도서관·교실 시작 설정은 남깁니다.',
+    deletion: '앱을 삭제하면 기기 안의 앱 데이터가 모두 지워집니다.',
+    old: /진도를 초기화하거나 앱을 삭제할 때 제거됩니다|진도를 초기화해도 남고/,
+  },
+  en: {
+    erases: '“Reset progress” in the grown-up area erases only the learning records (completed activities, learning dates, today\'s activity count, stars and game rewards, and review records).',
+    keeps: 'It keeps the grown-up help language, starting path, recommended starting level, sound setting, first-launch setup and the library and classroom start setting.',
+    deletion: "Deleting the app removes all of the app's data from the device.",
+    old: /They are removed when a grown-up resets progress or deletes the app|resetting progress keeps it/,
+  },
+  ja: {
+    erases: '「進み具合をリセット」は学習記録（完了した活動、学習した日付、今日の活動数、星とゲームのごほうび、復習の記録）だけを消去し',
+    keeps: '保護者向けヘルプの言語、学習のスタート地点、おすすめの開始レベル、音声再生の設定、初回設定を終えたかどうか、図書館・教室の開始設定は残します。',
+    deletion: '本アプリを削除すると、端末内の本アプリのデータはすべて消去されます。',
+    old: /進捗をリセットしたとき、または本アプリを削除したときに消去されます|進捗をリセットしても残り/,
+  },
+  zh: {
+    erases: '“重置进度”只清除学习记录（已完成的活动、学习日期、当天活动数、星星和游戏奖励、复习记录）',
+    keeps: '保留家长帮助语言、学习起点、推荐起始难度、声音设置、是否已完成首次设置以及图书馆与课堂开始设置。',
+    deletion: '删除应用会清除设备上该应用的全部数据。',
+    old: /家长重置进度或删除应用时会清除|重置进度后仍会保留/,
+  },
+  vi: {
+    erases: '“Đặt lại tiến độ” trong khu vực phụ huynh chỉ xóa hồ sơ học tập (hoạt động đã hoàn thành, ngày học, số hoạt động trong ngày, sao và phần thưởng trò chơi, hồ sơ ôn tập)',
+    keeps: 'còn giữ lại ngôn ngữ trợ giúp cho phụ huynh, lộ trình bắt đầu, mức khởi đầu đề xuất, cài đặt âm thanh, việc đã hoàn tất thiết lập lần đầu và cài đặt bắt đầu cho thư viện và lớp học.',
+    deletion: 'Xóa ứng dụng sẽ xóa toàn bộ dữ liệu của ứng dụng trên thiết bị.',
+    old: /Dữ liệu bị xóa khi phụ huynh đặt lại tiến độ hoặc xóa ứng dụng|vẫn còn sau khi đặt lại tiến độ/,
+  },
+};
+// Section 1 names every stored setting that reset keeps, plus the learning records it erases.
+const STORED = {
+  ko: ['추천 시작 난이도', '첫 실행 설정 완료 여부', '오늘 한 활동 수', '모은 별과 게임 보상', '복습 기록(최근에 한 활동, 틀린 활동, 익힌 정도)'],
+  en: ['recommended starting level', 'whether first-launch setup is done', "today's activity count", 'collected stars and game rewards', 'review records (activities done recently, missed or mastered)'],
+  ja: ['おすすめの開始レベル', '初回設定を終えたかどうか', '今日の活動数', '集めた星とゲームのごほうび', '復習の記録（最近取り組んだ活動、間違えた活動、身についた度合い）'],
+  zh: ['推荐起始难度', '是否已完成首次设置', '当天活动数', '收集的星星和游戏奖励', '复习记录（最近做过、答错过或已掌握的活动）'],
+  vi: ['mức khởi đầu đề xuất', 'việc đã hoàn tất thiết lập lần đầu hay chưa', 'số hoạt động trong ngày', 'số sao và phần thưởng trò chơi đã thu thập', 'hồ sơ ôn tập (hoạt động đã làm gần đây, đã trả lời sai hoặc đã thành thạo)'],
+};
+const section = (lang, from, to) => policy.slice(policy.indexOf(from), policy.indexOf(to));
+
+for (const [lang, { erases, keeps, deletion, old }] of Object.entries(RESET)) {
+  test(`${lang} policy 1.4: section 3 says reset erases learning records only, keeps settings, deletion erases all`, () => {
+    const [, section3, section4] = POLICY[lang];
+    const s3 = section(lang, section3, section4);
+    for (const sentence of [erases, keeps, deletion]) assert.equal(s3.split(sentence).length - 1, 1, sentence);
+    assert.doesNotMatch(policy, old);
+  });
+  test(`${lang} policy 1.4: section 1 lists the stored settings and records`, () => {
+    const [s1, s2] = HEADINGS[lang];
+    const s1Text = section(lang, s1, s2);
+    for (const item of STORED[lang]) assert.ok(s1Text.includes(item), item);
   });
 }
 
