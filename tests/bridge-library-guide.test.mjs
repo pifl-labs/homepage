@@ -55,6 +55,20 @@ test('card data keeps the 60-topic, 300-item extraction', () => {
   assert.ok(topics.some((t) => t.id === 'school_greetings_help'));
 });
 
+// 1.1.2 draws each visit's practice from the whole pool (library_session.dart pickPractices),
+// so the data holds every eligible practice, not the first five that 1.1.0 used.
+test('card data holds the 1.1.2 practice pools: 736 with sound, 307 without', () => {
+  for (const t of topics) {
+    assert.equal(t.practiceWithSound, undefined, t.id);
+    assert.equal(t.practiceWithoutSound, undefined, t.id);
+    assert.ok(t.practicePoolWithSound.length >= 1, t.id);
+    for (const p of t.practicePoolWithoutSound) assert.ok(t.practicePoolWithSound.includes(p), `${t.id} ${p}`);
+  }
+  assert.equal(topics.flatMap((t) => t.practicePoolWithSound).length, 736);
+  assert.equal(topics.flatMap((t) => t.practicePoolWithoutSound).length, 307);
+  assert.equal(new Set(topics.flatMap((t) => t.practicePoolWithSound)).size, 31);
+});
+
 const guide = read('dist/en/apps/pipi-bridge/library/index.html');
 const cards = read('dist/en/apps/pipi-bridge/library/cards/index.html');
 
@@ -74,21 +88,80 @@ for (const [path, html] of [['library/', guide], ['library/cards/', cards]]) {
   });
 }
 
+const practiceCount = (pool) => Math.min(5, pool.length); // LibrarySessionPlan.practiceCount
+const cardOf = (t) => cards.match(new RegExp(`<article class="bl-card" id="${t.id}"[\\s\\S]*?</article>`))?.[0] ?? '';
+
 test('built cards: quick-start set plus every topic and item, practice classes summarized', () => {
   assert.equal(cards.split('class="bl-phrase-card"').length - 1, 5);
   assert.equal(cards.split('class="bl-card"').length - 1, 60);
   assert.equal(cards.split('class="bl-item"').length - 1, 300);
-  assert.equal(cards.split('<li>Includes letter tracing</li>').length - 1, 4);
+  const tracing = topics.filter((t) => t.practicePoolWithSound.includes('LetterTracePractice'));
+  assert.equal(tracing.length, 4);
+  assert.equal(cards.split('<li>Includes letter tracing</li>').length - 1, tracing.length);
+  for (const t of tracing) assert.ok(cardOf(t).includes('<li>Includes letter tracing</li>'), t.id);
   // Only topics that actually lose practice with sound off carry the sound tag.
-  const fewer = topics.filter((t) => t.practiceWithoutSound.length < t.practiceWithSound.length);
+  const fewer = topics.filter((t) => practiceCount(t.practicePoolWithoutSound) < practiceCount(t.practicePoolWithSound));
   assert.equal(fewer.length, 12);
   assert.equal(cards.split('<li>Fewer practice activities with sound off</li>').length - 1, fewer.length);
-  for (const t of fewer) {
-    const card = cards.match(new RegExp(`<article class="bl-card" id="${t.id}"[\\s\\S]*?</article>`))?.[0] ?? '';
-    assert.ok(card.includes('<li>Fewer practice activities with sound off</li>'), t.id);
-  }
+  for (const t of fewer) assert.ok(cardOf(t).includes('<li>Fewer practice activities with sound off</li>'), t.id);
   assert.doesNotMatch(cards, /Needs sound for some practice/);
   assert.doesNotMatch(cards.replace(/<style[\s\S]*?<\/style>/g, ''), /\b[A-Z]\w+Practice\b/);
+});
+
+test('built cards: the first tag is the app topic summary (packMeta, sound on)', () => {
+  for (const t of topics) {
+    const tag = `<li>${t.lessons.length} new items · up to ${practiceCount(t.practicePoolWithSound)} practice</li>`;
+    assert.ok(cardOf(t).includes(tag), `${t.id}: ${tag}`);
+  }
+  assert.doesNotMatch(cards, /new items \+ up to \d+ practice activit/);
+});
+
+test('built cards: notes describe 1.1.2 practice and Skip tracing by version', () => {
+  assert.ok(cards.includes('In version 1.1.2 and later, practice is chosen again on every visit'));
+  assert.ok(cards.includes('<span class="bl-ui">Skip tracing</span> button lets a child move on without tracing'));
+  assert.ok(cards.includes('Topic content is the same from version 1.1.0 through 1.1.2'));
+  assert.doesNotMatch(cards, /Korean Bridge 1\.1\.0 curriculum/);
+});
+
+const plain = (html) => html.replace(/<[^>]+>/g, ' ').replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ');
+const guideText = plain(guide);
+
+// Button and screen names quoted exactly as the app's en strings (library_strings.dart, app_strings.dart).
+const APP_EN = [
+  'Open the app on this activity', 'Who is playing', 'One learner', 'A pair, taking turns',
+  "A's turn · B helps", "B's turn · A helps", 'Together', 'End', 'Done! Show a grown-up',
+  'Skip tracing', 'Turn sound on', 'Grown-ups', 'Stop opening on this activity',
+  'Shared session · not saved', 'Prepare this activity', 'Start a fresh shared session',
+  'Session closed. Temporary progress cleared.', 'Hear Korean', 'Explore together',
+  'Try the whole conversation', 'Swap roles', '5 new items · up to 5 practice · includes letter tracing',
+];
+
+test('built guide: 1.1.1 and 1.1.2 screens are named with the app wording', () => {
+  for (const name of APP_EN) assert.ok(guideText.includes(name), name);
+});
+
+test('built guide: 1.1.0-only steps are gone', () => {
+  assert.doesNotMatch(guide, /Tap the <span class="bl-ui">X<\/span>/);
+  assert.doesNotMatch(guide, /<span class="bl-ui">Close<\/span> on the final screen/);
+  assert.doesNotMatch(guideText, /Install Korean Bridge \(version|mode is in version 1\.1\.0 and later|Children working in pairs take turns/);
+});
+
+test('built pages: versions appear only as "version X or later", "and later" or a range', () => {
+  for (const html of [guide, cards]) {
+    const mentions = [...plain(html).matchAll(/version (\d+\.\d+\.\d+)( or later| and later| through \d+\.\d+\.\d+)?/gi)];
+    assert.ok(mentions.length > 0);
+    for (const m of mentions) assert.ok(m[2], `bare version mention: ${m[0]}`);
+  }
+});
+
+test('built guide: timings are a suggested plan, with no simulated set-up estimates', () => {
+  assert.ok(guideText.includes('The times are a suggested plan, not measurements'));
+  assert.doesNotMatch(guideText, /40 seconds|12–16 seconds|8–9 minutes|5 minutes for the first tablet|simulated/i);
+});
+
+test('built guide: device mode is described as device-only and not a lock', () => {
+  assert.ok(guideText.includes('The setting is stored only on this device.'));
+  assert.ok(guideText.includes('it does not keep a child inside the app'));
 });
 
 test('built guide: audio and recording wording match the app', () => {
@@ -117,5 +190,6 @@ test('built guide: store links keep original destinations and the privacy policy
   assert.match(guide, /href="\/en\/apps\/pipi-bridge\/privacy\/"/);
   assert.match(guide, /href="\/en\/apps\/pipi-bridge\/library\/cards\/"/);
   assert.match(read('dist/en/apps/pipi-bridge/index.html'), /id="bridge-library"[\s\S]*?href="\/en\/apps\/pipi-bridge\/library\/"/);
+  assert.ok(read('dist/en/apps/pipi-bridge/index.html').includes('Set a tablet to open on one topic, let pairs take turns'));
   for (const lang of ['ko', 'ja']) assert.doesNotMatch(read(`dist/${lang}/apps/pipi-bridge/index.html`), /bridge-library/);
 });
