@@ -46,11 +46,11 @@ for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; su
   const schemas=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
   const app=schemas.find(s=>s['@type']==='SoftwareApplication');assert.ok(app);assert.equal(app.softwareVersion,undefined);
   const home=read(`../dist/${lang}/index.html`);
-  const row=[...home.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m=>m[1]).find(s=>s.includes(`href="/${lang}/apps/pipi-bridge/"`));
+  const row=[...home.matchAll(/<article\b[^>]*class="fleet-card"[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]).find(s=>s.includes(`href="/${lang}/apps/pipi-bridge/"`));
   assert.ok(row);assert.match(row,/iOS v1\.1\.3.*Android v1\.0\.3/s);
   // The fleet's latest observation advances for Voyage Android; Bridge's own Nov11 receipt stays above.
   assert.ok(home.includes(`<time datetime="2026-11-19"`));
-  assert.match(read('../src/components/FleetLog.astro'),/\.fleet-log-section \.fleet-note \{ color: var\(--text-secondary\); \}/);
+  assert.match(read('../src/components/app-catalog.css'),/\.apps-home \.fleet-note \{[^}]*color: var\(--text-secondary\); \}/);
 });
 test('small light metadata uses the established foreground; only short version units stay intact',()=>{
   const css=read('../public/styles-bridge-release-version.css');

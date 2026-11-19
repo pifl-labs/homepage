@@ -70,13 +70,13 @@ for (const lang of ['ko', 'ja', 'en']) {
       assert.equal(data.dateModified, expected.currentVersionReleaseDate.slice(0,10));
       assert.equal(data.softwareVersion, expected.version, 'both stores verified at the same version');
     }
-    const rows = [...catalog.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
+    // 2026-11-19: release dates live on each home card (curated order), not in a separate newest-first list.
+    const rows = [...catalog.matchAll(/<article\b[^>]*class="fleet-card"[^>]*>(.*?)<\/article>/gs)].map(m => m[1]);
     const focusRow = rows.find(row => row.includes(`href="/${lang}/apps/pipi-focus/"`));
-    const observedDates = rows.map(row=>[...row.matchAll(/datetime="([^"]+)"/g)].map(m=>m[1]).sort().at(-1));
+    const observedDates = rows.flatMap(row=>[...row.matchAll(/datetime="([^"]+)"/g)].map(m=>m[1]));
     const kst = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'});
     const latest = historyLatest.ios.map(row=>kst.format(new Date(row.currentVersionReleaseDate))).sort().at(-1);
-    assert.equal(observedDates[0], latest, 'latest independently observed app update sorts first');
-    assert.deepEqual(observedDates, [...observedDates].sort().reverse(), 'all fleet rows remain newest-first');
+    assert.equal([...observedDates].sort().at(-1), latest, 'latest independently observed app update is shown on its card');
     assert.match(focusRow, /iOS v1\.2\.4.*datetime="2026-11-17".*Android v1\.2\.4.*datetime="2026-11-16"/s);
     const observation = catalog.match(/class="fleet-note"[^>]*>(.*?)<\/p>/s)?.[1];
     assert.ok(observation?.includes('datetime="2026-11-02"'));

@@ -91,7 +91,9 @@ for (const lang of ['ko', 'ja', 'en']) test(`${lang}: built landing and catalog 
   assert.ok(landing.includes('iOS 1.1.0 (20)'));
   assert.doesNotMatch(landing, /dialogos\/submission\/20261023-|dialogos\/(ko|ja|en)\/(home|chat_marcus|chat_socrates|onboarding)\.webp/);
   const home = bytes(`dist/${lang}/index.html`).toString('utf8');
-  assert.ok(home.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: catalog card`);
+  // 2026-11-19: home cards no longer carry screenshots; the submitted set stays on the app page.
+  assert.ok(home.includes(`href="/${lang}/apps/dialogos/"`), `${lang}: catalog card`);
+  assert.ok(!home.includes('/assets/apps/dialogos/submission/'), `${lang}: no screenshot on the home card`);
   const archive = bytes(`dist/${lang}/archive/index.html`).toString('utf8');
   assert.ok(!archive.includes('/assets/apps/dialogos/submission/20261116-1.webp'), `${lang}: submission image stays out of the release timeline`);
   assert.match(archive,/data-event-id="dialogos-shared-1.1.0"/);
