@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import TopicCard from '../../../../../../components/pipi-bridge/TopicCard.astro';
+import { BASE, CARDS_PATH, GUIDE_PATH, PRINT_PATH, ordered, topicPath, topicSlug, worldName, worlds } from '../../../../../../components/pipi-bridge/cards-data';
+import '../../../../../../components/pipi-bridge/library.css';
+
+// Korean Bridge 주제 카드 한 장 — 영어 전용, 주제마다 1페이지(인쇄 1쪽).
+// 순서·이전·다음은 목록과 같은 ordered(영역 순서 → 데이터 순서).
+export function getStaticPaths() {
+  return ordered.map((t, index) => ({ params: { topic: topicSlug(t) }, props: { index } }));
+}
+
+const { index } = Astro.props as { index: number };
+const t = ordered[index];
+const prev = ordered[index - 1];
+const next = ordered[index + 1];
+const area = worlds.find((w) => w.key === t.world)!;
+const position = area.topics.indexOf(t) + 1;
+const canonical = `${BASE}${topicPath(t)}`;
+---
+<BaseLayout
+  lang="en"
+  title={`${t.title} · Korean Bridge topic card · PiFl Labs`}
+  description={`Printable Korean Bridge topic card “${t.title}” (${area.name}): five Korean phrases with English meanings, grown-up tips and off-screen missions.`}
+  canonical={canonical}
+  alternates={[{ hreflang: 'en', href: canonical }]}
+  extraCss={['/styles.css']}
+  langHrefs={{ ko: '/ko/apps/pipi-bridge/', ja: '/ja/apps/pipi-bridge/' }}
+>
+  <main id="main" tabindex="-1" class="bl-page bl-wide">
+    <section class="legal-hero bl-hero bl-no-print">
+      <div class="container">
+        <a href={`${CARDS_PATH}#${t.id}`} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> All topic cards</a>
+        <p class="bl-kicker">Korean Bridge · {area.name} · Topic {position} of {area.topics.length}</p>
+        <h1><span class="text-gradient">{t.title}</span></h1>
+        <p class="bl-lede">{t.description} This card prints on one page with your browser's Print command.</p>
+      </div>
+    </section>
+
+    <div class="legal-page">
+      <div class="container">
+        <div class="bl-solo">
+          <TopicCard topic={t} level={2} />
+        </div>
+
+        <nav class="bl-pager bl-no-print" aria-label="Other topics">
+          {prev && (
+            <a class="bl-pager-link" rel="prev" href={topicPath(prev)}>
+              <span class="bl-pager-label"><i class="fas fa-arrow-left" aria-hidden="true"></i> Previous · {worldName(prev.world)}</span>
+              <span class="bl-pager-title">{prev.title}</span>
+            </a>
+          )}
+          {next && (
+            <a class="bl-pager-link bl-pager-link--next" rel="next" href={topicPath(next)}>
+              <span class="bl-pager-label">Next · {worldName(next.world)} <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              <span class="bl-pager-title">{next.title}</span>
+            </a>
+          )}
+        </nav>
+
+        <p class="bl-note bl-no-print"><a href={CARDS_PATH}>All topic cards</a> · <a href={`${CARDS_PATH}#about-tags`}>What the tags mean</a> · <a href={PRINT_PATH}>All 60 cards for printing</a> · <a href={GUIDE_PATH}>Library &amp; classroom guide</a></p>
+        <p class="bl-print-only bl-print-url">pifl-labs.com{topicPath(t)}</p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import QuickStartCards from '../../../../../../components/pipi-bridge/QuickStartCards.astro';
+import CardsNotes from '../../../../../../components/pipi-bridge/CardsNotes.astro';
+import { BASE, CARDS_PATH, GUIDE_PATH, PRINT_PATH, sessionTags, topicPath, worlds } from '../../../../../../components/pipi-bridge/cards-data';
+import '../../../../../../components/pipi-bridge/library.css';
+
+// Korean Bridge 도서관·교실 주제 카드 목록 — 영어 전용 페이지.
+// 화면에서는 주제를 고르는 목록이고, 카드 전문은 주제별 페이지(/cards/<주제>/, 인쇄 1쪽)와
+// 전체 인쇄 페이지(/cards/print/, noindex)에 있다. 예전 앵커(#explore_nature_science 등)는
+// 목록 타일 id 로 그대로 살아 있다. 데이터·규칙은 components/pipi-bridge/cards-data.ts.
+const canonical = `${BASE}${CARDS_PATH}`;
+---
+<BaseLayout
+  lang="en"
+  title="Korean Bridge printable topic cards · PiFl Labs"
+  description="Printable cards for the 60 topics in Korean Bridge's Library & classroom mode: Korean, English meaning, grown-up tip and off-screen mission, plus a greetings quick-start set."
+  canonical={canonical}
+  alternates={[{ hreflang: 'en', href: canonical }]}
+  extraCss={['/styles.css']}
+  langHrefs={{ ko: '/ko/apps/pipi-bridge/', ja: '/ja/apps/pipi-bridge/' }}
+>
+  <main id="main" tabindex="-1" class="bl-page bl-wide">
+    <section class="legal-hero bl-hero">
+      <div class="container">
+        <a href={GUIDE_PATH} class="legal-back bl-no-print"><i class="fas fa-arrow-left" aria-hidden="true"></i> Library &amp; classroom guide</a>
+        <p class="bl-kicker">Korean Bridge · Printable topic cards</p>
+        <h1><span class="text-gradient">Korean Bridge topic cards</span></h1>
+        <p class="bl-lede">Cards for the 60 topics in Library &amp; classroom mode, with a quick-start set first. Pick a topic to open its card; each topic card prints on one page.</p>
+        <nav aria-label="Card sections" class="bl-no-print">
+          <ul class="bl-toc">
+            <li><a href="#quick-start">Quick start</a></li>
+            {worlds.map((w) => <li><a href={`#world-${w.key}`}>{w.name} ({w.topics.length})</a></li>)}
+            <li><a href={PRINT_PATH}><i class="fas fa-print" aria-hidden="true"></i> All 60 cards for printing</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="legal-page">
+      <div class="container">
+        <QuickStartCards />
+
+        {worlds.map((w) => (
+          <section class="bl-world" id={`world-${w.key}`} aria-labelledby={`world-${w.key}-title`}>
+            <div class="bl-world-head">
+              <h2 id={`world-${w.key}-title`}>{w.name}</h2>
+              <p>{w.topics.length} topics</p>
+            </div>
+            <ul class="bl-tiles">
+              {w.topics.map((t) => (
+                <li class="bl-tile" id={t.id}>
+                  <h3 class="bl-tile-title"><a href={topicPath(t)}>{t.title}</a></h3>
+                  <p class="bl-tile-desc">{t.description}</p>
+                  <p class="bl-tile-meta">{sessionTags(t).join(' · ')}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+
+        <section class="bl-about" id="about-tags" aria-labelledby="about-tags-title">
+          <h2 id="about-tags-title">About the tags and versions</h2>
+          <CardsNotes />
+        </section>
+
+        <p class="bl-note bl-no-print"><a href={PRINT_PATH}>All 60 cards on one page for printing</a> · <a href={GUIDE_PATH}>Back to the library &amp; classroom guide</a> · <a href="/en/apps/pipi-bridge/privacy/">Privacy policy</a></p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import QuickStartCards from '../../../../../../components/pipi-bridge/QuickStartCards.astro';
+import CardsNotes from '../../../../../../components/pipi-bridge/CardsNotes.astro';
+import TopicCard from '../../../../../../components/pipi-bridge/TopicCard.astro';
+import { BASE, CARDS_PATH, PRINT_PATH, worlds } from '../../../../../../components/pipi-bridge/cards-data';
+import '../../../../../../components/pipi-bridge/library.css';
+
+// 60장 전체 인쇄용 — 주제별 페이지와 내용이 겹치므로 색인 제외(noindex,follow)이고
+// astro.config 사이트맵 필터에서도 뺀다. 화면 목록은 /cards/, 한 장씩은 /cards/<주제>/.
+const canonical = `${BASE}${PRINT_PATH}`;
+---
+<BaseLayout
+  lang="en"
+  title="Korean Bridge topic cards, all on one page for printing · PiFl Labs"
+  description="All 60 Korean Bridge Library & classroom topic cards and the greetings quick-start set on one page, laid out for printing."
+  canonical={canonical}
+  alternates={[{ hreflang: 'en', href: canonical }]}
+  extraCss={['/styles.css']}
+  robots="noindex,follow"
+  langHrefs={{ ko: '/ko/apps/pipi-bridge/', ja: '/ja/apps/pipi-bridge/' }}
+>
+  <main id="main" tabindex="-1" class="bl-page bl-wide">
+    <section class="legal-hero bl-hero">
+      <div class="container">
+        <a href={CARDS_PATH} class="legal-back bl-no-print"><i class="fas fa-arrow-left" aria-hidden="true"></i> All topic cards</a>
+        <p class="bl-kicker">Korean Bridge · Printable topic cards</p>
+        <h1><span class="text-gradient">Korean Bridge topic cards</span></h1>
+        <p class="bl-lede">All 60 topic cards and the quick-start set on one page, for printing with your browser's Print command. Each card is kept on one page and each learning area starts on a new page. To print one topic, open it from the <a href={CARDS_PATH}>topic list</a>.</p>
+        <CardsNotes />
+        <nav aria-label="Card sections" class="bl-no-print">
+          <ul class="bl-toc">
+            <li><a href="#quick-start">Quick start</a></li>
+            {worlds.map((w) => <li><a href={`#world-${w.key}`}>{w.name} ({w.topics.length})</a></li>)}
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="legal-page">
+      <div class="container">
+        <QuickStartCards />
+
+        {worlds.map((w) => (
+          <section class="bl-world" id={`world-${w.key}`} aria-labelledby={`world-${w.key}-title`}>
+            <div class="bl-world-head">
+              <h2 id={`world-${w.key}-title`}>{w.name}</h2>
+              <p>{w.topics.length} topics</p>
+            </div>
+            <div class="bl-cards">
+              {w.topics.map((t) => <TopicCard topic={t} />)}
+            </div>
+          </section>
+        ))}
+
+        <p class="bl-note bl-no-print"><a href={CARDS_PATH}>All topic cards</a> · <a href="/en/apps/pipi-bridge/library/">Back to the library &amp; classroom guide</a> · <a href="/en/apps/pipi-bridge/privacy/">Privacy policy</a></p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

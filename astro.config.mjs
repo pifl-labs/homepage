@@ -40,6 +40,8 @@ export default defineConfig({
         if (/\/apps\/pipi-bridge\/privacy\/(zh|vi)\/?$/.test(pathname)) return false;
         // 간밤 개인정보처리방침의 중국어 두 판(zh-hans·zh-hant)도 같은 이유의 noindex 페이지 — 앱 안 주소에 박힌 경로다.
         if (/\/apps\/pipi-dream\/privacy\/zh-han[st]\/?$/.test(pathname)) return false;
+        // Korean Bridge 주제 카드 60장 전체 인쇄판 — 주제별 페이지와 내용이 겹치는 noindex 페이지.
+        if (/\/apps\/pipi-bridge\/library\/cards\/print\/?$/.test(pathname)) return false;
         return true;
       },
       // 언어별 대체 URL(xhtml:link)을 사이트맵이 직접 선언하게 한다 — 3언어가 1:1 미러라 안전.

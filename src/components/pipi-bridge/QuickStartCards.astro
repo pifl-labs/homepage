@@ -1,0 +1,22 @@
+---
+// 빠른 시작(인사·도움 청하기) 큰 글자 카드 5장. 목록 페이지와 전체 인쇄 페이지가 같은 마크업을 쓴다.
+import { GESTURES, quick, worldName } from './cards-data';
+---
+<section class="bl-world bl-world--first" id="quick-start" aria-labelledby="quick-start-title">
+  <div class="bl-world-head">
+    <h2 id="quick-start-title">Quick start: greetings and asking for help</h2>
+    <p>{quick.title} · {worldName(quick.world)}</p>
+  </div>
+  <div class="bl-quick-grid">
+    {quick.lessons.map((l) => (
+      <article class="bl-phrase-card">
+        <p class="bl-ko" lang="ko">{l.korean}</p>
+        <p class="bl-phrase-meaning">{l.meaning}</p>
+        <dl>
+          <dt>Gesture</dt><dd>{GESTURES[l.korean]}</dd>
+          <dt>Off-screen mission</dt><dd>{l.mission}</dd>
+        </dl>
+      </article>
+    ))}
+  </div>
+</section>
