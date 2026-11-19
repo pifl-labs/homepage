@@ -1,0 +1,12 @@
+{
+  "src/components/AppLanding.astro": {
+    "beforeSHA256": "9814ba2de1d6932227f19d819a8207d049c8dddf3ab357033596510577c0f88a",
+    "afterSHA256": "b0384add6fe1d85500528abab9d2eeb67b2a8f6d016534c2673ffd2c04e59971",
+    "deltas": [
+      {
+        "old": "'/styles-app-landing.css?v=a2ed7fb3b5cb'",
+        "new": "'/styles-app-landing.css?v=89f48e75c29a'"
+      }
+    ]
+  }
+}

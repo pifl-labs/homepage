@@ -62,6 +62,14 @@
 .fleet-card-cat { color: var(--text-muted); font-family: var(--font-code); font-size: .72rem; line-height: 1.4; }
 .apps-home .fleet-card .app-previous-name { flex: none; margin: 0; }
 .fleet-card-tag { margin: 0; color: var(--text-secondary); font-size: .9rem; line-height: 1.55; text-wrap: pretty; }
+/* Locale line breaking, as the earlier catalog cards had: Korean keeps words whole,
+   Japanese uses strict kinsoku without emergency word splitting. */
+:lang(ko) .fleet-card-name { word-break: keep-all; overflow-wrap: anywhere; }
+html[lang^="ko"] .fleet-card-cat,
+html[lang^="ko"] .fleet-card-tag { word-break: keep-all; overflow-wrap: anywhere; text-wrap: pretty; }
+html[lang^="ja"] .fleet-card-name,
+html[lang^="ja"] .fleet-card-cat,
+html[lang^="ja"] .fleet-card-tag { word-break: normal; line-break: strict; overflow-wrap: normal; }
 @media (max-width: 480px) {
   .fleet-card { padding: 1rem; gap: .5rem; }
   .fleet-grid { gap: .75rem; }
@@ -81,8 +89,10 @@
 .fleet-card-store:hover { border-color: var(--accent-cta); }
 .fleet-card-store:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 2px; }
 .fleet-card-platform .fleet-store-version { display: flex; flex-direction: column; align-items: center; gap: .15rem; min-width: 0; }
-/* Same readable foreground the release list used for its version chips. */
-.fleet-card-platform .fleet-chip { color: var(--text-primary); padding: 1px 7px; }
+/* Version chip: same readable foreground the release list used for its version chips. */
+.fleet-card-platform .fleet-chip { color: var(--text-primary); padding: 1px 7px;
+  font-family: var(--font-code); font-size: .72rem; font-weight: 600; white-space: nowrap;
+  border-radius: var(--radius-pill); background: color-mix(in srgb, var(--neon-teal) 14%, transparent); }
 .fleet-card-platform time { color: var(--text-secondary); font-family: var(--font-code); font-size: .7rem; white-space: nowrap; }
 .apps-home .fleet-card .app-store-name-note { position: relative; z-index: 1; margin: 0; padding: 0; }
 
