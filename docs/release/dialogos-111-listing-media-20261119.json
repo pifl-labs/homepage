@@ -1,0 +1,278 @@
+{
+  "observedAt": "2026-11-19",
+  "slug": "dialogos",
+  "appStoreConnectRead": false,
+  "note": "App Store Connect was not read for this record: the read-only API call was not permitted in this session, so there are no 1.1.1 asset URLs or sourceFileChecksum values here. The 1.1.1 state and the uploaded set come from the pipi-thus submission record (HANDOFF) and the committed store set. The public App Store lookup shows 1.1.0 is public. Only the symposium screen changed in the 1.1.1 set; the other screens have the same bytes as the 1.1.0 set, so their WebP files stay as they are.",
+  "source": "https://appstoreconnect.apple.com/apps/6780508628/distribution/ios/version/deliverable",
+  "publicLookup": {
+    "url": "https://itunes.apple.com/lookup?bundleId=com.pifl.pipi.thus&country={kr,us,jp}",
+    "checkedAt": "2026-11-19",
+    "results": {
+      "KR": {
+        "trackId": 6780508628,
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-11-16T20:21:14Z"
+      },
+      "US": {
+        "trackId": 6780508628,
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-11-16T20:21:14Z"
+      },
+      "JP": {
+        "trackId": 6780508628,
+        "version": "1.1.0",
+        "currentVersionReleaseDate": "2026-11-16T20:21:14Z"
+      }
+    }
+  },
+  "submission": {
+    "version": "1.1.1",
+    "build": "21",
+    "state": "WAITING_FOR_REVIEW",
+    "record": "pipi-thus HANDOFF.md at main 47bd326 (2026-11-19): asc_release.py prepare (build 21) -> fastlane listing_text -> fastlane upload_screenshots (set 20261119, iPhone 4 + iPad 4 per language) -> submit; reviewSubmission 429c95e4, release type AFTER_APPROVAL, no phased release."
+  },
+  "listingMedia": {
+    "version": "1.1.1",
+    "build": "21",
+    "state": "WAITING_FOR_REVIEW",
+    "language": "en-US",
+    "displayType": "APP_IPHONE_67",
+    "shotSources": [
+      "https://is1-ssl.mzstatic.com/image/thumb/lt7qOr_XJdM_I1LFmjywyg/331x720bb.png",
+      "https://is1-ssl.mzstatic.com/image/thumb/WmTuqAabS0tpsGb9WsieEw/331x720bb.png",
+      "https://github.com/pifl-labs/pipi-thus/blob/00af2584473f749cc69fc33faf9a852d2464259d/store_assets/screenshots/20261119/ios/en/03_symposium.png"
+    ],
+    "shotSourceNote": "Shots 1-2: the App Store Connect asset URLs of the same bytes in the 1.1.0 en-US listing (dialogos-110-listing-media-20261116.json). Shot 3: the committed pipi-thus file it was made from, pinned to the commit."
+  },
+  "pipiThusCommit": "00af2584473f749cc69fc33faf9a852d2464259d",
+  "screenshots": {
+    "ko": [
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ko/01_home.png",
+        "md5": "4bd9ec3a7e184577b388192c2fd6c023",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/ko/iphone_0_home.png",
+        "deliverInputMd5": "4bd9ec3a7e184577b388192c2fd6c023"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ko/02_chat_marcus.png",
+        "md5": "ce7612740bcb8871ca07cc840321f48c",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/ko/iphone_1_chat_marcus.png",
+        "deliverInputMd5": "ce7612740bcb8871ca07cc840321f48c"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ko/03_symposium.png",
+        "md5": "c1c2a23beb25cdebd37a2d194be615ec",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": false,
+        "deliverInput": "ios/fastlane/screenshots/ko/iphone_2_symposium.png",
+        "deliverInputMd5": "c1c2a23beb25cdebd37a2d194be615ec"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ko/04_mentor_sheet.png",
+        "md5": "5eeb80d5a829a9a98316193c3f41baf7",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/ko/iphone_3_mentor_sheet.png",
+        "deliverInputMd5": "5eeb80d5a829a9a98316193c3f41baf7"
+      }
+    ],
+    "ja": [
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ja/01_home.png",
+        "md5": "dd4a078e97841e436625aa3e1201b617",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/ja/iphone_0_home.png",
+        "deliverInputMd5": "dd4a078e97841e436625aa3e1201b617"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ja/02_chat_marcus.png",
+        "md5": "7cf235f6944bfcda3eaf949ee6a2377e",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/ja/iphone_1_chat_marcus.png",
+        "deliverInputMd5": "7cf235f6944bfcda3eaf949ee6a2377e"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ja/03_symposium.png",
+        "md5": "ad527e09d679af0e79da9143d7b23a87",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": false,
+        "deliverInput": "ios/fastlane/screenshots/ja/iphone_2_symposium.png",
+        "deliverInputMd5": "ad527e09d679af0e79da9143d7b23a87"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/ja/04_mentor_sheet.png",
+        "md5": "b08340d6435c228350ac6fef20f2b1ab",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/ja/iphone_3_mentor_sheet.png",
+        "deliverInputMd5": "b08340d6435c228350ac6fef20f2b1ab"
+      }
+    ],
+    "en": [
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/en/01_home.png",
+        "md5": "d5f909ef14c0bed40962f0c0dc21583d",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/en-US/iphone_0_home.png",
+        "deliverInputMd5": "d5f909ef14c0bed40962f0c0dc21583d"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/en/02_chat_marcus.png",
+        "md5": "11daa7f65b4868e02986e78fb5ac046a",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/en-US/iphone_1_chat_marcus.png",
+        "deliverInputMd5": "11daa7f65b4868e02986e78fb5ac046a"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/en/03_symposium.png",
+        "md5": "3d9df56e84b0624f520eb1a9e1822645",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": false,
+        "deliverInput": "ios/fastlane/screenshots/en-US/iphone_2_symposium.png",
+        "deliverInputMd5": "3d9df56e84b0624f520eb1a9e1822645"
+      },
+      {
+        "localSource": "store_assets/screenshots/20261119/ios/en/04_mentor_sheet.png",
+        "md5": "e9145a673d40975a412e2e6204a4d52c",
+        "size": [
+          1320,
+          2868
+        ],
+        "sameBytesAs20261116": true,
+        "deliverInput": "ios/fastlane/screenshots/en-US/iphone_3_mentor_sheet.png",
+        "deliverInputMd5": "e9145a673d40975a412e2e6204a4d52c"
+      }
+    ]
+  },
+  "derived": {
+    "/assets/apps/dialogos/ko/symposium-20261119.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ko/03_symposium.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "dcf126658a46e8e4f9e457b7c43433b9ae7d9d9ccab266f8fb1835402f2af2f7"
+    },
+    "/assets/apps/dialogos/ja/symposium-20261119.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ja/03_symposium.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "a52ca1ca9550fa4d294fbb98c86d6a5b0f11082ea326514566aedb941de3bb24"
+    },
+    "/assets/apps/dialogos/en/symposium-20261119.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/03_symposium.png",
+      "size": [
+        540,
+        1169
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 10 1320 2858 -resize 540 1169",
+      "sha256": "d131ffb2cbd4ec1fd08b4e64a46f064bcdb283203aa3847ea2515d802f7d758c"
+    },
+    "/assets/apps/dialogos/submission/20261119-3.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/03_symposium.png",
+      "size": [
+        331,
+        719
+      ],
+      "method": "cwebp -q 85 -m 6 -crop 0 1 1320 2867 -resize 331 719",
+      "sha256": "ad56136d9118cc717b4c553bf863ba089ee5c3fae9b25808df3b185bd3eba360"
+    }
+  },
+  "kept": {
+    "/assets/apps/dialogos/submission/20261116-1.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/01_home.png",
+      "sha256": "4d9307c5d015be73e177be92209bb5f9f20a5a263b71352d16e333cd046365bb"
+    },
+    "/assets/apps/dialogos/submission/20261116-2.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/02_chat_marcus.png",
+      "sha256": "0676042c4be3db9bff2f8b7b3d7b290b28262d92052e195814268158cd2aa1ce"
+    },
+    "/assets/apps/dialogos/ko/home-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ko/01_home.png",
+      "sha256": "7428525a00169fdfae226af2c45dd34f4a6dd8ed14a611621510dc5e4f36cc5e"
+    },
+    "/assets/apps/dialogos/ko/chat_marcus-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ko/02_chat_marcus.png",
+      "sha256": "7aea760ae3c1daaffc75ae4ae5263ff2aae8b297dbd64c85a80cbdea61d0add6"
+    },
+    "/assets/apps/dialogos/ko/mentor_sheet-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ko/04_mentor_sheet.png",
+      "sha256": "8674499dcdb7422a0d3651405a238f7a8c030bfa03cf58f3154d977e2bc31efb"
+    },
+    "/assets/apps/dialogos/ja/home-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ja/01_home.png",
+      "sha256": "d89c3e3b7cfe3b03179424f55589b1b579bdb6b92888d407a93f1a300a123fc0"
+    },
+    "/assets/apps/dialogos/ja/chat_marcus-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ja/02_chat_marcus.png",
+      "sha256": "15c1559e83bf6ef97823127ce6fce408fecdb55bb469cc8dfa27a3bd2bb95d23"
+    },
+    "/assets/apps/dialogos/ja/mentor_sheet-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/ja/04_mentor_sheet.png",
+      "sha256": "8d59c32edd39bd9b9415f80b712bbc652dfbdc80892194caeb78e07ec29dd72c"
+    },
+    "/assets/apps/dialogos/en/home-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/01_home.png",
+      "sha256": "c5d168a30ceea4c32bcf0d535908365c2b29acd2c972b947771c16114016fe8e"
+    },
+    "/assets/apps/dialogos/en/chat_marcus-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/02_chat_marcus.png",
+      "sha256": "8204493824e7f5e017a27c377bf41cd086151f4e58d91f9963f1584874ebbb79"
+    },
+    "/assets/apps/dialogos/en/mentor_sheet-20261116.webp": {
+      "from": "store_assets/screenshots/20261119/ios/en/04_mentor_sheet.png",
+      "sha256": "240c64ca21a185d5344aec8f576fc2c6cd6ae0986de160b11f20911943b8be39"
+    }
+  },
+  "retired": {
+    "/assets/apps/dialogos/ko/symposium-20261116.webp": "7f1e3ed301f0f49863fa1f9c8b06b3e37ee21b12827f9f4d2cd871b5fe28c55d",
+    "/assets/apps/dialogos/ja/symposium-20261116.webp": "95806f7b03e6bfb936618edb91a0e0b58e7a5184ff1abddc12e2fcc6f8fc701a",
+    "/assets/apps/dialogos/en/symposium-20261116.webp": "8e42220b3424ce0e3bbdcba9b3a9d31290f3f1ffff34a541135f8a5936a72edd",
+    "/assets/apps/dialogos/submission/20261116-3.webp": "dd734962121bfd106511188427b855d3c2c8cf469ca824cda810e460f1d63273"
+  }
+}
