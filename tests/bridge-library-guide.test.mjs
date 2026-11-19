@@ -163,7 +163,9 @@ test('card data holds the 1.1.2 practice pools: 736 with sound, 307 without', ()
 });
 
 const guide = read('dist/en/apps/pipi-bridge/library/index.html');
+// /cards/ is the topic list; every full card lives on its own page and on the print-all page.
 const cards = read('dist/en/apps/pipi-bridge/library/cards/index.html');
+const cardsPrint = read('dist/en/apps/pipi-bridge/library/cards/print/index.html');
 
 for (const [path, html] of [['library/', guide], ['library/cards/', cards]]) {
   test(`built ${path}: indexable English page with only its own alternate`, () => {
@@ -182,23 +184,25 @@ for (const [path, html] of [['library/', guide], ['library/cards/', cards]]) {
 }
 
 const practiceCount = (pool) => Math.min(5, pool.length); // LibrarySessionPlan.practiceCount
-const cardOf = (t) => cards.match(new RegExp(`<article class="bl-card" id="${t.id}"[\\s\\S]*?</article>`))?.[0] ?? '';
+const cardOf = (t) => cardsPrint.match(new RegExp(`<article class="bl-card" id="${t.id}"[\\s\\S]*?</article>`))?.[0] ?? '';
 
-test('built cards: quick-start set plus every topic and item, practice classes summarized', () => {
-  assert.equal(cards.split('class="bl-phrase-card"').length - 1, 5);
-  assert.equal(cards.split('class="bl-card"').length - 1, 60);
-  assert.equal(cards.split('class="bl-item"').length - 1, 300);
+test('built print-all cards: quick-start set plus every topic and item, practice classes summarized', () => {
+  assert.equal(cardsPrint.split('class="bl-phrase-card"').length - 1, 5);
+  assert.equal(cardsPrint.split('class="bl-card"').length - 1, 60);
+  assert.equal(cardsPrint.split('class="bl-item"').length - 1, 300);
   const tracing = topics.filter((t) => t.practicePoolWithSound.includes('LetterTracePractice'));
   assert.equal(tracing.length, 4);
-  assert.equal(cards.split('<li>Includes letter tracing</li>').length - 1, tracing.length);
+  assert.equal(cardsPrint.split('<li>Includes letter tracing</li>').length - 1, tracing.length);
   for (const t of tracing) assert.ok(cardOf(t).includes('<li>Includes letter tracing</li>'), t.id);
   // Only topics that actually lose practice with sound off carry the sound tag.
   const fewer = topics.filter((t) => practiceCount(t.practicePoolWithoutSound) < practiceCount(t.practicePoolWithSound));
   assert.equal(fewer.length, 12);
-  assert.equal(cards.split('<li>Fewer practice activities with sound off</li>').length - 1, fewer.length);
+  assert.equal(cardsPrint.split('<li>Fewer practice activities with sound off</li>').length - 1, fewer.length);
   for (const t of fewer) assert.ok(cardOf(t).includes('<li>Fewer practice activities with sound off</li>'), t.id);
-  assert.doesNotMatch(cards, /Needs sound for some practice/);
-  assert.doesNotMatch(cards.replace(/<style[\s\S]*?<\/style>/g, ''), /\b[A-Z]\w+Practice\b/);
+  for (const html of [cards, cardsPrint]) {
+    assert.doesNotMatch(html, /Needs sound for some practice/);
+    assert.doesNotMatch(html.replace(/<style[\s\S]*?<\/style>/g, ''), /\b[A-Z]\w+Practice\b/);
+  }
 });
 
 test('built cards: the first tag is the app topic summary (packMeta, sound on)', () => {
@@ -206,14 +210,16 @@ test('built cards: the first tag is the app topic summary (packMeta, sound on)',
     const tag = `<li>${t.lessons.length} new items · up to ${practiceCount(t.practicePoolWithSound)} practice</li>`;
     assert.ok(cardOf(t).includes(tag), `${t.id}: ${tag}`);
   }
-  assert.doesNotMatch(cards, /new items \+ up to \d+ practice activit/);
+  assert.doesNotMatch(cardsPrint, /new items \+ up to \d+ practice activit/);
 });
 
-test('built cards: notes describe 1.1.2 practice and Skip tracing by version', () => {
-  assert.ok(cards.includes('In version 1.1.2 and later, practice is chosen again on every visit'));
-  assert.ok(cards.includes('<span class="bl-ui">Skip tracing</span> button lets a child move on without tracing'));
-  assert.ok(cards.includes('Topic content is the same from version 1.1.0 through 1.1.2'));
-  assert.doesNotMatch(cards, /Korean Bridge 1\.1\.0 curriculum/);
+test('built cards: notes describe 1.1.2 practice and Skip tracing by version (list and print-all)', () => {
+  for (const html of [cards, cardsPrint]) {
+    assert.ok(html.includes('In version 1.1.2 and later, practice is chosen again on every visit'));
+    assert.ok(html.includes('<span class="bl-ui">Skip tracing</span> button lets a child move on without tracing'));
+    assert.ok(html.includes('Topic content is the same from version 1.1.0 through 1.1.2'));
+    assert.doesNotMatch(html, /Korean Bridge 1\.1\.0 curriculum/);
+  }
 });
 
 const plain = (html) => html.replace(/<[^>]+>/g, ' ').replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ');
@@ -240,7 +246,7 @@ test('built guide: 1.1.0-only steps are gone', () => {
 });
 
 test('built pages: versions appear only as "version X or later", "and later" or a range', () => {
-  for (const html of [guide, cards]) {
+  for (const html of [guide, cards, cardsPrint]) {
     const mentions = [...plain(html).matchAll(/version (\d+\.\d+\.\d+)( or later| and later| through \d+\.\d+\.\d+)?/gi)];
     assert.ok(mentions.length > 0);
     for (const m of mentions) assert.ok(m[2], `bare version mention: ${m[0]}`);
@@ -302,3 +308,63 @@ test('built guide: store links keep original destinations and the privacy policy
   assert.ok(read('dist/en/apps/pipi-bridge/index.html').includes('Set a tablet to open on one topic, let pairs take turns'));
   for (const lang of ['ko', 'ja']) assert.doesNotMatch(read(`dist/${lang}/apps/pipi-bridge/index.html`), /bridge-library/);
 });
+
+// ── Topic list, one page per topic, print-all (2026-11-19) ──
+// /cards/ used to hold all 60 full cards (≈84,000px on a 390px phone). It is now a list of
+// compact tiles; each full card has its own page (one printed page) and /cards/print/ keeps
+// the whole set for printing, out of the index.
+const CARDS_URL = 'https://pifl-labs.com/en/apps/pipi-bridge/library/cards/';
+const AREA_ORDER = ['korean', 'math', 'school', 'explore'];
+const ordered = AREA_ORDER.flatMap((w) => topics.filter((t) => t.world === w));
+const slugOf = (t) => t.id.replace(/_/g, '-');
+const topicHtml = (t) => read(`dist/en/apps/pipi-bridge/library/cards/${slugOf(t)}/index.html`);
+const sitemap = read('dist/sitemap-0.xml');
+
+test('built cards list: one tile per topic, keeping the old #topic anchors, and no full cards', () => {
+  const tiles = [...cards.matchAll(/<li class="bl-tile" id="([^"]+)"[^>]*>([\s\S]*?)<\/li>/g)];
+  assert.deepEqual(tiles.map((m) => m[1]), ordered.map((t) => t.id));
+  for (const [i, m] of tiles.entries()) {
+    const t = ordered[i];
+    assert.ok(m[2].includes(`href="/en/apps/pipi-bridge/library/cards/${slugOf(t)}/"`), t.id);
+    assert.ok(m[2].includes(`>${t.title}</a>`), t.id);
+  }
+  for (const id of ['quick-start', 'world-korean', 'world-math', 'world-school', 'world-explore', 'about-tags']) {
+    assert.ok(cards.includes(`id="${id}"`), id);
+  }
+  assert.equal(cards.split('class="bl-phrase-card"').length - 1, 5);
+  assert.doesNotMatch(cards, /class="bl-card"|class="bl-item"/);
+  assert.ok(cards.includes('href="/en/apps/pipi-bridge/library/cards/print/"'));
+  // The list stays a fraction of the print-all page.
+  assert.ok(plain(cards).length * 4 < plain(cardsPrint).length, `${plain(cards).length} vs ${plain(cardsPrint).length}`);
+});
+
+test('built print-all cards: noindex, self-canonical and left out of the sitemap', () => {
+  const url = `${CARDS_URL}print/`;
+  assert.ok(cardsPrint.includes('<meta name="robots" content="noindex,follow">'));
+  assert.ok(cardsPrint.includes(`<link rel="canonical" href="${url}">`));
+  assert.ok(!sitemap.includes(`<loc>${url}</loc>`));
+});
+
+for (const [i, t] of ordered.entries()) {
+  test(`built topic card ${t.id}: own indexable page with one full card and neighbours in list order`, () => {
+    const html = topicHtml(t);
+    const url = `${CARDS_URL}${slugOf(t)}/`;
+    assert.ok(html.includes(`<link rel="canonical" href="${url}">`));
+    assert.deepEqual([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map((m) => [m[1], m[2]]), [['en', url]]);
+    assert.doesNotMatch(html, /name="robots"/);
+    assert.ok(sitemap.includes(`<loc>${url}</loc>`));
+    assert.equal(html.split('class="bl-card"').length - 1, 1);
+    assert.ok(html.includes(`<article class="bl-card" id="${t.id}"`));
+    assert.equal(html.split('class="bl-item"').length - 1, 5);
+    for (const l of t.lessons) assert.ok(html.includes(`<p class="bl-ko" lang="ko">${l.korean}</p>`), l.korean);
+    const tag = `<li>${t.lessons.length} new items · up to ${practiceCount(t.practicePoolWithSound)} practice</li>`;
+    assert.ok(html.includes(tag), tag);
+    const prev = ordered[i - 1], next = ordered[i + 1];
+    assert.equal(html.includes('rel="prev"'), Boolean(prev));
+    assert.equal(html.includes('rel="next"'), Boolean(next));
+    if (prev) assert.ok(html.includes(`rel="prev" href="/en/apps/pipi-bridge/library/cards/${slugOf(prev)}/"`));
+    if (next) assert.ok(html.includes(`rel="next" href="/en/apps/pipi-bridge/library/cards/${slugOf(next)}/"`));
+    assert.ok(html.includes(`href="/en/apps/pipi-bridge/library/cards/#${t.id}"`));
+    assert.doesNotMatch(html.replace(/<[^>]+>/g, ' '), /research-based|proven|fully offline|WCAG|AASL|collaborative|recommended by|award/i);
+  });
+}
