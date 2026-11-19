@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName,expectedRelease} from './helpers/release-sync-20261116.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
@@ -13,12 +13,12 @@ const playDay = (text) => new Date(`${text} UTC`).toISOString().slice(0, 10);
 const block = (v) => source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
 
 for (const [bundle, v] of Object.entries(variables)) {
-  test(`${bundle}: current iOS version and UTC release day follow dated public receipts; 2026-10-14 release bounds stay intact`, () => {
+  test(`${bundle}: current iOS version and release day follow dated public receipts; 2026-10-14 release bounds stay intact`, () => {
     const r = receipt.ios[bundle];
     assert.ok(block(v), `${v} block exists`);
     const latest = currentIOS(slugs[bundle]);
     const observed = checkedAtFor(slugs[bundle],'ios');
-    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${latest.currentVersionReleaseDate.slice(0,10)}', checkedAt: '${observed}' }`));
+    assert.ok(block(v).includes(`ios: { version: '${latest.version}', updated: '${expectedRelease(slugs[bundle],'ios').updated}', checkedAt: '${observed}' }`));
     for (const bound of r.releaseBoundsUTC) assert.ok(bound.startsWith(r.updatedUTC), `${bundle}: every release bound stays on ${r.updatedUTC} UTC`);
   });
 }

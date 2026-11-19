@@ -10,8 +10,8 @@ const source = read('../src/data/apps.ts');
 const block = source.match(/const words: AppMeta = \{[\s\S]*?\n\};/)[0];
 const words = runInNewContext(block.replace('const words: AppMeta = ', 'const words = ') + '\nwords');
 
-test('EN download explains ads, free study limits and optional pack/subscription before choosing a store', () => {
-  assert.equal(words.content.en.ctaSub, 'Free download with ads and study limits. Optional word packs or a subscription.');
+test('EN download explains no daily study cap, ads and optional purchases', () => {
+  assert.equal(words.content.en.ctaSub, 'Free download. Study without a daily cap. Ads and optional word-pack or lifetime purchases.');
   assert.doesNotMatch(words.content.en.ctaSub, /all.*free|unlimited.*free|no subscription|\$|free trial|daily \d+/i);
 });
 test('feature section uses the current product name, while previous-name notice remains available', () => {

@@ -1,0 +1,5034 @@
+{
+  "checkedAt": "2026-11-19",
+  "scope": "Public releases verified in App Store version history or Google Play Console production; store dates are kept separately from observation dates.",
+  "records": [
+    {
+      "id": "pipi-bridge-ios-history-1.1.3",
+      "version": "1.1.3",
+      "app": "pipi-bridge",
+      "platform": "ios",
+      "date": "2026-11-19",
+      "timestamp": "2026-11-18T18:25:27Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6801205183",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "2f20f89bb1aa219178dcacadae2682595152fd2cc0965b83d49374d227b2a1ac",
+        "ja": "78a35fc08c81a9eb5a5ceb8f9811ecd758c13363dfe22827344f7329e459a606",
+        "en": "a2ddd31024b102bf97ce835c2cc41779ae5939bf2c1001bb2030a36bfe79bdef"
+      }
+    },
+    {
+      "id": "pipi-bridge-ios-observed-20261117",
+      "version": "1.0.3",
+      "app": "pipi-bridge",
+      "platform": "ios",
+      "date": "2026-11-11",
+      "timestamp": "2026-11-10T20:04:55Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6801205183",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "4b1621fedfa67f1d24aaddd2ac252ec858745582daa75fea079da847313ea2a7",
+        "ja": "3d09a248a58d1930148dbc7c9f1f13a4517fca3521dfb6f16cf917e2ed3af2af",
+        "en": "69bc7b7a5503386f496faebca58c09d2a7d0d42d3f72771efee2e22635cdd488"
+      }
+    },
+    {
+      "id": "pipi-bridge-public",
+      "version": "1.0.2",
+      "app": "pipi-bridge",
+      "platform": "ios",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-21T23:59:22Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6801205183",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "36b5e8231ff03b2cfe6c5b410d5be5c86371e06e5c4b3f1c80c6d105105b763d",
+        "ja": "0eaae602f0c6d10406f4d95f6784a098a23c7f7c119aa9ad889a01788fc52d28",
+        "en": "bbac00d13cba6058bdaec6ef23770493beb707e6bda5fafcd9ba7e349229e79e"
+      }
+    },
+    {
+      "id": "pipi-bridge-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-bridge",
+      "platform": "ios",
+      "date": "2026-10-14",
+      "timestamp": "2026-10-13T16:49:06Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6801205183",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "02dea677b4f72cc03be9d7e1858eb16edc3c0170c31cea72d7f8ed39299b3f52",
+        "ja": "8d1cb6654effc7d4054bcb13731166bd0792a20ff9f3acac16abc45bbdfd4583",
+        "en": "48b76ff8c33fca11c168e1e1bdff8042a8799327c3e1f282e008535f50c4fc2c"
+      }
+    },
+    {
+      "id": "pipi-bridge-ios-history-1.0.0",
+      "version": "1.0.0",
+      "app": "pipi-bridge",
+      "platform": "ios",
+      "date": "2026-09-17",
+      "timestamp": "2026-09-16T23:10:30Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6801205183",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-bridge",
+        "commit": "0a17ed5f4ce0e026fd4471b13339147135a5e864",
+        "path": "docs/release/1.0.0.md"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-observed-20261117",
+      "version": "1.2.4",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T17:48:07Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "87a59bfd2b2fe48f1e73738d87c21ee4e1dffa509acd9794abaa462a28d5a280",
+        "ja": "b6da9b75e018a5c03e553efb9b65df158f0f53a612d436cf46253eadfb222fde",
+        "en": "a13f6cc889864bada7d24db320c863fa05b378fad60c1a83228c4ec3b627dbbb"
+      }
+    },
+    {
+      "id": "focus-123",
+      "version": "1.2.3",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-10-25",
+      "timestamp": "2026-10-24T15:17:49Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "e453a12ec2706498e815a1185368046f262c5e44cfa22de28857f46b7a3e22e0",
+        "ja": "39ac28a4c12b721dd4c9ff6658ca662661389aa5663e3f0397a14705b9a737eb",
+        "en": "9822b2b54926f328682b933181a9a8d8665b26dff9b0259afe555aa063358515"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.2.2",
+      "version": "1.2.2",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-10-24",
+      "timestamp": "2026-10-23T20:19:26Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "7b1d3d1b32a8881510f9d207143f3745adc85c065c4cfb16a39847c0983002bc",
+        "ja": "6679840e0f38a8ac873fd2319c5f557bfd7466d6c5653abc9bc6e539a495832a",
+        "en": "3181cc42c2765817040ee027353b1144981247a5864beb14a756960d2226e4c4"
+      }
+    },
+    {
+      "id": "focus-121",
+      "version": "1.2.1",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-22T17:04:30Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "48660fc40c7020fe34847cd2da0c5786befd7d1576f99b06da4b0e22ec325d21",
+        "ja": "22c4d356033c0b732b728ee5198313ba7bfa16cf1a5ce29d0a9a2a2876419085",
+        "en": "9e399e0441507fb9eeebc49bf0325bf542538851cbccef080b4ad29e9cdecb66"
+      }
+    },
+    {
+      "id": "focus-120",
+      "version": "1.2.0",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-10-19",
+      "timestamp": "2026-10-19T13:21:10Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "fe21c6e08e404859f6682c12e4ed3bb96a262d4d05ed83bcb4773dc6932f42ec",
+        "ja": "2a5a32c6b7f86e455e6a5d8ea9612870e09c450218e59c9b2c8060d6d0aa772b",
+        "en": "d6dff7acfbc5d6f4739fdb71c87b1a947bb2941df771dac6e3de97e5c741b0d2"
+      }
+    },
+    {
+      "id": "focus-radio",
+      "version": "1.1.0",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-10-16",
+      "timestamp": "2026-10-15T19:05:28Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "f444670626b803f4658c9f9bc564fa7214a70f748629f60ca4ac8e781227e289",
+        "ja": "926311d04dfcc299dca9c96ca5ee160e40309e750f73473cbc1cc24c4639848b",
+        "en": "f7d4d4b1eb0fe6151fa3c6733ccbdcc353cce0d91c417d7b671c0f617902ea04"
+      }
+    },
+    {
+      "id": "focus-1016",
+      "version": "1.0.16",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-10-06",
+      "timestamp": "2026-10-05T20:40:09Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "0a258241f052d3ef52b448bb792809ed683ceac5c3b7b46266c43c48361c9d1f",
+        "ja": "57828debd0b3611cab648b54f01eb312818495bbbf91ba6f0826f1d1c44f62d7",
+        "en": "a3889cc1c59ff12bdce661599f339241dbce36852316e76bdc9a0e192d8a9c02"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.15",
+      "version": "1.0.15",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-09-24",
+      "timestamp": "2026-09-23T20:31:44Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "479e17d43040890cc2d63f4416c7c9ca6bb7e9b6ee4af4b5eb3ce6b37baa83d0",
+        "ja": "6e56f3558098ea7355117a9a037128d33cc895b30cd1b36c4e42f2b1b400b8ed",
+        "en": "4393ca686e64ac05e80b65e876e623e71c27b3195e32f75ca089001a1a3ca704"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.14",
+      "version": "1.0.14",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-09-10",
+      "timestamp": "2026-09-09T17:02:25Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "d6ed47eb2ff2bee679d00a8c41241e1231a1bd1e4373fad42155573a3c7e244a",
+        "ja": "9ae0fe8b1caed65185d633a66d300122d77393c81123d4c53685991d333ae477",
+        "en": "a1ae1946d6966660352054119df63a180c95c055ab9c60e67354e78529652d3d"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.13",
+      "version": "1.0.13",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-09-09",
+      "timestamp": "2026-09-08T18:53:43Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "cb6fb8dfe536ab734ccbbb13a6575004de84a967cba5236a1245ac45802c64b7",
+        "ja": "8b9e111b0cde0e065541ae979626506ab47c44e4f85bae0590e163ebca557dcd",
+        "en": "73d0532eb83a102c308156731004b04e6c06c211e1cba2357f89fab2c5e27918"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.12",
+      "version": "1.0.12",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-09-01",
+      "timestamp": "2026-08-31T18:23:37Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "910c60c1f450cd3a3adde3a74fc725e04d133f89923c58bff9c19b848c2e5c06",
+        "ja": "7eb1a0b2e00ff44dcee133718988ae962190d63f3ebf13530ca29d06c50436eb",
+        "en": "9b3d21b26e3a1a0c281134acf0d83134d119570f0e11e8ec4c0b462762f6e772"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.11",
+      "version": "1.0.11",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-08-21",
+      "timestamp": "2026-08-20T19:12:55Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "5fc56df69c1c0f2ca2ac278337fd1c8388cb44948f171bd686b98c8748c60797",
+        "ja": "b013d8eeb53ade73da1a3c9b5e37f7c434c59ee344bd835904d8d215d9fcdf88",
+        "en": "b32f47bc8f0c4641777f117f76d921cb00e50114b064ac0d9117bf06f7f222b6"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.10",
+      "version": "1.0.10",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-08-11",
+      "timestamp": "2026-08-10T20:28:57Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "ecc8ba5c19195dbf744bed95d953b88ba75b9d22ce7c8c4db2b63d1461283962",
+        "ja": "bea50fd5f6c2e673f909b7178289cbc4da80cf2f8cf0bb55a2fa41926485929f",
+        "en": "7a2221d0e91072a82cfc0dd35d529f4b968d50a9053ffee1b5b53eaf044d0606"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.9",
+      "version": "1.0.9",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-08-04",
+      "timestamp": "2026-08-03T17:03:17Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "37698e49da8ef9edf2008f536aac91708028ca4222ebefaeef243b60e9588bd7",
+        "ja": "0ce3070a14797fc84f4948e9cc73fda1d448811cc30230ab40439a292575fa63",
+        "en": "7593375ebd2dfe6ab5b79665dadf649d187e8f358ee52a749b625ee17e1462ae"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.8",
+      "version": "1.0.8",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-08-03",
+      "timestamp": "2026-08-02T17:22:57Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "79cc565710af36f07f3e0ecc09ca3250c405f5c45d5c3b3d96e20fa12300444e",
+        "ja": "d7b962703c6ab4af652bdf68eee57c4d5d55ece336c49cfa26f96ef1a2a14284",
+        "en": "a7177698705a5f145ca9f262dde2731ae8e3d2a7369b411ad444985080bbeefb"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.7",
+      "version": "1.0.7",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-07-29",
+      "timestamp": "2026-07-28T20:31:50Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "7d30ed732586567800c1c1bfa4a9fff1aebff46f8f398620d55ca454e032949b",
+        "ja": "253b054c4bd077c5e1074992c0ddad7b3ff4175aa953584167492e703fe06730",
+        "en": "6c16bdab599893f03a6bf01289310d3491f649d02570187b5ff0da95346a5ff0"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.6",
+      "version": "1.0.6",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-07-15",
+      "timestamp": "2026-07-14T16:01:26Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "fbec5f5da41f2999b008fc559b1077a358b62a05d557253330535c03acd0194e",
+        "ja": "d22d5012c9cbbab8df0b1ae95bfec7d0c723dfc31bad90a36ae241a0e0594376",
+        "en": "ef6aa65d7301326f1c27c51f504b3e270fa7e7dff726159f2c80ca9f1f9a4593"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.5",
+      "version": "1.0.5",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-07-07",
+      "timestamp": "2026-07-06T17:21:20Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "3d0026364f6d298184bb9d0c34d1c6f1466f3de10a2056aa8240f0100a5c6cf9",
+        "ja": "13de6891d3305a8c4c73764c2c29b37bfa467aecf8c4c8968316fdba1bd6ca8c",
+        "en": "cd52f3cd208d9d45fddff2ab7c3c7a965477f28e7805bd51c800720c89dbb01d"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-06-11",
+      "timestamp": "2026-06-10T17:02:51Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "eabb505b1e0e545049f7c3ea3eaf2d0995d23be6e1fc7039a7b4c4bbbdfc6a84",
+        "ja": "bfd6a9239da3a00c115e6adf70eed3144a92152512c12d14db636fa91a0a8db1",
+        "en": "74deb9eaaeb5cb35789e5d1cdb60a33d4aac93e264012d8c1f072a73e114f0e1"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.3",
+      "version": "1.0.3",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-06-03",
+      "timestamp": "2026-06-02T18:02:09Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "69c70d5b23c9d60ca28c6a68618041bfb53865b03f8a2a1ce763a72b0021d010",
+        "ja": "5df8eb680efa2d151c0b7d5e6ff07dc194bbc8076eb20e8a3c2e26c6bbccdd45",
+        "en": "4fbf4462edcf352f18e07ca968d0f7e9ea7be41f9a5b98dad9b8fafe6e19c40d"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-05-30",
+      "timestamp": "2026-05-29T18:45:30Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "1a1874b90f5116021c9e1ce292c4508858d10b3f2659ab96181204fc78d259b5",
+        "ja": "aadb927ea753a0f909de0cd3cb7178cd3af072d1ef854e183566168dca25e941",
+        "en": "dd94ba1d4709c0e4aace3d0ba5d3352608c629f9d9677c1cfbf298739f618a8a"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-05-27",
+      "timestamp": "2026-05-26T18:13:34Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "16f3cd8efc196e44209cd0250db342fe5e3ee8a8f218713f15b04d3e59f27152",
+        "ja": "16920ff70be10ae41967e26a83c1f19231b6d7f3be17711d82a64816af1bd13f",
+        "en": "e12979a2cc42475adc0717ca495c08c8b38fabf726f31b3b56bff6b93e8834c0"
+      }
+    },
+    {
+      "id": "pipi-focus-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-focus",
+      "platform": "ios",
+      "date": "2026-05-21",
+      "timestamp": "2026-05-21T09:40:45Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6762258878",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-focus",
+        "commit": "7413d0d60f961a3f76b3477cef626b5ef5ad6c92",
+        "path": "lib/domain/timer/timer_service.dart"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-observed-20261117",
+      "version": "1.2.5",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T19:49:15Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "f4da9877e313940420970f5109505546c92115240215e2693dc9aaa2428772c5",
+        "ja": "813955900567485992be01dd894f7266d69a79064aeb8f566f59d48518dd3360",
+        "en": "043136af164c43d0a4265cf364a5cc472b9c32701ecd318c49ba008290561c69"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.2.4",
+      "version": "1.2.4",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-11-14",
+      "timestamp": "2026-11-13T20:29:42Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "523f24d1f78e2813b006050a6944e20c0dd277acca44887aa4f6a38d1144fee2",
+        "ja": "098a12c4a920a91171c6aa2d82bbdc478f42764cb0ab39c2cffd77ab57d4a3ff",
+        "en": "74fd5767d395ae316a3889b2b4269246456bcb5c681ddc69f33218274766e6a8"
+      }
+    },
+    {
+      "id": "draw-123",
+      "version": "1.2.3",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-31",
+      "timestamp": "2026-10-30T19:56:44Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "71a3ddfa0a3706e2db4837d64094401e91fae9e62038ff58c0fa46c80025c0ca",
+        "ja": "7622fbd9df3fee0069842db56dc7a20c9f4ffe8bef0dc07dde1c88806568579c",
+        "en": "c5a1042b9e7344e0a968ac5aef3452af82d05bb50116bcf03c78c8e3321aaaad"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.2.2",
+      "version": "1.2.2",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T03:26:07Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "31d9f29f2a7fc4d6bceca647978ce893fa28437e9fb2309484e49b065d4f76be",
+        "ja": "60420c20363a8e5916d5cd7ba98107cfeb5c00bd11ac084251cd4442f97a2a77",
+        "en": "225ad8a3182fb8886bac8554eea62db3c23374c823c3f0df682cb8e82e01b86c"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.2.1",
+      "version": "1.2.1",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-21T21:33:49Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "4233c78877786092e95a221f966789ad2cd7c16339e3839fa5976076b0679a08",
+        "ja": "388d2cc1db61ed78e0fa3072291632735ba1354e7108b2642e133f50d2619548",
+        "en": "6c42c06a9a62653bebf67978f1c03a8a8e73860cdc99a95768f42034e1efc94e"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.2.0",
+      "version": "1.2.0",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-19",
+      "timestamp": "2026-10-19T07:32:43Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "8dc7b680e406188e145fe581896e098f969b1d14999aa668989ff43eff43ab3e",
+        "ja": "d646f3a4d5a74f324599df85b521f0f1c9e90bd1734fbdc7ad5b415eb460c5a0",
+        "en": "c1de425e2ed9ef39ab8b95d8b3c04fe429fe6e4425fbb67418ed8dff186d25d9"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.1.3",
+      "version": "1.1.3",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-18",
+      "timestamp": "2026-10-17T16:31:22Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "ed9f679b45c72f3f927ca77d46e7a3ef90b957b15b502402326a7066a9ae42ba",
+        "ja": "27388d93f503fa6596861886b07de79f6a3136ed83ca7e615b77a981879d7a3e",
+        "en": "61072192d0ce5d327bf624d2084f1b933712f288d58c781db52310b7a3527270"
+      }
+    },
+    {
+      "id": "draw-112",
+      "version": "1.1.2",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-14",
+      "timestamp": "2026-10-13T16:44:19Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "8013da24f7ff7f5c051e7d2c7c055ba522dbccc38cf652cbf3889ec2611e3847",
+        "ja": "70d4bb90d26538afcb4c5115bc39202204703e0de8e1eb78008dc788896ff886",
+        "en": "3b688a84b1d30ffacadfc42e7e3914cea10ae37e5c9ec5f096104a1a9ef97922"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.1.1",
+      "version": "1.1.1",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-08",
+      "timestamp": "2026-10-07T22:28:07Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "114766a4fa94220a4acbd7d80efbc54fd267f02929b291c9a7459ebbe37c51e0",
+        "ja": "1cedd67fe94f414c6263d86ede38092eef4dcd85050f5af19862ce6858df66cc",
+        "en": "e71468dffc4d2ab07e71fb632de59ddfec176c333c42544cb8a4689b669a26e0"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.1.0",
+      "version": "1.1.0",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-10-02",
+      "timestamp": "2026-10-01T19:15:40Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "0c334efb96ccd057f813e26a21344deb4fbc1c9ea4beab2c209e34688be1aa1b",
+        "ja": "005e2330bc0aec76dae025791b3801aeb83704029655a8f577c28abf74a9f47d",
+        "en": "ebf5125eea7e598199492001973a347f539984822c5fbe8e53695a001d9a0d25"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.12",
+      "version": "1.0.12",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-09-30",
+      "timestamp": "2026-09-29T21:41:40Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "cd4a827888b0e94f80b2786f560a2b2d9243c346bab53b413f5ebca66b2201c7",
+        "ja": "79950bc7e175eb960247b3b023c1b3548ad801a5e8b75d1491078e53d7c8f5b8",
+        "en": "ed7b80e91370abcb906336fad5a280045838a5ed83d871e54ecd03031edfd1ae"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.11",
+      "version": "1.0.11",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-09-26",
+      "timestamp": "2026-09-26T07:52:01Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "664e81b80b6b7835a7ab803f9d3bcb44f18528562a0db758338c49de5c2b2b2d",
+        "ja": "c9f5538e1eceec38bedf1fd43fe6efe565e26187526b585f282da24ee9bc9eb6",
+        "en": "9d70f956bcbfa9e4e124b71028fccd2e3e6afed4a6beac723cc0b544901697e0"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.10",
+      "version": "1.0.10",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-09-10",
+      "timestamp": "2026-09-10T06:23:20Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "91d372a66cd07f811792e9c2389f47319bf484499c8df3b64809e21908cb791c",
+        "ja": "57e8e218b2cc9b29e35bfe85310c5c1fd56f267df3468620209c0addc89e4b2c",
+        "en": "544edc1a107678d6453aa32ff5443c8df3db89080c501037861f8bab076bac53"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.9",
+      "version": "1.0.9",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-09-10",
+      "timestamp": "2026-09-09T16:59:53Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "cdd7c293e18d5656e35f9f67f76293c934a067079c68a05cb03362c7ab01a6f3",
+        "ja": "13967ea608160eab4505b147e1a5128a28f1702687bcbf29c0749fa940b7bb8f",
+        "en": "8db922dfeb8b944dcdf5b1fa1937cb06ae4bd7e6ef814a4e57db886f81a11adb"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.8",
+      "version": "1.0.8",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-09-01",
+      "timestamp": "2026-08-31T18:24:08Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "08e5d1c5205c792dbd4bfc4e2c360692133e91e05232fbcd57da76ea0bc5a77e",
+        "ja": "805b32ed810674a364e20f7a99460fe6653103f916ca637a4fbff3b688729162",
+        "en": "63883ff532cb9b0e50ba7c6baa7aa3a6a5f9fe93e2e53d4a9a93bb44062936ae"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.7",
+      "version": "1.0.7",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-08-26",
+      "timestamp": "2026-08-25T19:09:21Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "a1d5435b14eafd04c7f8462f9ec7b018e688d2ed7a660b61324c74484d50ee25",
+        "ja": "6cea5cda7d82cfbe60e4e1d593d0e6a8a650a563190875680fb039994e602ae8",
+        "en": "9ea396b8586de584fae1de4ad99f5fde329b7dc7053ee1d147528e2d22fce0ad"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.6",
+      "version": "1.0.6",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-08-20",
+      "timestamp": "2026-08-19T21:18:34Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "43877719115dc9ac6204c2f2728153037bcc93813323006cdee2793548d577db",
+        "ja": "f99f42cec6eb365356e24043ba27cd0c11539590e5a65b6fb9bf48eed18774e5",
+        "en": "23735e8ce075b70774feba8341cafbc77f18646eefc78688f1a3c1a4bde9df44"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.5",
+      "version": "1.0.5",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-08-15",
+      "timestamp": "2026-08-14T16:26:00Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "e91652d3365c562fe21fefd82a0e994f6367f8b571464b86beda34ef56749461",
+        "ja": "2dba04988bedd17fdcd97cce9eccf5b50add9019d95f21992df0fd01f93a016d",
+        "en": "950e51d8533b06b71c7e373738d8cf9896b025fa07969660b4a1948161e9494a"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-08-11",
+      "timestamp": "2026-08-11T13:54:38Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "8fcf795004485232bae8125c146d39cde350a78c563ef6d863545e39ec28f0a1",
+        "ja": "0defd68c47d784661710ebc7e7cf7baef88abd7f3998d373b63cf4589da8a10f",
+        "en": "4c0d372fad6e1d3737fc9034fcad048903124337838efb9df6dcd71e4e368364"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.3",
+      "version": "1.0.3",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-08-04",
+      "timestamp": "2026-08-03T19:42:36Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "1ac9a50f35f0b3d78999676e1ade5c28ceea351c898b4e4cbf810a5ef868550a",
+        "ja": "54f0207d553c689f262bcd3284a9085376416a586c4200810c94a6f31fdd4192",
+        "en": "a010f7ea40dc0d6392de602c2b7b2f8d138602c2f14626aa18f28e49eabaf242"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-07-29",
+      "timestamp": "2026-07-28T19:43:28Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "4d679f01b01f68042f99610be82ceea0d594a3c7a593db8a85aa447359550841",
+        "ja": "279fd28325d38ff05880bf393b78b42f8e93e37f9a3ec2b4258f6cc9684ff145",
+        "en": "3478ea4c97962ec0846416123e62c6e5124bdbc671274354d554c2d594d3ddd7"
+      }
+    },
+    {
+      "id": "pipi-draw-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-draw",
+      "platform": "ios",
+      "date": "2026-07-22",
+      "timestamp": "2026-07-21T16:54:34Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6779071131",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-draw",
+        "commit": "f7eabe3c2c968b360ddefce8badf4607b2483ddd",
+        "path": "android/fastlane/metadata/android/en-US/changelogs/18.txt"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-observed-20261117",
+      "version": "1.4.2",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T17:51:15Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "4edc3b535e49995d714a11054630d68a157419070597ef077c97f89f467b154e",
+        "ja": "5d67ae4eb552ee84a43a4b23ab96baad55437dae438d2434dab3a105686bf370",
+        "en": "65baa9c64a2a5cc915bc7c8ce3ead3e3ce6a83199d6482027294c39c22a64649"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.4.1",
+      "version": "1.4.1",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-11-05",
+      "timestamp": "2026-11-04T17:28:31Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "140b412eeb74f04b7fdca49bd892ff35dd11b2f3679be73120d6a50845232b31",
+        "ja": "56d98719924e3ad5800c88dd33a3b9172bf5c134c511ac548c4f52c981925869",
+        "en": "c9b98591f122e912965c0fbfa8c824dad0635783fc1ecfd7bae2c6f45ded34d2"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.4.0",
+      "version": "1.4.0",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-11-03",
+      "timestamp": "2026-11-03T13:47:55Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "23f9f9f3647fb940a76dc3d8971a92ffdb86b3a244107b937bad63f2c4a4e8da",
+        "ja": "41d8f2425128155eb196e1d406ca96e404fc18d52f3d87523b7a8b28fedcee5a",
+        "en": "8c55dbb5993ad1d39cd742289a046d895da9e3567981984df8ff26aad0d1083c"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-131",
+      "version": "1.3.1",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-11-02",
+      "timestamp": "2026-11-01T20:54:23Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "8a5bdcade1d295827f440130b8a1c260243f19a4e15bdd69961121a44832d62b",
+        "ja": "a5969936d9950ed4b820e9eef2e5f62e07a1e583489345231bea11deb889489e",
+        "en": "60423467a5cbfba89174baa74ed0aecf125f3b5b6ccb53270688e1d7203b3346"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.3.0",
+      "version": "1.3.0",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-11-01",
+      "timestamp": "2026-10-31T15:29:04Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "1664b59c031325181753b3eef876f4e6a383b875af5a0110e2b5d88201d3957c",
+        "ja": "9d80ced1a7d1011686ccf1b7ed4f1570bad93cf1527c3b78f3a89895b93cbbc1",
+        "en": "048fffbadfbcf1cb109554b6d77c26f348a44d82e13635fb895cfb4bbb8c7de4"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.2.0",
+      "version": "1.2.0",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-10-31",
+      "timestamp": "2026-10-30T16:46:33Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "a201126effbbf3406b4f751e6fbdf7ca23c620e80f4f479c9c2e290f9c4fa545",
+        "ja": "4d8af746b5a0d15aa249090c73de77df1e494ba69f15004f36a66eae6b99e179",
+        "en": "909aae0152f38b4b2388036b58f43c3faae2125297b504ffa71e91ace97ba8f3"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-public",
+      "version": "1.1.0",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-21T20:54:32Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "e326f8a186dcfdf607934bb4093a29d872fba3bb1d02b2400f590a345e770eb1",
+        "ja": "90d0c734c598c418f82ba6cd8326cb607f59c586c866f4249a8f79daf3aa3a01",
+        "en": "7994dba8133d230d3ef930a53a46288a087a4c6683e69fc956922fb32d9af43d"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.10",
+      "version": "1.0.10",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-10-19",
+      "timestamp": "2026-10-18T22:25:23Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "1e3f08bf513194d46a8aaa862e2d15fb607d1e62239ab7191eaef708e5a7b035",
+        "ja": "f8d50cbe62d2a78b236f30ab409984bd1c60bf508d504770540419d40eb450da",
+        "en": "536ae54b8b4fd4ff61df0b0b0fb7609c24d5ef60f7215a8c855738484da3535b"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.9",
+      "version": "1.0.9",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-10-06",
+      "timestamp": "2026-10-05T20:40:06Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "27ff823f964090a699ef831e586f24854c71b8435ef7d1678923ba71f94bcb25",
+        "ja": "9abf9f27d073732687d59cb3e45c717b3c3783ce4e73fd6b9813c5d8c9b98524",
+        "en": "6292764da0fdcd428d509d3d5f5a6b5987e2b2e6809c7a2bb0aa3edb069e7c58"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.8",
+      "version": "1.0.8",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-10-05",
+      "timestamp": "2026-10-04T16:59:26Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "8f3905ec62e8400966637d49bb64406ff26490c85823835d11a4ab35c0e0b7c9",
+        "ja": "922c71d41ce33eea2f611af21c3c589e0ec1c8e1fc06abb3c7b54efda737403c",
+        "en": "9c7d0e60f347cf808aa0405285fb8732ac937856dee98cda74580ff5f8cc3419"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.7",
+      "version": "1.0.7",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-09-24",
+      "timestamp": "2026-09-23T18:34:22Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "fdcbf2d6e5db8888f60276ab6b75627c151306073fdd5f29302c217c71fa7e19",
+        "ja": "2aa672c5ec72c331a99d8a6dfadd6a8bae3ba275f7ed590001068bfa051fdc43",
+        "en": "7746d09e4b4c06b096bbf7aa92d4dd11bdbc49957d0e0de49c9f358d3d182642"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.6",
+      "version": "1.0.6",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-09-15",
+      "timestamp": "2026-09-14T17:53:48Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "be408d0092f18d89f5c0cee7d2503a6f0447517cc773ad26f4d6d011b3218a8c",
+        "ja": "b997bdfe9edc017ad9d592dbb06d190dd92439d1dd22ddc050d00054f4b6adc1",
+        "en": "74a45976af20af3344784f9947e0fbe2d746cf5dfda3547567ff93944577a856"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.5",
+      "version": "1.0.5",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-09-01",
+      "timestamp": "2026-08-31T19:02:30Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "69811d75b21b1bd5c13142ab00f033a97ad39925b5cfefaf563759f755de1dc0",
+        "ja": "13314efdba02ce2f1f70132a89f11ea8606620728daaedb51bd6c85759df21e2",
+        "en": "011761138fd03c11444a51de4f26707d088e9722db87671c3abc7d5fe4c6c051"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-08-27",
+      "timestamp": "2026-08-26T20:49:28Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "2ef38026e4944db8ae41456443df4d68147bbc4dfd67af9526f998659e75dc2b",
+        "ja": "725f9a732b7efec9c8b264154edba290f95fe93cd385f0749f77d1ff105e828a",
+        "en": "0773d1fea0c27f1f596dd923fe23bbd2d919de20cbdd81f4f41e226ab766cd2d"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.3",
+      "version": "1.0.3",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-08-21",
+      "timestamp": "2026-08-21T13:50:38Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "e411544cf55abe5e06462e8082e270603a262d750a5f68fdde974bbc5f7b8480",
+        "ja": "d5c6e76a2a707b174d4c2962aa8bdedb88cd794ddf12f03e2fdd61f557d03cfd",
+        "en": "3c2b9d54c201f3b9404d4baa024543338e2aa5204d219affb19d1c90c11701f4"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-08-13",
+      "timestamp": "2026-08-13T03:02:06Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "8c3255e2f887f4788e4da47d2be9b34b9cd8fdc850f77af3c294a6de0a600a91",
+        "ja": "336ba6ce3a9cd33b8ed8af7cc0a50c23963118b59dc4d8276bdf446c83956d1e",
+        "en": "a9231a012e29a00caa7afae8e90a1f7e4a896cd09a77c79bb0b1427527ccbf3b"
+      }
+    },
+    {
+      "id": "pipi-word-voyage-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-word-voyage",
+      "platform": "ios",
+      "date": "2026-07-21",
+      "timestamp": "2026-07-21T12:48:09Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6788949612",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-word-voyage",
+        "commit": "bf4e65531192c419473a5c63b63be538eb57cd99",
+        "path": "docs/release/1.0.0.md"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-observed-20261117",
+      "version": "1.1.1",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T20:17:05Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "37d686a6f08ddc9eaa0301ec49e7d31fb40c48b6854ea6d6ffdbec2a4b2c733a",
+        "ja": "1c5541b34035210243fee3bb2f3a7ef36ebcea2e1d4ea1f1a83cccfe4432ced2",
+        "en": "167f97bd4649944e7dbbeb6cee3d6a43c6574ed09d5575be652c1280d6504034"
+      }
+    },
+    {
+      "id": "pipi-hello-110",
+      "version": "1.1.0",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-10-26",
+      "timestamp": "2026-10-25T19:54:01Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "cee8d9aadb4ab61d9e2c65e649129316aefdc47770e13977d9976e5806af31a1",
+        "ja": "66aacce55e7ede302d165c6d588f5d10cdad5008a720d8a2a468c41d316205b3",
+        "en": "c5f7e73fb116976b84fdc87af9c3a35b2af89d4483a323c5b71c4850c36efc6e"
+      }
+    },
+    {
+      "id": "pipi-hello-public",
+      "version": "1.0.10",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-10-19",
+      "timestamp": "2026-10-18T17:25:15Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "7bbd216d66cf74a2469f18b929ce7e56305dc52c77f8a2f38c3d376d8bebc063",
+        "ja": "1441affea57c53002bc68130614bf3d8bd6afcf5be63828d8c2e2eb70aea4ab7",
+        "en": "a4b7d86dc8fc797200279c77d94bee1b183323d9a4e05bc5cad84c128a7cd443"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.9",
+      "version": "1.0.9",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-10-06",
+      "timestamp": "2026-10-05T15:42:49Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "26f64f3b9f589245f287327803058bf99775f0207cf33802682de69710e4a49e",
+        "ja": "3513ed850c2c4949a478ad583a976ef741dd7f98b831380d5ef6f20ed69d62a2",
+        "en": "be0156ee0b5261244202fbfe46cceae4a7054d54ad6f1248dbfb7c2482f67589"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.8",
+      "version": "1.0.8",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-09-29",
+      "timestamp": "2026-09-29T03:31:05Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "450a8fa22413bec6ceaf43bfa6e17c05b13014e5ef24e6cd0df395ec7bdbac06",
+        "ja": "4850155bc8d52c3636ac6a8ab70e3d64455714b0305b6a992172908fded3b00d",
+        "en": "c5aae0c62f5f6012f6cbc44f58eb367bd301e2440188603fe3488715c1eeac44"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.7",
+      "version": "1.0.7",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-09-16",
+      "timestamp": "2026-09-15T19:39:49Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "36c547e5a1e2cfedc48136b59b2d7b9d5ee4a852ec4ac6cbf825d7215ad456a0",
+        "ja": "4260333f3c85d51753f911744ae682f9fe3960f5af4750ca5122cc697500f3b9",
+        "en": "ba5011aa1ed201643a0f78b4debb12f07f80498e3cf29f358eabd43679418382"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.6",
+      "version": "1.0.6",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-09-01",
+      "timestamp": "2026-08-31T19:01:14Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "4798361c936d550cf2623bd81fd8a21c394919f6944ab575e377f7cace368ca1",
+        "ja": "bc939590691216e84808542d972cd431d0f8343b04dd2f8647cedcfe8307292a",
+        "en": "10c04640fa21636c9b24a6ddad5572186f5ffe2a949c02f5194861e6d9b12c37"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.5",
+      "version": "1.0.5",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-08-26",
+      "timestamp": "2026-08-26T10:04:32Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "df66a61b7c4eaae5c4c26474be2452b566d2d195a888ef94a0dd534af4621469",
+        "ja": "5d55a7e1bd54610144adf1d1fcf6e96a6f109313efdf6434c51107c150bd3f5b",
+        "en": "f8bd1d169f04787a89879ef3a77c6efb9e906390d2743eb5048f5c27fd10b8de"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-08-11",
+      "timestamp": "2026-08-10T20:28:21Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "5bb5c72cea66122ff97d0bad163659f7e4d4a30e1bbd63c410b3d5309a0079d3",
+        "ja": "5c44fa7c0ec6164500d0d97dc117e6805d9ad442d6bd2cd7167069f7377e413d",
+        "en": "fea2a081ab44ca8b3e279a4d0be7425f2dca62471e4fee322f4995dba1ef349a"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.3",
+      "version": "1.0.3",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-08-06",
+      "timestamp": "2026-08-06T14:36:32Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "e88e164525526ea7e13027d43ffb91f40d1069b03f82eb2120974d414fd283cd",
+        "ja": "bb060974f1cb90e87185fdf54978e22d7dc7d72d1fae816e0a00384c2829c876",
+        "en": "6af3a13310cd65e67b7d124274d7f01c2b70767e09dc6fa59e8c921a0d4b9932"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-08-03",
+      "timestamp": "2026-08-02T21:17:16Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "9781c554e2117e644cdebbe37cfde424c7b6e4640e79cff741a17360981128f7",
+        "ja": "6355727de8a1bdc234272b6c48f19b0a560f8c5443d5b3ee6b4e54e5fdeecb89",
+        "en": "066528f14db550d3130c152f1ababc19956f8c90920a47fa3bc376b3100f578b"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-07-06",
+      "timestamp": "2026-07-05T21:48:05Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "38e8442767eee67e36b5fc91c2e5c3d86663ded338a756135bc930140b785852",
+        "ja": "302aad932867296bd64c5001a2f51d88050ea548c61edf38f8a020395618adad",
+        "en": "0c326672e4b004794ec904f4ade49a704dec611365172b61b20e4dea7443f6f3"
+      }
+    },
+    {
+      "id": "pipi-hello-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-hello",
+      "platform": "ios",
+      "date": "2026-07-01",
+      "timestamp": "2026-07-01T01:55:05Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6777299814",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-hello",
+        "commit": "3842bf9e0bee9f32be118e7ef476f68b86fca57f",
+        "path": "docs/release/1.0.0.md"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.1.2",
+      "version": "1.1.2",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-11-19",
+      "timestamp": "2026-11-18T20:57:53Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "97c49d34b72f1d0d228b326742de689240222588533ee315599fa7eb81077bdf",
+        "ja": "e76a80f68bff917713cb34f8144e7043367930e1641375daf1cc221e87129ddc",
+        "en": "3bf69bc82942f70a4ced1e562088499a60f20ac3ac627ee22403db21d983fef5"
+      }
+    },
+    {
+      "id": "pipi-words-ios-observed-20261117",
+      "version": "1.1.1",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T20:07:41Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "07be1949291859d8dfeb0588922cc746af3131e21864fb0ad875672852b39c50",
+        "ja": "f73c1b540ff235eb3c6421ee473eb05a44722ccd48cb821b0b73220f20ff4d1e",
+        "en": "e88023dabbfd3f2d580a18e8d961dd26a30210328079c46ffdafa2ccac076e4e"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.1.0",
+      "version": "1.1.0",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-11-04",
+      "timestamp": "2026-11-04T13:39:43Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "e96b6f97bbd61147b30958a841a1b901c0110a0ba3fa312dbd9653a6051a7f12",
+        "ja": "10b771d86f022cceb3923d5de0698af59dd4cd920df374d1f410d0ea356d30a1",
+        "en": "505770668fad7dc917a285145935e3caa57738333dc4c09e50e4220cf9fde519"
+      }
+    },
+    {
+      "id": "pipi-words-1014",
+      "version": "1.0.14",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T02:25:35Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "470cf2d3d333e00f56b2000bdbc282cb1a95a8b1483fb2bf0b04892887c7704a",
+        "ja": "050639efeebd9ba792e0377554dc522e39c11c0c6677c231cb2b1704b5e3f5df",
+        "en": "6a30074dc3eb9a65437899f3fbda67495c06ac60fe43e8a6b50e46256d34d38c"
+      }
+    },
+    {
+      "id": "pipi-words-public",
+      "version": "1.0.12",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-10-05",
+      "timestamp": "2026-10-05T14:50:25Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "02494982973da9432ca68a01f15dac6b051015b62592a316afccaaac2025c247",
+        "ja": "e9de837d7d950b20b78c50794fa651f6242316d6457f158e16149243d1f590db",
+        "en": "9c404ff514fd657a7d03e24939d8405a153798e1e0d709ec166ef8a49ae9d752"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.11",
+      "version": "1.0.11",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-09-09",
+      "timestamp": "2026-09-08T22:46:03Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "ffc0f408aa71bd08a56d0de9621ed99a63e25b35289895f307e537e6a1a4e3ff",
+        "ja": "9ab8f888bd30f1ea68d789da9c1e7212f3666fa3699666dbb1b01ecc9603f046",
+        "en": "ea18ec2ca8784f0cd189506daa731d6860779adf29f1350eb81e9dd613e0ef46"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.9",
+      "version": "1.0.9",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-08-20",
+      "timestamp": "2026-08-19T19:01:36Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "f8668c505c6140f0eba569006c830712e0a181d93e98015204f76636592719ec",
+        "ja": "40f2cebe934b67d5848149c316fa7866cd723bf3b769767a482944b0b2f72102",
+        "en": "6ffeb0ee954ea53962f1e5ec02ccd75589cd2ef2d1ef8227650eca7da28ca75d"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.8",
+      "version": "1.0.8",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-08-16",
+      "timestamp": "2026-08-15T20:45:07Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "91d11dc8d928849d0b26169d3c791b73a7b82a83f118fcc124d709ae6b154b0e",
+        "ja": "c53fb4d387dd44e0450c0735d80baf05c8baba9efec29f945ea8e0ee75c5ddde",
+        "en": "55fc925297cb10cbc733d43ebc62ea1e6604e3d60f2d0ac9d4547e847b8e4305"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.7",
+      "version": "1.0.7",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-08-11",
+      "timestamp": "2026-08-10T20:29:04Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "467f69d7ccfbd050b8fb8d944f92728865e0779a8ae6eaab3fb6511c34ab029f",
+        "ja": "0846b4c1d69c1462d89be3d742e779d5005533c36594e0e143a94848f8c367c7",
+        "en": "be656513129266e584b44642570eb80df89796a07d72aedba34dfcda7ac70366"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.6",
+      "version": "1.0.6",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-08-03",
+      "timestamp": "2026-08-03T04:55:10Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "7753efe14cd83434dbeb325adfd381bafa79204f8956b5b66c9a015796c43bb5",
+        "ja": "8959821ebc33e80980756b66d04c9c75ec28cb1e929810e40327f71b9fc06727",
+        "en": "3a045d7d23b48d65c867d9254f9a9ea7908987aeaaebad4815fde453af73e935"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.5",
+      "version": "1.0.5",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-07-28",
+      "timestamp": "2026-07-27T19:24:28Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "2210a28e27205a979f4d196e7a5f8241a1e0bd4f4449c1e885fea552b3327ebf",
+        "ja": "63f47f6cf062155a606c052e306632a8833c0a31eb58203c9b1e1b4825441260",
+        "en": "181dad64c1cbd35fa859160d26a35dbe0981041acbb4bab30f5c3c8f0dcd89fd"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-07-17",
+      "timestamp": "2026-07-16T15:46:47Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "feedafcadbba076f79ba3c9c384fb0eefa808675c7441f76411e92f62dddf61e",
+        "ja": "e6090c5aac8c6530a5b80d56c430f819527832cb9f69b2abd587a4f490fd5410",
+        "en": "049cbe4e8f6302bc062b4f29c86a2038b84d8f0cc150e5270fa8c1e6fa2c1a76"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.3",
+      "version": "1.0.3",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-06-24",
+      "timestamp": "2026-06-23T16:19:56Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "a4a16d86a7ea220e653cf9fc3336ea82f25edc06682ff8fea2bb25791ce97028",
+        "ja": "181d65d89eadcfb3375f7d4ea19af2ad1b66685774fe83df9de5f65051319bdb",
+        "en": "6b27be8c6ca66e6f9477a6cf1b4d034ed46ccbad3d33351117c4b62d6f4cf32f"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-06-11",
+      "timestamp": "2026-06-10T18:33:55Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "db35e1e466a995021e3a38a8bbe2be0a757c3520c23ff31f23b3d6908f05b044",
+        "ja": "2913847ab406bf539e01a04e307fe35e1107be0e9ebc918c1bf017570915f8ab",
+        "en": "e3cf8c1d1251c3072448775da1066bef4402b890069fe9adbfeacc89659ea94a"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-06-03",
+      "timestamp": "2026-06-02T20:01:33Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "f957d3a56717c86ffd237cbe8367f18dd69d71ff3278fc3ba5b0e3bebf71d675",
+        "ja": "6082d2af6a671923608dbe9b775b57108a9d97f5d74b81cc6b7de3c27d5ee525",
+        "en": "236ac6f1306f59a89c78a4f04be168f8eb69804d2d48fb63f948180fde9a3e62"
+      }
+    },
+    {
+      "id": "pipi-words-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-words",
+      "platform": "ios",
+      "date": "2026-06-02",
+      "timestamp": "2026-06-01T19:01:32Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-words",
+        "commit": "3918d93454bfc7565cffe1ae6258e4f20e678f40",
+        "path": "lib/features/study/presentation/flashcard_screen.dart"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-2.0.3",
+      "version": "2.0.3",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-11-19",
+      "timestamp": "2026-11-18T17:10:09Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "63c787f08ca6ce7eb67465197ab4ac8c69765b53527daf4e1eef737cd78b0ca7",
+        "ja": "6c76736b2ed3d5acef551d6b96c456c3c3cc0a11a26fccc774675fbf9adca126",
+        "en": "6674f178d8723d8b0893403de73efbeb33c0380fd73b4cc4cf301bb59f2c41f9"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-observed-20261117",
+      "version": "2.0.2",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-11-14",
+      "timestamp": "2026-11-13T20:18:19Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "a5308b1bc0f220eea8cda294de49f06ffd63845c4ae9c1a1be300edb69a440bd",
+        "ja": "5883bea8c69a6e1610de8f2c44e9035498f9e1c096180bc7a53146f01fa1f363",
+        "en": "33b34077fd399387f275c1ca732ec70d0845f3b6e69b3de6b19eb7b394ca4d55"
+      }
+    },
+    {
+      "id": "pipi-dday-201",
+      "version": "2.0.1",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-10-25",
+      "timestamp": "2026-10-24T16:05:29Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "76f08e3a5fb57fd97a688f912a4e2de75f78271bbbaa4b6493ab2c282a2b0e72",
+        "ja": "cba1a8391839475f1f4add949b69aa1ebd211c406f3b7bf61c5d5ef8068cb36c",
+        "en": "698f13a8881b61c92e7ff7a54569d8e1a1ba6818de6cc301ece64bb2737b8f2a"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-2.0.0",
+      "version": "2.0.0",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-10-24",
+      "timestamp": "2026-10-23T23:19:59Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "62233c2eebe90d4110d1d64a4e565eff9773469b5613a125b42657258d3c6be0",
+        "ja": "8fcaaeb3ec03d7bb67505e2165359d20d501abab668bcf39b20733173224a801",
+        "en": "bae5e5a7bed2f62356432aeed7f4a1caf04bf17a018cc8dbb1896d9631c49782"
+      }
+    },
+    {
+      "id": "pipi-dday-public",
+      "version": "1.1.5",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-10-14",
+      "timestamp": "2026-10-13T18:17:45Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "f5dc67c086ff1429dbe9b5b72c2e5656e919e29e82dd5552dd32a0afb89b9c51",
+        "ja": "35d6d9b857a826030115b74e19238ab63d1653645a40f7744c1dd200657a78fd",
+        "en": "963978fe1bda2dac7b421f87b4b1e0f20a026b8cd9648b154d43a52a674cd096"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-1.1.4",
+      "version": "1.1.4",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-10-13",
+      "timestamp": "2026-10-13T06:31:19Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "79d10a031221cfab64bff6f2b8e7de00cc53d8d62efc92d0fba4e273e0c51148",
+        "ja": "bd0af6a75b623e20a94d43f22326948f614bcaafdd43e86b43ea691070d77366",
+        "en": "289e33f8a923c55a28e5ca60fd04d09fa9e64b0bce746c8802fab0876b24b2ae"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-1.1.3",
+      "version": "1.1.3",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-09-01",
+      "timestamp": "2026-08-31T18:23:21Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "150e962eb7a9fda2f5ea69fbc7e542f66a7d287a30cc97df290bf2f451c3f2fe",
+        "ja": "6e4d54e5b5ea2300ebb7c558a89b5d088401006739ba94b31907c119aee2e0fa",
+        "en": "642cf5ace286ec69193add2d970163e157aa6b6506f2d7791ecd874283480b09"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-08-14",
+      "timestamp": "2026-08-14T03:31:36Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "6bd23d286fa75c602d50cfd53e7cda3bbee313a2ee0367a6f3bd6b0c5b4a57ad",
+        "ja": "be189f85f97fb77d65588d2e7365a1730b0c77b82f5f7f58cf82cc8399ff9645",
+        "en": "d9a5f4289189d0b064e1e6b1fd97a7bd443b644e1b6c6db36243ba21fa84488d"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-07-23",
+      "timestamp": "2026-07-22T20:03:36Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "131779cbcd16a9935207620b3d2fb787c035b27c7ceb1bafdef16f84738f65f2",
+        "ja": "f07409355b9d68509844dab7931eca682693f2e10b7e70cf56862949209dec56",
+        "en": "c853a69d5c26b68c3a84652f3fef13f2098df0d020a178d1137313e5bc0e5a68"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-06-27",
+      "timestamp": "2026-06-26T17:15:12Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "4112cb9c39b0908baa1e6f6ab4dee9c349daedd1c78a9c3766e469b43444b7bd",
+        "ja": "2e57a85f7d9203bbe7fbc80759d05c292c91a3a8bee995bd12f1d69a4cf26409",
+        "en": "70b27263ae8773c82538cf9ccc8c37a465bfc491477127f3fc1be90ffb1c6219"
+      }
+    },
+    {
+      "id": "pipi-dday-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-dday",
+      "platform": "ios",
+      "date": "2026-06-10",
+      "timestamp": "2026-06-10T12:18:11Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-dday",
+        "commit": "44990937137e3cc3fa07d3b2bdff36ddaf2809e7",
+        "path": "docs/release/1.0.0+9.md"
+      }
+    },
+    {
+      "id": "pipi-log-ios-observed-20261117",
+      "version": "1.0.15",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T20:07:52Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "cce26cd9c7798f41175bd9ff2092a3889811681d405fdb9b11df1a38adb8ac30",
+        "ja": "649dec3f25bb9f05f4491ea00a9d27373035d60228af198d3cb1e0ec5b5587f8",
+        "en": "5dfc44d93d23b521e75edd2de8cd6927386ef26c7002d7d64b31c3bdd0a88bd5"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.14",
+      "version": "1.0.14",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-11-05",
+      "timestamp": "2026-11-04T17:21:03Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "7b3ac896e81153f0d5af9154ba4c21f5d3ea56ffcc7dd11e67dfe292b4317125",
+        "ja": "f9e5b6d3e18f3ccfec5d9ec9f162eaca8f0d5619f049019e89502127c12b80ea",
+        "en": "f82df7ac613089f43a0bdf6b1d4aeedc68a80f7e59d4bc2d626699abede16352"
+      }
+    },
+    {
+      "id": "pipi-log-1013",
+      "version": "1.0.13",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-10-24",
+      "timestamp": "2026-10-23T15:39:10Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "aaa3821f69a640d1284f9da809561f254a7b6ffaed9edf4441d84513d5e0017c",
+        "ja": "9be8a8baa9c7f3808e1867f5b1c76730ea884cfed8199eb286c225634aa33031",
+        "en": "e0b02a41674af36de4140fabaea33240c0d24b8b27b5fefe7644e18b6f460a45"
+      }
+    },
+    {
+      "id": "pipi-log-public",
+      "version": "1.0.12",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-10-19",
+      "timestamp": "2026-10-19T00:54:35Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "cdc2e7aff3eba18634dec4e26a113d0f65a99b89cacbb318a3875f0c58e48ad3",
+        "ja": "d2ce51067f56628273e90baebee888500dfd19b17f153bd3a70186f285f8d386",
+        "en": "7ab3418a1319299571d2b5760608e9e62727d60151aef89dbb785d90597cce80"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.11",
+      "version": "1.0.11",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-10-05",
+      "timestamp": "2026-10-05T14:00:08Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "1b485fb507c0ea6cfec16f0f74520e8faf17624eb7ebbdc9d8a09ff81d8cb136",
+        "ja": "105d4727b01326d981440d94ec502294e1b5991cb42e1209cd1a2b5a8278f6b8",
+        "en": "4f7b94a8b6fcc71a9e0aeb809fd09d687d397d2164c5095d10a452e5251f7a5b"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.10",
+      "version": "1.0.10",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-09-24",
+      "timestamp": "2026-09-23T20:23:13Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "7ed3e4f43b15253588779f7c013e456e3dfe0a98742a56d1a2b4974b09dc3888",
+        "ja": "4b49a4019d20ea4195fe3eded051903d041b9bda7c62785e73ecd8999c8af6a6",
+        "en": "bc00505699d9c20ba0c02f4e85a8f08af25af3228295bf3b3ac28091632c53fb"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.9",
+      "version": "1.0.9",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-09-10",
+      "timestamp": "2026-09-10T02:45:03Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "d60c7e99f676ddd833ccb89e9a43c675eccbcbf22e636b211641a56d00b6a4e2",
+        "ja": "048656ef6685b31e9823f82f93b00211c54444e4d28c424f596b1977beab258c",
+        "en": "a8958c304c214af0bb9094dd00c7b73e25a9bb12aa1cc6adf2741c02ebb2c88e"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.8",
+      "version": "1.0.8",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-09-01",
+      "timestamp": "2026-08-31T18:59:24Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "032dfc055ab1f8149d78a58bd32942625f09b71065498ee08b4a6a2953ad2db7",
+        "ja": "c603430b8d66a9592788e9243516b5cb9db4ca5ebf1575727c3c58b832c36c72",
+        "en": "d43dc02e2ca87ea76dbf3d1a894bd50d7d743f4f5cf3565cc245d07276d8d3c7"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.7",
+      "version": "1.0.7",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-08-21",
+      "timestamp": "2026-08-20T20:35:57Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "b65b24e260a0cea97329b06cba0774cca5413445570554ff378fb124fb71a402",
+        "ja": "01ef0d7a96a308ba19ffc3af5bd94fb488431afdd65e9c13e28e83509a75d252",
+        "en": "0b0d29c4231bebda617a1ca7c0b398934707b96aad34aaed31c70884469fc96e"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.6",
+      "version": "1.0.6",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-08-10",
+      "timestamp": "2026-08-10T14:37:06Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "314f51c577edad0d4a10a73bccad461bb0bbedac6a0c851b8a5f86a59861bfe5",
+        "ja": "5e0f4915ae16f1ddf7d57e992d244185e0d662e3e2ebdcec4b9b726b438d4fc0",
+        "en": "7adcd7b45dd7651f272211f7970a49b74d66e481a4f638c92338aa91cdb758e9"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-07-23",
+      "timestamp": "2026-07-22T19:52:34Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "73741ab73cf1b27ad9b3d9e0a50007adedd5457d873d276b774079e7c592d2c4",
+        "ja": "5ccbd1f7977305723283d7199cf9c096c7447bc7929f6d2c5ec54ed4afb40409",
+        "en": "fa42845a8f3c9abd5ce742de793473cbd0c3e03362dfe1a3f4d7727319e5db3f"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-07-05",
+      "timestamp": "2026-07-05T03:35:57Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "38f454c3332271defc666ce3934fa9dafe00b0afd56fbf96974e44cb6c7d7296",
+        "ja": "0944d7fc266e76afbfde966f5763d11aaf802937b483406af78bbc66a2d5df21",
+        "en": "262b24eebe6587798bf862902820bd10813354138fcbbe2b458fc94b15015f75"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-06-26",
+      "timestamp": "2026-06-25T15:31:40Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "a69f5c07cc9cf89f2daa62672a127f4656d8289fea5f8b483e84f2fe7a15cf4b",
+        "ja": "d9820b0bdd2b4741cb758ea0782c79919027be4316a72f97302fedc03b4cea9d",
+        "en": "a685b6ce900d0f3476a8803f42af1b6f1f784654c57edd799b6f8cddd6f8b323"
+      }
+    },
+    {
+      "id": "pipi-log-ios-history-1.0",
+      "version": "1.0",
+      "app": "pipi-log",
+      "platform": "ios",
+      "date": "2026-06-18",
+      "timestamp": "2026-06-18T12:30:16Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6770272665",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-log",
+        "commit": "f7bbb86e5a63f87787f0400e6afdc31dcaffac0f",
+        "path": "docs/release/1.0.0.md"
+      }
+    },
+    {
+      "id": "dialogos-ios-observed-20261117",
+      "version": "1.1.0",
+      "app": "dialogos",
+      "platform": "ios",
+      "date": "2026-11-17",
+      "timestamp": "2026-11-16T20:21:14Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6780508628",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "21faadc38aba9e517615d78e827312fc61510b4070c04014f45ada7fdccaa570",
+        "ja": "ff090fe570fc26941fdd331eb5fdade748a7dc75dbd8f07a5c62268c34dacf49",
+        "en": "4720d25545efcd1de7e6b98cbf64527b853dc0115a65c1a6a15948e7d485b30b"
+      }
+    },
+    {
+      "id": "dialogos-ios-history-1.0.4",
+      "version": "1.0.4",
+      "app": "dialogos",
+      "platform": "ios",
+      "date": "2026-11-13",
+      "timestamp": "2026-11-13T10:52:44Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6780508628",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "704dc621ea21ae215caef8e5e624225f323ae48f77de23b8b3fa477304fee517",
+        "ja": "cdab9e5b19bc3d2672331c79fe6d1d7995197bb9933066d9545009c19d769f78",
+        "en": "565e0a231b3ccc4a5e133ef6ba1c1718586bd9dfc664aa5b4dc860c6c27d6f08"
+      }
+    },
+    {
+      "id": "dialogos-public",
+      "version": "1.0.3",
+      "app": "dialogos",
+      "platform": "ios",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-22T17:12:06Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6780508628",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "fab928e47b0542e5aa167e6441af662fb5017e25a693a9cb79705bddf8771e26",
+        "ja": "dce0fc962d05723cfaae87a185394c04f0d79ccc352220579d9c936756aa3b39",
+        "en": "7c61a9225e0c06d73b4cf663e00b3f7ea7b214f53e1eb6836c685515b3889fd6"
+      }
+    },
+    {
+      "id": "dialogos-ios-history-1.0.2",
+      "version": "1.0.2",
+      "app": "dialogos",
+      "platform": "ios",
+      "date": "2026-10-21",
+      "timestamp": "2026-10-20T18:04:08Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6780508628",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-thus",
+        "commit": "df6198ab022528719dbbb8298a4dd4be31102ef2",
+        "path": "docs/release/1.0.2.md"
+      }
+    },
+    {
+      "id": "pipi-sudoku-ios-102",
+      "version": "1.0.2",
+      "app": "pipi-sudoku",
+      "platform": "ios",
+      "date": "2026-11-01",
+      "timestamp": "2026-10-31T16:42:26Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6820125053",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {
+        "ko": "35623cc72640a517ec07d4e9bf23ccae37222948a5400ed826e69784ff9cb62e",
+        "ja": "69c4351d3f56a59c33354e0a7db61f5036c082778b8c24cf288fcdc2d0cd0b73",
+        "en": "b1379e62b49dfa232f75090e487e42f932f0539bc2ac8df7f416806c1ecd991b"
+      }
+    },
+    {
+      "id": "pipi-sudoku-ios-history-1.0.1",
+      "version": "1.0.1",
+      "app": "pipi-sudoku",
+      "platform": "ios",
+      "date": "2026-10-29",
+      "timestamp": "2026-10-28T16:47:52Z",
+      "source": "app-store-version-history",
+      "url": "https://apps.apple.com/kr/app/id6820125053",
+      "observedAt": "2026-11-19",
+      "storefront": "KR",
+      "notesSha256": {},
+      "releaseNotesReference": {
+        "repository": "pifl-labs/pipi-sudoku",
+        "commit": "93528886d3e11788b184ad0beffd4ca45fd3a5d8",
+        "path": "docs/release/1.0.1.md"
+      }
+    },
+    {
+      "id": "pipi-bp-android-observed-20261117",
+      "app": "pipi-bp",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-05",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bp&hl=ko&gl=KR",
+      "consoleDate": "11월 5일 오후 3:35",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "31727ccf75a5582cda5632c6ff49cff314d5172ddcc78fe1da338f6098a016a5",
+      "builds": [
+        {
+          "date": "2026-11-05",
+          "shown": "11월 5일 오후 3:35"
+        }
+      ],
+      "storeListingUpdated": "2026-10-27"
+    },
+    {
+      "id": "pipi-bridge-android-history-1.0.0-r1",
+      "app": "pipi-bridge",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-09-14",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 14일 오후 9:51",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "1e876305938cd66d58d305f847e10e63faf6198cda11e2ae354e9794af401967",
+      "builds": [
+        {
+          "build": "20",
+          "date": "2026-09-14",
+          "shown": "2026년 9월 14일 오후 9:51"
+        }
+      ]
+    },
+    {
+      "id": "pipi-bridge-android-history-1.0.1-r2",
+      "app": "pipi-bridge",
+      "platform": "android",
+      "version": "1.0.1",
+      "date": "2026-10-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 13일 오후 6:01",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "48b76ff8c33fca11c168e1e1bdff8042a8799327c3e1f282e008535f50c4fc2c",
+      "builds": [
+        {
+          "build": "22",
+          "date": "2026-10-13",
+          "shown": "2026년 10월 13일 오후 6:01"
+        }
+      ]
+    },
+    {
+      "id": "pipi-bridge-android-history-1.0.2-r3",
+      "app": "pipi-bridge",
+      "platform": "android",
+      "version": "1.0.2",
+      "date": "2026-10-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 22일 오후 6:50",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "bbac00d13cba6058bdaec6ef23770493beb707e6bda5fafcd9ba7e349229e79e",
+      "builds": [
+        {
+          "build": "23",
+          "date": "2026-10-22",
+          "shown": "2026년 10월 22일 오후 6:50"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.0.2-r5",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.0.2",
+      "date": "2026-07-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 7월 22일 오후 2:09",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "445441c9897f8732e860d7c1cc83d4c8c5ad54c8a37c5d20ab8bb07eec3a11e8",
+      "builds": [
+        {
+          "build": "14",
+          "date": "2026-07-22",
+          "shown": "2026년 7월 22일 오후 2:09"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.0.4-r6",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.0.4",
+      "date": "2026-08-11",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 11일 오후 6:09",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "1359cf6dcd552e68159bc4af9a6d255adc9d891aff2c61c8dc02adbc45714311",
+      "builds": [
+        {
+          "build": "17",
+          "date": "2026-08-11",
+          "shown": "2026년 8월 11일 오후 6:09"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.1.0-r7",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-08-25",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 25일 오후 5:11",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "64c5f27812d0043e1e9b104939b66e8eea5994b5c757df30dd7848563d62e099",
+      "builds": [
+        {
+          "build": "20",
+          "date": "2026-08-25",
+          "shown": "2026년 8월 25일 오후 5:11"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.1.1-r8",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.1.1",
+      "date": "2026-08-25",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 25일 오후 6:37",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "181f4cee712e2b532a074d3b31635dfdb6f8450f3825893dfd5141098c9eb860",
+      "builds": [
+        {
+          "build": "21",
+          "date": "2026-08-25",
+          "shown": "2026년 8월 25일 오후 6:37"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.1.2-r9",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.1.2",
+      "date": "2026-08-25",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 25일 오후 8:54",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "5a4969dc12f80de1671f0c1e99c8640f81a50830143d915e0ac2effe7c527262",
+      "builds": [
+        {
+          "build": "22",
+          "date": "2026-08-25",
+          "shown": "2026년 8월 25일 오후 8:54"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.1.3-r10",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.1.3",
+      "date": "2026-09-01",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 1일 오후 8:46",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "f1465f593a13d415bd0e8e1d7020ad89c7b42393fd389cbfd0b69233a41b1dca",
+      "builds": [
+        {
+          "build": "26",
+          "date": "2026-09-01",
+          "shown": "2026년 9월 1일 오후 8:46"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.1.4-r11",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.1.4",
+      "date": "2026-10-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 13일 오전 9:08",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "b3b6a46ab1766a74603ad042f49f065950768a5d6f607f98b5f5dbd23456d661",
+      "builds": [
+        {
+          "build": "27",
+          "date": "2026-10-13",
+          "shown": "2026년 10월 13일 오전 9:08"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-1.1.5-r12",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "1.1.5",
+      "date": "2026-10-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 13일 오전 11:33",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "f3db12e47bdcdef915e8e9364a431a36ac2ec27b785f4a16b9ed8ef15ece3a4c",
+      "builds": [
+        {
+          "build": "28",
+          "date": "2026-10-13",
+          "shown": "2026년 10월 13일 오전 11:33"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-2.0.0-r13",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "2.0.0",
+      "date": "2026-10-24",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 24일 오전 5:17",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "809ee781912665bcc61019b349015b3a35a85f7e97ea0bffccb0397a825b992f",
+      "builds": [
+        {
+          "build": "41",
+          "date": "2026-10-24",
+          "shown": "2026년 10월 24일 오전 5:17"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-history-2.0.1-r14",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "2.0.1",
+      "date": "2026-10-24",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 24일 오후 3:39",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "a9827c5988d201cc86e49facad0f81154e77de77122d90a0beec3180d129e650",
+      "builds": [
+        {
+          "build": "43",
+          "date": "2026-10-24",
+          "shown": "2026년 10월 24일 오후 3:39"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-observed-20261117",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "2.0.2",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 13일 오후 3:46",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "aa2f7f9272c0b43f28bf7336a1be811ef4234aa0e745086e23783291bc3b098f",
+      "builds": [
+        {
+          "build": "45",
+          "date": "2026-11-13",
+          "shown": "2026년 11월 13일 오후 3:46"
+        }
+      ]
+    },
+    {
+      "id": "pipi-dday-android-203",
+      "app": "pipi-dday",
+      "platform": "android",
+      "version": "2.0.3",
+      "date": "2026-11-18",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dday&hl=ko&gl=KR",
+      "consoleDate": "11월 18일 오전 6:06",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "6743f4d64f73917cc0468dd2c29510d3ff7eeb1a2b817b3e9d7efb62f1824114",
+      "builds": [
+        {
+          "date": "2026-11-18",
+          "shown": "11월 18일 오전 6:06"
+        }
+      ],
+      "storeListingUpdated": "2026-11-18"
+    },
+    {
+      "id": "pipi-draw-android-history-1.0.11-r12",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.0.11",
+      "date": "2026-09-28",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 28일 오후 8:40",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "3a25a0643e1fde6812b3560b4062ceaf04a150535bae5da870763ddbcb0e2da7",
+      "builds": [
+        {
+          "build": "38",
+          "date": "2026-09-28",
+          "shown": "2026년 9월 28일 오후 8:40"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.0.12-r13",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.0.12",
+      "date": "2026-09-29",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 29일 오후 9:55",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "ae213c3555e70296b7e6d9fe56f79c26479c8e9d0834cb0fb6d842fc3fab6d28",
+      "builds": [
+        {
+          "build": "41",
+          "date": "2026-09-29",
+          "shown": "2026년 9월 29일 오후 9:55"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.1.0-r14",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-01",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 1일 오후 5:48",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "dafbf6429745137a5fe7d728fe66994a5ed8a1e35bad794658f4014c07726b15",
+      "builds": [
+        {
+          "build": "45",
+          "date": "2026-10-01",
+          "shown": "2026년 10월 1일 오후 5:48"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.1.1-r15",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.1.1",
+      "date": "2026-10-08",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 8일 오전 12:21",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "4e3368f5e9797a9c6caf40a131300c366eaa2247b9f9e9f649c784627a369369",
+      "builds": [
+        {
+          "build": "46",
+          "date": "2026-10-08",
+          "shown": "2026년 10월 8일 오전 12:21"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.1.2-r16",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.1.2",
+      "date": "2026-10-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 13일 오후 5:29",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "19e7c508fa798f2de531de19dbaace3a0b8262398e1f9d5f68002b7037e03df1",
+      "builds": [
+        {
+          "build": "47",
+          "date": "2026-10-13",
+          "shown": "2026년 10월 13일 오후 5:29"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.1.3-r17",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.1.3",
+      "date": "2026-10-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 16일 오후 10:50",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "2a111bb3d6f4eea8e27bacf7b5bd37fd6f3942251c72bf4cc4bf0890c65ff73a",
+      "builds": [
+        {
+          "build": "48",
+          "date": "2026-10-16",
+          "shown": "2026년 10월 16일 오후 10:50"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.2.0-r18",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.2.0",
+      "date": "2026-10-19",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 19일 오후 12:58",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "122fdfc9e728bb330e059980ac56e000f3b9efa55bc463c2106421435d0a0fd5",
+      "builds": [
+        {
+          "build": "49",
+          "date": "2026-10-19",
+          "shown": "2026년 10월 19일 오후 12:58"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.2.1-r19",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.2.1",
+      "date": "2026-10-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 22일 오전 1:28",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "4c1a3e4405f69af45342608115461cb9a5652fd58f682fae6aa274224352bedd",
+      "builds": [
+        {
+          "build": "50",
+          "date": "2026-10-22",
+          "shown": "2026년 10월 22일 오전 1:28"
+        }
+      ]
+    },
+    {
+      "id": "draw-android-122",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.2.2",
+      "date": "2026-10-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 23일 오전 6:16",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "eb262dee70da71595296c685597e73f2b02dccadcbbf98889d7ea697dc246712",
+      "builds": [
+        {
+          "build": "52",
+          "date": "2026-10-23",
+          "shown": "2026년 10월 23일 오전 6:16"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.2.3-r21",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.2.3",
+      "date": "2026-10-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 31일 오전 1:39",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "28486fe03d20f1eecbc1c4a6beca3a6687bfeceb452a2809ed55d1e0646d2bfd",
+      "builds": [
+        {
+          "build": "54",
+          "date": "2026-10-31",
+          "shown": "2026년 10월 31일 오전 1:39"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-history-1.2.4-r22",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.2.4",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 13일 오후 1:27",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "2cf04f779f4c0495b6ba4749f2bf92f5de766fc470025504d603774c1ada28dd",
+      "builds": [
+        {
+          "build": "55",
+          "date": "2026-11-13",
+          "shown": "2026년 11월 13일 오후 1:27"
+        }
+      ]
+    },
+    {
+      "id": "pipi-draw-android-observed-20261117",
+      "app": "pipi-draw",
+      "platform": "android",
+      "version": "1.2.5",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.draw&hl=ko&gl=KR",
+      "consoleDate": "11월 16일 오후 2:16",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "cd115f748677c6c98a586e9a325eeaf2393af1b09d5feeb3baf03efacfab1810",
+      "builds": [
+        {
+          "date": "2026-11-16",
+          "shown": "11월 16일 오후 2:16"
+        }
+      ],
+      "storeListingUpdated": "2026-11-16"
+    },
+    {
+      "id": "pipi-dream-android-observed-20261117",
+      "app": "pipi-dream",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.dream&hl=ko&gl=KR",
+      "consoleDate": "11월 13일 오후 4:54",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "0b90b880b3ff7c5604488f019a00ce9682deacb5e4469380138d768a3423436a",
+      "builds": [
+        {
+          "date": "2026-11-13",
+          "shown": "11월 13일 오후 4:54"
+        }
+      ],
+      "storeListingUpdated": "2026-11-13"
+    },
+    {
+      "id": "pipi-focus-android-history-1.0.12-r19",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.0.12",
+      "date": "2026-08-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 31일 오후 6:09",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "eefb039aa531a17150b9a71ad312524234d95d970d1e3d3082ed4af7fbd7bc8f",
+      "builds": [
+        {
+          "build": "36",
+          "date": "2026-08-31",
+          "shown": "2026년 8월 31일 오후 6:09"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.0.13-r20",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.0.13",
+      "date": "2026-09-09",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 9일 오전 6:10",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "da6bac9df694bd17a92994893312fa1c503cc830a161b7d83a59dd1dd43fc4a1",
+      "builds": [
+        {
+          "build": "38",
+          "date": "2026-09-09",
+          "shown": "2026년 9월 9일 오전 6:10"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.0.14-r21",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.0.14",
+      "date": "2026-09-09",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 9일 오전 10:40",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "22ab134b7536b1539d0a1b58d756099c120c99f32e08856d972583fad492d156",
+      "builds": [
+        {
+          "build": "39",
+          "date": "2026-09-09",
+          "shown": "2026년 9월 9일 오전 10:40"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.0.15-r22",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.0.15",
+      "date": "2026-09-10",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 10일 오전 10:59",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "bc1b999f3a7869ab8261ffd76e56e140757c62adba1429b06c125d3ce220188b",
+      "builds": [
+        {
+          "build": "40",
+          "date": "2026-09-10",
+          "shown": "2026년 9월 10일 오전 10:59"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.0.15-r23",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.0.15",
+      "date": "2026-09-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 23일 오후 2:12",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "6474b28656e475a42af7d1b79705fdf1f9890df99b62042fd2d39278fd9e6ab3",
+      "builds": [
+        {
+          "build": "43",
+          "date": "2026-09-23",
+          "shown": "2026년 9월 23일 오후 2:12"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.0.16-r24",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.0.16",
+      "date": "2026-10-05",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 5일 오후 12:08",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "a087cceb30674ca5adcf8c429dcd38dde599399f02b43677ac90646f0b3e3127",
+      "builds": [
+        {
+          "build": "44",
+          "date": "2026-10-05",
+          "shown": "2026년 10월 5일 오후 12:08"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.1.0-r25",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-15",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 15일 오전 10:00",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "3ee24c9d5be4aabff1376eae727a8a6887083c16d702317f04c690c25bd175d2",
+      "builds": [
+        {
+          "build": "45",
+          "date": "2026-10-15",
+          "shown": "2026년 10월 15일 오전 10:00"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.2.0-r26",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.2.0",
+      "date": "2026-10-19",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 19일 오전 12:11",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "f8807fe9fd5c930cbf2822ddbcda3d1e0f73d78b0fba70a4f8d32c7c53a051d7",
+      "builds": [
+        {
+          "build": "51",
+          "date": "2026-10-19",
+          "shown": "2026년 10월 19일 오전 12:11"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.2.1-r27",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.2.1",
+      "date": "2026-10-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 22일 오후 12:16",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "a5db04b9b366a19322e20a0e049264e5c12f50ffbf6d4687b9a52b1f21162501",
+      "builds": [
+        {
+          "build": "52",
+          "date": "2026-10-22",
+          "shown": "2026년 10월 22일 오후 12:16"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.2.2-r28",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.2.2",
+      "date": "2026-10-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 23일 오후 11:35",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "76e747632bb8a96d08627cec36376924e0f04448ee84371600a970937fb6ca2a",
+      "builds": [
+        {
+          "build": "53",
+          "date": "2026-10-23",
+          "shown": "2026년 10월 23일 오후 11:35"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-history-1.2.3-r29",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.2.3",
+      "date": "2026-10-24",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 24일 오후 5:23",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "cfe00dca31773761bd448c24181b4af9482d02a921841545a7f18b30624e9381",
+      "builds": [
+        {
+          "build": "54",
+          "date": "2026-10-24",
+          "shown": "2026년 10월 24일 오후 5:23"
+        }
+      ]
+    },
+    {
+      "id": "pipi-focus-android-observed-20261117",
+      "app": "pipi-focus",
+      "platform": "android",
+      "version": "1.2.4",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.focus&hl=ko&gl=KR",
+      "consoleDate": "11월 16일 오전 8:57",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "093ae375f61a945770e9ba7083248dd7bc0c8d5588be356dcf284688931645f1",
+      "builds": [
+        {
+          "date": "2026-11-16",
+          "shown": "11월 16일 오전 8:57"
+        }
+      ],
+      "storeListingUpdated": "2026-11-16"
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.0-r1",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-06-26",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 6월 26일 오전 10:29",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "059ed376756add0a9a0db120307f4a7d04ed760c7ad2f35b33fb8b8530f8c771",
+      "builds": [
+        {
+          "build": "8",
+          "date": "2026-06-26",
+          "shown": "2026년 6월 26일 오전 10:29"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.2-r2",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.2",
+      "date": "2026-07-30",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 7월 30일 오전 2:18",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "7df96d800edae166805c6c9affc700bee9d2034612daac62a435b92abdf787dd",
+      "builds": [
+        {
+          "build": "18",
+          "date": "2026-07-30",
+          "shown": "2026년 7월 30일 오전 2:18"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.3-r3",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.3",
+      "date": "2026-08-05",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 5일 오후 9:42",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "0a8da4857d7a6803e50e8f19fdb241294a7d50851d7897d9970870dd5684a54f",
+      "builds": [
+        {
+          "build": "19",
+          "date": "2026-08-05",
+          "shown": "2026년 8월 5일 오후 9:42"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.4-r4",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.4",
+      "date": "2026-08-10",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 10일 오후 5:13",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "232a382127286c60c95d68244342f2bd04ba51b72f9ce5cba8026906df614456",
+      "builds": [
+        {
+          "build": "20",
+          "date": "2026-08-10",
+          "shown": "2026년 8월 10일 오후 5:13"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.5-r5",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.5",
+      "date": "2026-08-20",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 20일 오전 4:55",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "c497ceed24404cc33ecf94c22aa0b688725b5aef41768ec284110b97d11be8fa",
+      "builds": [
+        {
+          "build": "21",
+          "date": "2026-08-20",
+          "shown": "2026년 8월 20일 오전 4:55"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.6-r6",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.6",
+      "date": "2026-08-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 31일 오후 6:50",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "adef4836082580f15d6c8adef5b9cb33b3dd3dacc0956ea52de5b4fb52be6bd4",
+      "builds": [
+        {
+          "build": "24",
+          "date": "2026-08-31",
+          "shown": "2026년 8월 31일 오후 6:50"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.7-r7",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.7",
+      "date": "2026-09-21",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 21일 오후 5:55",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "ba5011aa1ed201643a0f78b4debb12f07f80498e3cf29f358eabd43679418382",
+      "builds": [
+        {
+          "build": "25",
+          "date": "2026-09-21",
+          "shown": "2026년 9월 21일 오후 5:55"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.9-r10",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.9",
+      "date": "2026-10-05",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 5일 오후 3:11",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "8129e0de545874d03d68464dc0f218a16a6323854a02c21e4d75c65d4915d4ed",
+      "builds": [
+        {
+          "build": "32",
+          "date": "2026-10-05",
+          "shown": "2026년 10월 5일 오후 3:11"
+        }
+      ]
+    },
+    {
+      "id": "pipi-hello-android-history-1.0.10-r11",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.0.10",
+      "date": "2026-10-17",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 17일 오후 8:00",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "a4b7d86dc8fc797200279c77d94bee1b183323d9a4e05bc5cad84c128a7cd443",
+      "builds": [
+        {
+          "build": "33",
+          "date": "2026-10-17",
+          "shown": "2026년 10월 17일 오후 8:00"
+        }
+      ]
+    },
+    {
+      "id": "kkachi-android-history-1.0.0-r1",
+      "app": "kkachi",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 28일 오후 10:00",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "000888dc4dbc1579cf3f31ba921e3e57457c3f8b4599d60b4ee9ad625c9505b7",
+      "builds": [
+        {
+          "build": "9",
+          "date": "2026-10-28",
+          "shown": "2026년 10월 28일 오후 10:00"
+        }
+      ]
+    },
+    {
+      "id": "kkachi-android-history-1.1.0-r2",
+      "app": "kkachi",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-30",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 30일 오전 3:33",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "ed9a17054ac628a9ebe2e9f7dea861fa1987064bc1d36cfdf6cb262f6884a521",
+      "builds": [
+        {
+          "build": "18",
+          "date": "2026-10-30",
+          "shown": "2026년 10월 30일 오전 3:33"
+        }
+      ]
+    },
+    {
+      "id": "kkachi-android-observed-20261117",
+      "app": "kkachi",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.kkachi&hl=ko&gl=KR",
+      "consoleDate": "10월 31일 오전 1:46",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "6d44da7b1a4a5c7acdc20eb702f6d89820093a288fd6439c7d53efcdc6a2be8d",
+      "builds": [
+        {
+          "build": "22",
+          "date": "2026-10-31",
+          "shown": "10월 31일 오전 1:46"
+        }
+      ],
+      "storeListingUpdated": "2026-10-31"
+    },
+    {
+      "id": "pipi-log-android-history-1.0.0-r2",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-06-17",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 6월 17일 오후 2:29",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "b5aa5ba0534fba7e68aa35cc13ee4d7fda13ae68d3f84eb2e24cb75a573cee86",
+      "builds": [
+        {
+          "build": "6",
+          "date": "2026-06-17",
+          "shown": "2026년 6월 17일 오후 2:29"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.1-r3",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.1",
+      "date": "2026-06-25",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 6월 25일 오전 8:27",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "8d938c32244cf9ef54023d1a5ef5d3da4bab49bee6c93c072c962a5cd4ac0531",
+      "builds": [
+        {
+          "build": "10",
+          "date": "2026-06-25",
+          "shown": "2026년 6월 25일 오전 8:27"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.2-r4",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.2",
+      "date": "2026-07-04",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 7월 4일 오후 10:28",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "4f9d5654b0c0887ad59940ce547a976f4bdb0868254948df8d0086f2fc6d6896",
+      "builds": [
+        {
+          "build": "11",
+          "date": "2026-07-04",
+          "shown": "2026년 7월 4일 오후 10:28"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.4-r5",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.4",
+      "date": "2026-07-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 7월 22일 오후 2:11",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "827dd92f3dedba8ab7bc2387fa2aa0fe5bb17314afbb7181ce5eae55d563bfce",
+      "builds": [
+        {
+          "build": "13",
+          "date": "2026-07-22",
+          "shown": "2026년 7월 22일 오후 2:11"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.6-r6",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.6",
+      "date": "2026-08-10",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 10일 오후 4:38",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "c54501990d68836fc94d0810b796c5ec83b1f7227da0cebcd423b367bced103d",
+      "builds": [
+        {
+          "build": "17",
+          "date": "2026-08-10",
+          "shown": "2026년 8월 10일 오후 4:38"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.7-r7",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.7",
+      "date": "2026-08-20",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 20일 오전 11:33",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "031494cde905e9e59628da0cbd68287ee96c57248b9356cf8eeebeda6562855f",
+      "builds": [
+        {
+          "build": "19",
+          "date": "2026-08-20",
+          "shown": "2026년 8월 20일 오전 11:33"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.8-r8",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.8",
+      "date": "2026-08-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 31일 오후 6:55",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "49c8660f66dc55ce664e00b7bce75f6e7f9f4032717b06a2dba60b60dca621bb",
+      "builds": [
+        {
+          "build": "20",
+          "date": "2026-08-31",
+          "shown": "2026년 8월 31일 오후 6:55"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.9-r9",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.9",
+      "date": "2026-09-10",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 10일 오전 4:00",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "b92b73d5d6cbdc77fcae7a6f0d7e46c7f967592e6a659cdb6ad844e44df92ac6",
+      "builds": [
+        {
+          "build": "21",
+          "date": "2026-09-10",
+          "shown": "2026년 9월 10일 오전 4:00"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.10-r10",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.10",
+      "date": "2026-09-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 23일 오후 7:52",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "8157408fc34c1ce2ed55128c0e1378536f002816387ef42017ae7903f27ec931",
+      "builds": [
+        {
+          "build": "22",
+          "date": "2026-09-23",
+          "shown": "2026년 9월 23일 오후 7:52"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.11-r11",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.11",
+      "date": "2026-10-04",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 4일 오후 11:25",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "35eab94da540acaf7f850f3c580777faefbd0c4d036063480b828b660f8981b4",
+      "builds": [
+        {
+          "build": "23",
+          "date": "2026-10-04",
+          "shown": "2026년 10월 4일 오후 11:25"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.12-r12",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.12",
+      "date": "2026-10-17",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 17일 오후 11:39",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "27e983b625ba5062a22784850a5ea398b1d9f78a1b5f1e6234a3cc7972a2d715",
+      "builds": [
+        {
+          "build": "25",
+          "date": "2026-10-17",
+          "shown": "2026년 10월 17일 오후 11:39"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.13-r13",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.13",
+      "date": "2026-10-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 23일 오전 8:13",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "762874930e30c8b6c109d78028cca3b7a91ca1ed645d18408a28635cc90d9c61",
+      "builds": [
+        {
+          "build": "27",
+          "date": "2026-10-23",
+          "shown": "2026년 10월 23일 오전 8:13"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-history-1.0.14-r14",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.14",
+      "date": "2026-11-04",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 4일 오후 2:53",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "72f925de52d25daafb8db6d34435cd7ec6dcb8e5a3d681e4c5b3a39a1a6492ee",
+      "builds": [
+        {
+          "build": "28",
+          "date": "2026-11-04",
+          "shown": "2026년 11월 4일 오후 2:53"
+        }
+      ]
+    },
+    {
+      "id": "pipi-log-android-observed-20261117",
+      "app": "pipi-log",
+      "platform": "android",
+      "version": "1.0.15",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.log&hl=ko&gl=KR",
+      "consoleDate": "11월 16일 오후 2:20",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "82bae652b32f5e9f8dc6ce9bb72f171e606322da0b0dde13c1fc40ab007cd7dc",
+      "builds": [
+        {
+          "date": "2026-11-16",
+          "shown": "11월 16일 오후 2:20"
+        }
+      ],
+      "storeListingUpdated": "2026-11-16"
+    },
+    {
+      "id": "pipi-sky-android-history-1.0.0-r1",
+      "app": "pipi-sky",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 13일 오후 12:52",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "aa0c188412fa6ac67fa8c64fe4728b773317573d2a9c32475484624731286f93",
+      "builds": [
+        {
+          "build": "54",
+          "date": "2026-11-13",
+          "shown": "2026년 11월 13일 오후 12:52"
+        }
+      ]
+    },
+    {
+      "id": "pipi-sky-android-history-1.0.0-r2",
+      "app": "pipi-sky",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 13일 오후 4:27",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "a1f6db33443810ccc1fb1a8d6a73b5e663b648e4cdefecb027d94d75f3a37e89",
+      "builds": [
+        {
+          "build": "55",
+          "date": "2026-11-13",
+          "shown": "2026년 11월 13일 오후 4:27"
+        }
+      ]
+    },
+    {
+      "id": "pipi-sky-android-history-1.0.0-r3",
+      "app": "pipi-sky",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 16일 오전 1:36",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "0625bb9e52c43c6b29a3a04fb17a34bd3eb8c0391bd7088f6c546d2fd8f38f9f",
+      "builds": [
+        {
+          "build": "56",
+          "date": "2026-11-16",
+          "shown": "2026년 11월 16일 오전 1:36"
+        }
+      ]
+    },
+    {
+      "id": "pipi-sky-android-observed-20261117",
+      "app": "pipi-sky",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sky&hl=ko&gl=KR",
+      "consoleDate": "11월 16일 오후 6:24",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "799e23e73970d4b71d29f9be9ac3f3b3c474b6b5d40710d0115af807e02a850e",
+      "builds": [
+        {
+          "build": "57",
+          "date": "2026-11-16",
+          "shown": "11월 16일 오후 6:24"
+        }
+      ],
+      "storeListingUpdated": "2026-11-16"
+    },
+    {
+      "id": "pipi-spend-android-observed-20261117",
+      "app": "pipi-spend",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.spend&hl=ko&gl=KR",
+      "consoleDate": "11월 3일 오후 9:12",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "9d690c543d427671d211ab29b98b7b34f28af833ce337a7893153a04b66b0996",
+      "builds": [
+        {
+          "date": "2026-11-03",
+          "shown": "11월 3일 오후 9:12"
+        }
+      ],
+      "storeListingUpdated": "2026-10-28"
+    },
+    {
+      "id": "pipi-sudoku-android-history-1.0.0-r1",
+      "app": "pipi-sudoku",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-10-21",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 21일 오후 11:40",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "0bcede9839b04846adcd648145c8ed60934891e83d11166577262ee5033c26e9",
+      "builds": [
+        {
+          "build": "1",
+          "date": "2026-10-21",
+          "shown": "2026년 10월 21일 오후 11:40"
+        }
+      ]
+    },
+    {
+      "id": "pipi-sudoku-android-history-1.0.1-r2",
+      "app": "pipi-sudoku",
+      "platform": "android",
+      "version": "1.0.1",
+      "date": "2026-10-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 23일 오전 10:47",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "c365db3937b1ea5e089a9224486d58b8643b4fb5299e36c40ec0c87b50a78427",
+      "builds": [
+        {
+          "build": "12",
+          "date": "2026-10-23",
+          "shown": "2026년 10월 23일 오전 10:47"
+        }
+      ]
+    },
+    {
+      "id": "pipi-sudoku-android-observed-20261117",
+      "app": "pipi-sudoku",
+      "platform": "android",
+      "version": "1.0.2",
+      "date": "2026-10-29",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.sudoku&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 29일 오후 6:17",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "90ad1f36ae8a9113d88df71d67edf296cb91d027d2870b7b815034b198e2094d",
+      "builds": [
+        {
+          "build": "13",
+          "date": "2026-10-29",
+          "shown": "2026년 10월 29일 오후 6:17"
+        },
+        {
+          "build": "14",
+          "date": "2026-10-29",
+          "shown": "10월 29일 오후 9:55"
+        }
+      ],
+      "storeListingUpdated": "2026-10-29"
+    },
+    {
+      "id": "dialogos-android-history-1.0.0-r1",
+      "app": "dialogos",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-10-01",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 1일 오후 10:21",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "a8efa177954551e31857392cab377e476a39c926aae7c039f928947d7bd26c9f",
+      "builds": [
+        {
+          "build": "8",
+          "date": "2026-10-01",
+          "shown": "2026년 10월 1일 오후 10:21"
+        }
+      ]
+    },
+    {
+      "id": "dialogos-android-history-1.0.0-r2",
+      "app": "dialogos",
+      "platform": "android",
+      "version": "1.0.0",
+      "date": "2026-10-03",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 3일 오후 11:52",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "ce5308b7a4872d669b8556f6dfab9fbcd20ba65b210c0ce183391a9416af0954",
+      "builds": [
+        {
+          "build": "9",
+          "date": "2026-10-03",
+          "shown": "2026년 10월 3일 오후 11:52"
+        }
+      ]
+    },
+    {
+      "id": "dialogos-android-history-1.0.2-r3",
+      "app": "dialogos",
+      "platform": "android",
+      "version": "1.0.2",
+      "date": "2026-10-19",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 19일 오후 6:07",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "45b0e9fd44c6823a23f7b4048f95cf05d633c2152294e3a51e6c6673bda87cc6",
+      "builds": [
+        {
+          "build": "17",
+          "date": "2026-10-19",
+          "shown": "2026년 10월 19일 오후 6:07"
+        }
+      ]
+    },
+    {
+      "id": "dialogos-android-history-1.0.3-r4",
+      "app": "dialogos",
+      "platform": "android",
+      "version": "1.0.3",
+      "date": "2026-10-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 22일 오후 3:26",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "5fe73f294f9cf95d3f3a128275d6846152880e8d6012a21a5603d6dfc23c254d",
+      "builds": [
+        {
+          "build": "18",
+          "date": "2026-10-22",
+          "shown": "2026년 10월 22일 오후 3:26"
+        }
+      ]
+    },
+    {
+      "id": "dialogos-android-history-1.0.4-r5",
+      "app": "dialogos",
+      "platform": "android",
+      "version": "1.0.4",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 13일 오후 7:08",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "4c513aee59fae6d53981184f5f086e56130128786f6f80ade03ee508d7e4c9f9",
+      "builds": [
+        {
+          "build": "19",
+          "date": "2026-11-13",
+          "shown": "2026년 11월 13일 오후 7:08"
+        }
+      ]
+    },
+    {
+      "id": "dialogos-android-observed-20261117",
+      "app": "dialogos",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.thus&hl=ko&gl=KR",
+      "consoleDate": "11월 16일 오후 4:16",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "2b1a234b9b25bc90914033aaef4c36351588718e8216d374a8a1213b5d98af86",
+      "builds": [
+        {
+          "date": "2026-11-16",
+          "shown": "11월 16일 오후 4:16"
+        }
+      ],
+      "storeListingUpdated": "2026-11-16"
+    },
+    {
+      "id": "pipi-tide-android-history-1.0.5-r1",
+      "app": "pipi-tide",
+      "platform": "android",
+      "version": "1.0.5",
+      "date": "2026-10-12",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 12일 오후 9:23",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "594a061be8a11583cb1e59fb9ebec2ba973b95aa00ad39e396ff1dbc8bdc2041",
+      "builds": [
+        {
+          "build": "9",
+          "date": "2026-10-12",
+          "shown": "2026년 10월 12일 오후 9:23"
+        }
+      ]
+    },
+    {
+      "id": "pipi-tide-android-history-1.1.0-r2",
+      "app": "pipi-tide",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 13일 오후 12:12",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "82d5c34d95c655b4846df12afcdc694c30c72d5af428597b396c5ce59f26e600",
+      "builds": [
+        {
+          "build": "12",
+          "date": "2026-10-13",
+          "shown": "2026년 10월 13일 오후 12:12"
+        }
+      ]
+    },
+    {
+      "id": "pipi-tide-android-history-1.1.1-r3",
+      "app": "pipi-tide",
+      "platform": "android",
+      "version": "1.1.1",
+      "date": "2026-10-19",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 19일 오후 5:06",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "513f9fa39c824bc05c14712b4915446492ab810c4b29e9b370f0e0b6e17f1b09",
+      "builds": [
+        {
+          "build": "13",
+          "date": "2026-10-19",
+          "shown": "2026년 10월 19일 오후 5:06"
+        }
+      ]
+    },
+    {
+      "id": "pipi-tide-android-history-1.1.2-r4",
+      "app": "pipi-tide",
+      "platform": "android",
+      "version": "1.1.2",
+      "date": "2026-10-22",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 22일 오전 7:32",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "e4ecb18db7ddff54eb7b352757fbad0afc0d52c3d176bce5e8c6460e9b2da6a3",
+      "builds": [
+        {
+          "build": "14",
+          "date": "2026-10-22",
+          "shown": "2026년 10월 22일 오전 7:32"
+        }
+      ]
+    },
+    {
+      "id": "pipi-tide-android-history-1.1.3-r5",
+      "app": "pipi-tide",
+      "platform": "android",
+      "version": "1.1.3",
+      "date": "2026-10-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 23일 오후 5:28",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "642753095932d5be8e7126d7b303bf94ea0bc7c611782245ba7cc42af228d038",
+      "builds": [
+        {
+          "build": "15",
+          "date": "2026-10-23",
+          "shown": "2026년 10월 23일 오후 5:28"
+        }
+      ]
+    },
+    {
+      "id": "pipi-tide-android-observed-20261117",
+      "app": "pipi-tide",
+      "platform": "android",
+      "version": "1.2.0",
+      "date": "2026-10-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.tide&hl=ko&gl=KR",
+      "consoleDate": "10월 31일 오후 4:42",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "b889cad8dc57b4f4a2d4498ae1463079c2b21724d4077fcefa8f2461d62eecd8",
+      "builds": [
+        {
+          "date": "2026-10-31",
+          "shown": "10월 31일 오후 4:42"
+        }
+      ],
+      "storeListingUpdated": "2026-10-31"
+    },
+    {
+      "id": "pipi-words-android-history-1.0.6-r6",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.6",
+      "date": "2026-08-02",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 2일 오후 11:03",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "fedd264491a723c8f897ce6d92424ca6050d81941699dd999081850c8721f7a8",
+      "builds": [
+        {
+          "build": "19",
+          "date": "2026-08-02",
+          "shown": "2026년 8월 2일 오후 11:03"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.7-r7",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.7",
+      "date": "2026-08-10",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 10일 오후 4:03",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "fe1012b7bb4286316fa99068e568e81e7fef6e0d0d196555caa5476b27aae821",
+      "builds": [
+        {
+          "build": "20",
+          "date": "2026-08-10",
+          "shown": "2026년 8월 10일 오후 4:03"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.8-r8",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.8",
+      "date": "2026-08-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 16일 오전 1:07",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "795be68d00162473f30398d83784188df525cef695468751f1822b92cfc1f2da",
+      "builds": [
+        {
+          "build": "21",
+          "date": "2026-08-16",
+          "shown": "2026년 8월 16일 오전 1:07"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.9-r9",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.9",
+      "date": "2026-08-20",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 8월 20일 오전 12:21",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "cc19696f2dde4eb073aab1cee664e7b5dc971596dac25bd87870fd1fce1a37ba",
+      "builds": [
+        {
+          "build": "22",
+          "date": "2026-08-20",
+          "shown": "2026년 8월 20일 오전 12:21"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.12-r10",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.12",
+      "date": "2026-09-10",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 10일 오전 11:24",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "88e2d90bd2bfc462cc563627b34cfb43b9fd0972848156442783e08d39cd03f9",
+      "builds": [
+        {
+          "build": "26",
+          "date": "2026-09-10",
+          "shown": "2026년 9월 10일 오전 11:24"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.12-r11",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.12",
+      "date": "2026-09-11",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 11일 오후 9:42",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "9ab6acaa6a9f80d646300b141302cc88096b71d00f3f2a97642978a36acdcace",
+      "builds": [
+        {
+          "build": "28",
+          "date": "2026-09-11",
+          "shown": "2026년 9월 11일 오후 9:42"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.12-r12",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.12",
+      "date": "2026-10-04",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 4일 오후 11:41",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "295c3399aae1d3a2a880bf43cd944edff7cd84919770c55eed15567ae876431e",
+      "builds": [
+        {
+          "build": "30",
+          "date": "2026-10-04",
+          "shown": "2026년 10월 4일 오후 11:41"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.13-r13",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.13",
+      "date": "2026-10-19",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 19일 오후 2:13",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "1767cfae4490cf8db88a980cade81ba89b275fdc9cdd59bfe8809b0413b5b9e8",
+      "builds": [
+        {
+          "build": "31",
+          "date": "2026-10-19",
+          "shown": "2026년 10월 19일 오후 2:13"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.0.14-r14",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.0.14",
+      "date": "2026-10-19",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 19일 오후 8:46",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "1b0edd91cccba6eb3cff37441eaffdec4e72d667eb17137f52297c1ccad1920a",
+      "builds": [
+        {
+          "build": "32",
+          "date": "2026-10-19",
+          "shown": "2026년 10월 19일 오후 8:46"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-110",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-11-02",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 2일 오후 6:22",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "7abb3672b075284a306316afc095c417e2bae8ee3a9695c4aab84c8abf6696c1",
+      "builds": [
+        {
+          "build": "37",
+          "date": "2026-11-02",
+          "shown": "2026년 11월 2일 오후 6:22"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-observed-20261117",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.1.1",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 16일 오후 2:49",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "ce35fb183651e5aee8bc4dc5a0f86393c4641acb3b78fc60dd658f2c7e104491",
+      "builds": [
+        {
+          "build": "38",
+          "date": "2026-11-16",
+          "shown": "2026년 11월 16일 오후 2:49"
+        }
+      ]
+    },
+    {
+      "id": "pipi-words-android-history-1.1.2-r17",
+      "app": "pipi-words",
+      "platform": "android",
+      "version": "1.1.2",
+      "date": "2026-11-18",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "consoleDate": "11월 18일 오전 8:21",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "1e33b5fa8cb8459778a079fe063d66786961d67e951c6eacf86bf018820bb66c",
+      "builds": [
+        {
+          "date": "2026-11-18",
+          "shown": "11월 18일 오전 8:21"
+        }
+      ],
+      "storeListingUpdated": "2026-11-18"
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.0.6-r10",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.0.6",
+      "date": "2026-09-14",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 14일 오전 1:57",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "b5223d09e9a32664c3047f7a2c5924aacce58111a9ef6ae81cf1b4cf22e4c706",
+      "builds": [
+        {
+          "build": "20",
+          "date": "2026-09-14",
+          "shown": "2026년 9월 14일 오전 1:57"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.0.7-r11",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.0.7",
+      "date": "2026-09-23",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 9월 23일 오후 1:31",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "d39f3f8c9fbf2e17533f77ad50cc3bd99de02c9d054e0c51a5e2aa1fc716de72",
+      "builds": [
+        {
+          "build": "25",
+          "date": "2026-09-23",
+          "shown": "2026년 9월 23일 오후 1:31"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.0.8-r12",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.0.8",
+      "date": "2026-10-04",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 4일 오후 12:50",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "18861fcf7d94276d4381af91e40fd414f04626c14764c696bdaa8799cc529097",
+      "builds": [
+        {
+          "build": "26",
+          "date": "2026-10-04",
+          "shown": "2026년 10월 4일 오후 12:50"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.0.9-r13",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.0.9",
+      "date": "2026-10-05",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 5일 오후 4:50",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "b47b0d24b1f45efca5e20f32cb7589866051826897670a1263597d52755dfc57",
+      "builds": [
+        {
+          "build": "27",
+          "date": "2026-10-05",
+          "shown": "2026년 10월 5일 오후 4:50"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.0.10-r14",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.0.10",
+      "date": "2026-10-18",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 18일 오후 6:08",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "3ffdd728f785a0dff2957f1ac7ae154f29a3c84d69fefaf1f7c10657d1ce895a",
+      "builds": [
+        {
+          "build": "28",
+          "date": "2026-10-18",
+          "shown": "2026년 10월 18일 오후 6:08"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.1.0-r15",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-21",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 21일 오후 9:54",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "7a20b68741176c1c291d3ce875fd0c8e1fa695df7c3e956728d3dd5a468f2584",
+      "builds": [
+        {
+          "build": "31",
+          "date": "2026-10-21",
+          "shown": "2026년 10월 21일 오후 9:54"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.2.0-r16",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.2.0",
+      "date": "2026-10-30",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 30일 오후 5:23",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "01a239bae0fa62348127f44778b2417756c9c5336c165d4620b89f01616bcf8e",
+      "builds": [
+        {
+          "build": "32",
+          "date": "2026-10-30",
+          "shown": "2026년 10월 30일 오후 5:23"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.3.0-r17",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.3.0",
+      "date": "2026-10-31",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 10월 31일 오후 3:45",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "872a40bdaff8a4c3aa55d381884bd860bc1d506c5895806ae1fa9fdae981f29b",
+      "builds": [
+        {
+          "build": "33",
+          "date": "2026-10-31",
+          "shown": "2026년 10월 31일 오후 3:45"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.3.1-r18",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.3.1",
+      "date": "2026-11-01",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 1일 오후 1:14",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "1b9f88d87935e6a0200c89e635be81d25e1a2712040f664d6aaf63a258046074",
+      "builds": [
+        {
+          "build": "34",
+          "date": "2026-11-01",
+          "shown": "2026년 11월 1일 오후 1:14"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.4.0-r19",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.4.0",
+      "date": "2026-11-03",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 3일 오전 5:43",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "ef5de6d1ae15a1aec338b13099420bb1a3383ca14c953e0edaf2a0c2b9dce9a0",
+      "builds": [
+        {
+          "build": "35",
+          "date": "2026-11-03",
+          "shown": "2026년 11월 3일 오전 5:43"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-history-1.4.1-r20",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.4.1",
+      "date": "2026-11-04",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "2026년 11월 4일 오후 3:53",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "90e27c868ce3c2c9f31231c8c9efab32846ae9b7fee34f79d7d4a27ccbb8ccaa",
+      "builds": [
+        {
+          "build": "36",
+          "date": "2026-11-04",
+          "shown": "2026년 11월 4일 오후 3:53"
+        }
+      ]
+    },
+    {
+      "id": "pipi-word-voyage-android-observed-20261117",
+      "app": "pipi-word-voyage",
+      "platform": "android",
+      "version": "1.4.2",
+      "date": "2026-11-16",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.wordvoyage&hl=ko&gl=KR",
+      "consoleDate": "11월 16일 오전 11:48",
+      "status": "published",
+      "publicationProof": "available-on-google-play",
+      "notesSha256": "65baa9c64a2a5cc915bc7c8ce3ead3e3ce6a83199d6482027294c39c22a64649",
+      "builds": [
+        {
+          "date": "2026-11-16",
+          "shown": "11월 16일 오전 11:48"
+        }
+      ],
+      "storeListingUpdated": "2026-11-16"
+    },
+    {
+      "id": "pipi-hello-android-observed-20261117",
+      "app": "pipi-hello",
+      "platform": "android",
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.hello&hl=ko&gl=KR",
+      "consoleDate": "10월 28일 오후 9:39",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "c5f7e73fb116976b84fdc87af9c3a35b2af89d4483a323c5b71c4850c36efc6e",
+      "builds": [
+        {
+          "date": "2026-10-28",
+          "shown": "10월 28일 오후 9:39"
+        }
+      ],
+      "storeListingUpdated": "2026-10-25"
+    },
+    {
+      "id": "pipi-bridge-android-observed-20261117",
+      "app": "pipi-bridge",
+      "platform": "android",
+      "version": "1.0.3",
+      "date": "2026-11-13",
+      "observedAt": "2026-11-19",
+      "source": "play-production-history",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge&hl=ko&gl=KR",
+      "consoleDate": "11월 13일 오후 12:05",
+      "status": "published",
+      "publicationProof": "production-rollout-started",
+      "notesSha256": "69bc7b7a5503386f496faebca58c09d2a7d0d42d3f72771efee2e22635cdd488",
+      "builds": [
+        {
+          "date": "2026-11-13",
+          "shown": "11월 13일 오후 12:05"
+        }
+      ],
+      "storeListingUpdated": "2026-11-10"
+    }
+  ],
+  "matches": [
+    {
+      "app": "pipi-bridge",
+      "version": "1.0.0",
+      "ios": "pipi-bridge-ios-history-1.0.0",
+      "android": "pipi-bridge-android-history-1.0.0-r1",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-bridge",
+      "version": "1.0.1",
+      "ios": "pipi-bridge-ios-history-1.0.1",
+      "android": "pipi-bridge-android-history-1.0.1-r2",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-bridge",
+      "version": "1.0.2",
+      "ios": "pipi-bridge-public",
+      "android": "pipi-bridge-android-history-1.0.2-r3",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-dday",
+      "version": "1.0.2",
+      "ios": "pipi-dday-ios-history-1.0.2",
+      "android": "pipi-dday-android-history-1.0.2-r5",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-dday",
+      "version": "1.0.4",
+      "ios": "pipi-dday-ios-history-1.0.4",
+      "android": "pipi-dday-android-history-1.0.4-r6",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-dday",
+      "version": "1.1.4",
+      "ios": "pipi-dday-ios-history-1.1.4",
+      "android": "pipi-dday-android-history-1.1.4-r11",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-dday",
+      "version": "1.1.5",
+      "ios": "pipi-dday-public",
+      "android": "pipi-dday-android-history-1.1.5-r12",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-dday",
+      "version": "2.0.3",
+      "ios": "pipi-dday-ios-history-2.0.3",
+      "android": "pipi-dday-android-203",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.0.11",
+      "ios": "pipi-draw-ios-history-1.0.11",
+      "android": "pipi-draw-android-history-1.0.11-r12",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.1.0",
+      "ios": "pipi-draw-ios-history-1.1.0",
+      "android": "pipi-draw-android-history-1.1.0-r14",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.1.1",
+      "ios": "pipi-draw-ios-history-1.1.1",
+      "android": "pipi-draw-android-history-1.1.1-r15",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.1.2",
+      "ios": "draw-112",
+      "android": "pipi-draw-android-history-1.1.2-r16",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.1.3",
+      "ios": "pipi-draw-ios-history-1.1.3",
+      "android": "pipi-draw-android-history-1.1.3-r17",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.2.0",
+      "ios": "pipi-draw-ios-history-1.2.0",
+      "android": "pipi-draw-android-history-1.2.0-r18",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.2.1",
+      "ios": "pipi-draw-ios-history-1.2.1",
+      "android": "pipi-draw-android-history-1.2.1-r19",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.2.2",
+      "ios": "pipi-draw-ios-history-1.2.2",
+      "android": "draw-android-122",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.2.3",
+      "ios": "draw-123",
+      "android": "pipi-draw-android-history-1.2.3-r21",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.2.4",
+      "ios": "pipi-draw-ios-history-1.2.4",
+      "android": "pipi-draw-android-history-1.2.4-r22",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-draw",
+      "version": "1.2.5",
+      "ios": "pipi-draw-ios-observed-20261117",
+      "android": "pipi-draw-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.0.12",
+      "ios": "pipi-focus-ios-history-1.0.12",
+      "android": "pipi-focus-android-history-1.0.12-r19",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.0.14",
+      "ios": "pipi-focus-ios-history-1.0.14",
+      "android": "pipi-focus-android-history-1.0.14-r21",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.0.16",
+      "ios": "focus-1016",
+      "android": "pipi-focus-android-history-1.0.16-r24",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.2.1",
+      "ios": "focus-121",
+      "android": "pipi-focus-android-history-1.2.1-r27",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.2.2",
+      "ios": "pipi-focus-ios-history-1.2.2",
+      "android": "pipi-focus-android-history-1.2.2-r28",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.2.3",
+      "ios": "focus-123",
+      "android": "pipi-focus-android-history-1.2.3-r29",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-focus",
+      "version": "1.2.4",
+      "ios": "pipi-focus-ios-observed-20261117",
+      "android": "pipi-focus-android-observed-20261117",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-hello",
+      "version": "1.0.3",
+      "ios": "pipi-hello-ios-history-1.0.3",
+      "android": "pipi-hello-android-history-1.0.3-r3",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-hello",
+      "version": "1.0.4",
+      "ios": "pipi-hello-ios-history-1.0.4",
+      "android": "pipi-hello-android-history-1.0.4-r4",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-hello",
+      "version": "1.0.5",
+      "ios": "pipi-hello-ios-history-1.0.5",
+      "android": "pipi-hello-android-history-1.0.5-r5",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-hello",
+      "version": "1.0.7",
+      "ios": "pipi-hello-ios-history-1.0.7",
+      "android": "pipi-hello-android-history-1.0.7-r7",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-hello",
+      "version": "1.0.10",
+      "ios": "pipi-hello-public",
+      "android": "pipi-hello-android-history-1.0.10-r11",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.2",
+      "ios": "pipi-log-ios-history-1.0.2",
+      "android": "pipi-log-android-history-1.0.2-r4",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.4",
+      "ios": "pipi-log-ios-history-1.0.4",
+      "android": "pipi-log-android-history-1.0.4-r5",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.6",
+      "ios": "pipi-log-ios-history-1.0.6",
+      "android": "pipi-log-android-history-1.0.6-r6",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.7",
+      "ios": "pipi-log-ios-history-1.0.7",
+      "android": "pipi-log-android-history-1.0.7-r7",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.8",
+      "ios": "pipi-log-ios-history-1.0.8",
+      "android": "pipi-log-android-history-1.0.8-r8",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.10",
+      "ios": "pipi-log-ios-history-1.0.10",
+      "android": "pipi-log-android-history-1.0.10-r10",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.11",
+      "ios": "pipi-log-ios-history-1.0.11",
+      "android": "pipi-log-android-history-1.0.11-r11",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.12",
+      "ios": "pipi-log-public",
+      "android": "pipi-log-android-history-1.0.12-r12",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.13",
+      "ios": "pipi-log-1013",
+      "android": "pipi-log-android-history-1.0.13-r13",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.14",
+      "ios": "pipi-log-ios-history-1.0.14",
+      "android": "pipi-log-android-history-1.0.14-r14",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-log",
+      "version": "1.0.15",
+      "ios": "pipi-log-ios-observed-20261117",
+      "android": "pipi-log-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-sudoku",
+      "version": "1.0.2",
+      "ios": "pipi-sudoku-ios-102",
+      "android": "pipi-sudoku-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "dialogos",
+      "version": "1.0.2",
+      "ios": "dialogos-ios-history-1.0.2",
+      "android": "dialogos-android-history-1.0.2-r3",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "dialogos",
+      "version": "1.0.3",
+      "ios": "dialogos-public",
+      "android": "dialogos-android-history-1.0.3-r4",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "dialogos",
+      "version": "1.0.4",
+      "ios": "dialogos-ios-history-1.0.4",
+      "android": "dialogos-android-history-1.0.4-r5",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "dialogos",
+      "version": "1.1.0",
+      "ios": "dialogos-ios-observed-20261117",
+      "android": "dialogos-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.0.6",
+      "ios": "pipi-words-ios-history-1.0.6",
+      "android": "pipi-words-android-history-1.0.6-r6",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.0.7",
+      "ios": "pipi-words-ios-history-1.0.7",
+      "android": "pipi-words-android-history-1.0.7-r7",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.0.8",
+      "ios": "pipi-words-ios-history-1.0.8",
+      "android": "pipi-words-android-history-1.0.8-r8",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.0.9",
+      "ios": "pipi-words-ios-history-1.0.9",
+      "android": "pipi-words-android-history-1.0.9-r9",
+      "method": "same-scope-reviewed"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.0.12",
+      "ios": "pipi-words-public",
+      "android": "pipi-words-android-history-1.0.12-r12",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.1.1",
+      "ios": "pipi-words-ios-observed-20261117",
+      "android": "pipi-words-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-words",
+      "version": "1.1.2",
+      "ios": "pipi-words-ios-history-1.1.2",
+      "android": "pipi-words-android-history-1.1.2-r17",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.0.6",
+      "ios": "pipi-word-voyage-ios-history-1.0.6",
+      "android": "pipi-word-voyage-android-history-1.0.6-r10",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.0.7",
+      "ios": "pipi-word-voyage-ios-history-1.0.7",
+      "android": "pipi-word-voyage-android-history-1.0.7-r11",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.0.8",
+      "ios": "pipi-word-voyage-ios-history-1.0.8",
+      "android": "pipi-word-voyage-android-history-1.0.8-r12",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.0.9",
+      "ios": "pipi-word-voyage-ios-history-1.0.9",
+      "android": "pipi-word-voyage-android-history-1.0.9-r13",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.0.10",
+      "ios": "pipi-word-voyage-ios-history-1.0.10",
+      "android": "pipi-word-voyage-android-history-1.0.10-r14",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.1.0",
+      "ios": "pipi-word-voyage-public",
+      "android": "pipi-word-voyage-android-history-1.1.0-r15",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.2.0",
+      "ios": "pipi-word-voyage-ios-history-1.2.0",
+      "android": "pipi-word-voyage-android-history-1.2.0-r16",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.3.0",
+      "ios": "pipi-word-voyage-ios-history-1.3.0",
+      "android": "pipi-word-voyage-android-history-1.3.0-r17",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.3.1",
+      "ios": "pipi-word-voyage-131",
+      "android": "pipi-word-voyage-android-history-1.3.1-r18",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.4.0",
+      "ios": "pipi-word-voyage-ios-history-1.4.0",
+      "android": "pipi-word-voyage-android-history-1.4.0-r19",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.4.1",
+      "ios": "pipi-word-voyage-ios-history-1.4.1",
+      "android": "pipi-word-voyage-android-history-1.4.1-r20",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-word-voyage",
+      "version": "1.4.2",
+      "ios": "pipi-word-voyage-ios-observed-20261117",
+      "android": "pipi-word-voyage-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-hello",
+      "version": "1.1.0",
+      "ios": "pipi-hello-110",
+      "android": "pipi-hello-android-observed-20261117",
+      "method": "same-release-notes"
+    },
+    {
+      "app": "pipi-bridge",
+      "version": "1.0.3",
+      "ios": "pipi-bridge-ios-observed-20261117",
+      "android": "pipi-bridge-android-observed-20261117",
+      "method": "same-release-notes"
+    }
+  ]
+}

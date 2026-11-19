@@ -12,7 +12,9 @@ export const refreshReceipt=JSON.parse(readFileSync(new URL('../../docs/release/
 const refreshDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-refresh-source-deltas-20261117.json',import.meta.url),'utf8'));
 export const storeRecheck=JSON.parse(readFileSync(new URL('../../docs/release/homepage-store-recheck-20261118.json',import.meta.url),'utf8'));
 const storeRecheckDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-store-recheck-source-deltas-20261118.json',import.meta.url),'utf8'));
-export const laterLayers=[storeRecheckDeltas,refreshDeltas,screenshotDeltas,laterDeltas];
+export const historyLatest=JSON.parse(readFileSync(new URL('../../docs/release/homepage-current-store-20261119.json',import.meta.url),'utf8'));
+const historyDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-current-store-source-deltas-20261119.json',import.meta.url),'utf8'));
+export const laterLayers=[historyDeltas,storeRecheckDeltas,refreshDeltas,screenshotDeltas,laterDeltas];
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const reverseRow=(row,file,text)=>{
  for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}
@@ -36,12 +38,15 @@ export function beforeReleaseSync(file,text){
 }
 const suffixes={'pipi-word-voyage':'wordvoyage',dialogos:'thus',kkachi:'kkachi'};
 export const packageFor=slug=>'com.pifl.pipi.'+(suffixes[slug]??slug.replace('pipi-',''));
-export const currentIOS=slug=>refreshReceipt.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));
-export const currentAndroid=slug=>{const prior=refreshReceipt.android.find(a=>a.package===packageFor(slug));return slug==='pipi-dday'?{...prior,...storeRecheck.android.find(a=>a.package===packageFor(slug))}:prior;};
+export const currentIOS=slug=>{const prior=refreshReceipt.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));const latest=historyLatest.ios.find(a=>a.app===slug);return latest?{...prior,...latest}:prior;};
+export const currentAndroid=slug=>{const prior=refreshReceipt.android.find(a=>a.package===packageFor(slug));const latest=historyLatest.android.find(a=>a.app===slug);return latest?{...prior,...latest}:slug==='pipi-dday'?{...prior,...storeRecheck.android.find(a=>a.package===packageFor(slug))}:prior;};
 export const androidDay=a=>a.updated.match(/\d+/g).map((s,i)=>i?s.padStart(2,'0'):s).join('-');
 
-export const checkedAtFor=(slug,platform)=>slug==='pipi-dday'&&platform==='android'?storeRecheck.observedAt:refreshReceipt.observedAt;
+export const checkedAtFor=(slug,platform)=>historyLatest[platform].some(a=>a.app===slug)?historyLatest.observedAt:slug==='pipi-dday'&&platform==='android'?storeRecheck.observedAt:refreshReceipt.observedAt;
 export const currentIOSName=(slug,lang)=>{const C={ko:'KR',ja:'JP',en:'US'}[lang];return syncReceipt.ios[C].apps.find(a=>a.bundleId===packageFor(slug))?.trackName??currentIOS(slug)?.trackName};
 export const currentAndroidName=(slug,lang)=>lang==='ko'||slug==='pipi-tide'?currentAndroid(slug)?.name:syncReceipt.nativeAndroidNames[{ja:'JP',en:'US'}[lang]].apps.find(a=>new URL(a.url).searchParams.get('id')===packageFor(slug))?.name;
 
-export const expectedRelease=(slug,platform)=>{const r=platform==='ios'?currentIOS(slug):currentAndroid(slug);return {version:r.version,updated:platform==='ios'?r.currentVersionReleaseDate.slice(0,10):androidDay(r),checkedAt:checkedAtFor(slug,platform)};};
+const kstDay = timestamp => new Intl.DateTimeFormat('sv-SE',{
+timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',
+}).format(new Date(timestamp));
+export const expectedRelease=(slug,platform)=>{const r=platform==='ios'?currentIOS(slug):currentAndroid(slug);return {version:r.version,updated:platform==='ios'?(historyLatest.ios.some(a=>a.app===slug)?kstDay(r.currentVersionReleaseDate):r.currentVersionReleaseDate.slice(0,10)):androidDay(r),checkedAt:checkedAtFor(slug,platform)};};

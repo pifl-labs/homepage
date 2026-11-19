@@ -44,7 +44,7 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
      {archiveReleaseCards.filter(card=>card.sortDate.startsWith(year)).map(card=>{
       const app=appList.find(a=>a.slug===card.app)!;
       return <li data-event data-event-id={card.id} data-app={card.app} data-year={year} data-platform={card.releases.map(r=>r.platform).join(' ')} data-kind={card.kind}>
-       <article><div class="archive-record-meta"><img src={appIconSrc(card.app)} width="24" height="24" alt=""/><a href={`?app=${card.app}`} data-archive-app={card.app}>{appName(app,lang)}</a><span class="archive-version">v{card.version}</span></div>
+       <article><div class="archive-record-meta"><img src={appIconSrc(card.app)} width="24" height="24" alt=""/><a href={`?app=${card.app}`} data-archive-app={card.app}>{appName(app,lang)}</a><span class="archive-version">v{card.version}</span>{card.releases.length===1 && card.releases[0].build && <span>{c.build} {card.releases[0].build}</span>}</div>
         <h3>{card.title[lang]}</h3><p>{card.summary[lang]}</p>
         <div class="archive-platform-dates">{card.releases.map(r=><div data-release-platform={r.platform} class="archive-platform-date">
          <span>{c.dates[r.publication.basis]}</span> <time datetime={r.publication.date}>{r.publication.date}</time>
@@ -54,6 +54,9 @@ const alternates=['ko','ja','en'].map(l=>({hreflang:l,href:`https://pifl-labs.co
           <h4>{platforms[r.platform]}</h4><dl>
            <div><dt>{c.publicBasis}</dt><dd>{c.sources[r.source]}{r.url&&<> · <a href={r.url}>{c.storeLink}</a></>}</dd></div>
            {r.contentEvidence&&<div><dt>{c.detailSource}</dt><dd>{c.sources[r.contentEvidence.kind]} · {r.version}<br/><a href={r.contentEvidence.url}>{c.saved}</a></dd></div>}
+           {r.historyEvidenceId&&r.contentEvidence?.url!=='/archive-history-sources-20261119.json'&&<div><dt>{c.detailSource}</dt><dd><a href="/archive-history-sources-20261119.json">{c.saved}</a></dd></div>}
+           {r.build&&<div><dt>{c.build}</dt><dd>{r.build}</dd></div>}
+           {r.storeUpdated&&r.publication.basis==='play-console-published'&&r.storeUpdated!==r.publication.date&&<div><dt>{c.dates['play-updated']}</dt><dd><time datetime={r.storeUpdated}>{r.storeUpdated}</time></dd></div>}
            {r.releaseNotesReference&&<div><dt>{c.detailSource}</dt><dd>{c.sources['version-release-document']} · {r.releaseNotesReference.commit.slice(0,8)}</dd></div>}
            {r.publication.reference&&<div><dt>{c.dates['play-production']}</dt><dd>Git {r.publication.reference}</dd></div>}
            {r.publication.timestamp&&<div><dt>{c.updated} (UTC)</dt><dd><time datetime={r.publication.timestamp}>{r.publication.timestamp.slice(0,10)} {r.publication.timestamp.slice(11,19)}</time></dd></div>}

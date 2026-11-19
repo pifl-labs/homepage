@@ -4,7 +4,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {appList,apps,appName,storeAppName,liveAppCount} from '../src/data/apps.ts';
 import {publicPortfolioEvidence} from '../src/data/public-portfolio.ts';
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,beforeLaterEdits,laterLayers,syncDeltas,packageFor,currentAndroidName,currentIOSName} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,beforeLaterEdits,laterLayers,syncDeltas,packageFor,currentAndroidName,currentIOSName,expectedRelease} from './helpers/release-sync-20261116.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const schema=h=>[...h.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1])).find(x=>x['@type']==='SoftwareApplication');
@@ -22,7 +22,7 @@ test('all sixteen observed Android products appear exactly once; Legion alone st
  for(const row of syncReceipt.android.apps){const app=appList.find(a=>packageFor(a.slug)===row.package);assert.ok(app,row.package);assert.equal(app.status,'live');assert.equal(new URL(app.stores.android).searchParams.get('id'),row.package);assert.equal(app.release.android.version,currentAndroid(app.slug).version);assert.equal(app.release.android.updated,androidDay(currentAndroid(app.slug)));}
 });
 test('each published iOS version is sourced from its own current public response',()=>{
- for(const app of appList){const seen=currentIOS(app.slug);assert.equal(Boolean(app.stores.ios),Boolean(seen),app.slug);if(seen){assert.equal(app.release.ios.version,seen.version);assert.equal(app.release.ios.updated,seen.currentVersionReleaseDate.slice(0,10));assert.equal(app.stores.ios.match(/id(\d+)$/)[1],String(seen.trackId));}}
+ for(const app of appList){const seen=currentIOS(app.slug);assert.equal(Boolean(app.stores.ios),Boolean(seen),app.slug);if(seen){assert.equal(app.release.ios.version,seen.version);assert.equal(app.release.ios.updated,expectedRelease(app.slug,'ios').updated);assert.equal(app.stores.ios.match(/id(\d+)$/)[1],String(seen.trackId));}}
 });
 for(const lang of ['ko','ja','en'])test(lang+': displayed names and actual store labels respect current localized or explicitly KR destinations',()=>{
  for(const app of appList.filter(a=>a.status==='live')){

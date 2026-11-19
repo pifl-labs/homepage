@@ -1,5 +1,6 @@
 import {archiveEvents} from './archive.mjs';
 import storeReceipt from '../../docs/release/homepage-store-recheck-20261118.json' with {type:'json'};
+import auditedHistory from './archive-history-20261119.json' with {type:'json'};
 
 const l = (ko, ja, en) => ({ko, ja, en});
 
@@ -103,7 +104,7 @@ const dday203 = {
  contentEvidence:{id:'pipi-dday-android-203',kind:'store-release-notes',checkedAt:storeReceipt.observedAt,url:'/archive-release-notes-20261118.json'},
 };
 
-export const publicArchiveEvents = [...archiveEvents,dday203]
+export const previousPublicArchiveEvents = [...archiveEvents,dday203]
  .filter(e => ['released', 'observed'].includes(e.kind)
    && ['ios', 'android'].includes(e.platform) && e.version
    && ['public-store', 'store-check'].includes(e.source)
@@ -125,6 +126,18 @@ export const publicArchiveEvents = [...archiveEvents,dday203]
  })
  .filter(e=>e.publication)
  .sort((a,b) => releaseDate(b).localeCompare(releaseDate(a)) || a.id.localeCompare(b.id));
+
+// 1.0 and 1.0.0 identify the same historical version within a single
+// platform; leave the provider's display string untouched on the card.
+const historicalKey = e => {
+ const parts=e.version.split(' ')[0].split('.');
+ return [e.app,e.platform,[...parts,...Array(Math.max(0,3-parts.length)).fill('0')].join('.')].join(':');
+};
+const auditedKeys = new Set(auditedHistory.events.map(historicalKey));
+export const publicArchiveEvents = [
+ ...auditedHistory.events,
+ ...previousPublicArchiveEvents.filter(e=>!auditedKeys.has(historicalKey(e))),
+].sort((a,b) => releaseDate(b).localeCompare(releaseDate(a)) || a.id.localeCompare(b.id));
 
 export const publicArchiveApps = [...new Set(publicArchiveEvents.map(e => e.app))];
 
