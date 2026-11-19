@@ -53,7 +53,7 @@
 }
 .app-store-name-note span { display: block; }
 .app-store-name-note--compact { margin: 0; padding: 0 1.6rem 1.1rem; }
-:lang(ko) .app-id-name, :lang(ko) .app-card-name { word-break: keep-all; overflow-wrap: anywhere; }
+:lang(ko) .app-id-name { word-break: keep-all; overflow-wrap: anywhere; }
 .app-id-cat {
   font-family: var(--font-code); font-size: .76rem;
   color: var(--text-muted); letter-spacing: .02em;
@@ -267,62 +267,9 @@
 
 /* ============================================================
    HOME — Apps 섹션 (홈 index.astro 에서 사용)
-   #apps 카드 그리드. stickerbook .section-head/.kicker 와 공존.
+   섹션 여백만 여기에 둔다. 필터·카드·버전은 components/app-catalog.css.
    ============================================================ */
 .apps-home { padding: var(--s-xl) 0; }
-.app-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-md); }
-/* 카드 컨테이너 = article. 안쪽 .app-card-main(랜딩 링크) + .app-card-stores(스토어 직행)
-   — 중첩 <a> 를 피하려고 앵커를 형제로 분리했다. */
-.app-card {
-  display: flex; flex-direction: column;
-  background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg); overflow: hidden;
-  transition: transform var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease),
-    box-shadow var(--dur-base) var(--ease);
-}
-.app-card-main {
-  display: grid; grid-template-columns: auto 1fr auto; align-items: center;
-  gap: 1.25rem; padding: 1.6rem; text-decoration: none; flex: 1;
-}
-.app-card-stores {
-  display: flex; gap: .5rem; flex-wrap: wrap;
-  padding: .75rem 1.6rem 1.1rem;
-  border-top: 1px solid var(--border-default);
-}
-.app-card-store {
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding: .42rem .85rem; border-radius: var(--radius-pill);
-  border: 1px solid var(--border-default);
-  font-family: var(--font-code); font-size: .72rem; font-weight: 600;
-  color: var(--text-secondary); text-decoration: none;
-  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
-}
-.app-card-store:hover { border-color: var(--accent-warm); color: var(--accent-warm); }
-.app-card:hover { transform: translateY(-4px); border-color: var(--border-strong); box-shadow: var(--shadow-glow-sm); }
-.app-card-icon { width: 64px; height: 64px; border-radius: 16px; box-shadow: var(--shadow-sm); }
-.app-card-body { min-width: 0; }
-.app-card-head { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: .15rem; }
-.app-card-name { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text-primary); }
-.app-card-status {
-  font-family: var(--font-code); font-size: .68rem; font-weight: 600;
-  padding: 3px 9px; border-radius: var(--radius-pill);
-}
-.app-card-status--live { background: color-mix(in srgb, var(--neon-teal) 14%, transparent); color: var(--neon-teal); }
-.app-card-status--soon { background: var(--accent-warm-soft); color: var(--accent-warm); }
-.app-card-cat { font-family: var(--font-code); font-size: .74rem; color: var(--text-muted); display: block; margin-bottom: .5rem; }
-.app-card-tag { font-size: .95rem; line-height: 1.5; color: var(--text-secondary); }
-.app-card-go { color: var(--accent-warm); font-size: 1.1rem; transition: transform var(--dur-fast) var(--ease); }
-.app-card:hover .app-card-go { transform: translateX(4px); }
-.app-card-grid { align-items: stretch; }
-
-@media (max-width: 760px) {
-  .app-card-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .app-card-main { grid-template-columns: auto 1fr; padding: 1.25rem; }
-  .app-card-stores { padding: .7rem 1.25rem 1rem; }
-  .app-card-go { display: none; }
-}
 
 /* ─── RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 900px) {
@@ -350,55 +297,6 @@
   .app-features { grid-template-columns: 1fr; }
   .app-shots-scroll { grid-auto-columns: 78vw; }
 }
-
-/* ============================================================
-   HOME — 함대 정비 기록 (components/FleetLog.astro)
-   스토어 실측 버전·업데이트일을 한 줄씩. 숫자는 apps.ts 파생.
-   ============================================================ */
-.fleet-log-section { padding: var(--s-xl) 0; }
-.fleet-log { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
-.fleet-row { margin: 0; }
-.fleet-link {
-  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem;
-  padding: .9rem 1.15rem; text-decoration: none;
-  background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-md);
-  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
-}
-.fleet-link:hover { border-color: var(--border-strong); transform: translateX(3px); }
-.fleet-icon { width: 44px; height: 44px; border-radius: 11px; box-shadow: var(--shadow-sm); }
-.fleet-main { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
-.fleet-name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--text-primary); }
-.fleet-cat { font-family: var(--font-code); font-size: .7rem; color: var(--text-muted); }
-.fleet-meta { display: flex; flex-direction: column; align-items: flex-end; gap: .28rem; text-align: right; }
-.fleet-ver { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; justify-content: flex-end; }
-.fleet-chip {
-  font-family: var(--font-code); font-size: .72rem; font-weight: 600;
-  padding: 3px 9px; border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--neon-teal) 14%, transparent); color: var(--neon-teal);
-  white-space: nowrap;
-}
-.fleet-both { font-family: var(--font-code); font-size: .66rem; color: var(--text-muted); }
-.fleet-date { font-family: var(--font-code); font-size: .72rem; color: var(--text-secondary); white-space: nowrap; }
-.fleet-note {
-  margin-top: 1.1rem; text-align: right;
-  font-family: var(--font-code); font-size: .7rem; color: var(--text-muted);
-}
-
-@media (max-width: 620px) {
-  .fleet-link { grid-template-columns: auto 1fr; row-gap: .5rem; }
-  .fleet-meta { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; }
-  .fleet-note { text-align: left; }
-}
-
-/* ============================================================
-   HOME — 앱 카드 릴리스 줄 (index.astro 카드 그리드)
-   ============================================================ */
-.app-card-rel {
-  display: block; margin-top: .55rem;
-  font-family: var(--font-code); font-size: .7rem; color: var(--text-muted);
-}
-.app-card-rel b { color: var(--text-secondary); font-weight: 600; }
 
 /* 앱 랜딩 — 스토어 실측 릴리스 줄 (버전 · 업데이트일 · 첫 출항) */
 .app-rel-line {
@@ -462,60 +360,11 @@ html[data-theme="light"] .app-page .app-rel-ver { color: var(--text-primary); }
   .app-feature--ja-records p { word-break: auto-phrase; }
 }
 
-/* Homepage: one app-choice surface; store history is optional disclosure. */
-.app-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.app-card { min-width: 0; }
-.apps-home .app-card-main { display: grid; grid-template-columns: 64px minmax(0, 1fr) 126px; align-items: start; gap: 1rem; }
-.app-card-icon { grid-column: 1; }
-.app-card-body { grid-column: 1 / 3; grid-row: 2; }
-.app-card-preview { grid-column: 3; grid-row: 1 / 3; margin: 0; align-self: center; }
-.app-card-preview img { display: block; width: 100%; height: auto; border-radius: .65rem; border: 1px solid var(--border-default); }
-.app-card-preview figcaption { margin-top: .55rem; font-size: .7rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
-.app-card-name { margin: 0; font-size: 1.25rem; line-height: 1.4; text-wrap: pretty; overflow-wrap: anywhere; }
-.app-card-cat { margin-top: .7rem; }
-.app-card-tag { margin: .5rem 0 1rem; line-height: 1.65; text-wrap: pretty; }
-:lang(ko) .app-card-tag { word-break: keep-all; overflow-wrap: anywhere; }
-.app-card-detail { color: var(--accent-warm); font-size: .85rem; font-weight: 700; }
-.app-card-store { min-height: 44px; white-space: normal; overflow-wrap: anywhere; }
-.app-card-main:focus-visible, .app-card-store:focus-visible, .fleet-disclosure summary:focus-visible { outline: 3px solid var(--accent-warm); outline-offset: -3px; }
-.app-card--soon .apps-home .app-card-main { display: grid; grid-template-columns: 64px minmax(0, 1fr); }
-.fleet-log-section { padding-top: 0; }
-.fleet-disclosure { border-block: 1px solid var(--border-default); padding-block: 1rem; }
-.fleet-disclosure summary { cursor: pointer; padding: .75rem; font-size: 1rem; font-weight: 700; }
-.fleet-disclosure[open] .section-sub { margin-block: 1rem; }
-@media (max-width: 1100px) { .app-card-grid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 480px) {
-  .apps-home .app-card-main { display: grid; grid-template-columns: 64px minmax(0, 1fr) 92px; gap: .85rem; padding: 1.15rem; }
-  .app-card-preview { grid-row: 1; }
-  .app-card-body { grid-column: 1 / -1; }
-  .app-card-preview figcaption { font-size: .65rem; }
-}
-@media (prefers-reduced-motion: reduce) { .app-card { transition: none; } .app-card:hover { transform: none; } }
-
-/* Compact comparison cards: the preview must not create an empty icon row. */
+/* Home catalog section spacing. */
 .apps-home { padding-block: 2.5rem; }
 .apps-home .section-head { margin-bottom: 1.5rem; }
-.apps-home .app-card-grid { gap: 1.25rem; }
-.apps-home .app-card-main {
-  grid-template-columns: 52px minmax(0, 1fr) 108px;
-  gap: .6rem 1rem; padding: 1.25rem; align-content: start; flex: none;
-}
-.apps-home .app-card-body { display: block; grid-column: 1 / 3; grid-row: 2; }
-.apps-home .app-card-icon { grid-column: 1; grid-row: 1; width: 52px; height: 52px; border-radius: 13px; }
-.apps-home .app-card-head { grid-column: 2; grid-row: 1; align-self: center; margin: 0; }
-.apps-home .app-previous-name { grid-column: 1 / 3; grid-row: 2; }
-.apps-home .app-card-cat { margin: .4rem 0; }
-.apps-home .app-card-tag { margin: .4rem 0 .65rem; }
-.apps-home .app-card-detail { grid-column: 1 / 3; grid-row: 5; }
-.apps-home .app-card-preview { grid-column: 3; grid-row: 1 / 3; align-self: start; }
-.apps-home .app-card-stores { margin-top: auto; padding: .65rem 1.25rem; }
-.apps-home .app-card--soon .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
 @media (max-width: 600px) {
   .apps-home { padding-block: 1.75rem; }
-  .apps-home .app-card-main { grid-template-columns: 52px minmax(0, 1fr) 76px; padding: 1rem; gap: .6rem .75rem; }
-  .apps-home .app-card-head { grid-column: 2 / -1; }
-  .apps-home .app-card-preview { grid-row: 2; }
-  .apps-home .app-card-stores { padding: .65rem 1rem; }
 }
 /* Home-only hero: retain typography, let content determine the section height. */
 .hero:has(+ .ticker), main > .hero { min-height: 0; padding-block: 2.5rem; }
@@ -525,61 +374,6 @@ main > .hero .hero-stage { min-height: 0; max-width: 420px; }
   main > .hero .hero-grid { gap: 1rem; }
   main > .hero .hero-stage { max-width: 220px; margin: 0 auto; }
 }
-/* Enlarged type needs the full card width; don't squeeze text beside a phone. */
-.apps-home .app-card-grid { container-type: inline-size; }
-@container (max-width: 18em) {
-  .apps-home .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
-  .apps-home .app-card-body { grid-column: 1 / -1; }
-  .apps-home .app-card-preview { grid-column: 1 / -1; grid-row: 3; display: flex; gap: .75rem; align-items: center; }
-  .apps-home .app-card-preview img { width: 64px; flex: none; }
-  .apps-home .app-card-preview figcaption { text-align: start; }
-  .apps-home .app-card-head, .apps-home .app-card-tag { overflow-wrap: anywhere; }
-  .apps-home .ja-reading-unit { white-space: normal; }
-}
-.apps-home .app-card-name { min-width: 0; max-width: 100%; }
-@container (max-width: 18em) {
-  .apps-home .app-name-part { max-width: 100%; overflow-wrap: anywhere; }
-}
-@container (max-width: 18em) {
-  .apps-home .app-card-head { grid-column: 1 / -1; grid-row: 2; }
-  .apps-home .app-card-body { grid-row: 3; }
-  .apps-home .app-card-preview { grid-row: 4; }
-}
-
-/* Shared content rows align paired cards without fixed heights or smaller type. */
-.apps-home .app-card-grid { grid-auto-rows: min-content min-content auto min-content min-content min-content; row-gap: 0; }
-.apps-home .app-card { display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; margin-bottom: 1.25rem; }
-.apps-home .app-card-main { grid-row: span 4; grid-template-rows: subgrid; row-gap: .6rem; grid-template-columns: 52px minmax(0, 1fr) 76px; }
-.apps-home .app-card-head { grid-column: 2; align-self: start; align-items: baseline; }
-.apps-home .app-card-body { display: contents; }
-.apps-home .app-previous-name { flex-basis: 100%; margin: 0; }
-.apps-home .app-card-cat { grid-column: 1 / 3; grid-row: 2; margin: 0; align-self: start; }
-.apps-home .app-card-tag { grid-column: 1 / 3; grid-row: 3; margin: 0; align-self: start; }
-.apps-home .app-card-detail { grid-column: 1 / 3; grid-row: 4; align-self: end; }
-.apps-home .app-card-preview { grid-column: 3; grid-row: 1 / 5; align-self: start; }
-.apps-home .app-card-stores { grid-row: 5; margin: 0; align-items: stretch; }
-.apps-home .app-card-store { flex: 1 1 0; justify-content: center; }
-.apps-home .app-store-name-note { grid-row: 6; }
-.apps-home .app-card--soon .app-card-cat,
-.apps-home .app-card--soon .app-card-tag,
-.apps-home .app-card--soon .app-card-detail { grid-column: 1 / -1; }
-@media (max-width: 600px) {
-  .apps-home .app-card-main { grid-template-columns: 52px minmax(0, 1fr) 76px; }
-}
-@container (max-width: 18em) {
-  .apps-home .app-card-main { grid-template-columns: 52px minmax(0, 1fr); grid-template-rows: auto; }
-  .apps-home .app-card-head { grid-column: 1 / -1; grid-row: 2; }
-  .apps-home .app-card-cat { grid-column: 1 / -1; grid-row: 3; }
-  .apps-home .app-card-tag { grid-column: 1 / -1; grid-row: 4; }
-  .apps-home .app-card-detail { grid-column: 1 / -1; grid-row: 5; }
-  .apps-home .app-card-preview { grid-column: 1 / -1; grid-row: 6; }
-}
-
-@media (max-width: 600px) { .apps-home .app-card-head { grid-column: 2 / -1; } .apps-home .app-card-preview { grid-row: 2 / 5; } }
-@container (max-width: 18em) { .apps-home .app-card-head { grid-column: 1 / -1; } .apps-home .app-card-preview { grid-row: 6; } }
-
-.apps-home .app-card:hover { transform: none; }
-
 /* Detail pages use one reading edge, with natural locale-aware wrapping. */
 .app-page .app-hero { padding-block: clamp(24px, 4vw, 56px); }
 .app-page .app-hero-inner { max-width: none; align-items: flex-start; text-align: start; }
@@ -610,7 +404,6 @@ main > .hero .hero-stage { min-height: 0; max-width: 420px; }
 .app-page .app-cta .app-stores { justify-content: flex-start; }
 .app-media-note { max-width: 65ch; margin-bottom: 1rem; color: var(--text-muted); }
 .app-media-note p { margin: 0 0 .5rem; }
-.app-media-footnote { margin-top: .5rem; color: var(--text-muted); line-height: 1.6; }
 .app-shots-scroll:focus-visible { outline: 2px solid var(--accent-warm); outline-offset: 4px; }
 /* A short name must not wrap its whole identity block below the icon. */
 .app-page .app-id { display: grid; grid-template-columns: 64px minmax(0,1fr); width: 100%; }

@@ -951,15 +951,8 @@ h1.hero-title .strike {
 /* Reflow from available space, including a doubled browser default font.
    Viewport-bounded gutters leave room for whole words instead of shrinking type. */
 .app-section > .container,
-.fleet-log-section > .container,
 .currently > .container,
 .join > .container { padding-inline: var(--page-gutter); }
-
-.fleet-log .fleet-link { display: flex; flex-wrap: wrap; min-width: 0; padding-inline: min(1.15rem, 4vw); }
-/* Keep the name longest word; move release metadata to another row first. */
-.fleet-log .fleet-main { flex: 1 1 min-content; }
-.fleet-log .fleet-meta { min-width: 0; flex-wrap: wrap; }
-.fleet-log .fleet-date { max-width: 100%; white-space: normal; }
 
 @media (max-width: 960px) {
   .currently-inner {
@@ -998,11 +991,6 @@ html[lang^="en"] h1.hero-title .strike { hyphens: auto; }
 .app-page .app-id { flex-wrap: wrap; }
 .app-page .app-id-meta { flex: 1 1 12rem; }
 .app-page .app-hero-title { max-width: 100%; min-width: 0; }
-.apps-home .app-card-main { display: flex; flex-wrap: wrap; padding-inline: min(1.6rem, 4vw); }
-.apps-home .app-card-icon { flex-shrink: 0; }
-.apps-home .app-card-body { flex: 1 1 12rem; min-width: 0; }
-.apps-home .app-card-stores { padding-inline: min(1.6rem, 4vw); }
-.apps-home .app-card-store { max-width: 100%; }
 .apps-home .app-version-part,
 .apps-home .app-release-date { white-space: normal; }
 
@@ -1013,24 +1001,18 @@ html[lang^="en"] h1.hero-title .strike { hyphens: auto; }
 
 html[lang^="ko"] .eyebrow,
 html[lang^="ko"] .currently-text,
-html[lang^="ko"] .slot-desc,
-html[lang^="ko"] .fleet-name { word-break: keep-all; text-wrap: pretty; }
+html[lang^="ko"] .slot-desc { word-break: keep-all; text-wrap: pretty; }
 
 /* Locale reading boundaries for reflowed supporting information.
    KO spaces delimit words; JA prose uses kinsoku, not emergency keep-all splitting. */
 html[lang^="ko"] .annotation-strip > span,
-html[lang^="ko"] .decoder p,
-html[lang^="ko"] .fleet-cat,
-html[lang^="ko"] .app-card-cat,
-html[lang^="ko"] .app-card-tag { word-break: keep-all; text-wrap: pretty; }
+html[lang^="ko"] .decoder p { word-break: keep-all; text-wrap: pretty; }
 html[lang^="ja"] .logbook-entry,
 html[lang^="ja"] .section-sub,
 html[lang^="ja"] .annotation-strip,
 html[lang^="ja"] .decoder p,
 html[lang^="ja"] .app-hero-lede,
-html[lang^="ja"] .app-card-tag,
 html[lang^="ja"] .app-id-name,
-html[lang^="ja"] .app-card-name,
 html[lang^="ja"] .eyebrow { word-break: normal; line-break: strict; overflow-wrap: normal; }
 /* Only explicit short nouns, never an entire paragraph; no dictionary dependency. */
 html[lang^="ja"] .ja-reading-unit { display: inline-block; white-space: nowrap; }
@@ -1041,9 +1023,6 @@ html[lang^="ko"] .kicker,
 html[lang^="ko"] .join-cta .hint { word-break: keep-all; text-wrap: pretty; }
 html[lang^="ja"] .currently-text,
 html[lang^="ja"] .slot-desc,
-html[lang^="ja"] .fleet-name,
-html[lang^="ja"] .fleet-cat,
-html[lang^="ja"] .app-card-cat,
 html[lang^="ja"] .app-id-cat { word-break: normal; line-break: strict; overflow-wrap: normal; }
 
 /* ========== entrance animations ========== */
@@ -1196,17 +1175,13 @@ html[lang^="ko"] .slot-role { word-break: keep-all; }
   background: linear-gradient(180deg, #ffffff, #f7f9fc);
 }
 
-/* Short store labels wrap as whole words; enlarged text may take its own row. */
-.apps-home .app-card .app-card-store { flex: 1 1 8.5em; overflow-wrap: normal; word-break: normal; }
-.apps-home .app-card .app-card-preview figcaption { word-break: keep-all; overflow-wrap: normal; }
 
 /* Supporting copy needs the same readable word boundaries as primary copy.
    Keep ordinary wrapping; neither fixed line breaks nor reduced type sizes. */
-.apps-home .app-media-footnote { text-wrap: pretty; }
-html[lang^="ko"] :is(.app-media-footnote, .app-store-name-note, .app-previous-name, .footer, .scribble) {
+html[lang^="ko"] :is(.app-store-name-note, .app-previous-name, .footer, .scribble) {
   word-break: keep-all;
 }
-html[lang^="ja"] :is(.app-media-footnote, .footer-tagline) {
+html[lang^="ja"] .footer-tagline {
   line-break: strict;
   overflow-wrap: normal;
 }

@@ -50,8 +50,10 @@ test('crew contact sheet adapts to text size and keeps captions in flow',()=>{
 });
 test('supporting copy preserves Korean words and Japanese strict line boundaries',()=>{
  const css=read('public/styles-stickerbook.css');
- assert.match(css,/html\[lang\^="ko"\] :is\(\.app-media-footnote, \.app-store-name-note, \.app-previous-name, \.footer, \.scribble\)\s*\{\s*word-break: keep-all;/);
- assert.match(css,/html\[lang\^="ja"\] :is\(\.app-media-footnote, \.footer-tagline\)\s*\{\s*line-break: strict;\s*overflow-wrap: normal;/);
+ // 2026-11-19: the home media footnote is gone with the old catalog cards; the other surfaces keep their rules.
+ assert.match(css,/html\[lang\^="ko"\] :is\(\.app-store-name-note, \.app-previous-name, \.footer, \.scribble\)\s*\{\s*word-break: keep-all;/);
+ assert.match(css,/html\[lang\^="ja"\] \.footer-tagline\s*\{\s*line-break: strict;\s*overflow-wrap: normal;/);
+ assert.doesNotMatch(css,/app-media-footnote/);
 });
 test('archive compact filters preserve their names',()=>{
  const css=read('public/styles-archive.css');
