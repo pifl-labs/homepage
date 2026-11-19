@@ -72,28 +72,29 @@ test('the content-versioned contrast CSS loads only on Log, not the other app la
 test('home links name the platform rather than relying on hidden decorative glyphs', () => {
   for (const lang of ['ko','ja','en']) {
     const html = readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url), 'utf8');
-    const row = [...html.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m=>m[1]).find(r=>r.includes(`href="/${lang}/apps/pipi-log/"`));
+    const row = [...html.matchAll(/<article\b[^>]*class="fleet-card"[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]).find(r=>r.includes(`href="/${lang}/apps/pipi-log/"`));
     assert.ok(row);
     assert.ok(row.includes(`v${currentIOS('pipi-log').version}`));
     assert.doesNotMatch(row, /Android v1\.0\.13/);
-    assert.equal((row.match(/color: var\(--text-primary\)/g)??[]).length, 2);
+    assert.equal((row.match(/class="fleet-chip"/g)??[]).length, 2);
     assert.match(row,/iOS v1\.0\.15.*datetime="2026-11-17".*Android v1\.0\.15.*datetime="2026-11-16"/s);
   }
 });
 
 test('every changed non-common platform chip uses the existing readable foreground token', () => {
-  const source = readFileSync(new URL('../src/components/FleetLog.astro', import.meta.url), 'utf8');
-  assert.equal((source.match(/class="fleet-chip" style="color: var\(--text-primary\)"/g) ?? []).length, 1);
+  // 2026-11-19: the release list moved into the home cards; the chip foreground is one CSS rule there.
+  const css = readFileSync(new URL('../src/components/app-catalog.css', import.meta.url), 'utf8');
+  assert.match(css, /\.fleet-card-platform \.fleet-chip \{ color: var\(--text-primary\);/);
   for (const lang of ['ko','ja','en']) {
     const html = readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url), 'utf8');
-    const rows = [...html.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
+    const rows = [...html.matchAll(/<article\b[^>]*class="fleet-card"[^>]*>(.*?)<\/article>/gs)].map(m => m[1]);
     let count = 0;
     for (const row of rows) {
       if (!/class="fleet-chip"[^>]*>.*?(?:iOS|Android) v/.test(row)) continue;
       const chips = [...row.matchAll(/<span class="fleet-chip"([^>]*)>(.*?)<\/span>/gs)];
       assert.ok(chips.length > 0);
       for (const chip of chips) {
-        assert.match(chip[1], /style="color: var\(--text-primary\)"/);
+        assert.doesNotMatch(chip[1], /style=/);
         assert.match(chip[2], /(?:iOS|Android) v/);
         count++;
       }

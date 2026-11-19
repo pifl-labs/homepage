@@ -25,7 +25,7 @@ test('Korean Bridge uses the mascot-free store icon, not the retired parrot artw
   assert.notEqual(createHash('sha256').update(retired).digest('hex'), icons['pipi-bridge'].webpSha256);
 });
 test('every icon surface uses the shared resolver', () => {
-  for (const path of ['components/AppCatalog.astro', 'components/FleetLog.astro', 'components/AppLanding.astro', 'pages/go/tiktok.astro']) {
+  for (const path of ['components/AppCatalog.astro', 'components/AppLanding.astro', 'pages/go/tiktok.astro']) {
     const source = readFileSync(new URL(`../src/${path}`, import.meta.url), 'utf8');
     assert.ok(source.includes('appIconSrc('), path);
     assert.ok(!source.includes('/icon.webp'), path);

@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppCatalog from '../../components/AppCatalog.astro';
-import FleetLog from '../../components/FleetLog.astro';
 import AppsJsonLd from '../../components/AppsJsonLd.astro';
 import { fleetLastUpdated, formatDate } from '../../data/apps';
 import { verifiedPublicAppCount } from '../../data/public-portfolio';
@@ -98,7 +97,6 @@ const lang = 'en' as const;
 
 <AppCatalog lang="en" />
 
-<FleetLog lang="en" />
 
 <!-- CREW SECTION -->
 <section class="crew-section" id="crew">
