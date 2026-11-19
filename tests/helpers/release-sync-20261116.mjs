@@ -14,9 +14,11 @@ export const storeRecheck=JSON.parse(readFileSync(new URL('../../docs/release/ho
 const storeRecheckDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-store-recheck-source-deltas-20261118.json',import.meta.url),'utf8'));
 export const historyLatest=JSON.parse(readFileSync(new URL('../../docs/release/homepage-current-store-20261119.json',import.meta.url),'utf8'));
 const historyDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-current-store-source-deltas-20261119.json',import.meta.url),'utf8'));
+/** 2026-11-19 cleanup of CSS for the retired home catalog: AppLanding only re-keys the shared stylesheet URL. */
+const cssCleanupDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-css-cleanup-source-deltas-20261119.json',import.meta.url),'utf8'));
 /** Dialogos 1.1.1 (21) submitted listing: the symposium screen moves to the 2026-11-19 set (new round flow). */
 const dialogos111Deltas=JSON.parse(readFileSync(new URL('../../docs/release/dialogos-111-screenshots-source-deltas-20261119.json',import.meta.url),'utf8'));
-export const laterLayers=[dialogos111Deltas,historyDeltas,storeRecheckDeltas,refreshDeltas,screenshotDeltas,laterDeltas];
+export const laterLayers=[dialogos111Deltas,cssCleanupDeltas,historyDeltas,storeRecheckDeltas,refreshDeltas,screenshotDeltas,laterDeltas];
 /** Sources removed after their last recorded layer. Their last bytes are kept so the history chain still checks;
  *  a retired file must stay absent (re-adding it means recording a new layer instead). */
 export const retiredSources=JSON.parse(readFileSync(new URL('../../docs/release/home-catalog-retired-sources-20261119.json',import.meta.url),'utf8'));

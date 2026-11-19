@@ -20,9 +20,10 @@ test('section title balances existing content and Korean detail lede retains wor
 test('status and dispatch reflow without minimum-content grid expansion',()=>{
  assert.match(css,/\.dispatch-grid \{ grid-template-columns: repeat\(auto-fit, minmax\(min\(100%, 20rem\), 1fr\)\)/);
  assert.match(css,/\.currently-inner \{\s*display: flex; flex-wrap: wrap/);
- assert.match(rule('.fleet-log .fleet-meta'),/flex-wrap:\s*wrap/);
- assert.match(rule('.fleet-log .fleet-date'),/white-space:\s*normal/);
- assert.match(rule('.fleet-log .fleet-date'),/max-width:\s*100%/);
+ // 2026-11-19: release metadata now sits under each store link in the home cards (app-catalog.css).
+ const catalog=readFileSync(new URL('../src/components/app-catalog.css',import.meta.url),'utf8');
+ assert.match(catalog,/\.fleet-card-stores \{[^}]*grid-template-columns: repeat\(auto-fit, minmax\(min\(100%, 8\.5rem\), 1fr\)\)/);
+ assert.match(catalog,/\.fleet-card-platform \{[^}]*min-width: 0;/);
  assert.match(css,/\.app-section > \.container,[\s\S]*?padding-inline: var\(--page-gutter\)/);
 });
 
@@ -31,7 +32,7 @@ test('enlarged information uses real space, wrapping and dictionary hyphens, not
  assert.match(rule('.hero > .container'),/width:\s*100%/);
  assert.match(rule('.hero-grid > *'),/min-width:\s*0/);
  assert.match(css,/\.decoder \{ display: flex; flex-wrap: wrap/);
- assert.match(rule('.apps-home .app-card-body'),/flex: 1 1 12rem; min-width: 0/);
+ assert.match(readFileSync(new URL('../src/components/app-catalog.css',import.meta.url),'utf8'),/\.fleet-card \{[^}]*min-width: 0;/);
  assert.match(css,/\.apps-home \.app-release-date \{ white-space: normal/);
  assert.match(rule('html[lang^="en"] h1.hero-title .strike'),/hyphens:\s*auto/);
  const reflow=css.slice(css.indexOf('/* Enlarged text: keep information'),css.indexOf('/* ========== entrance animations'));
@@ -52,11 +53,14 @@ test('approved R5 makes visitor value the headline with exact approved copy',()=
  }
 });
 
-test('fleet wraps release metadata before sacrificing the name longest word',()=>{
- assert.match(rule('.fleet-log .fleet-link'),/display:\s*flex/);
- assert.match(rule('.fleet-log .fleet-link'),/flex-wrap:\s*wrap/);
- assert.match(rule('.fleet-log .fleet-main'),/flex:\s*1 1 min-content/);
- assert.doesNotMatch(rule('.fleet-log .fleet-main'),/font-size|overflow|text-overflow|scale\(/);
+test('home cards wrap names and versions instead of hiding or shrinking them',()=>{
+ // 2026-11-19: the separate release list (.fleet-log) is retired; its rules left the shared stylesheet.
+ assert.doesNotMatch(css,/\.fleet-log|\.app-card/);
+ const catalog=readFileSync(new URL('../src/components/app-catalog.css',import.meta.url),'utf8');
+ assert.match(catalog,/\.fleet-card-head \{[^}]*min-width: 0;/);
+ assert.match(catalog,/\.fleet-card-name \{[^}]*overflow-wrap: anywhere;/);
+ assert.match(catalog,/\.fleet-card-platform \.fleet-store-version \{ display: flex; flex-direction: column;/);
+ assert.doesNotMatch(catalog,/text-overflow|line-clamp|font-size:\s*0/);
 });
 
 
@@ -75,8 +79,13 @@ test('current portfolio lede retains the separate-app and two-action contract fr
 
 
 test('R6 separates Korean words from Japanese normal strict prose without hiding text',()=>{
- for(const selector of ['.annotation-strip > span','.decoder p','.fleet-cat','.app-card-cat','.app-card-tag'])
+ for(const selector of ['.annotation-strip > span','.decoder p'])
   assert.ok(css.includes('html[lang^="ko"] '+selector));
+ // The home catalog card text keeps the same Korean / Japanese line breaking (app-catalog.css).
+ const catalog=readFileSync(new URL('../src/components/app-catalog.css',import.meta.url),'utf8');
+ assert.match(catalog,/html\[lang\^="ko"\] \.fleet-card-cat,\nhtml\[lang\^="ko"\] \.fleet-card-tag \{ word-break: keep-all;/);
+ assert.match(catalog,/:lang\(ko\) \.fleet-card-name \{ word-break: keep-all;/);
+ assert.match(catalog,/html\[lang\^="ja"\] \.fleet-card-tag \{ word-break: normal; line-break: strict; overflow-wrap: normal; \}/);
  assert.match(css,/html\[lang\^="ja"\] \.eyebrow \{ word-break: normal; line-break: strict; overflow-wrap: normal; \}/);
  assert.match(css,/html\[lang\^="ja"\] \.ja-reading-unit \{ display: inline-block; white-space: nowrap; \}/);
 });
