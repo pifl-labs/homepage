@@ -33,6 +33,9 @@
 /* Same dark ink as the site .btn-primary (styles-stickerbook.css) for contrast on the gradient. */
 .bl-btn--primary { background: var(--gradient-cta); border-color: transparent; color: #020617; }
 .bl-note { color: var(--text-secondary); font-size: .88rem; line-height: 1.65; margin-top: .75rem; }
+/* Same link color as .legal-card a (styles.css); notes sit outside the cards, so they would otherwise get browser blue. */
+.bl-note a, .bl-lede a { color: var(--accent-cta); }
+.bl-note a:hover, .bl-lede a:hover { color: var(--accent-cta-hover); }
 
 .bl-stack { display: grid; gap: 1.25rem; }
 .bl-ui { color: var(--text-primary); font-weight: 700; white-space: normal; }
@@ -121,6 +124,48 @@
 .bl-shared-mission { margin-top: .9rem; color: var(--text-secondary); font-size: .9rem; }
 .bl-shared-mission strong { color: var(--text-primary); }
 
+/* ── Cards list (/cards/): one compact tile per topic, linking to its card page ── */
+.bl-world, .bl-tile, .bl-about { scroll-margin-top: 5.5rem; }
+.bl-tiles {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: .75rem;
+}
+.bl-tile {
+  position: relative; border: 1px solid var(--border-default); border-radius: var(--radius-md);
+  background: var(--bg-card); padding: .85rem 1rem;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.bl-tile:hover { border-color: var(--border-strong); }
+.bl-tile:focus-within { outline: 2px solid var(--accent-cta); outline-offset: 2px; }
+.bl-tile:target { border-color: var(--accent-highlight); }
+.bl-tile-title { font-size: 1.02rem; line-height: 1.35; margin: 0; }
+.bl-tile-title a { color: var(--text-primary); text-decoration: none; }
+.bl-tile-title a:focus-visible { outline: none; }
+/* The whole tile opens the topic card; the link text stays the topic title. */
+.bl-tile-title a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.bl-tile-desc { color: var(--text-secondary); font-size: .85rem; line-height: 1.5; margin-top: .3rem; }
+.bl-tile-meta { color: var(--text-muted); font-size: .75rem; font-weight: 600; margin-top: .45rem; }
+.bl-about { margin-top: 3rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; }
+.bl-about h2 { font-size: 1.15rem; margin: 0; color: var(--text-primary); }
+
+/* ── One topic (/cards/<topic>/) ── */
+/* The page heading and lede already show the area, title and description on screen. */
+@media screen {
+  .bl-solo .bl-card-world, .bl-solo .bl-card > h2, .bl-solo .bl-card-desc { display: none; }
+  .bl-solo .bl-tags { margin-top: 0; }
+}
+.bl-pager { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.bl-pager-link {
+  flex: 1 1 240px; display: grid; gap: .2rem; padding: .8rem 1rem; min-height: 44px;
+  border: 1px solid var(--border-default); border-radius: var(--radius-sm); background: var(--bg-card);
+  color: var(--text-primary); text-decoration: none;
+}
+.bl-pager-link:hover { border-color: var(--border-strong); }
+.bl-pager-link:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 3px; }
+.bl-pager-link--next { text-align: right; margin-left: auto; }
+.bl-pager-label { color: var(--text-muted); font-size: .78rem; font-weight: 600; }
+.bl-pager-title { font-weight: 700; }
+
 .bl-print-only { display: none; }
 
 /* Preserve room for enlarged text on narrow screens, without clipping or shrinking it. */
@@ -187,4 +232,25 @@
   .bl-item dd::after, .bl-phrase-card dd::after { content: "\A"; white-space: pre; }
   .bl-card-desc, .bl-shared-mission { font-size: 8.5pt; }
   .bl-shared-mission { margin-top: 2mm; }
+
+  /* Cards list printed as is: compact tiles, two per row. */
+  .bl-tiles { grid-template-columns: 1fr 1fr; gap: 2.5mm; }
+  .bl-tile { border: 1px solid #777 !important; padding: 2mm 3mm; break-inside: avoid; page-break-inside: avoid; }
+  .bl-tile-title { font-size: 10pt; }
+  .bl-tile-title a { text-decoration: none; }
+  .bl-tile-desc, .bl-tile-meta { font-size: 8pt; margin-top: .5mm; }
+  .bl-about { margin-top: 4mm; padding-top: 0; border: 0; break-before: page; page-break-before: always; }
+
+  /* One topic per page (/cards/<topic>/): the card fills the sheet in larger type. */
+  .bl-solo .bl-card { border: 0 !important; padding: 0; }
+  .bl-solo .bl-card-world { font-size: 8pt; }
+  .bl-solo .bl-card > h2 { font-size: 18pt; margin: 1mm 0 1.5mm; }
+  .bl-solo .bl-card-desc, .bl-solo .bl-shared-mission { font-size: 10pt; }
+  .bl-solo .bl-items { grid-template-columns: 1fr 1fr; gap: 4mm 6mm; margin-top: 4mm; }
+  .bl-solo .bl-item { padding-top: 2.5mm; }
+  .bl-solo .bl-item .bl-ko { font-size: 20pt; }
+  .bl-solo .bl-item-meaning { font-size: 11pt; }
+  .bl-solo .bl-item dt { font-size: 7.5pt; }
+  .bl-solo .bl-item dd { font-size: 10pt; }
+  .bl-print-url { display: block; margin-top: 5mm; font-size: 8pt; }
 }

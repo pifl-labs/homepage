@@ -31,7 +31,7 @@ test('existing adult cues remain separate from translation, and quick start is u
 });
 
 test('rendered bilingual pairs expose the corrected gloss, not just in the data source',()=>{
- const html=load('dist/en/apps/pipi-bridge/library/cards/index.html').replace(/>\s+</g,'><');
+ const html=load('dist/en/apps/pipi-bridge/library/cards/print/index.html').replace(/>\s+</g,'><');
  for(const [korean,english] of [['동물은 숨을 쉬어요','Animals breathe.'],['물에 떠요','It floats on water.'],['사과가 몇 개예요?','How many apples are there?']]){
    assert.ok(html.includes(`<p class="bl-ko" lang="ko">${korean}</p><p class="bl-item-meaning">${english}</p>`),korean);
  }

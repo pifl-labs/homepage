@@ -1,19 +1,57 @@
 ---
-// 영어 Korean Bridge 소개 페이지 전용 — 도서관·교실 안내(/en/apps/pipi-bridge/library/)로 가는 입구.
+// Korean Bridge 소개 페이지(en/ko/ja) — 도서관·교실 안내(/en/apps/pipi-bridge/library/)와
+// 인쇄용 주제 카드(/en/apps/pipi-bridge/library/cards/)로 가는 입구. 두 페이지는 영어 전용이라
+// ko/ja 입구는 링크 이름에 영어 페이지임을 밝힌다(앱의 '(영어 페이지입니다)' 안내와 같은 방식).
 // AppLanding 공용 소스를 고치지 않고 기존 before-showcase 슬롯으로 넣는다. 스타일은 기존
-// .app-bridge-resource(styles-app-landing.css) 위계를 그대로 쓴다.
+// .app-bridge-resource(styles-app-landing.css) 위계를 그대로 쓰고, 링크 두 개의 배치만 library-entry.css.
+import './library-entry.css';
+
+type Lang = 'en' | 'ko' | 'ja';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+// 이름은 앱 화면 문구와 맞춘다(library_strings.dart 'title'·'guide': 도서관·교실 활동 / 図書館・教室の活動, 진행자 안내 / 進行役ガイド).
+const COPY: Record<Lang, { eyebrow: string; title: string; body: string; guide: string; cards: string }> = {
+  en: {
+    eyebrow: 'For libraries and classrooms',
+    title: 'Run a short shared session',
+    body: 'Set a tablet to open on one topic, let pairs take turns, hand over between children, and use a 15-minute plan and printable topic cards.',
+    guide: 'Open the guide',
+    cards: 'Printable topic cards',
+  },
+  ko: {
+    eyebrow: '도서관·교실 활동',
+    title: '공용 태블릿으로 짧게 함께하기',
+    body: '태블릿을 주제 하나로 열어 두고, 둘이 번갈아 하거나 아이를 바꿔 가며 진행할 수 있습니다. 15분 진행안과 인쇄용 주제 카드도 있습니다. 안내와 카드는 영어 페이지입니다.',
+    guide: '진행자 안내 (영어)',
+    cards: '인쇄용 주제 카드 (영어)',
+  },
+  ja: {
+    eyebrow: '図書館・教室の活動',
+    title: '共有タブレットで短く一緒に',
+    body: 'タブレットを1つのテーマで開いておき、2人で交代したり子どもを入れ替えたりしながら進められます。15分の進行案と印刷用のテーマカードもあります。ガイドとカードは英語のページです。',
+    guide: '進行役ガイド（英語）',
+    cards: '印刷用テーマカード（英語）',
+  },
+};
+const c = COPY[lang];
 ---
 <section class="app-section app-section--bridge-resource" id="bridge-library" aria-labelledby="bridge-library-title">
   <div class="container">
     <div class="app-bridge-resource">
       <div>
-        <p class="app-bridge-resource-eyebrow">For libraries and classrooms</p>
-        <h2 id="bridge-library-title">Run a short shared session</h2>
-        <p>Set a tablet to open on one topic, let pairs take turns, hand over between children, and use a 15-minute plan and printable topic cards.</p>
+        <p class="app-bridge-resource-eyebrow">{c.eyebrow}</p>
+        <h2 id="bridge-library-title">{c.title}</h2>
+        <p>{c.body}</p>
       </div>
-      <a class="app-bridge-resource-link" href="/en/apps/pipi-bridge/library/" hreflang="en">
-        <span>Open the guide</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
+      <div class="app-bridge-resource-actions">
+        <a class="app-bridge-resource-link" href="/en/apps/pipi-bridge/library/" hreflang="en">
+          <span>{c.guide}</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="app-bridge-resource-link" href="/en/apps/pipi-bridge/library/cards/" hreflang="en">
+          <span>{c.cards}</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>

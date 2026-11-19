@@ -1,4 +1,7 @@
 ---
 import AppLanding from '../../../../components/AppLanding.astro';
+import LibraryEntry from '../../../../components/pipi-bridge/LibraryEntry.astro';
 ---
-<AppLanding lang="ko" slug="pipi-bridge" />
+<AppLanding lang="ko" slug="pipi-bridge">
+  <LibraryEntry lang="ko" slot="before-showcase" />
+</AppLanding>

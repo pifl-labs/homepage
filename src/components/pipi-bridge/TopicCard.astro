@@ -1,0 +1,32 @@
+---
+// 주제 카드 한 장. 전체 인쇄 페이지(h3, 영역 h2 아래)와 주제별 페이지(h2, 페이지 h1 아래)가 같은 마크업을 쓴다.
+import { sessionTags, sharedMission, worldName, type Topic } from './cards-data';
+
+interface Props { topic: Topic; level?: 2 | 3 }
+const { topic: t, level = 3 } = Astro.props;
+const Heading = level === 2 ? 'h2' : 'h3';
+const shared = sharedMission(t);
+---
+<article class="bl-card" id={t.id} aria-labelledby={`${t.id}-title`}>
+  <p class="bl-card-world">{worldName(t.world)}</p>
+  <Heading id={`${t.id}-title`}>{t.title}</Heading>
+  <p class="bl-card-desc">{t.description}</p>
+  <ul class="bl-tags">
+    {sessionTags(t).map((tag) => <li>{tag}</li>)}
+  </ul>
+  <ol class="bl-items">
+    {t.lessons.map((l) => (
+      <li class="bl-item">
+        <p class="bl-ko" lang="ko">{l.korean}</p>
+        <p class="bl-item-meaning">{l.meaning}</p>
+        {(l.tip !== l.meaning || !shared) && (
+          <dl>
+            {l.tip !== l.meaning && <><dt>Grown-up tip</dt><dd>{l.tip}</dd></>}
+            {!shared && <><dt>Off-screen mission</dt><dd>{l.mission}</dd></>}
+          </dl>
+        )}
+      </li>
+    ))}
+  </ol>
+  {shared && <p class="bl-shared-mission"><strong>Off-screen mission:</strong> {shared}</p>}
+</article>

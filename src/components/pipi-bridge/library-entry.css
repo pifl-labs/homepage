@@ -1,0 +1,8 @@
+/* Korean Bridge 소개 페이지의 도서관·교실 입구(LibraryEntry.astro) — 링크 두 개의 배치만.
+   링크 모양은 styles-app-landing.css 의 .app-bridge-resource-link 그대로. */
+.app-bridge-resource-actions {
+  display: flex; flex-direction: column; align-items: flex-start; gap: .5rem;
+}
+@media (max-width: 760px) {
+  .app-bridge-resource-actions { flex-direction: row; flex-wrap: wrap; column-gap: 1.5rem; }
+}
