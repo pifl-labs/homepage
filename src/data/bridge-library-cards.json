@@ -1263,31 +1263,31 @@
   "lessons": [
    {
     "korean": "사과가 몇 개예요?",
-    "meaning": "Count three apples.",
+    "meaning": "How many apples are there?",
     "tip": "Count three apples.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "별이 몇 개예요?",
-    "meaning": "Count five stars.",
+    "meaning": "How many stars are there?",
     "tip": "Count five stars.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "이 더하기 일은 얼마예요?",
-    "meaning": "Use two fingers and add one.",
+    "meaning": "What is two plus one?",
     "tip": "Use two fingers and add one.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "사 빼기 일은 얼마예요?",
-    "meaning": "Hide one of four fingers.",
+    "meaning": "What is four minus one?",
     "tip": "Hide one of four fingers.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "칠과 오 중 큰 수는 무엇일까요?",
-    "meaning": "Compare 7 and 5.",
+    "meaning": "Which is larger, seven or five?",
     "tip": "Compare 7 and 5.",
     "mission": "Re-create the idea once with safe objects at home."
    }
@@ -1311,31 +1311,31 @@
   "lessons": [
    {
     "korean": "이 사 육 다음 수는 무엇일까요?",
-    "meaning": "Count by twos.",
+    "meaning": "What comes after two, four, six?",
     "tip": "Count by twos.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "빨강 파랑 규칙 다음은 무엇일까요?",
-    "meaning": "Say the repeating color pattern.",
+    "meaning": "What comes next in the red-blue pattern?",
     "tip": "Say the repeating color pattern.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "세모 동그라미 규칙 다음은 무엇일까요?",
-    "meaning": "Name each shape in the pattern.",
+    "meaning": "What comes next in the triangle-circle pattern?",
     "tip": "Name each shape in the pattern.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "동그라미는 어느 모양일까요?",
-    "meaning": "Find the circle.",
+    "meaning": "Which shape is the circle?",
     "tip": "Find the circle.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "세모는 어느 모양일까요?",
-    "meaning": "Find the triangle.",
+    "meaning": "Which shape is the triangle?",
     "tip": "Find the triangle.",
     "mission": "Re-create the idea once with safe objects at home."
    }
@@ -1361,7 +1361,7 @@
   "lessons": [
    {
     "korean": "어느 선이 가장 길까요?",
-    "meaning": "Compare line lengths.",
+    "meaning": "Which line is the longest?",
     "tip": "Compare line lengths.",
     "mission": "Re-create the idea once with safe objects at home."
    },
@@ -1373,19 +1373,19 @@
    },
    {
     "korean": "십 다음 수는 무엇일까요?",
-    "meaning": "Say 10, then the next number.",
+    "meaning": "What number comes after ten?",
     "tip": "Say 10, then the next number.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "십오 앞의 수는 무엇일까요?",
-    "meaning": "Say the number before 15.",
+    "meaning": "What number comes before fifteen?",
     "tip": "Say the number before 15.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "오 더하기 오는 얼마예요?",
-    "meaning": "Make two groups of five.",
+    "meaning": "What is five plus five?",
     "tip": "Make two groups of five.",
     "mission": "Re-create the idea once with safe objects at home."
    }
@@ -1411,31 +1411,31 @@
   "lessons": [
    {
     "korean": "십 빼기 이는 얼마예요?",
-    "meaning": "Start at ten and count back two.",
+    "meaning": "What is ten minus two?",
     "tip": "Start at ten and count back two.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "어느 것이 더 작을까요?",
-    "meaning": "Compare real-world size.",
+    "meaning": "Which one is smaller?",
     "tip": "Compare real-world size.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "위에 있는 것은 무엇일까요?",
-    "meaning": "Use the Korean position word “위”.",
+    "meaning": "Which one is above?",
     "tip": "Use the Korean position word “위”.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "둘로 똑같이 나눈 모양을 골라요.",
-    "meaning": "Talk about two equal parts.",
+    "meaning": "Choose the shape split into two equal parts.",
     "tip": "Talk about two equal parts.",
     "mission": "Re-create the idea once with safe objects at home."
    },
    {
     "korean": "동전 세 개 중 한 개를 쓰면 몇 개 남을까요?",
-    "meaning": "Act it out with three safe objects.",
+    "meaning": "If you spend one of three coins, how many are left?",
     "tip": "Act it out with three safe objects.",
     "mission": "Re-create the idea once with safe objects at home."
    }
@@ -1929,7 +1929,7 @@
    },
    {
     "korean": "세 시 정각",
-    "meaning": "Read an exact hour",
+    "meaning": "Three o'clock exactly.",
     "tip": "Connect sky light with daily routines, then inspect the hour and minute hands separately.",
     "mission": "Look outside and say whether it is morning, daytime, evening or night."
    }
@@ -1963,31 +1963,31 @@
   "lessons": [
    {
     "korean": "하나와 하나를 합치면 몇 개일까요?",
-    "meaning": "Join 1 and 1 to make 2",
+    "meaning": "How many are there if you put one and one together?",
     "tip": "Join and take away safe small objects, then check the result together.",
     "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
    },
    {
     "korean": "둘과 둘을 합치면 몇 개일까요?",
-    "meaning": "Join 2 and 2 to make 4",
+    "meaning": "How many are there if you put two and two together?",
     "tip": "Join and take away safe small objects, then check the result together.",
     "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
    },
    {
     "korean": "셋과 둘을 합치면 몇 개일까요?",
-    "meaning": "Join 3 and 2 to make 5",
+    "meaning": "How many are there if you put three and two together?",
     "tip": "Join and take away safe small objects, then check the result together.",
     "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
    },
    {
     "korean": "다섯에서 둘을 덜면 몇 개일까요?",
-    "meaning": "Take 2 from 5 to make 3",
+    "meaning": "How many are left if you take two away from five?",
     "tip": "Join and take away safe small objects, then check the result together.",
     "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
    },
    {
     "korean": "다섯에서 셋을 덜면 몇 개일까요?",
-    "meaning": "Take 3 from 5 to make 2",
+    "meaning": "How many are left if you take three away from five?",
     "tip": "Join and take away safe small objects, then check the result together.",
     "mission": "Turn off the screen and make one joining or taking-away problem with five blocks."
    }
@@ -2774,31 +2774,31 @@
   "lessons": [
    {
     "korean": "기뻐요",
-    "meaning": "happy face",
+    "meaning": "I'm happy.",
     "tip": "Ask your child for one real experience about happy face.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to happy face. Do not touch any unfamiliar object."
    },
    {
     "korean": "슬퍼요",
-    "meaning": "sad face",
+    "meaning": "I'm sad.",
     "tip": "Ask your child for one real experience about sad face.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to sad face. Do not touch any unfamiliar object."
    },
    {
     "korean": "화가 나요",
-    "meaning": "angry face",
+    "meaning": "I'm angry.",
     "tip": "Ask your child for one real experience about angry face.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to angry face. Do not touch any unfamiliar object."
    },
    {
     "korean": "무서워요",
-    "meaning": "scared face",
+    "meaning": "I'm scared.",
     "tip": "Ask your child for one real experience about scared face.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to scared face. Do not touch any unfamiliar object."
    },
    {
     "korean": "숨을 천천히 쉬어요",
-    "meaning": "slow breathing",
+    "meaning": "Breathe slowly.",
     "tip": "Ask your child for one real experience about slow breathing.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to slow breathing. Do not touch any unfamiliar object."
    }
@@ -2843,19 +2843,19 @@
    },
    {
     "korean": "이를 닦아요",
-    "meaning": "brush teeth",
+    "meaning": "Brush your teeth.",
     "tip": "Ask your child for one real experience about brush teeth.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to brush teeth. Do not touch any unfamiliar object."
    },
    {
     "korean": "횡단보도에서 기다려요",
-    "meaning": "wait and look",
+    "meaning": "Wait at the crosswalk.",
     "tip": "Ask your child for one real experience about wait and look.",
     "mission": "Turn off the screen and, with a grown-up, point to a crosswalk in a picture book indoors. Do not go near a road for this activity."
    },
    {
     "korean": "뜨거워요",
-    "meaning": "hot bowl",
+    "meaning": "It's hot.",
     "tip": "Ask your child for one real experience about hot bowl.",
     "mission": "Turn off the screen and find a steaming bowl in a picture book. Do not touch hot water or dishes; tell a grown-up if you see one."
    },
@@ -2900,31 +2900,31 @@
   "lessons": [
    {
     "korean": "비가 와요",
-    "meaning": "rain",
+    "meaning": "It's raining.",
     "tip": "Ask your child for one real experience about rain.",
     "mission": "Turn off the screen and, with a grown-up, look for rain from safely indoors or in a picture book. Do not go outside or watch a lightning storm for this activity."
    },
    {
     "korean": "식물이 자라요",
-    "meaning": "sprout",
+    "meaning": "A plant grows.",
     "tip": "Ask your child for one real experience about sprout.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to sprout. Do not touch any unfamiliar object."
    },
    {
     "korean": "동물은 숨을 쉬어요",
-    "meaning": "puppy",
+    "meaning": "Animals breathe.",
     "tip": "Ask your child for one real experience about puppy.",
     "mission": "Turn off the screen and, with a grown-up, point to a puppy in an animal picture book. Do not touch or follow an unfamiliar animal."
    },
    {
     "korean": "물에 떠요",
-    "meaning": "leaf",
+    "meaning": "It floats on water.",
     "tip": "Ask your child for one real experience about leaf.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to leaf. Do not touch any unfamiliar object."
    },
    {
     "korean": "그림자를 찾아요",
-    "meaning": "shadow",
+    "meaning": "Find the shadow.",
     "tip": "Ask your child for one real experience about shadow.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to shadow. Do not touch any unfamiliar object."
    }
@@ -2962,31 +2962,31 @@
   "lessons": [
    {
     "korean": "빨강과 노랑",
-    "meaning": "orange",
+    "meaning": "Red and yellow.",
     "tip": "Ask your child for one real experience about orange.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to orange. Do not touch any unfamiliar object."
    },
    {
     "korean": "빠르게, 느리게",
-    "meaning": "snail",
+    "meaning": "Quickly and slowly.",
     "tip": "Ask your child for one real experience about snail.",
     "mission": "Turn off the screen and, with a grown-up, find a snail in a picture book and pretend to move slowly. Do not touch real snails or wildlife."
    },
    {
     "korean": "큰 소리, 작은 소리",
-    "meaning": "quiet voice",
+    "meaning": "Loud and quiet sounds.",
     "tip": "Ask your child for one real experience about quiet voice.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to quiet voice. Do not touch any unfamiliar object."
    },
    {
     "korean": "친구의 말을 들어요",
-    "meaning": "look and listen",
+    "meaning": "Listen to your friend.",
     "tip": "Ask your child for one real experience about look and listen.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to look and listen. Do not touch any unfamiliar object."
    },
    {
     "korean": "다름을 존중해요",
-    "meaning": "be kind and include them",
+    "meaning": "Respect differences.",
     "tip": "Ask your child for one real experience about be kind and include them.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to be kind and include them. Do not touch any unfamiliar object."
    }
@@ -3023,31 +3023,31 @@
   "lessons": [
    {
     "korean": "물이 얼어요",
-    "meaning": "water freezing into ice",
+    "meaning": "Water freezes.",
     "tip": "Ask your child for one real experience about water freezing into ice.",
     "mission": "Turn off the screen and, with a grown-up, find ice in a picture book. Do not open a freezer alone, hold ice for a long time or taste it for this activity."
    },
    {
     "korean": "바람이 불어요",
-    "meaning": "a leaf moving in the wind",
+    "meaning": "The wind is blowing.",
     "tip": "Ask your child for one real experience about a leaf moving in the wind.",
     "mission": "Turn off the screen and, with a grown-up, point to a picture related to a leaf moving in the wind. Do not touch any unfamiliar object."
    },
    {
     "korean": "구름에서 비가 와요",
-    "meaning": "a cloud carrying rain",
+    "meaning": "Rain comes from clouds.",
     "tip": "Ask your child for one real experience about a cloud carrying rain.",
     "mission": "Turn off the screen and, with a grown-up, find a rain cloud in a picture book indoors. During a storm, stay away from windows and do not go outside."
    },
    {
     "korean": "뜨거운 그릇에서 김이 올라와요",
-    "meaning": "a steaming hot bowl",
+    "meaning": "Steam rises from the hot bowl.",
     "tip": "Ask your child for one real experience about a steaming hot bowl.",
     "mission": "Turn off the screen and find a steaming bowl in a picture book. Do not touch hot water or dishes; tell a grown-up if you see one."
    },
    {
     "korean": "햇빛이 비춰요",
-    "meaning": "bright sunlight",
+    "meaning": "The sun is shining.",
     "tip": "Ask your child for one real experience about bright sunlight.",
     "mission": "Turn off the screen and, with a grown-up, point to the sun in a picture book indoors. Never look directly at the real sun."
    }
