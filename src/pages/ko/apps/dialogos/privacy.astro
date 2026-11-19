@@ -14,7 +14,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
         <div class="container">
             <a href="/ko/apps/dialogos/" class="legal-back"><i class="fas fa-arrow-left"></i> Dialogos 소개로 돌아가기</a>
             <h1 class="log-policy-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span class="log-policy-name">Dialogos</span> <span class="log-policy-type"><span class="log-policy-term">개인정보</span><wbr /><span class="log-policy-term">처리방침</span></span></span></h1>
-            <p class="legal-date">시행일: 2026년 11월 16일 <span class="legal-revised">최초 시행: 2026년 6월 14일 · 제공자: PiFl Labs</span></p>
+            <p class="legal-date">시행일: 2026년 11월 19일 <span class="legal-revised">최초 시행: 2026년 6월 14일 · 제공자: PiFl Labs</span></p>
         </div>
     </section>
 
@@ -90,6 +90,7 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                         <ul>
                             <li>대화 수</li>
                             <li>깊은 답 사용 수</li>
+                            <li>무료 향연 판 수</li>
                             <li>위기 상황으로 판단돼 한도에서 제외한 대화 수</li>
                             <li>스토어 구매 확인 요청 수</li>
                         </ul>
@@ -99,7 +100,8 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
                     <li><strong>서비스 전체의 일일 사용 금액 합계</strong>: 비용과 남용을 관리하기 위해 서버는 AI 제공자별로 서비스 전체의 하루 AI 사용 금액 합계 카운터도 보관합니다. 이 카운터들은 특정 기기나 사람과 연결되지 않고 개인정보를 담지 않으며 약 2일 내 자동 만료됩니다.</li>
                     <li><strong>요청 횟수 제한</strong>: 또한 남용 트래픽을 줄이기 위해 서버는 Cloudflare의 요청 횟수 제한(rate limiting) 기능을 사용합니다. 이 기능은 짧은 시간 동안 IP 주소별 요청 수를 세는데, Cloudflare는 IP 주소를 이 카운터의 키로 일시적으로만 사용하며 당사는 IP 주소를 당사 기록에 저장하지 않습니다.</li>
                     <li><strong>운영 로그</strong>: 운영 로그에는 기기 식별자 앞 8자리와 사용 정보(요금제, 답변 방식, 답한 AI 제공자·모델, 토큰 수, 답변 종료 사유, 위기 대응 여부, 구매 확인의 플랫폼·상품·결과 등)만 남기며 대화 내용은 남기지 않습니다.</li>
-                    <li><strong>향연의 운영 로그</strong>: 향연에서는 운영 로그에 철학자 짝·판 번호·판의 방식(누른 답 버튼과, 민감한 주제라 한 철학자만 답한 판인지 포함)·쟁점 카드(말이 그 짝의 쟁점에 닿은 경우)도 남깁니다.</li>
+                    <li><strong>향연의 운영 로그</strong>: 향연에서는 운영 로그에 철학자 짝·판 번호·판의 방식(누른 답 버튼과, 민감한 주제이거나 그날 무료 판을 다 써서 한 철학자만 답한 판인지 포함)·쟁점 카드(말이 그 짝의 쟁점에 닿은 경우)도 남깁니다.</li>
+                    <li>향연의 운영 로그에는 판을 무엇으로 셌는지(무료 판 또는 깊은 대화 묶음)와 앱이 쓰는 향연 방식의 버전도 남깁니다.</li>
                     <li><strong>Cloudflare 요청 로그</strong>: 서버의 Cloudflare 요청 로그(Workers 호출 로그)에는 IP 주소·추정 국가 등 접속 정보가 포함될 수 있으며, 7일 내 자동 삭제됩니다.</li>
                 </ul>
 
@@ -391,6 +393,11 @@ import ScrollableLegalTable from '../../../../components/ScrollableLegalTable.as
 
                 <h2>제15조 (개인정보 처리방침 변경)</h2>
                 <p>본 방침은 변경될 수 있으며, 변경 시 위 시행일을 갱신하고 중요한 변경은 앱 내에서 안내합니다.</p>
+                <p><strong>2026년 11월 19일 개정</strong></p>
+                <ul>
+                    <li>무료 향연 판 수를 세는 기기별 카운터를 추가했습니다(무료 판을 이제 깊은 답과 따로 셉니다).</li>
+                    <li>향연 운영 로그에 판을 무엇으로 셌는지와 앱이 쓰는 향연 방식의 버전을 더했습니다.</li>
+                </ul>
                 <p><strong>2026년 11월 16일 개정</strong></p>
                 <ul>
                     <li>답변은 이제 OpenAI만 생성합니다. Anthropic은 두 제공자를 비교한 2026년 11월 13일까지만 일부 메시지에 답했으며, 그때 받은 대화의 보관 기간은 이 방침에 그대로 둡니다.</li>
