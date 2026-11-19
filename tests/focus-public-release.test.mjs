@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,expectedRelease,refreshReceipt} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,expectedRelease,refreshReceipt,historyLatest} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -73,7 +73,8 @@ for (const lang of ['ko', 'ja', 'en']) {
     const rows = [...catalog.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m => m[1]);
     const focusRow = rows.find(row => row.includes(`href="/${lang}/apps/pipi-focus/"`));
     const observedDates = rows.map(row=>[...row.matchAll(/datetime="([^"]+)"/g)].map(m=>m[1]).sort().at(-1));
-    const latest = liveApps.map(latestUpdate).filter(Boolean).sort().at(-1);
+    const kst = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'});
+    const latest = historyLatest.ios.map(row=>kst.format(new Date(row.currentVersionReleaseDate))).sort().at(-1);
     assert.equal(observedDates[0], latest, 'latest independently observed app update sorts first');
     assert.deepEqual(observedDates, [...observedDates].sort().reverse(), 'all fleet rows remain newest-first');
     assert.match(focusRow, /iOS v1\.2\.4.*datetime="2026-11-17".*Android v1\.2\.4.*datetime="2026-11-16"/s);

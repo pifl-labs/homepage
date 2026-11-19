@@ -1,19 +1,10 @@
 import {publicArchiveEvents} from './archive-public.mjs';
 
-// Matched by reviewed version-specific store notes, or a release document
-// explicitly confirming no platform-specific changes. Version equality alone
-// is not sufficient (Tide and D-Day 2.0.2 are deliberately separate).
-const sharedReleasePairs = [
- ['dialogos-android-observed-20261117','dialogos-ios-observed-20261117'],
- ['pipi-draw-android-observed-20261117','pipi-draw-ios-observed-20261117'],
- ['pipi-focus-android-observed-20261117','pipi-focus-ios-observed-20261117'],
- ['pipi-log-android-observed-20261117','pipi-log-ios-observed-20261117'],
- ['pipi-word-voyage-android-observed-20261117','pipi-word-voyage-ios-observed-20261117'],
- ['pipi-words-android-observed-20261117','pipi-words-ios-observed-20261117'],
- ['pipi-bridge-android-observed-20261117','pipi-bridge-ios-observed-20261117'],
- ['pipi-sudoku-android-observed-20261117','pipi-sudoku-ios-102'],
- ['pipi-hello-android-observed-20261117','pipi-hello-110'],
-];
+import auditedHistory from './archive-history-20261119.json' with {type:'json'};
+
+// The audit pairs exact versions only when official notes or build-specific
+// review establish the same scope. Separate Android builds can share a label.
+const sharedReleasePairs = auditedHistory.matchedPairs;
 
 export function buildReleaseCards(events, pairs = sharedReleasePairs) {
  const byId = new Map(events.filter(e=>e.publication).map(e=>[e.id,e]));

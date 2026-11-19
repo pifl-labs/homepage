@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName,expectedRelease} from './helpers/release-sync-20261116.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -72,7 +72,7 @@ for (const app of appList.filter(a=>current.some(s=>s.slug===a.slug))) {
     if(iosLive){
       const observed=currentIOS(app.slug);
       assert.equal(app.release.ios.version,observed.version);
-      assert.equal(app.release.ios.updated,observed.currentVersionReleaseDate.slice(0,10));
+      assert.equal(app.release.ios.updated,expectedRelease(app.slug,'ios').updated);
       assert.equal(app.release.ios.checkedAt,checkedAtFor(app.slug,'ios'));
     }else assert.equal(app.release?.ios,undefined);
     if(androidLive){

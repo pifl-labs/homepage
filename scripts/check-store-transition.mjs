@@ -18,17 +18,23 @@ const laterAndroid = { 'pipi-word-voyage': laterVoyageAndroid };
 const currentPublic = JSON.parse(readFileSync(new URL('../docs/release/homepage-refresh-public-20261117.json',import.meta.url),'utf8'));
 const recheckPublic = JSON.parse(readFileSync(new URL('../docs/release/homepage-store-recheck-20261118.json',import.meta.url),'utf8'));
 const packageFor=slug=>'com.pifl.pipi.'+({'pipi-word-voyage':'wordvoyage',dialogos:'thus',kkachi:'kkachi'}[slug]??slug.replace('pipi-',''));
-const iosRecord = slug => currentPublic.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));
-const androidRecord = slug => recheckPublic.android.find(a=>a.package===packageFor(slug)) ?? currentPublic.android.find(a=>a.package===packageFor(slug));
+const latest = JSON.parse(readFileSync(new URL('../docs/release/homepage-current-store-20261119.json',import.meta.url),'utf8'));
+const iosRecord = slug => latest.ios.find(a=>a.app===slug) ?? currentPublic.ios.KR.apps.find(a=>a.bundleId===packageFor(slug));
+const androidRecord = slug => latest.android.find(a=>a.app===slug) ?? recheckPublic.android.find(a=>a.package===packageFor(slug)) ?? currentPublic.android.find(a=>a.package===packageFor(slug));
 const iosVersion = (slug) => iosRecord(slug)?.version;
 const androidVersion = (slug) => androidRecord(slug)?.version;
 const shared = (slug) => (iosVersion(slug) === androidVersion(slug) ? iosVersion(slug) : undefined);
-const iosDay = (slug) => iosRecord(slug).currentVersionReleaseDate.slice(0, 10);
+const iosDay = (slug) => {
+  const t = iosRecord(slug).currentVersionReleaseDate;
+  return latest.ios.some(a => a.app === slug)
+    ? new Intl.DateTimeFormat('sv-SE', {timeZone:'Asia/Seoul', year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t))
+    : t.slice(0, 10);
+};
 const playDay = (slug) => androidRecord(slug).updated.match(/\d+/g).map((s,i)=>i?s.padStart(2,'0'):s).join('-');
 const latestDay = (slug) => [iosDay(slug), playDay(slug)].sort().at(-1);
 const { liveApps, formatDate } = await import('../src/data/apps.ts');
 // Expected observation days come from the receipt, so a wrong checkedAt in apps.ts cannot set its own expectation.
-const observationDates = [receipt.map(a=>a.observedAt).sort()[0], recheckPublic.observedAt];
+const observationDates = [receipt.map(a=>a.observedAt).sort()[0], latest.observedAt];
 const observationRange = [observationDates[0], observationDates.at(-1)].filter((d, i, all) => i === 0 || d !== all[0]);
 const versionToken = (prefix, version) => new RegExp(`(?:^|[^\\w.])${prefix}v${version.replace(/\./g, '\\.')}(?![\\w.])`);
 function expectVersionLabel(html, slug, where) {
@@ -84,7 +90,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   const bridgeFleetRow = home.match(/<li class="fleet-row">(?:(?!<\/li>).)*Korean Bridge(?:(?!<\/li>).)*<\/li>/s)?.[0];
   assert.ok(bridgeFleetRow, `${lang}: Bridge maintenance row`);
   assert.ok(bridgeFleetRow.includes(`v${iosVersion('pipi-bridge')}`), `${lang}: verified version is visible`);
-  assert.match(bridgeFleetRow, /data-fleet-platform="ios".*datetime="2026-11-11".*data-fleet-platform="android".*datetime="2026-11-10"/s, `${lang}: each store keeps its own date`);
+  assert.match(bridgeFleetRow, /data-fleet-platform="ios".*datetime="2026-11-19".*data-fleet-platform="android".*datetime="2026-11-13"/s, `${lang}: each store keeps its own date`);
   const focusItem = homeItems.find(a => a.url.endsWith('/pipi-focus/'));
   for (const item of [detailSchema, focusItem]) {
     assert.equal(item.name, name);

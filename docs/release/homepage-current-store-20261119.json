@@ -1,0 +1,47 @@
+{
+  "observedAt": "2026-11-19",
+  "region": "KR",
+  "ios": [
+    {
+      "app": "pipi-bridge",
+      "bundleId": "com.pifl.pipi.bridge",
+      "trackId": 6801205183,
+      "version": "1.1.3",
+      "currentVersionReleaseDate": "2026-11-18T18:25:27Z",
+      "capturedAt": "2026-11-19T06:17:45.819269+00:00",
+      "url": "https://apps.apple.com/kr/app/id6801205183",
+      "notesSha256": "2f20f89bb1aa219178dcacadae2682595152fd2cc0965b83d49374d227b2a1ac"
+    },
+    {
+      "app": "pipi-dday",
+      "bundleId": "com.pifl.pipi.dday",
+      "trackId": 6770268950,
+      "version": "2.0.3",
+      "currentVersionReleaseDate": "2026-11-18T17:10:09Z",
+      "capturedAt": "2026-11-19T06:17:48.943946+00:00",
+      "url": "https://apps.apple.com/kr/app/id6770268950",
+      "notesSha256": "63c787f08ca6ce7eb67465197ab4ac8c69765b53527daf4e1eef737cd78b0ca7"
+    },
+    {
+      "app": "pipi-words",
+      "bundleId": "com.pifl.pipi.words",
+      "trackId": 6770267735,
+      "version": "1.1.2",
+      "currentVersionReleaseDate": "2026-11-18T20:57:53Z",
+      "capturedAt": "2026-11-19T06:17:48.267357+00:00",
+      "url": "https://apps.apple.com/kr/app/id6770267735",
+      "notesSha256": "97c49d34b72f1d0d228b326742de689240222588533ee315599fa7eb81077bdf"
+    }
+  ],
+  "android": [
+    {
+      "app": "pipi-words",
+      "package": "com.pifl.pipi.words",
+      "version": "1.1.2",
+      "updated": "2026-11-18",
+      "capturedAt": "2026-11-19T06:17:48.938328+00:00",
+      "url": "https://play.google.com/store/apps/details?id=com.pifl.pipi.words&hl=ko&gl=KR",
+      "notesSha256": "9daa6b9f1e2ebeae9c8d4afd2622cc17a0da2b6d916771a097cbd460cde733a1"
+    }
+  ]
+}

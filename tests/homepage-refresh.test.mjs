@@ -32,7 +32,7 @@ test('archive adds to the prior 41 records without manufacturing releases for th
  const old=archiveEvents.filter(e=>!e.id.endsWith('-observed-20261117'));
  assert.equal(old.length,41);assert.equal(archiveEvents.length,68);
  assert.ok(archiveEvents.filter(e=>e.app==='pipi-legion').every(e=>e.kind==='asset'&&e.version===null));
- const published=JSON.parse(read('public/archive-evidence.json'));assert.equal(published.checkedAt,'2026-11-18');assert.deepEqual(published,publicArchiveEvidence);
+ const published=JSON.parse(read('public/archive-evidence.json'));assert.equal(published.checkedAt,'2026-11-19');assert.deepEqual(published,publicArchiveEvidence);
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: crew stays complete and public archive starts with actual release records`,()=>{
  const home=read(`dist/${lang}/index.html`),archive=read(`dist/${lang}/archive/index.html`);

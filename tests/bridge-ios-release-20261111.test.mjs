@@ -26,8 +26,8 @@ test('Bridge uses independent latest platform observations; shared history and e
   assert.deepEqual(bridge.release.ios,expectedRelease('pipi-bridge','ios'));
   assert.deepEqual(bridge.release.android,expectedRelease('pipi-bridge','android'));
   assert.equal(bridge.release.checkedAt,receipt.originalSharedObservation);
-  assert.equal(bridge.release.since,undefined);assert.equal(displayVersion(bridge),'1.0.3');
-  assert.equal(releaseVersionLabel(bridge),'v1.0.3');
+  assert.equal(bridge.release.since,undefined);assert.equal(displayVersion(bridge),'');
+  assert.equal(releaseVersionLabel(bridge),'iOS v1.1.3 · Android v1.0.3');
 });
 test('every other app source block stays byte-identical to current main',()=>{
   const source=beforeReleaseSync('src/data/apps.ts',read('../src/data/apps.ts'));
@@ -40,16 +40,16 @@ test('every other app source block stays byte-identical to current main',()=>{
 });
 for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; submitted 1.0.2 screenshots remain historical`,()=>{
   const html=read(`../dist/${lang}/apps/pipi-bridge/index.html`);
-  assert.match(html,/class="app-rel-ver"[^>]*>v1\.0\.3<\/span>/);
+  assert.match(html,/iOS v1\.1\.3.*Android v1\.0\.3/s);
   assert.doesNotMatch(html,/Android v1\.0\.2/);
-  assert.match(html,/datetime="2026-11-10"/);assert.ok(html.includes('iOS 1.0.2 (23)'));
+  assert.match(html,/datetime="2026-11-19"/);assert.ok(html.includes('iOS 1.0.2 (23)'));
   const schemas=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
-  const app=schemas.find(s=>s['@type']==='SoftwareApplication');assert.ok(app);assert.equal(app.softwareVersion,'1.0.3');
+  const app=schemas.find(s=>s['@type']==='SoftwareApplication');assert.ok(app);assert.equal(app.softwareVersion,undefined);
   const home=read(`../dist/${lang}/index.html`);
   const row=[...home.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map(m=>m[1]).find(s=>s.includes(`href="/${lang}/apps/pipi-bridge/"`));
-  assert.ok(row);assert.match(row,/v1\.0\.3/);
+  assert.ok(row);assert.match(row,/iOS v1\.1\.3.*Android v1\.0\.3/s);
   // The fleet's latest observation advances for Voyage Android; Bridge's own Nov11 receipt stays above.
-  assert.ok(home.includes(`<time datetime="${refreshReceipt.observedAt}"`));
+  assert.ok(home.includes(`<time datetime="2026-11-19"`));
   assert.match(read('../src/components/FleetLog.astro'),/\.fleet-log-section \.fleet-note \{ color: var\(--text-secondary\); \}/);
 });
 test('small light metadata uses the established foreground; only short version units stay intact',()=>{
