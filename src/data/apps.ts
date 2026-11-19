@@ -304,10 +304,10 @@ const words: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.words',
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
-  // 2026-11-16 public metadata: iOS and Android are both 1.1.0; retain dated platform evidence.
+  // 2026-11-19: both public stores show 1.1.2; retain separate dated evidence.
   release: {
-    ios: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
-    android: { version: '1.1.1', updated: '2026-11-16', checkedAt: '2026-11-17' },
+    ios: { version: '1.1.2', updated: '2026-11-19', checkedAt: '2026-11-19' },
+    android: { version: '1.1.2', updated: '2026-11-18', checkedAt: '2026-11-19' },
     since: '2026-05-29',
     checkedAt: '2026-11-02',
   },
@@ -320,7 +320,7 @@ const words: AppMeta = {
       shotsTitle: '항해하듯 쌓이는 어휘 학습',
       featuresTitle: '왜 단어루틴인가',
       ctaTitle: '오늘 단어 학습을 시작하세요',
-      ctaSub: '무료 설치 · 앱 내 구매가 있습니다.',
+      ctaSub: '하루 학습 횟수 제한 없이 공부하세요. 무료 설치 · 광고와 선택형 구매가 있습니다.',
       shots: [
         { file: 'home',         label: '오늘의 학습 한눈에', desc: '오늘 외울 단어와 연속 학습일을 홈에서 바로.' },
         { file: 'study',        label: '레벨별 덱 선택',     desc: 'JLPT·TOPIK 레벨을 골라 단어 항해를 시작.' },
@@ -342,7 +342,7 @@ const words: AppMeta = {
       shotsTitle: '航海のように積み上がる語彙学習',
       featuresTitle: 'ことば習慣を選ぶ理由',
       ctaTitle: '今日から単語学習を始めよう',
-      ctaSub: '無料でダウンロードできます。アプリ内課金があります。',
+      ctaSub: '一日の学習回数に上限はありません。無料でダウンロード。広告と任意のアプリ内課金があります。',
       shots: [
         { file: 'home',         label: '今日の学習をひと目で', desc: '今日覚える単語と連続学習日をホームですぐに。' },
         { file: 'study',        label: 'レベル別デッキ選択',   desc: 'JLPT·TOPIKのレベルを選んで単語の航海へ。' },
@@ -360,11 +360,11 @@ const words: AppMeta = {
     en: {
       tagline: 'Cross the sea, connect words.',
       lede: 'Review JLPT N5–N1 and TOPIK 1–6 vocabulary with cards and quizzes. On iOS and Android, write learned words from their meanings, then compare your answer. No automatic grading.',
-      metaDesc: 'JLPT/TOPIK cards, quizzes and SM-2 review. iOS & Android handwriting with self-comparison, not automatic grading. Ads, limits and optional purchases.',
+      metaDesc: 'JLPT/TOPIK cards, quizzes and SM-2 review. Handwriting with self-comparison, not automatic grading. No daily practice cap; ads and optional purchases.',
       shotsTitle: 'Words, card by card',
       featuresTitle: 'Why Vocab Routine',
       ctaTitle: 'Start studying today',
-      ctaSub: 'Free download with ads and study limits. Optional word packs or a subscription.',
+      ctaSub: 'Free download. Study without a daily cap. Ads and optional word-pack or lifetime purchases.',
       shots: [
         { file: 'home',         label: "Today's study at a glance", desc: "See today's words and your streak right on the home." },
         { file: 'study',        label: 'Pick a level deck',         desc: 'Choose a JLPT or TOPIK level and start the voyage.' },
@@ -401,7 +401,7 @@ const dday: AppMeta = {
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
   release: {
-    ios: { version: '2.0.2', updated: '2026-11-13', checkedAt: '2026-11-17' },
+    ios: { version: '2.0.3', updated: '2026-11-19', checkedAt: '2026-11-19' },
     android: { version: '2.0.3', updated: '2026-11-18', checkedAt: '2026-11-18' },
     since: '2026-06-02',
     checkedAt: '2026-11-02',
@@ -865,9 +865,9 @@ const bridge: AppMeta = {
     android: 'https://play.google.com/store/apps/details?id=com.pifl.pipi.bridge',
   },
   // 2026-11-02: Apple public KR/JP/US lookup + Google Play KO/JA/EN listing, cross-checked with both consoles.
-  // 2026-11-11: Apple KR/JP/US 1.0.3 재관측만 반영. Android와 공통 확인일은 기존 근거를 보존한다.
+  // 2026-11-19: iOS 1.1.3 공개 확인. Android 프로덕션 공개 버전은 1.0.3 유지.
   release: {
-    ios: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-17' },
+    ios: { version: '1.1.3', updated: '2026-11-19', checkedAt: '2026-11-19' },
     android: { version: '1.0.3', updated: '2026-11-10', checkedAt: '2026-11-17' },
     // 양 스토어 중 실제 최초 공개일은 확인되지 않아 since를 표시하지 않는다.
     checkedAt: '2026-11-02',

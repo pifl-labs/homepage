@@ -1,4 +1,4 @@
-import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName} from './helpers/release-sync-20261116.mjs';
+import {currentIOS,currentAndroid,androidDay,syncReceipt,beforeReleaseSync,checkedAtFor,currentIOSName,currentAndroidName,expectedRelease} from './helpers/release-sync-20261116.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
@@ -11,10 +11,10 @@ const variables={'com.pifl.pipi.wordvoyage':'wordVoyage','com.pifl.pipi.hello':'
 const slugs={'com.pifl.pipi.wordvoyage':'pipi-word-voyage','com.pifl.pipi.hello':'pipi-hello','com.pifl.pipi.words':'pipi-words','com.pifl.pipi.log':'pipi-log'};
 const playDay=text=>new Date(`${text} UTC`).toISOString().slice(0,10);
 const block=v=>source.match(new RegExp(`const ${v}: AppMeta = \\{([\\s\\S]*?)\\n\\};`))?.[1];
-for(const [bundle,v] of Object.entries(variables))test(`${bundle}: observed iOS version and UTC date replace older metadata`,()=>{
+for(const [bundle,v] of Object.entries(variables))test(`${bundle}: observed iOS version and release day replace older metadata`,()=>{
  const r=currentIOS(slugs[bundle]);
  const checkedAt=checkedAtFor(slugs[bundle],'ios');
- assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${r.currentVersionReleaseDate.slice(0,10)}', checkedAt: '${checkedAt}' }`));
+ assert.ok(block(v));assert.ok(block(v).includes(`ios: { version: '${r.version}', updated: '${expectedRelease(slugs[bundle],'ios').updated}', checkedAt: '${checkedAt}' }`));
 });
 test('Words iOS destination uses all three current public listing names and keeps aliases',()=>{
  const b=block('words');const ios=b.match(/ios: \{ ko: '([^']+)', ja: '([^']+)', en: '([^']+)' \}/);

@@ -78,7 +78,7 @@ test('public evidence contains no mail bodies, console identifiers or local file
 
 for (const lang of ['ko','ja','en']) test(`${lang}: rendered summaries and traceable evidence replace boilerplate`, () => {
   const html = read(`dist/${lang}/archive/index.html`);
-  assert.equal((html.match(/href="\/archive-release-notes-20261117.json"/g) || []).length, 37);
+  assert.equal((html.match(/href="\/archive-release-notes-20261117.json"/g) || []).length, publicArchiveEvents.filter(e=>e.contentEvidence?.url==='/archive-release-notes-20261117.json').length);
   assert.doesNotMatch(html, /이 기록의 상세 기능 변경 내용은 미확인입니다|この記録の詳しい機能変更は未確認|detailed feature changes remain unverified/);
   assert.ok(html.includes(event('pipi-focus-ios-observed-20261117').title[lang]));
 });
