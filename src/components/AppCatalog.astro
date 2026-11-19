@@ -1,19 +1,26 @@
 ---
-import { submissionMedia, submissionCopy } from "../data/app-submission-media";
 import { appIconSrc } from "../data/app-icons.mjs";
-// 홈 앱 카탈로그 — 카드 그리드 + 스토어 직행 링크.
+// 홈 앱 카탈로그 — 용도 필터 + 작은 카드 그리드 + 스토어 직행 링크 + 마지막 확인 버전.
 // 3언어 index.astro 가 마크업을 3중 복제하던 것을 한 곳으로 모은다(드리프트 방지).
 // 카피는 lang 별 map, 나머지는 전부 apps.ts 파생.
+// 2026-11-19: 카드 아래 따로 접혀 있던 '마지막으로 확인한 스토어 버전'(FleetLog) 목록을 카드 안으로
+// 합쳤다. 버전·날짜는 그때와 같은 규칙(apps.ts release + 기록관 공개일)으로 만든다(하드코딩 금지).
+// 필터는 스크립트 없이(CSP) 라디오 + :has() 로 동작하고, 지원하지 않는 브라우저는 전체 목록을 본다.
+import './app-catalog.css';
 import {
   homeReleaseApps, appName, previousNameLabels, previousNameOf, storeAppName,
-  statusLabels, storeLabels,
+  storeLabels, liveApps, releaseObservationDates, formatDate,
 } from '../data/apps';
 import { catalogCopy } from '../data/app-catalog';
+import { APP_GROUPS, assertAppGroups, groupOf } from '../data/app-groups';
+import { publicArchiveEvents } from '../data/archive-public.mjs';
+import { archiveCopy } from '../data/archive-copy';
 import StoreNameNotice from './StoreNameNotice.astro';
 import { japaneseAppNameParts, japaneseReadingParts } from './app-name-parts.mjs';
 import type { Lang } from '../i18n/ui';
 import { storeUrl, websiteCampaign } from '../../public/store-attribution.mjs';
 import { companyAndroidCatalogUrl } from '../../scripts/company-android-catalog.mjs';
+import { companyIosCatalogUrl } from '../../scripts/company-ios-catalog.mjs';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -21,6 +28,18 @@ const campaign = websiteCampaign(lang);
 const sl = storeLabels[lang];
 
 const androidCatalogUrl = companyAndroidCatalogUrl(lang);
+const iosCatalogUrl = companyIosCatalogUrl(lang);
+
+// 앱별 플랫폼 공개일: 기록관 공개 이벤트 중 현재 버전과 같은 것(이전 FleetLog 와 같은 규칙).
+const publicDate = (app, platform) =>
+  publicArchiveEvents.find(e => e.app===app.slug && e.platform===platform && e.version===app.release?.[platform]?.version)?.publication;
+const dateLabels = archiveCopy[lang].dates;
+
+// 서로 다른 앱의 관측일을 모두 오늘 확인한 것처럼 보이지 않게 범위로 표시한다.
+const checkedDates = [...new Set(liveApps.flatMap(releaseObservationDates))].sort();
+const rangeDates = checkedDates.length
+  ? [checkedDates[0], checkedDates.at(-1)!].filter((date, i, dates) => i === 0 || date !== dates[0])
+  : [];
 
 const copy = {
   ko: {
@@ -29,29 +48,44 @@ const copy = {
     titleEm: '이미 바다 위.',
     // 서사 규칙: 제작 주체는 사람, PiPi 는 동행자 (AI 저작 주장은 crew·about 에서만)
     sub: '집중, 그림, 배움, 기록. 지금 하고 싶은 일에 맞는 앱을 골라 보세요.',
-    androidCatalogLead: 'Android 앱 전체:',
+    filterLegend: '용도로 보기',
+    all: '전체',
+    catalogLead: '모든 앱 보기',
+    iosCatalogAria: 'App Store에서 PiFl Labs의 iOS 앱 목록 열기 (새 탭)',
     androidCatalogAria: 'Google Play에서 PiFl Labs의 Android 앱 목록 열기 (새 탭)',
-    iconAlt: (n: string) => `${n} 아이콘`,
+    noteBefore: '스토어 실측 · ', noteAfter: ' 확인',
+    archive: '기록관에서 전체 연혁 보기 →',
   },
   ja: {
     kicker: '00 / 艦隊',
     title: '小さな艦隊、',
     titleEm: 'もう海の上。',
     sub: '集中、お絵描き、学び、記録。今やりたいことに合うアプリを見つけよう。',
-    androidCatalogLead: 'Android版一覧：',
+    filterLegend: '用途で絞り込む',
+    all: 'すべて',
+    catalogLead: 'アプリ一覧',
+    iosCatalogAria: 'App StoreでPiFl LabsのiOSアプリ一覧を開く（新しいタブ）',
     androidCatalogAria: 'Google PlayでPiFl LabsのAndroidアプリ一覧を開く（新しいタブ）',
-    iconAlt: (n: string) => `${n} アイコン`,
+    noteBefore: 'ストア実測 · ', noteAfter: ' 確認',
+    archive: '記録館で過去の歩みを見る →',
   },
   en: {
     kicker: '00 / Fleet',
     title: 'A small fleet,',
     titleEm: 'already at sea.',
     sub: 'Focus, create, learn or reflect. Find the app for what you want to do today.',
-    androidCatalogLead: 'All Android apps:',
+    filterLegend: 'Show apps for',
+    all: 'All',
+    catalogLead: 'All apps on',
+    iosCatalogAria: 'PiFl Labs iOS apps on the App Store (opens in a new tab)',
     androidCatalogAria: 'PiFl Labs Android apps on Google Play (opens in a new tab)',
-    iconAlt: (n: string) => `${n} icon`,
+    noteBefore: 'Checked against the stores on ', noteAfter: '',
+    archive: 'Full release history in the archive →',
   },
 }[lang];
+
+assertAppGroups(homeReleaseApps.map((a) => a.slug));
+const groups = APP_GROUPS.map((g) => ({ ...g, count: homeReleaseApps.filter((a) => groupOf(a.slug) === g.key).length }));
 ---
 <section class="apps-home" id="apps">
   <div class="container">
@@ -59,45 +93,63 @@ const copy = {
       <div class="kicker">{copy.kicker}</div>
       <h2 class="section-title">{copy.title} <span class="italic">{copy.titleEm}</span></h2>
       <p class="section-sub">{copy.sub}</p>
-      <p class="section-sub">{copy.androidCatalogLead} <a class="btn btn-ghost" href={androidCatalogUrl} target="_blank" rel="noopener" aria-label={copy.androidCatalogAria} data-company-android-catalog="true">Google Play</a></p>
     </div>
 
-    <div class="app-card-grid">
+    <div class="fleet-toolbar">
+      <fieldset class="fleet-filter">
+        <legend class="fleet-visually-hidden">{copy.filterLegend}</legend>
+        <input class="fleet-filter-input fleet-visually-hidden" type="radio" name="fleet-filter" id="fleet-filter-all" value="all" checked />
+        <label class="fleet-filter-chip" for="fleet-filter-all">{copy.all} <span class="fleet-filter-count">{homeReleaseApps.length}</span></label>
+        {groups.map((g) => (
+          <>
+            <input class="fleet-filter-input fleet-visually-hidden" type="radio" name="fleet-filter" id={`fleet-filter-${g.key}`} value={g.key} />
+            <label class="fleet-filter-chip" for={`fleet-filter-${g.key}`}>{g.label[lang]} <span class="fleet-filter-count">{g.count}</span></label>
+          </>
+        ))}
+      </fieldset>
+      <p class="fleet-catalogs">
+        <span class="fleet-catalogs-lead">{copy.catalogLead}</span>
+        <a class="fleet-catalog-link" href={iosCatalogUrl} target="_blank" rel="noopener" aria-label={copy.iosCatalogAria} data-company-ios-catalog="true">App Store</a>
+        <a class="fleet-catalog-link" href={androidCatalogUrl} target="_blank" rel="noopener" aria-label={copy.androidCatalogAria} data-company-android-catalog="true">Google Play</a>
+      </p>
+    </div>
+
+    <div class="fleet-grid">
       {homeReleaseApps.map((app) => {
         const name = appName(app, lang);
-        const submitted = submissionMedia(app.slug);
+        const r = app.release!;
         return (
-          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class:list={["app-card", { "app-card--text-only": app.catalogPreview === false }]}>
-            <a class="app-card-main" href={`/${lang}/apps/${app.slug}/`}>
-              <img class="app-card-icon" src={appIconSrc(app.slug)} alt="" width="64" height="64" loading="lazy" />
-              <div class="app-card-head">
-                  <span class="app-card-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
-                  <span class={`app-card-status app-card-status--${app.status}`}>{statusLabels[lang][app.status]}</span>
-                {previousNameOf(app, lang) && <span class="app-previous-name">{previousNameLabels[lang]} {previousNameOf(app, lang)}</span>}
-                </div>
-              <div class="app-card-body">
-                <span class="app-card-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
-                <p class="app-card-tag">{catalogCopy[app.slug][lang]}</p>
-                <span class="app-card-detail">{({ ko: "앱 자세히 보기", ja: "アプリの詳細", en: "Explore app" })[lang]} <span aria-hidden="true">→</span></span>
-              </div>
-              {app.catalogPreview !== false && <figure class="app-card-preview">
-                <img src={submitted ? submitted.shots[submitted.previewIndex].src : `/assets/apps/${app.slug}/${lang}/store-preview.webp`} alt="" width="480" height="1040" loading="lazy" />
-                <figcaption>{submitted ? (submitted.pending ? submissionCopy[lang].pending : submissionCopy[lang].short) : ({ ko: '공식 스토어 화면', ja: '公式ストアの画面', en: 'Official store preview' })[lang]}</figcaption>
-              </figure>}
+          <article id={app.slug === 'pipi-spend' ? 'app-pipi-spend' : undefined} class="fleet-card" data-group={groupOf(app.slug)}>
+            <a class="fleet-card-main" href={`/${lang}/apps/${app.slug}/`}>
+              <img class="fleet-card-icon" src={appIconSrc(app.slug)} alt="" width="52" height="52" loading="lazy" />
+              <span class="fleet-card-head">
+                <span class="fleet-card-name">{lang === 'ja' ? japaneseAppNameParts(name).map((part: { text: string; keepWhole: boolean }) => part.keepWhole ? <span class="app-name-part ja-reading-unit">{part.text}</span> : part.text) : name}</span>
+                <span class="fleet-card-cat">{lang === 'ja' ? japaneseReadingParts(app.category[lang], 'category').map(part => part.keepWhole ? <span class="ja-reading-unit">{part.text}</span> : part.text) : app.category[lang]}</span>
+              </span>
             </a>
-
+            {previousNameOf(app, lang) && <span class="app-previous-name">{previousNameLabels[lang]} {previousNameOf(app, lang)}</span>}
+            <p class="fleet-card-tag">{catalogCopy[app.slug][lang]}</p>
             {(app.stores.ios || app.stores.android) && (
-              <div class="app-card-stores">
-                {app.stores.ios && (
-                  <a class="app-card-store" href={storeUrl(app.stores.ios, campaign)} data-store-link={app.stores.ios} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'ios', lang)} — ${sl.onIos}${app.iosStorefront ? ` (${app.iosStorefront})` : ''}`}>
-                    <i class="fab fa-apple" aria-hidden="true"></i> {sl.ios}{app.iosStorefront && ` (${app.iosStorefront})`}
-                  </a>
-                )}
-                {app.stores.android && (
-                  <a class="app-card-store" href={storeUrl(app.stores.android, campaign)} data-store-link={app.stores.android} target="_blank" rel="noopener" aria-label={`${storeAppName(app, 'android', lang)} — ${sl.onAndroid}${app.androidStorefront ? ` (${app.androidStorefront})` : ''}`}>
-                    <i class="fab fa-google-play" aria-hidden="true"></i> {sl.android}{app.androidStorefront && ` (${app.androidStorefront})`}
-                  </a>
-                )}
+              <div class="fleet-card-stores">
+                {(['ios', 'android'] as const).filter((platform) => app.stores[platform]).map((platform) => {
+                  const ios = platform === 'ios';
+                  const storefront = ios ? app.iosStorefront : app.androidStorefront;
+                  const version = r[platform]?.version;
+                  const published = version ? publicDate(app, platform) : undefined;
+                  return (
+                    <div class="fleet-card-platform">
+                      <a class="fleet-card-store" href={storeUrl(app.stores[platform]!, campaign)} data-store-link={app.stores[platform]} target="_blank" rel="noopener" aria-label={`${storeAppName(app, platform, lang)} — ${ios ? sl.onIos : sl.onAndroid}${storefront ? ` (${storefront})` : ''}`}>
+                        <i class={ios ? 'fab fa-apple' : 'fab fa-google-play'} aria-hidden="true"></i> {ios ? sl.ios : sl.android}{storefront && ` (${storefront})`}
+                      </a>
+                      {version && (
+                        <span class="fleet-store-version" data-fleet-platform={platform}>
+                          <span class="fleet-chip">{ios ? 'iOS' : 'Android'} v{version}</span>
+                          {published && <time datetime={published.date} title={dateLabels[published.basis].replace(/^iOS|^Android · /, '').trim()}>{published.date}</time>}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
             <StoreNameNotice app={app} lang={lang} compact />
@@ -105,12 +157,7 @@ const copy = {
         );
       })}
     </div>
-    <p class="app-media-footnote">{submissionCopy[lang].footnote}</p>
+
+    <p class="fleet-note">{copy.noteBefore}{rangeDates.map((date, i) => <>{i > 0 && ' – '}<time datetime={date} style="white-space: nowrap">{formatDate(date, lang)}</time></>)}{copy.noteAfter} · <a href={`/${lang}/archive/`}>{copy.archive}</a></p>
   </div>
 </section>
-
-<style>
-  /* This entry has no verified screenshot: do not reserve an empty preview column. */
-  #app-pipi-spend { scroll-margin-top: 6rem; }
-  .app-card--text-only .app-card-main { grid-template-columns: 52px minmax(0, 1fr); }
-</style>

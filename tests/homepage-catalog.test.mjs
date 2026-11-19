@@ -19,15 +19,39 @@ test('nine public products have official localized screenshot provenance and ass
     assert.ok(existsSync(new URL(`../public/assets/apps/${app.slug}/${lang}/store-preview.webp`, import.meta.url)));
   }
 });
-for (const lang of ['ko','ja','en']) test(`${lang}: built catalog separates exploration, downloads and optional release history`, () => {
+// 2026-11-19 redesign: compact cards with a purpose filter; each store link carries its last checked
+// version, so the separate collapsed release list and the home screenshots are gone.
+for (const lang of ['ko','ja','en']) test(`${lang}: built catalog has a purpose filter, compact cards and versions beside each store`, async () => {
   const html=readFileSync(new URL(`../dist/${lang}/index.html`, import.meta.url),'utf8');
-  assert.equal((html.match(/class="app-card-main"/g)||[]).length,16);
-  assert.equal((html.match(/class="app-card-preview"/g)||[]).length,12);
-  assert.equal((html.match(/class="app-card-stores"/g)||[]).length,16);
-  assert.match(html, /<details class="fleet-disclosure">/);
-  assert.doesNotMatch(html, /<details class="fleet-disclosure" open/);
   const catalog=html.match(/<section class="apps-home"[\s\S]*?<\/section>/)[0];
-  assert.doesNotMatch(catalog,/class="app-card-rel"/);
+  const {APP_GROUPS}=await import('../src/data/app-groups.ts');
+  assert.equal((catalog.match(/class="fleet-card-main"/g)||[]).length,16);
+  assert.equal((catalog.match(/class="fleet-card-stores"/g)||[]).length,16);
+  assert.doesNotMatch(html,/fleet-disclosure|class="app-card|app-card-preview|app-media-footnote/);
+  const radios=[...catalog.matchAll(/<input\b[^>]*name="fleet-filter"[^>]*value="([^"]+)"/g)].map(m=>m[1]);
+  assert.deepEqual(radios,['all',...APP_GROUPS.map(g=>g.key)]);
+  assert.match(catalog,/<input\b[^>]*id="fleet-filter-all"[^>]*checked/);
+  for(const g of APP_GROUPS){
+    assert.ok(catalog.includes(`<label class="fleet-filter-chip" for="fleet-filter-${g.key}">${g.label[lang].replace(/&/g,'&amp;')} <span class="fleet-filter-count">${g.slugs.length}</span></label>`),`${lang} ${g.key}`);
+    for(const slug of g.slugs){
+      const card=catalog.match(new RegExp(`<article\\b[^>]*class="fleet-card" data-group="([^"]+)"[^>]*>(?:(?!</article>)[\\s\\S])*?href="/${lang}/apps/${slug}/"`));
+      assert.equal(card?.[1],g.key,`${lang} ${slug}`);
+    }
+  }
+  // Every store link has its own platform version right beside it (when the store is verified).
+  for(const block of catalog.matchAll(/<div class="fleet-card-platform">([\s\S]*?)<\/div>/g)){
+    const store=block[1].match(/data-store-link="https:\/\/(apps\.apple|play\.google)\.com/)?.[1];
+    assert.ok(store,lang);
+    const ver=block[1].match(/data-fleet-platform="(ios|android)"/)?.[1];
+    if(ver)assert.equal(ver,store==='apps.apple'?'ios':'android',lang);
+  }
+});
+test('filter needs no script and falls back to the full list where :has() is unsupported', () => {
+  const css=readFileSync(new URL('../src/components/app-catalog.css', import.meta.url),'utf8');
+  for(const key of ['learn','focus','create','life'])assert.match(css,new RegExp(`\\.apps-home:has\\(#fleet-filter-${key}:checked\\) \\.fleet-card:not\\(\\[data-group="${key}"\\]\\)`));
+  assert.match(css,/@supports not selector\(:has\(\*\)\) \{ \.fleet-filter \{ display: none; \} \}/);
+  const component=readFileSync(new URL('../src/components/AppCatalog.astro', import.meta.url),'utf8');
+  assert.doesNotMatch(component,/<script/);
 });
 
 test('account union is represented and unreleased apps cannot advertise downloads', async () => {

@@ -87,7 +87,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.ok(bridge.includes('com.pifl.pipi.bridge'), `${lang}: Bridge Play destination`);
   assert.equal(bridgeSchema.softwareVersion, shared('pipi-bridge'), `${lang}: shared version only when both stores verify it`);
   assert.equal(bridgeItem.softwareVersion, shared('pipi-bridge'), `${lang}: homepage schema follows the same rule`);
-  const bridgeFleetRow = home.match(/<li class="fleet-row">(?:(?!<\/li>).)*Korean Bridge(?:(?!<\/li>).)*<\/li>/s)?.[0];
+  const bridgeFleetRow = home.match(/<article\b[^>]*class="fleet-card"[^>]*>(?:(?!<\/article>).)*Korean Bridge(?:(?!<\/article>).)*<\/article>/s)?.[0];
   assert.ok(bridgeFleetRow, `${lang}: Bridge maintenance row`);
   assert.ok(bridgeFleetRow.includes(`v${iosVersion('pipi-bridge')}`), `${lang}: verified version is visible`);
   assert.match(bridgeFleetRow, /data-fleet-platform="ios".*datetime="2026-11-19".*data-fleet-platform="android".*datetime="2026-11-13"/s, `${lang}: each store keeps its own date`);
@@ -179,7 +179,7 @@ for (const [index, [lang, [name, alias]]] of Object.entries(names).entries()) {
   assert.equal(homeItems.find(a => a.url.endsWith('/pipi-hello/')).softwareVersion, shared('pipi-hello'));
   assert.equal(appSchema(read(lang, 'apps/pipi-draw')).softwareVersion, shared('pipi-draw'));
   // Apps public on one platform only (or with differing versions) never get a shared version or both-store label.
-  const fleetRows = [...home.matchAll(/<li class="fleet-row">(.*?)<\/li>/gs)].map((m) => m[1]);
+  const fleetRows = [...home.matchAll(/<article\b[^>]*class="fleet-card"[^>]*>(.*?)<\/article>/gs)].map((m) => m[1]);
   for (const slug of ['kkachi', 'pipi-bp', 'pipi-sky', 'pipi-dream', 'pipi-spend']) {
     const page = read(lang, `apps/${slug}`);
     assert.ok(!Object.hasOwn(appSchema(page), 'softwareVersion'), `${lang}/${slug}: no shared softwareVersion`);

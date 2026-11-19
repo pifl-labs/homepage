@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 export const syncReceipt=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-20261116.json',import.meta.url),'utf8'));
 export const syncDeltas=JSON.parse(readFileSync(new URL('../../docs/release/public-release-sync-source-deltas-20261116.json',import.meta.url),'utf8'));
@@ -15,6 +15,16 @@ const storeRecheckDeltas=JSON.parse(readFileSync(new URL('../../docs/release/hom
 export const historyLatest=JSON.parse(readFileSync(new URL('../../docs/release/homepage-current-store-20261119.json',import.meta.url),'utf8'));
 const historyDeltas=JSON.parse(readFileSync(new URL('../../docs/release/homepage-current-store-source-deltas-20261119.json',import.meta.url),'utf8'));
 export const laterLayers=[historyDeltas,storeRecheckDeltas,refreshDeltas,screenshotDeltas,laterDeltas];
+/** Sources removed after their last recorded layer. Their last bytes are kept so the history chain still checks;
+ *  a retired file must stay absent (re-adding it means recording a new layer instead). */
+export const retiredSources=JSON.parse(readFileSync(new URL('../../docs/release/home-catalog-retired-sources-20261119.json',import.meta.url),'utf8'));
+export function sourceText(file){
+ const path=new URL('../../'+file,import.meta.url);const retired=retiredSources[file];
+ if(!retired)return readFileSync(path,'utf8');
+ assert.equal(existsSync(path),false,`retired source re-added without a new layer: ${file}`);
+ assert.equal(createHash('sha256').update(retired.content).digest('hex'),retired.sha256,`retired source record intact: ${file}`);
+ return retired.content;
+}
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const reverseRow=(row,file,text)=>{
  for(const d of row.deltas){assert.equal(text.split(d.new).length-1,1,`exact delta once: ${file}`);text=text.replace(d.new,d.old);}

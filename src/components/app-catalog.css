@@ -1,0 +1,92 @@
+/* Home app catalog (AppCatalog.astro): purpose filter, compact cards, store links and
+   last checked versions. Site tokens only, so light and dark themes both work.
+   Older .app-card / .fleet-log rules in public/*.css no longer match anything on home. */
+
+.fleet-visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ── Toolbar: filter chips + company store pages ── */
+.fleet-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: .75rem 1.5rem; margin-bottom: 1.25rem;
+}
+.fleet-filter { display: flex; flex-wrap: wrap; gap: .5rem; min-width: 0; margin: 0; padding: 0; border: 0; }
+.fleet-filter-chip {
+  display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; padding: .4rem 1rem;
+  border: 1px solid var(--border-default); border-radius: var(--radius-pill); background: var(--bg-card);
+  color: var(--text-secondary); font-size: .9rem; font-weight: 700; cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.fleet-filter-chip:hover { border-color: var(--border-strong); color: var(--text-primary); }
+.fleet-filter-count { font-family: var(--font-code); font-size: .75rem; font-weight: 600; color: var(--text-muted); }
+.fleet-filter-input:checked + .fleet-filter-chip { border-color: var(--accent-cta); background: var(--bg-raised); color: var(--text-primary); }
+.fleet-filter-input:checked + .fleet-filter-chip .fleet-filter-count { color: var(--text-secondary); }
+.fleet-filter-input:focus-visible + .fleet-filter-chip { outline: 2px solid var(--accent-cta); outline-offset: 2px; }
+
+/* No script: the checked radio hides the other groups. Without :has() every app stays listed. */
+.apps-home:has(#fleet-filter-learn:checked) .fleet-card:not([data-group="learn"]),
+.apps-home:has(#fleet-filter-focus:checked) .fleet-card:not([data-group="focus"]),
+.apps-home:has(#fleet-filter-create:checked) .fleet-card:not([data-group="create"]),
+.apps-home:has(#fleet-filter-life:checked) .fleet-card:not([data-group="life"]) { display: none; }
+@supports not selector(:has(*)) { .fleet-filter { display: none; } }
+
+.fleet-catalogs { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0; }
+.fleet-catalogs-lead { color: var(--text-muted); font-size: .85rem; font-weight: 600; }
+.fleet-catalog-link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: .4rem 1rem;
+  border: 1px solid var(--border-default); border-radius: var(--radius-pill);
+  color: var(--text-primary); font-size: .85rem; font-weight: 700; text-decoration: none;
+}
+.fleet-catalog-link:hover { border-color: var(--border-strong); }
+.fleet-catalog-link:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 2px; }
+
+/* ── Cards ── */
+.fleet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1rem; }
+.fleet-card {
+  position: relative; display: flex; flex-direction: column; gap: .6rem; min-width: 0;
+  padding: 1.1rem 1.15rem; border: 1px solid var(--border-default); border-radius: var(--radius-md);
+  background: var(--bg-card); transition: border-color var(--dur-fast) var(--ease);
+}
+.fleet-card:hover { border-color: var(--border-strong); }
+#app-pipi-spend { scroll-margin-top: 6rem; }
+
+.fleet-card-main { display: flex; align-items: center; gap: .85rem; min-width: 0; color: inherit; text-decoration: none; }
+/* The whole card opens the app page; store links and notes sit above this layer. */
+.fleet-card-main::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.fleet-card-main:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 4px; border-radius: var(--radius-sm); }
+.fleet-card-icon { flex: none; width: 52px; height: 52px; border-radius: 13px; }
+.fleet-card-head { display: flex; flex-direction: column; gap: .2rem; min-width: 0; }
+.fleet-card-name { color: var(--text-primary); font-size: 1.02rem; font-weight: 800; line-height: 1.3; overflow-wrap: anywhere; }
+.fleet-card-cat { color: var(--text-muted); font-family: var(--font-code); font-size: .72rem; line-height: 1.4; }
+.apps-home .fleet-card .app-previous-name { flex: none; margin: 0; }
+.fleet-card-tag { margin: 0; color: var(--text-secondary); font-size: .9rem; line-height: 1.55; text-wrap: pretty; }
+@media (max-width: 480px) {
+  .fleet-card { padding: 1rem; gap: .5rem; }
+  .fleet-grid { gap: .75rem; }
+}
+
+/* Each store link carries its own last checked version right under it. */
+.fleet-card-stores {
+  position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+  gap: .5rem; margin-top: auto; padding-top: .3rem;
+}
+.fleet-card-platform { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+.fleet-card-store {
+  display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+  min-height: 44px; padding: .45rem .9rem; border: 1px solid var(--border-default); border-radius: var(--radius-pill);
+  color: var(--text-primary); font-family: var(--font-code); font-size: .82rem; font-weight: 600; text-decoration: none;
+}
+.fleet-card-store:hover { border-color: var(--accent-cta); }
+.fleet-card-store:focus-visible { outline: 2px solid var(--accent-cta); outline-offset: 2px; }
+.fleet-card-platform .fleet-store-version { display: flex; flex-direction: column; align-items: center; gap: .15rem; min-width: 0; }
+/* Same readable foreground the release list used for its version chips. */
+.fleet-card-platform .fleet-chip { color: var(--text-primary); padding: 1px 7px; }
+.fleet-card-platform time { color: var(--text-secondary); font-family: var(--font-code); font-size: .7rem; white-space: nowrap; }
+.apps-home .fleet-card .app-store-name-note { position: relative; z-index: 1; margin: 0; padding: 0; }
+
+/* ── Observation note + archive link ── */
+.apps-home .fleet-note { margin-top: 1.25rem; text-align: left; font-family: var(--font-main); font-size: .85rem; color: var(--text-secondary); }
+.apps-home .fleet-note a { color: var(--accent-cta); }
+.apps-home .fleet-note a:hover { color: var(--accent-cta-hover); }

@@ -36,7 +36,7 @@ test('Android versions and different update dates keep independent dated evidenc
 test('Platforms keep their own versions when they differ, and observations stay dated',()=>{
  assert.ok(block('words').includes(`ios: { version: '${currentIOS('pipi-words').version}'`));assert.ok(block('words').includes(`android: { version: '${currentAndroid('pipi-words').version}'`));
  for(const v of Object.values(variables))assert.match(block(v),/checkedAt: '2026-11-02',\n  \}/);
- const fleet=readFileSync(new URL('../src/components/FleetLog.astro',import.meta.url),'utf8');assert.match(fleet,/liveApps\.flatMap\(releaseObservationDates\)/);
+ const fleet=readFileSync(new URL('../src/components/AppCatalog.astro',import.meta.url),'utf8');assert.match(fleet,/liveApps\.flatMap\(releaseObservationDates\)/);
  assert.match(source,/app\.release\?\.checkedAt, app\.release\?\.ios\?\.checkedAt, app\.release\?\.android\?\.checkedAt/);
 });
 
@@ -48,7 +48,7 @@ test('Words readability repair uses a shorter factual section title and preserve
 });
 
 test('Fleet observation note preserves each short complete date as a semantic time unit',()=>{
- const fleet=readFileSync(new URL('../src/components/FleetLog.astro',import.meta.url),'utf8');
+ const fleet=readFileSync(new URL('../src/components/AppCatalog.astro',import.meta.url),'utf8');
  assert.match(fleet, /<time datetime=\{date\} style="white-space: nowrap">\{formatDate\(date, lang\)\}<\/time>/);
  assert.match(fleet, /noteBefore: 'Checked against the stores on '/);
  assert.doesNotMatch(fleet, /class="fleet-note"[^>]*style=/);

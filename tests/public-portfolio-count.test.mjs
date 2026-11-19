@@ -16,7 +16,7 @@ test('all curated live app Android destinations are a subset; no BP page or unre
 });
 for(const lang of ['ko','ja','en'])test(lang+': company homepage uses public count; existing app catalog source unchanged',()=>{
  const s=source('src/pages/'+lang+'/index.astro');assert.match(s,/import \{ verifiedPublicAppCount \} from '\.\.\/\.\.\/data\/public-portfolio'/);assert(!s.includes('liveAppCount'));assert.equal((s.match(/\{verifiedPublicAppCount\}/g)||[]).length,7);if(lang==='ja')assert(!s.includes('{verifiedPublicAppCount}つ'));
- const html=source('dist/'+lang+'/index.html');assert.match(html,/<span><b>16<\/b>/);assert(!html.includes('<span><b>13</b>'));assert.equal((html.match(/class="app-card-main"/g)||[]).length,16);assert.equal((html.match(/class="app-card-stores"/g)||[]).length,16);
+ const html=source('dist/'+lang+'/index.html');assert.match(html,/<span><b>16<\/b>/);assert(!html.includes('<span><b>13</b>'));assert.equal((html.match(/class="fleet-card-main"/g)||[]).length,16);assert.equal((html.match(/class="fleet-card-stores"/g)||[]).length,16);
  const scripts=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));const org=scripts.find(x=>x['@type']==='Organization');assert(org&&org.description.includes('16'));assert(!org.description.includes('13'));assert(!org.description.includes('16 apps shipping on iOS and Android'));
 });
 test('Organization metadata names platform/country variability, never all-platform parity',()=>{

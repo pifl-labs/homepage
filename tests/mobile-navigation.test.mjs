@@ -115,8 +115,9 @@ test('R7 reading units preserve unknown text, emoji, punctuation and every role 
 });
 
 test('R7 known missing callsites share noun rendering and normal prose fallback',()=>{
- const fleet=readFileSync(new URL('../src/components/FleetLog.astro',import.meta.url),'utf8');
- assert.match(fleet,/japaneseAppNameParts\(appName\(app, lang\)\)/);
+ // 2026-11-19: the release list moved into the home catalog cards (AppCatalog).
+ const fleet=readFileSync(new URL('../src/components/AppCatalog.astro',import.meta.url),'utf8');
+ assert.match(fleet,/const name = appName\(app, lang\);[\s\S]*japaneseAppNameParts\(name\)/);
  assert.match(fleet,/japaneseReadingParts\(app.category\[lang\], 'category'\)/);
  assert.ok(css.includes('html[lang^="ko"] .join-cta .hint { word-break: keep-all; text-wrap: pretty; }'));
  assert.ok(css.includes('html[lang^="ja"] .currently-text,'));
@@ -127,7 +128,7 @@ test('R7 known missing callsites share noun rendering and normal prose fallback'
 
 
 test('R8 name callsites keep unmatched prefix and spaces in the raw inline flow',()=>{
- for(const file of ['AppCatalog','AppLanding','FleetLog']){
+ for(const file of ['AppCatalog','AppLanding']){
   const component=readFileSync(new URL(`../src/components/${file}.astro`,import.meta.url),'utf8');
   assert.match(component,/japaneseAppNameParts\([^\n]+part.keepWhole\s*\?\s*<span class="app-name-part ja-reading-unit">\{part.text\}<\/span>\s*:\s*part.text/);
  }
