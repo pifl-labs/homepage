@@ -76,10 +76,10 @@
     "previewIndex": 0
   },
   "dialogos": {
-    "version": "1.1.0 (20)",
+    "version": "1.1.1 (21)",
     "pending": true,
     "source": "https://appstoreconnect.apple.com/apps/6780508628/distribution/ios/version/deliverable",
-    "observedAt": "2026-11-16",
+    "observedAt": "2026-11-19",
     "language": "en",
     "buildVisualVerified": false,
     "shots": [
@@ -102,12 +102,12 @@
         }
       },
       {
-        "src": "/assets/apps/dialogos/submission/20261116-3.webp",
-        "source": "https://is1-ssl.mzstatic.com/image/thumb/licF7CE6FYj6bBdBClEnew/331x720bb.png",
+        "src": "/assets/apps/dialogos/submission/20261119-3.webp",
+        "source": "https://github.com/pifl-labs/pipi-thus/blob/00af2584473f749cc69fc33faf9a852d2464259d/store_assets/screenshots/20261119/ios/en/03_symposium.png",
         "label": {
-          "ko": "향연, 두 철학자와 한자리에서",
-          "ja": "饗宴、二人の哲学者と同じ席で",
-          "en": "Symposium: two philosophers at one table"
+          "ko": "향연, 한 철학자의 답을 다른 철학자가 이어받다",
+          "ja": "饗宴、一人が答え、もう一人が受けて語る",
+          "en": "Symposium: one answers, the other takes it up"
         }
       }
     ],

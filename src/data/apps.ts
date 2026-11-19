@@ -601,7 +601,7 @@ const dialogos: AppMeta = {
       shots: [
         { file: 'home-20261116',         label: '철학자와 마주 앉다', desc: '철학자마다 말하는 방식과 이야기하기 좋은 고민을 보고, 오늘의 대화 상대를 고릅니다.' },
         { file: 'chat_marcus-20261116',  label: '원전에 근거한 답, 출처까지', desc: '모든 답변에 퍼블릭 도메인 원전 출처가 함께 붙습니다.' },
-        { file: 'symposium-20261116',    label: '한 고민에 두 철학자가 답하다', desc: '향연에서는 두 철학자가 같은 고민에 각자 자기 원전을 근거로 답하고, 한 사람이 상대의 말에 응수합니다.' },
+        { file: 'symposium-20261119',    label: '한 철학자의 답을 다른 철학자가 이어받다', desc: '향연에서는 한 철학자가 답하면 다른 철학자가 그 말을 받아 이어 말하고, 끝에는 당신에게 묻습니다.' },
         { file: 'mentor_sheet-20261116', label: '대화 전에, 그 사람을 먼저 만나다', desc: '철학자를 누르면 다른 철학자와의 관계를 근거가 된 책·절과 함께 볼 수 있습니다.' },
       ],
       features: [
@@ -622,7 +622,7 @@ const dialogos: AppMeta = {
       shots: [
         { file: 'home-20261116',         label: '賢者と向き合う', desc: '哲学者ごとの語り口と、どんな悩みに向いているかを見て、今日の相手を選ぶ。' },
         { file: 'chat_marcus-20261116',  label: '原典に基づく答え、出典つき', desc: 'すべての返答にパブリックドメイン原典の出典が添えられます。' },
-        { file: 'symposium-20261116',    label: 'ひとつの悩みに、二人の哲学者が答える', desc: '饗宴では、二人の哲学者が同じ悩みにそれぞれの原典をもとに答え、一人が相手の言葉に応じます。' },
+        { file: 'symposium-20261119',    label: '一人が答え、もう一人が受けて語る', desc: '饗宴では、一人の哲学者が答えると、もう一人がその言葉を受けて話を続け、最後にあなたに問いかけます。' },
         { file: 'mentor_sheet-20261116', label: '話す前に、その人に出会う', desc: '哲学者をタップすると、ほかの哲学者との関係を、根拠となる書物と節とあわせて確かめられます。' },
       ],
       features: [
@@ -643,7 +643,7 @@ const dialogos: AppMeta = {
       shots: [
         { file: 'home-20261116',         label: 'Sit down with a philosopher', desc: "See how each philosopher talks and which worries suit them, then choose today's mentor." },
         { file: 'chat_marcus-20261116',  label: 'Grounded in sources, cited',   desc: 'Every reply carries a public-domain source citation.' },
-        { file: 'symposium-20261116',    label: 'Two philosophers, one question', desc: 'In the Symposium, two philosophers answer the same worry from their own works, then one responds to the other.' },
+        { file: 'symposium-20261119',    label: 'One answers, the other takes it up', desc: 'In the Symposium, one philosopher answers, the other takes up what he said and then turns to you.' },
         { file: 'mentor_sheet-20261116', label: 'Meet them before you talk',    desc: 'Tap a philosopher to see how they relate to the others, with the book and section behind it.' },
       ],
       features: [

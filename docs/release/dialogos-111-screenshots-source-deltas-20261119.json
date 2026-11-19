@@ -1,0 +1,20 @@
+{
+  "src/data/apps.ts": {
+    "beforeSHA256": "c32ff34ac67ebc3968c1574e5e653a2ccfe640b66846f09a0ed0f979a66b08ce",
+    "afterSHA256": "ed37680ffd41051196ff3bd023deef1d78eff9e555b560f544aab42db83f3d09",
+    "deltas": [
+      {
+        "old": "{ file: 'symposium-20261116',    label: '한 고민에 두 철학자가 답하다', desc: '향연에서는 두 철학자가 같은 고민에 각자 자기 원전을 근거로 답하고, 한 사람이 상대의 말에 응수합니다.' },",
+        "new": "{ file: 'symposium-20261119',    label: '한 철학자의 답을 다른 철학자가 이어받다', desc: '향연에서는 한 철학자가 답하면 다른 철학자가 그 말을 받아 이어 말하고, 끝에는 당신에게 묻습니다.' },"
+      },
+      {
+        "old": "{ file: 'symposium-20261116',    label: 'ひとつの悩みに、二人の哲学者が答える', desc: '饗宴では、二人の哲学者が同じ悩みにそれぞれの原典をもとに答え、一人が相手の言葉に応じます。' },",
+        "new": "{ file: 'symposium-20261119',    label: '一人が答え、もう一人が受けて語る', desc: '饗宴では、一人の哲学者が答えると、もう一人がその言葉を受けて話を続け、最後にあなたに問いかけます。' },"
+      },
+      {
+        "old": "{ file: 'symposium-20261116',    label: 'Two philosophers, one question', desc: 'In the Symposium, two philosophers answer the same worry from their own works, then one responds to the other.' },",
+        "new": "{ file: 'symposium-20261119',    label: 'One answers, the other takes it up', desc: 'In the Symposium, one philosopher answers, the other takes up what he said and then turns to you.' },"
+      }
+    ]
+  }
+}
