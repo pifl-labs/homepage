@@ -135,9 +135,13 @@ test('no policy version 1.2 date remains', () => {
   assert.doesNotMatch(policy, /1\.2'|August 14, 2026|8월 14일|8月14日|14 tháng 8/);
 });
 
-test('only the English Bridge route adds the library entry, through the existing slot', () => {
-  assert.match(read('src/pages/en/apps/pipi-bridge/index.astro'), /<LibraryEntry slot="before-showcase" \/>/);
-  for (const lang of ['ko', 'ja']) assert.doesNotMatch(read(`src/pages/${lang}/apps/pipi-bridge/index.astro`), /LibraryEntry|library/);
+// 2026-11-19: ko/ja Bridge pages had no way to reach the English-only guide and cards, so a
+// Korean or Japanese visitor (the site default) could not find them. All three locales now
+// carry the entry, through the same slot; AppLanding itself stays untouched.
+test('every Bridge locale adds the library entry through the existing slot', () => {
+  for (const lang of ['en', 'ko', 'ja']) {
+    assert.match(read(`src/pages/${lang}/apps/pipi-bridge/index.astro`), new RegExp(`<LibraryEntry lang="${lang}" slot="before-showcase" />`));
+  }
   assert.doesNotMatch(read('src/components/AppLanding.astro'), /pipi-bridge\/library/);
 });
 
@@ -304,9 +308,21 @@ test('built guide: store links keep original destinations and the privacy policy
   assert.match(guide, /data-store-link="https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.pifl\.pipi\.bridge"/);
   assert.match(guide, /href="\/en\/apps\/pipi-bridge\/privacy\/"/);
   assert.match(guide, /href="\/en\/apps\/pipi-bridge\/library\/cards\/"/);
-  assert.match(read('dist/en/apps/pipi-bridge/index.html'), /id="bridge-library"[\s\S]*?href="\/en\/apps\/pipi-bridge\/library\/"/);
   assert.ok(read('dist/en/apps/pipi-bridge/index.html').includes('Set a tablet to open on one topic, let pairs take turns'));
-  for (const lang of ['ko', 'ja']) assert.doesNotMatch(read(`dist/${lang}/apps/pipi-bridge/index.html`), /bridge-library/);
+});
+
+test('built Bridge pages (en/ko/ja): one entry linking to the English guide and the cards list, marked English outside en', () => {
+  const ENGLISH_MARK = { en: null, ko: '(영어)', ja: '（英語）' };
+  for (const lang of ['en', 'ko', 'ja']) {
+    const html = read(`dist/${lang}/apps/pipi-bridge/index.html`);
+    const sections = [...html.matchAll(/<section\b[^>]*id="bridge-library"[^>]*>([\s\S]*?)<\/section>/g)];
+    assert.equal(sections.length, 1, lang);
+    const links = [...sections[0][1].matchAll(/<a\b[^>]*href="([^"]+)"[^>]*hreflang="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)];
+    assert.deepEqual(links.map((m) => [m[1], m[2]]), [['/en/apps/pipi-bridge/library/', 'en'], ['/en/apps/pipi-bridge/library/cards/', 'en']], lang);
+    const labels = links.map((m) => m[3].replace(/<[^>]+>/g, '').trim());
+    if (ENGLISH_MARK[lang]) for (const label of labels) assert.ok(label.endsWith(ENGLISH_MARK[lang]), `${lang}: ${label}`);
+    else assert.deepEqual(labels, ['Open the guide', 'Printable topic cards']);
+  }
 });
 
 // ── Topic list, one page per topic, print-all (2026-11-19) ──
