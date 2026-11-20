@@ -12,7 +12,8 @@ test('English Android entry precedes explicitly iOS screenshots without parity o
   assert.doesNotMatch(section, /iOS|App Store|pass the exam|guarantee|new release|official exam/i);
 });
 test('current US Android free, paid, review, ad and renewal boundaries remain explicit', () => {
-  for (const s of ['EPS-1 and EPS-2 are free.', 'EPS-3–7 need the optional bundle or Premium access.', '20 new words and 10 quizzes a day', 'Reviews of learned words are unlimited.', 'Optional rewarded ads', 'ads and optional in-app purchases', 'monthly auto-renewing subscription', 'one-time lifetime purchase']) assert(visible.includes(s), s);
+  for (const s of ['EPS-1 and EPS-2 are free.', 'To open EPS-3–7, buy the bundle or lifetime access.', 'no daily limits on new-word study, reviews, or quizzes in decks you can access', 'defaults to 20 a day and can be changed in Settings', '10 more words at a time', 'contains ads', 'one-time lifetime purchase unlocks all paid decks and removes ads', 'Existing monthly subscribers keep their plan.']) assert(visible.includes(s), s);
+  assert.doesNotMatch(visible, /20 new words and 10 quizzes a day|Optional rewarded ads|monthly auto-renewing subscription/i);
   assert.doesNotMatch(section, /<a\b|<form|<input|<script|<img|<iframe|utm_|referrer=/);
   const play = [...html.matchAll(/data-store-link="([^"]+)"/g)].map(x=>x[1]).filter(x=>x.includes('play.google.com'));
   assert.deepEqual(play, Array(2).fill('https://play.google.com/store/apps/details?id=com.pifl.pipi.words'));
