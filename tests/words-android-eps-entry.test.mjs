@@ -13,9 +13,10 @@ test('KO Words has an explicitly Android-only EPS entry before the iOS screensho
   assert.doesNotMatch(section, /iOS|App Store|합격|보장|출시|9개 언어/);
 });
 test('free packs, paid packs, daily limits, ads and recurring vs lifetime costs stay distinct', () => {
-  for (const required of ['EPS-1·2는 무료','EPS-3~7은 묶음 구매나 프리미엄','새 단어 하루 20장, 퀴즈 하루 10회','이미 배운 단어의 복습은 무제한','광고와 선택형 인앱결제','월 자동갱신 구독 또는 일회성 평생 이용권'])
+  for (const required of ['EPS-1·2는 무료','EPS-3~7은 묶음이나 평생 이용권','이용할 수 있는 팩의 새 단어 학습·복습·퀴즈에 하루 횟수 제한이 없어요','기본 하루 20개이며 설정에서 바꿀 수 있어요','10개씩 더 공부할 수 있어요','광고가 있으며','한 번 결제하는 평생 이용권','유료 팩 전체를 열고 광고를 제거해요','기존 월 구독은 유지돼요'])
     assert.ok(visible.includes(required), required);
   assert.match(html, /data-store-link="https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.pifl\.pipi\.words"/);
+  assert.doesNotMatch(visible, /퀴즈 하루 10회|기본 무료 한도|월 자동갱신 구독 또는/);
   assert.doesNotMatch(section, /<a\b|<form|<input|<script|<img|<iframe|utm_|referrer=/);
 });
 test('no other locale or app receives the Korean Android-only section', () => {
