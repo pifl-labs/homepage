@@ -25,7 +25,11 @@ const focusWebTrial = focusWebTrialFor({ slug: app.slug, status: app.status, lan
 const wordsWebTrial = wordsWebTrialFor({ slug: app.slug, status: app.status, lang });
 const voyageWebTrial = voyageWebTrialFor({ slug: app.slug, status: app.status, lang });
 const ddayDateHelp = ddayDateHelpFor({ slug: app.slug, status: app.status, lang });
-const submitted = submissionMedia(slug);
+const bridgeEnglish = slug === 'pipi-bridge' && lang === 'en';
+const submitted = bridgeEnglish ? {
+  version: '1.2.0', pending: false, previewIndex: 0,
+  shots: [{ src: '/assets/apps/pipi-bridge/us-listing-20261119/library.webp', label: { en: 'Library & classroom: choose a topic', ko: '', ja: '' } }],
+} : submissionMedia(slug);
 const mediaCopy = submissionCopy[lang];
 const shots = submitted ? submitted.shots.map(s => ({ src: s.src, label: s.label[lang], desc: "" })) : c.shots.map(s => ({ ...s, src: `/assets/apps/${slug}/${lang}/${s.file}.webp` }));
 const name = appName(app, lang);
@@ -226,15 +230,15 @@ const jsonLd = {
           <h2 class="section-title">{submitted ? mediaCopy.title : c.shotsTitle}</h2>
         </div>
         {submitted && <div class="app-media-note">
-          <p><strong>{mediaCopy.label} · iOS {submitted.version}</strong></p>
+          <p><strong>{bridgeEnglish ? "US App Store listing · iOS 1.2.0 observed" : `${mediaCopy.label} · iOS ${submitted.version}`}</strong></p>
           {submitted.pending && <p>{mediaCopy.warning}</p>}
-          <p>{mediaCopy.detail}</p>
+          <p>{bridgeEnglish ? "English screenshot on the public US App Store listing, checked November 19, 2026. The listing shows iOS 1.2.0; the screenshot’s capture build and device are not independently verified. Android feature rollout remains unconfirmed." : mediaCopy.detail}</p>
           {slug === "pipi-draw" && <p>{({ ko: `예시 도안입니다. 등록정보에는 이전 화면이 남아 있어 ${submitted.version.split(" ")[0]}의 모든 화면 변경을 보여주지는 않습니다.`, ja: `サンプル図案です。登録情報に以前の画面が残っており、${submitted.version.split(" ")[0]}のすべての画面変更を示すものではありません。`, en: `Sample page shown. The listing still contains earlier screens and does not show every interface change in ${submitted.version.split(" ")[0]}.` })[lang]}</p>}
         </div>}
         <div class="app-shots-scroll" tabindex="0" role="region" aria-label={submitted ? mediaCopy.title : c.shotsTitle}>
           {shots.map((s) => (
             <figure class="app-shot">
-              <img class="app-shot-img" src={s.src} alt={`${name} — ${s.label}`} width="250" height="541" loading="lazy" />
+              <img class="app-shot-img" src={s.src} alt={`${name} — ${s.label}`} width={bridgeEnglish ? 598 : 250} height={bridgeEnglish ? 1300 : 541} loading="lazy" />
               <figcaption>
                 <div class="app-shot-label">{s.label}</div>
                 <div class="app-shot-desc">{s.desc}</div>
