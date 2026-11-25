@@ -1,0 +1,6 @@
+---
+// 무prefix 경로 — 프로덕션에서는 functions/_middleware.ts 가 브라우저 언어로 /ko/·/en/·/ja/ 에 302 한다.
+// 미들웨어가 돌지 않는 환경에서도 열리도록 영어 본문으로 둔다(canonical 은 /en/).
+import Support from '../../../components/haru/Support.astro';
+---
+<Support lang="en" homeHref="/en/" />

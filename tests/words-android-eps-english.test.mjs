@@ -25,7 +25,8 @@ test('English addition never appears on another locale, app or legacy route', ()
     if (!existsSync(p) || (slug==='pipi-words' && lang==='en')) continue;
     assert.doesNotMatch(read(p), /id="android-eps-topik-en"/); seen++;
   }
-  assert.equal(seen, 50);
+  // 50 product landings + 하루의 계절 지원 페이지(/{ko,en,ja}/apps/haru/, 2026-11-25) 3.
+  assert.equal(seen, 53);
   // Legacy /apps/pipi-words is privacy-only, not a product landing.
   for (const relative of readdirSync('dist', {recursive: true})) {
     if (!relative.endsWith('.html') || relative==='en/apps/pipi-words/index.html') continue;
