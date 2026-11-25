@@ -15,6 +15,11 @@ interface Props { lang?: Lang; homeHref?: string }
 //   IP 는 src/limits.js 가 Workers Rate Limiting 의 열쇠(IPv4 그대로·IPv6 /64, 60초 300이벤트)로만 쓴다.
 //   끄기: 기록 → 설정 → 개인정보 → '플레이 기록 보내기'(app/tab_settings.gd, 기본 켬, 끄면 큐 삭제·설치 번호는 기기에 남음).
 // - 보관 2년(이후 삭제)은 대표 확정(2026-11-25). 회사 메일 MX = Google Workspace.
+// - 보내지 못한 묶음은 큐(상한 200)에 남겨 다시 보내고, 네트워크 실패·5xx 가 5번째면 버린다(analytics.gd MAX_TRIES=5, 4xx 는 바로 버림).
+// - 제6조 이전받는 자 연락처(개인정보 보호법 제28조의8 제2항 제3호): Cloudflare = 공식 개인정보처리방침(2025-11-04 시행)의
+//   본사 주소 101 Townsend St., San Francisco, CA 94107 · privacyquestions@cloudflare.com(dialogos 방침과 같음),
+//   Google = 스도쿠·pipi-draw 방침과 같은 주소·개인정보 문의 양식.
+// - 앱 이름은 '하루의 계절' 하나다. en·ja 판은 이름에 번역을 붙이지 않고, 화면 문구와 함께 lang="ko" 로 표시한다.
 const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
 
 const BASE = 'https://pifl-labs.com';
@@ -32,21 +37,21 @@ const chrome = {
     docTitle: '하루의 계절 개인정보처리방침 - PiFl Labs',
     docDesc: '회원가입·광고·추적이 없는 육성 시뮬레이션 게임 하루의 계절의 개인정보처리방침입니다. 진행은 기기에만 저장하고, 설정에서 끌 수 있는 익명 플레이 기록만 회사 서버로 보냅니다.',
     back: '홈으로 돌아가기',
-    title: '하루의 계절 개인정보처리방침',
+    titleTail: '개인정보처리방침',
     date: '시행일: 2026년 11월 25일',
   },
   en: {
-    docTitle: "하루의 계절 (Haru's Seasons) Privacy Policy - PiFl Labs",
-    docDesc: "Privacy policy for 하루의 계절 (Haru's Seasons), a life-sim game with no sign-up, ads or tracking. Progress stays on your device; only anonymous play records, which you can turn off, are sent to our server.",
+    docTitle: '하루의 계절 Privacy Policy - PiFl Labs',
+    docDesc: 'Privacy policy for 하루의 계절, a Korean-language life-sim game with no sign-up, ads or tracking. Progress stays on your device; only anonymous play records, which you can turn off, are sent to our server.',
     back: 'Back to Home',
-    title: "하루의 계절 (Haru's Seasons) Privacy Policy",
+    titleTail: 'Privacy Policy',
     date: 'Effective Date: November 25, 2026',
   },
   ja: {
-    docTitle: '하루의 계절（ハルの季節）プライバシーポリシー - PiFl Labs',
-    docDesc: '会員登録・広告・トラッキングのない育成シミュレーションゲーム「하루의 계절」（ハルの季節）のプライバシーポリシーです。進行状況は端末にだけ保存し、設定でオフにできる匿名のプレイ記録だけを当社サーバーに送ります。',
+    docTitle: '하루의 계절 プライバシーポリシー - PiFl Labs',
+    docDesc: '会員登録・広告・トラッキングのない韓国語の育成シミュレーションゲーム「하루의 계절」のプライバシーポリシーです。進行状況は端末にだけ保存し、設定でオフにできる匿名のプレイ記録だけを当社サーバーに送ります。',
     back: 'ホームに戻る',
-    title: '하루의 계절（ハルの季節）プライバシーポリシー',
+    titleTail: 'プライバシーポリシー',
     date: '施行日: 2026年11月25日',
   },
 }[lang];
@@ -62,7 +67,7 @@ const chrome = {
   <section class="legal-hero">
     <div class="container">
       <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {chrome.back}</a>
-      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient">{chrome.title}</span></h1>
+      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> <span class="text-gradient"><span lang="ko">하루의 계절</span> {chrome.titleTail}</span></h1>
       <p class="legal-date">{chrome.date}</p>
     </div>
   </section>
@@ -136,7 +141,7 @@ const chrome = {
           <li><strong>결제 완료</strong>(pay_done): 구매가 확인됐을 때 — 상품 이름</li>
           <li><strong>결제 미완료</strong>(pay_cancel): 결제가 취소·대기·오류로 끝나지 않았을 때 — 상품 이름과 그 까닭</li>
         </ul>
-        <p>플레이 기록은 앱을 켤 때, 계절이 끝날 때, 앱이 뒤로 갈 때 보냅니다. 인터넷에 연결되지 않았으면 기기에 최대 200개까지 모아 두었다가 다음에 보냅니다.</p>
+        <p>플레이 기록은 앱을 켤 때, 계절이 끝날 때, 앱이 뒤로 갈 때 보냅니다. 보내지 못한 기록은 기기에 최대 200개까지 모아 두었다가 다음에 다시 보내며, 같은 기록을 다섯 번 거듭 보내지 못하면 보내지 않고 버립니다.</p>
         <p><strong>IP 주소</strong>: 플레이 기록을 받는 회사 서버는 IP 주소와 User-Agent(앱·기기 정보 문자열)를 저장하지 않습니다. 다만 한 곳에서 기록을 지나치게 많이 보내는 것을 막기 위해, 기록을 받는 순간 보낸 쪽의 IP 주소(IPv6는 앞 64비트 단위)를 열쇠로 삼아 1분 동안 받은 이벤트 수를 Cloudflare의 요청 수 제한 기능으로 셉니다. 이 값은 회사의 데이터베이스나 로그에 기록하지 않습니다. 요청을 전달하는 Cloudflare는 통상의 접속 기록(IP 주소 등)을 처리할 수 있습니다.</p>
         <p><strong>끄는 방법</strong>: 앱의 <strong>기록 → 설정 → 개인정보</strong>에서 <strong>'플레이 기록 보내기'</strong>를 끄면, 기기에 모아 두고 아직 보내지 않은 기록을 지우고 그 뒤로는 기록을 모으거나 보내지 않습니다. 무작위 설치 번호는 기기에 남지만 보내지 않습니다.</p>
 
@@ -211,6 +216,11 @@ const chrome = {
           </tbody>
         </table>
         </ScrollableLegalTable>
+        <p>이전받는 자의 연락처는 다음과 같습니다.</p>
+        <ul>
+          <li><strong>Cloudflare, Inc.</strong>: 미국 · 101 Townsend St., San Francisco, CA 94107 · 개인정보 문의: <a href="#" data-email-user="privacyquestions" data-email-domain="cloudflare.com"><span class="email-text">privacyquestions (at) cloudflare.com</span></a></li>
+          <li><strong>Google LLC (Google Workspace)</strong>: 미국 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · 개인정보 문의: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google 개인정보 문의 양식</a></li>
+        </ul>
         <p><strong>이전 거부 방법과 효과</strong>: 익명 플레이 기록은 기록 → 설정 → 개인정보 → '플레이 기록 보내기'를 끄면 보내지 않으며, 게임 이용에는 영향이 없습니다. 추가 리소스 팩은 '나중에'를 고르면 내려받지 않으며, 이 경우 지금 그림으로 계속 플레이할 수 있지만 추가 그림은 볼 수 없습니다. 이메일 문의는 보내지 않으면 이전되지 않습니다.</p>
 
         <h2>제7조 (앱 내 구매)</h2>
@@ -271,7 +281,7 @@ const chrome = {
 
       {lang === 'en' && (
       <div class="legal-card">
-        <p>PiFl Labs Co., Ltd. ("Company", "we", "us") has established and publishes this Privacy Policy under Article 30 of the Korean Personal Information Protection Act to protect your personal data and to handle related concerns promptly and smoothly. It covers <strong>하루의 계절</strong> (Haru's Seasons, "App"), a life-sim game, and applies to the App in preference to our <a href="/en/privacy/">general Privacy Policy</a>.</p>
+        <p>PiFl Labs Co., Ltd. ("Company", "we", "us") has established and publishes this Privacy Policy under Article 30 of the Korean Personal Information Protection Act to protect your personal data and to handle related concerns promptly and smoothly. It covers <strong lang="ko">하루의 계절</strong> ("App"), a Korean-language life-sim game, and applies to the App in preference to our <a href="/en/privacy/">general Privacy Policy</a>.</p>
 
         <p>The App has <strong>no sign-up or login</strong> and does not collect your name, email address, contact details, location, photos from your device or advertising identifier (advertising ID). There are no ads and no tracking. <strong>Your game progress is stored only on your device and is never synced to a server.</strong> The App uses the internet only to download additional resource packs, to send anonymous play records (which you can turn off in Settings) and for in-app purchases through the App Store or Google Play.</p>
 
@@ -280,7 +290,7 @@ const chrome = {
           <li><strong>Providing the game</strong>: Your current story, Ending Album, settings and purchase status are saved on your device so you can keep playing. This happens only on your device and nothing is sent to us.</li>
           <li><strong>Providing additional resource packs</strong>: If you choose to download them, the App downloads additional resource packs that contain game artwork.</li>
           <li><strong>Improving the game</strong>: Anonymous play records show us how far players get and whether artwork downloads and purchases work properly, so we can improve the game.</li>
-          <li><strong>Providing in-app purchases</strong>: The App checks the results of buying or restoring the 새 꿈 묶음 (“New Dreams” bundle) to unlock the hidden dreams. Payments are handled by Apple or Google (Section 7).</li>
+          <li><strong>Providing in-app purchases</strong>: The App checks the results of buying or restoring the <span lang="ko">새 꿈 묶음</span> (“New Dreams” bundle) to unlock the hidden dreams. Payments are handled by Apple or Google (Section 7).</li>
           <li><strong>Responding to inquiries</strong>: Receiving and answering emails you send us and letting you know the outcome</li>
         </ul>
 
@@ -303,13 +313,13 @@ const chrome = {
             </tr>
             <tr>
               <td>Anonymous play records</td>
-              <td>A random install number created on your device the first time you open the App (not an advertising ID or a device identifier), app version and build number, operating system type (iOS or Android), the game events listed below with each event's device time, sequence number and story number, and the time our server received them</td>
+              <td>A random install number created on your device the first time you open the App (not an advertising ID or a hardware device identifier), app version and build number, operating system type (iOS or Android), the game events listed below with each event's device time, sequence number and story number, and the time our server received them</td>
               <td>While the setting is on (it is on by default), sent to our server (Cloudflare Workers and D1) over an encrypted connection (HTTPS). Names, contact details, advertising IDs and location are never sent</td>
             </tr>
             <tr>
               <td>Downloading additional resource packs</td>
               <td>Connection logs at the time of download (such as IP addresses)</td>
-              <td>If you choose 받기 (Download), packs are downloaded from https://packs.pifl-labs.com (Cloudflare R2), and Cloudflare may process standard connection logs. We do not use these logs to identify anyone</td>
+              <td>If you choose <span lang="ko">받기</span> (Download), packs are downloaded from https://packs.pifl-labs.com (Cloudflare R2), and Cloudflare may process standard connection logs. We do not use these logs to identify anyone</td>
             </tr>
             <tr>
               <td>In-app purchases</td>
@@ -336,9 +346,9 @@ const chrome = {
           <li><strong>Purchase completed</strong> (pay_done): when a purchase is confirmed — the item name</li>
           <li><strong>Purchase not completed</strong> (pay_cancel): when a payment was cancelled, is pending or failed — the item name and the reason</li>
         </ul>
-        <p>Play records are sent when you open the App, when a season ends and when the App goes to the background. Without an internet connection, up to 200 records are kept on your device and sent later.</p>
+        <p>Play records are sent when you open the App, when a season ends and when the App goes to the background. Records that could not be sent are kept on your device, up to 200, and sent again later; if the same records fail to send five times in a row, they are discarded without being sent.</p>
         <p><strong>IP addresses</strong>: Our server that receives play records does not store IP addresses or User-Agent strings (text describing the app and device). To stop any single source from sending an excessive number of records, however, at the moment it receives records it uses the sender's IP address (for IPv6, the first 64 bits) as a key for Cloudflare's rate-limiting feature, which counts the events received in one minute. This value is not written to our database or logs. Cloudflare, which delivers the requests, may process standard connection logs (such as IP addresses).</p>
-        <p><strong>How to turn it off</strong>: In the App, go to <strong>기록 (Records) → 설정 (Settings) → 개인정보 (Privacy)</strong> and turn off <strong>플레이 기록 보내기</strong> (Send play records). The App then deletes the records waiting on your device that have not been sent yet, and stops collecting and sending records. The random install number stays on your device but is not sent.</p>
+        <p><strong>How to turn it off</strong>: In the App, go to <strong><span lang="ko">기록</span> (Records) → <span lang="ko">설정</span> (Settings) → <span lang="ko">개인정보</span> (Privacy)</strong> and turn off <strong lang="ko">플레이 기록 보내기</strong> (Send play records). The App then deletes the records waiting on your device that have not been sent yet, and stops collecting and sending records. The random install number stays on your device but is not sent.</p>
 
         <h2>3. Retention Period</h2>
         <ul>
@@ -411,13 +421,18 @@ const chrome = {
           </tbody>
         </table>
         </ScrollableLegalTable>
-        <p><strong>How to refuse a transfer and what happens</strong>: Anonymous play records are not sent once you turn off 기록 → 설정 → 개인정보 → 플레이 기록 보내기, and this does not affect the game. Resource packs are not downloaded if you choose 나중에 (Later); you can keep playing with the current artwork, but you will not see the additional artwork. Nothing from an email inquiry is transferred unless you send one.</p>
+        <p>Contact details for each recipient are set out below.</p>
+        <ul>
+          <li><strong>Cloudflare, Inc.</strong>: United States · 101 Townsend St., San Francisco, CA 94107 · privacy contact: <a href="#" data-email-user="privacyquestions" data-email-domain="cloudflare.com"><span class="email-text">privacyquestions (at) cloudflare.com</span></a></li>
+          <li><strong>Google LLC (Google Workspace)</strong>: United States · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google privacy inquiry form</a></li>
+        </ul>
+        <p><strong>How to refuse a transfer and what happens</strong>: Anonymous play records are not sent once you turn off <span lang="ko">기록 → 설정 → 개인정보 → 플레이 기록 보내기</span>, and this does not affect the game. Resource packs are not downloaded if you choose <span lang="ko">나중에</span> (Later); you can keep playing with the current artwork, but you will not see the additional artwork. Nothing from an email inquiry is transferred unless you send one.</p>
 
         <h2>7. In-App Purchases</h2>
-        <p>Payments for in-app purchases such as the 새 꿈 묶음 are handled by Apple (App Store) or Google (Google Play), and we do not receive payment information. Information involved in downloading the App and paying is handled under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> or <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Google's Privacy Policy</a>. To recover a purchase after reinstalling the App or on another device, go to <strong>기록 (Records) → 설정 (Settings) → 구매 (Purchases)</strong> in the App and tap <strong>구매 복원</strong> (Restore Purchases).</p>
+        <p>Payments for in-app purchases such as the <span lang="ko">새 꿈 묶음</span> are handled by Apple (App Store) or Google (Google Play), and we do not receive payment information. Information involved in downloading the App and paying is handled under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> or <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Google's Privacy Policy</a>. To recover a purchase after reinstalling the App or on another device, go to <strong><span lang="ko">기록</span> (Records) → <span lang="ko">설정</span> (Settings) → <span lang="ko">구매</span> (Purchases)</strong> in the App and tap <strong lang="ko">구매 복원</strong> (Restore Purchases).</p>
 
         <h2>8. Children's Privacy</h2>
-        <p>Because we do not receive any information through the App that can identify an individual, we do not collect personal data from children under 14 either. Anonymous play records can be turned off in 기록 → 설정 → 개인정보 → 플레이 기록 보내기. If a child under 14 contacts us by email, however, the consent of a legal guardian may be required. Parents and guardians may contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
+        <p>Because we do not receive any information through the App that can identify an individual, we do not collect personal data from children under 14 either. Anonymous play records can be turned off in <span lang="ko">기록 → 설정 → 개인정보 → 플레이 기록 보내기</span>. If a child under 14 contacts us by email, however, the consent of a legal guardian may be required. Parents and guardians may contact us at <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>.</p>
 
         <h2>9. Data Destruction</h2>
         <ul>
@@ -434,7 +449,7 @@ const chrome = {
           <li>The right to request suspension of processing, correction, deletion and destruction</li>
           <li>The right to prompt and fair remedy for damage caused by processing</li>
         </ol>
-        <p>Exercise these rights by contacting <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>; we will act without undue delay. Game progress, the Ending Album and settings stored only on your device are not held by us, so we cannot access or delete them for you; they are erased from the device when you delete the App. Anonymous play records contain nothing that identifies a person, so it is difficult for us to find a particular player's records to show or delete them. To stop sending them, turn off 플레이 기록 보내기 (Send play records).</p>
+        <p>Exercise these rights by contacting <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a>; we will act without undue delay. Game progress, the Ending Album and settings stored only on your device are not held by us, so we cannot access or delete them for you; they are erased from the device when you delete the App. Anonymous play records contain nothing that identifies a person, so it is difficult for us to find a particular player's records to show or delete them. To stop sending them, turn off <span lang="ko">플레이 기록 보내기</span> (Send play records).</p>
 
         <h2>11. Security Measures</h2>
         <ul>
@@ -471,7 +486,7 @@ const chrome = {
 
       {lang === 'ja' && (
       <div class="legal-card">
-        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、韓国の「個人情報保護法」第30条に基づき、お客様の個人情報を保護し、これに関するご相談を迅速かつ円滑に処理するため、育成シミュレーションゲーム<strong>「하루의 계절」</strong>（ハルの季節、以下「本アプリ」）のプライバシーポリシーを次のとおり定めて公開します。本ポリシーは、当社ウェブサイトの<a href="/ja/privacy/">総合プライバシーポリシー</a>に優先して本アプリに適用されます。</p>
+        <p>株式会社ピープルラブズ（PiFl Labs Co., Ltd.、以下「当社」）は、韓国の「個人情報保護法」第30条に基づき、お客様の個人情報を保護し、これに関するご相談を迅速かつ円滑に処理するため、韓国語の育成シミュレーションゲーム<strong>「<span lang="ko">하루의 계절</span>」</strong>（以下「本アプリ」）のプライバシーポリシーを次のとおり定めて公開します。本ポリシーは、当社ウェブサイトの<a href="/ja/privacy/">総合プライバシーポリシー</a>に優先して本アプリに適用されます。</p>
 
         <p>本アプリには<strong>会員登録・ログインがなく</strong>、お名前・メールアドレス・連絡先・位置情報・端末の写真・広告識別子（広告ID）を収集しません。広告もトラッキングもありません。<strong>ゲームの進行状況は端末の中にだけ保存され、サーバーと同期しません。</strong>本アプリがインターネットを使うのは、追加リソースパックのダウンロード、設定でオフにできる匿名のプレイ記録の送信、App Store・Google Playを通じたアプリ内課金だけです。</p>
 
@@ -480,7 +495,7 @@ const chrome = {
           <li><strong>ゲームの提供</strong>: 進行中の物語、エンディングアルバム、設定、購入状況を端末に保存し、続きから遊べるようにします。端末内でのみ処理され、当社には送信されません。</li>
           <li><strong>追加リソースパックの提供</strong>: お客様がダウンロードを選んだ場合に、ゲームの絵が入った追加リソースパックをダウンロードできるようにします。</li>
           <li><strong>ゲームの改善</strong>: 匿名のプレイ記録から、利用者がどこまで遊んでいるか、絵のダウンロードや購入の流れが正しく動いているかを把握し、ゲームを改善します。</li>
-          <li><strong>アプリ内課金の提供</strong>: 「새 꿈 묶음」（新しい夢のセット）の購入と購入の復元の結果を確認し、隠れた夢を解放します。決済はApple・Googleが処理します（第7条）。</li>
+          <li><strong>アプリ内課金の提供</strong>: 「<span lang="ko">새 꿈 묶음</span>」（新しい夢のセット）の購入と購入の復元の結果を確認し、隠れた夢を解放します。決済はApple・Googleが処理します（第7条）。</li>
           <li><strong>お問い合わせへの対応</strong>: メールでいただいたお問い合わせの受付、回答および対応結果のご連絡</li>
         </ul>
 
@@ -509,7 +524,7 @@ const chrome = {
             <tr>
               <td>追加リソースパックのダウンロード</td>
               <td>ダウンロード時の接続記録（IPアドレスなど）</td>
-              <td>お客様が「받기」（受け取る）を選ぶと https://packs.pifl-labs.com （Cloudflare R2）からダウンロードし、その際にCloudflareが通常の接続記録を取り扱うことがあります。当社はこの記録で個人を特定しません</td>
+              <td>お客様が「<span lang="ko">받기</span>」（受け取る）を選ぶと https://packs.pifl-labs.com （Cloudflare R2）からダウンロードし、その際にCloudflareが通常の接続記録を取り扱うことがあります。当社はこの記録で個人を特定しません</td>
             </tr>
             <tr>
               <td>アプリ内課金</td>
@@ -536,9 +551,9 @@ const chrome = {
           <li><strong>購入完了</strong>（pay_done）: 購入が確認されたとき — 商品名</li>
           <li><strong>購入未完了</strong>（pay_cancel）: 決済がキャンセル・保留・エラーで完了しなかったとき — 商品名とその理由</li>
         </ul>
-        <p>プレイ記録は、アプリを起動したとき、季節が終わったとき、アプリがバックグラウンドに移ったときに送ります。インターネットに接続していない場合は、端末に最大200件までためておき、あとで送ります。</p>
+        <p>プレイ記録は、アプリを起動したとき、季節が終わったとき、アプリがバックグラウンドに移ったときに送ります。送れなかった記録は端末に最大200件までためておいてあとで送り直し、同じ記録を5回続けて送れなかった場合は送らずに破棄します。</p>
         <p><strong>IPアドレス</strong>: プレイ記録を受け取る当社サーバーは、IPアドレスとUser-Agent（アプリ・端末の情報を示す文字列）を保存しません。ただし、一か所から記録が過剰に送られるのを防ぐため、受け取る時点で送信元のIPアドレス（IPv6は先頭64ビット単位）をキーとして、1分間に受け取ったイベント数をCloudflareのレート制限機能で数えます。この値は当社のデータベースやログには記録しません。リクエストを中継するCloudflareは、通常の接続記録（IPアドレスなど）を取り扱うことがあります。</p>
-        <p><strong>オフにする方法</strong>: アプリの<strong>기록（記録）→ 설정（設定）→ 개인정보（個人情報）</strong>で<strong>「플레이 기록 보내기」</strong>（プレイ記録を送る）をオフにすると、端末にたまっていてまだ送っていない記録を削除し、それ以降は記録を集めることも送ることもしません。ランダムなインストール番号は端末に残りますが、送信はしません。</p>
+        <p><strong>オフにする方法</strong>: アプリの<strong><span lang="ko">기록</span>（記録）→ <span lang="ko">설정</span>（設定）→ <span lang="ko">개인정보</span>（個人情報）</strong>で<strong>「<span lang="ko">플레이 기록 보내기</span>」</strong>（プレイ記録を送る）をオフにすると、端末にたまっていてまだ送っていない記録を削除し、それ以降は記録を集めることも送ることもしません。ランダムなインストール番号は端末に残りますが、送信はしません。</p>
 
         <h2>第3条 (保有期間)</h2>
         <ul>
@@ -611,13 +626,18 @@ const chrome = {
           </tbody>
         </table>
         </ScrollableLegalTable>
-        <p><strong>移転を拒否する方法と効果</strong>: 匿名のプレイ記録は、기록 → 설정 → 개인정보 →「플레이 기록 보내기」をオフにすれば送信されず、ゲームの利用には影響しません。追加リソースパックは「나중에」（あとで）を選べばダウンロードされません。その場合も今の絵のまま遊び続けられますが、追加の絵は表示されません。メールでのお問い合わせは、送らなければ移転されません。</p>
+        <p>移転先の連絡先は次のとおりです。</p>
+        <ul>
+          <li><strong>Cloudflare, Inc.</strong>: 米国 · 101 Townsend St., San Francisco, CA 94107 · プライバシー窓口: <a href="#" data-email-user="privacyquestions" data-email-domain="cloudflare.com"><span class="email-text">privacyquestions (at) cloudflare.com</span></a></li>
+          <li><strong>Google LLC（Google Workspace）</strong>: 米国 · 1600 Amphitheatre Parkway, Mountain View, CA 94043 · プライバシー窓口: <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">Google のプライバシーお問い合わせフォーム</a></li>
+        </ul>
+        <p><strong>移転を拒否する方法と効果</strong>: 匿名のプレイ記録は、<span lang="ko">기록 → 설정 → 개인정보</span> →「<span lang="ko">플레이 기록 보내기</span>」をオフにすれば送信されず、ゲームの利用には影響しません。追加リソースパックは「<span lang="ko">나중에</span>」（あとで）を選べばダウンロードされません。その場合も今の絵のまま遊び続けられますが、追加の絵は表示されません。メールでのお問い合わせは、送らなければ移転されません。</p>
 
         <h2>第7条 (アプリ内課金)</h2>
-        <p>「새 꿈 묶음」などアプリ内課金の決済はApple（App Store）またはGoogle（Google Play）が処理し、当社は決済情報を受け取りません。本アプリのダウンロードと決済に関する情報は、<a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>または<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>に従って取り扱われます。再インストールしたアプリや別の端末で購入を取り戻すには、アプリの<strong>기록（記録）→ 설정（設定）→ 구매（購入）</strong>で<strong>「구매 복원」</strong>（購入の復元）を押してください。</p>
+        <p>「<span lang="ko">새 꿈 묶음</span>」などアプリ内課金の決済はApple（App Store）またはGoogle（Google Play）が処理し、当社は決済情報を受け取りません。本アプリのダウンロードと決済に関する情報は、<a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>または<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>に従って取り扱われます。再インストールしたアプリや別の端末で購入を取り戻すには、アプリの<strong><span lang="ko">기록</span>（記録）→ <span lang="ko">설정</span>（設定）→ <span lang="ko">구매</span>（購入）</strong>で<strong>「<span lang="ko">구매 복원</span>」</strong>（購入の復元）を押してください。</p>
 
         <h2>第8条 (子どものプライバシー)</h2>
-        <p>当社は本アプリを通じて個人を特定できる情報を受け取らないため、満14歳未満のお子様の個人情報も収集しません。匿名のプレイ記録は、기록 → 설정 → 개인정보 →「플레이 기록 보내기」でオフにできます。ただし、満14歳未満のお子様がメールでお問い合わせをする場合は、法定代理人の同意が必要になることがあります。保護者の方は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までお問い合わせください。</p>
+        <p>当社は本アプリを通じて個人を特定できる情報を受け取らないため、満14歳未満のお子様の個人情報も収集しません。匿名のプレイ記録は、<span lang="ko">기록 → 설정 → 개인정보</span> →「<span lang="ko">플레이 기록 보내기</span>」でオフにできます。ただし、満14歳未満のお子様がメールでお問い合わせをする場合は、法定代理人の同意が必要になることがあります。保護者の方は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までお問い合わせください。</p>
 
         <h2>第9条 (個人情報の破棄手続および方法)</h2>
         <ul>
@@ -634,7 +654,7 @@ const chrome = {
           <li>個人情報の訂正、削除、処理停止、破棄を要求する権利</li>
           <li>処理によって生じた損害に対する救済を求める権利</li>
         </ol>
-        <p>権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。当社は遅滞なく対応します。端末にのみ保存されるゲームの進行状況・エンディングアルバム・設定は当社が保有していないため、当社が閲覧したり削除したりすることはできません。これらは本アプリを削除すると端末から消えます。匿名のプレイ記録には個人を特定できる情報がないため、当社が特定の利用者の記録を探し出して閲覧・削除することは困難です。これ以上送らないようにするには、「플레이 기록 보내기」をオフにしてください。</p>
+        <p>権利の行使は <a href="#" data-email-user="privacy" data-email-domain="pifl-labs.com"><span class="email-text">privacy (at) pifl-labs.com</span></a> までご連絡ください。当社は遅滞なく対応します。端末にのみ保存されるゲームの進行状況・エンディングアルバム・設定は当社が保有していないため、当社が閲覧したり削除したりすることはできません。これらは本アプリを削除すると端末から消えます。匿名のプレイ記録には個人を特定できる情報がないため、当社が特定の利用者の記録を探し出して閲覧・削除することは困難です。これ以上送らないようにするには、「<span lang="ko">플레이 기록 보내기</span>」をオフにしてください。</p>
 
         <h2>第11条 (安全管理措置)</h2>
         <ul>

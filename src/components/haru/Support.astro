@@ -9,7 +9,10 @@ interface Props { lang?: Lang; homeHref?: string }
 // (자기 canonical + ko/en/ja alternate, x-default 는 사이트 규칙대로 /ko/). 무prefix 경로는 영어 본문(canonical /en/).
 // 앱 화면 문구(버튼·메뉴)는 haru 저장소 season/scripts/app 의 글자 그대로 쓴다:
 //   기록 → 설정 → 구매 → '구매 복원'(tab_purchase.gd) · 팩 안내 '더 고운 그림을 받을게요' [받기] [나중에](pack_prompt.gd).
-// en·ja 판은 한국어 화면 문구를 그대로 두고 괄호로 뜻을 붙인다(앱이 한국어로만 표시되므로).
+// en·ja 판은 한국어 화면 문구를 그대로 두고 괄호로 뜻을 붙인다(앱이 한국어로만 표시되므로). 한국어 문구는 lang="ko" 로 감싸
+// 화면 읽기 기능이 한국어로 읽게 한다. 앱 이름은 '하루의 계절' 하나라 번역 이름을 붙이지 않고, 제목의 뜻은 소개에서 한 번만 풀이한다.
+// 구매: 엔딩 화면·새 이야기 시트의 사기 버튼은 첫 엔딩 뒤, 기록 → 설정 → 구매의 사기 버튼은 첫 엔딩 전에도 보이고
+// 그때 사면 지금 판에 바로 열린다(b19 fcd2b83 tab_purchase.gd · dream_gate.gd sync · DESIGN §13.5).
 const { lang = 'ko', homeHref = `/${lang}/` } = Astro.props;
 
 const BASE = 'https://pifl-labs.com';
@@ -27,21 +30,21 @@ const chrome = {
     docTitle: '하루의 계절 지원 - PiFl Labs',
     docDesc: '육성 시뮬레이션 게임 하루의 계절의 게임 소개, 자주 묻는 질문과 지원 문의 안내입니다.',
     back: '홈으로 돌아가기',
-    title: '하루의 계절 지원',
+    titleTail: '지원',
     sub: '게임 소개 · 자주 묻는 질문 · 문의',
   },
   en: {
-    docTitle: "하루의 계절 (Haru's Seasons) Support - PiFl Labs",
-    docDesc: "About 하루의 계절 (Haru's Seasons), a Korean-language life-sim game: frequently asked questions and how to contact support.",
+    docTitle: '하루의 계절 Support - PiFl Labs',
+    docDesc: 'About 하루의 계절, a Korean-language life-sim game: frequently asked questions and how to contact support.',
     back: 'Back to Home',
-    title: "하루의 계절 (Haru's Seasons) Support",
+    titleTail: 'Support',
     sub: 'About the game · FAQ · Contact',
   },
   ja: {
-    docTitle: '하루의 계절（ハルの季節）サポート - PiFl Labs',
-    docDesc: '韓国語の育成シミュレーションゲーム「하루의 계절」（ハルの季節）のゲーム紹介、よくある質問、サポートへのお問い合わせ方法のご案内です。',
+    docTitle: '하루의 계절 サポート - PiFl Labs',
+    docDesc: '韓国語の育成シミュレーションゲーム「하루의 계절」のゲーム紹介、よくある質問、サポートへのお問い合わせ方法のご案内です。',
     back: 'ホームに戻る',
-    title: '하루의 계절（ハルの季節）サポート',
+    titleTail: 'サポート',
     sub: 'ゲーム紹介 · よくある質問 · お問い合わせ',
   },
 }[lang];
@@ -57,7 +60,7 @@ const chrome = {
   <section class="legal-hero">
     <div class="container">
       <a href={homeHref} class="legal-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {chrome.back}</a>
-      <h1><i class="fas fa-life-ring" aria-hidden="true"></i> <span class="text-gradient">{chrome.title}</span></h1>
+      <h1><i class="fas fa-life-ring" aria-hidden="true"></i> <span class="text-gradient"><span lang="ko">하루의 계절</span> {chrome.titleTail}</span></h1>
       <p class="legal-date">{chrome.sub}</p>
     </div>
   </section>
@@ -80,6 +83,7 @@ const chrome = {
         <h2>첫 이야기는 무료예요</h2>
         <p>첫 이야기는 엔딩까지 무료로 즐길 수 있어요. 광고는 없어요.</p>
         <p>첫 엔딩을 본 뒤 <strong>'새 꿈 묶음'</strong>(₩5,500, 한 번 구매)을 사면 두 번째 이야기부터 숨은 꿈 6가지를 고를 수 있어요.</p>
+        <p><strong>기록 → 설정 → 구매</strong>에서는 첫 엔딩 전에도 살 수 있어요. 그때 사면 지금 이야기에서 바로 숨은 꿈이 열려요.</p>
       </article>
 
       <article class="legal-card support-card">
@@ -117,18 +121,19 @@ const chrome = {
       <>
       <article class="legal-card support-card">
         <p class="section-label">About the game</p>
-        <h2>하루의 계절 (Haru's Seasons)</h2>
+        <h2 lang="ko">하루의 계절</h2>
         <p>A life-sim game in which you spend 48 seasons in a seaside town with Haru, from the spring she is six to the winter she is seventeen.</p>
         <p>Each season, you raise Haru by filling three schedule slots with classes, work and rest. In autumn she enters festival contests, and the choices you make in each story help decide her path.</p>
         <p>At eighteen she reaches an ending shaped by how she has grown. Endings you have seen stay in the Ending Album even when you start a new story.</p>
-        <p class="support-note">The game is available in Korean only.</p>
+        <p class="support-note">The game is available in Korean only. Its Korean title, <span lang="ko">하루의 계절</span>, means “Haru's seasons.”</p>
       </article>
 
       <article class="legal-card support-card">
         <p class="section-label">Purchases</p>
         <h2>The first story is free</h2>
         <p>Play the first story all the way to its ending for free. There are no ads.</p>
-        <p>After your first ending, a one-time purchase of the <strong>새 꿈 묶음</strong> (“New Dreams” bundle, ₩5,500) lets you choose from 6 hidden dreams from your second story on.</p>
+        <p>After your first ending, a one-time purchase of the <strong lang="ko">새 꿈 묶음</strong> (“New Dreams” bundle, ₩5,500) lets you choose from 6 hidden dreams from your second story on.</p>
+        <p>You can also buy it before your first ending in <strong><span lang="ko">기록</span> (Records) → <span lang="ko">설정</span> (Settings) → <span lang="ko">구매</span> (Purchases)</strong>. If you do, the hidden dreams open right away in your current story.</p>
       </article>
 
       <article class="legal-card support-card">
@@ -136,14 +141,14 @@ const chrome = {
         <h2>Frequently Asked Questions</h2>
 
         <h3>Where is my progress saved?</h3>
-        <p>Your current story, Ending Album and settings are saved only on this device. They are not stored on our servers or synced to other devices, so deleting the app also deletes your progress, and we cannot restore it. A 새 꿈 묶음 purchase can be recovered with Restore Purchases (see below).</p>
+        <p>Your current story, Ending Album and settings are saved only on this device. They are not stored on our servers or synced to other devices, so deleting the app also deletes your progress, and we cannot restore it. A <span lang="ko">새 꿈 묶음</span> purchase can be recovered with Restore Purchases (see below).</p>
 
         <h3>The game asks whether to download artwork when I first open it.</h3>
-        <p>Much of the game's artwork comes in additional resource packs that are downloaded separately. The first time you open the game, a prompt titled <strong>더 고운 그림을 받을게요</strong> (“Let's get nicer artwork”) shows the download size and recommends Wi-Fi. Tap <strong>받기</strong> (Download) to start; you can keep playing while it downloads. Tap <strong>나중에</strong> (Later) to keep playing with the current artwork, and the game will ask again the next time you open it.</p>
+        <p>Much of the game's artwork comes in additional resource packs that are downloaded separately. The first time you open the game, a prompt titled <strong lang="ko">더 고운 그림을 받을게요</strong> (“Let's get nicer artwork”) shows the download size and recommends Wi-Fi. Tap <strong lang="ko">받기</strong> (Download) to start; you can keep playing while it downloads. Tap <strong lang="ko">나중에</strong> (Later) to keep playing with the current artwork, and the game will ask again the next time you open it.</p>
         <p>Downloaded packs are kept in your device's cache. If the system clears the cache because storage is low, the game will ask again the next time you open it.</p>
 
         <h3>How do I restore my purchase?</h3>
-        <p>Go to <strong>기록 (Records) → 설정 (Settings) → 구매 (Purchases)</strong> and tap <strong>구매 복원</strong> (Restore Purchases). This recovers the 새 꿈 묶음 after you reinstall the app or on another device. You need to be signed in with the store account you used to buy it, and an App Store account prompt may appear.</p>
+        <p>Go to <strong><span lang="ko">기록</span> (Records) → <span lang="ko">설정</span> (Settings) → <span lang="ko">구매</span> (Purchases)</strong> and tap <strong lang="ko">구매 복원</strong> (Restore Purchases). This recovers the <span lang="ko">새 꿈 묶음</span> after you reinstall the app or on another device. You need to be signed in with the store account you used to buy it, and an App Store account prompt may appear.</p>
       </article>
 
       <article class="legal-card support-card contact-card">
@@ -166,18 +171,19 @@ const chrome = {
       <>
       <article class="legal-card support-card">
         <p class="section-label">ゲーム紹介</p>
-        <h2>하루의 계절（ハルの季節）</h2>
+        <h2 lang="ko">하루의 계절</h2>
         <p>6歳の春から17歳の冬まで、海辺の町でハルと48の季節を過ごす育成シミュレーションです。</p>
         <p>季節ごとに授業・仕事・休みから3つの予定を組んで、ハルを育てます。秋には祭りの大会に出場し、物語の中の選択でハルの進む道を一緒に決めていきます。</p>
         <p>18歳になると、それまでの成長に応じたエンディングを迎えます。見たエンディングは、新しい物語を始めてもエンディングアルバムに残ります。</p>
-        <p class="support-note">ゲームは韓国語のみの対応です。</p>
+        <p class="support-note">ゲームは韓国語のみの対応です。タイトルの「<span lang="ko">하루의 계절</span>」は「ハルの季節」という意味です。</p>
       </article>
 
       <article class="legal-card support-card">
         <p class="section-label">購入</p>
         <h2>最初の物語は無料</h2>
         <p>最初の物語はエンディングまで無料で遊べます。広告はありません。</p>
-        <p>最初のエンディングを見たあと、<strong>「새 꿈 묶음」</strong>（新しい夢のセット、₩5,500・買い切り）を購入すると、2回目の物語から6つの隠れた夢を選べるようになります。</p>
+        <p>最初のエンディングを見たあと、<strong>「<span lang="ko">새 꿈 묶음</span>」</strong>（新しい夢のセット、₩5,500・買い切り）を購入すると、2回目の物語から6つの隠れた夢を選べるようになります。</p>
+        <p><strong><span lang="ko">기록</span>（記録）→ <span lang="ko">설정</span>（設定）→ <span lang="ko">구매</span>（購入）</strong>では、最初のエンディングの前でも購入できます。その場合は、今の物語からすぐに隠れた夢が開きます。</p>
       </article>
 
       <article class="legal-card support-card">
@@ -185,14 +191,14 @@ const chrome = {
         <h2>よくある質問</h2>
 
         <h3>進行状況はどこに保存されますか？</h3>
-        <p>進行中の物語、エンディングアルバム、設定はこの端末の中にだけ保存されます。当社のサーバーに保存したり、ほかの端末と同期したりはしないため、アプリを削除すると進行状況も消え、当社で元に戻すことはできません。購入した「새 꿈 묶음」は、下の「購入の復元」で取り戻せます。</p>
+        <p>進行中の物語、エンディングアルバム、設定はこの端末の中にだけ保存されます。当社のサーバーに保存したり、ほかの端末と同期したりはしないため、アプリを削除すると進行状況も消え、当社で元に戻すことはできません。購入した「<span lang="ko">새 꿈 묶음</span>」は、下の「購入の復元」で取り戻せます。</p>
 
         <h3>初めて起動したとき、絵をダウンロードするか聞かれます。</h3>
-        <p>ゲームの絵の多くは、追加リソースパックとして別にダウンロードします。初めて起動すると<strong>「더 고운 그림을 받을게요」</strong>（もっときれいな絵を受け取ります）という案内に、ダウンロードするサイズと「Wi-Fi推奨」が表示されます。<strong>「받기」</strong>（受け取る）を押すとダウンロードが始まり、その間も遊び続けられます。<strong>「나중에」</strong>（あとで）を押すと今の絵のまま遊び続けられ、次にアプリを起動したときにもう一度聞かれます。</p>
+        <p>ゲームの絵の多くは、追加リソースパックとして別にダウンロードします。初めて起動すると<strong>「<span lang="ko">더 고운 그림을 받을게요</span>」</strong>（もっときれいな絵を受け取ります）という案内に、ダウンロードするサイズと「Wi-Fi推奨」が表示されます。<strong>「<span lang="ko">받기</span>」</strong>（受け取る）を押すとダウンロードが始まり、その間も遊び続けられます。<strong>「<span lang="ko">나중에</span>」</strong>（あとで）を押すと今の絵のまま遊び続けられ、次にアプリを起動したときにもう一度聞かれます。</p>
         <p>ダウンロードしたパックは端末のキャッシュに保存されます。空き容量が足りずシステムがキャッシュを消去した場合は、次に起動したときにもう一度聞かれます。</p>
 
         <h3>購入を復元したいです。</h3>
-        <p><strong>기록（記録）→ 설정（設定）→ 구매（購入）</strong>で<strong>「구매 복원」</strong>（購入の復元）を押してください。アプリを再インストールしたときや別の端末で「새 꿈 묶음」を取り戻せます。購入時と同じストアのアカウントでサインインしている必要があり、App Storeのアカウント確認画面が表示されることがあります。</p>
+        <p><strong><span lang="ko">기록</span>（記録）→ <span lang="ko">설정</span>（設定）→ <span lang="ko">구매</span>（購入）</strong>で<strong>「<span lang="ko">구매 복원</span>」</strong>（購入の復元）を押してください。アプリを再インストールしたときや別の端末で「<span lang="ko">새 꿈 묶음</span>」を取り戻せます。購入時と同じストアのアカウントでサインインしている必要があり、App Storeのアカウント確認画面が表示されることがあります。</p>
       </article>
 
       <article class="legal-card support-card contact-card">
