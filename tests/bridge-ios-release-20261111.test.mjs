@@ -38,7 +38,7 @@ test('every other app source block stays byte-identical to current main',()=>{
     assert.equal(sha(block),name==='wordVoyage'?laterVoyageAndroid.expectedBlockSHA256:hash,name);
   }
 });
-for(const lang of ['ko','ja','en'])test(`${lang}: live versions are distinct; submitted 1.0.2 screenshots remain historical`,()=>{
+for(const lang of ['ko','ja'])test(`${lang}: live versions are distinct; submitted 1.0.2 screenshots remain historical`,()=>{
   const html=read(`../dist/${lang}/apps/pipi-bridge/index.html`);
   assert.match(html,/iOS v1\.1\.3.*Android v1\.0\.3/s);
   assert.doesNotMatch(html,/Android v1\.0\.2/);

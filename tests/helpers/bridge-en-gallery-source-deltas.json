@@ -1,0 +1,24 @@
+{
+  "src/components/AppLanding.astro": {
+    "beforeSHA256": "b0384add6fe1d85500528abab9d2eeb67b2a8f6d016534c2673ffd2c04e59971",
+    "afterSHA256": "4464250d1ae157ec0c172aa3465f89429387ff1c27dc95e7508a33ab84c37b77",
+    "deltas": [
+      {
+        "old": "const submitted = submissionMedia(slug);\n",
+        "new": "const bridgeEnglish = slug === 'pipi-bridge' && lang === 'en';\nconst submitted = bridgeEnglish ? {\n  version: '1.2.0', pending: false, previewIndex: 0,\n  shots: [{ src: '/assets/apps/pipi-bridge/us-listing-20261119/library.webp', label: { en: 'Library & classroom: choose a topic', ko: '', ja: '' } }],\n} : submissionMedia(slug);\n"
+      },
+      {
+        "old": "          <p><strong>{mediaCopy.label} \u00b7 iOS {submitted.version}</strong></p>\n",
+        "new": "          <p><strong>{bridgeEnglish ? \"US App Store listing \u00b7 iOS 1.2.0 observed\" : `${mediaCopy.label} \u00b7 iOS ${submitted.version}`}</strong></p>\n"
+      },
+      {
+        "old": "          <p>{mediaCopy.detail}</p>\n",
+        "new": "          <p>{bridgeEnglish ? \"English screenshot on the public US App Store listing, checked November 19, 2026. The listing shows iOS 1.2.0; the screenshot\u2019s capture build and device are not independently verified. Android feature rollout remains unconfirmed.\" : mediaCopy.detail}</p>\n"
+      },
+      {
+        "old": "              <img class=\"app-shot-img\" src={s.src} alt={`${name} \u2014 ${s.label}`} width=\"250\" height=\"541\" loading=\"lazy\" />\n",
+        "new": "              <img class=\"app-shot-img\" src={s.src} alt={`${name} \u2014 ${s.label}`} width={bridgeEnglish ? 598 : 250} height={bridgeEnglish ? 1300 : 541} loading=\"lazy\" />\n"
+      }
+    ]
+  }
+}
